@@ -8,11 +8,11 @@
 
 ## 1. 组员分工表
 
-| 序号 | 姓名 | GitHub ID | 角色定位 | 组内任务分工 |
+| 序号 | 姓名 | GitHub 绑定邮箱 / 账号 | 角色定位 | 组内任务分工 |
 | :---: | :---: | :---: | :---: | :--- |
-| 1 | （待填） | （待填） | 组长 / 协调 | 前台数据清单校核、分支合并与汇总 PR |
-| 2 | （待填） | （待填） | 核心组员 | Brightway 核心建模、数据库活动链接与矩阵构建 |
-| 3 | （待填） | （待填） | 核心组员 | LCIA 特征化计算、敏感度分析与结果可视化报告 |
+| 1 | 白玛卓吉 | `3600138408@qq.com` | 组长 / 协调 | 前台数据清单校核、分支合并与汇总 PR |
+| 2 | 拉姆卓嘎 | `（隐私保护已隐藏）` | 核心组员 | Brightway 核心建模、数据库活动链接与矩阵构建 |
+| 3 | 麦迪乃姆·亚森 | `3351939742@qq.com` | 核心组员 | LCIA 特征化计算、敏感度分析与结果可视化报告 |
 
 ---
 
@@ -28,8 +28,9 @@
    # 2. 从 starter_materials 复制需要实操的任务包
    cp -r ../../starter_materials/practice2_brightway2.5 ./
 
-   # 3. 提交本组成果
+   # 3. 提交本组成果至本组专属分支
+   git checkout -b dev-group-03
    git add .
    git commit -m "feat(group-03): 完成第六讲 Brightway LCA 实践练习"
-   git push origin main
+   git push origin dev-group-03
    ```
