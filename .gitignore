@@ -1,0 +1,71 @@
+# ==========================================
+# 《环境规划与管理》课程大仓标准 Git 忽略配置
+# ==========================================
+
+# 1. 操作系统生成的临时文件
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# 2. Python 编译文件与缓存
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# 3. Jupyter Notebook 临时缓存与检查点（关键！）
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+*-checkpoint.ipynb
+
+# 4. Conda 与 Python 虚拟环境
+env/
+envs/
+venv/
+.venv/
+env_bw25/
+ENV/
+env.bak/
+venv.bak/
+
+# 5. 编辑器与 IDE 本地配置
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 6. Excel 临时锁定文件（避免多人协作锁文件入库）
+~$*.xlsx
+~$*.xls
+
+# 7. 运行日志与大型数据临时导出
+*.log
+*.tmp
+*.bak
+*.swp
+# 忽略仿真与大型临时数据包（如超过 50MB 的未压缩文件）
+*.zip
+*.tar.gz
+*.7z
