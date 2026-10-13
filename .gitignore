@@ -34,7 +34,7 @@ wheels/
 .installed.cfg
 *.egg
 
-# 3. Jupyter Notebook 临时缓存与检查点（关键！）
+# 3. Jupyter Notebook 临时缓存与检查点（关键防冲突项）
 .ipynb_checkpoints/
 */.ipynb_checkpoints/*
 *-checkpoint.ipynb
@@ -60,12 +60,10 @@ venv.bak/
 ~$*.xlsx
 ~$*.xls
 
-# 7. 运行日志与大型数据临时导出
+# 7. 运行日志与大型数据临时导出（>50MB）
 *.log
 *.tmp
 *.bak
-*.swp
-# 忽略仿真与大型临时数据包（如超过 50MB 的未压缩文件）
 *.zip
 *.tar.gz
 *.7z
