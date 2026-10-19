@@ -90,24 +90,24 @@ cp -r ../../starter_materials/practice2_brightway2.5 ./
   ```bash
   # 1. 确保处于仓库根目录，先拉取远端最新状态
   git pull origin main
-
+  
   # 2. 领取任务包到第 1 组（若此前未领取过）
   cd groups/group-01/
   cp -r ../../starter_materials/practice2_brightway2.5 ./
-
+  
   # 3. 完成作业后，创建并切换至第 1 组专属分支
   git checkout -b dev-group-01
-
+  
   # 4. 仅暂存第 1 组目录下的成果（铁律：只 add 自己的目录）
   git add .
-
+  
   # 5. 提交并附带规范备注
   git commit -m "submit(group-01): 第1组完成第六讲 Brightway 实践作业"
-
+  
   # 6. 推送至 GitHub 远端本组专属分支
   git push origin dev-group-01
   ```
-</details>
+  </details>
 
 <details open>
 <summary><b>👉 【第 2 小组 (Group 02)】实操示范（强浩峻、郭京奥、帕娜尔·阿克木）</b></summary>
@@ -117,24 +117,24 @@ cp -r ../../starter_materials/practice2_brightway2.5 ./
   ```bash
   # 1. 确保处于仓库根目录，先拉取远端最新状态
   git pull origin main
-
+  
   # 2. 领取任务包到第 2 组（若此前未领取过）
   cd groups/group-02/
   cp -r ../../starter_materials/practice2_brightway2.5 ./
-
+  
   # 3. 完成作业后，创建并切换至第 2 组专属分支
   git checkout -b dev-group-02
-
+  
   # 4. 仅暂存第 2 组目录下的成果（铁律：只 add 自己的目录）
   git add .
-
+  
   # 5. 提交并附带规范备注
   git commit -m "submit(group-02): 第2组完成第六讲 Brightway 实践作业"
-
+  
   # 6. 推送至 GitHub 远端本组专属分支
   git push origin dev-group-02
   ```
-</details>
+  </details>
 
 <details open>
 <summary><b>👉 【第 3 小组 (Group 03)】实操示范（白玛卓吉、拉姆卓嘎、麦迪乃姆·亚森）</b></summary>
@@ -144,24 +144,24 @@ cp -r ../../starter_materials/practice2_brightway2.5 ./
   ```bash
   # 1. 确保处于仓库根目录，先拉取远端最新状态
   git pull origin main
-
+  
   # 2. 领取任务包到第 3 组（若此前未领取过）
   cd groups/group-03/
   cp -r ../../starter_materials/practice2_brightway2.5 ./
-
+  
   # 3. 完成作业后，创建并切换至第 3 组专属分支
   git checkout -b dev-group-03
-
+  
   # 4. 仅暂存第 3 组目录下的成果（铁律：只 add 自己的目录）
   git add .
-
+  
   # 5. 提交并附带规范备注
   git commit -m "submit(group-03): 第3组完成第六讲 Brightway 实践作业"
-
+  
   # 6. 推送至 GitHub 远端本组专属分支
   git push origin dev-group-03
   ```
-</details>
+  </details>
 
 <details open>
 <summary><b>👉 【第 4 小组 (Group 04)】实操示范（邱自强、彭冬明、边久加措）</b></summary>
@@ -171,24 +171,24 @@ cp -r ../../starter_materials/practice2_brightway2.5 ./
   ```bash
   # 1. 确保处于仓库根目录，先拉取远端最新状态
   git pull origin main
-
+  
   # 2. 领取任务包到第 4 组（若此前未领取过）
   cd groups/group-04/
   cp -r ../../starter_materials/practice2_brightway2.5 ./
-
+  
   # 3. 完成作业后，创建并切换至第 4 组专属分支
   git checkout -b dev-group-04
-
+  
   # 4. 仅暂存第 4 组目录下的成果（铁律：只 add 自己的目录）
   git add .
-
+  
   # 5. 提交并附带规范备注
   git commit -m "submit(group-04): 第4组完成第六讲 Brightway 实践作业"
-
+  
   # 6. 推送至 GitHub 远端本组专属分支
   git push origin dev-group-04
   ```
-</details>
+  </details>
 
 <details open>
 <summary><b>👉 【第 5 小组 (Group 05)】实操示范（明子骅、陈和兴、张晓璐）</b></summary>
@@ -198,24 +198,24 @@ cp -r ../../starter_materials/practice2_brightway2.5 ./
   ```bash
   # 1. 确保处于仓库根目录，先拉取远端最新状态
   git pull origin main
-
+  
   # 2. 领取任务包到第 5 组（若此前未领取过）
   cd groups/group-05/
   cp -r ../../starter_materials/practice2_brightway2.5 ./
-
+  
   # 3. 完成作业后，创建并切换至第 5 组专属分支
   git checkout -b dev-group-05
-
+  
   # 4. 仅暂存第 5 组目录下的成果（铁律：只 add 自己的目录）
   git add .
-
+  
   # 5. 提交并附带规范备注
   git commit -m "submit(group-05): 第5组完成第六讲 Brightway 实践作业"
-
+  
   # 6. 推送至 GitHub 远端本组专属分支
   git push origin dev-group-05
   ```
-</details>
+  </details>
 
 ---
 
