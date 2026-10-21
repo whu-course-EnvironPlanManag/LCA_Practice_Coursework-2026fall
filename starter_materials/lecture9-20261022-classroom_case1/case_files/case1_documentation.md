@@ -205,10 +205,10 @@ git checkout main
 git pull origin main
 
 # 以第 1 组同学唐思奇（示范）为例，创建并切换到个人专属分支 (格式: dev-group-XX-姓名拼音)
-git checkout -b dev-group-01-tangsiqi
+git checkout -b dev-tangsiqi-test
 
 # 核心关键：立即将分支发布到 GitHub 远端并建立追踪绑定 (让 GitHub 网页端立即可见你的分支)
-git push -u origin dev-group-01-tangsiqi
+git push -u origin dev-tangsiqi-test
 ```
 
 #### 第二步：在小组工作空间建立任务专属目录并放置作业成果
@@ -240,7 +240,7 @@ git push
 
 #### 第四步：在 GitHub 发起 Pull Request (PR) 并应用模板
 1. 访问 GitHub 仓库主页，点击 **"Compare & pull request"**；
-2. **分支比对**：`base: main` $\leftarrow$ `compare: dev-group-01-tangsiqi`；
+2. **分支比对**：`base: main` $\leftarrow$ `compare: dev-tangsiqi-test`；
 3. **PR 标题通用标准格式**：  
    `[日期 第几讲 PR]: student_name - task_name (group-XX)`  
    *示范：`[2026-10-22 第九讲 PR]: tangsiqi - case1-pet-recycling (group-01)`*  
