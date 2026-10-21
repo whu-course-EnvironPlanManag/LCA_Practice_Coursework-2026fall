@@ -14,7 +14,6 @@
 ```text
 lecture9-20261022-classroom_case1/
 ├── README.md                      # 本说明文件
-├── PULL_REQUEST_TEMPLATE.md       # 大仓作业提交 PR 规范模板（本地离线参考；大仓 .github/ 已全局自动预填）
 ├── troubleshooting.md             # 学生 Git 协作与避坑急救全景指南
 ├── case_files/                    # 案例详细讲义与教学文档
 │   ├── case1_documentation.md     # 案例一完整讲义（含导览速查、MFA/LCA/TEA模型、PR提交指南）
