@@ -11,18 +11,19 @@
 ```text
 LCA_Practice_Coursework-2026fall/
 ├── starter_materials/                  # 【教师任务发布区 (学生只读，按任务包独立自治)】
-│   └── practice2_brightway2.5/         # 瓶装水 LCA 实践任务包 (环境配置、数据清单、答题卡一体化自治)
-│       ├── env_bw25.yml                # 本任务专属 Conda 依赖环境清单
-│       ├── practice2.ipynb             # 核心答题卡与模型
-│       ├── tutorial_documentation.md   # 实操指导手册
-│       └── data_collections/           # 前景清单与关联数据 (Excel)
+│   ├── troubleshooting.md              # 🌟【全班必读】Git 协同避坑排错全景指南（克隆/分支/防覆盖/PR救急）
+│   ├── lecture9-20261022-classroom_case1/ # 第九讲随堂实践：城市废旧 PET 物理再生系统 (MFA-LCA-TEA)
+│   └── practice2_brightway2.5/         # 第六讲随堂实践：瓶装水 LCA 建模 (Brightway 2.5)
 ├── groups/                             # 【学生专属区 (各组完全物理隔离)】
 │   ├── group-01/                       # 第 1 小组工作空间 (3人)
 │   ├── group-02/                       # 第 2 小组工作空间 (3人)
 │   ├── group-03/                       # 第 3 小组工作空间 (3人)
 │   ├── group-04/                       # 第 4 小组工作空间 (3人)
 │   └── group-05/                       # 第 5 小组工作空间 (3人)
-├── .github/workflows/                  # 【自动化质量守卫】越界修改自动拦截 CI
+├── .github/                            # 【自动化质量守卫与规范助手】
+│   ├── PULL_REQUEST_TEMPLATE.md        # PR 提交通用底模（网页端自动预填）
+│   ├── PULL_REQUEST_TEMPLATE/          # 讲次专属考核指标核验库
+│   └── workflows/                      # 越界拦截与 PR 自动重命名/打标 CI
 ├── .gitignore                          # 忽略临时缓存、大文件与虚拟环境
 └── README.md                           # 本指南说明
 ```
@@ -77,6 +78,9 @@ cp -r ../../starter_materials/practice2_brightway2.5 ./
    * **负责数据的同学**：在 `data_collections/` 中核对并更新前台清单 Excel。
    * **负责报告与分析的同学**：将敏感度分析、结果解读与图表总结整理于组内的 `README.md` 或独立的报告 Markdown/Word 中。
 3. **提交与推送**：建议每组由**组长或指定一人**汇总核对后统一提交，或组员完成各自专属文件后依次提交。
+
+> 🌟 **【全班必读】遇到 Git 报错、网络慢或提交问题？**  
+> 详见大仓官方救急手册：👉 [**`starter_materials/troubleshooting.md`**](starter_materials/troubleshooting.md)（涵盖代理配置、分支隔离、拉取 main 防覆盖、代码误改 stash/reset 撤销及 PR 撤回修改四大场景）。
 
 ---
 

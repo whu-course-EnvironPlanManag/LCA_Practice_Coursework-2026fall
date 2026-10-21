@@ -154,7 +154,8 @@ flowchart TD
 > **【课程大仓协同说明】**  
 > 本案例对应的随堂实操与课后作业需提交至课程官方实践大仓：  
 > 🔗 [whu-course-cohort/LCA_Practice_Coursework-2026fall](https://github.com/whu-course-EnvironPlanManag/LCA_Practice_Coursework-2026fall)  
-> 每位同学需基于本组工作空间以独立分支形式完成提交，并遵照 PR 规范发起合并请求（Pull Request）。
+> 每位同学需基于本组工作空间以独立分支形式完成提交，并遵照 PR 规范发起合并请求（Pull Request）。  
+> 📖 **Git 协作避坑与排错救急**：遇到网络克隆、分支隔离、拉取 main 防覆盖或 PR 撤销等问题，详见大仓公共手册：[starter_materials/troubleshooting.md](../../troubleshooting.md)
 
 ---
 

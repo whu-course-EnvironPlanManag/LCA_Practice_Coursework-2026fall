@@ -16,7 +16,6 @@
 ```text
 lecture9-20261022-classroom_case1/
 ├── README.md                      # 本说明文件
-├── troubleshooting.md             # 学生 Git 协作与避坑急救全景指南
 ├── case_files/                    # 案例详细讲义与教学文档
 │   ├── case1_documentation.md     # 案例一完整讲义（含导览速查、MFA/LCA/TEA模型、PR提交指南）
 │   └── data_cohort/               # 基础数据集（供教学推演与后续代码使用）
@@ -25,6 +24,8 @@ lecture9-20261022-classroom_case1/
 │       └── tea_cost_parameters.csv # TEA 投资、公用工程单价与财务指标
 └── code_implementation/           # （预留）教师后续随堂与课后 Python/Excel 仿真代码发布区
 ```
+
+> 💡 **全班 Git 协作与排错救急手册**：遇到网络克隆慢、分支隔离与创建、拉取最新 main 防覆盖、代码误改 stash/reset 救急或 PR 提交问题，请查阅大仓公共指南：[starter_materials/troubleshooting.md](../troubleshooting.md)。
 
 ---
 
