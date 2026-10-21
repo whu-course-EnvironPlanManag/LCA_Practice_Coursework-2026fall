@@ -264,8 +264,8 @@ cd lecture9-20261022-classroom_case1/
 # 铁律：只添加自己目录下的文件，切勿 git add . 整个大仓！
 git add groups/group-test/lecture9-20261022-classroom_case1/
 
-# 提交并附带语义化提交信息 (杜绝学号)
-git commit -m "feat(group-01): 完成第九讲案例一 PET 再生 MFA-LCA-TEA 作业与流程图"
+# 提交并附带语义化提交信息
+git commit -m "feat(group-test): 完成第九讲案例一 PET 再生 MFA-LCA-TEA 作业与流程图"
 
 # 推送到 GitHub 远端个人分支
 git push
