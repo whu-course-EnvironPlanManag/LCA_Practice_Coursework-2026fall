@@ -23,52 +23,52 @@ jobs:
           echo "$CHANGED_FILES"
           
           if [ -z "$CHANGED_FILES" ]; then
-            echo "无文件变动，跳过检查。"
+            echo "No changed files detected. Skipping checks."
             exit 0
           fi
 
-          # 1. 检查是否误传 Jupyter 检查点或缓存文件
+          # 1. Check for unauthorized Jupyter checkpoints or cache files
           if echo "$CHANGED_FILES" | grep -q "\.ipynb_checkpoints"; then
-            echo "::error::发现 .ipynb_checkpoints 缓存文件！请在本地删除缓存并确保 .gitignore 正常生效。"
+            echo "::error::Detected .ipynb_checkpoints cache files! Please remove local checkpoint files and verify that .gitignore is effective."
             exit 1
           fi
 
-          # 2. 检查学生提交边界（非教师账号禁止修改 groups/group-XX/ 以外的任何文件）
+          # 2. Check student submission boundary (students may only modify their assigned group directory)
           if [ "${{ github.actor }}" != "ResearchGeekSQ" ]; then
             NON_GROUP_FILES=$(echo "$CHANGED_FILES" | grep -v "^groups/group-[0-9]\{2\}/" || true)
             if [ -n "$NON_GROUP_FILES" ]; then
-              echo "::error::越界警告：学生提交仅允许在自身专属小组目录 (groups/group-XX/) 内修改！"
-              echo "检测到非法越界修改的文件（禁止学生直接修改公共课件 starter_materials/、CI 配置或根目录文件）："
+              echo "::error::Boundary Violation: Student submissions are strictly restricted to your designated group directory (groups/group-XX/)!"
+              echo "Unauthorized modified files detected outside group directory (students are not permitted to modify starter_materials/, CI workflows, or root files):"
               echo "$NON_GROUP_FILES"
               exit 1
             fi
           fi
 
-          # 3. 检查是否跨组修改（单次 PR 只能修改单一小组目录）
+          # 3. Check for cross-group modifications (each PR must touch only a single group directory)
           TOUCHED_GROUPS=$(echo "$CHANGED_FILES" | grep "^groups/group-[0-9]\{2\}/" | cut -d/ -f2 | sort -u)
           GROUP_COUNT=$(echo "$TOUCHED_GROUPS" | grep -v '^$' | wc -l)
 
           echo "Touched groups: $TOUCHED_GROUPS (Count: $GROUP_COUNT)"
           if [ "$GROUP_COUNT" -gt 1 ]; then
-            echo "::error::越界警告：单次 PR 修改了多个小组目录 ($TOUCHED_GROUPS)！为保证各组独立评分，严禁跨组修改。"
+            echo "::error::Cross-group Violation: A single PR modified multiple group directories ($TOUCHED_GROUPS)! To ensure independent grading, modifying other groups' directories is strictly prohibited."
             exit 1
           fi
 
           if [ "${{ github.actor }}" != "ResearchGeekSQ" ] && [ "$GROUP_COUNT" -eq 0 ]; then
-            echo "::error::未检测到属于任何小组 (groups/group-XX/) 的文件变动！"
+            echo "::error::No files belonging to any student group (groups/group-XX/) were detected in this PR!"
             exit 1
           fi
 
-          # 4. 检查单文件体积是否超过 25MB（防止误提交大型数据集或压缩包）
+          # 4. Check single file size limit (max 25MB to prevent committing large raw datasets or archives)
           while IFS= read -r f; do
             [ -z "$f" ] && continue
             if [ -f "$f" ]; then
               size=$(stat -c%s "$f" 2>/dev/null || stat -f%z "$f" 2>/dev/null || echo 0)
               if [ "$size" -gt 26214400 ]; then
-                echo "::error::文件 $f 超过 25MB 限制 ($size 字节)！请勿将超大原始数据提交入库。"
+                echo "::error::File $f exceeds the 25MB limit ($size bytes)! Please do not commit oversized raw data files to the repository."
                 exit 1
               fi
             fi
           done <<< "$CHANGED_FILES"
 
-          echo "✅ 所有边界检查与防冲突规则验证通过！"
+          echo "All group boundary checks and isolation guardrails passed successfully!"
