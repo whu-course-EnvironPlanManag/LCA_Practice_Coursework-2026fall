@@ -30,7 +30,7 @@ flowchart TD
     R_dev -->|5. 发起 Pull Request 请求合并| R_main
 ```
 
-## 🌐 二、 场景一：初次 Clone 与网络连接障碍急救
+## 🌐 二、 场景一：初次 Clone 与网络连接障碍修复
 
 ### 1. 痛点报错：`Failed to connect to github.com port 443: Connection refused / Timed out`
 
@@ -150,9 +150,7 @@ git checkout dev-tangsiqi-test
 git merge main
 ```
 
-#### 为什么这个操作绝对不会产生代码冲突？
 
-因为老师添加/更新的文件都在 `starter_materials/`（如发布新作业或参考答案），而你编写的所有文件都规规矩矩地存放在 `groups/group-01/` 下。**两者的物理文件路径完全独立，Git 会自动执行无冲突快进合并（Auto-merging/Fast-forward）！**
 
 ## 🗂️ 五、 场景四：多次随堂作业的目录规范（防止作业互相覆盖）
 
