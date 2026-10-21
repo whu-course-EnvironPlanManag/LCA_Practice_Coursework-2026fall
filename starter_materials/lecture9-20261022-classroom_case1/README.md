@@ -45,19 +45,25 @@ lecture9-20261022-classroom_case1/
 
 为照顾不同编程基础的同学，本次实践任务推荐以下环境依赖（根据作业需要选择即可）：
 
-### 4.1 基础计算与数据处理（全员必装，零系统依赖）
+### 4.0 采用conda创建专属python虚拟环境
+```bash
+conda create -n mfa_lca_tea python=3.10 -y
+conda activate mfa_lca_tea
+```
+
+### 4.1 基础计算与数据处理（必装包）
 适用于完成 MFA 物质平衡、LCA 碳足迹计算与 TEA 经济平准化成本核算：
 ```bash
 pip install pandas numpy matplotlib
 ```
 
-### 4.2 工艺流程图绘制推荐选型（按个人基础三选一）：
+### 4.2 工艺流程图绘制推荐选型（三选一）：
 * **选项 A（零基础/新手最推荐 · 纯 Python 零系统底层依赖）**：
-  使用 `schemdraw` 绘制方框工艺流程图（BFD），绝不会因缺少系统底层软件而报错：
+  使用 `schemdraw` 绘制方框工艺流程图（BFD），不会因缺少系统底层软件而报错：
   ```bash
   pip install schemdraw
   ```
-* **选项 B（进阶首选 · 交互式物质流桑基图）**：
+* **选项 B（进阶 · 交互式物质流桑基图）**：
   使用 `plotly` 绘制与物质质量流量成比例的高清 MFA 桑基图：
   ```bash
   pip install plotly kaleido
