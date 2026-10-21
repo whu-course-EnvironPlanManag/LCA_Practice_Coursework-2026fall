@@ -213,6 +213,14 @@ jobs:
             // ==========================================
             // Step 6: Standardize PR Title and Labels
             // ==========================================
+            const isDeliverable = f => {
+              if (f.filename.endsWith('/.gitkeep')) return false;
+              if (f.filename.includes('/code_implementation/')) return true;
+              return /\.(py|ipynb|png|svg|jpg|jpeg|pdf)$/i.test(f.filename);
+            };
+            const hasDeliverables = files.some(isDeliverable);
+            console.log(`[Deliverables] Substantive deliverables detected: ${hasDeliverables}`);
+
             const taskDisplay = resolvedTask || 'assignment';
             const standardizedTitle = `[${prDate} Lecture-${lectureNo} PR]: ${studentName} - ${taskDisplay} (${groupId})`;
 
@@ -227,6 +235,7 @@ jobs:
             try {
               const labelsToAdd = [`lecture-${lectureNo}`, groupId];
               if (resolvedTask) labelsToAdd.push(resolvedTask);
+              labelsToAdd.push(hasDeliverables ? 'ready-for-review' : 'needs-implementation');
               await github.rest.issues.addLabels({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
@@ -245,7 +254,12 @@ jobs:
               const templatePath = path.join(templateDir, resolvedTemplate);
               const templateContent = fs.readFileSync(templatePath, 'utf8');
 
+              const deliverableNotice = hasDeliverables
+                ? `> 🚀 **成果自检已就绪**：检测到您已提交代码实现与相关图表，请对照下方基准指标与规范自查！\n\n`
+                : `> ⚠️ **成果检测提醒 (Missing Deliverables)**：检测到本次 PR 暂未包含实质性代码执行成果（\`code_implementation/\` 目录下未包含脚本或图表）。请在本地完成分析与绘图后直接执行 \`git push\`，本 PR 将自动同步更新！\n\n`;
+
               const commentBody = `### 🤖 Course Teaching Assistant Bot\n\n` +
+                deliverableNotice +
                 `✅ **Standardized PR Title**: Renamed to **\`${standardizedTitle}\`**\n` +
                 `📌 **Matched Task Template**: Detected modifications under directory **\`${taskDisplay}\`**, associated with rubric **\`${resolvedTemplate}\`**.\n\n` +
                 `---\n\n` +

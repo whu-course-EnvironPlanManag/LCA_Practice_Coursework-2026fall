@@ -71,4 +71,15 @@ jobs:
             fi
           done <<< "$CHANGED_FILES"
 
-          echo "All group boundary checks and isolation guardrails passed successfully!"
+          # 5. Check for substantive deliverables (prevent opening PR with empty template)
+          if [ "${{ github.actor }}" != "ResearchGeekSQ" ]; then
+            DELIVERABLE_FILES=$(echo "$CHANGED_FILES" | grep -E "^groups/group-([0-9]{2}|test)/" | grep -v "\.gitkeep" | grep -E "(/code_implementation/.+|\.(py|ipynb|png|svg|jpg|jpeg|pdf))$" || true)
+            if [ -z "$DELIVERABLE_FILES" ]; then
+              echo "::error::Incomplete Submission: No substantive code or output artifacts found! Your PR appears to only contain raw starter templates. Please commit your Python scripts (.py), notebooks (.ipynb), or process diagrams (.png/.svg) under your group directory before opening a PR."
+              exit 1
+            fi
+            echo "Substantive deliverables verified:"
+            echo "$DELIVERABLE_FILES"
+          fi
+
+          echo "All group boundary checks, file rules, and deliverable guardrails passed successfully!"
