@@ -216,20 +216,24 @@ git push -u origin dev-tangsiqi-test
 # 进入本组专属工作区 (以第 1 组为例)
 cd groups/group-01/
 
-# 创建本案例作业文件夹
-mkdir -p case1_pet_recycling
+# 复制老师发布的任务包模板到本组（推荐，保留带日期的规范目录结构）：
+cp -r ../../starter_materials/lecture9-20261022-classroom_case1 ./lecture9-20261022-classroom_case1/
+cd lecture9-20261022-classroom_case1/
 
-# 将你的作业文件放置在此目录下：
-# groups/group-01/case1_pet_recycling/
-# ├── case1_solution_report.md       # 联动计算过程与决策思考报告 (或 .ipynb)
-# ├── plot_mfa_process.py            # Python 绘制工艺流程图源码
-# └── process_flow_diagram.png       # Python 脚本生成的流程图图片
+# 将你的作业成果放置在 code_implementation 目录下：
+# groups/group-01/lecture9-20261022-classroom_case1/
+# ├── README.md                      # 案例速查
+# ├── case_files/                    # 讲义与数据集
+# └── code_implementation/           # 你的代码与成果提交区
+#     ├── case1_solution_report.md   # 联动计算过程与决策思考报告 (或 .ipynb)
+#     ├── plot_mfa_process.py        # Python 绘制工艺流程图源码
+#     └── process_flow_diagram.png   # Python 脚本生成的流程图图片
 ```
 
 #### 第三步：提交变更并推送到 GitHub 远端
 ```bash
 # 铁律：只添加自己小组目录下的文件，切勿 git add . 整个大仓！
-git add groups/group-01/case1_pet_recycling/
+git add groups/group-01/lecture9-20261022-classroom_case1/
 
 # 提交并附带语义化提交信息 (杜绝学号)
 git commit -m "feat(group-01): 完成第九讲案例一 PET 再生 MFA-LCA-TEA 作业与流程图"
