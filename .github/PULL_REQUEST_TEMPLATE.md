@@ -10,10 +10,10 @@
 
 * **提交日期 (Date)**：`[YYYY-MM-DD，例如: 2026-10-22]`
 * **课程讲次 (Lecture No.)**：`第 [ 09 / 10 / 11 / ... ] 讲`
-* **学生姓名 (Student Name)**：`[姓名全拼，例如: zengfeiyang]`（严格保护隐私，严禁填写学号！）
+* **学生姓名 (Student Name)**：`[姓名全拼，例如: tangsiqi]`（严格保护隐私，严禁填写学号！）
 * **任务名称 (Task Name)**：`[例如: case1-pet-recycling / case2-green-methanol / urban-mfa]`
 * **所属小组 (Group ID)**：第 `[ 01 / 02 / 03 / 04 / 05 ]` 小组
-* **提交分支 (Branch Name)**：`dev-group-[XX]-[student_name]`（例如: `dev-group-01-zengfeiyang`）
+* **提交分支 (Branch Name)**：`dev-group-[XX]-[student_name]`（例如: `dev-group-01-tangsiqi`）
 * **成果目录 (Workdir Path)**：`groups/group-[XX]/[task_name]/`
 
 ---
@@ -61,5 +61,5 @@
 
 ## 📝 学术诚信与开源规范承诺
 本人承诺上述计算分析与 Python 绘图代码由本人及本组同学独立推演完成，严格遵守学术诚信与代码规范。
-* **承诺人 (Student Name)**：`[姓名全拼，例如: zengfeiyang]`
+* **承诺人 (Student Name)**：`[姓名全拼，例如: tangsiqi]`
 * **提交日期 (Date)**：`[YYYY-MM-DD]`

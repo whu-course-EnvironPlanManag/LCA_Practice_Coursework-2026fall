@@ -204,11 +204,11 @@ cd LCA_Practice_Coursework-2026fall
 git checkout main
 git pull origin main
 
-# 以第 1 组同学曾飞杨为例，创建并切换到个人专属分支 (格式: dev-group-XX-姓名拼音)
-git checkout -b dev-group-01-zengfeiyang
+# 以第 1 组同学唐思奇（示范）为例，创建并切换到个人专属分支 (格式: dev-group-XX-姓名拼音)
+git checkout -b dev-group-01-tangsiqi
 
 # 核心关键：立即将分支发布到 GitHub 远端并建立追踪绑定 (让 GitHub 网页端立即可见你的分支)
-git push -u origin dev-group-01-zengfeiyang
+git push -u origin dev-group-01-tangsiqi
 ```
 
 #### 第二步：在小组工作空间建立任务专属目录并放置作业成果
@@ -240,10 +240,10 @@ git push
 
 #### 第四步：在 GitHub 发起 Pull Request (PR) 并应用模板
 1. 访问 GitHub 仓库主页，点击 **"Compare & pull request"**；
-2. **分支比对**：`base: main` $\leftarrow$ `compare: dev-group-01-zengfeiyang`；
+2. **分支比对**：`base: main` $\leftarrow$ `compare: dev-group-01-tangsiqi`；
 3. **PR 标题通用标准格式**：  
    `[日期 第几讲 PR]: student_name - task_name (group-XX)`  
-   *示范：`[2026-10-22 第九讲 PR]: zengfeiyang - case1-pet-recycling (group-01)`*  
+   *示范：`[2026-10-22 第九讲 PR]: tangsiqi - case1-pet-recycling (group-01)`*  
    *(注：提交后后台助教机器人会自动从正文或分支解析信息并规范重命名标题，打上讲次与组别标签)*
 4. **PR 正文（全自动预填）**：大仓已配置官方模版，发起 PR 时对话框会自动预填通用考核底稿；提交后助教机器人会在讨论区自动推送本讲 Case 1 专属指标对照单，请对照自查。
 

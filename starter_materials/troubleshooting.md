@@ -20,12 +20,12 @@
 flowchart TD
     subgraph 远端仓库 GitHub
         R_main["origin/main<br/>(只读发布源: 任务包与参考答案)"]
-        R_dev["origin/dev-group-01-zengfeiyang<br/>(远端个人备份分支)"]
+        R_dev["origin/dev-group-01-tangsiqi<br/>(远端个人备份分支)"]
     end
   
     subgraph 本地机器 Local
         L_main["本地 main 分支<br/>(仅用于拉取最新更新)"]
-        L_dev["本地 dev-group-01-zengfeiyang<br/>(你唯一写作业的分支)"]
+        L_dev["本地 dev-group-01-tangsiqi<br/>(你唯一写作业的分支)"]
     end
   
     R_main -->|1. git pull 拉取| L_main
@@ -80,16 +80,16 @@ git checkout main
 git pull origin main
 
 # 步骤 2: 在本地创建并切换至个人专属分支 (严格使用: dev-group-XX-姓名全拼)
-git checkout -b dev-group-01-zengfeiyang
+git checkout -b dev-group-01-tangsiqi
 
 # 步骤 3: 【核心关键】立即将分支发布到 GitHub 远端并建立永久追踪绑定！
-git push -u origin dev-group-01-zengfeiyang
+git push -u origin dev-group-01-tangsiqi
 ```
 
 > **📌 为什么必须加 `-u`（即 `--set-upstream`）？**
 >
 > 1. **远端立即可见**：执行完第 3 步后，刷新 GitHub 仓库页面，左上角分支下拉菜单中**会立即显示你的分支**，同步成功！
-> 2. **建立终身追踪关联**：本地 `dev-group-01-zengfeiyang` 与远端 `origin/dev-group-01-zengfeiyang` 绑定；
+> 2. **建立终身追踪关联**：本地 `dev-group-01-tangsiqi` 与远端 `origin/dev-group-01-tangsiqi` 绑定；
 > 3. **告别后续报错**：后续写作业期间，你只需要敲极简的 `git push` 或 `git pull` 即可，**再也不会遇到 `fatal: The current branch has no upstream branch` 报错！**
 
 ---
@@ -100,10 +100,10 @@ git push -u origin dev-group-01-zengfeiyang
 
 ```bash
 # 1. 确保当前处于你的个人分支
-git checkout dev-group-01-zengfeiyang
+git checkout dev-group-01-tangsiqi
 
 # 2. 直接推送并强制绑定远端
-git push -u origin dev-group-01-zengfeiyang
+git push -u origin dev-group-01-tangsiqi
 ```
 
 *(如果终端弹出提示 `To push the current branch and set the remote as upstream, use: git push --set-upstream origin ...`，其实就是同一条命令，直接回车执行即可。)*
@@ -118,9 +118,9 @@ git push -u origin dev-group-01-zengfeiyang
   git branch -vv
   ```
 
-  如果回显如下，带有中括号蓝色的 `[origin/dev-group-01-zengfeiyang]`，说明已完美绑定远端：
+  如果回显如下，带有中括号蓝色的 `[origin/dev-group-01-tangsiqi]`，说明已完美绑定远端：
   ```text
-  * dev-group-01-zengfeiyang 7b2a9f1 [origin/dev-group-01-zengfeiyang] feat: 初始同步
+  * dev-group-01-tangsiqi 7b2a9f1 [origin/dev-group-01-tangsiqi] feat: 初始同步
   ```
 * **方法 B（GitHub 网页端核对）**：
   打开仓库网页 [LCA_Practice_Coursework-2026fall](https://github.com/whu-course-cohort/LCA_Practice_Coursework-2026fall)，点击左侧的分支选择器（默认显示 `main`），在弹出的搜索框中输入你的拼音，能看到并选中你的分支即代表远端同步大功告成！
@@ -135,7 +135,7 @@ git push -u origin dev-group-01-zengfeiyang
 git branch
 ```
 
-* **控制台回显带星号 `*` 且高亮的即为当前分支**。如果发现带有 `* main`，**请立刻停手！绝对不要动代码！** 先执行 `git checkout dev-group-01-zengfeiyang` 切换回来。
+* **控制台回显带星号 `*` 且高亮的即为当前分支**。如果发现带有 `* main`，**请立刻停手！绝对不要动代码！** 先执行 `git checkout dev-group-01-tangsiqi` 切换回来。
 
 ---
 
@@ -165,7 +165,7 @@ git pull origin main
 # -------------------------------------------------------------
 # 第 3 步: 切换回你自己的专属开发分支
 # -------------------------------------------------------------
-git checkout dev-group-01-zengfeiyang
+git checkout dev-group-01-tangsiqi
 
 # -------------------------------------------------------------
 # 第 4 步: 将 main 分支的新成果平稳合并进你自己的分支
@@ -233,7 +233,7 @@ cd lecture9_case1_pet_recycling/
   git stash
 
   # 2. 切换到你的专属个人分支
-  git checkout dev-group-01-zengfeiyang
+  git checkout dev-group-01-tangsiqi
 
   # 3. 把口袋里的修改原封不动掏出来还原到你的专属分支
   git stash pop
@@ -250,7 +250,7 @@ cd lecture9_case1_pet_recycling/
 
   # 然后重复车祸 1 的操作：暂存、切分支、恢复
   git stash
-  git checkout dev-group-01-zengfeiyang
+  git checkout dev-group-01-tangsiqi
   git stash pop
   ```
 
@@ -291,9 +291,9 @@ cd lecture9_case1_pet_recycling/
 * **急救步骤**：
   ```bash
   # 先把远端个人分支的内容拉下来并在本地融合
-  git pull origin dev-group-01-zengfeiyang --rebase
+  git pull origin dev-group-01-tangsiqi --rebase
   # 成功后再次正常推送
-  git push origin dev-group-01-zengfeiyang
+  git push origin dev-group-01-tangsiqi
   ```
 
 ---
@@ -316,14 +316,14 @@ git push
 打开课程大仓主页：[whu-course-cohort/LCA_Practice_Coursework-2026fall](https://github.com/whu-course-cohort/LCA_Practice_Coursework-2026fall)
 * **途径 A（最便捷，强烈推荐）**：  
   如果你刚在终端执行完 `git push`（15 分钟内），回到 GitHub 仓库主页顶部，会自动弹出一个亮眼的高亮横幅：  
-  `dev-group-01-zengfeiyang had recent pushes less than a minute ago`  
+  `dev-group-01-tangsiqi had recent pushes less than a minute ago`  
   👉 **直接点击横幅右侧绿色的 "Compare & pull request" 按钮即可！**
 * **途径 B（常规手动入口，横幅消失时使用）**：
   1. 点击仓库上方的 **"Pull requests"** 标签页（位于 Code 右侧）；
   2. 点击右上角绿色的 **"New pull request"** 按钮；
   3. 在分支对比栏中，**严格核对两个下拉框**：
      * **左侧 `base: main`**（表示要合入课程主分支）；
-     * **右侧 `compare: dev-group-01-zengfeiyang`**（从下拉列表中选择你的专属分支）。
+     * **右侧 `compare: dev-group-01-tangsiqi`**（从下拉列表中选择你的专属分支）。
 
 #### 步骤三：【关键自检】点击 "Files changed" 标签页核对修改范围
 在点击最终创建按钮之前，先查看页面下方的差异，或者切换到 **"Files changed"** 标签页：
@@ -333,7 +333,7 @@ git push
 #### 步骤四：填写 PR 标题与正文模板
 * **PR 标题与自动化规范**：
   * 推荐标题标准格式：`[日期 第几讲 PR]: student_name - task_name (group-XX)`  
-  * *示范：`[2026-10-22 第九讲 PR]: zengfeiyang - case1-pet-recycling (group-01)`*
+  * *示范：`[2026-10-22 第九讲 PR]: tangsiqi - case1-pet-recycling (group-01)`*
   * 💡 **助教机器人自动规范**：即使你起错了标题或保持默认，**后台 CI 助教机器人会在提交后 3 秒内自动解析你的分支与正文，将标题统一规范重命名**并打上分组/讲次标签！
 * **PR 描述内容（全自动预填）**：
   * 大仓已部署自动化模板，打开 PR 页面时 Description 输入框已**全自动预填充**通用底模；

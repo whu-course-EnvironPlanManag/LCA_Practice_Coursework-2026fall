@@ -28,7 +28,7 @@ jobs:
 
             const pr = context.payload.pull_request;
             const body = pr.body || '';
-            const headRef = pr.head.ref || ''; // Example: dev-group-01-zengfeiyang
+            const headRef = pr.head.ref || ''; // Example: dev-group-01-tangsiqi
 
             console.log(`[PR Assistant] Processing PR #${pr.number} (Branch: ${headRef})`);
 
@@ -62,7 +62,7 @@ jobs:
             if (nameInBody && !nameInBody[1].includes('姓名全拼') && !nameInBody[1].includes('例如') && nameInBody[1].trim() !== '') {
               studentName = nameInBody[1].trim();
             } else {
-              // Extract from branch name: dev-group-01-zengfeiyang -> zengfeiyang
+              // Extract from branch name: dev-group-01-tangsiqi -> tangsiqi
               const branchParts = headRef.split('-');
               if (branchParts.length >= 4) {
                 studentName = branchParts.slice(3).join('-');
