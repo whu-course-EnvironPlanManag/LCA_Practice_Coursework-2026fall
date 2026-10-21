@@ -1,0 +1,158 @@
+name: "PR Auto Titler & Task Template Adapter"
+
+on:
+  pull_request_target:
+    types: [opened, reopened]
+
+permissions:
+  pull-requests: write
+  issues: write
+  contents: read
+
+jobs:
+  assist-pr:
+    name: "Standardize Title & Adapt Template"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Process PR Title and Match Template
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const path = require('path');
+
+            const pr = context.payload.pull_request;
+            const body = pr.body || '';
+            const headRef = pr.head.ref || ''; // 例如: dev-group-01-zengfeiyang
+
+            console.log(`[PR Assistant] 收到 PR #${pr.number} (分支: ${headRef})`);
+
+            // ==========================================
+            // 步骤 1: 提取关键元数据 (表单提取 + 分支路径兜底)
+            // ==========================================
+
+            // 1.1 组号提取 (优先从分支名解析 dev-group-XX-xxx，再从正文提取)
+            let groupMatch = headRef.match(/group-(\d{2})/i) || body.match(/第\s*\[?\s*(\d{2})\s*\]?\s*小组/) || body.match(/group-(\d{2})/i);
+            let groupId = groupMatch ? `group-${groupMatch[1]}` : 'group-unknown';
+
+            // 1.2 获取本次变动文件，侦测所属作业任务目录
+            const { data: files } = await github.rest.pulls.listFiles({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: pr.number,
+            });
+
+            let taskSlug = null;
+            for (const file of files) {
+              const match = file.filename.match(/^groups\/group-\d{2}\/([^\/]+)\//);
+              if (match) {
+                taskSlug = match[1];
+                break;
+              }
+            }
+
+            // 1.3 学生姓名提取 (优先从正文姓名提取，未填或默认占位符则从分支提取)
+            let studentName = null;
+            const nameInBody = body.match(/学生姓名.*?[:：]\s*`?([a-zA-Z0-9_\-]+)`?/);
+            if (nameInBody && !nameInBody[1].includes('姓名全拼') && !nameInBody[1].includes('例如') && nameInBody[1].trim() !== '') {
+              studentName = nameInBody[1].trim();
+            } else {
+              // 从分支名提取: dev-group-01-zengfeiyang -> zengfeiyang
+              const branchParts = headRef.split('-');
+              if (branchParts.length >= 4) {
+                studentName = branchParts.slice(3).join('-');
+              } else {
+                studentName = pr.user.login || 'student';
+              }
+            }
+
+            // 1.4 讲次提取
+            let lectureNo = "09";
+            const lectureMatch = body.match(/第\s*\[?\s*(\d{1,2})\s*\]?\s*讲/);
+            if (lectureMatch) {
+              lectureNo = lectureMatch[1].padStart(2, '0');
+            }
+
+            // 1.5 提交日期 (支持从正文提取，或采用当前东八区北京时间)
+            let prDate = null;
+            const dateMatch = body.match(/(\d{4}-\d{2}-\d{2})/);
+            if (dateMatch) {
+              prDate = dateMatch[1];
+            } else {
+              // 东八区时间
+              prDate = new Date(Date.now() + 8 * 3600 * 1000).toISOString().split('T')[0];
+            }
+
+            // ==========================================
+            // 步骤 2: 自动标准化 PR 标题并更新
+            // ==========================================
+            const taskDisplay = taskSlug || 'assignment';
+            const standardizedTitle = `[${prDate} 第${lectureNo}讲 PR]: ${studentName} - ${taskDisplay} (${groupId})`;
+
+            console.log(`[Titler] 规范后 PR 标题为: "${standardizedTitle}"`);
+            await github.rest.pulls.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: pr.number,
+              title: standardizedTitle,
+            });
+
+            // 自动为 PR 贴上分类标签（方便教师按讲次、小组或任务快速筛选）
+            try {
+              const labelsToAdd = [`lecture-${lectureNo}`, groupId];
+              if (taskSlug) labelsToAdd.push(taskSlug);
+              await github.rest.issues.addLabels({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: pr.number,
+                labels: labelsToAdd,
+              });
+              console.log(`[Labels] 已打上标签: ${labelsToAdd.join(', ')}`);
+            } catch (err) {
+              console.log(`[Labels] 打标签跳过: ${err.message}`);
+            }
+
+            // ==========================================
+            // 步骤 3: 匹配并注入专属任务模板
+            // ==========================================
+            if (!taskSlug) {
+              console.log("[Adapter] 未检测到具体任务目录，跳过专属模板匹配。");
+              return;
+            }
+
+            const templateDir = '.github/PULL_REQUEST_TEMPLATE';
+            let matchedFile = null;
+
+            if (fs.existsSync(templateDir)) {
+              const allTemplates = fs.readdirSync(templateDir);
+              // 自动模糊匹配包含 taskSlug 的模版（例如 lecture9_20261022_case1-pet-recycling.md）
+              matchedFile = allTemplates.find(file => file.includes(taskSlug));
+            }
+
+            if (matchedFile) {
+              const templatePath = path.join(templateDir, matchedFile);
+              const templateContent = fs.readFileSync(templatePath, 'utf8');
+
+              const commentBody = `### 🤖 课程助教机器人提示 (Course TA Bot)\n\n` +
+                `✅ **PR 标题已自动规范化**：已根据您的提交自动重命名为 **\`${standardizedTitle}\`**\n` +
+                `📌 **自动匹配模版**：检测到您本次提交修改了 **\`${taskSlug}\`** 目录，已自动关联考核模板 **\`${matchedFile}\`**。\n\n` +
+                `---\n\n` +
+                `#### 📋 请对照下方本任务专属《核心指标与交付检查表》完成自查自核：\n\n` +
+                `${templateContent}\n\n` +
+                `---\n*提示：如需补充或修改提交，可直接在本地专属分支继续 commit & push，PR 将自动同步更新。*`;
+
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: pr.number,
+                body: commentBody,
+              });
+              console.log(`[Adapter] 已成功发表专属模版 (${matchedFile}) 检查评论！`);
+            } else {
+              console.log(`[Adapter] 未在 .github/PULL_REQUEST_TEMPLATE/ 中找到匹配 ${taskSlug} 的专属模版。`);
+            }
