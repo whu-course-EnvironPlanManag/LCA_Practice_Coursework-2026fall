@@ -130,8 +130,16 @@ jobs:
 
             if (fs.existsSync(templateDir)) {
               const allTemplates = fs.readdirSync(templateDir);
-              // Match template file containing the taskSlug (e.g. lecture9_20261022_case1-pet-recycling.md)
-              matchedFile = allTemplates.find(file => file.includes(taskSlug));
+              // Match template file containing the taskSlug or case key (e.g. lecture9-20261022-classroom_case1)
+              matchedFile = allTemplates.find(file => {
+                if (file.includes(taskSlug)) return true;
+                const normFile = file.toLowerCase().replace(/[^a-z0-9]/g, '');
+                const normSlug = taskSlug.toLowerCase().replace(/[^a-z0-9]/g, '');
+                if (normFile.includes(normSlug) || normSlug.includes(normFile)) return true;
+                const caseMatch = taskSlug.match(/case[_-]?(\d+)/i);
+                if (caseMatch && file.toLowerCase().includes(`case${caseMatch[1]}`)) return true;
+                return false;
+              });
             }
 
             if (matchedFile) {
