@@ -119,6 +119,7 @@ git push -u origin dev-tangsiqi-test
   ```
 
   如果回显如下，带有中括号蓝色的 `[origin/dev-tangsiqi-test]`，说明已完美绑定远端：
+
   ```text
   * dev-tangsiqi-test 7b2a9f1 [origin/dev-tangsiqi-test] feat: 初始同步
   ```
@@ -193,15 +194,20 @@ groups/group-01/                               # 第 1 小组根目录
 │   ├── practice2.ipynb
 │   └── data_collections/
 │
-├── lecture9_case1_pet_recycling/              # 【第 2 次实践】第九讲 案例一 PET 物理再生
-│   ├── case1_solution_report.md               # 联动计算分析与决策反思报告
-│   ├── plot_mfa_process.py                    # Python 绘制工艺物质流程图源码
-│   └── process_flow_diagram.png               # 生成的高清流程图
+├── lecture9-20261022-classroom_case1/         # 【第 2 次实践】第九讲 案例一 PET 物理再生（带日期）
+│   ├── README.md                              # 案例导读与核心基准速查
+│   ├── case_files/                            # 案例讲义与输入数据集 (MFA/LCA/TEA)
+│   │   ├── case1_documentation.md
+│   │   └── data_cohort/
+│   └── code_implementation/                   # 成果提交区 (Python源码/高清流程图/分析报告)
+│       ├── case1_solution_report.md
+│       ├── plot_mfa_process.py
+│       └── process_flow_diagram.png
 │
-├── lecture9_case2_green_methanol/             # 【未来任务】第九讲 案例二 绿氢合成甲醇
+├── lecture9-20261022-classroom_case2/         # 【未来任务】第九讲 案例二 绿氢合成甲醇
 │   └── ...
 │
-└── lecture10_urban_mfa_lca/                   # 【未来任务】第十讲 城市代谢分析
+└── lecture10-20261029-urban_mfa_lca/          # 【未来任务】第十讲 城市代谢分析
     └── ...
 ```
 
@@ -213,11 +219,11 @@ groups/group-01/                               # 第 1 小组根目录
 # 进入你所在的小组目录
 cd groups/group-01/
 
-# 复制老师的任务包模板到本组（以第九讲 case1 为例）
-cp -r ../../starter_materials/lecture9-20261022-classroom_case1 ./lecture9_case1_pet_recycling/
+# 复制老师的任务包模板到本组（以第九讲 case1 为例，文件夹名字保留带日期的规范命名）
+cp -r ../../starter_materials/lecture9-20261022-classroom_case1 ./lecture9-20261022-classroom_case1/
 
 # 进入新目录开始写作业
-cd lecture9_case1_pet_recycling/
+cd lecture9-20261022-classroom_case1/
 ```
 
 ---
@@ -265,7 +271,7 @@ cd lecture9_case1_pet_recycling/
   git restore --staged .
 
   # 2. 铁律：精准暂存！只 add 你自己的工作目录
-  git add groups/group-01/lecture9_case1_pet_recycling/
+  git add groups/group-01/lecture9-20261022-classroom_case1/
   ```
 
 ---
@@ -303,7 +309,9 @@ cd lecture9_case1_pet_recycling/
 ### 1. 网页端发起 PR 详尽图解步骤（新手保姆级教程）
 
 #### 步骤一：本地最终自检与推送
+
 在终端中确认本组所有文件均已保存并提交：
+
 ```bash
 # 1. 检查工作区状态（确保所有作业文件都在 groups/group-XX/ 目录下且已 commit）
 git status
@@ -313,11 +321,10 @@ git push
 ```
 
 #### 步骤二：进入 GitHub 仓库页面找到发起入口
+
 打开课程大仓主页：[whu-course-cohort/LCA_Practice_Coursework-2026fall](https://github.com/whu-course-cohort/LCA_Practice_Coursework-2026fall)
-* **途径 A（最便捷，强烈推荐）**：  
-  如果你刚在终端执行完 `git push`（15 分钟内），回到 GitHub 仓库主页顶部，会自动弹出一个亮眼的高亮横幅：  
-  `dev-tangsiqi-test had recent pushes less than a minute ago`  
-  👉 **直接点击横幅右侧绿色的 "Compare & pull request" 按钮即可！**
+
+* **途径 A（最便捷，强烈推荐）**：如果你刚在终端执行完 `git push`（15 分钟内），回到 GitHub 仓库主页顶部，会自动弹出一个亮眼的高亮横幅：`dev-tangsiqi-test had recent pushes less than a minute ago`👉 **直接点击横幅右侧绿色的 "Compare & pull request" 按钮即可！**
 * **途径 B（常规手动入口，横幅消失时使用）**：
   1. 点击仓库上方的 **"Pull requests"** 标签页（位于 Code 右侧）；
   2. 点击右上角绿色的 **"New pull request"** 按钮；
@@ -326,13 +333,16 @@ git push
      * **右侧 `compare: dev-tangsiqi-test`**（从下拉列表中选择你的专属分支）。
 
 #### 步骤三：【关键自检】点击 "Files changed" 标签页核对修改范围
+
 在点击最终创建按钮之前，先查看页面下方的差异，或者切换到 **"Files changed"** 标签页：
+
 * 🟢 **绿灯安全**：改动的所有文件路径都带有 `groups/group-01/` 前缀；
 * 🔴 **红灯预警**：如果你发现有根目录文件、`starter_materials/` 或其他小组的文件被改动了，**切勿提交！先按下方场景 D 剔除误改文件**。
 
 #### 步骤四：填写 PR 标题与正文模板
+
 * **PR 标题与自动化规范**：
-  * 推荐标题标准格式：`[日期 第几讲 PR]: student_name - task_name (group-XX)`  
+  * 推荐标题标准格式：`[日期 第几讲 PR]: student_name - task_name (group-XX)`
   * *示范：`[2026-10-22 第九讲 PR]: tangsiqi - case1-pet-recycling (group-01)`*
   * 💡 **助教机器人自动规范**：即使你起错了标题或保持默认，**后台 CI 助教机器人会在提交后 3 秒内自动解析你的分支与正文，将标题统一规范重命名**并打上分组/讲次标签！
 * **PR 描述内容（全自动预填）**：
@@ -348,14 +358,16 @@ git push
 这是很多非计算机专业初学同学最常惊慌失措的地方。请牢记以下**四大经典场景的急救秘籍**：
 
 #### 🌟 场景 A（最常见）：PR 已经发出去了，突然发现代码有 Bug、计算错了或漏传了流程图
-* **初学者的误区**：以为必须把这个 PR 关掉删掉，重新再开一个新的 PR。  
-* **真相与秘籍**：**绝对不需要关闭 PR！千万不要关！**  
+
+* **初学者的误区**：以为必须把这个 PR 关掉删掉，重新再开一个新的 PR。
+* **真相与秘籍**：**绝对不需要关闭 PR！千万不要关！**
   > **Pull Request 本质上是一个“实时管道（Live Pipeline）”**，而不是一份固定的静态压缩包！只要这个 PR 还没有被老师合并（处于 Open 状态），它就会**永远自动追踪并同步你个人分支上的最新提交**。
+  >
 * **极简解决办法**：
   直接在本地继续修改你的代码，修改完成后正常执行三连指令：
   ```bash
   # 1. 暂存修改后的文件
-  git add groups/group-01/lecture9_case1_pet_recycling/
+  git add groups/group-01/lecture9-20261022-classroom_case1/
 
   # 2. 提交更新说明
   git commit -m "fix(group-01): 修正流程图配色与热洗蒸汽敏感度计算"
@@ -363,11 +375,13 @@ git push
   # 3. 正常推送
   git push
   ```
+
   **推送完成后，你无需在 GitHub 上点任何多余按钮！刷新刚才的 PR 页面，GitHub 会自动把你的最新 commit 追加进去并更新代码差异！** 老师刷新看到的直接就是你最新修正后的版本。
 
 ---
 
 #### 🌟 场景 B：完全提错了分支，或者作业报废想彻底撤回该 PR（关闭 PR）
+
 * 如果你手滑选错了对比分支，或者完全点错了想作废本次 PR：
 * **操作方法**：
   1. 打开你发起的该 PR 页面；
@@ -378,6 +392,7 @@ git push
 ---
 
 #### 🌟 场景 C：刚刚在本地 `commit` 了，突然发现写错了，想撤销该 commit
+
 * **情况 1（还没 push 到 GitHub 远端）**：
   ```bash
   # 撤销刚刚那次 commit，但你写的所有代码完好无损地保留在工作区！
@@ -395,6 +410,7 @@ git push
 ---
 
 #### 🌟 场景 D：不小心误改了公共文件或其他组的文件，导致 PR 触发 CI 红叉拦截！
+
 * **原因**：大仓配置了自动化质量守卫，如果你碰了非本组目录，CI 会直接报红叉拦截合并。
 * **急救方法（一秒恢复公共文件为 main 分支纯净原貌）**：
   ```bash
