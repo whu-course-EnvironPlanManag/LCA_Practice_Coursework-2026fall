@@ -15,6 +15,7 @@
 ---
 
 #### 2. 成果交付与规范自查 (Deliverables Checklist)
+*(在网页端直接鼠标点击方框即可打勾 ☑️)*
 - [ ] **专属目录提交**：代码与图表存放于 `groups/group-[XX]/lecture9-20261022-classroom_case1/` 目录。
 - [ ] **Python 流程图源码**：提交了自主编写的绘图脚本（如 `plot_pet_flow.py`，调用 `graphviz` / `plotly` / `schemdraw` / `floweaver`）。
 - [ ] **高清图表文件**：提交了渲染导出的高清矢量图或图片（`.png` / `.svg`），且在 PR 正文中已正常渲染预览。
