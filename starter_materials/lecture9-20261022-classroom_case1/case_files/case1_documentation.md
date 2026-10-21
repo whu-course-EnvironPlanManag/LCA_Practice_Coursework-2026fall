@@ -275,7 +275,7 @@ git push
 
 1. 访问 GitHub 仓库主页，点击 **"Compare & pull request"**；
 2. **分支比对**：`base: main` $\leftarrow$ `compare: dev-tangsiqi-test`；
-3. **PR 标题通用标准格式**：`[日期 第几讲 PR]: student_name - task_name (group-XX)`*示范：`[2026-10-22 第九讲 PR]: tangsiqi - case1-pet-recycling (group-01)`**(注：提交后后台助教机器人会自动从正文或分支解析信息并规范重命名标题，打上讲次与组别标签)*
+3. **PR 标题通用标准格式**：`[日期 第几讲 PR]: student_name - task_name (group-XX)`*示范：`[2026-10-22 第九讲 PR]: tangsiqi - case1-pet-recycling (group-test)`**(注：提交后后台助教机器人会自动从正文或分支解析信息并规范重命名标题，打上讲次与组别标签)*
 4. **PR 正文（全自动预填）**：大仓已配置官方模版，发起 PR 时对话框会自动预填通用考核底稿；提交后助教机器人会在讨论区自动推送本讲 Case 1 专属指标对照单，请对照自查。
 
 ---
