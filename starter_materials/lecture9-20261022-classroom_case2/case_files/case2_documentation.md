@@ -54,7 +54,6 @@ $$
 \text{CO}_2 + 3\text{H}_2 \rightleftharpoons \text{CH}_3\text{OH} + \text{H}_2\text{O} \quad (\Delta H_{298\text{K}} = -49.5\text{ kJ/mol})
 $$
 
-> *理论化学计量摩尔比 $\text{H}_2 : \text{CO}_2 = 3 : 1$。*
 
 * **反应 2：逆水汽变换副反应（RWGS，吸热）**
 
@@ -62,7 +61,7 @@ $$
 \text{CO}_2 + \text{H}_2 \rightleftharpoons \text{CO} + \text{H}_2\text{O} \quad (\Delta H_{298\text{K}} = +41.2\text{ kJ/mol})
 $$
 
-> *副产微量 $\text{CO}$。*
+
 
 * **反应 3：副产物 $\text{CO}$ 深度加氢合成甲醇反应（强放热）**
 
