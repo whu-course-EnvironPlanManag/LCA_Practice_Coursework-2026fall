@@ -1,0 +1,11 @@
+Flow_Name,Category,Amount_per_t_rPET,Unit,Emission_Factor,EF_Unit,Carbon_Footprint_kgCO2e,Data_Source
+Baled_PET_Transport,Raw_Materials,1250.0,kg,0.12,kg CO2e / kg,150.0,Ecoinvent 3.9 Transport lorry 16-32t
+Electricity_Grid,Utilities,850.0,kWh,0.55,kg CO2e / kWh,467.5,Central China Grid Average (MEE 2023)
+Steam_Natural_Gas,Utilities,2.0,GJ,65.0,kg CO2e / GJ,130.0,Industrial gas boiler steam
+NaOH_Chemical,Consumables,15.0,kg,2.10,kg CO2e / kg,31.5,Chlor-alkali process diaphragm
+Water_Tap,Consumables,2.5,m3,0.38,kg CO2e / m3,0.95,Municipal tap water supply
+Wastewater_Treatment,End_of_Life,2.2,m3,2.75,kg CO2e / m3,6.05,Onsite biological wastewater plant
+HDPE_Avoided_Burden,Byproduct_Credit,-93.75,kg,1.60,kg CO2e / kg,-150.0,Virgin HDPE granule production credit
+Net_Total_GWP,,1.0,t rPET,,,636.0,Sum of all lifecycle stages
+Virgin_PET_Benchmark,,1.0,t vPET,,,2250.0,Plastics Europe eco-profile virgin PET
+Net_GHG_Reduction,,1.0,t rPET,,,1614.0,71.7% greenhouse gas reduction
