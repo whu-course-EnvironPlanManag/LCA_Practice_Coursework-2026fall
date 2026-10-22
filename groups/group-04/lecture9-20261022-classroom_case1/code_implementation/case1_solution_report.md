@@ -172,6 +172,10 @@ $$\text{增幅} = \frac{812.3}{6153.4} \times 100\% = \mathbf{13.20\%}$$
   - `mfa_sankey_diagram.png` (高清图片，需安装kaleido)
   - `mfa_sankey_diagram.svg` (矢量图，需安装kaleido)
 
+### 工艺流程图
+
+![工艺流程图](./process_flow_diagram.png)
+
 ### 流程图说明
 
 桑基图展示了以下工艺流程：
