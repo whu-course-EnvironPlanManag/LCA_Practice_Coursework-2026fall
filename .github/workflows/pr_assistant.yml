@@ -1,0 +1,296 @@
+name: "PR Auto Titler & Task Template Adapter"
+
+on:
+  pull_request_target:
+    types: [opened, reopened, edited, synchronize]
+
+permissions:
+  pull-requests: write
+  issues: write
+  contents: read
+
+jobs:
+  assist-pr:
+    name: "Standardize Title & Adapt Template"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Process PR Title and Match Template
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const path = require('path');
+
+            const pr = context.payload.pull_request;
+            const body = pr.body || '';
+            const headRef = pr.head.ref || ''; // Example: dev-tangsiqi-test
+
+            console.log(`[PR Assistant] Processing PR #${pr.number} (Branch: ${headRef})`);
+
+            // ==========================================
+            // Tier 1: Dynamic Template & Starter Registry Discovery
+            // ==========================================
+            const templateDir = '.github/PULL_REQUEST_TEMPLATE';
+            const starterDir = 'starter_materials';
+
+            const knownStarters = fs.existsSync(starterDir)
+              ? fs.readdirSync(starterDir).filter(f => fs.statSync(path.join(starterDir, f)).isDirectory())
+              : [];
+
+            const knownTemplates = fs.existsSync(templateDir)
+              ? fs.readdirSync(templateDir).filter(f => f.endsWith('.md'))
+              : [];
+
+            console.log(`[Registry] Discovered ${knownStarters.length} starter materials:`, knownStarters);
+            console.log(`[Registry] Discovered ${knownTemplates.length} PR templates:`, knownTemplates);
+
+            // Fetch changed files in this PR
+            const { data: files } = await github.rest.pulls.listFiles({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: pr.number,
+            });
+
+            // ==========================================
+            // Tier 2: Dynamic Group ID Extraction (Defensive Regex)
+            // ==========================================
+            let groupId = null;
+
+            // 2.1 Priority: Check branch name (e.g. dev-group-01-xxx, group-01, dev-tangsiqi-test)
+            const branchGroupMatch = headRef.match(/group-(\d{2}|test)/i);
+            if (branchGroupMatch) {
+              groupId = `group-${branchGroupMatch[1].toLowerCase()}`;
+            }
+
+            // 2.2 Priority: Check modified file paths (groups/<group-id>/...)
+            if (!groupId) {
+              for (const f of files) {
+                const m = f.filename.match(/^groups\/([^\/]+)\//);
+                if (m && m[1] !== 'README.md') {
+                  groupId = m[1].toLowerCase();
+                  break;
+                }
+              }
+            }
+
+            // 2.3 Priority: Check body text strictly constrained to the Group ID line
+            if (!groupId) {
+              const lineMatch = body.match(/(?:所属小组|Group ID)[^\n\r]*?[:：][^\n\r]*?`?\[?\s*([a-zA-Z0-9_\-]+)/i);
+              if (lineMatch && !lineMatch[1].includes('例如') && !lineMatch[1].includes('XX')) {
+                const raw = lineMatch[1].trim();
+                const num = raw.match(/\d{2}/);
+                if (num) {
+                  groupId = `group-${num[0]}`;
+                } else if (/test/i.test(raw)) {
+                  groupId = 'group-test';
+                } else if (raw.startsWith('group-')) {
+                  groupId = raw.toLowerCase();
+                }
+              }
+            }
+            groupId = groupId || 'group-unknown';
+            console.log(`[Metadata] Resolved Group ID: "${groupId}"`);
+
+            // ==========================================
+            // Tier 3: Dynamic Multi-Channel Task Slug Candidate Extraction
+            // ==========================================
+            const taskCandidates = [];
+
+            // 3.1 From changed file paths under groups/<group-id>/<task-slug>/
+            for (const file of files) {
+              const m = file.filename.match(/^groups\/[^\/]+\/([^\/]+)\//);
+              if (m && !taskCandidates.includes(m[1])) {
+                taskCandidates.push(m[1]);
+              }
+            }
+
+            // 3.2 From Workdir Path in PR body
+            const workdirMatch = body.match(/(?:成果目录|Workdir Path)[^\n\r]*?[:：][^\n\r]*?groups\/[^\/\s`\]]+\/([^\/\s`\]]+)/i);
+            if (workdirMatch && !taskCandidates.includes(workdirMatch[1])) {
+              taskCandidates.push(workdirMatch[1]);
+            }
+
+            // 3.3 From Task Name in PR body
+            const taskNameMatch = body.match(/(?:任务名称|Task Name)[^\n\r]*?[:：]\s*`?\[?\s*([a-zA-Z0-9_\-]+)/i);
+            if (taskNameMatch && !taskNameMatch[1].includes('例如') && !taskNameMatch[1].includes('task_name') && !taskCandidates.includes(taskNameMatch[1])) {
+              taskCandidates.push(taskNameMatch[1]);
+            }
+
+            console.log('[Metadata] Collected task candidates:', taskCandidates);
+
+            // ==========================================
+            // Tier 4: Dynamic Matching & Resolution Engine
+            // ==========================================
+            const normalize = s => s.toLowerCase().replace(/[^a-z0-9]/g, '');
+
+            let resolvedTask = null;
+            let resolvedTemplate = null;
+            let bestScore = -1;
+
+            for (const candidate of taskCandidates) {
+              const normCandidate = normalize(candidate);
+
+              // Score candidate against known starters
+              for (const starter of knownStarters) {
+                const normStarter = normalize(starter);
+                let score = 0;
+                if (starter === candidate) score += 100;
+                else if (normStarter === normCandidate) score += 90;
+                else if (normStarter.includes(normCandidate) || normCandidate.includes(normStarter)) score += 70;
+                else {
+                  const cCase = candidate.match(/case[_-]?(\d+)/i);
+                  const sCase = starter.match(/case[_-]?(\d+)/i);
+                  if (cCase && sCase && cCase[1] === sCase[1]) score += 60;
+                }
+
+                if (score > bestScore) {
+                  bestScore = score;
+                  resolvedTask = starter;
+                }
+              }
+
+              // Score candidate against known templates
+              for (const tpl of knownTemplates) {
+                const normTpl = normalize(tpl);
+                let score = 0;
+                if (tpl.includes(candidate)) score += 100;
+                else if (normTpl.includes(normCandidate) || normCandidate.includes(normTpl)) score += 80;
+                else {
+                  const cCase = candidate.match(/case[_-]?(\d+)/i);
+                  const tCase = tpl.match(/case[_-]?(\d+)/i);
+                  if (cCase && tCase && cCase[1] === tCase[1]) score += 60;
+                }
+
+                if (score > 40 && !resolvedTemplate) {
+                  resolvedTemplate = tpl;
+                }
+              }
+            }
+
+            // Fallback to highest candidate if no exact registry match
+            if (!resolvedTask && taskCandidates.length > 0) {
+              resolvedTask = taskCandidates[0];
+            }
+
+            console.log(`[Engine] Resolved Task: "${resolvedTask}" (Confidence Score: ${bestScore})`);
+            console.log(`[Engine] Resolved Template: "${resolvedTemplate}"`);
+
+            // ==========================================
+            // Step 5: Student Name, Lecture No, Date Extraction
+            // ==========================================
+            let studentName = null;
+            const nameInBody = body.match(/(?:Student Name|学生姓名)[^\n\r]*?[:：]\s*`?\[?\s*([a-zA-Z0-9_\-]+)/i);
+            if (nameInBody && !nameInBody[1].includes('姓名全拼') && !nameInBody[1].includes('例如') && nameInBody[1].trim() !== '') {
+              studentName = nameInBody[1].trim();
+            } else {
+              const branchParts = headRef.split('-');
+              if (branchParts.length >= 4) {
+                studentName = branchParts.slice(3).join('-');
+              } else {
+                studentName = pr.user.login || 'student';
+              }
+            }
+
+            let lectureNo = '09';
+            const lectureMatch = body.match(/(?:Lecture|讲次|第)\s*\[?\s*(\d{1,2})\s*\]?\s*(?:讲|)/i);
+            if (lectureMatch) {
+              lectureNo = lectureMatch[1].padStart(2, '0');
+            }
+
+            let prDate = null;
+            const dateMatch = body.match(/(\d{4}-\d{2}-\d{2})/);
+            if (dateMatch) {
+              prDate = dateMatch[1];
+            } else {
+              prDate = new Date(Date.now() + 8 * 3600 * 1000).toISOString().split('T')[0];
+            }
+
+            // ==========================================
+            // Step 6: Standardize PR Title and Labels
+            // ==========================================
+            const isDeliverable = f => {
+              if (f.filename.endsWith('/.gitkeep')) return false;
+              if (f.filename.includes('/code_implementation/')) return true;
+              return /\.(py|ipynb|png|svg|jpg|jpeg|pdf)$/i.test(f.filename);
+            };
+            const hasDeliverables = files.some(isDeliverable);
+            console.log(`[Deliverables] Substantive deliverables detected: ${hasDeliverables}`);
+
+            const taskDisplay = resolvedTask || 'assignment';
+            const standardizedTitle = `[${prDate} Lecture-${lectureNo} PR]: ${studentName} - ${taskDisplay} (${groupId})`;
+
+            console.log(`[Titler] Standardized PR Title: "${standardizedTitle}"`);
+            await github.rest.pulls.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: pr.number,
+              title: standardizedTitle,
+            });
+
+            try {
+              const labelsToAdd = [`lecture-${lectureNo}`, groupId];
+              if (resolvedTask) labelsToAdd.push(resolvedTask);
+              labelsToAdd.push(hasDeliverables ? 'ready-for-review' : 'needs-implementation');
+              await github.rest.issues.addLabels({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: pr.number,
+                labels: labelsToAdd,
+              });
+              console.log(`[Labels] Added labels: ${labelsToAdd.join(', ')}`);
+            } catch (err) {
+              console.log(`[Labels] Skipped labeling: ${err.message}`);
+            }
+
+            // ==========================================
+            // Step 7: Inject or Update Task Rubric Checklist Comment
+            // ==========================================
+            if (resolvedTemplate) {
+              const templatePath = path.join(templateDir, resolvedTemplate);
+              const templateContent = fs.readFileSync(templatePath, 'utf8');
+
+              const deliverableNotice = hasDeliverables
+                ? `> 🚀 **成果自检已就绪**：检测到您已提交代码实现与相关图表，请对照下方基准指标与规范自查！\n\n`
+                : `> ⚠️ **成果检测提醒 (Missing Deliverables)**：检测到本次 PR 暂未包含实质性代码执行成果（\`code_implementation/\` 目录下未包含脚本或图表）。请在本地完成分析与绘图后直接执行 \`git push\`，本 PR 将自动同步更新！\n\n`;
+
+              const commentBody = `### 🤖 Course Teaching Assistant Bot\n\n` +
+                deliverableNotice +
+                `✅ **Standardized PR Title**: Renamed to **\`${standardizedTitle}\`**\n` +
+                `📌 **Matched Task Template**: Detected modifications under directory **\`${taskDisplay}\`**, associated with rubric **\`${resolvedTemplate}\`**.\n\n` +
+                `---\n\n` +
+                `#### 📋 Task-specific Verification Checklist & Rubric:\n\n` +
+                `${templateContent}\n\n` +
+                `---\n*Notice: If you need to make corrections or additions, push commits to your branch directly. This PR will update automatically.*`;
+
+              const { data: existingComments } = await github.rest.issues.listComments({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: pr.number,
+              });
+
+              const botComment = existingComments.find(c => c.body.includes('Course Teaching Assistant Bot'));
+              if (botComment) {
+                console.log(`[Adapter] Updating existing bot comment #${botComment.id}...`);
+                await github.rest.issues.updateComment({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  comment_id: botComment.id,
+                  body: commentBody,
+                });
+              } else {
+                console.log(`[Adapter] Posting new bot checklist comment...`);
+                await github.rest.issues.createComment({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: pr.number,
+                  body: commentBody,
+                });
+              }
+            } else {
+              console.log(`[Adapter] No specialized template matched for task "${taskDisplay}".`);
+            }
