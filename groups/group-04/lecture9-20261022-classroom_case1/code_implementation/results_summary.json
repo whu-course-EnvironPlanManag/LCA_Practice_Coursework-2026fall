@@ -1,0 +1,82 @@
+{
+  "mfa_balance": {
+    "total_in": 1000.0,
+    "total_out": 1000.0,
+    "balanced": true,
+    "error": 0.0
+  },
+  "scenarios": [
+    {
+      "key": "baseline",
+      "label": "基准情景（常规工业电网）",
+      "yield_rate": 0.8,
+      "electricity_ef": 0.55,
+      "electricity_price": 0.65,
+      "feedstock_t_per_t": 1.25,
+      "gwp": 636.0,
+      "reduction_vs_virgin": 0.7173333333333334,
+      "variable_cost": 5630.1875,
+      "fixed_cost_per_t": 437.5,
+      "lcop": 6067.6875,
+      "output_t": 16000.0,
+      "gross_per_t": 1532.3125,
+      "gross_annual": 24517000.0,
+      "payback_static": 1.3303084652753858,
+      "payback_dynamic": 1.47167179389721
+    },
+    {
+      "key": "green",
+      "label": "绿电情景（100% 风光绿电）",
+      "yield_rate": 0.8,
+      "electricity_ef": 0.03,
+      "electricity_price": 0.7,
+      "feedstock_t_per_t": 1.25,
+      "gwp": 194.0,
+      "reduction_vs_virgin": 0.9137777777777778,
+      "variable_cost": 5672.6875,
+      "fixed_cost_per_t": 437.5,
+      "lcop": 6110.1875,
+      "output_t": 16000.0,
+      "gross_per_t": 1489.8125,
+      "gross_annual": 23837000.0,
+      "payback_static": 1.3633431120741075,
+      "payback_dynamic": 1.5102034059232392
+    },
+    {
+      "key": "low_yield",
+      "label": "低收率情景（收率 70%，常规电网）",
+      "yield_rate": 0.7,
+      "electricity_ef": 0.55,
+      "electricity_price": 0.65,
+      "feedstock_t_per_t": 1.4285714285714286,
+      "gwp": 726.857142857143,
+      "reduction_vs_virgin": 0.6769523809523809,
+      "variable_cost": 6434.500000000001,
+      "fixed_cost_per_t": 500.0,
+      "lcop": 6934.500000000001,
+      "output_t": 14000.0,
+      "gross_per_t": 665.4999999999991,
+      "gross_annual": 9316999.999999987,
+      "payback_static": 2.902231090150556,
+      "payback_dynamic": 3.442341357518597
+    },
+    {
+      "key": "green_low_yield",
+      "label": "绿电 + 低收率（收率 70%）",
+      "yield_rate": 0.7,
+      "electricity_ef": 0.03,
+      "electricity_price": 0.7,
+      "feedstock_t_per_t": 1.4285714285714286,
+      "gwp": 221.71428571428572,
+      "reduction_vs_virgin": 0.9014603174603174,
+      "variable_cost": 6483.071428571429,
+      "fixed_cost_per_t": 500.0,
+      "lcop": 6983.071428571429,
+      "output_t": 14000.0,
+      "gross_per_t": 616.9285714285706,
+      "gross_annual": 8636999.999999989,
+      "payback_static": 3.064211649476077,
+      "payback_dynamic": 3.6627141202155933
+    }
+  ]
+}
