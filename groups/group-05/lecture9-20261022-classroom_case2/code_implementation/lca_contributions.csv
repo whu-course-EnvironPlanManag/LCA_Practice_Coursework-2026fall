@@ -1,0 +1,9 @@
+﻿item,green_kgCO2e,grid_kgCO2e
+Electricity_PEM_Electrolysis,360.36,5662.8
+Electricity_CO2_Compression,8.925,140.25
+Electricity_Recycle_Compressor,5.425000000000001,85.25
+Electricity_Distillation_Cooling,4.2,66.0
+Direct_Fugitive_Emissions,15.0,15.0
+Infrastructure_and_Catalyst,80.0,80.0
+CO2_Capture_Credit,-1423.0,-1423.0
+Byproduct_Oxygen_Credit,-95.03999999999999,-95.03999999999999
