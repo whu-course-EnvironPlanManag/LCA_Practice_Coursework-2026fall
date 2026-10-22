@@ -52,8 +52,8 @@ print("\n【模块一 · MFA 物质平衡】")
 print("-" * 50)
 
 # 取输入行和各工段输出行
-inputs  = mfa_df[(mfa_df["Flow_Type"] == "Input") & (mfa_df["Stage"] != "Balance_Check")].copy()
-outputs = mfa_df[(mfa_df["Flow_Type"] != "Input") & (mfa_df["Stage"] != "Balance_Check")].copy()
+inputs  = mfa_df[mfa_df["Stage"] == "Input"].copy()
+outputs = mfa_df[mfa_df["Flow_Type"].isin(["Waste", "Co_Product", "Main_Product"])].copy()
 
 total_in  = inputs["Mass_kg"].sum()
 total_out = outputs["Mass_kg"].sum()

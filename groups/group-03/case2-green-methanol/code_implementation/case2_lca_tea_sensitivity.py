@@ -11,7 +11,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-DATA_DIR = Path(__file__).resolve().parent.parent / "case_files" / "data_cohort"
+DATA_DIR = (Path(__file__).resolve().parent.parent
+            / "lecture9-20261022-classroom_case2" / "case_files" / "data_cohort")
 OUT_DIR  = Path(__file__).resolve().parent
 assert DATA_DIR.exists(), f"❌ {DATA_DIR} 不存在"
 
@@ -29,8 +30,12 @@ print("案例二 · 绿电悖论 LCA + TEA LCOM 电价敏感性分析")
 print("=" * 70)
 
 # ---- 1. LCA 绿电悖论两情景 ----
-sc_a_green  = df_lci['gwp_scenario_a_kgCO2e'].sum()
-sc_b_grid   = df_lci['gwp_scenario_b_kgCO2e'].sum()
+# 仅累加清单分项（排除 Net_Life_Cycle_GWP_Total / Fossil_Benchmark / Net_GHG_Reduction 等汇总行，避免重复计数）
+AGG_ROWS = ['Net_Life_Cycle_GWP_Total', 'Fossil_Benchmark_CtM', 'Net_GHG_Reduction_vs_Benchmark']
+df_items = df_lci[~df_lci['lci_inventory_item'].isin(AGG_ROWS)]
+
+sc_a_green  = df_items['gwp_scenario_a_kgCO2e'].sum()
+sc_b_grid   = df_items['gwp_scenario_b_kgCO2e'].sum()
 fossil_ctm  = df_lci.loc[df_lci['lci_inventory_item']=='Fossil_Benchmark_CtM', 'gwp_scenario_a_kgCO2e'].values[0]
 reduction_a = (fossil_ctm - sc_a_green) / fossil_ctm * 100
 reduction_b = (fossil_ctm - sc_b_grid) / fossil_ctm * 100
