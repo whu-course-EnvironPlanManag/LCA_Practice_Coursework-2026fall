@@ -1,0 +1,39 @@
+﻿metric,value,unit,formula_or_assumption
+Baseline electricity emissions,467.5000,kg CO2e/t,850 kWh/t * 0.55 kg CO2e/kWh
+Green electricity emissions,25.5000,kg CO2e/t,850 kWh/t * 0.03 kg CO2e/kWh
+Green-scenario net GWP,194.0000,kg CO2e/t,636 - 467.5 + 25.5
+Green-scenario reduction vs virgin PET,91.3778,%,(2250 - green-scenario net GWP) / 2250 * 100
+Green electricity cost increase,42.5000,CNY/t,850 kWh/t * (0.70 - 0.65) CNY/kWh
+Green-scenario LCOP,6195.9000,CNY/t,6153.4 + 850 * (0.70 - 0.65)
+Green-scenario LCOP increase,42.5000,CNY/t,Green-scenario LCOP - 6153.4
+Green-scenario LCOP increase rate,0.6907,%,(green-scenario LCOP - 6153.4) / 6153.4 * 100
+Feedstock required at 80% yield,1.2500,t/t product,1 / 0.80
+Feedstock required at 70% yield,1.4286,t/t product,1 / 0.70
+Feed-linked activity scale at 70% yield,1.1429,ratio,(1 / 0.70) / (1 / 0.80)
+70%-yield green-scenario net GWP,221.7143,kg CO2e/t,"All listed LCA inventory items, including HDPE credit, scale by 8/7"
+70%-yield green-electricity LCOP sensitivity,7014.2143,CNY/t,Green electricity at 0.70 CNY/kWh; feed-linked variable items scale by 8/7; fixed per-tonne costs unchanged
+70%-yield LCOP change vs green-scenario LCOP,818.3143,CNY/t,70%-yield LCOP sensitivity - green-scenario LCOP
+70%-yield LCOP change rate vs green-scenario LCOP,13.2074,%,(70%-yield LCOP sensitivity - green-scenario LCOP) / green-scenario LCOP * 100
+Green-scenario GWP item: Bottle-brick transport,150.0000,kg CO2e/t,Case handout inventory; electricity uses green factor
+Green-scenario GWP item: Electricity,25.5000,kg CO2e/t,Case handout inventory; electricity uses green factor
+Green-scenario GWP item: Steam,130.0000,kg CO2e/t,Case handout inventory; electricity uses green factor
+Green-scenario GWP item: Sodium hydroxide,31.5000,kg CO2e/t,Case handout inventory; electricity uses green factor
+Green-scenario GWP item: Fresh water,0.9500,kg CO2e/t,Case handout inventory; electricity uses green factor
+Green-scenario GWP item: Wastewater treatment,6.0500,kg CO2e/t,Case handout inventory; electricity uses green factor
+Green-scenario GWP item: HDPE avoided-burden credit,-150.0000,kg CO2e/t,Case handout inventory; electricity uses green factor
+70%-yield GWP item: Bottle-brick transport,171.4286,kg CO2e/t,Green-scenario GWP item * 8/7
+70%-yield GWP item: Electricity,29.1429,kg CO2e/t,Green-scenario GWP item * 8/7
+70%-yield GWP item: Steam,148.5714,kg CO2e/t,Green-scenario GWP item * 8/7
+70%-yield GWP item: Sodium hydroxide,36.0000,kg CO2e/t,Green-scenario GWP item * 8/7
+70%-yield GWP item: Fresh water,1.0857,kg CO2e/t,Green-scenario GWP item * 8/7
+70%-yield GWP item: Wastewater treatment,6.9143,kg CO2e/t,Green-scenario GWP item * 8/7
+70%-yield GWP item: HDPE avoided-burden credit,-171.4286,kg CO2e/t,Green-scenario GWP item * 8/7
+70%-yield green-electricity LCOP item: Feedstock,6000.0000,CNY/t,Baseline item * 8/7 for feed-linked items; otherwise unchanged
+70%-yield green-electricity LCOP item: Electricity,680.0000,CNY/t,"Green electricity at 0.70 CNY/kWh, then scaled by 8/7"
+70%-yield green-electricity LCOP item: Steam,194.2857,CNY/t,Baseline item * 8/7 for feed-linked items; otherwise unchanged
+70%-yield green-electricity LCOP item: Water and sodium hydroxide,131.4286,CNY/t,Baseline item * 8/7 for feed-linked items; otherwise unchanged
+70%-yield green-electricity LCOP item: Solid-waste disposal,23.2000,CNY/t,Baseline item * 8/7 for feed-linked items; otherwise unchanged
+70%-yield green-electricity LCOP item: Labor,218.8000,CNY/t,Baseline item * 8/7 for feed-linked items; otherwise unchanged
+70%-yield green-electricity LCOP item: Maintenance,52.5000,CNY/t,Baseline item * 8/7 for feed-linked items; otherwise unchanged
+"70%-yield green-electricity LCOP item: Management, insurance and depreciation",196.4000,CNY/t,Baseline item * 8/7 for feed-linked items; otherwise unchanged
+70%-yield green-electricity LCOP item: HDPE byproduct revenue,-482.4000,CNY/t,Baseline item * 8/7 for feed-linked items; otherwise unchanged
