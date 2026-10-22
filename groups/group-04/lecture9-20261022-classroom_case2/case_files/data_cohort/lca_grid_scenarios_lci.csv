@@ -2,7 +2,7 @@ lci_inventory_item,stage_process,unit,flow_per_ton_product,ef_scenario_a_green_p
 CO2_Capture_Credit,原料二氧化碳固定信用,kg,-1423.0,-1.00,-1.00,kgCO2e/kg,-1423.00,-1423.00,IPCC_Guidelines,点源捕集永久转化为甲醇化学分子固定
 Electricity_PEM_Electrolysis,PEM电解水制氢用电(52kWh/kg),kWh,10296.0,0.035,0.550,kgCO2e/kWh,360.36,5662.80,IRENA_2020/Ecoinvent3.9,制氢耗电占总电耗95.1%
 Electricity_CO2_Compression,CO2捕集与三级气体压缩,kWh,255.0,0.035,0.550,kgCO2e/kWh,8.93,140.25,Applied_Energy_2016,压缩至5.0MPa超临界进料状态
-Electricity_Recycle_Compressor,未反应气循环压缩与循环水泵,kWh,155.0,0.035,0.550,kgCO2e/kWh,5.43,85.25,Industrial_Engineering_Chemistry,循环比3.8:1升压补压
+Electricity_Recycle_Compressor,未反应气循环压缩与循环水泵,kWh,155.0,0.035,0.550,kgCO2e/kWh,5.43,85.25,Industrial_Engineering_Chemistry,未反应循环气升压补压
 Electricity_Distillation_Cooling,双塔精馏提纯与冷冻脱轻系统,kWh,120.0,0.035,0.550,kgCO2e/kWh,4.20,66.00,Chemical_Engineering_Research,精馏产出纯度99.85%精甲醇
 Direct_Fugitive_Emissions,系统微量逸散与吹扫气残余燃烧,kgCO2e,1.0,15.00,15.00,kgCO2e/t,15.00,15.00,EPA_Greenhouse_Reporting,吹扫气送厂内废热锅炉燃烧CO2排放
 Infrastructure_and_Catalyst,电解槽膜电极与合成催化剂折算,kgCO2e,1.0,80.00,80.00,kgCO2e/t,80.00,80.00,Mahmud_2021_JCLP,含PEM贵金属铱铂载量与Cu/ZnO催化剂更换

@@ -119,3 +119,21 @@ pip install numpy scipy pandas matplotlib seaborn openpyxl
 
 * 详细随堂对抗演练研讨任务、大作业要求及 Git 分支提交流程见：[case_files/case2_documentation.md](case_files/case2_documentation.md)
 * 遇到网络同步、分支命名被拒或 PR 模板问题，请查阅大仓救急指南：[starter_materials/troubleshooting.md](../../troubleshooting.md)
+
+## 6. Python 实施与计算成果
+
+在仓库根目录运行：
+
+```bash
+python groups/group-04/lecture9-20261022-classroom_case2/code_implementation/case2_analysis.py
+```
+
+脚本读取本目录 `case_files/data_cohort/` 的三份 CSV，执行循环回路求解、LCA/TEA 电价敏感性分析和流程图绘制。结果与图表保存在 `code_implementation/`：
+
+* `case2_analysis_results.txt`：循环比、总转化率、C/H/O 元素平衡差、LCA/TEA 及碳价阈值；
+* `case2_economic_sensitivity.png`：LCOM、绿色溢价及 MAC 对电价的响应曲线；
+* `case2_process_flow.png`：展示 PEM 电解、甲醇合成、分离和未反应气循环的 300 dpi 流程图。
+
+> **数据核验提示**：脚本按数据表和给定的 25% 单程转化率、99% 回流比例计算，并保留实际元素平衡差。当前 CSV 与讲义中的“循环比 3.8、总碳利用率 96.0%”不完全一致，C/H/O 外部元素平衡也未达到 0.01% 容差。脚本会如实标记差异；在源数据核实修订前，不应将这些差值解释为模型已通过守恒验证。
+
+* 运行命令、结果汇总、已修正的描述字段及未解决的数据差距见：[code_implementation/case2_implementation_report.md](./code_implementation/case2_implementation_report.md)。
