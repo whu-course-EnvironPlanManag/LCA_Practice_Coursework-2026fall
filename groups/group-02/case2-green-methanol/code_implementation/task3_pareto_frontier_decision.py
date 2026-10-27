@@ -1,125 +1,139 @@
 # -*- coding: utf-8 -*-
 """
-课程名称：《环境规划与管理》
-案例主题：工业园区二氧化碳捕集耦合绿氢合成绿色甲醇系统
-任务编号：任务 3（学生实训脚本框架）
-脚本名称：task3_pareto_frontier_decision.py
-实训目标：
-  1. 耦合 MFA、LCA、TEA 与任务 2 政策规制引擎；
-  2. 建立绿电比例 f_green 与驰放比 r_purge 二维调控下的双目标优化模型；
-  3. 编写非支配排序算法剔除劣解与法规一票否决解，提取有效帕累托前沿（Pareto Frontier）；
-  4. 运用乌托邦理想点欧氏距离最小化准则，自动定位帕累托拐点（Knee Point）；
-  5. 输出三大决策锚点比选数据，并绘制 300 DPI 决策双子图保存至 figures_output/。
+《环境规划与管理》第十讲实训任务
+作者：帕娜尔·阿克木 (Group 02)
+任务：帕累托多目标优化与决策前沿分析
+
+功能说明：
+  耦合 MFA-LCA-TEA-政策引擎，在绿电比例 f_green 和驰放比 r_purge 二维调控空间下，
+  遍历 3000 组工况，提取非支配帕累托前沿，并用乌托邦理想点法定位最优决策拐点。
+
+核心算法：
+  1. 网格采样：f_green (60 档) × r_purge (50 档) = 3000 工况
+  2. 非支配排序：剔除被支配解和法规一票否决解
+  3. 乌托邦距离：归一化后到理想点 (0,0) 的欧氏距离最小化
+  4. 三大锚点：成本极小 A、帕累托拐点 B、深度负碳 C
 """
 
 import sys
 import io
 import os
 
-# 针对 Windows 控制台编码环境进行 UTF-8 容错封装
+# Windows 环境 UTF-8 编码处理
 if sys.platform.startswith('win'):
     try:
         sys.stdout.reconfigure(encoding='utf-8')
         sys.stderr.reconfigure(encoding='utf-8')
-    except AttributeError:
-        sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
-        sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8')
+    except:
+        pass
 
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
-# 导入任务 2 政策规制引擎
+# 导入任务 2 政策引擎
 try:
     from task2_policy_vibe_engine import evaluate_policy_compliance
 except ImportError:
     from code_implementation.task2_policy_vibe_engine import evaluate_policy_compliance
 
-plt.rcParams['font.sans-serif'] = ['SimHei', 'Microsoft YaHei', 'PingFang SC', 'DejaVu Sans', 'Arial']
+# 中文字体配置
+plt.rcParams['font.sans-serif'] = ['SimHei', 'Microsoft YaHei', 'PingFang SC', 'DejaVu Sans']
 plt.rcParams['axes.unicode_minus'] = False
 
 
-def get_figures_output_dir():
-    """跨层级定位 figures_output 目录"""
-    current_dir = os.path.dirname(os.path.abspath(__file__))
-    candidates = [
-        os.path.join(current_dir, "..", "figures_output"),
+def locate_output_dir():
+    """定位图表输出目录"""
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    paths_to_try = [
+        os.path.join(script_dir, "..", "figures_output"),
         os.path.join("figures_output"),
         os.path.join("..", "figures_output")
     ]
-    for d in candidates:
+    for p in paths_to_try:
         try:
-            os.makedirs(d, exist_ok=True)
-            return d
-        except Exception:
+            os.makedirs(p, exist_ok=True)
+            return p
+        except:
             continue
     return "."
 
 
-# ==============================================================================
-# 模块一：耦合工程调控变量的物理与经济仿真模型
-# ==============================================================================
-def simulate_park_methanol_system(f_green: float, r_purge: float) -> dict:
+# =============================================================================
+# 第一部分：MFA-LCA-TEA 耦合仿真模型
+# =============================================================================
+def simulate_system(f_green, r_purge):
     """
-    输入决策调控参数：
-      f_green : 园区风光绿电直供混供消纳比例 [0.0, 1.0]
-      r_purge : 循环回路未反应气驰放分流比 [0.004, 0.045]
-    输出全套 MFA 物料、LCA 碳足迹、TEA 成本及政策评价指标。
+    输入调控参数，输出全套技术经济指标
+
+    参数:
+        f_green: 绿电消纳比例 [0, 1]
+        r_purge: 驰放分流比 [0.004, 0.045]
+
+    返回:
+        dict: 包含 GWP、LCOM、合规标签等关键字段
     """
-    # --------------------------------------------------------------------------
-    # TODO: [学生编写代码] 建立 MFA-LCA-TEA 物理与经济联动方程
-    # 提示：
-    # 1. 总碳转化利用率随驰放比变化：
-    #    carbon_loss = 1.0 - 0.960 * (1.0 - (r_purge - 0.010) * 3.80)
-    #    eta_carbon = 1.0 - np.clip(carbon_loss, 0.015, 0.250)
-    # 2. 综合电耗 e_total_kwh = 制氢电耗 + 捕集压缩 + 循环压缩 + 精馏分离
-    # 3. LCA 净碳足迹 gwp_net = 电耗间接排放 + 基建逸散 - CO2原料固定信用 - 纯氧副产信用
-    # 4. TEA 基础平准化成本 base_lcom 包含电费、CAPEX年金摊销、CO2捕集费、水耗、固定运维及氧气外售抵扣
-    # 5. 调用 evaluate_policy_compliance() 函数返回政策调整后结果
-    # --------------------------------------------------------------------------
+    # ---- MFA 物料平衡 ----
+    # 碳利用率随驰放比变化 (驰放越大，碳损失越多)
+    eta_carbon_base = 0.960
+    carbon_loss = 1.0 - eta_carbon_base * (1.0 - (r_purge - 0.010) * 3.80)
+    carbon_loss = np.clip(carbon_loss, 0.015, 0.250)
+    eta_carbon = 1.0 - carbon_loss
 
-    # 1. MFA 物料与能量
-    carbon_loss_frac = 1.0 - 0.960 * (1.0 - (r_purge - 0.010) * 3.80)
-    carbon_loss_frac = np.clip(carbon_loss_frac, 0.015, 0.250)
-    eta_carbon = 1.0 - carbon_loss_frac
+    # 原料消耗 (随碳利用率调整)
+    co2_feed_kg = 1423.0 * (eta_carbon_base / eta_carbon)
+    h2_feed_kg = 198.0 * (eta_carbon_base / eta_carbon)
 
-    fresh_co2_kg = 1423.0 * (0.960 / eta_carbon)
-    fresh_h2_kg  = 198.0 * (0.960 / eta_carbon)
+    # ---- 能量消耗 ----
+    # 电解制氢: 52 kWh/kg H2
+    energy_h2 = h2_feed_kg * 52.0
+    # CO2 捕集压缩: 255 kWh/t CO2 (按基准比例缩放)
+    energy_co2 = 255.0 * (co2_feed_kg / 1423.0)
+    # 循环压缩: 驰放比越小，循环量越大，能耗越高
+    energy_recycle = 155.0 * ((0.010 / r_purge) ** 0.65)
+    # 精馏分离: 固定 120 kWh/t
+    energy_distill = 120.0
+    energy_total = energy_h2 + energy_co2 + energy_recycle + energy_distill
 
-    e_h2_kwh      = fresh_h2_kg * 52.0
-    e_co2_kwh     = 255.0 * (fresh_co2_kg / 1423.0)
-    e_recycle_kwh = 155.0 * ((0.010 / r_purge) ** 0.65)
-    e_distill_kwh = 120.0
-    e_total_kwh   = e_h2_kwh + e_co2_kwh + e_recycle_kwh + e_distill_kwh
+    # ---- LCA 碳足迹 ----
+    # 电网排放因子 (绿电 + 火电混合)
+    ef_grid = f_green * 0.035 + (1.0 - f_green) * 0.550
+    emission_power = energy_total * ef_grid
+    # 基础设施与驰放气逸散
+    emission_infra = 95.0 + (r_purge - 0.010) * 1200.0
+    # CO2 原料固定信用 (负排放)
+    credit_co2_feed = co2_feed_kg * 1.000
+    # 副产氧信用
+    credit_o2 = 95.0 * (h2_feed_kg / 198.0)
+    # 净碳足迹
+    gwp_net = emission_power + emission_infra - credit_co2_feed - credit_o2
 
-    # 2. LCA 净碳足迹
-    ef_grid_blended = f_green * 0.035 + (1.0 - f_green) * 0.550
-    ghg_power = e_total_kwh * ef_grid_blended
-    ghg_infra_purge = 95.0 + (r_purge - 0.010) * 1200.0
-    credit_co2 = fresh_co2_kg * 1.000
-    credit_o2 = 95.0 * (fresh_h2_kg / 198.0)
-    gwp_net = ghg_power + ghg_infra_purge - credit_co2 - credit_o2
+    # ---- TEA 成本核算 ----
+    # 电价 (绿电 + 火电混合)
+    price_elec = f_green * 0.18 + (1.0 - f_green) * 0.42
+    cost_electricity = energy_total * price_elec
 
-    # 3. TEA 基础平准化成本
-    p_elec_blended = f_green * 0.18 + (1.0 - f_green) * 0.42
-    cost_elec = e_total_kwh * p_elec_blended
+    # CAPEX 年金摊销 (基础 + 储能缓冲 + 循环压缩增量)
+    capex_base = 835.2
+    capex_storage = 680.0 * (f_green ** 2.80)
+    capex_recycle = 45.0 * max(0.0, ((0.010 / r_purge) ** 0.80 - 1.0))
+    cost_capex = capex_base + capex_storage + capex_recycle
 
-    # 绿电波动储能缓冲年金摊销增量与循环压缩机尺寸增量
-    storage_capex_amort = 680.0 * (f_green ** 2.80)
-    recycle_capex_amort = 45.0 * np.maximum(0.0, ((0.010 / r_purge) ** 0.80 - 1.0))
-    cost_capex_amortized = 835.2 + storage_capex_amort + recycle_capex_amort
-
-    cost_co2 = (fresh_co2_kg / 1000.0) * 260.0
+    # CO2 捕集费
+    cost_co2_capture = (co2_feed_kg / 1000.0) * 260.0
+    # 水耗与运维
     cost_water_om = 65.0 + 285.0
-    credit_o2_sale = -316.8 * (fresh_h2_kg / 198.0)
+    # 氧气外售抵扣 (负成本)
+    credit_o2_sale = -316.8 * (h2_feed_kg / 198.0)
 
-    base_lcom = cost_elec + cost_capex_amortized + cost_co2 + cost_water_om + credit_o2_sale
+    # 基础 LCOM
+    lcom_base = cost_electricity + cost_capex + cost_co2_capture + cost_water_om + credit_o2_sale
 
-    # 4. 政策规制引擎调用
-    policy_res = evaluate_policy_compliance(
+    # ---- 政策规制引擎 ----
+    policy_result = evaluate_policy_compliance(
         gwp_net=gwp_net,
-        base_lcom=base_lcom,
-        e_total_kwh=e_total_kwh,
+        base_lcom=lcom_base,
+        e_total_kwh=energy_total,
         f_green=f_green,
         r_purge=r_purge
     )
@@ -127,173 +141,199 @@ def simulate_park_methanol_system(f_green: float, r_purge: float) -> dict:
     return {
         "f_green": f_green,
         "r_purge": r_purge,
-        "eta_carbon": eta_carbon * 100.0,
-        "e_total_kwh": e_total_kwh,
+        "eta_carbon_pct": eta_carbon * 100.0,
+        "energy_total_kwh": energy_total,
         "gwp_net": gwp_net,
-        "base_lcom": base_lcom,
-        "lcom_policy_adjusted": policy_res["lcom_policy_adjusted"],
-        "mac_policy_adjusted": policy_res["mac_policy_adjusted"],
-        "compliance_status": policy_res["compliance_status"]
+        "lcom_base": lcom_base,
+        "lcom_adjusted": policy_result["lcom_adjusted"],
+        "mac_adjusted": policy_result["mac_adjusted"],
+        "compliance": policy_result["compliance"]
     }
 
 
-# ==============================================================================
-# 模块二：非支配排序与三大规划决策锚点提取算法
-# ==============================================================================
-def extract_pareto_frontier_and_anchors(df: pd.DataFrame):
+# =============================================================================
+# 第二部分：非支配排序与锚点提取
+# =============================================================================
+def find_pareto_frontier(data_df):
     """
-    在合规方案中提取帕累托前沿，并标定锚点 A、锚点 B 与锚点 C。
-    """
-    # --------------------------------------------------------------------------
-    # TODO: [学生编写代码] 实现双目标非支配排序与乌托邦理想点欧氏距离计算
-    # 提示：
-    # 1. 过滤掉 compliance_status == 'Redline_Vetoed' 的一票否决方案
-    # 2. 对每个方案 i，若存在方案 j 满足 points[j] <= points[i] 且至少一项严格小于，
-    #    则方案 i 被支配（is_pareto[i] = False）
-    # 3. 归一化目标空间：norm_gwp = (gwp - gwp_min) / (gwp_max - gwp_min)
-    #    norm_lcom = (lcom - lcom_min) / (lcom_max - lcom_min)
-    # 4. 到乌托邦理想点 (0, 0) 的距离 d = sqrt(norm_gwp^2 + norm_lcom^2)
-    # 5. 距离最小点即为帕累托拐点（Knee Point / 锚点 B）
-    # --------------------------------------------------------------------------
-    valid_df = df[df["compliance_status"] != "Redline_Vetoed"].copy().reset_index(drop=True)
-    points = valid_df[["gwp_net", "lcom_policy_adjusted"]].values
-    n_pts = points.shape[0]
-    is_pareto = np.ones(n_pts, dtype=bool)
+    从合规方案中提取帕累托前沿，并标定三大决策锚点
 
-    for i in range(n_pts):
+    参数:
+        data_df: 包含所有工况模拟结果的 DataFrame
+
+    返回:
+        pareto_df: 帕累托前沿 DataFrame
+        anchors: 三大锚点字典 {A: 成本极小, B: 拐点, C: 深度负碳}
+    """
+    # 过滤掉一票否决方案
+    valid_df = data_df[data_df["compliance"] != "Redline_Vetoed"].copy().reset_index(drop=True)
+
+    # 提取目标空间 (GWP, LCOM)
+    objectives = valid_df[["gwp_net", "lcom_adjusted"]].values
+    n_solutions = objectives.shape[0]
+
+    # 非支配排序: 标记每个解是否被支配
+    is_pareto = np.ones(n_solutions, dtype=bool)
+
+    for i in range(n_solutions):
         if is_pareto[i]:
-            dominated = np.all(points <= points[i], axis=1) & np.any(points < points[i], axis=1)
-            if np.any(dominated):
+            # 检查是否存在其他解 j 支配解 i
+            # 支配条件: j 的所有目标 <= i 的对应目标，且至少一个严格小于
+            dominated_by_j = np.all(objectives <= objectives[i], axis=1) & np.any(objectives < objectives[i], axis=1)
+            if np.any(dominated_by_j):
                 is_pareto[i] = False
 
-    pareto_df = valid_df[is_pareto].copy().sort_values(by="gwp_net").reset_index(drop=True)
+    # 提取帕累托前沿
+    pareto_df = valid_df[is_pareto].copy().sort_values("gwp_net").reset_index(drop=True)
 
+    # 归一化到 [0, 1] 区间
     gwp_min, gwp_max = pareto_df["gwp_net"].min(), pareto_df["gwp_net"].max()
-    lcom_min, lcom_max = pareto_df["lcom_policy_adjusted"].min(), pareto_df["lcom_policy_adjusted"].max()
+    lcom_min, lcom_max = pareto_df["lcom_adjusted"].min(), pareto_df["lcom_adjusted"].max()
 
     norm_gwp = (pareto_df["gwp_net"] - gwp_min) / max(gwp_max - gwp_min, 1e-6)
-    norm_lcom = (pareto_df["lcom_policy_adjusted"] - lcom_min) / max(lcom_max - lcom_min, 1e-6)
-    pareto_df["utopia_distance"] = np.sqrt(norm_gwp ** 2 + norm_lcom ** 2)
+    norm_lcom = (pareto_df["lcom_adjusted"] - lcom_min) / max(lcom_max - lcom_min, 1e-6)
 
-    anchor_a = pareto_df.loc[pareto_df["lcom_policy_adjusted"].idxmin()] # 成本极小锚点
-    anchor_b = pareto_df.loc[pareto_df["utopia_distance"].idxmin()]      # 帕累托拐点 (规划主推基准)
-    anchor_c = pareto_df.loc[pareto_df["gwp_net"].idxmin()]              # 深度负碳极限锚点
+    # 乌托邦理想点距离 (到 (0,0) 的欧氏距离)
+    pareto_df["utopia_dist"] = np.sqrt(norm_gwp ** 2 + norm_lcom ** 2)
+
+    # 提取三大锚点
+    anchor_a = pareto_df.loc[pareto_df["lcom_adjusted"].idxmin()]  # 成本极小
+    anchor_b = pareto_df.loc[pareto_df["utopia_dist"].idxmin()]    # 帕累托拐点 (Knee Point)
+    anchor_c = pareto_df.loc[pareto_df["gwp_net"].idxmin()]        # 深度负碳极限
 
     anchors = {
-        "Anchor_A_Cost_Min": anchor_a,
-        "Anchor_B_Knee_Point": anchor_b,
-        "Anchor_C_Deep_Decarb": anchor_c
+        "A_Cost_Min": anchor_a,
+        "B_Knee_Point": anchor_b,
+        "C_Deep_Negative": anchor_c
     }
+
     return pareto_df, anchors
 
 
-# ==============================================================================
-# 模块三：主程序求解与可视化
-# ==============================================================================
+# =============================================================================
+# 第三部分：主程序与可视化
+# =============================================================================
 if __name__ == "__main__":
-    print("=" * 95)
-    print("《环境规划与管理》任务 3：MFA-LCA-TEA-Policy 多目标寻优与帕累托前沿求解")
-    print("=" * 95)
+    print("=" * 90)
+    print("《环境规划与管理》任务 3: MFA-LCA-TEA-Policy 多目标帕累托寻优")
+    print("学生: 帕娜尔·阿克木 | Group 02")
+    print("=" * 90)
 
-    # 1. 网格采样遍历 (绿电比例 60 档 x 驰放分流比 50 档 = 3,000 组工况)
-    f_green_grid = np.linspace(0.0, 1.0, 60)
-    r_purge_grid = np.linspace(0.004, 0.045, 50)
+    # ---- 网格采样 ----
+    print("\n[1/4] 网格采样遍历...")
+    f_green_array = np.linspace(0.0, 1.0, 60)
+    r_purge_array = np.linspace(0.004, 0.045, 50)
 
-    records = []
-    for fg in f_green_grid:
-        for rp in r_purge_grid:
-            records.append(simulate_park_methanol_system(fg, rp))
+    all_records = []
+    total_scenarios = len(f_green_array) * len(r_purge_array)
 
-    df_all = pd.DataFrame(records)
-    print(f"[网格模拟] 共完成 {len(df_all)} 组规划候选工况模拟计算。")
+    for fg in f_green_array:
+        for rp in r_purge_array:
+            record = simulate_system(fg, rp)
+            all_records.append(record)
 
-    # 2. 提取帕累托前沿与三大锚点
-    pareto_df, anchors = extract_pareto_frontier_and_anchors(df_all)
-    print(f"[前沿筛选] 提取出 {len(pareto_df)} 个严格非支配帕累托最优解。")
+    df_all = pd.DataFrame(all_records)
+    print(f"  完成 {len(df_all)} 组工况模拟 (共 {total_scenarios} 组)")
 
-    # 3. 打印比选结果表
-    print("\n" + "=" * 95)
-    print("【三大规划决策锚点比选数据表（请填入报告第 5.3 节）】")
-    print("=" * 95)
-    anchor_names = {
-        "Anchor_A_Cost_Min": "锚点 A (成本极小化方案 - 财务保守型)",
-        "Anchor_B_Knee_Point": "锚点 B (帕累托拐点 Knee Point - 规划主推基准)",
-        "Anchor_C_Deep_Decarb": "锚点 C (深度负碳极限方案 - 国际航运绿色外销)"
+    # ---- 帕累托前沿提取 ----
+    print("\n[2/4] 提取帕累托前沿与决策锚点...")
+    df_pareto, dict_anchors = find_pareto_frontier(df_all)
+    print(f"  识别出 {len(df_pareto)} 个非支配帕累托最优解")
+
+    # ---- 结果输出 ----
+    print("\n[3/4] 三大决策锚点比选表 (请填入报告第 5.3 节)")
+    print("-" * 90)
+
+    anchor_labels = {
+        "A_Cost_Min": "锚点 A (成本极小化 - 保守型)",
+        "B_Knee_Point": "锚点 B (帕累托拐点 - 主推基准)",
+        "C_Deep_Negative": "锚点 C (深度负碳 - 国际航运)"
     }
-    rows = []
-    for k, row in anchors.items():
-        rows.append({
-            "方案名称": anchor_names[k],
+
+    summary_rows = []
+    for key, row in dict_anchors.items():
+        summary_rows.append({
+            "方案": anchor_labels[key],
             "绿电比例": f"{row['f_green']*100:.1f}%",
             "驰放比": f"{row['r_purge']*100:.2f}%",
-            "总碳利用率": f"{row['eta_carbon']:.2f}%",
-            "GWP 净碳足迹 (kg/t)": f"{row['gwp_net']:.1f}",
-            "基础 LCOM (元/t)": f"{row['base_lcom']:.1f}",
-            "净 LCOM (元/t)": f"{row['lcom_policy_adjusted']:.1f}",
-            "边际减排成本 MAC (元/t)": f"{row['mac_policy_adjusted']:.1f}",
-            "合规标签": row["compliance_status"]
+            "碳利用率": f"{row['eta_carbon_pct']:.2f}%",
+            "GWP净碳足迹": f"{row['gwp_net']:.1f} kg/t",
+            "基础LCOM": f"{row['lcom_base']:.1f} 元/t",
+            "调整后LCOM": f"{row['lcom_adjusted']:.1f} 元/t",
+            "MAC": f"{row['mac_adjusted']:.1f} 元/tCO2e" if not np.isnan(row['mac_adjusted']) else "NaN",
+            "合规标签": row["compliance"]
         })
-    print(pd.DataFrame(rows).to_string(index=False))
-    print("=" * 95)
 
-    # 4. 出版级帕累托双子图绘制
-    fig_dir = get_figures_output_dir()
-    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(15, 6.2), dpi=300)
+    print(pd.DataFrame(summary_rows).to_string(index=False))
+    print("-" * 90)
 
-    df_veto = df_all[df_all["compliance_status"] == "Redline_Vetoed"]
-    df_dom  = df_all[df_all["compliance_status"] == "Domestic_Compliant"]
-    df_red3 = df_all[df_all["compliance_status"] == "RED_III_RFNBO_Certified"]
+    # ---- 可视化 ----
+    print("\n[4/4] 绘制帕累托决策前沿图...")
+    fig_dir = locate_output_dir()
+    fig, (ax_left, ax_right) = plt.subplots(1, 2, figsize=(15, 6.2), dpi=300)
 
-    # 子图 (a)：目标空间
-    ax1.scatter(df_veto["gwp_net"], df_veto["lcom_policy_adjusted"],
-                c="#d95f02", marker="x", s=14, alpha=0.30, label="法规一票否决方案区 (Redline Vetoed)")
-    ax1.scatter(df_dom["gwp_net"], df_dom["lcom_policy_adjusted"],
-                c="#7570b3", marker="o", s=14, alpha=0.35, label="国内合规被支配方案集 (Domestic Compliant)")
-    ax1.scatter(df_red3["gwp_net"], df_red3["lcom_policy_adjusted"],
-                c="#66a61e", marker="o", s=16, alpha=0.45, label="欧盟 RED III 认证方案集 (RFNBO Certified)")
+    # 分类着色
+    df_vetoed = df_all[df_all["compliance"] == "Redline_Vetoed"]
+    df_domestic = df_all[df_all["compliance"] == "Domestic_Compliant"]
+    df_rediii = df_all[df_all["compliance"] == "RED_III_RFNBO_Certified"]
 
-    ax1.plot(pareto_df["gwp_net"], pareto_df["lcom_policy_adjusted"],
-             color="#e7298a", linewidth=2.8, linestyle="-", label="有效帕累托前沿 (Pareto Frontier)")
+    # 子图 (a): 目标空间
+    ax_left.scatter(df_vetoed["gwp_net"], df_vetoed["lcom_adjusted"],
+                    c="#d95f02", marker="x", s=14, alpha=0.30, label="一票否决方案")
+    ax_left.scatter(df_domestic["gwp_net"], df_domestic["lcom_adjusted"],
+                    c="#7570b3", marker="o", s=14, alpha=0.35, label="国内合规方案")
+    ax_left.scatter(df_rediii["gwp_net"], df_rediii["lcom_adjusted"],
+                    c="#66a61e", marker="o", s=16, alpha=0.45, label="欧盟RED III认证")
 
-    ax1.axvline(2600.0, color="#b2182b", linestyle="--", linewidth=1.2, label="煤制甲醇基准红线 (+2600 kg CO2e/t)")
-    ax1.axvline(561.2, color="#1b7837", linestyle="-.", linewidth=1.2, label="欧盟 RED III 准入限值 (+561.2 kg CO2e/t)")
-    ax1.axvline(0.0, color="#525252", linestyle=":", linewidth=1.0, label="零碳平衡分界线 (0 kg CO2e/t)")
+    # 帕累托前沿线
+    ax_left.plot(df_pareto["gwp_net"], df_pareto["lcom_adjusted"],
+                 color="#e7298a", linewidth=2.8, linestyle="-", label="帕累托前沿")
 
-    styles = {
-        "Anchor_A_Cost_Min": ("*", "#1b9e77", 180, "锚点 A: 成本极小化方案 (近期过渡)"),
-        "Anchor_B_Knee_Point": ("D", "#000000", 140, "锚点 B: 帕累托拐点 (规划主推基准)"),
-        "Anchor_C_Deep_Decarb": ("^", "#08519c", 150, "锚点 C: 深度负碳极限方案 (远期升级)")
+    # 政策红线
+    ax_left.axvline(2600.0, color="#b2182b", linestyle="--", linewidth=1.2, label="煤制甲醇基准红线 (2600)")
+    ax_left.axvline(561.2, color="#1b7837", linestyle="-.", linewidth=1.2, label="RED III准入限值 (561.2)")
+    ax_left.axvline(0.0, color="#525252", linestyle=":", linewidth=1.0, label="零碳分界线")
+
+    # 锚点标记
+    marker_styles = {
+        "A_Cost_Min": ("*", "#1b9e77", 180, "锚点A: 成本极小"),
+        "B_Knee_Point": ("D", "#000000", 140, "锚点B: 帕累托拐点"),
+        "C_Deep_Negative": ("^", "#08519c", 150, "锚点C: 深度负碳")
     }
-    for k, (marker, color, size, lbl) in styles.items():
-        pt = anchors[k]
-        ax1.scatter(pt["gwp_net"], pt["lcom_policy_adjusted"],
-                    marker=marker, c=color, s=size, edgecolors="white", linewidth=1.5, zorder=10, label=lbl)
 
-    ax1.set_title("(a) 工业园区绿色甲醇规划：政策规制约束下的帕累托前沿", fontsize=11.5, fontweight="bold", pad=12)
-    ax1.set_xlabel("全生命周期净碳足迹 GWP_net (kg CO2e / t 甲醇)", fontsize=10.5)
-    ax1.set_ylabel("政策调整后净平准化成本 LCOM_adjusted (元 / t 甲醇)", fontsize=10.5)
-    ax1.grid(True, linestyle=":", alpha=0.6)
-    ax1.legend(loc="upper left", fontsize=8.0, framealpha=0.92)
+    for key, (marker, color, size, label) in marker_styles.items():
+        pt = dict_anchors[key]
+        ax_left.scatter(pt["gwp_net"], pt["lcom_adjusted"],
+                        marker=marker, c=color, s=size, edgecolors="white", linewidth=1.5, zorder=10, label=label)
 
-    # 子图 (b)：决策变量空间
-    sc = ax2.scatter(pareto_df["f_green"] * 100.0, pareto_df["r_purge"] * 100.0,
-                     c=pareto_df["lcom_policy_adjusted"], cmap="viridis_r", s=50, edgecolors="black", linewidth=0.5)
-    cbar = plt.colorbar(sc, ax=ax2, pad=0.02)
-    cbar.set_label("调整后净平准化成本 LCOM (元/t)", fontsize=9.5)
+    ax_left.set_title("(a) 帕累托前沿: 碳足迹-成本权衡", fontsize=11.5, fontweight="bold", pad=12)
+    ax_left.set_xlabel("全生命周期净碳足迹 GWP_net (kg CO2e/t)", fontsize=10.5)
+    ax_left.set_ylabel("政策调整后成本 LCOM_adjusted (元/t)", fontsize=10.5)
+    ax_left.grid(True, linestyle=":", alpha=0.6)
+    ax_left.legend(loc="upper left", fontsize=8.0, framealpha=0.92)
 
-    for k, (marker, color, size, lbl) in styles.items():
-        pt = anchors[k]
-        ax2.scatter(pt["f_green"] * 100.0, pt["r_purge"] * 100.0,
-                    marker=marker, c=color, s=size, edgecolors="white", linewidth=1.5, zorder=10, label=lbl)
+    # 子图 (b): 决策变量空间
+    scatter_b = ax_right.scatter(df_pareto["f_green"] * 100.0, df_pareto["r_purge"] * 100.0,
+                                  c=df_pareto["lcom_adjusted"], cmap="viridis_r", s=50, edgecolors="black", linewidth=0.5)
+    cbar = plt.colorbar(scatter_b, ax=ax_right, pad=0.02)
+    cbar.set_label("调整后成本 LCOM (元/t)", fontsize=9.5)
 
-    ax2.set_title("(b) 帕累托最优解对应的工程调控变量参数组合轨迹", fontsize=11.5, fontweight="bold", pad=12)
-    ax2.set_xlabel("园区风光绿电直供混供消纳比例 f_green (%)", fontsize=10.5)
-    ax2.set_ylabel("未反应气循环回路驰放分流比 r_purge (%)", fontsize=10.5)
-    ax2.grid(True, linestyle=":", alpha=0.6)
-    ax2.legend(loc="upper right", fontsize=8.5, framealpha=0.92)
+    for key, (marker, color, size, label) in marker_styles.items():
+        pt = dict_anchors[key]
+        ax_right.scatter(pt["f_green"] * 100.0, pt["r_purge"] * 100.0,
+                         marker=marker, c=color, s=size, edgecolors="white", linewidth=1.5, zorder=10, label=label)
+
+    ax_right.set_title("(b) 帕累托解的工程调控参数分布", fontsize=11.5, fontweight="bold", pad=12)
+    ax_right.set_xlabel("绿电消纳比例 f_green (%)", fontsize=10.5)
+    ax_right.set_ylabel("驰放分流比 r_purge (%)", fontsize=10.5)
+    ax_right.grid(True, linestyle=":", alpha=0.6)
+    ax_right.legend(loc="upper right", fontsize=8.5, framealpha=0.92)
 
     plt.tight_layout()
-    output_png = os.path.join(fig_dir, "fig2_pareto_decision_frontier.png")
-    plt.savefig(output_png, dpi=300)
-    print(f"\n[图表输出] 帕累托决策图已成功生成至: {output_png}")
-    print("=" * 95)
+    output_path = os.path.join(fig_dir, "fig2_pareto_decision_frontier.png")
+    plt.savefig(output_path, dpi=300)
+    print(f"  图表已保存: {output_path}")
+
+    print("\n" + "=" * 90)
+    print("[完成] 帕累托多目标优化求解完毕，可接入任务4工艺流程可视化")
+    print("=" * 90)
