@@ -1,0 +1,9 @@
+﻿item,stage,flow,unit,gwp_a,gwp_b
+CO2_Capture_Credit,原料二氧化碳固定信用,-1423.0,kg,-1423.0,-1423.0
+Electricity_PEM_Electrolysis,PEM电解水制氢用电(52kWh/kg),10296.0,kWh,360.36,5662.8
+Electricity_CO2_Compression,CO2捕集与三级气体压缩,255.0,kWh,8.93,140.25
+Electricity_Recycle_Compressor,未反应气循环压缩与循环水泵,155.0,kWh,5.43,85.25
+Electricity_Distillation_Cooling,双塔精馏提纯与冷冻脱轻系统,120.0,kWh,4.2,66.0
+Direct_Fugitive_Emissions,系统微量逸散与吹扫气残余燃烧,1.0,kgCO2e,15.0,15.0
+Infrastructure_and_Catalyst,电解槽膜电极与合成催化剂折算,1.0,kgCO2e,80.0,80.0
+Byproduct_Oxygen_Credit,副产高纯工业氧气替代空分信用,-1584.0,kg,-95.04,-95.04
