@@ -163,8 +163,8 @@ ax.text(7, 1.6, '(注: 内部循环水 575 kg/t 在电解槽与精馏塔间闭�
         ha='center', fontsize=8, color='#888', style='italic')
 
 plt.tight_layout()
-out_png = r"c:\Users\31386\Documents\Trae-CN\default\LCA_Practice_Coursework-2026fall\groups\group-04\lecture9-20261022-classroom_case2\code_implementation\process_flow_diagram.png"
-out_svg = r"c:\Users\31386\Documents\Trae-CN\default\LCA_Practice_Coursework-2026fall\groups\group-04\lecture9-20261022-classroom_case2\code_implementation\process_flow_diagram.svg"
+out_png = r"process_flow_diagram.png"
+out_svg = r"process_flow_diagram.svg"
 plt.savefig(out_png, dpi=300, bbox_inches='tight')
 plt.savefig(out_svg, format='svg', bbox_inches='tight')
 print(f"\n流程图已保存:")

@@ -15,7 +15,7 @@ matplotlib.rcParams['axes.unicode_minus'] = False
 # ============================================================
 # 1. 读取数据
 # ============================================================
-base_dir = r"c:\Users\31386\Documents\Trae-CN\default\LCA_Practice_Coursework-2026fall\groups\group-04\lecture9-20261022-classroom_case2\case_files\data_cohort"
+base_dir = r"../case_files/data_cohort"
 
 tea_df = pd.read_csv(f"{base_dir}/tea_lcom_sensitivity_data.csv")
 lca_df = pd.read_csv(f"{base_dir}/lca_grid_scenarios_lci.csv")
@@ -180,7 +180,7 @@ ax1.text(0.475, 8000, '禁区\n(经济+环境双输)', ha='center', fontsize=10,
          color='red', fontweight='bold')
 
 plt.tight_layout()
-output_path = r"c:\Users\31386\Documents\Trae-CN\default\LCA_Practice_Coursework-2026fall\groups\group-04\lecture9-20261022-classroom_case2\code_implementation\lca_tea_sensitivity_chart.png"
+output_path = r"lca_tea_sensitivity_chart.png"
 plt.savefig(output_path, dpi=300, bbox_inches='tight')
 print(f"\n图表已保存: {output_path}")
 plt.show()
