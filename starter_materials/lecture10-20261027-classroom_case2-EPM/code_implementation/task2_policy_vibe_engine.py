@@ -77,13 +77,39 @@ def evaluate_policy_compliance(
     #         计算 lcom_policy_adjusted 与 mac_policy_adjusted (对比 2500 元/t 与 2600 kg/t 煤制甲醇)
     # --------------------------------------------------------------------------
 
-    # 1. 卡片 1 判定
-    is_red_iii = (gwp_net <= 561.2) and (f_green >= 0.80)
-    red_iii_subsidy = -1200.0 if is_red_iii else 0.0
+    # =========================================================================
+    # 卡片 1：欧盟 RED III RFNBO 认证判定
+    # 条文推导（policy_clauses_pack.md L47-59）：
+    #   化石燃料基准线 E_F = 94.0 g CO2e/MJ
+    #   精甲醇低位发热量 = 19,900 MJ/t
+    #   → GWP_fossil_ref = 94.0e-3 × 19,900 = 1,870.6 kg CO2e/t
+    #   减排阈值 GWP_net <= 1,870.6 × (1 - 70%) = +561.2 kg CO2e/t
+    #   绿电准入 f_green >= 80.0%
+    #   达标补贴 -1,200.0 元/t
+    # =========================================================================
+    EF_fossil_benchmark = 94.0e-3           # kg CO2e/MJ（条文 L47）
+    LHV_methanol_MJ_per_t = 19900.0         # MJ/t（条文 L47）
+    REDUCTION_RATE = 0.70                   # 70% 强制减排（条文 L51）
+    MIN_F_GREEN = 0.80                      # 绿电比例下限（条文 L51）
+    SUBSIDY_RFNB0 = -1200.0                 # 国际航运溢价补贴（条文 L58）
 
-    # 2. 卡片 2 判定
-    gwp_bench = 2600.0
-    p_carbon  = 100.0
+    gwp_fossil_ref = EF_fossil_benchmark * LHV_methanol_MJ_per_t   # = 1,870.6
+    gwp_red_iii_threshold = gwp_fossil_ref * (1 - REDUCTION_RATE)   # = +561.2
+
+    is_red_iii = (gwp_net <= gwp_red_iii_threshold) and (f_green >= MIN_F_GREEN)
+    red_iii_subsidy = SUBSIDY_RFNB0 if is_red_iii else 0.0
+
+    # =========================================================================
+    # 卡片 2：国内碳市场 ETS/CCER 阶梯奖惩
+    # 条文推导（policy_clauses_pack.md L67-80）：
+    #   国内煤制甲醇行业 GWP_bench = +2,600.0 kg CO2e/t（条文 L67）
+    #   全国碳市场结算碳价 P_carbon = 100.0 元/t CO2e（条文 L67）
+    #   三级阶梯：负碳示范(1.2x) / 常规减排(1.0x) / 反向增排否决(2.0x + 惩罚电价)
+    # =========================================================================
+    gwp_bench = 2600.0       # kg CO2e/t 煤制甲醇基准（条文 L67）
+    p_carbon  = 100.0        # 元/t CO2e 碳价（条文 L67）
+    EXCESS_PENALTY_RATE = 2.0            # 超额排放惩罚系数（条文 L77）
+    PENALTY_ELECTRICITY = 0.10           # 惩罚阶梯电价 元/kWh（条文 L77）
     veto_carbon = False
 
     if gwp_net <= 0.0:
@@ -97,19 +123,42 @@ def evaluate_policy_compliance(
         excess_ghg_ton = (gwp_net - gwp_bench) / 1000.0
         carbon_cost_mod = (+2.0 * excess_ghg_ton * p_carbon) + (0.10 * e_total_kwh)
 
-    # 3. 卡片 3 判定
-    w_total = 1.385 + 0.008 * (0.010 / r_purge)
-    w_quota = 1.400
-    if w_total <= w_quota:
-        water_cost_mod = w_total * 5.0
-    elif w_total <= 1.425:
-        water_cost_mod = (w_quota * 5.0) + ((w_total - w_quota) * 15.0)
-    else:
-        water_cost_mod = (1.390 * 5.0) + 85.0
+    # =========================================================================
+    # 卡片 3：工业取水定额 + 超定额累进税率
+    # 条文推导（policy_clauses_pack.md L87-100）：
+    #   PEM 电解槽除盐纯水理论净消耗 = 1.385 t/t（扣除精馏副产回水 0.575 t/t）
+    #   循环冷却蒸发散失量随驰放比降低而上升 → W_total 模型（条文 L89）
+    #   阶梯税率：5.0 元/t（定额内）→ 15.0 元/t（超定额累进）→ +85 元/t（强制空冷技改）
+    # =========================================================================
+    W_BASIS = 1.385                                 # t 水/t 甲醇（条文 L87）
+    W_QUOTA = 1.400                                 # 取水定额红线（条文 L92）
+    W_RETROFIT_THRESHOLD = 1.425                    # 强制技改阈值（条文 L97）
+    W_AFTER_RETROFIT = 1.390                        # 技改后实际取水（条文 L97）
+    BASE_WATER_TAX = 5.0                            # 基准税率 元/t（条文 L92）
+    SURCHARGE_WATER_TAX = 15.0                      # 超定额累进税率（条文 L93）
+    RETROFIT_COST = 85.0                            # 闭式空冷技改年金摊销 元/t（条文 L97）
 
-    # 4. 卡片 4 判定
-    env_tax_mod = 12.0 + 18.5 * (r_purge / 0.010)
-    veto_clean_prod = (r_purge > 0.035)
+    w_total = W_BASIS + 0.008 * (0.010 / r_purge)  # 条文 L89 给定的吨水消耗模型
+    if w_total <= W_QUOTA:
+        water_cost_mod = w_total * BASE_WATER_TAX
+    elif w_total <= W_RETROFIT_THRESHOLD:
+        water_cost_mod = (W_QUOTA * BASE_WATER_TAX) + ((w_total - W_QUOTA) * SURCHARGE_WATER_TAX)
+    else:
+        water_cost_mod = (W_AFTER_RETROFIT * BASE_WATER_TAX) + RETROFIT_COST
+
+    # =========================================================================
+    # 卡片 4：次生环保税 + 清洁生产物料转化利用率红线
+    # 条文推导（policy_clauses_pack.md L109-118）：
+    #   污染源：MEA 吸收剂 VOCs 逸散 + 驰放气掺烧 NOx
+    #   环保税核算模型（条文 L114）
+    #   清洁生产红线：r_purge > 0.035 → 总碳利用率 < 88.0% → 一票否决
+    # =========================================================================
+    BASE_ENV_TAX = 12.0                             # 基准环保税 元/t（条文 L114）
+    VARIABLE_ENV_TAX_COEFF = 18.5                   # 随驰放比变化系数（条文 L114）
+    CLEAN_PRODUCTION_PURGE_LIMIT = 0.035            # 清洁生产驰放比红线（条文 L118）
+
+    env_tax_mod = BASE_ENV_TAX + VARIABLE_ENV_TAX_COEFF * (r_purge / 0.010)
+    veto_clean_prod = (r_purge > CLEAN_PRODUCTION_PURGE_LIMIT)
 
     # 5. 综合判定
     if veto_carbon or veto_clean_prod:
@@ -127,8 +176,10 @@ def evaluate_policy_compliance(
         + env_tax_mod
     )
 
+    # MAC = (LCOM_adj - P_fossil) / GHG_avoided
+    # P_fossil = 2,500 元/t 煤制甲醇市场参考价（条文提示）
     fossil_price = 2500.0
-    ghg_avoided = (gwp_bench - gwp_net) / 1000.0
+    ghg_avoided = (gwp_bench - gwp_net) / 1000.0  # 减排量 t CO2e/t 甲醇
     if ghg_avoided > 0:
         mac_adjusted = (lcom_adjusted - fossil_price) / ghg_avoided
     else:
