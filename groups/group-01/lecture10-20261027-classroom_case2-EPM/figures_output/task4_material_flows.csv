@@ -1,0 +1,14 @@
+﻿stream,source,target,annual_ton,basis
+fresh_co2,CO2 capture,Mixer,142300.0,model / source feed
+fresh_h2,PEM,Mixer,19800.0,model / source feed
+reactor_in,Mixer,Reactor,1292209.949589251,stoichiometric model
+reactor_out,Reactor,Separator,1292206.754573386,stoichiometric model
+separator_gas,Separator,Gas splitter,1134648.5437643083,stoichiometric model
+recycle,Gas splitter / compression,Mixer,1130109.949589251,stoichiometric model
+purge,Gas splitter,Boiler,4538.594175057233,stoichiometric model
+crude_liquid,Separator,Distillation,157558.21080907772,stoichiometric model
+product,Distillation,Methanol product,100000.0,stoichiometric model
+water_reuse,Distillation,PEM,57558.21080907771,model water / complete recovery boundary
+fresh_water,Fresh demin water,PEM,138500.0,CSV engineering quota
+oxygen,PEM,O2 coproduct,158400.0,CSV engineering quota; PEM not fully closed
+cooling_makeup,Fresh water,Cooling utilities,2000.0,policy water model; shown in note

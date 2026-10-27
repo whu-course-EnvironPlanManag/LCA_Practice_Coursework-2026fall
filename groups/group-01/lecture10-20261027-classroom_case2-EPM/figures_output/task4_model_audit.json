@@ -1,0 +1,141 @@
+{
+  "balance": {
+    "C_in": 388.358395819132,
+    "C_out": 388.35839581913194,
+    "C_err": 1.4636845623206607e-16,
+    "H_in": 198.0,
+    "H_out": 197.99999999999997,
+    "H_err": 1.4354398702224247e-16,
+    "O_in": 1034.6092706203135,
+    "O_out": 1034.6092706203135,
+    "O_err": 0.0,
+    "passed": true,
+    "units": {
+      "混合器": {
+        "C_in": 3751.511444640069,
+        "C_out": 3751.511444640069,
+        "C_err": 0.0,
+        "H_in": 2128.6559591571463,
+        "H_out": 2128.6559591571463,
+        "H_err": 0.0,
+        "O_in": 7041.804291460692,
+        "O_out": 7041.804291460692,
+        "O_err": 0.0,
+        "passed": true
+      },
+      "反应器": {
+        "C_in": 3751.511444640069,
+        "C_out": 3751.5114446400685,
+        "C_err": 1.212171034520445e-16,
+        "H_in": 2128.6559591571463,
+        "H_out": 2128.6559591571463,
+        "H_err": 0.0,
+        "O_in": 7041.804291460692,
+        "O_out": 7041.804291460693,
+        "O_err": 1.291564866231564e-16,
+        "passed": true
+      },
+      "冷凝精馏": {
+        "C_in": 3751.5114446400685,
+        "C_out": 3751.5114446400685,
+        "C_err": 0.0,
+        "H_in": 2128.6559591571463,
+        "H_out": 2128.6559591571463,
+        "H_err": 0.0,
+        "O_in": 7041.804291460693,
+        "O_out": 7041.804291460693,
+        "O_err": 0.0,
+        "passed": true
+      },
+      "分流器": {
+        "C_in": 3376.6596875712216,
+        "C_out": 3376.6596875712216,
+        "C_err": 0.0,
+        "H_in": 1938.4095975473356,
+        "H_out": 1938.4095975473356,
+        "H_err": 0.0,
+        "O_in": 6031.320302048574,
+        "O_out": 6031.3203020485735,
+        "O_err": 1.5079529128373646e-16,
+        "passed": true
+      }
+    }
+  },
+  "annual_capacity_t": 100000.0,
+  "masses_t_y": {
+    "fresh": 162100.0,
+    "reactor_in": 1292209.949589251,
+    "reactor_out": 1292206.754573386,
+    "offgas": 1134648.5437643083,
+    "recycle": 1130109.949589251,
+    "purge": 4538.594175057233,
+    "product": 100000.0,
+    "water": 57558.21080907771,
+    "crude_liquid": 157558.21080907772
+  },
+  "energies": [
+    {
+      "stage": "PEM electrolysis",
+      "kwh_per_t": 10296.0,
+      "annual_kwh": 1029600000.0,
+      "annual_gwh": 1029.6,
+      "share_pct": 95.10437834842047
+    },
+    {
+      "stage": "CO2 capture / compression",
+      "kwh_per_t": 255.0,
+      "annual_kwh": 25500000.0,
+      "annual_gwh": 25.5,
+      "share_pct": 2.355440605948642
+    },
+    {
+      "stage": "Recycle compression / pumps",
+      "kwh_per_t": 155.0,
+      "annual_kwh": 15500000.0,
+      "annual_gwh": 15.5,
+      "share_pct": 1.43173840753741
+    },
+    {
+      "stage": "Distillation / cooling",
+      "kwh_per_t": 120.0,
+      "annual_kwh": 12000000.0,
+      "annual_gwh": 12.0,
+      "share_pct": 1.1084426380934786
+    }
+  ],
+  "fresh_water_quota_t_y": 138500.0,
+  "oxygen_quota_t_y": 158400.0,
+  "pem_supply_t_y": 196058.21080907772,
+  "pem_unaccounted_mass_t_y": 17858.21080907772,
+  "reference_pem_supply_quota_t_y": 196000.0,
+  "cooling_makeup_t_y": 2000.0,
+  "total_withdrawal_t_y": 140500.0,
+  "synthesis_mass_rounding_residual_t_y": 3.1950158650488447,
+  "anchor_decisions": {
+    "f_green": 1.0,
+    "r_purge": 0.004,
+    "eta_carbon": 96.52212005825277,
+    "gwp_net": -990.0,
+    "lcom_policy_adjusted": 1799.2450000000001
+  },
+  "sources_sha256": {
+    "background_engineering_docs.md": "1b7d61fe1fa5ecf252807dc808b118703f567e0724c9c2a0e553f280fb934a6f",
+    "lecture10_task_manual.md": "a3ba9874fe33806f0b0bee86289f74c070bf2e5903cf01a1112e442765c5e7ce",
+    "mfa_reaction_recycle_balance.csv": "ad57eb706b19492823f8f8009537323163851c41a4e774a1ea4771fdb385de32",
+    "lca_grid_scenarios_lci.csv": "252035fcadca8a225a75314fc0d925e609650a2f1f8f75bd9a0b6429a22dce30",
+    "policy_clauses_pack.md": "6071bea260730b93e65672a4af27fc02b5b42519551fdcc82912c9828ee679fd",
+    "tea_lcom_sensitivity_data.csv": "2bc2ee414f1f56dd02fc26389063272c7c221f96d22ba90f6a04795ea3d9e4b3",
+    "task3_anchors.csv": "db292f793743b6ba95549bea648ef269c3dc8c511560deb412f1f3c84dc64891",
+    "task4_process_sankey_flow.py": "8e235bebe8b2c440b2e8b7e16d521137391a149940b096b0876509343d5f8be3",
+    "task1_mfa_recycle_solver.py": "cc8d732a5cfb5f4a400096d3705b20c85d7982b7d79fdade71e628b5d5b655ee",
+    "task2_policy_vibe_engine.py": "46e1bec8ad55c3183b6b027bc779852e09dea7a359934fe22fad233078532ae1",
+    "task3_pareto_frontier_decision.py": "ecf56bea5e895444e8230330ab402f0d0401ab72b096e1d181bce7f833dc4893"
+  },
+  "limitations": [
+    "Single-pass synthesis uses the task1 pure-component, complete-condensation model.",
+    "Oxygen and fresh demin water are source quotas, not a certified electrolyzer stoichiometric balance.",
+    "PEM mass gap is unaccounted input/output information, not an inferred wastewater stream.",
+    "Electricity is fixed source quota; no variable-load compressor law or heat-recovery duty is invented.",
+    "Arrow widths are schematic, not a mass-proportional Sankey encoding."
+  ]
+}
