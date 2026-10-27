@@ -1,6 +1,6 @@
 {
   "date": "2026-10-27",
-  "report_sha256": "cb6e75d2be36dfac4563ca0405f09ffd0dd4994cd4bbfb14185012308f039c13",
+  "report_sha256": "aa5b96e91e9f318965a3337ba176fa8ec00d02449a3f3913c9c3a66fd311b244",
   "six_chapters": [
     "1",
     "2",
@@ -9,7 +9,7 @@
     "5",
     "6"
   ],
-  "tables_checked": 15,
+  "tables_checked": 14,
   "local_links_checked": 29,
   "image_checks": {
     "fig1_mfa_process_flow.png": {
