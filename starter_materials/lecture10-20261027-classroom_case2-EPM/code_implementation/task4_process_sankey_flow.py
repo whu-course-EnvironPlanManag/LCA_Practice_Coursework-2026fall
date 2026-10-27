@@ -1,5 +1,19 @@
 # -*- coding: utf-8 -*-
-"""\n课程名称：《环境规划与管理》\n案例主题：工业园区二氧化碳捕集耦合绿氢合成绿色甲醇系统\n任务编号：任务 4（学生随堂实训版）\n脚本名称：task4_process_sankey_flow.py\n功能描述：\n  基于任务 3 求解出的帕累托拐点（锚点 B）工程通量基准数据，绘制工业园区\n  10 万吨/年绿色甲醇系统物质流（MFA）与能量流（EFA）全流程拓扑图 (figures_output/fig1_mfa_process_flow.png)。\n  包含：\n    1. 物质流向与质量通量 (万吨/年)；\n    2. 未反应气内循环闭环回路 (46.40 万吨/年)；\n    3. 精馏冷凝生成水闭环循环至制氢进水池 (5.75 万吨/年)；\n    4. 各工段综合电耗分布 (亿 kWh/年)；\n    5. 出版级 300 DPI 矢量渲染输出。\n"""
+"""
+课程名称：《环境规划与管理》
+案例主题：工业园区二氧化碳捕集耦合绿氢合成绿色甲醇系统
+任务编号：任务 4（学生随堂实训版）
+脚本名称：task4_process_sankey_flow.py
+功能描述：
+  基于任务 3 求解出的帕累托拐点（锚点 B）工程通量基准数据，绘制工业园区
+  10 万吨/年绿色甲醇系统物质流（MFA）与能量流（EFA）全流程拓扑图 (figures_output/fig1_mfa_process_flow.png)。
+  包含：
+    1. 物质流向与质量通量 (万吨/年)；
+    2. 未反应气内循环闭环回路 (46.40 万吨/年)；
+    3. 精馏冷凝生成水闭环循环至制氢进水池 (5.75 万吨/年)；
+    4. 各工段综合电耗分布 (亿 kWh/年)；
+    5. 出版级 300 DPI 矢量渲染输出。
+"""
 
 import sys
 import io
@@ -49,219 +63,160 @@ def get_figures_output_dir():
 # ==============================================================================
 
 def draw_mfa_process_flow(output_filename="fig1_mfa_process_flow.png"):
-    """\n    绘制园区级 10 万吨/年绿色甲醇工程物质与能量流动拓扑图（MFA-EFA）。\n    风格：SCI 期刊插图 / 莫兰迪低饱和度配色 / 矢量风 / 无阴影。\n    所有文本、数值、箭头走向严格保留，不做任何删减。\n    """
-    import matplotlib.patches as patches
-
+    """
+    绘制园区级 10 万吨/年绿色甲醇工程物质与能量流动拓扑图。
+    
+    参数：
+        output_filename (str): 图表输出文件名
+    """
     out_dir = get_figures_output_dir()
     output_path = os.path.join(out_dir, output_filename)
 
-    # ========== 画布：大幅面 + 精细坐标 ==========
-    fig, ax = plt.subplots(figsize=(22, 13), dpi=300, facecolor="white")
-    fig.subplots_adjust(left=0.015, right=0.985, top=0.97, bottom=0.02)
-    ax.set_xlim(-4, 104)
-    ax.set_ylim(-3, 104)
+    fig, ax = plt.subplots(figsize=(16, 9.5), dpi=300)
+    ax.set_xlim(0, 100)
+    ax.set_ylim(0, 100)
     ax.axis("off")
-    ax.set_facecolor("white")
 
-    # ========== 莫兰迪低饱和度配色 ==========
-    MORANDI = {
-        "edge":    "#8a8f95",   # 模块描边（细灰）
-        "text":    "#2c3e50",   # 主文字
-        "sub":     "#6b7a8a",   # 副文字
-        "co2":     "#b8876b",   # 暖棕（碳源）
-        "h2":      "#7fa27f",   # 灰绿（绿氢）
-        "water":   "#7d9ab5",   # 灰蓝（水）
-        "meoh":    "#9a7fa6",   # 灰紫（甲醇产品）
-        "gas_loop":"#6ea0a0",   # 灰青（循环气）
-        "purge":   "#c27878",   # 灰红（弛放废气）
-        "o2":      "#85b3a0",   # 灰青绿（副产氧）
-        "elec":    "#a37d5a",   # 电耗标签（暖棕）
-        "panel":   "#f5f6f7",   # 面板填充
-    }
+    # --------------------------------------------------------------------------
+    # 颜色配置规范（科学客观工程配色）
+    # --------------------------------------------------------------------------
+    c_bg_box     = "#f7f9fa"
+    c_edge_box   = "#2c3e50"
+    c_co2        = "#e67e22" # 橙褐色代表碳源
+    c_h2         = "#27ae60" # 绿色代表绿氢
+    c_water      = "#2980b9" # 蓝色代表水系统
+    c_meoh       = "#8e44ad" # 紫色代表高纯甲醇
+    c_gas_loop   = "#16a085" # 青绿代表未反应循环气
+    c_energy     = "#d35400" # 能量消耗标签
 
-    # ========== 辅助函数 ==========
-    def draw_unit(x, y, w, h, title, subtitle="", elec_str="", face="#ffffff"):
-        rect = patches.FancyBboxPatch(
-            (x, y), w, h, boxstyle="round,pad=0.6,rounding_size=1.0",
-            facecolor=face, edgecolor=MORANDI["edge"], linewidth=1.3, zorder=2
-        )
+    # 标题与元数据说明
+    ax.text(50, 96.5, "工业园区 10 万吨/年二氧化碳加氢制绿色甲醇系统物质与能量流向拓扑图 (MFA-EFA)",
+            fontsize=15, fontweight="bold", ha="center", va="center", color="#1a252f")
+    ax.text(50, 93.5, "年运行基准：8,000 h | 聚合级精甲醇产能：100,000 t/a | 全厂综合电耗：10.826 亿 kWh/a | 总碳转化利用率：96.0%",
+            fontsize=10.5, ha="center", va="center", color="#555555")
+
+    # --------------------------------------------------------------------------
+    # 辅助绘图函数
+    # --------------------------------------------------------------------------
+    def draw_unit(x, y, w, h, title, subtitle="", elec_str="", bg_color=c_bg_box, border_color=c_edge_box):
+        rect = patches.FancyBboxPatch((x, y), w, h, boxstyle="round,pad=0.8,rounding_size=1.2",
+                                      facecolor=bg_color, edgecolor=border_color, linewidth=1.6, zorder=2)
         ax.add_patch(rect)
-        ax.text(x + w / 2, y + h * 0.75, title,
-                fontsize=11.0, fontweight="bold", ha="center", va="center",
-                color=MORANDI["text"], zorder=3)
+        ax.text(x + w / 2, y + h * 0.72, title, fontsize=10.5, fontweight="bold", ha="center", va="center", color="#2c3e50", zorder=3)
         if subtitle:
-            ax.text(x + w / 2, y + h * 0.48, subtitle,
-                    fontsize=9.0, ha="center", va="center",
-                    color=MORANDI["sub"], zorder=3)
+            ax.text(x + w / 2, y + h * 0.45, subtitle, fontsize=8.5, ha="center", va="center", color="#475569", zorder=3)
         if elec_str:
-            ax.text(x + w / 2, y + h * 0.22, elec_str,
-                    fontsize=8.5, fontweight="semibold", ha="center", va="center",
-                    color=MORANDI["elec"], zorder=3)
+            ax.text(x + w / 2, y + h * 0.20, elec_str, fontsize=8.0, fontweight="bold", ha="center", va="center", color=c_energy, zorder=3)
 
-    def arrow(x0, y0, x1, y1, label="", color="#444444", width=1.8, rad=0.0,
-              lx=None, ly=None):
-        style = f"Simple,tail_width={width},head_width={width*2.6},head_length={width*2.2}"
+    def draw_stream_arrow(x_start, y_start, x_end, y_end, label="", color="#333333", width=2.0, rad=0.0, label_pos=0.5, label_offset=(0, 2.0)):
+        style = f"Simple,tail_width={width},head_width={width*3.2},head_length={width*2.8}"
         kw = dict(arrowstyle=style, color=color, zorder=4)
-        cs = f"arc3,rad={rad}" if rad != 0 else None
-        arr = patches.FancyArrowPatch((x0, y0), (x1, y1),
-                                      connectionstyle=cs, **kw) if cs               else patches.FancyArrowPatch((x0, y0), (x1, y1), **kw)
-        ax.add_patch(arr)
+        if rad != 0.0:
+            arrow = patches.FancyArrowPatch((x_start, y_start), (x_end, y_end),
+                                          connectionstyle=f"arc3,rad={rad}", **kw)
+        else:
+            arrow = patches.FancyArrowPatch((x_start, y_start), (x_end, y_end), **kw)
+        ax.add_patch(arrow)
+
         if label:
-            if lx is None: lx = (x0 + x1) / 2
-            if ly is None: ly = (y0 + y1) / 2
-            ax.text(lx, ly, label, fontsize=8.8, fontweight="bold",
-                    ha="center", va="center", color=color, zorder=6,
-                    bbox=dict(boxstyle="round,pad=0.35", facecolor="white",
-                              edgecolor="white", linewidth=0.4, alpha=0.98))
+            lx = x_start + (x_end - x_start) * label_pos + label_offset[0]
+            ly = y_start + (y_end - y_start) * label_pos + label_offset[1]
+            ax.text(lx, ly, label, fontsize=8.2, fontweight="bold", ha="center", va="center",
+                    bbox=dict(boxstyle="square,pad=0.2", facecolor="white", edgecolor="none", alpha=0.85),
+                    color=color, zorder=5)
 
-    # ========== 标题栏 ==========
-    ax.text(50, 98.2, "工业园区 10 万吨/年二氧化碳加氢制绿色甲醇系统物质与能量流向拓扑图 (MFA-EFA)",
-            fontsize=16, fontweight="bold", ha="center", va="center",
-            color=MORANDI["text"])
-    ax.text(50, 95.8,
-            "年运行基准：8,000 h  |  聚合级精甲醇产能：100,000 t/a  |  全厂综合电耗：10.826 亿 kWh/a  |  总碳转化利用率：96.0%",
-            fontsize=11.5, ha="center", va="center", color=MORANDI["sub"])
+    # --------------------------------------------------------------------------
+    # 核心单元位置布局 (学生可根据工艺布局微调坐标)
+    # --------------------------------------------------------------------------
+    # 1. 碳捕集与压缩单元
+    draw_unit(5, 68, 17, 14, "烟气 CO2 捕集与压缩单元", "MEA 化学吸收 + 三级压缩 (5.0 MPa)", "电耗: 0.255 亿 kWh/a (2.36%)")
 
-    # ========== 核心单元布局（重新规划坐标，每个单元独立呼吸空间）==========
-    # 行 1（上部）：CO2 捕集
-    draw_unit(3, 73, 20, 14,
-              "烟气 CO2 捕集与压缩单元",
-              "MEA 化学吸收 + 三级压缩 (5.0 MPa)",
-              "电耗: 0.255 亿 kWh/a (2.36%)",
-              face="#f7f1ec")
+    # 2. 绿电电解水制氢站
+    draw_unit(5, 30, 17, 16, "130 MW PEM 电解水制氢站", "质子交换膜电解槽阵列 (3.0 MPa)", "电耗: 10.296 亿 kWh/a (95.10%)")
 
-    # 行 1（中部）：反应链左→右（分散间距）
-    draw_unit(33, 60, 14, 14,
-              "反应进料混合预热器",
-              "新进料与循环气深度混合\n230 ℃, 5.0 MPa", "",
-              face="#f4f1f8")
-    draw_unit(52, 60, 15, 15,
-              "固定床甲醇合成反应器",
-              "Cu/ZnO/Al₂O₃ 催化剂\n250 ℃, 5.0 MPa, 单程转化率 25%",
-              "副产中压蒸汽回供再沸器",
-              face="#f3f0f7")
-    draw_unit(73, 60, 14, 15,
-              "冷凝分离与循环分流器",
-              "气液闪蒸冷凝分离器\n循环比 3.8:1, 驰放比 1.0%",
-              "循环压缩电耗: 0.155 亿 kWh/a",
-              face="#f3f0f7")
+    # 3. 反应物料混合与预热器
+    draw_unit(30, 52, 13, 13, "反应进料混合预热器", "新进料与循环气深度混合\\n230 ℃, 5.0 MPa", "")
 
-    # 行 2（下部左）：PEM 电解槽
-    draw_unit(3, 33, 20, 18,
-              "130 MW PEM 电解水制氢站",
-              "质子交换膜电解槽阵列 (3.0 MPa)",
-              "电耗: 10.296 亿 kWh/a (95.10%)",
-              face="#eef4ee")
+    # 4. 甲醇催化合成反应器
+    draw_unit(48, 52, 15, 14, "固定床甲醇合成反应器", "Cu/ZnO/Al2O3 催化剂\\n250 ℃, 5.0 MPa, 单程转化率 25%", "副产中压蒸汽回供再沸器")
 
-    # 行 2（下部右）：精馏
-    draw_unit(73, 16, 14, 15,
-              "双塔精馏分离系统",
-              "常压脱轻塔 + 加压脱水精馏塔\n甲醇纯度 ≥ 99.85 wt%",
-              "脱水精馏电耗: 0.120 亿 kWh/a",
-              face="#f0ecf3")
+    # 5. 高压气液分离器与循环气分流器
+    draw_unit(69, 52, 14, 14, "冷凝分离与循环分流器", "气液闪蒸冷凝分离器\\n循环比 3.8:1, 驰放比 1.0%", "循环压缩电耗: 0.155 亿 kWh/a")
 
-    # ========== 物质流箭头（每条独立坐标，标签不重叠）==========
-    # ① 原料烟气 CO2 → 捕集单元（左入口）
-    arrow(-2, 80, 3, 80,
-          "原料烟气 CO2 捕集\n14.23 万吨/a (100%)",
-          color=MORANDI["co2"], width=2.2, ly=84.5)
+    # 6. 双塔精馏提纯系统
+    draw_unit(69, 16, 14, 14, "双塔精馏分离系统", "常压脱轻塔 + 加压脱水精馏塔\\n甲醇纯度 >= 99.85 wt%", "脱水精馏电耗: 0.120 亿 kWh/a")
 
-    # ② 捕集单元 → 混合器（斜下）
-    arrow(23, 77, 33, 67,
-          "高纯 CO2 气体: 14.23 万吨/a",
-          color=MORANDI["co2"], width=2.0, lx=26, ly=74)
+    # --------------------------------------------------------------------------
+    # 物质流连线与通量标注 (基于 10 万吨/年甲醇基准通量)
+    # --------------------------------------------------------------------------
+    # 输入流 1：电厂烟气 CO2 原料
+    draw_stream_arrow(0, 75, 5, 75, "原料烟气 CO2 捕集\\n14.23 万吨/a (100%)", c_co2, width=2.4, label_offset=(-0.5, 3.5))
 
-    # ③ 新鲜脱盐纯水 → 电解槽（左入口）
-    arrow(-2, 42, 3, 42,
-          "新鲜脱盐纯水补水\n13.85 万吨/a (70.7%)",
-          color=MORANDI["water"], width=2.0, ly=46.5)
+    # 输入流 2：园区新鲜除盐纯水外购
+    draw_stream_arrow(0, 36, 5, 36, "新鲜脱盐纯水补水\\n13.85 万吨/a (70.7%)", c_water, width=2.2, label_offset=(-0.5, 3.2))
 
-    # ④ 电解槽 → 混合器（斜上）
-    arrow(23, 40, 33, 63,
-          "电解高纯绿氢: 1.98 万吨/a",
-          color=MORANDI["h2"], width=2.0, lx=25, ly=48)
+    # 捕集 CO2 输送至混合器
+    draw_stream_arrow(22, 75, 30, 62, "高纯 CO2 气体: 14.23 万吨/a", c_co2, width=2.2, label_offset=(0, 2.5))
 
-    # ⑤ 混合器 → 反应器（水平）
-    arrow(47, 67, 52, 67,
-          "反应器入口混合气\n62.61 万吨/a",
-          color=MORANDI["text"], width=2.8, ly=72)
+    # 绿氢输送至混合器
+    draw_stream_arrow(22, 38, 30, 56, "电解高纯绿氢: 1.98 万吨/a", c_h2, width=2.2, label_offset=(0, -2.5))
 
-    # ⑥ 反应器 → 分离器（水平）
-    arrow(67, 67, 73, 67,
-          "反应出口生成物\n62.61 万吨/a",
-          color=MORANDI["text"], width=2.8, ly=72)
+    # 电解制氢副产纯氧外售
+    draw_stream_arrow(13.5, 30, 13.5, 8, "阳极副产高纯氧气 (外售)\\n15.84 万吨/a", "#16a085", width=2.2, label_offset=(0, 0))
 
-    # ⑦ 分离器 → 弛放废气（右上旁路）
-    arrow(80, 73, 95, 83,
-          "驰放废气 (1.0% 排放至供热锅炉)\n0.46 万吨/a (全流程碳损耗 4.0%)",
-          color=MORANDI["purge"], width=1.3, rad=0.20, lx=90, ly=86)
+    # 混合器到反应器
+    draw_stream_arrow(43, 58.5, 48, 58.5, "反应器入口混合气\\n62.61 万吨/a", "#2c3e50", width=3.2, label_offset=(0, 2.6))
 
-    # ⑧ 分离器 → 精馏塔（垂直下）
-    arrow(80, 60, 80, 31,
-          "粗甲醇液体\n15.75 万吨/a",
-          color=MORANDI["meoh"], width=2.4, lx=88, ly=46)
+    # 反应器到分离器
+    draw_stream_arrow(63, 58.5, 69, 58.5, "反应出口生成物\\n62.61 万吨/a", "#2c3e50", width=3.2, label_offset=(0, 2.6))
 
-    # ⑨ 精馏塔 → 产品输出（右出口）
-    arrow(87, 23, 102, 23,
-          "目标产品：聚合级精甲醇\n10.00 万吨/a (纯度 ≥ 99.85%)",
-          color=MORANDI["meoh"], width=2.6, ly=27.5)
+    # 分离器顶部循环气回路 (闭环内循环)
+    draw_stream_arrow(76, 66, 36.5, 65, "分离器顶部未反应气循环流 (99.0% 回流)\\n46.40 万吨/a (循环比 3.8:1)", c_gas_loop, width=2.8, rad=0.35, label_offset=(0, 5.5))
 
-    # ⑩ 分离器顶部 → 混合器顶部（循环回路，大弧度）
-    arrow(80, 75, 40, 74,
-          "分离器顶部未反应气循环流 (99.0% 回流)\n46.40 万吨/a (循环比 3.8:1)",
-          color=MORANDI["gas_loop"], width=2.4, rad=0.30, lx=60, ly=83)
+    # 分离器顶部驰放废气
+    draw_stream_arrow(76, 66, 89, 78, "驰放废气 (1.0% 排放至供热锅炉)\\n0.46 万吨/a (全流程碳损耗 4.0%)", "#c0392b", width=1.4, label_offset=(0, 2.8))
 
-    # ⑪ 电解槽阳极 → 副产氧气外售（左旁路，向下）
-    arrow(3, 37, -2, 14,
-          "阳极副产高纯氧气 (外售)\n15.84 万吨/a",
-          color=MORANDI["o2"], width=2.0, rad=-0.30, lx=-1.5, ly=26)
+    # 分离器底部粗甲醇液相到精馏塔
+    draw_stream_arrow(76, 52, 76, 30, "粗甲醇液体\\n15.75 万吨/a", c_meoh, width=2.6, label_offset=(6.0, 0))
 
-    # ⑫ 精馏塔釜 → 电解槽（闭环水循环，大弧度绕过右侧）
-    arrow(73, 22, 23, 36,
-          "精馏塔釜副产生成水 (100% 闭环回流至制氢池)\n5.75 万吨/a (削减园区新鲜水消耗 29.3%)",
-          color=MORANDI["water"], width=1.8, rad=-0.18, lx=48, ly=12)
+    # 精馏塔产品输出：聚合级精甲醇
+    draw_stream_arrow(83, 23, 98, 23, "目标产品：聚合级精甲醇\\n10.00 万吨/a (纯度 >= 99.85%)", c_meoh, width=3.0, label_offset=(0, 3.2))
 
-    # ========== 电解槽总进水标注（独立浮动框，不与箭头重叠）==========
-    ax.text(13, 30,
-            "PEM 电解槽总进水\n19.60 万吨/a (100%)\n[净补水 70.7% + 回用水 29.3%]",
-            fontsize=8.8, fontweight="bold", ha="center", va="center",
-            bbox=dict(boxstyle="round,pad=0.4", facecolor="#e6eef5",
-                      edgecolor=MORANDI["water"], linewidth=1.0, alpha=0.95),
-            color=MORANDI["water"], zorder=6)
+    # 精馏塔副产水闭环循环至制氢站 (闭环水循环)
+    draw_stream_arrow(69, 21, 22, 33, "精馏塔釜副产生成水 (100% 闭环回流至制氢池)\\n5.75 万吨/a (削减园区新鲜水消耗 29.3%)", c_water, width=2.0, rad=-0.22, label_offset=(0, -4.5))
 
-    # ========== 底部关键工程指标看板（横向两行，不再 4 列挤一行）==========
-    board_rect = patches.FancyBboxPatch(
-        (2, -2), 96, 16, boxstyle="round,pad=0.5,rounding_size=1.0",
-        facecolor=MORANDI["panel"], edgecolor=MORANDI["edge"], linewidth=1.0, zorder=2
-    )
+    # 电解槽总进水汇总标记
+    ax.text(13.5, 47.5, "PEM 电解槽总进水\\n19.60 万吨/a (100%)\\n[净补水 70.7% + 回用水 29.3%]",
+            fontsize=8.0, fontweight="bold", ha="center", va="center",
+            bbox=dict(boxstyle="round,pad=0.3", facecolor="#ebf5fb", edgecolor="#2980b9", linewidth=1.0),
+            color="#2980b9", zorder=6)
+
+    # --------------------------------------------------------------------------
+    # 底部图例与工程核心指标看板
+    # --------------------------------------------------------------------------
+    board_rect = patches.FancyBboxPatch((4, 2), 92, 10, boxstyle="round,pad=0.6,rounding_size=1.0",
+                                        facecolor="#ffffff", edgecolor="#bdc3c7", linewidth=1.2, zorder=2)
     ax.add_patch(board_rect)
 
-    ax.text(50, 12.5, "【关键规划工程指标对齐汇总 (10 万吨/年规模)】",
-            fontsize=10.5, fontweight="bold", ha="center", va="center",
-            color=MORANDI["text"])
+    ax.text(6, 9.5, "【关键规划工程指标对齐汇总 (10 万吨/年规模)】", fontsize=9.5, fontweight="bold", color="#2c3e50")
+    col1 = "- 原料捕集需求：高纯 CO2 14.23 万吨/年 (1.423 t/t)\\n- 绿氢原料需求：高纯绿氢 1.98 万吨/年 (0.198 t/t)"
+    col2 = "- 水资源循环率：精馏水回用 5.75 万吨/年 (节水 29.3%)\\n- 净除盐水消耗：13.85 万吨/年 (吨水指标 1.385 t/t)"
+    col3 = "- 全系统总碳利用率：96.0% (驰放碳损耗 4.0%)\\n- 副产工业高纯纯氧：外售量 15.84 万吨/年 (1.584 t/t)"
+    col4 = "- 全厂年用电负荷：10.826 亿 kWh/年 (制氢占比 95.1%)\\n- 热力学耦合集成：反应副产蒸汽回用碳捕集再沸器"
 
-    # 第一行：原料 / 能量指标
-    ax.text(6, 7.5,
-            "原料捕集需求：高纯 CO₂ 14.23 万吨/年 (1.423 t/t)\n绿氢原料需求：高纯绿氢 1.98 万吨/年 (0.198 t/t)",
-            fontsize=9.2, ha="left", va="center", color=MORANDI["sub"])
-    ax.text(38, 7.5,
-            "水资源循环率：精馏水回用 5.75 万吨/年 (节水 29.3%)\n净除盐水消耗：13.85 万吨/年 (吨水指标 1.385 t/t)",
-            fontsize=9.2, ha="left", va="center", color=MORANDI["sub"])
-    ax.text(70, 7.5,
-            "全系统总碳利用率：96.0% (驰放碳损耗 4.0%)\n副产工业高纯纯氧：外售量 15.84 万吨/年 (1.584 t/t)",
-            fontsize=9.2, ha="left", va="center", color=MORANDI["sub"])
+    ax.text(7, 5.5, col1, fontsize=8.2, va="center", color="#34495e")
+    ax.text(30, 5.5, col2, fontsize=8.2, va="center", color="#34495e")
+    ax.text(54, 5.5, col3, fontsize=8.2, va="center", color="#34495e")
+    ax.text(77, 5.5, col4, fontsize=8.2, va="center", color="#34495e")
 
-    # 第二行：能量 / 系统集成
-    ax.text(50, 1.5,
-            "全厂年用电负荷：10.826 亿 kWh/年 (制氢占比 95.1%)     |     "
-            "热力学耦合集成：反应副产蒸汽回用碳捕集再沸器",
-            fontsize=9.2, ha="center", va="center", color=MORANDI["sub"])
+    plt.tight_layout()
 
-    # ========== 保存 ==========
+    # 确保输出目录存在并保存图表
     os.makedirs(os.path.dirname(os.path.abspath(output_path)), exist_ok=True)
-    plt.savefig(output_path, dpi=300, bbox_inches="tight", facecolor="white")
+    plt.savefig(output_path, dpi=300)
     plt.close(fig)
     print(f"[成功] 工艺物质能量流向拓扑图已保存至: {output_path}")
+
 
 if __name__ == "__main__":
     draw_mfa_process_flow()
