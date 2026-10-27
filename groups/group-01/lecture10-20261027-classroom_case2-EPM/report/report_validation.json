@@ -1,0 +1,81 @@
+{
+  "date": "2026-10-27",
+  "report_sha256": "cb6e75d2be36dfac4563ca0405f09ffd0dd4994cd4bbfb14185012308f039c13",
+  "six_chapters": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6"
+  ],
+  "tables_checked": 15,
+  "local_links_checked": 29,
+  "image_checks": {
+    "fig1_mfa_process_flow.png": {
+      "pixels": [
+        4800,
+        3120
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    "fig2_pareto_decision_frontier.png": {
+      "pixels": [
+        3840,
+        1860
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    }
+  },
+  "abstract_chinese_chars": 411,
+  "numeric_values_checked": {
+    "anchor_gwp": "-990.0",
+    "policy_lcom": "1799.245",
+    "policy_mac": "-195.196379",
+    "annual_co2": "142300.00",
+    "annual_h2": "19800.00",
+    "annual_recycle": "1130109.95",
+    "annual_water_reuse": "57558.21",
+    "total_withdrawal": "140500.00",
+    "unaccounted_pem": "17858.21",
+    "capital_annuity": "8351.8811",
+    "base_net_opex": "25683.8189",
+    "base_net_operating_residual": "4031.8189",
+    "adjusted_total_annual": "17992.4500"
+  },
+  "project_capex_billion_rmb": [
+    1.1,
+    4.55,
+    1.2,
+    0.65,
+    0.7
+  ],
+  "evidence_tests": {
+    "task1": 6,
+    "task2": 6,
+    "task3": 5,
+    "task4": 4,
+    "total": 21,
+    "all_passed": true
+  },
+  "material_qualifications": [
+    "Original CSV full-composition balance is not certified; synthesis pure-component model passes.",
+    "A/B/C are coincident; no identifiable interior knee is claimed.",
+    "CAPEX is the fixed model assumption, not a resized-equipment quotation.",
+    "Full-plant net OPEX equivalent is reconciled; per-project non-electric costs remain unallocated.",
+    "1.405 t/t water exceeds basic quota and is taxed progressively; physical siting and certification remain unverified."
+  ],
+  "source_files_sha256": {
+    "report\\report_writing_rubric.md": "c545e61df5e8f62cc1b5f27e342e82f224a219803e5e458207a9fb12c67ff308",
+    "figures_output\\task3_anchors.csv": "db292f793743b6ba95549bea648ef269c3dc8c511560deb412f1f3c84dc64891",
+    "figures_output\\task4_model_audit.json": "43a27df497ef577e42deb5d6a550601db330c658054487695f6fe7d8a809ef18",
+    "task_docs\\background_engineering_docs.md": "1b7d61fe1fa5ecf252807dc808b118703f567e0724c9c2a0e553f280fb934a6f",
+    "data_cohort\\policy_clauses_pack.md": "6071bea260730b93e65672a4af27fc02b5b42519551fdcc82912c9828ee679fd"
+  }
+}
