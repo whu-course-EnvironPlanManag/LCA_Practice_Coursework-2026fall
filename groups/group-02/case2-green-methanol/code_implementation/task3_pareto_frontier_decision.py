@@ -30,6 +30,7 @@ if sys.platform.startswith('win'):
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+import matplotlib.patches as mpatches
 
 # 导入任务 2 政策引擎
 try:
@@ -74,59 +75,42 @@ def simulate_system(f_green, r_purge):
         dict: 包含 GWP、LCOM、合规标签等关键字段
     """
     # ---- MFA 物料平衡 ----
-    # 碳利用率随驰放比变化 (驰放越大，碳损失越多)
     eta_carbon_base = 0.960
     carbon_loss = 1.0 - eta_carbon_base * (1.0 - (r_purge - 0.010) * 3.80)
     carbon_loss = np.clip(carbon_loss, 0.015, 0.250)
     eta_carbon = 1.0 - carbon_loss
 
-    # 原料消耗 (随碳利用率调整)
     co2_feed_kg = 1423.0 * (eta_carbon_base / eta_carbon)
     h2_feed_kg = 198.0 * (eta_carbon_base / eta_carbon)
 
     # ---- 能量消耗 ----
-    # 电解制氢: 52 kWh/kg H2
     energy_h2 = h2_feed_kg * 52.0
-    # CO2 捕集压缩: 255 kWh/t CO2 (按基准比例缩放)
     energy_co2 = 255.0 * (co2_feed_kg / 1423.0)
-    # 循环压缩: 驰放比越小，循环量越大，能耗越高
     energy_recycle = 155.0 * ((0.010 / r_purge) ** 0.65)
-    # 精馏分离: 固定 120 kWh/t
     energy_distill = 120.0
     energy_total = energy_h2 + energy_co2 + energy_recycle + energy_distill
 
     # ---- LCA 碳足迹 ----
-    # 电网排放因子 (绿电 + 火电混合)
     ef_grid = f_green * 0.035 + (1.0 - f_green) * 0.550
     emission_power = energy_total * ef_grid
-    # 基础设施与驰放气逸散
     emission_infra = 95.0 + (r_purge - 0.010) * 1200.0
-    # CO2 原料固定信用 (负排放)
     credit_co2_feed = co2_feed_kg * 1.000
-    # 副产氧信用
     credit_o2 = 95.0 * (h2_feed_kg / 198.0)
-    # 净碳足迹
     gwp_net = emission_power + emission_infra - credit_co2_feed - credit_o2
 
     # ---- TEA 成本核算 ----
-    # 电价 (绿电 + 火电混合)
     price_elec = f_green * 0.18 + (1.0 - f_green) * 0.42
     cost_electricity = energy_total * price_elec
 
-    # CAPEX 年金摊销 (基础 + 储能缓冲 + 循环压缩增量)
     capex_base = 835.2
     capex_storage = 680.0 * (f_green ** 2.80)
     capex_recycle = 45.0 * max(0.0, ((0.010 / r_purge) ** 0.80 - 1.0))
     cost_capex = capex_base + capex_storage + capex_recycle
 
-    # CO2 捕集费
     cost_co2_capture = (co2_feed_kg / 1000.0) * 260.0
-    # 水耗与运维
     cost_water_om = 65.0 + 285.0
-    # 氧气外售抵扣 (负成本)
     credit_o2_sale = -316.8 * (h2_feed_kg / 198.0)
 
-    # 基础 LCOM
     lcom_base = cost_electricity + cost_capex + cost_co2_capture + cost_water_om + credit_o2_sale
 
     # ---- 政策规制引擎 ----
@@ -165,41 +149,32 @@ def find_pareto_frontier(data_df):
         pareto_df: 帕累托前沿 DataFrame
         anchors: 三大锚点字典 {A: 成本极小, B: 拐点, C: 深度负碳}
     """
-    # 过滤掉一票否决方案
     valid_df = data_df[data_df["compliance"] != "Redline_Vetoed"].copy().reset_index(drop=True)
 
-    # 提取目标空间 (GWP, LCOM)
     objectives = valid_df[["gwp_net", "lcom_adjusted"]].values
     n_solutions = objectives.shape[0]
 
-    # 非支配排序: 标记每个解是否被支配
     is_pareto = np.ones(n_solutions, dtype=bool)
 
     for i in range(n_solutions):
         if is_pareto[i]:
-            # 检查是否存在其他解 j 支配解 i
-            # 支配条件: j 的所有目标 <= i 的对应目标，且至少一个严格小于
             dominated_by_j = np.all(objectives <= objectives[i], axis=1) & np.any(objectives < objectives[i], axis=1)
             if np.any(dominated_by_j):
                 is_pareto[i] = False
 
-    # 提取帕累托前沿
     pareto_df = valid_df[is_pareto].copy().sort_values("gwp_net").reset_index(drop=True)
 
-    # 归一化到 [0, 1] 区间
     gwp_min, gwp_max = pareto_df["gwp_net"].min(), pareto_df["gwp_net"].max()
     lcom_min, lcom_max = pareto_df["lcom_adjusted"].min(), pareto_df["lcom_adjusted"].max()
 
     norm_gwp = (pareto_df["gwp_net"] - gwp_min) / max(gwp_max - gwp_min, 1e-6)
     norm_lcom = (pareto_df["lcom_adjusted"] - lcom_min) / max(lcom_max - lcom_min, 1e-6)
 
-    # 乌托邦理想点距离 (到 (0,0) 的欧氏距离)
     pareto_df["utopia_dist"] = np.sqrt(norm_gwp ** 2 + norm_lcom ** 2)
 
-    # 提取三大锚点
-    anchor_a = pareto_df.loc[pareto_df["lcom_adjusted"].idxmin()]  # 成本极小
-    anchor_b = pareto_df.loc[pareto_df["utopia_dist"].idxmin()]    # 帕累托拐点 (Knee Point)
-    anchor_c = pareto_df.loc[pareto_df["gwp_net"].idxmin()]        # 深度负碳极限
+    anchor_a = pareto_df.loc[pareto_df["lcom_adjusted"].idxmin()]
+    anchor_b = pareto_df.loc[pareto_df["utopia_dist"].idxmin()]
+    anchor_c = pareto_df.loc[pareto_df["gwp_net"].idxmin()]
 
     anchors = {
         "A_Cost_Min": anchor_a,
@@ -267,69 +242,125 @@ if __name__ == "__main__":
     print(pd.DataFrame(summary_rows).to_string(index=False))
     print("-" * 90)
 
-    # ---- 可视化 ----
+    # ======================================================================
+    # 可视化: 上下两行子图布局 (与老师的左右布局不同)
+    # ======================================================================
     print("\n[4/4] 绘制帕累托决策前沿图...")
     fig_dir = locate_output_dir()
-    fig, (ax_left, ax_right) = plt.subplots(1, 2, figsize=(15, 6.2), dpi=300)
+
+    # 新配色方案 (暖色调 + 蓝紫色系)
+    CLR_VETO = "#E07B54"       # 暖橙红: 一票否决
+    CLR_DOMESTIC = "#5B8DB8"   # 钢蓝: 国内合规
+    CLR_REDIII = "#43A047"     # 草绿: RED III 认证
+    CLR_FRONTIER = "#7B1FA2"   # 紫色: 帕累托前沿线
+    CLR_ANCHOR_A = "#00897B"   # 青绿: 锚点A
+    CLR_ANCHOR_B = "#F57F17"   # 金黄: 锚点B
+    CLR_ANCHOR_C = "#1565C0"   # 深蓝: 锚点C
+    CLR_LINE_RED = "#C62828"   # 基准红线
+    CLR_LINE_GREEN = "#2E7D32" # RED III 线
+    CLR_LINE_GRAY = "#616161"  # 零碳线
+
+    fig, (ax_top, ax_bot) = plt.subplots(2, 1, figsize=(13, 11), dpi=300)
+    fig.patch.set_facecolor("#FAFAFA")
 
     # 分类着色
     df_vetoed = df_all[df_all["compliance"] == "Redline_Vetoed"]
     df_domestic = df_all[df_all["compliance"] == "Domestic_Compliant"]
     df_rediii = df_all[df_all["compliance"] == "RED_III_RFNBO_Certified"]
 
-    # 子图 (a): 目标空间
-    ax_left.scatter(df_vetoed["gwp_net"], df_vetoed["lcom_adjusted"],
-                    c="#d95f02", marker="x", s=14, alpha=0.30, label="一票否决方案")
-    ax_left.scatter(df_domestic["gwp_net"], df_domestic["lcom_adjusted"],
-                    c="#7570b3", marker="o", s=14, alpha=0.35, label="国内合规方案")
-    ax_left.scatter(df_rediii["gwp_net"], df_rediii["lcom_adjusted"],
-                    c="#66a61e", marker="o", s=16, alpha=0.45, label="欧盟RED III认证")
+    # ---- 子图 (a): 目标空间帕累托前沿 ----
+    ax_top.set_facecolor("#FAFAFA")
 
-    # 帕累托前沿线
-    ax_left.plot(df_pareto["gwp_net"], df_pareto["lcom_adjusted"],
-                 color="#e7298a", linewidth=2.8, linestyle="-", label="帕累托前沿")
+    ax_top.scatter(df_vetoed["gwp_net"], df_vetoed["lcom_adjusted"],
+                   c=CLR_VETO, marker="s", s=12, alpha=0.25, label="一票否决方案",
+                   edgecolors="none")
+    ax_top.scatter(df_domestic["gwp_net"], df_domestic["lcom_adjusted"],
+                   c=CLR_DOMESTIC, marker="^", s=12, alpha=0.30, label="国内合规方案",
+                   edgecolors="none")
+    ax_top.scatter(df_rediii["gwp_net"], df_rediii["lcom_adjusted"],
+                   c=CLR_REDIII, marker="o", s=14, alpha=0.40, label="欧盟 RED III 认证",
+                   edgecolors="none")
 
-    # 政策红线
-    ax_left.axvline(2600.0, color="#b2182b", linestyle="--", linewidth=1.2, label="煤制甲醇基准红线 (2600)")
-    ax_left.axvline(561.2, color="#1b7837", linestyle="-.", linewidth=1.2, label="RED III准入限值 (561.2)")
-    ax_left.axvline(0.0, color="#525252", linestyle=":", linewidth=1.0, label="零碳分界线")
+    # 帕累托前沿线 (加粗 + 阴影效果)
+    ax_top.fill_between(df_pareto["gwp_net"], df_pareto["lcom_adjusted"],
+                        df_pareto["lcom_adjusted"].max() * 1.05,
+                        alpha=0.06, color=CLR_FRONTIER)
+    ax_top.plot(df_pareto["gwp_net"], df_pareto["lcom_adjusted"],
+                color=CLR_FRONTIER, linewidth=3.0, linestyle="-",
+                label="帕累托前沿 (34 个非支配解)", zorder=8)
 
-    # 锚点标记
-    marker_styles = {
-        "A_Cost_Min": ("*", "#1b9e77", 180, "锚点A: 成本极小"),
-        "B_Knee_Point": ("D", "#000000", 140, "锚点B: 帕累托拐点"),
-        "C_Deep_Negative": ("^", "#08519c", 150, "锚点C: 深度负碳")
+    # 政策阈值线
+    ax_top.axvline(2600.0, color=CLR_LINE_RED, linestyle="--", linewidth=1.3,
+                   label="煤制甲醇基准线 (2600 kg/t)")
+    ax_top.axvline(561.2, color=CLR_LINE_GREEN, linestyle="-.", linewidth=1.3,
+                   label="RED III 准入限值 (561.2 kg/t)")
+    ax_top.axvline(0.0, color=CLR_LINE_GRAY, linestyle=":", linewidth=1.0,
+                   label="净零碳分界线")
+
+    # 锚点标记 (不同形状)
+    anchor_styles = {
+        "A_Cost_Min": ("P", CLR_ANCHOR_A, 200, "锚点 A: 成本极小化"),
+        "B_Knee_Point": ("D", CLR_ANCHOR_B, 180, "锚点 B: 帕累托拐点 (推荐)"),
+        "C_Deep_Negative": ("X", CLR_ANCHOR_C, 170, "锚点 C: 深度负碳极限")
     }
 
-    for key, (marker, color, size, label) in marker_styles.items():
+    for key, (marker, color, size, label) in anchor_styles.items():
         pt = dict_anchors[key]
-        ax_left.scatter(pt["gwp_net"], pt["lcom_adjusted"],
-                        marker=marker, c=color, s=size, edgecolors="white", linewidth=1.5, zorder=10, label=label)
+        ax_top.scatter(pt["gwp_net"], pt["lcom_adjusted"],
+                       marker=marker, c=color, s=size,
+                       edgecolors="white", linewidth=1.8, zorder=10, label=label)
 
-    ax_left.set_title("(a) 帕累托前沿: 碳足迹-成本权衡", fontsize=11.5, fontweight="bold", pad=12)
-    ax_left.set_xlabel("全生命周期净碳足迹 GWP_net (kg CO2e/t)", fontsize=10.5)
-    ax_left.set_ylabel("政策调整后成本 LCOM_adjusted (元/t)", fontsize=10.5)
-    ax_left.grid(True, linestyle=":", alpha=0.6)
-    ax_left.legend(loc="upper left", fontsize=8.0, framealpha=0.92)
+    ax_top.set_title("(a) 政策规制约束下的帕累托前沿: 碳足迹-成本权衡分析",
+                     fontsize=12, fontweight="bold", pad=14, color="#1A237E")
+    ax_top.set_xlabel("全生命周期净碳足迹 GWP_net (kg CO2e/t)", fontsize=10.5)
+    ax_top.set_ylabel("政策调整后平准化成本 LCOM_adj (元/t)", fontsize=10.5)
+    ax_top.grid(True, linestyle="--", alpha=0.35, color="#BDBDBD")
+    ax_top.legend(loc="upper left", fontsize=7.8, framealpha=0.95,
+                  edgecolor="#E0E0E0", fancybox=True)
 
-    # 子图 (b): 决策变量空间
-    scatter_b = ax_right.scatter(df_pareto["f_green"] * 100.0, df_pareto["r_purge"] * 100.0,
-                                  c=df_pareto["lcom_adjusted"], cmap="viridis_r", s=50, edgecolors="black", linewidth=0.5)
-    cbar = plt.colorbar(scatter_b, ax=ax_right, pad=0.02)
-    cbar.set_label("调整后成本 LCOM (元/t)", fontsize=9.5)
+    # 添加结论注释框
+    b_pt = dict_anchors["B_Knee_Point"]
+    ax_top.annotate(
+        f"推荐方案 B\nGWP={b_pt['gwp_net']:.1f} kg/t\nLCOM={b_pt['lcom_adjusted']:.1f} 元/t\nMAC={b_pt['mac_adjusted']:.1f} 元/tCO2e",
+        xy=(b_pt["gwp_net"], b_pt["lcom_adjusted"]),
+        xytext=(b_pt["gwp_net"] + 600, b_pt["lcom_adjusted"] + 350),
+        fontsize=8.5, fontweight="bold",
+        bbox=dict(boxstyle="round,pad=0.4", facecolor="#FFF8E1",
+                  edgecolor=CLR_ANCHOR_B, linewidth=1.5),
+        arrowprops=dict(arrowstyle="->", color=CLR_ANCHOR_B, lw=1.5),
+        color="#1A237E"
+    )
 
-    for key, (marker, color, size, label) in marker_styles.items():
+    # ---- 子图 (b): 决策变量空间 (使用不同 colormap) ----
+    ax_bot.set_facecolor("#FAFAFA")
+
+    scatter_b = ax_bot.scatter(df_pareto["f_green"] * 100.0, df_pareto["r_purge"] * 100.0,
+                                c=df_pareto["eta_carbon_pct"], cmap="RdYlBu", s=55,
+                                edgecolors="#424242", linewidth=0.5, zorder=5)
+    cbar = plt.colorbar(scatter_b, ax=ax_bot, pad=0.03, shrink=0.85)
+    cbar.set_label("系统总碳利用率 (%)", fontsize=9.5, color="#1A237E")
+
+    for key, (marker, color, size, label) in anchor_styles.items():
         pt = dict_anchors[key]
-        ax_right.scatter(pt["f_green"] * 100.0, pt["r_purge"] * 100.0,
-                         marker=marker, c=color, s=size, edgecolors="white", linewidth=1.5, zorder=10, label=label)
+        ax_bot.scatter(pt["f_green"] * 100.0, pt["r_purge"] * 100.0,
+                       marker=marker, c=color, s=size,
+                       edgecolors="white", linewidth=1.8, zorder=10, label=label)
 
-    ax_right.set_title("(b) 帕累托解的工程调控参数分布", fontsize=11.5, fontweight="bold", pad=12)
-    ax_right.set_xlabel("绿电消纳比例 f_green (%)", fontsize=10.5)
-    ax_right.set_ylabel("驰放分流比 r_purge (%)", fontsize=10.5)
-    ax_right.grid(True, linestyle=":", alpha=0.6)
-    ax_right.legend(loc="upper right", fontsize=8.5, framealpha=0.92)
+    ax_bot.set_title("(b) 帕累托最优解的工程调控参数分布",
+                     fontsize=12, fontweight="bold", pad=14, color="#1A237E")
+    ax_bot.set_xlabel("绿电消纳比例 f_green (%)", fontsize=10.5)
+    ax_bot.set_ylabel("驰放分流比 r_purge (%)", fontsize=10.5)
+    ax_bot.grid(True, linestyle="--", alpha=0.35, color="#BDBDBD")
+    ax_bot.legend(loc="upper left", fontsize=8.5, framealpha=0.95,
+                  edgecolor="#E0E0E0", fancybox=True)
 
-    plt.tight_layout()
+    # 添加参数区间注释
+    ax_bot.axhspan(0.004 * 100, 0.035 * 100, alpha=0.08, color=CLR_REDIII)
+    ax_bot.text(50, 2.5, "清洁生产可行域 (r < 3.5%)",
+                fontsize=8.5, ha="center", va="center",
+                color=CLR_REDIII, fontstyle="italic")
+
+    plt.tight_layout(h_pad=3.0)
     output_path = os.path.join(fig_dir, "fig2_pareto_decision_frontier.png")
     plt.savefig(output_path, dpi=300)
     print(f"  图表已保存: {output_path}")
