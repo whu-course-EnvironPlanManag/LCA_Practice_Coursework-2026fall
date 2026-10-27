@@ -74,7 +74,7 @@ def draw_mfa_process_flow(output_filename="fig1_mfa_process_flow.png"):
     out_dir = get_figures_output_dir()
     output_path = os.path.join(out_dir, output_filename)
 
-    fig, ax = plt.subplots(figsize=(16, 10), dpi=300)
+    fig, ax = plt.subplots(figsize=(16, 10.6), dpi=300)
     ax.set_xlim(0, 100)
     ax.set_ylim(0, 100)
     ax.axis("off")
@@ -155,7 +155,7 @@ def draw_mfa_process_flow(output_filename="fig1_mfa_process_flow.png"):
               "气液闪蒸冷凝分离\n循环比 3.8:1，驰放 2.16%",
               "循环压缩 0.094 亿 kWh/a")
 
-    draw_unit(67, 14, 15, 11, "双塔精馏分离系统",
+    draw_unit(67, 17, 15, 11, "双塔精馏分离系统",
               "脱轻塔 + 加压脱水塔\n纯度 ≥ 99.85 wt%",
               "精馏电耗 0.120 亿 kWh/a")
 
@@ -172,15 +172,15 @@ def draw_mfa_process_flow(output_filename="fig1_mfa_process_flow.png"):
 
     # 捕集 CO2 输送至混合预热器
     draw_stream_arrow(23, 73, 29, 61, c_co2, width=2.2)
-    flow_label(27.5, 70, "高纯 CO2\n14.88 万吨/a", c_co2)
+    flow_label(27.5, 70.5, "高纯 CO2\n14.88 万吨/a", c_co2)
 
     # 绿氢输送至混合预热器
     draw_stream_arrow(23, 39, 29, 58, c_h2, width=2.2)
     flow_label(27, 43.5, "电解绿氢\n2.07 万吨/a", c_h2)
 
     # 电解制氢副产纯氧外售
-    draw_stream_arrow(14, 32, 14, 11, "#16a085", width=2.2)
-    flow_label(15.5, 22, "副产纯氧 16.57 万吨/a", "#16a085", ha="left")
+    draw_stream_arrow(14, 32, 14, 16, "#16a085", width=2.2)
+    flow_label(16, 24, "副产纯氧 16.57 万吨/a", "#16a085", ha="left")
 
     # 混合预热器至合成反应器
     draw_stream_arrow(43, 60, 47, 60, "#2c3e50", width=3.2)
@@ -199,25 +199,25 @@ def draw_mfa_process_flow(output_filename="fig1_mfa_process_flow.png"):
     flow_label(87, 79.5, "驰放气 0.99 万吨/a\n碳损耗 8.2% 送锅炉掺烧", c_purge)
 
     # 分离器底部粗甲醇液相去精馏
-    draw_stream_arrow(70, 55, 70, 25, c_meoh, width=2.6)
-    flow_label(72.5, 40, "粗甲醇液\n16.47 万吨/a", c_meoh, ha="left")
+    draw_stream_arrow(70, 55, 70, 28, c_meoh, width=2.6)
+    flow_label(72.5, 41, "粗甲醇液\n16.47 万吨/a", c_meoh, ha="left")
 
     # 精馏产品输出
-    draw_stream_arrow(82, 20, 97, 20, c_meoh, width=3.0)
-    flow_label(83, 16, "精甲醇 10.00 万吨/a\n纯度 ≥ 99.85 wt%", c_meoh, ha="left")
+    draw_stream_arrow(82, 22.5, 97, 22.5, c_meoh, width=3.0)
+    flow_label(83, 19, "精甲醇 10.00 万吨/a\n纯度 ≥ 99.85 wt%", c_meoh, ha="left")
 
     # 精馏副产水闭环回用至制氢进水池
-    draw_stream_arrow(66, 18, 20, 36, c_water, width=2.0, rad=-0.22)
-    flow_label(43, 30.5, "精馏副产水回用 6.01 万吨/a\n闭环回用率 29.3%（100% 回流）", c_water)
+    draw_stream_arrow(66, 20.5, 24, 38, c_water, width=2.0, rad=-0.22)
+    flow_label(43, 31, "精馏副产水回用 6.01 万吨/a\n闭环回用率 29.3%（100% 回流）", c_water)
 
     # --------------------------------------------------------------------------
     # 底部图例与工程核心指标看板（2 × 2 网格，避免四列文字相互挤压）
     # --------------------------------------------------------------------------
-    board_rect = patches.FancyBboxPatch((4, 1.5), 92, 10.5, boxstyle="round,pad=0.6,rounding_size=1.0",
+    board_rect = patches.FancyBboxPatch((4, 0.8), 92, 13.2, boxstyle="round,pad=0.6,rounding_size=1.0",
                                         facecolor="#ffffff", edgecolor="#bdc3c7", linewidth=1.2, zorder=2)
     ax.add_patch(board_rect)
 
-    ax.text(6, 11, "【关键规划工程指标对齐汇总（10 万吨/年规模）】",
+    ax.text(6, 12.6, "【关键规划工程指标对齐汇总（10 万吨/年规模）】",
             fontsize=9.2, fontweight="bold", color="#2c3e50", va="center")
 
     col1 = "- 原料：CO2 14.88 万吨/a（1.488 t/t）\n- 绿氢：2.07 万吨/a（0.207 t/t）"
@@ -225,10 +225,10 @@ def draw_mfa_process_flow(output_filename="fig1_mfa_process_flow.png"):
     col3 = "- 总碳利用率：91.8%（驰放损耗 8.2%）\n- 精甲醇：10.00 万吨/a（纯度 ≥ 99.85%）"
     col4 = "- 用电：11.25 亿 kWh/a（制氢占 95.7%）\n- 副产纯氧：16.57 万吨/a（1.657 t/t）"
 
-    ax.text(8, 7.8, col1, fontsize=8.0, va="center", color="#34495e", linespacing=1.45)
-    ax.text(52, 7.8, col2, fontsize=8.0, va="center", color="#34495e", linespacing=1.45)
-    ax.text(8, 4.0, col3, fontsize=8.0, va="center", color="#34495e", linespacing=1.45)
-    ax.text(52, 4.0, col4, fontsize=8.0, va="center", color="#34495e", linespacing=1.45)
+    ax.text(8, 9.8, col1, fontsize=8.2, va="center", color="#34495e", linespacing=1.60)
+    ax.text(52, 9.8, col2, fontsize=8.2, va="center", color="#34495e", linespacing=1.60)
+    ax.text(8, 4.8, col3, fontsize=8.2, va="center", color="#34495e", linespacing=1.60)
+    ax.text(52, 4.8, col4, fontsize=8.2, va="center", color="#34495e", linespacing=1.60)
 
     plt.tight_layout()
 
