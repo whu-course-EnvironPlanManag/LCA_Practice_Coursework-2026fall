@@ -46,22 +46,33 @@ flowchart TD
 
 ### 1. 化学计量学与核心热力学反应
 
-催化加氢合成甲醇体系主要由以下两个平行反应控制：
+催化加氢合成甲醇反应体系主要由以下两个独立平行反应控制（副产物 $\text{CO}$ 的进一步加氢反应可由前两式依据盖斯定律线性推导）：
 
-1. **甲醇合成主反应（放热）**：
-   $$
-   \text{CO}_2 + 3\text{H}_2 \rightleftharpoons \text{CH}_3\text{OH} + \text{H}_2\text{O} \quad (\Delta H_{298\text{K}} = -49.5\text{ kJ/mol})
-   $$
-   *理论化学计量摩尔比* *$\text{H}_2 : \text{CO}_2 = 3 : 1$。*
-2. **逆水汽变换副反应（RWGS，吸热）**：
-   $$
-   \text{CO}_2 + \text{H}_2 \rightleftharpoons \text{CO} + \text{H}_2\text{O} \quad (\Delta H_{298\text{K}} = +41.2\text{ kJ/mol})
-   $$
-   *副产微量* *$\text{CO}$。*
-3. **副产物** **$\text{CO}$** **加氢合成甲醇反应（强放热）**：
-   $$
-   \text{CO} + 2\text{H}_2 \rightleftharpoons \text{CH}_3\text{OH} \quad (\Delta H_{298\text{K}} = ??\text{ kJ/mol})
-   $$
+* **反应 1：甲醇合成主反应（放热）**
+
+$$
+\text{CO}_2 + 3\text{H}_2 \rightleftharpoons \text{CH}_3\text{OH} + \text{H}_2\text{O} \quad (\Delta H_{298\text{K}} = -49.5\text{ kJ/mol})
+$$
+
+
+*理论化学计量摩尔比 $\text{H}_2 : \text{CO}_2 = 3 : 1$。*
+
+* **反应 2：逆水汽变换副反应（RWGS，吸热）**
+
+$$
+\text{CO}_2 + \text{H}_2 \rightleftharpoons \text{CO} + \text{H}_2\text{O} \quad (\Delta H_{298\text{K}} = +41.2\text{ kJ/mol})
+$$
+
+
+
+*副产微量 $\text{CO}$。*
+
+* **反应 3：副产物 $\text{CO}$ 深度加氢合成甲醇反应（强放热）**
+
+$$
+\text{CO} + 2\text{H}_2 \rightleftharpoons \text{CH}_3\text{OH} \quad (\Delta H_{298\text{K}} = ??\text{ kJ/mol})
+$$
+
 
 ### 2. 反应器单程转化率与循环流（Recycle Loop）解析
 
