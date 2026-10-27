@@ -183,12 +183,12 @@ def scale_to_plant_capacity(balance, annual_capacity=100000):
     """
     scale = annual_capacity
 
-    # 年度物料通量 (万吨/年)
-    annual_co2 = balance['m_co2_fresh'] * scale / 1e6
-    annual_h2 = balance['m_h2_fresh'] * scale / 1e6
-    annual_meoh = balance['m_meoh'] * scale / 1e6
-    annual_h2o = balance['m_h2o'] * scale / 1e6
-    annual_purge = balance['m_gas_purge'] * scale / 1e6
+    # Convert kg/year to 万吨/year.
+    annual_co2 = balance['m_co2_fresh'] * scale / 1e7
+    annual_h2 = balance['m_h2_fresh'] * scale / 1e7
+    annual_meoh = balance['m_meoh'] * scale / 1e7
+    annual_h2o = balance['m_h2o'] * scale / 1e7
+    annual_purge = balance['m_gas_purge'] * scale / 1e7
 
     # 新鲜水消耗 (扣除回用水后)
     # 精馏副产冷凝水回用量: 5.75 万吨/年 (工业实测值)

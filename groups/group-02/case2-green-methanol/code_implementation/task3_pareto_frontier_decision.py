@@ -29,6 +29,10 @@ if sys.platform.startswith('win'):
 
 import numpy as np
 import pandas as pd
+import matplotlib
+
+matplotlib.use("Agg")
+
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 
@@ -264,7 +268,9 @@ if __name__ == "__main__":
     CLR_TEXT = "#263238"
     CLR_GRID = "#ECEFF1"
 
-    fig, (ax_top, ax_bot) = plt.subplots(2, 1, figsize=(15, 15), dpi=300)
+    fig, (ax_top, ax_bot) = plt.subplots(
+        2, 1, figsize=(15, 13), dpi=300, gridspec_kw={"height_ratios": [1.1, 0.9]}
+    )
     fig.patch.set_facecolor(CLR_BG)
 
     df_vetoed = df_all[df_all["compliance"] == "Redline_Vetoed"]
@@ -377,29 +383,32 @@ if __name__ == "__main__":
 
     # 推荐方案注释框 (锚点B)
     b_pt = dict_anchors["B_Knee_Point"]
-    ax_top.annotate(
+    ax_top.text(
+        0.47,
+        0.95,
         f"★ 推荐方案 B (帕累托拐点)\n"
-        f"GWP = {b_pt['gwp_net']:.1f} kgCO2e/t\n"
+        f"GWP = {b_pt['gwp_net']:.1f} kg CO2e/t\n"
         f"LCOM = {b_pt['lcom_adjusted']:.1f} 元/t\n"
-        f"MAC = {b_pt['mac_adjusted']:.1f} 元/tCO2e\n"
+        f"MAC = {b_pt['mac_adjusted']:.1f} 元/t CO2e\n"
         f"f_green = {b_pt['f_green']*100:.1f}%, r_purge = {b_pt['r_purge']*100:.2f}%",
-        xy=(b_pt["gwp_net"], b_pt["lcom_adjusted"]),
-        xytext=(b_pt["gwp_net"] + 550, b_pt["lcom_adjusted"] + 400),
+        transform=ax_top.transAxes,
+        ha="center",
+        va="top",
         fontsize=8.8, fontweight="bold", linespacing=1.5,
         bbox=dict(boxstyle="round,pad=0.5", facecolor="#FFF8E1",
                   edgecolor=CLR_ANCHOR_B, linewidth=2.0, alpha=0.95),
-        arrowprops=dict(arrowstyle="->", color=CLR_ANCHOR_B, lw=2.0,
-                        connectionstyle="arc3,rad=0.2"),
         color=CLR_TEXT, zorder=11
     )
 
     # 锚点A注释
     a_pt = dict_anchors["A_Cost_Min"]
     ax_top.annotate(
-        f"锚点 A (成本最低)\nGWP={a_pt['gwp_net']:.1f}, LCOM={a_pt['lcom_adjusted']:.1f}",
+        f"A: GWP {a_pt['gwp_net']:.1f}, LCOM {a_pt['lcom_adjusted']:.1f}",
         xy=(a_pt["gwp_net"], a_pt["lcom_adjusted"]),
-        xytext=(a_pt["gwp_net"] - 400, a_pt["lcom_adjusted"] - 200),
-        fontsize=7.8, fontweight="bold",
+        xytext=(8, -18),
+        textcoords="offset points",
+        fontsize=7.2, fontweight="bold",
+        ha="left",
         bbox=dict(boxstyle="round,pad=0.3", facecolor="#E0F2F1",
                   edgecolor=CLR_ANCHOR_A, linewidth=1.2, alpha=0.9),
         arrowprops=dict(arrowstyle="->", color=CLR_ANCHOR_A, lw=1.2),
@@ -409,10 +418,12 @@ if __name__ == "__main__":
     # 锚点C注释
     c_pt = dict_anchors["C_Deep_Negative"]
     ax_top.annotate(
-        f"锚点 C (深度负碳)\nGWP={c_pt['gwp_net']:.1f}, LCOM={c_pt['lcom_adjusted']:.1f}",
+        f"C: GWP {c_pt['gwp_net']:.1f}, LCOM {c_pt['lcom_adjusted']:.1f}",
         xy=(c_pt["gwp_net"], c_pt["lcom_adjusted"]),
-        xytext=(c_pt["gwp_net"] + 300, c_pt["lcom_adjusted"] - 300),
-        fontsize=7.8, fontweight="bold",
+        xytext=(8, 12),
+        textcoords="offset points",
+        fontsize=7.2, fontweight="bold",
+        ha="left",
         bbox=dict(boxstyle="round,pad=0.3", facecolor="#E3F2FD",
                   edgecolor=CLR_ANCHOR_C, linewidth=1.2, alpha=0.9),
         arrowprops=dict(arrowstyle="->", color=CLR_ANCHOR_C, lw=1.2),
@@ -451,19 +462,19 @@ if __name__ == "__main__":
                        edgecolors="white", linewidth=2.0, zorder=10, label=label)
 
     # 锚点标注 (子图b)
-    for key, (color, offset_xy) in {
-        "A_Cost_Min": (CLR_ANCHOR_A, (8, 0.3)),
-        "B_Knee_Point": (CLR_ANCHOR_B, (8, 0.2)),
-        "C_Deep_Negative": (CLR_ANCHOR_C, (8, -0.3))
+    for key, (color, label_x) in {
+        "A_Cost_Min": (CLR_ANCHOR_A, 76),
+        "B_Knee_Point": (CLR_ANCHOR_B, 76),
+        "C_Deep_Negative": (CLR_ANCHOR_C, 76)
     }.items():
         pt = dict_anchors[key]
         short_label = key.split("_")[0]
         ax_bot.annotate(
             f"{short_label}: f={pt['f_green']*100:.0f}%, r={pt['r_purge']*100:.2f}%",
             xy=(pt["f_green"] * 100.0, pt["r_purge"] * 100.0),
-            xytext=(pt["f_green"] * 100.0 + offset_xy[0],
-                    pt["r_purge"] * 100.0 + offset_xy[1]),
-            fontsize=7.8, fontweight="bold",
+            xytext=(label_x, pt["r_purge"] * 100.0),
+            fontsize=7.4, fontweight="bold",
+            ha="right",
             bbox=dict(boxstyle="round,pad=0.25", facecolor="white",
                       edgecolor=color, linewidth=1.0, alpha=0.9),
             arrowprops=dict(arrowstyle="->", color=color, lw=1.0),
@@ -474,18 +485,20 @@ if __name__ == "__main__":
                      fontsize=13, fontweight="bold", pad=16, color=CLR_TEXT)
     ax_bot.set_xlabel("绿电消纳比例 f_green (%)", fontsize=11, color=CLR_TEXT)
     ax_bot.set_ylabel("驰放分流比 r_purge (%)", fontsize=11, color=CLR_TEXT)
+    ax_bot.set_xlim(0, 100)
+    ax_bot.set_ylim(0.35, 4.65)
     ax_bot.grid(True, linestyle="--", alpha=0.4, color=CLR_GRID, zorder=1)
     ax_bot.tick_params(labelsize=9, colors=CLR_TEXT)
     ax_bot.legend(loc="upper right", fontsize=8.5, framealpha=0.96,
                   edgecolor="#CFD8DC", fancybox=True, shadow=True)
 
     # 可行域标注
-    ax_bot.text(50, 1.75, "清洁生产可行域 (r < 3.5%)",
+    ax_bot.text(36, 1.75, "清洁生产可行域 (r < 3.5%)",
                 fontsize=9.0, ha="center", va="center",
                 color="#2E7D32", fontweight="bold", fontstyle="italic",
                 bbox=dict(boxstyle="round,pad=0.3", facecolor="#E8F5E9",
                           edgecolor="#4CAF50", linewidth=0.8, alpha=0.8))
-    ax_bot.text(50, 4.0, "碳利用率 < 88% 一票否决区",
+    ax_bot.text(36, 4.0, "碳利用率 < 88% 一票否决区",
                 fontsize=8.0, ha="center", va="center",
                 color="#C62828", fontweight="bold", fontstyle="italic",
                 bbox=dict(boxstyle="round,pad=0.3", facecolor="#FFEBEE",
@@ -499,10 +512,18 @@ if __name__ == "__main__":
              f"r_purge={dict_anchors['B_Knee_Point']['r_purge']*100:.2f}%)",
              ha="center", fontsize=8.5, color="#546E7A", fontstyle="italic")
 
-    import warnings
-    with warnings.catch_warnings():
-        warnings.simplefilter("ignore")
-        plt.tight_layout(h_pad=3.5)
+    ax_bot.text(
+        48,
+        2.05,
+        f"全部 {len(df_pareto)} 个非支配解均选择 100% 绿电",
+        fontsize=8.0,
+        color=CLR_TEXT,
+        ha="center",
+        bbox=dict(boxstyle="round,pad=0.3", facecolor="white", edgecolor="#CFD8DC"),
+        zorder=6,
+    )
+
+    fig.subplots_adjust(left=0.10, right=0.91, top=0.96, bottom=0.07, hspace=0.32)
     output_path = os.path.join(fig_dir, "fig2_pareto_decision_frontier.png")
     plt.savefig(output_path, dpi=300,
                 facecolor=CLR_BG, edgecolor="none")
