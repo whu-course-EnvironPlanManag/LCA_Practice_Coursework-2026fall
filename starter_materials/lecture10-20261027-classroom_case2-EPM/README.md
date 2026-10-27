@@ -1,23 +1,17 @@
 # 工业园区绿色甲醇系统环境规划与管理方案报告实训
 
-
-
 > **《环境规划与管理》课程 · 第十讲随堂实训**
 > **教学定位**：从微观过程系统建模向宏观园区环境规划方案报告编撰跃迁。指导学生基于工业园区 10 万吨/年二氧化碳捕集耦合绿氢合成绿色甲醇工程案例，完成“物料能量平衡计算—政策法规算法化量化—多目标帕累托前沿寻优—工艺拓扑图绘制—方案报告完整撰写”的系统化训练。
 
-
-
 ## 一、 随堂训练目标与学习闭环
 
-本实训任务要求每位学生（或小组）在随堂 3 课时内，综合运用环境系统工程建模、生命周期评价（LCA）、技术经济分析（TEA）以及政策量化工具，完成以下学习闭环：
+本实训任务要求每位学生在随堂课时内，综合运用环境系统工程建模、生命周期评价（LCA）、技术经济分析（TEA）以及政策量化工具，完成以下学习闭环：
 
 1. **热力学与反应物料平衡求解**：解耦反应器单程转化率（$25.0\%$）与系统总体碳转化率（$96.0\%$），实现从单吨功能单位向 10 万吨/年工业园区级工程通量的放大推导与 C/H/O 元素守恒校验；
 2. **政策规制量化引擎构建（Vibe Coding）**：研读欧盟 RED III、中国碳市场（ETS/CCER）、工业取水定额累进水资源税及次生大气污染物排放标准，运用自然语言编写 Prompt 生成政策量化引擎，实现政策红线对平准化甲醇成本（LCOM）与边际减排成本（MAC）的联动修正；
 3. **帕累托多目标决策寻优**：以清洁绿电消纳比例 $f_{\text{green}}$ 与循环驰放分流比 $r_{\text{purge}}$ 为决策调控变量，求解“经济成本最小化—环境负荷最小化”的非支配解集，基于乌托邦理想点归一化欧氏距离最小化准则标定帕累托拐点（Knee Point，锚点 B）；
 4. **出版级工艺拓扑图与决策图绘制**：自动生成 10 万吨/年系统物料能量流动拓扑图与帕累托前沿决策图；
 5. **编制完整规范的环境规划与管理方案报告**：基于帕累托拐点工程参数，遵循“现状诊断—多情景预测—目标指标—空间工程—多维评估—制度保障”六步逻辑，填报完成规范的工程方案报告。
-
-
 
 ## 二、 仓储目录解耦架构说明
 
@@ -47,8 +41,6 @@ green_methanol-Full_EPM_Report-TaskVersion/
 │   └── report_writing_rubric.md       # 五维度考核评分细则表（Rubric）与提交前自检清单
 └── README.md                          # 本说明文件（实训指引）
 ```
-
-
 
 ## 三、 随堂实训执行流程
 
@@ -110,21 +102,19 @@ python task4_process_sankey_flow.py
 
 ```bash
 # 切换个人/小组分支 (严禁包含学号，统一使用姓名拼音)
-git checkout -b dev-zhangsan-case2
+git checkout -b dev-tangsiqi-test
 
 # 暂存成果文件
 git add code_implementation/ figures_output/ report/
 
 # 规范化 Commit 提交
-git commit -m "feat(group-01): complete green methanol pareto optimization and epm report"
+git commit -m "feat(group-test): complete green methanol pareto optimization and epm report"
 
 # 推送至个人远端
-git push -u origin dev-zhangsan-case2
+git push -u origin dev-tangsiqi-test
 ```
 
 在代码仓库网页端发起 Pull Request 时，直接使用默认模板创建即可，**无需人工选择模板**。后台助教机器人将自动识别第十讲任务并在评论区贴出专属考核核验表，学生可在评论区核查并等待助教与教师评审。
-
-
 
 ## 四、 科学表述与学术诚信严正红线
 
