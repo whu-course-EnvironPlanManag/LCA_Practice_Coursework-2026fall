@@ -1,0 +1,39 @@
+{
+  "png_pixels": [
+    4800,
+    3120
+  ],
+  "png_dpi": [
+    299.9994,
+    299.9994
+  ],
+  "svg_editable_text_elements": 50,
+  "self_tests": "4 passed, also verified from a different working directory",
+  "visual_review": "Final whole diagram and all unit labels inspected. Gas and water return loops are continuous; arrows terminate at the correct units.",
+  "collision_audit": "PASS: 0 failures, 0 warnings; 23 contained text-on-unit fills are intentional.",
+  "pdf_minimum_text_pt": 9,
+  "svg_text_size_pt": [
+    6.75,
+    12.0
+  ],
+  "svg_audit_workaround": "Auditor omitted import math; standard-library math was supplied in its execution globals without changing its logic or source.",
+  "reviewed_warnings": [
+    "Coursework canvas width 406.4 mm; no target journal width restriction was requested.",
+    "300 DPI PNG follows the explicit task requirement; TIFF and 600 DPI journal defaults do not apply."
+  ],
+  "figure_contract": {
+    "claim": "Actual anchor-B synthesis flows and source energy quotas show gas/water reuse while exposing the unresolved PEM boundary.",
+    "archetype": "quantitative process topology",
+    "arrow_widths": "schematic, not mass-proportional",
+    "units": [
+      "t/y",
+      "GWh/y"
+    ],
+    "uncertainty": "deterministic model and engineering quotas; no fabricated confidence intervals"
+  },
+  "sha256": {
+    "fig1_mfa_process_flow.png": "b6f90c6fb2bb3b0509fd99a6aaf11a9d01eeede284486d22b8092253d1685c54",
+    "fig1_mfa_process_flow.svg": "a25ce1a3fc6f303e49c3d5dd5edbcd71089f06b2069c0be2ed2e9d6bf2b0b6bf",
+    "fig1_mfa_process_flow.pdf": "2ff1b15bc3a0d94c248c1629c2fd78627f448f22e47564d1f0bae9fc518bf7f0"
+  }
+}

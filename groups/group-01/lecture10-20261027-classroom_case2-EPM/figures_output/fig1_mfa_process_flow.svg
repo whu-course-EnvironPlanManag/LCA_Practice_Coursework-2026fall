@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1152pt" height="748.8pt" viewBox="0 0 1152 748.8" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-27T11:30:52.447212</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 748.8
+L 1152 748.8
+L 1152 0
+L 0 0
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 220.8 203.97312
+L 374.4 203.97312
+L 374.4 146.91456
+L 220.8 146.91456
+z
+" clip-path="url(#p6ed488415a)" style="fill: #f4f7f8; stroke: #263746; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 220.8 441.71712
+L 374.4 441.71712
+L 374.4 375.1488
+L 220.8 375.1488
+z
+" clip-path="url(#p6ed488415a)" style="fill: #f4f7f8; stroke: #263746; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 458.88 318.09024
+L 566.4 318.09024
+L 566.4 251.52192
+L 458.88 251.52192
+z
+" clip-path="url(#p6ed488415a)" style="fill: #f4f7f8; stroke: #263746; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 627.84 318.09024
+L 750.72 318.09024
+L 750.72 251.52192
+L 627.84 251.52192
+z
+" clip-path="url(#p6ed488415a)" style="fill: #f4f7f8; stroke: #263746; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 812.16 318.09024
+L 935.04 318.09024
+L 935.04 251.52192
+L 812.16 251.52192
+z
+" clip-path="url(#p6ed488415a)" style="fill: #f4f7f8; stroke: #263746; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 627.84 180.19872
+L 750.72 180.19872
+L 750.72 108.87552
+L 627.84 108.87552
+z
+" clip-path="url(#p6ed488415a)" style="fill: #f4f7f8; stroke: #263746; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 1011.84 237.25728
+L 1127.04 237.25728
+L 1127.04 180.19872
+L 1011.84 180.19872
+z
+" clip-path="url(#p6ed488415a)" style="fill: #f4f7f8; stroke: #263746; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 812.16 460.73664
+L 935.04 460.73664
+L 935.04 394.16832
+L 812.16 394.16832
+z
+" clip-path="url(#p6ed488415a)" style="fill: #f4f7f8; stroke: #263746; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 297.6 118.38528
+L 297.6 145.461116
+" clip-path="url(#p6ed488415a)" style="fill: none; stroke: #263746; stroke-width: 1.3; stroke-linecap: round"/>
+    <path d="M 300.2 140.261116
+L 297.6 145.461116
+L 295 140.261116
+z
+" clip-path="url(#p6ed488415a)" style="fill: #263746; stroke: #263746; stroke-width: 1.3; stroke-linecap: round"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 374.4 175.44384
+L 428.16 175.44384
+L 428.16 265.78656
+L 457.426556 265.78656
+" clip-path="url(#p6ed488415a)" style="fill: none; stroke: #263746; stroke-width: 1.3; stroke-linecap: round"/>
+    <path d="M 452.226556 263.18656
+L 457.426556 265.78656
+L 452.226556 268.38656
+z
+" clip-path="url(#p6ed488415a)" style="fill: #263746; stroke: #263746; stroke-width: 1.3; stroke-linecap: round"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 374.4 389.41344
+L 412.8 389.41344
+L 412.8 294.31584
+L 457.426556 294.31584
+" clip-path="url(#p6ed488415a)" style="fill: none; stroke: #486f7a; stroke-width: 1.3; stroke-linecap: round"/>
+    <path d="M 452.226556 291.71584
+L 457.426556 294.31584
+L 452.226556 296.91584
+z
+" clip-path="url(#p6ed488415a)" style="fill: #486f7a; stroke: #486f7a; stroke-width: 1.3; stroke-linecap: round"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 566.4 284.80608
+L 626.386556 284.80608
+" clip-path="url(#p6ed488415a)" style="fill: none; stroke: #263746; stroke-width: 1.3; stroke-linecap: round"/>
+    <path d="M 621.186556 282.20608
+L 626.386556 284.80608
+L 621.186556 287.40608
+z
+" clip-path="url(#p6ed488415a)" style="fill: #263746; stroke: #263746; stroke-width: 1.3; stroke-linecap: round"/>
+   </g>
+   <g id="patch_14">
+    <path d="M 750.72 284.80608
+L 810.706556 284.80608
+" clip-path="url(#p6ed488415a)" style="fill: none; stroke: #263746; stroke-width: 1.3; stroke-linecap: round"/>
+    <path d="M 805.506556 282.20608
+L 810.706556 284.80608
+L 805.506556 287.40608
+z
+" clip-path="url(#p6ed488415a)" style="fill: #263746; stroke: #263746; stroke-width: 1.3; stroke-linecap: round"/>
+   </g>
+   <g id="patch_15">
+    <path d="M 873.6 251.52192
+L 873.6 210.181444
+" clip-path="url(#p6ed488415a)" style="fill: none; stroke: #486f7a; stroke-width: 1.3; stroke-linecap: round"/>
+    <path d="M 871 215.381444
+L 873.6 210.181444
+L 876.2 215.381444
+z
+" clip-path="url(#p6ed488415a)" style="fill: #486f7a; stroke: #486f7a; stroke-width: 1.3; stroke-linecap: round"/>
+   </g>
+   <g id="patch_16">
+    <path d="M 873.6 208.728
+L 873.6 142.15968
+L 752.173444 142.15968
+" clip-path="url(#p6ed488415a)" style="fill: none; stroke: #486f7a; stroke-width: 1.3; stroke-linecap: round"/>
+    <path d="M 757.373444 144.75968
+L 752.173444 142.15968
+L 757.373444 139.55968
+z
+" clip-path="url(#p6ed488415a)" style="fill: #486f7a; stroke: #486f7a; stroke-width: 1.3; stroke-linecap: round"/>
+   </g>
+   <g id="patch_17">
+    <path d="M 627.84 142.15968
+L 512.64 142.15968
+L 512.64 250.068476
+" clip-path="url(#p6ed488415a)" style="fill: none; stroke: #486f7a; stroke-width: 1.3; stroke-linecap: round"/>
+    <path d="M 515.24 244.868476
+L 512.64 250.068476
+L 510.04 244.868476
+z
+" clip-path="url(#p6ed488415a)" style="fill: #486f7a; stroke: #486f7a; stroke-width: 1.3; stroke-linecap: round"/>
+   </g>
+   <g id="patch_18">
+    <path d="M 873.6 208.728
+L 1010.386556 208.728
+" clip-path="url(#p6ed488415a)" style="fill: none; stroke: #486f7a; stroke-width: 1.3; stroke-linecap: round"/>
+    <path d="M 1005.186556 206.128
+L 1010.386556 208.728
+L 1005.186556 211.328
+z
+" clip-path="url(#p6ed488415a)" style="fill: #486f7a; stroke: #486f7a; stroke-width: 1.3; stroke-linecap: round"/>
+   </g>
+   <g id="patch_19">
+    <path d="M 873.6 318.09024
+L 873.6 392.714876
+" clip-path="url(#p6ed488415a)" style="fill: none; stroke: #263746; stroke-width: 1.3; stroke-linecap: round"/>
+    <path d="M 876.2 387.514876
+L 873.6 392.714876
+L 871 387.514876
+z
+" clip-path="url(#p6ed488415a)" style="fill: #263746; stroke: #263746; stroke-width: 1.3; stroke-linecap: round"/>
+   </g>
+   <g id="patch_20">
+    <path d="M 935.04 427.45248
+L 1094.866556 427.45248
+" clip-path="url(#p6ed488415a)" style="fill: none; stroke: #263746; stroke-width: 1.3; stroke-linecap: round"/>
+    <path d="M 1089.666556 424.85248
+L 1094.866556 427.45248
+L 1089.666556 430.05248
+z
+" clip-path="url(#p6ed488415a)" style="fill: #263746; stroke: #263746; stroke-width: 1.3; stroke-linecap: round"/>
+   </g>
+   <g id="patch_21">
+    <path d="M 812.16 427.45248
+L 566.4 427.45248
+L 566.4 408.43296
+L 375.853444 408.43296
+" clip-path="url(#p6ed488415a)" style="fill: none; stroke-dasharray: 4.81,2.08; stroke-dashoffset: 0; stroke: #2870a2; stroke-width: 1.3; stroke-linecap: round"/>
+    <path d="M 381.053444 411.03296
+L 375.853444 408.43296
+L 381.053444 405.83296
+z
+" clip-path="url(#p6ed488415a)" style="fill: #2870a2; stroke-dasharray: 4.81,2.08; stroke-dashoffset: 0; stroke: #2870a2; stroke-width: 1.3; stroke-linecap: round"/>
+   </g>
+   <g id="patch_22">
+    <path d="M 51.84 408.43296
+L 219.346556 408.43296
+" clip-path="url(#p6ed488415a)" style="fill: none; stroke: #2870a2; stroke-width: 1.3; stroke-linecap: round"/>
+    <path d="M 214.146556 405.83296
+L 219.346556 408.43296
+L 214.146556 411.03296
+z
+" clip-path="url(#p6ed488415a)" style="fill: #2870a2; stroke: #2870a2; stroke-width: 1.3; stroke-linecap: round"/>
+   </g>
+   <g id="patch_23">
+    <path d="M 297.6 441.71712
+L 297.6 483.057596
+" clip-path="url(#p6ed488415a)" style="fill: none; stroke: #263746; stroke-width: 1.3; stroke-linecap: round"/>
+    <path d="M 300.2 477.857596
+L 297.6 483.057596
+L 295 477.857596
+z
+" clip-path="url(#p6ed488415a)" style="fill: #263746; stroke: #263746; stroke-width: 1.3; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_1">
+    <defs>
+     <path id="mb556746eff" d="M 0 1.5
+C 0.397805 1.5 0.77937 1.341951 1.06066 1.06066
+C 1.341951 0.77937 1.5 0.397805 1.5 0
+C 1.5 -0.397805 1.341951 -0.77937 1.06066 -1.06066
+C 0.77937 -1.341951 0.397805 -1.5 0 -1.5
+C -0.397805 -1.5 -0.77937 -1.341951 -1.06066 -1.06066
+C -1.341951 -0.77937 -1.5 -0.397805 -1.5 0
+C -1.5 0.397805 -1.341951 0.77937 -1.06066 1.06066
+C -0.77937 1.341951 -0.397805 1.5 0 1.5
+z
+" style="stroke: #486f7a"/>
+    </defs>
+    <g clip-path="url(#p6ed488415a)">
+     <use xlink:href="#mb556746eff" x="873.6" y="208.728" style="fill: #486f7a; stroke: #486f7a"/>
+    </g>
+   </g>
+   <g id="text_1">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans', sans-serif; fill: #263746" transform="translate(266.266406 164.725871)">CO2 capture</text>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans', sans-serif; fill: #263746" transform="translate(260.778906 178.203215)">142,300.00 t/y</text>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans', sans-serif; fill: #263746" transform="translate(265.066406 191.680559)">25.50 GWh/y</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans', sans-serif; fill: #263746" transform="translate(257.321875 397.714991)">PEM electrolysis</text>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans', sans-serif; fill: #263746" transform="translate(255.429688 411.192335)">19,800.00 t/y H2</text>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans', sans-serif; fill: #263746" transform="translate(258.703906 424.669679)">1029.60 GWh/y</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans', sans-serif; fill: #263746" transform="translate(487.313437 280.826783)">Gas mixer</text>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans', sans-serif; fill: #263746" transform="translate(487.397812 294.304127)">+ preheat</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans', sans-serif; fill: #263746" transform="translate(642.127656 274.088111)">Catalytic synthesis</text>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans', sans-serif; fill: #263746" transform="translate(649.791719 287.565455)">CO2 conversion</text>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans', sans-serif; fill: #263746" transform="translate(650.464375 301.042799)">25.0% per pass</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans', sans-serif; fill: #263746" transform="translate(851.595312 274.088111)">Cooling /</text>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans', sans-serif; fill: #263746" transform="translate(849.26875 287.565455)">gas-liquid</text>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans', sans-serif; fill: #263746" transform="translate(846.983594 301.042799)">separation</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans', sans-serif; fill: #263746" transform="translate(639.244844 133.819151)">Recycle compressor</text>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans', sans-serif; fill: #263746" transform="translate(647.688594 147.296495)">1,130,109.95 t/y</text>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans', sans-serif; fill: #263746" transform="translate(636.829219 160.773839)">15.50 GWh/y [quota]</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans', sans-serif; fill: #263746" transform="translate(1032.78375 198.010031)">Purge to boiler</text>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans', sans-serif; fill: #263746" transform="translate(1038.981406 211.487375)">4,538.59 t/y</text>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans', sans-serif; fill: #263746" transform="translate(1041.450156 224.964719)">0.40% split</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans', sans-serif; fill: #263746" transform="translate(835.672656 416.734511)">Double-column</text>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans', sans-serif; fill: #263746" transform="translate(847.663281 430.211855)">distillation</text>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans', sans-serif; fill: #263746" transform="translate(841.066406 443.689199)">12.00 GWh/y</text>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #263746" x="297.6" y="102.125135" transform="rotate(-0 297.6 102.125135)">Captured CO2 feed</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #263746" x="359.04" y="349.378895" transform="rotate(-0 359.04 349.378895)">Fresh green H2</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans', sans-serif; fill: #263746" transform="translate(568.511953 224.508083)">Reactor inlet</text>
+    <text style="font-size: 9px; font-family: 'DejaVu Sans', sans-serif; fill: #263746" transform="translate(559.687734 235.953832)">1,292,209.95 t/y</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans', sans-serif; fill: #263746" transform="translate(749.564531 224.508083)">Reactor outlet</text>
+    <text style="font-size: 9px; font-family: 'DejaVu Sans', sans-serif; fill: #263746" transform="translate(744.007734 235.953832)">1,292,206.75 t/y</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #263746" x="574.08" y="201.701678" transform="rotate(-0 574.08 201.701678)">99.60% return</text>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans', sans-serif; fill: #263746" transform="translate(903.435937 110.390962)">Separator gas</text>
+    <text style="font-size: 9px; font-family: 'DejaVu Sans', sans-serif; fill: #263746" transform="translate(897.607734 121.836712)">1,134,648.54 t/y</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans', sans-serif; fill: #263746" transform="translate(969.264141 343.380083)">Crude liquid</text>
+    <text style="font-size: 9px; font-family: 'DejaVu Sans', sans-serif; fill: #263746" transform="translate(963.341016 354.825833)">157,558.21 t/y</text>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans', sans-serif; fill: #263746" transform="translate(983.18125 466.647025)">Methanol product</text>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans', sans-serif; fill: #263746" transform="translate(990.378906 479.364525)">100,000.00 t/y</text>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans', sans-serif; fill: #263746" transform="translate(551.575781 457.137265)">Reaction-water reuse</text>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans', sans-serif; fill: #263746" transform="translate(571.160156 469.854765)">57,558.21 t/y</text>
+   </g>
+   <g id="text_18">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans', sans-serif; fill: #263746" transform="translate(68.946797 371.909363)">Fresh demin water [quota]</text>
+    <text style="font-size: 9px; font-family: 'DejaVu Sans', sans-serif; fill: #263746" transform="translate(95.501016 383.355113)">138,500.00 t/y</text>
+   </g>
+   <g id="text_19">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans', sans-serif; fill: #263746" transform="translate(243.939063 509.440945)">O2 coproduct [quota]</text>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans', sans-serif; fill: #263746" transform="translate(260.778906 522.158445)">158,400.00 t/y</text>
+   </g>
+  </g>
+  <g id="text_20">
+   <text style="font-size: 16px; font-family: 'DejaVu Sans', sans-serif; text-anchor: middle" x="576" y="30.8775" transform="rotate(-0 576 30.8775)">100,000 t/y green methanol: material and electricity flows</text>
+  </g>
+  <g id="text_21">
+   <text style="font-size: 11px; font-family: 'DejaVu Sans', sans-serif; text-anchor: middle" x="576" y="56.16" transform="rotate(-0 576 56.16)">Actual task3 anchor B | Renewable share 100.0% | Purge 0.40% | Carbon utilization 96.5221%</text>
+  </g>
+  <g id="text_22">
+   <text style="font-size: 10px; font-family: 'DejaVu Sans', sans-serif; text-anchor: start" x="40.32" y="595.296" transform="rotate(-0 40.32 595.296)">Annual electricity: 1,082.60 GWh  |  PEM 95.10%  |  CO2 capture 2.36%  |  Recycle 1.43%  |  Distillation 1.11%</text>
+  </g>
+  <g id="text_23">
+   <text style="font-size: 9px; font-family: 'DejaVu Sans', sans-serif; text-anchor: start" x="40.32" y="625.248" transform="rotate(-0 40.32 625.248)">Basis: pure-component synthesis model; [quota]: source engineering values. Dashed blue: internal water reuse; widths are schematic.</text>
+  </g>
+  <g id="text_24">
+   <text style="font-size: 9px; font-family: 'DejaVu Sans', sans-serif; text-anchor: start" x="40.32" y="652.9536" transform="rotate(-0 40.32 652.9536)">PEM supply = fresh quota + modelled reuse = 196,058.21 t/y; H2 + O2 quota = 178,200.00 t/y.</text>
+  </g>
+  <g id="text_25">
+   <text style="font-size: 9px; font-family: 'DejaVu Sans', sans-serif; text-anchor: start" x="40.32" y="677.664" transform="rotate(-0 40.32 677.664)">Unaccounted PEM mass: 17,858.21 t/y. Missing outlet information is not assigned to wastewater or another invented flow.</text>
+  </g>
+  <g id="text_26">
+   <text style="font-size: 9px; font-family: 'DejaVu Sans', sans-serif; text-anchor: start" x="40.32" y="702.3744" transform="rotate(-0 40.32 702.3744)">Cooling make-up (policy model): 2,000.00 t/y; total fresh withdrawal: 140,500.00 t/y. Reuse is an internal flow.</text>
+  </g>
+  <g id="text_27">
+   <text style="font-size: 9px; font-family: 'DejaVu Sans', sans-serif; text-anchor: start" x="40.32" y="727.0848" transform="rotate(-0 40.32 727.0848)">Synthesis C/H/O checks passed. Source molecular-weight rounding leaves 3.195 t/y mass residual; PEM quotas are not fully closed.</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p6ed488415a">
+   <rect x="28.8" y="89.856" width="1105.92" height="475.488"/>
+  </clipPath>
+ </defs>
+</svg>
