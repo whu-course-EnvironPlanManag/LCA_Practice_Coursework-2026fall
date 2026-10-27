@@ -22,9 +22,9 @@
 
 在发起 GitHub Pull Request 之前，请确认以下各项均已完成并勾选：
 
-- [ ] **MFA 守恒核验**：执行 `task1_mfa_recycle_solver.py`，C、H、O 三元素相对误差 $< 0.01\%$，10 万吨通量数据与报告表 2-1 完全一致；
-- [ ] **政策引擎自检**：执行 `task2_policy_vibe_engine.py`，工况 1、工况 2、工况 3 单元测试全部显示 `PASS`；
-- [ ] **帕累托决策图生成**：执行 `task3_pareto_frontier_decision.py`，在 `figures_output/` 下成功生成 `fig2_pareto_decision_frontier.png`，标明红线区与三大锚点；
-- [ ] **工艺拓扑图生成**：执行 `task4_process_sankey_flow.py`，在 `figures_output/` 下成功生成 `fig1_mfa_process_flow.png`；
-- [ ] **报告数据一致性**：检查 `report/Environmental_Planning_Report.md` 第 4 章工程总表与第 5 章锚点 B 的投资额（CAPEX）、绿电比例、驰放比及 GWP 是否严格相等；
-- [ ] **语言规范性筛查**：执行文本搜索，确认报告全文已彻底消除“两张皮”、“两头在内”、“领头羊”、“双刃剑”、“甜点”等非学术词汇。
+- [√ ] **MFA 守恒核验**：执行 `task1_mfa_recycle_solver.py`，C、H、O 三元素相对误差 $< 0.01\%$，10 万吨通量数据与报告表 2-1 完全一致；
+- [ √ ] **政策引擎自检**：执行 `task2_policy_vibe_engine.py`，工况 1、工况 2、工况 3 单元测试全部显示 `PASS`；
+- [√  ] **帕累托决策图生成**：执行 `task3_pareto_frontier_decision.py`，在 `figures_output/` 下成功生成 `fig2_pareto_decision_frontier.png`，标明红线区与三大锚点；
+- [ √ ] **工艺拓扑图生成**：执行 `task4_process_sankey_flow.py`，在 `figures_output/` 下成功生成 `fig1_mfa_process_flow.png`；
+- [ √ ] **报告数据一致性**：检查 `report/Environmental_Planning_Report.md` 第 4 章工程总表与第 5 章锚点 B 的投资额（CAPEX）、绿电比例、驰放比及 GWP 是否严格相等；
+- [ √ ] **语言规范性筛查**：执行文本搜索，确认报告全文已彻底消除“两张皮”、“两头在内”、“领头羊”、“双刃剑”、“甜点”等非学术词汇。
