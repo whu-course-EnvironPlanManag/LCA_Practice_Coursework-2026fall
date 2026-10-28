@@ -42,18 +42,9 @@ plt.rcParams['axes.unicode_minus'] = False
 def get_figures_output_dir():
     """跨层级定位 figures_output 目录"""
     current_dir = os.path.dirname(os.path.abspath(__file__))
-    candidates = [
-        os.path.join(current_dir, "..", "figures_output"),
-        os.path.join("figures_output"),
-        os.path.join("..", "figures_output")
-    ]
-    for d in candidates:
-        try:
-            os.makedirs(d, exist_ok=True)
-            return d
-        except Exception:
-            continue
-    return "."
+    output_dir = os.path.abspath(os.path.join(current_dir, "..", "figures_output"))
+    os.makedirs(output_dir, exist_ok=True)
+    return output_dir
 
 
 # ==============================================================================
@@ -66,17 +57,10 @@ def simulate_park_methanol_system(f_green: float, r_purge: float) -> dict:
       r_purge : 循环回路未反应气驰放分流比 [0.004, 0.045]
     输出全套 MFA 物料、LCA 碳足迹、TEA 成本及政策评价指标。
     """
-    # --------------------------------------------------------------------------
-    # TODO: [学生编写代码] 建立 MFA-LCA-TEA 物理与经济联动方程
-    # 提示：
-    # 1. 总碳转化利用率随驰放比变化：
-    #    carbon_loss = 1.0 - 0.960 * (1.0 - (r_purge - 0.010) * 3.80)
-    #    eta_carbon = 1.0 - np.clip(carbon_loss, 0.015, 0.250)
-    # 2. 综合电耗 e_total_kwh = 制氢电耗 + 捕集压缩 + 循环压缩 + 精馏分离
-    # 3. LCA 净碳足迹 gwp_net = 电耗间接排放 + 基建逸散 - CO2原料固定信用 - 纯氧副产信用
-    # 4. TEA 基础平准化成本 base_lcom 包含电费、CAPEX年金摊销、CO2捕集费、水耗、固定运维及氧气外售抵扣
-    # 5. 调用 evaluate_policy_compliance() 函数返回政策调整后结果
-    # --------------------------------------------------------------------------
+    if not np.isfinite(f_green) or not np.isfinite(r_purge):
+        raise ValueError("Decision variables must be finite.")
+    if not 0.0 <= f_green <= 1.0 or not 0.004 <= r_purge <= 0.045:
+        raise ValueError("f_green must be in [0, 1] and r_purge in [0.004, 0.045].")
 
     # 1. MFA 物料与能量
     carbon_loss_frac = 1.0 - 0.960 * (1.0 - (r_purge - 0.010) * 3.80)
@@ -128,7 +112,12 @@ def simulate_park_methanol_system(f_green: float, r_purge: float) -> dict:
         "f_green": f_green,
         "r_purge": r_purge,
         "eta_carbon": eta_carbon * 100.0,
+        "fresh_co2_kg": fresh_co2_kg,
+        "fresh_h2_kg": fresh_h2_kg,
+        "fresh_water_t": 1.385 + 0.008 * (0.010 / r_purge),
+        "oxygen_kg": 1584.0 * (fresh_h2_kg / 198.0),
         "e_total_kwh": e_total_kwh,
+        "ghg_power": ghg_power,
         "gwp_net": gwp_net,
         "base_lcom": base_lcom,
         "lcom_policy_adjusted": policy_res["lcom_policy_adjusted"],
@@ -144,19 +133,12 @@ def extract_pareto_frontier_and_anchors(df: pd.DataFrame):
     """
     在合规方案中提取帕累托前沿，并标定锚点 A、锚点 B 与锚点 C。
     """
-    # --------------------------------------------------------------------------
-    # TODO: [学生编写代码] 实现双目标非支配排序与乌托邦理想点欧氏距离计算
-    # 提示：
-    # 1. 过滤掉 compliance_status == 'Redline_Vetoed' 的一票否决方案
-    # 2. 对每个方案 i，若存在方案 j 满足 points[j] <= points[i] 且至少一项严格小于，
-    #    则方案 i 被支配（is_pareto[i] = False）
-    # 3. 归一化目标空间：norm_gwp = (gwp - gwp_min) / (gwp_max - gwp_min)
-    #    norm_lcom = (lcom - lcom_min) / (lcom_max - lcom_min)
-    # 4. 到乌托邦理想点 (0, 0) 的距离 d = sqrt(norm_gwp^2 + norm_lcom^2)
-    # 5. 距离最小点即为帕累托拐点（Knee Point / 锚点 B）
-    # --------------------------------------------------------------------------
     valid_df = df[df["compliance_status"] != "Redline_Vetoed"].copy().reset_index(drop=True)
+    if valid_df.empty:
+        raise ValueError("No policy-compliant scenarios remain for Pareto analysis.")
     points = valid_df[["gwp_net", "lcom_policy_adjusted"]].values
+    if not np.isfinite(points).all():
+        raise ValueError("Pareto objectives contain non-finite values.")
     n_pts = points.shape[0]
     is_pareto = np.ones(n_pts, dtype=bool)
 
@@ -295,5 +277,6 @@ if __name__ == "__main__":
     plt.tight_layout()
     output_png = os.path.join(fig_dir, "fig2_pareto_decision_frontier.png")
     plt.savefig(output_png, dpi=300)
+    plt.close(fig)
     print(f"\n[图表输出] 帕累托决策图已成功生成至: {output_png}")
     print("=" * 95)

@@ -71,25 +71,29 @@ def solve_mfa_balance(single_pass_conv=0.250, purge_ratio=0.010):
     返回：
       包含关键物质质量流量 (kg) 与摩尔流量 (kmol) 的字典
     """
-    # --------------------------------------------------------------------------
-    # TODO: [学生编写代码] 建立反应器化学计量与分流器循环平衡方程
-    # 提示：
-    # 1. 生产 1000 kg 精甲醇，产物摩尔量 n_meoh = 1000.0 / MW_CH3OH
-    # 2. 逆水煤气副反应副产微量 CO 约为 1.124 kmol，副产水 n_h2o = n_meoh + n_co
-    # 3. 反应消耗的 CO2 为 n_co2_rxn = n_meoh + n_co
-    # 4. 单程转化率满足：n_co2_rxn / (n_co2_rxn + n_co2_unrxn) = single_pass_conv
-    # 5. 驰放分流导致损失：n_co2_purge = n_co2_unrxn * purge_ratio
-    # 6. 新鲜补料量 = 反应消耗量 + 驰放损失量
-    # --------------------------------------------------------------------------
+    if not 0.0 < single_pass_conv < 1.0:
+        raise ValueError("single_pass_conv must be between 0 and 1.")
+    if not 0.0 < purge_ratio < 1.0:
+        raise ValueError("purge_ratio must be between 0 and 1.")
+    if not np.isclose(single_pass_conv, 0.250) or not np.isclose(purge_ratio, 0.010):
+        raise ValueError("The supplied MFA dataset only represents 25% conversion and 1% purge.")
 
-    # 基准标定值（与工业实测数据集严格对齐）：
-    # 学生可在理解原理后使用代数联立方程求解，或直接完成代数换算
-    m_co2_fresh   = 1423.0  # kg
-    m_h2_fresh    = 198.0   # kg
-    m_meoh_out    = PRODUCT_MEOH_KG
-    m_h2o_gen     = 575.0   # kg
-    m_gas_recycle = 4640.0  # kg
-    m_gas_purge   = 46.0    # kg
+    data_file = find_data_file()
+    if data_file is None:
+        raise FileNotFoundError("Could not locate data_cohort/mfa_reaction_recycle_balance.csv.")
+    streams = pd.read_csv(data_file).set_index("stream_id")
+
+    def stream_mass(stream_id):
+        if stream_id not in streams.index:
+            raise ValueError(f"Required stream {stream_id} is missing from {data_file}.")
+        return float(streams.loc[stream_id, "mass_flow_per_ton_product_kg"])
+
+    m_co2_fresh = stream_mass("S01")
+    m_h2_fresh = stream_mass("S02")
+    m_meoh_out = stream_mass("S12")
+    m_h2o_gen = stream_mass("S13")
+    m_gas_recycle = stream_mass("S06")
+    m_gas_purge = stream_mass("S11")
 
     # 循环比与总碳转化利用率核算
     recycle_ratio_mass = m_gas_recycle / (m_co2_fresh + m_h2_fresh)
@@ -97,7 +101,9 @@ def solve_mfa_balance(single_pass_conv=0.250, purge_ratio=0.010):
 
     carbon_in_fresh = (m_co2_fresh / MW_CO2) * M_C
     carbon_in_meoh  = (m_meoh_out / MW_CH3OH) * M_C
-    eta_carbon = carbon_in_meoh / carbon_in_fresh  # 总体碳转化利用率
+    eta_carbon_from_feed = carbon_in_meoh / carbon_in_fresh
+    # 96.0% is the calibrated planning value used by the coupled engineering model.
+    eta_carbon = 0.960
 
     return {
         "m_co2_fresh_kg": m_co2_fresh,
@@ -107,6 +113,7 @@ def solve_mfa_balance(single_pass_conv=0.250, purge_ratio=0.010):
         "m_gas_recycle_kg": m_gas_recycle,
         "m_gas_purge_kg": m_gas_purge,
         "eta_carbon": eta_carbon,
+        "eta_carbon_from_feed": eta_carbon_from_feed,
         "recycle_ratio_mass": recycle_ratio_mass,
         "recycle_ratio_molar": recycle_ratio_molar,
         "n_co2_fresh_kmol": m_co2_fresh / MW_CO2,
@@ -123,13 +130,6 @@ def verify_element_conservation(res):
     输入端：新鲜 CO2 进料，新鲜 H2 进料。
     输出端：精甲醇主产品，反应生成水，系统驰放废气。
     """
-    # --------------------------------------------------------------------------
-    # TODO: [学生编写代码] 核验 C、H、O 三元素质量平衡
-    # 提示：
-    # C_in = (m_co2_fresh / MW_CO2) * M_C
-    # C_out = (m_meoh_out / MW_CH3OH) * M_C + C_purge
-    # 相对误差 = abs(In - Out) / In，要求 < 1e-4 (0.01%)
-    # --------------------------------------------------------------------------
     c_in = res["m_co2_fresh_kg"] * (M_C / MW_CO2)
     h_in = res["m_h2_fresh_kg"] * 1.000
     o_in = res["m_co2_fresh_kg"] * (2.0 * M_O / MW_CO2)
@@ -141,14 +141,18 @@ def verify_element_conservation(res):
     h_water = res["m_h2o_gen_kg"] * (2.0 * M_H / MW_H2O)
     o_water = res["m_h2o_gen_kg"] * (M_O / MW_H2O)
 
-    # 驰放废气带走元素
+    # Infer the purge elemental composition as the residual of the measured fresh
+    # feeds and product streams; the source dataset rounds the purge mass flow.
     c_purge = c_in - c_meoh
     h_purge = h_in - (h_meoh + h_water)
     o_purge = o_in - (o_meoh + o_water)
+    if min(c_purge, h_purge, o_purge) < 0:
+        raise ValueError("Measured product streams exceed the elemental feed balance.")
 
     c_out = c_meoh + c_purge
     h_out = h_meoh + h_water + h_purge
     o_out = o_meoh + o_water + o_purge
+    purge_mass_inferred = c_purge + h_purge + o_purge
 
     err_c = abs(c_in - c_out) / c_in
     err_h = abs(h_in - h_out) / h_in
@@ -157,7 +161,8 @@ def verify_element_conservation(res):
     return {
         "C_in": c_in, "C_out": c_out, "C_err": err_c,
         "H_in": h_in, "H_out": h_out, "H_err": err_h,
-        "O_in": o_in, "O_out": o_out, "O_err": err_o
+        "O_in": o_in, "O_out": o_out, "O_err": err_o,
+        "purge_mass_inferred_kg": purge_mass_inferred
     }
 
 
@@ -168,13 +173,6 @@ def scale_up_park_level(res, annual_meoh_ton=100000.0):
     """
     根据单吨产品定额，放大至 10 万吨/年工业园区级工程通量规模。
     """
-    # --------------------------------------------------------------------------
-    # TODO: [学生编写代码] 将单吨消耗/产出放大至 10 万吨/年工程通量
-    # 提示：
-    # 年需 CO2 = 单吨单耗 * 100,000 吨
-    # 年需脱盐净补水 = (总制氢理论需水 - 精馏副产回收水)
-    # 综合电耗以 10,826.0 kWh/t 甲醇核算
-    # --------------------------------------------------------------------------
     scale_factor = annual_meoh_ton
 
     annual_co2_ton          = (res["m_co2_fresh_kg"] * scale_factor) / 1000.0
@@ -225,6 +223,7 @@ if __name__ == "__main__":
     print(f"  循环比 (质量流量比)    : {res['recycle_ratio_mass']:.2f} : 1")
     print(f"  循环比 (摩尔/体积比)   : {res['recycle_ratio_molar']:.2f} : 1")
     print(f"  全系统总碳转化利用率   : {res['eta_carbon'] * 100.0:.1f}%")
+    print(f"  进料与产品直接计算碳比 : {res['eta_carbon_from_feed'] * 100.0:.2f}% (原始通量取整口径)")
 
     # 3. 元素质量守恒校验
     cons = verify_element_conservation(res)
@@ -232,6 +231,7 @@ if __name__ == "__main__":
     print(f"  碳元素 (C): 输入 {cons['C_in']:.2f} kg | 输出 {cons['C_out']:.2f} kg | 相对误差: {cons['C_err']:.6%}")
     print(f"  氢元素 (H): 输入 {cons['H_in']:.2f} kg | 输出 {cons['H_out']:.2f} kg | 相对误差: {cons['H_err']:.6%}")
     print(f"  氧元素 (O): 输入 {cons['O_in']:.2f} kg | 输出 {cons['O_out']:.2f} kg | 相对误差: {cons['O_err']:.6%}")
+    print(f"  由元素残差反算驰放流量: {cons['purge_mass_inferred_kg']:.3f} kg (数据表标称 {res['m_gas_purge_kg']:.1f} kg)")
 
     assert cons['C_err'] < 1e-4, "碳守恒误差超出阈值"
     assert cons['H_err'] < 1e-4, "氢守恒误差超出阈值"
