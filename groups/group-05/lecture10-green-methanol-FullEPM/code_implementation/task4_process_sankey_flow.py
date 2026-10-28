@@ -11,13 +11,18 @@ F=ROOT/'figures_output'; F.mkdir(exist_ok=True);R=ROOT/'report';R.mkdir(exist_ok
 df=pd.DataFrame([simulate_park_methanol_system(f,r) for f in np.linspace(0,1,60) for r in np.linspace(.004,.045,50)])
 p,a=extract_pareto_frontier_and_anchors(df);b=a['Anchor_B_Knee_Point']; f=b.f_green;r=b.r_purge;s=.960/(b.eta_carbon/100)
 co=1423*s;h=198*s;w=575.;o=1584*s;water=1.385+.00008/r
-crf=.08*1.08**20/(1.08**20-1);storage=680*f**2.8;rec=45*max(0,(.01/r)**.8-1);cap=np.array([4.55,1.10,1.20,.65,.70])*1e8;cap[0]+=storage*1e5/crf;cap[2]+=rec*1e5/crf
-# 将课程835.2的四舍五入基准转成一致的等效投资，差额归公用工程
-cap[4]+=835.2*1e5/crf-8.2e8
+crf=.08*1.08**20/(1.08**20-1);storage=680*f**2.8;rec=45*max(0,(.01/r)**.8-1)
+# 课程总投资9.15亿元；制氢与缓冲余额分配为课程预算假设。
+cap=np.array([9.15-1.10-1.20-.65-.97,1.10,1.20,.65,.97])*1e8
+assert abs(cap.sum()-9.15e8)<1e-6
 el=np.array([h*52,255*s,155*(.01/r)**.65,120,0]);price=.18*f+.42*(1-f)
 ops=el*price+np.array([0,co/1000*260,0,65,285]); pol=policy(b.gwp_net,b.base_lcom,b.e_total_kwh,f,r);adj=pol['policy_breakdown'];netop=ops.sum()-316.8*s+sum(adj.values())
-assert abs(cap.sum()*crf/1e5+ops.sum()-316.8*s-b.base_lcom)<1e-7
-assert abs(cap.sum()*crf/1e5+netop-b.lcom_policy_adjusted)<1e-7
+budget_base=cap.sum()*crf/1e5+ops.sum()-316.8*s
+budget_policy=policy(b.gwp_net,budget_base,b.e_total_kwh,f,r)
+budget_lcom=budget_policy['lcom_policy_adjusted'];budget_mac=budget_policy['mac_policy_adjusted']
+assert abs(cap.sum()*crf/1e5+netop-budget_lcom)<1e-7
+assert abs(budget_base-b.base_lcom-(cap.sum()*crf/1e5-835.2-storage-rec))<1e-7
+(F/'B_budget_evaluation.json').write_text(json.dumps(dict(capex_yuan=cap.sum(),capital_annuity_per_t=cap.sum()*crf/1e5,base_lcom=budget_base,adjusted_lcom=budget_lcom,mac=budget_mac,selection='B selected by original course objective; fixed-budget evaluation only',allocation_assumption='Hydrogen and buffer assigned residual 5.23e8; not equipment quotation'),indent=2),encoding='utf-8')
 checks=[]
 for inp,expected in [((-1044.1,2862.3,10826,1,.01),1262.473),((800,4200,10826,.65,.015),4066.7016666667),((4531.3,7193,10826,0,.01),8699.325)]:
     z=policy(*inp);assert abs(z['lcom_policy_adjusted']-expected)<1e-6;checks.append(z['lcom_policy_adjusted'])
@@ -44,7 +49,7 @@ text=f'''# 工业园区10万吨/年绿色甲醇环境规划与管理方案报告
 第5组｜2026年秋季《环境规划与管理》课程｜第十讲案例2
 
 ## 摘要
-本方案针对煤化工园区的工业二氧化碳资源化需求，以年产10万吨甲醇为规划规模，开展物质流、能源流、生命周期评价和技术经济联合分析。基于课程给定的电价、排放因子、储能年金和政策情景，对60档绿电比例及50档驰放比例组合进行3000组搜索，排除否决方案后获得{len(p)}个非支配解。采用前沿目标范围归一化的理想点距离最小准则，确定锚点B的绿电比例为{f*100:.2f}%，驰放比例为{r*100:.3f}%，课程经验碳利用率为{b.eta_carbon:.2f}%。推荐方案净碳足迹为{b.gwp_net:.2f} kg CO2e/t，基础成本为{b.base_lcom:.2f}元/t，政策调整后成本为{b.lcom_policy_adjusted:.2f}元/t，边际减排成本为{b.mac_policy_adjusted:.2f}元/t CO2e。五项重点工程等效投资合计{cap.sum()/1e8:.4f}亿元，未扣收益运行支出为{ops.sum()*10:.2f}万元/年。方案以清洁电力长协、氧气消纳及有条件的绿色溢价构成收入保障，并设置分项计量、异常联锁及年度复核机制。独立化学计量核验发现教学数据不能同时满足标称循环比、碳利用率及全部物流组分约束，故将守恒模型与经验规划模型分别披露。负值碳足迹仅代表课程边界下的信用核算结果，不等同于永久碳移除或实际国际认证。
+本方案针对煤化工园区的工业二氧化碳资源化需求，以年产10万吨甲醇为规划规模，开展物质流、能源流、生命周期评价和技术经济联合分析。基于课程给定的电价、排放因子、储能年金和政策情景，对60档绿电比例及50档驰放比例组合进行3000组搜索，排除否决方案后获得{len(p)}个非支配解。采用前沿目标范围归一化的理想点距离最小准则，确定锚点B的绿电比例为{f*100:.2f}%，驰放比例为{r*100:.3f}%，课程经验碳利用率为{b.eta_carbon:.2f}%。标准模型推荐方案净碳足迹为{b.gwp_net:.2f} kg CO2e/t，基础成本为{b.base_lcom:.2f}元/t，政策调整后成本为{b.lcom_policy_adjusted:.2f}元/t，边际减排成本为{b.mac_policy_adjusted:.2f}元/t CO2e。五项重点工程规划投资合计{cap.sum()/1e8:.4f}亿元，未扣收益运行支出为{ops.sum()*10:.2f}万元/年；按9.15亿元预算重算的B净成本为{budget_lcom:.2f}元/t。方案以清洁电力长协、氧气消纳及有条件的绿色溢价构成收入保障，并设置分项计量、异常联锁及年度复核机制。独立化学计量核验发现教学数据不能同时满足标称循环比、碳利用率及全部物流组分约束，故将守恒模型与经验规划模型分别披露。负值碳足迹仅代表课程边界下的信用核算结果，不等同于永久碳移除或实际国际认证。
 
 ## 术语
 MFA（Material Flow Analysis）：物质流分析；LCA（Life Cycle Assessment）：生命周期评价；TEA（Techno-Economic Analysis）：技术经济分析；GWP（Global Warming Potential）：全球变暖潜势；LCOM（Levelized Cost of Methanol）：平准化甲醇成本；MAC（Marginal Abatement Cost）：边际减排成本；PEM（Proton Exchange Membrane）：质子交换膜；CAPEX（Capital Expenditure）：资本支出；OPEX（Operating Expenditure）：运行支出；CRF（Capital Recovery Factor）：资本回收系数；MRV（Monitoring, Reporting and Verification）：监测报告核查；PDCA（Plan-Do-Check-Act）：策划实施检查改进。RED III为欧盟可再生能源指令第三版，RFNBO为非生物源可再生燃料，ETS为碳排放权交易体系，CCER为国家核证自愿减排量。本报告政策数值均为课程情景输入。
@@ -88,14 +93,18 @@ MFA（Material Flow Analysis）：物质流分析；LCA（Life Cycle Assessment�
 
 {projects}
 
-按8%、20年资本回收条件反算的等效投资合计{cap.sum()/1e8:.5f}亿元，运行支出合计{ops.sum()*10:.2f}万元/年。工程02含储能年金还原投资，工程03含压缩机增量，工程05承接基础年金835.2元/t的舍入调和差额。8.20亿元是基础资产口径，14.87646亿元是包含经验储能年金的等效投资口径；仓库PR参考的9.15亿元无法由同一费用式直接得到，本报告不据此改动模型参数。这些分项是课程模型成本分配，不是设备报价。工程分项OPEX按各工段电耗分摊电费，捕集费归01，水费65元/t归04，固定运维285元/t归05。收益与政策调整在第5章单列，避免重复抵扣。建设期按模板分配：捕集和制氢2027—2028年，合成2028—2029年，精馏节水2028—2029年，公用工程2027—2028年。2028年形成近期示范能力，2029年完成后续联动完善；此进度为课程规划安排。
+五项工程规划投资合计{cap.sum()/1e8:.2f}亿元，毛运行支出合计{ops.sum()*10:.2f}万元/年。总额9.15亿元依据课程PR核验表；工程01的1.10亿元、工程03的1.20亿元和工程04的0.65亿元沿用背景手册，工程05按报告模板取0.97亿元，工程02取余额9.15−1.10−1.20−0.65−0.97=5.23亿元。工程02的余额分配为课程预算假设，包含制氢及缓冲配置的规划额度，未按设备报价拆分。运行费按工段电耗分配，捕集服务费归工程01，水处理65元/t归工程04，固定运维285元/t归工程05。政策费用与收入在第5章另列。建设周期见表4-1。
 
 ## 第5章 LCA、TEA与多目标决策
 课程评价包含上游电力及基础设施，属于原料获取至厂门的简化边界，而非严格门到门。GWP=电耗×混合排放因子+95+1200(r−0.01)−新鲜CO2−氧气信用。纯网电r=0.01时为4531.3 kg/t；全绿电为−1044.09 kg/t。在网电高碳排放因子驱动下，制氢上游间接碳排放增量超过催化加氢直接固定碳汇，导致系统净温室气体排放强度呈现正增长。电解电耗占比高，是间接排放的主要来源。
 
 该信用方法将全部捕集进料作抵扣，未完整反映驰放燃烧和产品最终燃烧，也依赖氧气确实替代外部生产。不得把负值直接解释为永久封存。吸收剂逸散、废液及冷却水转移负担亦应单独监控；本模型没有足够数据计算毒性等其他影响类别。
 
-折现率8%、寿命20年，CRF={crf:.8f}。基础成本=电费+资本年金+捕集费+水费及运维−氧气销售。B资本年金为{cap.sum()*crf/1e5:.4f}元/t，毛运行费{ops.sum():.4f}元/t，氧气销售抵扣{316.8*s:.4f}元/t。政策四项依次为国际溢价{adj['red_iii_subsidy']:.4f}、碳收益{adj['carbon_cost_mod']:.4f}、取水调节{adj['water_cost_mod']:.4f}和次生治理{adj['env_tax_mod']:.4f}元/t。扣除全部收益后的净运行费{netop:.4f}元/t与年金之和精确等于净LCOM。
+折现率8%、寿命20年，CRF={crf:.8f}。任务三仍按课程脚手架的835.2元/t基础年金、680f^2.8元/t储能年金和循环增量求取A/B/C，作为课程标准模型结果。B的标准模型基础成本为{b.base_lcom:.4f}元/t、净成本为{b.lcom_policy_adjusted:.4f}元/t。
+
+工程实施预算采用9.15亿元总投资直接计算年金，为{cap.sum()*crf/1e5:.4f}元/t；该预算情景将储能缓冲纳入工程02额度，因此替换标准模型全部资本年金，不另加680元/t。B的毛运行费为{ops.sum():.4f}元/t，氧气销售抵扣{316.8*s:.4f}元/t；据此预算基础LCOM为{budget_base:.4f}元/t。政策四项分别为{adj['red_iii_subsidy']:.4f}、{adj['carbon_cost_mod']:.4f}、{adj['water_cost_mod']:.4f}、{adj['env_tax_mod']:.4f}元/t，预算净LCOM为{budget_lcom:.4f}元/t，MAC为{budget_mac:.4f}元/t CO2e。费用之和与代码输出一致。
+
+9.15亿元是B的课程规划预算约束；下表及图2保留标准模型三锚点，预算成本为同一B工况的追加评价，不声称B在替换后的成本目标下仍为最优点。两种核算分别记录在anchors.csv和B_budget_evaluation.json。
 
 {anchors}
 
