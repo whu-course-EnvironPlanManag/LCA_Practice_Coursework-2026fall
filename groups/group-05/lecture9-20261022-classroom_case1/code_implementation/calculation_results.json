@@ -1,0 +1,25 @@
+{
+  "mass_input_kg": 1000.0,
+  "mass_output_kg": 1000.0,
+  "yield": 0.8,
+  "baseline_gwp": 636.0000000000001,
+  "green_gwp": 194.0000000000001,
+  "green_reduction_pct": 91.37777777777777,
+  "baseline_lcop": 6153.4,
+  "green_lcop": 6195.9,
+  "cost_increase": 42.49999999999994,
+  "cost_increase_pct": 0.69067507394286,
+  "green_margin": 1404.1000000000004,
+  "annual_green_margin": 22465600.000000007,
+  "yield70": {
+    "feed_t_per_t": 1.4285714285714286,
+    "annual_output_t": 14000.0,
+    "baseline_gwp": 726.8571428571431,
+    "green_gwp": 221.71428571428586,
+    "baseline_lcop": 7068.171428571429,
+    "green_lcop": 7116.742857142857,
+    "extra_waste_cost_per_t": 35.71428571428572,
+    "green_margin": 483.25714285714236,
+    "annual_green_margin": 6765599.999999993
+  }
+}

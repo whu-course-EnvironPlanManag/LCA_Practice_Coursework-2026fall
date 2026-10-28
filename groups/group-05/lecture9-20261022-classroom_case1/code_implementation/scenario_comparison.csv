@@ -1,0 +1,5 @@
+﻿scenario,yield,annual_output_t,GWP_kgCO2e_per_t,LCOP_RMB_per_t,margin_RMB_per_t
+grid_80,0.8,16000,636.0,6153.4,1446.6
+green_80,0.8,16000,194.0,6195.9,1404.1
+grid_70,0.7,14000,726.8571,7068.1714,531.8286
+green_70,0.7,14000,221.7143,7116.7429,483.2571
