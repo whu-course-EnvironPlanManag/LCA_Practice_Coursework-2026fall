@@ -11,9 +11,31 @@
   4. 运行内建单元测试，验证合规状态与成本修正值是否与基准自检表完全一致。
 
 ================================================================================
-【请在此处粘贴你向 AI 助手发送的 Vibe Coding 提示词 (Prompt)】
-Prompt:
-  ... [学生在此处粘贴完整 Prompt] ...
+【Vibe Coding 提示词 (Prompt) 记录】
+
+本模块的政策量化引擎按以下结构化提示词，基于 policy_clauses_pack.md 四张政策
+条文卡片生成并经人工校验后固化（提示词模板源自条文卡片包第三节）：
+
+  请阅读环境规划与管理政策条文卡片包（policy_clauses_pack.md），编写 Python 评估
+  模块 task2_policy_vibe_engine.py。模块须实现函数
+  evaluate_policy_compliance(gwp_net, base_lcom, e_total_kwh, f_green, r_purge)，
+  严格遵循以下核算逻辑：
+  1. 欧盟 RED III 判定：当 gwp_net <= 561.2 且 f_green >= 0.80 时，赋予补贴
+     -1200.0 元/t，标记具备 RED III 认证资格；否则补贴为 0。
+  2. 国内碳市场判定：基准为 2600.0 kg CO2e/t，碳价 100.0 元/t。若 gwp_net <= 0，
+     获得 1.2 倍 CCER 激励；若 0 < gwp_net <= 2600.0，获得 1.0 倍配额收益；
+     若 gwp_net > 2600.0，触发一票否决（Redline_Vetoed），执行 2.0 倍惩罚碳价
+     并对全厂电耗征收 0.10 元/kWh 惩罚阶梯电价。
+  3. 取水定额判定：基准定额 1.400 t/t，基准税率 5.0 元/t。若 1.400 < w_total <= 1.425，
+     超定额部分按 15.0 元/t 征收；若 w_total > 1.425，强制追加 85.0 元/t 空冷技改
+     年金摊销，实际取水修正为 1.390 t/t 计税。
+  4. 次生环保税与清洁生产底线：按公式 12.0 + 18.5 * (r_purge / 0.010) 计算环保税
+     与末端运维费。若 r_purge > 0.035，直接触发一票否决（Redline_Vetoed）。
+  5. 综合状态输出：若触发任何一票否决项，状态标记为 'Redline_Vetoed'；否则若满足
+     欧盟认证，标记为 'RED_III_RFNBO_Certified'；否则标记为 'Domestic_Compliant'。
+  6. 计算政策修正后平准化成本 lcom_policy_adjusted 与边际减排成本
+     mac_policy_adjusted（以煤制甲醇价格 2500.0 元/t 与碳排 2600.0 kg/t 为参考）。
+  7. 在代码文件末尾编写单元测试，对标准自检表中的三个典型工况进行验证。
 ================================================================================
 """
 
@@ -51,37 +73,11 @@ def evaluate_policy_compliance(
     返回：
       包含调整后 LCOM、调整后 MAC、合规状态标签及各项政策成本分项的字典。
     """
-    # --------------------------------------------------------------------------
-    # TODO: [学生编写代码 / Vibe Coding 生成代码]
-    # 
-    # 步骤 1：卡片 1 - 欧盟 RED III 判定 (基准 1870.6 kg/t，减排 >= 70% 阈值为 +561.2 kg/t，f_green >= 80%)
-    #         达标获得国际航运溢价补贴 red_iii_subsidy = -1200.0 元/t，否则为 0.0
-    #
-    # 步骤 2：卡片 2 - 国内碳市场 (ETS/CCER) 阶梯奖惩 (基准 2600.0 kg/t，碳价 100.0 元/t)
-    #         - gwp_net <= 0: 享受 1.2 倍 CCER 激励
-    #         - 0 < gwp_net <= 2600.0: 享受 1.0 倍常规减排收益
-    #         - gwp_net > 2600.0: 触发一票否决 (Redline_Vetoed)，超额排放征收 2.0 倍惩罚碳价，
-    #                             并对全厂用电加收 0.10 元/kWh 惩罚阶梯电价
-    #
-    # 步骤 3：卡片 3 - 工业取水定额与水资源税 (定额 1.400 t/t，税率 5.0 元/t)
-    #         - w_total = 1.385 + 0.008 * (0.010 / r_purge)
-    #         - w_total <= 1.400: 按 5.0 元/t 计征
-    #         - 1.400 < w_total <= 1.425: 超出部分按 3.0 倍 (15.0 元/t) 累进计征
-    #         - w_total > 1.425: 强制配套闭式空冷系统 (+85.0 元/t 摊销)，取水量强制压降至 1.390 t/t 计税
-    #
-    # 步骤 4：卡片 4 - 次生污染物环保税与清洁生产底线
-    #         - env_tax = 12.0 + 18.5 * (r_purge / 0.010)
-    #         - r_purge > 0.035 (3.5%): 导致总碳利用率跌破 88.0%，触发清洁生产一票否决
-    #
-    # 步骤 5：汇总综合合规标签 (Redline_Vetoed / RED_III_RFNBO_Certified / Domestic_Compliant)
-    #         计算 lcom_policy_adjusted 与 mac_policy_adjusted (对比 2500 元/t 与 2600 kg/t 煤制甲醇)
-    # --------------------------------------------------------------------------
-
-    # 1. 卡片 1 判定
+    # ---- 卡片 1：欧盟 RED III 判定 (化石基准 1870.6 kg/t × (1-70%) = 561.2 kg/t，f_green >= 80%) ----
     is_red_iii = (gwp_net <= 561.2) and (f_green >= 0.80)
     red_iii_subsidy = -1200.0 if is_red_iii else 0.0
 
-    # 2. 卡片 2 判定
+    # ---- 卡片 2：国内碳市场 (ETS/CCER) 三级阶梯奖惩与一票否决 ----
     gwp_bench = 2600.0
     p_carbon  = 100.0
     veto_carbon = False
@@ -97,7 +93,7 @@ def evaluate_policy_compliance(
         excess_ghg_ton = (gwp_net - gwp_bench) / 1000.0
         carbon_cost_mod = (+2.0 * excess_ghg_ton * p_carbon) + (0.10 * e_total_kwh)
 
-    # 3. 卡片 3 判定
+    # ---- 卡片 3：工业取水定额累进水资源税 ----
     w_total = 1.385 + 0.008 * (0.010 / r_purge)
     w_quota = 1.400
     if w_total <= w_quota:
@@ -107,11 +103,11 @@ def evaluate_policy_compliance(
     else:
         water_cost_mod = (1.390 * 5.0) + 85.0
 
-    # 4. 卡片 4 判定
+    # ---- 卡片 4：次生污染物环保税与清洁生产底线 ----
     env_tax_mod = 12.0 + 18.5 * (r_purge / 0.010)
     veto_clean_prod = (r_purge > 0.035)
 
-    # 5. 综合判定
+    # ---- 综合合规标签与成本汇总 ----
     if veto_carbon or veto_clean_prod:
         status = "Redline_Vetoed"
     elif is_red_iii:

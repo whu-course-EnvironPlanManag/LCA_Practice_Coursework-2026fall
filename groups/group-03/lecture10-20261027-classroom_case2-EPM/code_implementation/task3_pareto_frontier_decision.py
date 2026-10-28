@@ -35,7 +35,7 @@ try:
 except ImportError:
     from code_implementation.task2_policy_vibe_engine import evaluate_policy_compliance
 
-plt.rcParams['font.sans-serif'] = ['SimHei', 'Microsoft YaHei', 'PingFang SC', 'DejaVu Sans', 'Arial']
+plt.rcParams['font.sans-serif'] = ['Songti SC', 'STHeiti', 'PingFang SC', 'SimHei', 'Microsoft YaHei', 'Arial Unicode MS', 'DejaVu Sans']
 plt.rcParams['axes.unicode_minus'] = False
 
 
@@ -66,19 +66,7 @@ def simulate_park_methanol_system(f_green: float, r_purge: float) -> dict:
       r_purge : 循环回路未反应气驰放分流比 [0.004, 0.045]
     输出全套 MFA 物料、LCA 碳足迹、TEA 成本及政策评价指标。
     """
-    # --------------------------------------------------------------------------
-    # TODO: [学生编写代码] 建立 MFA-LCA-TEA 物理与经济联动方程
-    # 提示：
-    # 1. 总碳转化利用率随驰放比变化：
-    #    carbon_loss = 1.0 - 0.960 * (1.0 - (r_purge - 0.010) * 3.80)
-    #    eta_carbon = 1.0 - np.clip(carbon_loss, 0.015, 0.250)
-    # 2. 综合电耗 e_total_kwh = 制氢电耗 + 捕集压缩 + 循环压缩 + 精馏分离
-    # 3. LCA 净碳足迹 gwp_net = 电耗间接排放 + 基建逸散 - CO2原料固定信用 - 纯氧副产信用
-    # 4. TEA 基础平准化成本 base_lcom 包含电费、CAPEX年金摊销、CO2捕集费、水耗、固定运维及氧气外售抵扣
-    # 5. 调用 evaluate_policy_compliance() 函数返回政策调整后结果
-    # --------------------------------------------------------------------------
-
-    # 1. MFA 物料与能量
+    # ---- 模块 A：MFA 物料与能量（总碳利用率随驰放比变化的解耦模型）----
     carbon_loss_frac = 1.0 - 0.960 * (1.0 - (r_purge - 0.010) * 3.80)
     carbon_loss_frac = np.clip(carbon_loss_frac, 0.015, 0.250)
     eta_carbon = 1.0 - carbon_loss_frac
@@ -144,18 +132,10 @@ def extract_pareto_frontier_and_anchors(df: pd.DataFrame):
     """
     在合规方案中提取帕累托前沿，并标定锚点 A、锚点 B 与锚点 C。
     """
-    # --------------------------------------------------------------------------
-    # TODO: [学生编写代码] 实现双目标非支配排序与乌托邦理想点欧氏距离计算
-    # 提示：
-    # 1. 过滤掉 compliance_status == 'Redline_Vetoed' 的一票否决方案
-    # 2. 对每个方案 i，若存在方案 j 满足 points[j] <= points[i] 且至少一项严格小于，
-    #    则方案 i 被支配（is_pareto[i] = False）
-    # 3. 归一化目标空间：norm_gwp = (gwp - gwp_min) / (gwp_max - gwp_min)
-    #    norm_lcom = (lcom - lcom_min) / (lcom_max - lcom_min)
-    # 4. 到乌托邦理想点 (0, 0) 的距离 d = sqrt(norm_gwp^2 + norm_lcom^2)
-    # 5. 距离最小点即为帕累托拐点（Knee Point / 锚点 B）
-    # --------------------------------------------------------------------------
+    # ---- 步骤 1：剔除一票否决方案 ----
     valid_df = df[df["compliance_status"] != "Redline_Vetoed"].copy().reset_index(drop=True)
+    # ---- 步骤 2：双目标非支配排序（O(N^2) 支配关系判定）----
+    # 若存在方案 j 满足 points[j] <= points[i] 且至少一项严格小于，则方案 i 被支配
     points = valid_df[["gwp_net", "lcom_policy_adjusted"]].values
     n_pts = points.shape[0]
     is_pareto = np.ones(n_pts, dtype=bool)
@@ -166,6 +146,7 @@ def extract_pareto_frontier_and_anchors(df: pd.DataFrame):
             if np.any(dominated):
                 is_pareto[i] = False
 
+    # ---- 步骤 3：乌托邦理想点归一化欧氏距离，标定帕累托拐点 ----
     pareto_df = valid_df[is_pareto].copy().sort_values(by="gwp_net").reset_index(drop=True)
 
     gwp_min, gwp_max = pareto_df["gwp_net"].min(), pareto_df["gwp_net"].max()
