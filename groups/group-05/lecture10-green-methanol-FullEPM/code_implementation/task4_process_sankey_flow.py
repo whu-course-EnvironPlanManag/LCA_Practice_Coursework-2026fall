@@ -13,7 +13,7 @@ p,a=extract_pareto_frontier_and_anchors(df);b=a['Anchor_B_Knee_Point']; f=b.f_gr
 co=1423*s;h=198*s;w=575.;o=1584*s;water=1.385+.00008/r
 crf=.08*1.08**20/(1.08**20-1);storage=680*f**2.8;rec=45*max(0,(.01/r)**.8-1)
 # 课程总投资9.15亿元；制氢与缓冲余额分配为课程预算假设。
-cap=np.array([9.15-1.10-1.20-.65-.97,1.10,1.20,.65,.97])*1e8
+cap=np.array([915000000-110000000-120000000-65000000-97000000,110000000,120000000,65000000,97000000],dtype=float)
 assert abs(cap.sum()-9.15e8)<1e-6
 el=np.array([h*52,255*s,155*(.01/r)**.65,120,0]);price=.18*f+.42*(1-f)
 ops=el*price+np.array([0,co/1000*260,0,65,285]); pol=policy(b.gwp_net,b.base_lcom,b.e_total_kwh,f,r);adj=pol['policy_breakdown'];netop=ops.sum()-316.8*s+sum(adj.values())
