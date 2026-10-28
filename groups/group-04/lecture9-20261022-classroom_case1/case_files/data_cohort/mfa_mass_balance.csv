@@ -1,0 +1,11 @@
+Stage,Flow_Type,Substance_Good,Mass_kg,Mass_Percent,Transfer_Coeff,Destination_Notes
+Input,Raw_Material,Baled_PET_Bottles,1000.0,100.0%,1.000,Mixed post-consumer baled bottles
+Debaling_Drying,Waste,Labels_PP_PVC,20.0,2.0%,1.000,Stripped label film to incineration
+Debaling_Drying,Waste,Surface_Dirt_Sand,25.0,2.5%,1.000,Dry trommel screening residue
+Hot_Washing,Waste,Adhesives_Residue_COD,35.0,3.5%,1.000,Washing liquor to onsite wastewater plant
+Sink_Float,Co_Product,Recovered_HDPE_Flakes,75.0,7.5%,0.9375,Float fraction sold as secondary polymer
+Sink_Float,Waste,HDPE_Fine_Loss,5.0,0.5%,0.0625,Carried into sedimentation sludge
+SSP_Extrusion,Waste,Off_Spec_Fines,40.0,4.0%,0.0476,Yellowed flakes and cyclone dust
+SSP_Extrusion,Main_Product,Bottle_Grade_rPET,800.0,80.0%,0.9524,Target IV 0.80 dL/g pellets
+Balance_Check,Sum_Inputs,,1000.0,100.0%,,Strict mass conservation
+Balance_Check,Sum_Outputs,,1000.0,100.0%,,Products(875kg) + Wastes(125kg) = 1000kg
