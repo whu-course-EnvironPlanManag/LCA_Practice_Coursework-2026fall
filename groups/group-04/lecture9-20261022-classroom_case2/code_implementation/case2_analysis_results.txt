@@ -1,0 +1,32 @@
+=== Case 2: CO2-to-methanol MFA-LCA-TEA results ===
+
+[Task 1: recycle loop]
+Single-pass conversion (model input): 25.00%
+Recycle / fresh CO2+H2 mass ratio (fsolve): 2.8835
+Overall gas-conversion proxy (fsolve; not carbon utilization): 97.0874%
+fsolve equation residual: 9.095e-13 kg per normalized basis
+CSV recycle flow / fresh CO2+H2 feed: 2.8624
+CSV recycle / offgas split: 99.0184% recycle; 0.9816% purge
+CSV reactor-mixer mass closure (listed mix - fresh - recycle): 0.00 kg
+CSV-based carbon utilization (product carbon / fresh CO2 carbon): 96.7237%
+Data check: the solved 99% recycle / 25% single-pass gas model does not equal the documentation's 3.8 recycle ratio or 96.0% carbon utilization.
+Recycle ratio basis: total recycle gas mass divided by fresh CO2+H2 feed mass; CSV ratio is calculated directly from its listed streams.
+
+External elemental balance (net demineralized water is an input; recovered water is internal):
+C: input=387.315 kg; output=384.119 kg; output-input=-3.196 kg; relative difference=0.8252% [FAIL]
+H: input=352.029 kg; output=135.217 kg; output-input=-216.812 kg; relative difference=61.5893% [FAIL]
+O: input=2265.233 kg; output=2109.606 kg; output-input=-155.627 kg; relative difference=6.8702% [FAIL]
+The supplied stream table does not close elemental balances to the required 0.01%; see these differences as source-data inconsistencies, not solver error.
+
+[Task 2: LCA and TEA]
+Green-power GWP: -1044.12 kg CO2e/t methanol
+Regional-grid GWP: 4531.26 kg CO2e/t methanol
+Fossil methanol benchmark: 2600.00 kg CO2e/t
+Green scenario abatement vs fossil: 3.64412 t CO2e/t
+Electricity-price break-even with carbon price 100.00 RMB/tCO2e: 0.15020 RMB/kWh
+Interpolated MAC at break-even price: 100.00 RMB/tCO2e
+Electricity use implied by TEA data: 10826.0 kWh/t methanol
+At 0.15 RMB/kWh: LCOM=2862.27 RMB/t; MAC=99.41 RMB/tCO2e
+At 0.35 RMB/kWh: LCOM=5027.47 RMB/t; MAC=693.57 RMB/tCO2e
+
+Outputs: case2_economic_sensitivity.png, case2_process_flow.png
