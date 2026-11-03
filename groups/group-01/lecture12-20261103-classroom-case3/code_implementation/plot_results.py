@@ -8,7 +8,7 @@ import numpy as np
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
-from common import DATA, InputError, write_json
+from common import DATA, InputError
 
 
 def read(path):
@@ -23,17 +23,14 @@ def save(fig, output, name, rect=None):
     if (helper / "audit_panel_alignment.py").is_file():
         sys.path.insert(0, str(helper))
         from audit_panel_alignment import require_matplotlib_panel_alignment
-        require_matplotlib_panel_alignment(fig, json_out=output / (name+"_alignment.json"), axes=[ax for ax in fig.axes if ax.get_label() != "<colorbar>"], strict=True)
+        require_matplotlib_panel_alignment(fig, axes=[ax for ax in fig.axes if ax.get_label() != "<colorbar>"], strict=True)
     else:
         boxes = [list(ax.get_position().bounds) for ax in fig.axes]
         # 简单同行双图检查；外部skill不是模型运行的必要依赖。
         if len(boxes) == 2:
             assert abs(boxes[0][1]-boxes[1][1])*fig.get_figheight()*72 <= 1.5
             assert abs(boxes[0][3]-boxes[1][3])*fig.get_figheight()*72 <= 1.5
-        write_json(output / (name+"_alignment.json"), {"method": "native plot-area check", "axes": boxes})
     fig.savefig(output / (name+".png"), dpi=300)
-    fig.savefig(output / (name+".pdf"))
-    fig.savefig(output / (name+".svg"))
     plt.close(fig)
 
 

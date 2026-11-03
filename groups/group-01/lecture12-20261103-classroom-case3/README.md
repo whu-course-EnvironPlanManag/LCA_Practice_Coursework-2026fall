@@ -34,7 +34,7 @@ python code_implementation/run_analysis.py --run
 
 无参数运行会显示帮助。从仓库根目录也可通过完整脚本路径运行，模型定位不依赖当前工作目录。运行不联网，不自动执行Git add、commit或push。
 
-`--plot-yearbook`无需安装队列或工艺参数，生成`fig0a_yearbook_private_cars`、`fig0b_yearbook_electricity`、`fig0c_yearbook_city_electricity`三张真实背景图及对应来源CSV，均保存在`figures_output/`。它们分别展示各类燃料私人汽车存量、省级电力生产/消费和原表12城市电量，不能当成电池预测、绿电比例或选址结论。模型图仍须待完整输入后运行`--run`。
+`--plot-yearbook`无需安装队列或工艺参数，在`figures_output/`生成三张真实背景图，仅保存PNG（300 DPI），并更新`data_readiness.json`和`待补数据清单.md`。原值和出处统一保留在`data_cohort/`，不再重复输出来源CSV、PDF/SVG或检查文件。背景图展示各类燃料私人汽车存量、省级电力生产/消费和原表12城市电量，不能当成电池预测、绿电比例或选址结论。模型图仍须待完整输入后运行`--run`。
 
 ## 文件分工
 
@@ -49,7 +49,7 @@ python code_implementation/run_analysis.py --run
 | `network_model.py` | SciPy MILP容量约束选址与两类物流配置 |
 | `decision.py` | 严格非支配排序、归一化距离、A/B/C；保留并列与退化 |
 | `run_analysis.py` | 一键运行、输入哈希、情景与推荐方案一致输出 |
-| `plot_results.py` | 正式结果驱动PNG/PDF/SVG，300 DPI，中文字体 |
+| `plot_results.py` | 正式结果驱动PNG，300 DPI，中文字体 |
 | `plot_yearbook_context.py` | 独立生成真实年鉴背景图及逐条来源，不依赖尚缺的模型参数 |
 | `test_models.py` | 物理约束、政策边界和端到端合成测试 |
 
@@ -153,7 +153,7 @@ MILP最小化运输、节点运行和年化固定费用，满足起点/收集节
 | `fig7_primary_comparison_*` | 推荐再生与原生路径的同功能碳/水比较 |
 | `fig8_price_profit_*` | 至少两档有出处价格及匹配收购报价的净收益敏感性 |
 
-图形保存PNG（300 DPI）及可选取文字的PDF/SVG。配套对齐记录；有nature-figure技能时调用其渲染对齐检查，否则使用本地基本检查。全部图应在以后报告中按实际论证引用，不能把测试图片插入正式报告。
+图形仅保存PNG（300 DPI）。有nature-figure技能时调用其渲染对齐检查，否则使用本地基本检查，不在图片目录另存检查文件。全部图应在以后报告中按实际论证引用，不能把测试图片插入正式报告。
 
 项目表的“已知节点OPEX”不包含未经依据分摊的各厂过程费用；区域完整OPEX在锚点汇总字段中。没有站点化学物流数据时不能编造完整分项目预算。
 

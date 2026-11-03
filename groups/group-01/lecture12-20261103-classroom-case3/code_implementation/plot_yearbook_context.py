@@ -11,7 +11,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 
-from common import ROOT, DATA, OUTPUT, InputError, number, source, read_csv, write_csv, write_json
+from common import ROOT, OUTPUT, InputError, number, source, read_csv
 from plot_results import save
 
 
@@ -22,10 +22,9 @@ def render_yearbook_context(output=OUTPUT):
     plt.rcParams.update({"font.family": "sans-serif", "font.sans-serif": ["Microsoft YaHei", "DejaVu Sans"],
                          "font.size": 11, "pdf.fonttype": 42, "svg.fonttype": "none",
                          "axes.spines.top": False, "axes.spines.right": False, "axes.unicode_minus": False})
-    manifest = {"scope": "湖北统计年鉴真实背景统计；不是电池退役预测或LCA-TEA结果", "figures": []}
 
     def finish(fig, name, selected, note):
-        # CSV保留原值、统计单位和原始单元格，图中仅将车辆单位由辆转换为万辆。
+        # 原值和单元格保留在data_cohort；图中仅将车辆单位由辆转换为万辆。
         for row in selected:
             source(row, name)
             original = ROOT / row["source"]
@@ -33,9 +32,6 @@ def render_yearbook_context(output=OUTPUT):
                 raise InputError("年鉴原件已变化，请先重新提取: "+row["source"])
         fig.text(0.09, 0.015, note.replace("。", "。\n", 1).rstrip(), fontsize=9, color="#555555", va="bottom")
         save(fig, output, name, rect=(0, 0.11, 1, 1))
-        write_csv(output / (name+"_source.csv"), selected)
-        manifest["figures"].append({"name": name, "source_rows": len(selected), "note": note,
-                                    "exports": ["PNG 300 DPI", "PDF", "SVG"]})
 
     private = sorted([r for r in rows if r["indicator"] == "私人汽车拥有量"], key=lambda r: int(r["year"]))
     if not private:
@@ -92,10 +88,7 @@ def render_yearbook_context(output=OUTPUT):
     finish(fig, "fig0c_yearbook_city_electricity", cities,
            "来源：湖北统计年鉴2025，表1005。仅限原表12个城市；工业电量包含于全年电量，不是可新增用电容量。")
 
-    manifest["input_sha256"] = hashlib.sha256((DATA / "hubei_yearbook_context.csv").read_bytes()).hexdigest()
-    manifest["selection"] = "58条背景记录中绘制11条私人汽车、20条省级电力、24条城市电力；另3条为不同口径/单位的单点产量或民用汽车总量，未混入上述系列。"
-    write_json(output / "yearbook_figures_manifest.json", manifest)
-    print("已生成3张真实年鉴背景图（PNG/PDF/SVG），不是退役预测或寻优结果。")
+    print("已生成3张真实年鉴背景图（仅PNG，300 DPI），不是退役预测或寻优结果。")
 
 
 if __name__ == "__main__":

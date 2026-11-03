@@ -277,6 +277,20 @@ def run_mfa_only():
     print("dMFA已完成；未运行LCA-TEA或网络，不应把本命令当作全任务完成。")
 
 
+def write_readiness(issues):
+    write_json(OUTPUT / "data_readiness.json", {"ready": not issues, "issues": issues, "scope": "只检查数据接口，不产生湖北预测值"})
+    lines = ["# 待补数据清单", "", "现有3张PNG仅为真实年鉴背景统计；退役预测、LCA-TEA、帕累托和选址图需补齐以下输入。", "",
+             "优先补齐历年分市州、正极体系的电池安装容量及寿命/材料参数，再补工艺、报价和道路/设施数据。所有记录须填写source与source_locator（页码、表号或单元格）。", "",
+             "## 当前检查结果", ""]
+    lines.extend("- "+issue for issue in issues)
+    if not issues:
+        lines.append("当前接口检查未发现缺项；仍需人工核对参数适用性。")
+    lines.extend(["", "## 填写位置", "",
+                  "输入表和配置统一放在[../data_cohort](../data_cohort/)。各文件字段、单位和检索要求见[数据填写说明](../data_cohort/README_data_sources.md)。", "",
+                  "年鉴原始值及逐条出处保留在data_cohort/hubei_yearbook_context.csv和yearbook_cells.csv。汽车工业产量不能替代本省新增注册量，各类燃料汽车总量不能替代新能源车装机量。", ""])
+    (OUTPUT / "待补数据清单.md").write_text("\n".join(lines), encoding="utf-8")
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--extract-yearbook", action="store_true")
@@ -296,9 +310,10 @@ def main():
         if args.plot_yearbook:
             from plot_yearbook_context import render_yearbook_context
             render_yearbook_context(OUTPUT)
+            write_readiness(check_readiness())
         if args.check_inputs:
             issues = check_readiness()
-            write_json(OUTPUT / "data_readiness.json", {"ready": not issues, "issues": issues, "scope": "只检查数据接口，不产生湖北预测值"})
+            write_readiness(issues)
             for issue in issues:
                 print("[待补充]", issue)
             if issues:
