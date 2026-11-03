@@ -1,0 +1,7 @@
+chemistry,specific_energy_Wh_per_kg,li_content_kg_per_kg,ni_content_kg_per_kg,co_content_kg_per_kg,mn_content_kg_per_kg,fe_content_kg_per_kg,p_content_kg_per_kg,cu_content_kg_per_kg,al_content_kg_per_kg,carbon_footprint_kgCO2e_per_kWh,reference
+LFP,160,0.039,0.000,0.000,0.000,0.311,0.174,0.070,0.025,62,Peiseler_2024
+NMC111,200,0.059,0.180,0.180,0.180,0.000,0.000,0.070,0.025,85,Peiseler_2024
+NMC523,220,0.063,0.305,0.122,0.183,0.000,0.000,0.070,0.025,80,Peiseler_2024
+NMC622,230,0.066,0.360,0.120,0.120,0.000,0.000,0.070,0.025,77,Peiseler_2024
+NMC811,250,0.068,0.487,0.073,0.061,0.000,0.000,0.070,0.025,74,Peiseler_2024
+NCA,240,0.066,0.480,0.090,0.000,0.000,0.000,0.070,0.025,72,Peiseler_2024

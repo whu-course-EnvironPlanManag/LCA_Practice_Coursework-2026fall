@@ -1,0 +1,13 @@
+item,gwp_kgCO2e_per_unit,water_L_per_unit,energy_MJ_per_unit,unit,reference
+brine_lithium_LCE,1.5,77.3,55.0,kg_LCE,Peiseler_2024
+spodumene_lithium_LCE,14.5,35.0,193.9,kg_LCE,Machala_2025
+hydrometallurgy,6.1,21.5,44.4,kg_material,Machala_2025
+pyrometallurgy,9.8,30.0,65.0,kg_material,Machala_2025
+direct_recycling,3.2,12.0,28.0,kg_material,Machala_2025
+grid_electricity,0.581,0.002,3.6,kWh,Ma_2024
+green_electricity,0.020,0.0005,0.05,kWh,Ma_2024
+sulfuric_acid_H2SO4,0.045,0.5,0.8,kg,ICIS
+hydrogen_peroxide_H2O2,0.080,0.3,1.2,kg,ICIS
+sodium_hydroxide_NaOH,0.035,0.4,0.6,kg,ICIS
+sodium_carbonate_Na2CO3,0.050,0.3,0.5,kg,ICIS
+transport_100km,0.062,0.01,0.9,t_km,Ecoinvent
