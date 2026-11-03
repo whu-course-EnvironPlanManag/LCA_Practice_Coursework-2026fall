@@ -74,9 +74,13 @@
 
 输入为安装年份v、地区i与化学体系c的容量I，单位kWh。双参数Weibull生存函数为：
 
-$$S_c(a)=\exp[-(a/\eta_c)^{\beta_c}],\qquad p_c(a)=S_c(a-1)-S_c(a),\quad a\ge1.$$
+```math
+S_c(a)=\exp\left[-\left(\frac{a}{\eta_c}\right)^{\beta_c}\right],\qquad p_c(a)=S_c(a-1)-S_c(a),\quad a\geq1.
+```
 
-$$R_{i,c,t}=\sum_{v<t}I_{i,c,v}p_c(t-v),\qquad K_{i,c,t}=\sum_{v\le t}I_{i,c,v}S_c(t-v).$$
+```math
+R_{i,c,t}=\sum_{v\lt t} I_{i,c,v}\,p_c(t-v),\qquad K_{i,c,t}=\sum_{v\leq t} I_{i,c,v}\,S_c(t-v).
+```
 
 安装按年末计，当年不退役；年度概率采用CDF差分，不能把Weibull密度在整数年上的取值当作概率。预测末年的生存尾部保留在库存。输入采用η=10年、β=3.5，但原始寿命表尚未完整核验，因此是条件参数，不是本组对湖北车队拟合出的寿命。[R3]
 
@@ -102,7 +106,7 @@ $$R_{i,c,t}=\sum_{v<t}I_{i,c,v}p_c(t-v),\qquad K_{i,c,t}=\sum_{v\le t}I_{i,c,v}S
 
 元素平衡核查关系为：
 
-$$期初在用+新增安装+期初梯次库存=期末在用+期末梯次库存+再生产品+精炼残余+非正规系统流出.$$
+**期初在用 + 新增安装 + 期初梯次库存 = 期末在用 + 期末梯次库存 + 再生产品 + 精炼残余 + 非正规系统流出。**
 
 相对误差取两端差的绝对值除以输入总量，零元素流入单独处理。程序逐年打印并导出`element_balance.csv`：
 
