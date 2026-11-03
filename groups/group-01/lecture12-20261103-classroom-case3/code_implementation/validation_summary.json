@@ -11,7 +11,7 @@
     "primary_baselines": 2
   },
   "source_parsing": {
-    "python_files": 11,
+    "python_files": 12,
     "result": "passed"
   },
   "yearbook": {
@@ -402,9 +402,17 @@
     "input_data.py": "86a0e1d481579c5c5696a18d3bb33a4b1133c3b629ea56457dc9a8f06dfb8b24",
     "lca_tea.py": "ecdb40787ce5d01ed80e1f8f4660848208b5f992f79e85ebc29a25f6eb4b1ab6",
     "network_model.py": "1cce1226eab548d0cf901d28c71ed96ec0f6271414356f02ab5c6f3d4b57e9a9",
-    "plot_results.py": "eb97eee1e563fa01fb67f29a67c39ee53b15e8e6da84ac9a51dc3d57f71b6d28",
+    "plot_results.py": "9f6386a2f548fe89d8b4673af61ccc3b0fa29339583d1304fd123865685e4ee3",
+    "plot_yearbook_context.py": "617cb41b3c32ec3d3a139ab06eff5d3670414eae7db79979070e8b052f201278",
     "policy_engine.py": "fd15e23e65e028bb2cef9f698a7ccf982c96ed5416af50f3d5cab2a04b39b617",
-    "run_analysis.py": "295fef18ecc5ce35e3a7604ee02ccb070dead3121509943a4bb176ed1876ad46",
+    "run_analysis.py": "3f15bc0b872a8b59caeea07786566b6880863f4167fa3ddb9c86282c15005577",
     "test_models.py": "bac0b05046bff366eb8c94998bac6d1fc362a2d6ef4df37b7d84c154a44a7364"
+  },
+  "yearbook_background_figures": {
+    "count": 3,
+    "actual_statistics": true,
+    "forecast": false,
+    "qa_record": "../figures_output/yearbook_figures_qa.json",
+    "model_tests_after_change": "24 passed"
   }
 }

@@ -1,4 +1,4 @@
-"""命令行：--extract-yearbook、--check-inputs、--run、--self-test。
+"""命令行：--extract-yearbook、--plot-yearbook、--check-inputs、--run、--self-test。
 
 AI提示词：实现湖北方向A的可复现数据流，缺少历史队列/报价/道路距离时阻止
 正式模拟；500组以上真实输入驱动情景、政策剔除、前沿、锚点与工程一致性输出。
