@@ -91,8 +91,9 @@ def run_pareto(n=600):
         min(front, key=lambda x: x["gwp"])["is_anchor"] = True
         min(front, key=lambda x: x["lcor"])["is_anchor"] = True
     out = os.path.join(RESULTS_DIR, "pareto_front.csv")
+    fieldnames = list(feasible[0].keys()) + ["is_knee", "is_anchor"]
     with open(out, "w", newline="", encoding="utf-8") as f:
-        w = csv.DictWriter(f, fieldnames=feasible[0].keys()); w.writeheader(); w.writerows(feasible)
+        w = csv.DictWriter(f, fieldnames=fieldnames); w.writeheader(); w.writerows(feasible)
     print(f"[06] Pareto 前沿: {len(front)} 点")
     if knee: print(f"[06] 拐点: SOH={knee['soh_threshold']:.0%}, 绿电={knee['green_ratio']:.0%}, GWP={knee['gwp']:.4f}, LCOR={knee['lcor']:.4f}")
     print(f"[06] 输出: {out}")

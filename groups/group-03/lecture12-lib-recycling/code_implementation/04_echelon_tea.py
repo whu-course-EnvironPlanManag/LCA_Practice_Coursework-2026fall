@@ -40,38 +40,37 @@ def echelon_tea(soh_init=0.80, scenario="ESS", soh_end=0.50, mass_t=10000.0, che
 def recycling_tea(route, chemistry, li2co3_price_CNY_per_t, mass_t=50000.0):
     proc = {r["process"]: r for r in load_csv("process_parameters.csv")}[route]
     chem = {r["chemistry"]: r for r in load_csv("battery_chemistry.csv")}[chemistry]
-    tea = {r["parameter"]: r["value"] for r in load_csv("tea_parameters.csv")}
     li_content = float(chem["li_content_kg_per_kg"])
     li_rec = float(proc["li_recovery_rate"])
-    li2co3_t = mass_t * 1000 * li_content * li_rec / 0.1878 / 1000
-    capex = float(proc["capex_CNY_per_t_capacity"]) * mass_t
-    annual_capex = capex * CRF
-    opex = float(proc["opex_CNY_per_kg_battery"]) * mass_t * 1000
-    labor = float(tea["labor_cost_CNY_per_kg"]) * mass_t * 1000
-    transport = float(tea["transport_cost_CNY_per_tkm"]) * mass_t * 100
-    if route == "direct_recycling":
-        li_revenue = 0; li_cost = li2co3_t * li2co3_price_CNY_per_t * 0.3
+    # 每 kg 电池可回收 Li2CO3 量 (kg)
+    li2co3_per_kg = li_content * li_rec / 0.1878
+    # 基准价格（CNY/t）
+    baseline_price = 154000
+    # 基准净收益（CNY/kg battery，来自文献5 Zhang et al. 2025）
+    if chemistry == "LFP":
+        base_margin = float(proc["lfp_net_margin_CNY_per_kg"])
     else:
-        li_revenue = li2co3_t * li2co3_price_CNY_per_t; li_cost = 0
-    metal_revenue = 0
-    if chemistry == "NMC811":
-        ni_t = mass_t * 1000 * float(chem["ni_content_kg_per_kg"]) * float(proc["ni_recovery_rate"]) / 1000
-        co_t = mass_t * 1000 * float(chem["co_content_kg_per_kg"]) * float(proc["co_recovery_rate"]) / 1000
-        metal_revenue = ni_t * float(tea["ni_sulfate_price_CNY_per_t"]) + co_t * float(tea["co_sulfate_price_CNY_per_t"])
-    cu_t = mass_t * 1000 * float(chem["cu_content_kg_per_kg"]) * 0.98 / 1000
-    al_t = mass_t * 1000 * float(chem["al_content_kg_per_kg"]) * 0.98 / 1000
-    cu_al_revenue = cu_t * float(tea["copper_price_CNY_per_t"]) + al_t * float(tea["aluminum_price_CNY_per_t"])
-    total_cost = annual_capex + opex + labor + transport + li_cost
-    total_revenue = li_revenue + metal_revenue + cu_al_revenue
-    net_cost = total_cost - total_revenue
-    lcor = net_cost / mass_t
+        base_margin = float(proc["nmc_net_margin_CNY_per_kg"])
+    # 价格波动影响：湿法/火法锂是产出(收入随价格升)，直接再生锂是输入(成本随价格升)
+    price_delta = (li2co3_price_CNY_per_t - baseline_price) / 1000  # CNY/kg
+    if route == "direct_recycling":
+        # 直接再生：需补锂（约30%锂来自外购碳酸锂），价格升高成本增加
+        net_margin = base_margin - li2co3_per_kg * 0.30 * price_delta
+    else:
+        # 湿法/火法：锂是产出，价格升高收入增加
+        net_margin = base_margin + li2co3_per_kg * price_delta
+    # LCOR = -净收益（正值表示亏损，负值表示盈利）
+    lcor = -net_margin
+    # NPV = 净收益 × 处理量
+    npv = net_margin * mass_t * 1000
+    # MAC（边际减排成本）
     gwp_recycling = float(proc["gwp_kgCO2e_per_kg_material"]) * mass_t
     gwp_primary = 14.5 * mass_t * 1000 * li_content / 1000
     gwp_reduction = max(0, gwp_primary - gwp_recycling)
-    mac = net_cost / gwp_reduction if gwp_reduction > 0 else 0
+    mac = lcor * mass_t * 1000 / gwp_reduction if gwp_reduction > 0 else 0
     return {"scenario_id": f"{route}_{chemistry}_{li2co3_price_CNY_per_t}", "chemistry": chemistry,
         "route": route, "li2co3_price_CNY_per_t": li2co3_price_CNY_per_t,
-        "lcor_CNY_per_kg": round(lcor, 4), "npv_CNY": round(-net_cost, 0),
+        "lcor_CNY_per_kg": round(lcor, 4), "npv_CNY": round(npv, 0),
         "mac_CNY_per_tCO2e": round(mac, 2), "gwp_reduction_tCO2e": round(gwp_reduction, 1), "feasible": True}
 
 def run_echelon_tea():
