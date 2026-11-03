@@ -124,13 +124,69 @@ jobs:
             console.log('[Metadata] Collected task candidates:', taskCandidates);
 
             // ==========================================
-            // Tier 4: Dynamic Matching & Resolution Engine
+            // ==========================================
+            // Tier 4: Student Name, Lecture No, Date Extraction
+            // ==========================================
+            let studentName = null;
+            const nameInBody = body.match(/(?:Student Name|学生姓名)[^\n\r]*?[:：]\s*`?\[?\s*([a-zA-Z0-9_\-]+)/i);
+            if (nameInBody && !nameInBody[1].includes('姓名全拼') && !nameInBody[1].includes('例如') && nameInBody[1].trim() !== '') {
+              studentName = nameInBody[1].trim();
+            } else {
+              const branchParts = headRef.split('-');
+              if (branchParts.length >= 4) {
+                studentName = branchParts.slice(3).join('-');
+              } else {
+                studentName = pr.user.login || 'student';
+              }
+            }
+
+            let lectureNo = null;
+            // 4.1 From PR body
+            const lectureMatch = body.match(/(?:Lecture|讲次|第)\s*\[?\s*(\d{1,2})\s*\]?\s*(?:讲|)/i);
+            if (lectureMatch) {
+              lectureNo = lectureMatch[1].padStart(2, '0');
+            }
+            // 4.2 From branch name (e.g. lecture10, lec10, 20261027)
+            if (!lectureNo) {
+              const branchLec = headRef.match(/(?:lecture|lec)[_-]?(\d{1,2})/i);
+              if (branchLec) {
+                lectureNo = branchLec[1].padStart(2, '0');
+              } else if (/20261027/i.test(headRef)) {
+                lectureNo = '10';
+              } else if (/20261022/i.test(headRef)) {
+                lectureNo = '09';
+              }
+            }
+            // 4.3 From changed files
+            if (!lectureNo) {
+              for (const f of files) {
+                if (f.filename.includes('lecture10') || f.filename.includes('20261027') || f.filename.includes('FullEPM') || f.filename.includes('EPM')) {
+                  lectureNo = '10';
+                  break;
+                } else if (f.filename.includes('lecture9') || f.filename.includes('20261022')) {
+                  lectureNo = '09';
+                  break;
+                }
+              }
+            }
+            lectureNo = lectureNo || '09';
+            console.log(`[Metadata] Resolved Lecture No: "${lectureNo}"`);
+
+            let prDate = null;
+            const dateMatch = body.match(/(\d{4}-\d{2}-\d{2})/);
+            if (dateMatch) {
+              prDate = dateMatch[1];
+            } else {
+              prDate = new Date(Date.now() + 8 * 3600 * 1000).toISOString().split('T')[0];
+            }
+
+            // ==========================================
+            // Tier 5: Dynamic Matching & Resolution Engine
             // ==========================================
             const normalize = s => s.toLowerCase().replace(/[^a-z0-9]/g, '');
 
             let resolvedTask = null;
-            let resolvedTemplate = null;
-            let bestScore = -1;
+            let bestStarterScore = -1;
 
             for (const candidate of taskCandidates) {
               const normCandidate = normalize(candidate);
@@ -148,26 +204,9 @@ jobs:
                   if (cCase && sCase && cCase[1] === sCase[1]) score += 60;
                 }
 
-                if (score > bestScore) {
-                  bestScore = score;
+                if (score > bestStarterScore) {
+                  bestStarterScore = score;
                   resolvedTask = starter;
-                }
-              }
-
-              // Score candidate against known templates
-              for (const tpl of knownTemplates) {
-                const normTpl = normalize(tpl);
-                let score = 0;
-                if (tpl.includes(candidate)) score += 100;
-                else if (normTpl.includes(normCandidate) || normCandidate.includes(normTpl)) score += 80;
-                else {
-                  const cCase = candidate.match(/case[_-]?(\d+)/i);
-                  const tCase = tpl.match(/case[_-]?(\d+)/i);
-                  if (cCase && tCase && cCase[1] === tCase[1]) score += 60;
-                }
-
-                if (score > 40 && !resolvedTemplate) {
-                  resolvedTemplate = tpl;
                 }
               }
             }
@@ -177,40 +216,54 @@ jobs:
               resolvedTask = taskCandidates[0];
             }
 
-            console.log(`[Engine] Resolved Task: "${resolvedTask}" (Confidence Score: ${bestScore})`);
-            console.log(`[Engine] Resolved Template: "${resolvedTemplate}"`);
+            // Score known templates to find the best match (prioritizing lecture matching)
+            let resolvedTemplate = null;
+            let bestTplScore = -1;
 
-            // ==========================================
-            // Step 5: Student Name, Lecture No, Date Extraction
-            // ==========================================
-            let studentName = null;
-            const nameInBody = body.match(/(?:Student Name|学生姓名)[^\n\r]*?[:：]\s*`?\[?\s*([a-zA-Z0-9_\-]+)/i);
-            if (nameInBody && !nameInBody[1].includes('姓名全拼') && !nameInBody[1].includes('例如') && nameInBody[1].trim() !== '') {
-              studentName = nameInBody[1].trim();
-            } else {
-              const branchParts = headRef.split('-');
-              if (branchParts.length >= 4) {
-                studentName = branchParts.slice(3).join('-');
-              } else {
-                studentName = pr.user.login || 'student';
+            for (const tpl of knownTemplates) {
+              const normTpl = normalize(tpl);
+              let score = 0;
+
+              // 1. Lecture match bonus (huge weight: ensures lecture 10 matches lecture 10 template, lecture 9 matches lecture 9)
+              const tplLecMatch = tpl.match(/lecture(\d+)/i);
+              if (tplLecMatch) {
+                const tplLec = tplLecMatch[1].padStart(2, '0');
+                if (tplLec === lectureNo) {
+                  score += 150;
+                } else {
+                  score -= 50;
+                }
+              }
+
+              // 2. Candidate matching
+              for (const candidate of taskCandidates) {
+                const normCandidate = normalize(candidate);
+                if (tpl.includes(candidate)) score += 100;
+                else if (normTpl.includes(normCandidate) || normCandidate.includes(normTpl)) score += 80;
+                else {
+                  const cCase = candidate.match(/case[_-]?(\d+)/i);
+                  const tCase = tpl.match(/case[_-]?(\d+)/i);
+                  if (cCase && tCase && cCase[1] === tCase[1]) score += 60;
+                }
+              }
+
+              // 3. Keyword heuristics from branch, body, and changed files
+              const fullContext = (headRef + ' ' + body + ' ' + files.map(f => f.filename).join(' ')).toLowerCase();
+              if (fullContext.includes('methanol') && tpl.includes('methanol')) score += 40;
+              if (fullContext.includes('pet') && tpl.includes('pet')) score += 40;
+              if ((fullContext.includes('fullepm') || fullContext.includes('epm') || fullContext.includes('环境规划')) && tpl.includes('fullepm')) score += 60;
+
+              console.log(`[Template Matcher] Scored "${tpl}": ${score}`);
+
+              if (score > bestTplScore && score > 40) {
+                bestTplScore = score;
+                resolvedTemplate = tpl;
               }
             }
 
-            let lectureNo = '09';
-            const lectureMatch = body.match(/(?:Lecture|讲次|第)\s*\[?\s*(\d{1,2})\s*\]?\s*(?:讲|)/i);
-            if (lectureMatch) {
-              lectureNo = lectureMatch[1].padStart(2, '0');
-            }
+            console.log(`[Engine] Resolved Task: "${resolvedTask}" (Starter Confidence: ${bestStarterScore})`);
+            console.log(`[Engine] Resolved Template: "${resolvedTemplate}" (Template Confidence: ${bestTplScore})`);
 
-            let prDate = null;
-            const dateMatch = body.match(/(\d{4}-\d{2}-\d{2})/);
-            if (dateMatch) {
-              prDate = dateMatch[1];
-            } else {
-              prDate = new Date(Date.now() + 8 * 3600 * 1000).toISOString().split('T')[0];
-            }
-
-            // ==========================================
             // Step 6: Standardize PR Title and Labels
             // ==========================================
             const isDeliverable = f => {
