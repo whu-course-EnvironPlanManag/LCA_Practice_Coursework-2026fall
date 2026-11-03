@@ -1,0 +1,37 @@
+{
+  "scope": "湖北统计年鉴真实背景统计；不是电池退役预测或LCA-TEA结果",
+  "figures": [
+    {
+      "name": "fig0a_yearbook_private_cars",
+      "source_rows": 11,
+      "note": "来源：湖北统计年鉴2025，表1607。含各类燃料汽车；不能作为新能源车保有量或电池装机量。",
+      "exports": [
+        "PNG 300 DPI",
+        "PDF",
+        "SVG"
+      ]
+    },
+    {
+      "name": "fig0b_yearbook_electricity",
+      "source_rows": 20,
+      "note": "来源：湖北统计年鉴2025，表0607（止于2023年）。生产结构不等于消费侧绿电比例或LCA电网因子。",
+      "exports": [
+        "PNG 300 DPI",
+        "PDF",
+        "SVG"
+      ]
+    },
+    {
+      "name": "fig0c_yearbook_city_electricity",
+      "source_rows": 24,
+      "note": "来源：湖北统计年鉴2025，表1005。仅限原表12个城市；工业电量包含于全年电量，不是可新增用电容量。",
+      "exports": [
+        "PNG 300 DPI",
+        "PDF",
+        "SVG"
+      ]
+    }
+  ],
+  "input_sha256": "1e29e1abf0eb877c9c15eb0e0e8e41aa50ae3425c3816a7beb75eb4de04a33ac",
+  "selection": "58条背景记录中绘制11条私人汽车、20条省级电力、24条城市电力；另3条为不同口径/单位的单点产量或民用汽车总量，未混入上述系列。"
+}

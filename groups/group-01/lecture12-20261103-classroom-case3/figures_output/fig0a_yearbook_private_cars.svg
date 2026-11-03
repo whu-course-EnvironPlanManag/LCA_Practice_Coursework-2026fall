@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="720pt" height="417.6pt" viewBox="0 0 720 417.6" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-03T11:58:01.943022</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.0, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 417.6 
+L 720 417.6 
+L 720 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 61.04 327.184 
+L 708.12 327.184 
+L 708.12 27.9825 
+L 61.04 27.9825 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="m0d3f606c13" d="M 0 0 
+L 0 3.5 
+" style="stroke: #000000; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m0d3f606c13" x="90.452727" y="327.184" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="font-size: 9px; font-family: 'Microsoft YaHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="90.452727" y="341.378375" transform="rotate(-0 90.452727 341.378375)">2000</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#m0d3f606c13" x="213.005758" y="327.184" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="font-size: 9px; font-family: 'Microsoft YaHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="213.005758" y="341.378375" transform="rotate(-0 213.005758 341.378375)">2005</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3">
+      <g>
+       <use xlink:href="#m0d3f606c13" x="335.558788" y="327.184" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="font-size: 9px; font-family: 'Microsoft YaHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="335.558788" y="341.378375" transform="rotate(-0 335.558788 341.378375)">2010</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#m0d3f606c13" x="458.111818" y="327.184" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="font-size: 9px; font-family: 'Microsoft YaHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="458.111818" y="341.378375" transform="rotate(-0 458.111818 341.378375)">2015</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_5">
+      <g>
+       <use xlink:href="#m0d3f606c13" x="531.643636" y="327.184" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="font-size: 9px; font-family: 'Microsoft YaHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="531.643636" y="341.378375" transform="rotate(-0 531.643636 341.378375)">2018</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_6">
+      <g>
+       <use xlink:href="#m0d3f606c13" x="556.154242" y="327.184" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="font-size: 9px; font-family: 'Microsoft YaHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="556.154242" y="341.378375" transform="rotate(-0 556.154242 341.378375)">2019</text>
+     </g>
+    </g>
+    <g id="xtick_7">
+     <g id="line2d_7">
+      <g>
+       <use xlink:href="#m0d3f606c13" x="580.664848" y="327.184" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <text style="font-size: 9px; font-family: 'Microsoft YaHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="580.664848" y="341.378375" transform="rotate(-0 580.664848 341.378375)">2020</text>
+     </g>
+    </g>
+    <g id="xtick_8">
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#m0d3f606c13" x="605.175455" y="327.184" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_8">
+      <text style="font-size: 9px; font-family: 'Microsoft YaHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="605.175455" y="341.378375" transform="rotate(-0 605.175455 341.378375)">2021</text>
+     </g>
+    </g>
+    <g id="xtick_9">
+     <g id="line2d_9">
+      <g>
+       <use xlink:href="#m0d3f606c13" x="629.686061" y="327.184" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_9">
+      <text style="font-size: 9px; font-family: 'Microsoft YaHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="629.686061" y="341.378375" transform="rotate(-0 629.686061 341.378375)">2022</text>
+     </g>
+    </g>
+    <g id="xtick_10">
+     <g id="line2d_10">
+      <g>
+       <use xlink:href="#m0d3f606c13" x="654.196667" y="327.184" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_10">
+      <text style="font-size: 9px; font-family: 'Microsoft YaHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="654.196667" y="341.378375" transform="rotate(-0 654.196667 341.378375)">2023</text>
+     </g>
+    </g>
+    <g id="xtick_11">
+     <g id="line2d_11">
+      <g>
+       <use xlink:href="#m0d3f606c13" x="678.707273" y="327.184" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_11">
+      <text style="font-size: 9px; font-family: 'Microsoft YaHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="678.707273" y="341.378375" transform="rotate(-0 678.707273 341.378375)">2024</text>
+     </g>
+    </g>
+    <g id="text_12">
+     <text style="font-size: 11px; font-family: 'Microsoft YaHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="384.58" y="356.408844" transform="rotate(-0 384.58 356.408844)">年份（仅展示年鉴列示年份）</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_12">
+      <defs>
+       <path id="m0bb789bc1c" d="M 0 0 
+L -3.5 0 
+" style="stroke: #000000; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m0bb789bc1c" x="61.04" y="327.184" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_13">
+      <text style="font-size: 11px; font-family: 'Microsoft YaHei', 'DejaVu Sans', sans-serif; text-anchor: end" x="54.04" y="331.580562" transform="rotate(-0 54.04 331.580562)">0</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_13">
+      <g>
+       <use xlink:href="#m0bb789bc1c" x="61.04" y="273.982162" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_14">
+      <text style="font-size: 11px; font-family: 'Microsoft YaHei', 'DejaVu Sans', sans-serif; text-anchor: end" x="54.04" y="278.378725" transform="rotate(-0 54.04 278.378725)">200</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_14">
+      <g>
+       <use xlink:href="#m0bb789bc1c" x="61.04" y="220.780324" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_15">
+      <text style="font-size: 11px; font-family: 'Microsoft YaHei', 'DejaVu Sans', sans-serif; text-anchor: end" x="54.04" y="225.176887" transform="rotate(-0 54.04 225.176887)">400</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_15">
+      <g>
+       <use xlink:href="#m0bb789bc1c" x="61.04" y="167.578486" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_16">
+      <text style="font-size: 11px; font-family: 'Microsoft YaHei', 'DejaVu Sans', sans-serif; text-anchor: end" x="54.04" y="171.975049" transform="rotate(-0 54.04 171.975049)">600</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_16">
+      <g>
+       <use xlink:href="#m0bb789bc1c" x="61.04" y="114.376648" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_17">
+      <text style="font-size: 11px; font-family: 'Microsoft YaHei', 'DejaVu Sans', sans-serif; text-anchor: end" x="54.04" y="118.773211" transform="rotate(-0 54.04 118.773211)">800</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_17">
+      <g>
+       <use xlink:href="#m0bb789bc1c" x="61.04" y="61.17481" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_18">
+      <text style="font-size: 11px; font-family: 'Microsoft YaHei', 'DejaVu Sans', sans-serif; text-anchor: end" x="54.04" y="65.571373" transform="rotate(-0 54.04 65.571373)">1000</text>
+     </g>
+    </g>
+    <g id="text_19">
+     <text style="font-size: 11px; font-family: 'Microsoft YaHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="21.503594" y="177.58325" transform="rotate(-90 21.503594 177.58325)">私人汽车拥有量（万辆）</text>
+    </g>
+   </g>
+   <g id="line2d_18">
+    <path d="M 90.452727 314.535263 
+L 213.005758 311.313865 
+L 335.558788 283.187463 
+L 458.111818 211.76349 
+L 531.643636 142.587907 
+L 556.154242 120.960828 
+L 580.664848 103.00018 
+L 605.175455 85.259841 
+L 629.686061 69.531914 
+L 654.196667 54.520058 
+L 678.707273 41.62787 
+" clip-path="url(#p2abd9c67b3)" style="fill: none; stroke: #26747c; stroke-width: 1.6; stroke-linecap: square"/>
+    <defs>
+     <path id="mc165c7b388" d="M 0 3 
+C 0.795609 3 1.55874 2.683901 2.12132 2.12132 
+C 2.683901 1.55874 3 0.795609 3 0 
+C 3 -0.795609 2.683901 -1.55874 2.12132 -2.12132 
+C 1.55874 -2.683901 0.795609 -3 0 -3 
+C -0.795609 -3 -1.55874 -2.683901 -2.12132 -2.12132 
+C -2.683901 -1.55874 -3 -0.795609 -3 0 
+C -3 0.795609 -2.683901 1.55874 -2.12132 2.12132 
+C -1.55874 2.683901 -0.795609 3 0 3 
+z
+" style="stroke: #26747c"/>
+    </defs>
+    <g clip-path="url(#p2abd9c67b3)">
+     <use xlink:href="#mc165c7b388" x="90.452727" y="314.535263" style="fill: #26747c; stroke: #26747c"/>
+     <use xlink:href="#mc165c7b388" x="213.005758" y="311.313865" style="fill: #26747c; stroke: #26747c"/>
+     <use xlink:href="#mc165c7b388" x="335.558788" y="283.187463" style="fill: #26747c; stroke: #26747c"/>
+     <use xlink:href="#mc165c7b388" x="458.111818" y="211.76349" style="fill: #26747c; stroke: #26747c"/>
+     <use xlink:href="#mc165c7b388" x="531.643636" y="142.587907" style="fill: #26747c; stroke: #26747c"/>
+     <use xlink:href="#mc165c7b388" x="556.154242" y="120.960828" style="fill: #26747c; stroke: #26747c"/>
+     <use xlink:href="#mc165c7b388" x="580.664848" y="103.00018" style="fill: #26747c; stroke: #26747c"/>
+     <use xlink:href="#mc165c7b388" x="605.175455" y="85.259841" style="fill: #26747c; stroke: #26747c"/>
+     <use xlink:href="#mc165c7b388" x="629.686061" y="69.531914" style="fill: #26747c; stroke: #26747c"/>
+     <use xlink:href="#mc165c7b388" x="654.196667" y="54.520058" style="fill: #26747c; stroke: #26747c"/>
+     <use xlink:href="#mc165c7b388" x="678.707273" y="41.62787" style="fill: #26747c; stroke: #26747c"/>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 61.04 327.184 
+L 61.04 27.9825 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 61.04 327.184 
+L 708.12 327.184 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_20">
+    <text style="font-size: 13.2px; font-family: 'Microsoft YaHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="384.58" y="21.9825" transform="rotate(-0 384.58 21.9825)">湖北省私人汽车拥有量：年鉴背景统计</text>
+   </g>
+  </g>
+  <g id="text_21">
+   <text style="font-size: 9px; font-family: 'Microsoft YaHei', 'DejaVu Sans', sans-serif; fill: #555555" transform="translate(64.8 398.228062)">来源：湖北统计年鉴2025，表1607。</text>
+   <text style="font-size: 9px; font-family: 'Microsoft YaHei', 'DejaVu Sans', sans-serif; fill: #555555" transform="translate(64.8 409.098656)">含各类燃料汽车；不能作为新能源车保有量或电池装机量。</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p2abd9c67b3">
+   <rect x="61.04" y="27.9825" width="647.08" height="299.2015"/>
+  </clipPath>
+ </defs>
+</svg>
