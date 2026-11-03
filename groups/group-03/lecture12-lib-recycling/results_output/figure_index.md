@@ -1,0 +1,9 @@
+| 图号 | 文件名 | 一句话结论 | 数据来源脚本 |
+| :--- | :--- | :--- | :--- |
+| fig1 | fig1_retirement_timeseries.png | 2026-2040退役量与锂流量持续增长 | 01_dmfa_model.py |
+| fig2 | fig2_soh_triage.png | SOH三级分流决定梯次与再生比例 | 02_process_mfa.py |
+| fig3 | fig3_mfa_sankey.png | 元素级质量守恒误差<0.05% | 02_process_mfa.py |
+| fig4 | fig4_price_reversal.png | 碳酸锂价格波动导致经济性排序反转 | 04_echelon_tea.py |
+| fig5 | fig5_lca_contribution.png | 再生路径GWP显著低于原生硬岩锂 | 05_lca.py |
+| fig6 | fig6_sensitivity_heatmap.png | SOH阈值与价格对LCOR显著交互 | 06_pareto_sensitivity.py |
+| fig7 | fig7_pareto_front.png | 拐点方案平衡环境与经济目标 | 06_pareto_sensitivity.py |
