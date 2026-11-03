@@ -30,7 +30,23 @@ def evaluate_scenario(soh_threshold, green_ratio, route_mix, price_scenario):
     wastewater = sum(float(proc[r]["wastewater_recycle_rate"]) * w for r, w in zip(routes, weights))
     grid_cf = 0.581 * (1 - green_ratio) + 0.020 * green_ratio
     power_gwp = (energy_mj / 3.6) * grid_cf
-    total_gwp = gwp_per_kg + power_gwp
+    # ---- SOH 阈值耦合（复用 04_echelon_tea.py 的梯次模型公式, 参数源 soh_echelon_parameters.csv / 文献6）----
+    soh_init = 0.80          # 退役初始 SOH 均值（文献6: 70/80/90 情景的中位）
+    fade = 0.04              # ESS 场景年衰减率（soh_echelon_parameters.csv）
+    soh_t = max(0.40, min(soh_threshold, soh_init - 0.02))
+    echelon_years = max(0.5, (soh_init - soh_t) / fade)          # 梯次服务年限, 随终止阈值降低而延长
+    echelon_share = 0.50     # 经梯次利用后再生的电池比例（文献5 三级分流, 80-90% SOH 段占比）
+    cap_kwh_per_kg = float(chem_lfp["specific_energy_Wh_per_kg"]) / 1000 * soh_init  # 每kg电池可用容量kWh(0.16*SOH)
+    ech_rev = 0.68           # ESS 度电收益 CNY/kWh（soh_echelon_parameters.csv）
+    ech_refurb = 150.0       # 梯次改造一次性成本 CNY/kWh
+    ech_throughput = 2500.0  # 年等效循环 kWh/kWh·a
+    echelon_net = (echelon_years * ech_throughput * cap_kwh_per_kg * ech_rev
+                   - cap_kwh_per_kg * ech_refurb) / max(1.0, echelon_years)  # 年化净收益/每kg梯次电池
+    echelon_credit = echelon_share * echelon_net * echelon_years / (1 + echelon_years)  # 折算到再生环节的收益抵扣
+    new_batt_gwp_per_kwh = 65.0   # 新电池隐含碳强度 kgCO2e/kWh（文献6, 梯次替代新电池需求）
+    gwp_credit = (echelon_share * cap_kwh_per_kg * new_batt_gwp_per_kwh
+                  * min(1.0, echelon_years / 5.0))  # 梯次延寿避免的新电池生产排放
+    total_gwp = max(0.5, gwp_per_kg + power_gwp - gwp_credit)
     prices = {"low": 70000, "baseline": 154000, "high": 350000}
     li_price = prices[price_scenario]
     li_content = float(chem_lfp["li_content_kg_per_kg"])
@@ -39,7 +55,7 @@ def evaluate_scenario(soh_threshold, green_ratio, route_mix, price_scenario):
     li_revenue = li2co3_per_kg * li_price * hydro_weight / 1000
     li_cost = li2co3_per_kg * li_price * direct_weight * 0.3 / 1000
     opex = sum(float(proc[r]["opex_CNY_per_kg_battery"]) * w for r, w in zip(routes, weights))
-    lcor = opex + li_cost - li_revenue
+    lcor = opex + li_cost - li_revenue - echelon_credit
     scenario = {"li_recovery_rate": li_rec, "ni_recovery_rate": 0.98, "co_recovery_rate": 0.98,
         "mn_recovery_rate": 0.98, "electrode_powder_recovery": electrode_powder,
         "fluorine_fixation_rate": fluorine, "energy_kgce_per_t": energy_mj / 29.3 * 1000,
@@ -73,7 +89,7 @@ def find_knee_point(front):
         if dist < best_dist: best_dist = dist; knee = p
     return knee
 
-def run_pareto(n=600):
+def run_pareto(n=1200):
     random.seed(42); all_points = []
     for _ in range(n):
         soh_t = round(random.uniform(0.40, 0.90), 2)

@@ -8,12 +8,15 @@ import csv, importlib.util, os, sys
 import matplotlib; matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
+import matplotlib.pyplot as plt
+
+# macOS 中文字体
+plt.rcParams["font.sans-serif"] = ["Arial Unicode MS", "PingFang SC", "Hiragino Sans GB", "SimHei"]
+plt.rcParams["axes.unicode_minus"] = False   # 负号显示
 _HERE = os.path.dirname(os.path.abspath(__file__))
 _spec = importlib.util.spec_from_file_location("config", os.path.join(_HERE, "00_config.py"))
 config = importlib.util.module_from_spec(_spec); _spec.loader.exec_module(config)
 RESULTS_DIR, FIGURES_DIR, FIG_DPI = config.RESULTS_DIR, config.FIGURES_DIR, config.FIG_DPI
-plt.rcParams["font.sans-serif"] = ["SimHei", "Microsoft YaHei", "DejaVu Sans"]
-plt.rcParams["axes.unicode_minus"] = False
 
 def load_csv(name):
     with open(os.path.join(RESULTS_DIR, name), encoding="utf-8") as f:

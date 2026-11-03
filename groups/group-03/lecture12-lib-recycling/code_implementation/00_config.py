@@ -30,7 +30,7 @@ SOH_CBS_LOWER = 0.70
 GRID_CARBON_FACTOR = 0.581
 GREEN_CARBON_FACTOR = 0.020
 
-matplotlib.rcParams["font.sans-serif"] = ["SimHei", "Microsoft YaHei", "DejaVu Sans"]
+matplotlib.rcParams["font.sans-serif"] = ["Arial Unicode MS", "PingFang SC", "Microsoft YaHei", "SimHei", "Noto Sans CJK SC"]
 matplotlib.rcParams["axes.unicode_minus"] = False
 FIG_DPI = 300
 

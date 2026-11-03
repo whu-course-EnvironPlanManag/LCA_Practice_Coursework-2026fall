@@ -58,5 +58,45 @@ def run_dmfa():
     print(f"输出: {out}"); print("=" * 80)
     return results
 
+def run_weibull_sensitivity(eta=8.0, beta=3.2, repr_age=8.0):
+    """Weibull 参数 ±20% 敏感性：以 PDF 比值缩放文献基线退役量（文献3 预编译值不动）。
+    假设：退役车龄分布以均值 repr_age 年为代表点（文献3 退役滞后期 6-8 年）。"""
+    fleet = load_csv("fleet_parameters.csv")
+    chem = {r["chemistry"]: r for r in load_csv("battery_chemistry.csv")}
+    lfp_li = float(chem["LFP"]["li_content_kg_per_kg"])
+    nmc_li = float(chem["NMC811"]["li_content_kg_per_kg"])
+    base_pdf = weibull_pdf(repr_age, eta, beta)
+    rows = []
+    for label, e_f, b_f in [("eta-20%", 0.8, 1.0), ("eta-10%", 0.9, 1.0), ("base", 1.0, 1.0),
+                             ("eta+10%", 1.1, 1.0), ("eta+20%", 1.2, 1.0),
+                             ("beta-20%", 1.0, 0.8), ("beta+20%", 1.0, 1.2)]:
+        e2, b2 = eta * e_f, beta * b_f
+        scale = weibull_pdf(repr_age, e2, b2) / base_pdf
+        r30 = r40 = sec40 = 0.0
+        for row in fleet:
+            yr = int(row["year"])
+            ret = (float(row["lfp_retired_t"]) + float(row["nmc_retired_t"])) * scale
+            coll = float(row["collection_rate"])
+            if yr == 2030: r30 = ret
+            if yr == 2040:
+                r40 = ret
+                sec40 = (float(row["lfp_retired_t"]) * coll * 1000 * lfp_li
+                         + float(row["nmc_retired_t"]) * coll * 1000 * nmc_li) * 0.92 * scale
+        rows.append({"scenario": label, "eta_year": round(e2, 2), "beta": round(b2, 2),
+            "scale_factor": round(scale, 4), "retired_2030_t": round(r30, 0),
+            "retired_2040_t": round(r40, 0), "secondary_li_2040_kg": round(sec40, 0)})
+    out = os.path.join(RESULTS_DIR, "weibull_sensitivity.csv")
+    with open(out, "w", newline="", encoding="utf-8") as f:
+        w = csv.DictWriter(f, fieldnames=rows[0].keys()); w.writeheader(); w.writerows(rows)
+    print("=" * 80); print("Weibull 参数 ±20% 敏感性（缩放法，基线=文献3）"); print("=" * 80)
+    print(f"{'情景':<10}{'η(a)':>7}{'β':>6}{'缩放因子':>10}{'2030退役(t)':>14}{'2040退役(t)':>14}{'2040二次锂(kg)':>16}")
+    for r in rows:
+        print(f"{r['scenario']:<10}{r['eta_year']:>7}{r['beta']:>6}{r['scale_factor']:>10.3f}"
+              f"{r['retired_2030_t']:>14,.0f}{r['retired_2040_t']:>14,.0f}{r['secondary_li_2040_kg']:>16,.0f}")
+    print(f"输出: {out}"); print("=" * 80)
+    return rows
+
 if __name__ == "__main__":
     run_dmfa()
+    print()
+    run_weibull_sensitivity()
