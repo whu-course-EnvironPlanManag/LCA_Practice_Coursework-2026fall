@@ -1,0 +1,1218 @@
+nature energy
+
+Analysis                                                                                                https://doi.org/10.1038/s41560-024-01701-9
+
+
+Critically assessing sodium-ion
+technology roadmaps and scenarios for
+techno-economic competitiveness against
+lithium-ion batteries
+
+Received: 12 June 2024                              Adrian Yao      1,2
+                                                                          , Sally M. Benson3 & William C. Chueh              1,2,3
+
+
+
+Accepted: 13 December 2024
+
+Published online: 13 January 2025                   Sodium-ion batteries have garnered notable attention as a potentially
+                                                    low-cost alternative to lithium-ion batteries, which have experienced
+    Check for updates
+                                                    supply shortages and price volatility for key minerals. Here we assess their
+                                                    techno-economic competitiveness against incumbent lithium-ion batteries
+                                                    using a modelling framework incorporating componential learning curves
+                                                    constrained by minerals prices and engineering design floors. We compare
+                                                    projected sodium-ion and lithium-ion price trends across over 6,000
+                                                    scenarios while varying Na-ion technology development roadmaps, supply
+                                                    chain scenarios, market penetration and learning rates. Assuming that
+                                                    substantial progress can be made along technology roadmaps via targeted
+                                                    research and development, we identify several sodium-ion pathways that
+                                                    might reach cost-competitiveness with low-cost lithium-ion variants in the
+                                                    2030s. In addition, we show that timelines are highly sensitive to movements
+                                                    in critical minerals supply chains—namely that of lithium, graphite and
+                                                    nickel. Our modelled outcomes suggest that being price advantageous
+                                                    against low-cost lithium-ion variants in the near term is challenging and
+                                                    increasing sodium-ion energy densities to decrease materials intensity is
+                                                    among the most impactful ways to improve competitiveness.
+
+
+The energy transition requires massive deployment of batteries for            (nickel manganese cobalt oxide) and LFP-type (lithium iron phosphate)
+electric vehicles (EVs) and stationary energy storage systems (ESS).          cathode chemistries. However, rapid Li-ion demand growth has recently
+Lithium-ion (Li-ion) batteries have been responsible for nearly all new       placed a substantial burden on the minerals supply chain—namely that of
+deployments of storage in recent years1–3, largely enabled by the tre-        lithium, nickel, graphite and cobalt—resulting in a first-ever increase in the
+mendous cost declines over the past three decades of commercializa-           average Li-ion cell price index in 20223, which subsequently fell again as
+tion characterized by an aggressive learning rate where prices have           minerals prices plummeted7–9. This has prompted some to escalate con-
+fallen by more than 97% since they were first commercialized in 19914,5.      cerns regarding the possible overdependence on Li-ion and risks of pro-
+This trend is reflected in the average Li-ion cell prices shown in Supple-    duction bottlenecks, supply chain shocks and geopolitical constraints.
+mentary Fig. 1 aggregated from the industry data contributors to this               Sodium-ion (Na-ion) batteries present a potentially viable
+work1–3,6, which also resolves the diverging price trajectories of NMC-type   near-term substitute for Li-ion for two primary reasons: (1) increased
+
+
+Department of Materials Science and Engineering, Stanford University, Stanford, CA, USA. 2Applied Energy Division, SLAC National Accelerator
+1
+
+
+Laboratory, Menlo Park, CA, USA. 3Department of Energy Science and Engineering, Stanford University, Stanford, CA, USA.   e-mail: ayao2@stanford.edu;
+wchueh@stanford.edu
+
+
+Nature Energy | Volume 10 | March 2025 | 404–416                                                                                                       404
+Analysis                                                                                              https://doi.org/10.1038/s41560-024-01701-9
+
+abundance and availability of sodium suggests lower prices and               costs into a ‘noisy’ price floor of fuel commodities and improving costs
+(2) drop-in compatibility with Li-ion manufacturing infrastructure           of plant construction owing to technological learning19. In this case,
+suggests rapid scaling timelines. Therefore, in response to severe           however, we do not disaggregate the materials component learning
+post-COVID lithium price spikes, manufacturers recently announced            curves further into the technical factors identified above, and we high-
+over 240 GWh of Na-ion cell manufacturing pipeline through 203010,           light this area for future work.
+promising lower prices than Li-ion. However, exactly if, when and by               Once the floor-constrained learning curves are obtained for each
+how much Na-ion batteries will be price advantageous is still largely a      material component, they are subsequently summed according to
+matter of speculation.                                                       their mass or areal intensities derived from physically accurate cell
+       Learning curves have been widely used in forecasting techno-          modelling. To capture the steady decreases in materials intensities
+logical progress and price since patterns of improvement were first          over time (which have contributed greatly to Li-ion price declines so
+postulated by Wright for manufacturing airplanes11. The typical learn-       far4,5), we model cell designs in a bottoms-up fashion that are repre-
+ing curve (Wright’s law) predicts price reductions as a function of          sentative of past commercial products, present state-of-the-art and
+cumulative production (‘learning-by-doing’) and has been statistically       future designs considering anticipated improvements for materials
+shown to produce accurate forecasts across wide-ranging sectors12,           performance and cell engineering. On the basis of differences in materi-
+including energy technologies13. Given the industrial importance of          als intensities between cell designs, which are each ascribed to a point
+Li-ion batteries, several studies have sought to characterize their price    in time, we construct roadmaps by fitting curves with asymptotic limits
+trends using the conventional form of Wright’s law4,14–16 (equation (1) in   defined by theoretical or practical engineering limits. This approach
+Methods), whereas others have ascribed additional descriptors, such          is similar to previous literature disaggregating solar photovoltaic
+as learning-by-researching or economies-of-scale, to understand their        device-level price reductions based on observable technical factors
+historic trends4,5,17. However, conventional learning curves unrealisti-     such as silicon consumption and wafer sizes21. However, in this work,
+cally assume infinite cost reductions approaching zero, which neglects       we add resolution by fitting materials intensity curves for each compo-
+limits set by underlying minerals. Therefore, yet other approaches have      nent based on bottoms-up modelling, and we do not decompose the
+sought to additionally constrain the learning curve with a minerals          costs of manufacturing further into other technical factors. We justify
+price floor to produce more realistic projections18,19. It is worth noting   this based on knowing that battery cell costs are dominated by their
+that not all price floors or additional parameters can be assumed to         bill-of-materials, and we seek to specifically probe how materials and
+be effective. Price floors based on expert opinion, for example, have        cell design improvements can alter price trajectories. Our modelled
+historically been shown to be unrealistic20, and extra parameters have       manufacturing overhead cost trends therefore include cost savings
+been shown to reduce model performance owing to overfitting12.               from improved processing yield and economies-of-scale. To obtain
+       In this work, we propose an approach that combines componen-          bill-of-materials and manufacturing costs, we leverage the Battery
+tial, floor-constrained learning curves for individual material compo-       Performance and Cost (BatPaC) process-based model22 developed by
+nents with technical development roadmaps that also exhibit learning         Argonne National Laboratory to recreate cell designs (Methods). As
+behaviour to better forecast future price trends—balancing model             BatPaC specifically models state-of-the-art manufacturing, we only
+simplicity and physical accuracy. We then use this approach to forecast      use the manufacturing overhead cost component of present-day cell
+battery price trends for Li-ion and Na-ion under various technological,      designs and subsequently fit learning curves against historical data on
+market and supply chain conditions to identify strategies that improve       manufacturing costs to estimate future trends.
+the techno-economic competitiveness of Na-ion.                                     Our models rely upon a wide-ranging collection of sources
+                                                                             obtained from industry data contributors to ensure accuracy and
+Combining learning curves with technology                                    relevance. They include Benchmark Mineral Intelligence, Wood
+roadmaps                                                                     Mackenzie, BloombergNEF, Avicenne Energy, S&P Global and other
+We construct historical and forecasted aggregate price curves by incor-      commercial reports23,24 (Supplementary Table 1 summarizes the data
+porating knowledge of both (a) material component prices (in $ kg−1 or       sources of key mineral inputs). In addition, we validate and confirm
+$ m−2), which evolve via learning-by-doing as a function of cumulative       accuracy and relevance by surveying a panel of industry experts to
+experience, and (b) materials intensities (kg kWh−1), which evolve due       obtain inputs on realistic price figures, state-of-the-art cell designs
+to continued cell engineering and materials advancements as a func-          and production costs25.
+tion of time. We institute practical floors for both—using minerals price
+floors for the former and engineering limits for the latter. This approach   Establishing Li-ion baselines
+thus combines a modified Wright’s law and a modified Moore’s law,            We divide the effort to construct Li-ion baseline curves into two parts
+represented by equations (3) and (4) in Methods, respectively.               as discussed above: (a) establishing floor-constrained materials
+     For each material component in a battery cell, we construct indi-       component learning curves and (b) establishing physically accurate
+vidual learning curves and institute a price floor based on their known      technology roadmaps. We define 2023 as present day. Previous years
+elemental composition of benchmarkable key minerals, which dynami-           are designated historical and static, which inform parameter fitting.
+cally evolve with time. Therefore, each of our material component            Forward years are projected, driven by the inputs of minerals pricing
+costs comprises two elements: (1) a fluctuating materials price floor        and market growth forecasts.
+representing the weighted sum of underlying minerals from a time
+series of historical and forecasted prices, and (2) decreasing costs of      Li-ion materials component learning curves
+non-mineral inputs represented by a learning curve that scales with          An example procedure for establishing the floor-constrained materi-
+historical and forecasted market share. Non-mineral inputs include           als component learning curves is illustrated in Fig. 1 for NMC cathode
+costs associated with capital equipment, operating costs, production         material. Historical price assessments were tabulated from industry
+scrap from yield, chemical conversion inefficiencies and others. The         and literature sources to establish a time series starting at or before
+downward trajectory of the learning curve component is consistent            20102,5,23,26,27. We also collected data on historical production quanti-
+with expectations of technological improvements owing to process-            ties to enable calculation of cumulative ‘experience’. Both are shown in
+ing innovation and optimization as well as implicit assumptions of           Fig. 1a. Historical pricing for key minerals were obtained from industry
+economies-of-scale. By contrast, market-driven volatility is expected        data contributors1,2,28,29. Historical prices were also collected from the
+in the materials price floor component. This approach is analogous           United States Geological Survey (USGS) mineral commodity summa-
+to previous literature decomposing coal-fired electricity generation         ries dating back to 199130, and all price figures were inflation-adjusted
+
+
+Nature Energy | Volume 10 | March 2025 | 404–416                                                                                                  405
+Analysis                                                                                                                                                                                                                                            https://doi.org/10.1038/s41560-024-01701-9
+
+
+            Procedure                                                                                                             Historical                                                                                                                              Forecasted
+                                               a                                                                                                                                  e
+                                                                                                                    Historical NMC prices and demand                                                                                                              Forecasted NMC demand
+
+
+
+
+                                                                     Material price (USD2023 $ kg–1)
+   (a) Compile historical material                                                                                                                                  3,000                                                       5,000
+                                                                                                        80      NMC blend weighted average price                                                                                                             Historical demand (Avicenne)
+  components price and demand
+                                                                                                                                                                    2,500                                                                                    Demand fit
+
+
+
+
+                                                                                                                                                                                              Annual demand (kT)
+          assessments                                                                                           Industry sources (multiple)                                                                                     4,000
+                                                                                                        60                                                                                                                                                   Demand projection
+                                                                                                                                                                    2,000
+                                                                                                                                                                                                                                3,000
+
+                                                                                                        40                                                          1,500
+                                                                                                                                                                                                                                 2,000
+                                                                                                                                                                    1,000
+       (b) Compile historical                                                                           20          Demand (Avicenne)
+                                                                                                                                                                                                                                    1,000
+                                                                                                                    Demand fit                                      500
+           minerals prices
+                                                                                                        0                                                           0                                                                                0
+                                                                                                             2010   2012   2014    2016   2018 2020 2022 2024                                                                                         2015    2020       2025        2030        2035       2040
+
+
+                                               b                                                                                                                                  f
+  (c) Compute historical material                                                                                    Historical prices of key minerals                                                                                                       Forecasted prices of key minerals
+                                                                     120,000                                                                                                                                120,000
+   component price floors from                                                                                                Averages ± 95% CI                                                                                                                       Averages ± 95% CI
+                                                                                                                    Lithium                                                                                                                                                                       Lithium
+
+
+
+
+                                         Price (USD2023 $ tonne–1)                                                                                                          Price (USD2023 $ tonne–1)
+     weighted sum of minerals
+                                                                     100,000                                        Nickel                                                                                 100,000                                                                                Nickel
+      based on stoichiometry
+                                                                                                                    Manganese                                                                                                                                                                     Manganese
+                                                                        80,000                                      Cobalt                                                                                         80,000                                                                         Cobalt
+
+                                                                        60,000                                                                                                                                     60,000
+
+                                                                        40,000                                                                                                                                     40,000
+(d) Fit a learning curve as a function
+       of historical demand for
+                                                                         20,000                                                                                                                                     20,000
+  non-mineral costs so total prices
+       match historical material                                                                        0                                                                                                                                            0
+   component price assessments                                                                               2010   2012   2014    2016   2018 2020 2022 2024                                                                                         2015    2020       2025        2030        2035       2040
+
+
+                                               c                                                                                                                                  g
+                                                                                                                    Historical component price floors                                                                                                        Forecasted component price floors
+                                                                                                        60                                                                                                                                          60
+
+
+
+
+                                                                     Price floor (USD2023 $ kg–1)                                                                                                                  Price floor ([USD2023 $ kg )
+                                                                                                                                                                                                              –1
+                                                                                                                    NMC blend          Averages ± 95% CI                                                                                                        Averages ± 95% CI           NMC blend
+  (e) Project or obtain forecasted                                                                      50          LFP                                                                                                                             50                                      LFP
+    market demand for material                                                                                      Synthetic graphite                                                                                                                                                      Synthetic graphite
+                                                                                                        40                                                                                                                                          40
+            component                                                                                               Aluminium foil                                                                                                                                                          Aluminium foil
+                                                                                                                    Copper foil                                                                                                                                                             Copper foil
+                                                                                                        30                                                                                                                                          30
+
+                                                                                                        20                                                                                                                                           20
+
+                                                                                                        10                                                                                                                                           10
+   (f) Project or obtain forecasted
+            minerals prices                                                                             0                                                                                                                                            0
+                                                                                                             2010   2012   2014    2016   2018 2020 2022 2024                                                                                         2015    2020       2025        2030        2035       2040
+
+
+
+                                               d                                                                         NMC learning curve fitting
+                                                                                                                                                                                  h                                                                           Forecasted NMC materials price
+
+
+
+
+                                                                      Material price (USD2023 $ kg–1)                                                                                                              Material price (USD2023 $ kg )
+                                                                                                                                                                                                              –1
+ (g) Compute forecasted material                                                                                    Fitted learning cuve (LR = 14 ± 3%)                                                                                                      Fitted learning curve (LR = 14 ± 3%)
+                                                                                                        80                                                                                                                                          80
+ component price floors as in (c)                                                                                   Fitted LR + avg minerals floor (±95% CI)                                                                                                 Fitted LR + avg minerals floor (±95% CI)
+                                                                                                                    NMC average price                                                                                                                        NMC average price
+                                                                                                        60                                                                                                                                          60
+
+
+                                                                                                        40                                                                                                                                          40
+(h) Using learning rate fit from (d),
+   compute forecasted material
+component price based on sum of                                                                         20                                                                                                                                           20
+  learning curve and price floor
+         calculated in (g)                                                                              0                                                                                                                                            0
+                                                                                                             2010   2012   2014    2016   2018 2020 2022 2024                                                                                         2015    2020       2025        2030        2035       2040
+
+Fig. 1 | Establishing floor-constrained materials component learning curves.                                                                           Combining the learning curve with the price floor shown in c, a total material
+A step-by-step process (flowchart in the left column) of fitting material                                                                              component price can be obtained, which agrees with historical price
+component learning rates based on historical data (centre column) and then                                                                             assessments. e, Forecasted demand for NMC material based on market
+projecting future materials prices based on forecasted demand and minerals                                                                             projections obtained from industry partners. f, Forecasted minerals prices
+prices (right column). a, Historical material component price assessments                                                                              for the same key elements in b obtained from industry partners. g, Calculated
+for NMC cathode active material mapped against historical material demand                                                                              material component price floors based on forecasted minerals prices.
+obtained from industry sources. b, Historical prices of key benchmarkable                                                                              h, Forecasted material component prices obtained by combining the price floor
+minerals in NMC—namely lithium, nickel, manganese and cobalt—obtained from                                                                             shown in g with a continuation of the same learning curve obtained in d while
+industry sources. Shaded regions show 95% CI. c, Historical material component                                                                         keeping the learning rate parameter fixed. We recognize here our assumptions
+price floors representing a weighted sum of underlying minerals according to                                                                           that learning rates remain fixed over a forecasted timespan longer than the fitted
+their stoichiometric ratios. See Supplementary Note 2 and Supplementary Figs. 4                                                                        historical data. Long-term minerals price forecasts are also based on expert
+and 5 for details on capturing the evolution in NMC stoichiometry—represented                                                                          opinion of industry partners. Therefore, these forecasted prices represent a
+here as an ‘NMC blend’. Price floors of other material components also shown.                                                                          simulated future based on best knowledge today. See Supplementary Note 4 for
+d, Fitting a learning curve for the non-mineral cost components of NMC.                                                                                additional high/mid/low minerals price simulations.
+
+
+
+to USD2023. Aggregated minerals prices are shown in Supplemen-                                                                                         according to their stoichiometric ratios to produce a material com-
+tary Fig. 2, but a subset of the benchmarkable minerals comprising                                                                                     ponent price floor, shown in Fig. 1c (see Supplementary Note 1 for
+NMC—lithium, nickel, manganese and cobalt—are shown in Fig. 1b.                                                                                        additional details, Supplementary Table 2 for a comprehensive list of
+Subsequently, the weighted sum of each mineral component is added                                                                                      material components and their compositions, and Supplementary Fig. 3
+
+
+Nature Energy | Volume 10 | March 2025 | 404–416                                                                                                                                                                                                                                                           406
+Analysis                                                                                               https://doi.org/10.1038/s41560-024-01701-9
+
+for calculated component price floors for key materials). For NMC-type             Finally, combining material component price forecasts and materi-
+materials that have historically experienced an evolution in stoichiom-      als intensity roadmaps per equation (12), complete Li-ion price curves
+etry, we take a volume-weighted average of each ‘nodal’ composition          were constructed as shown in Fig. 2c for LFP (NMC component curve
+to reflect a representative blend at every time step (Supplementary          stack-up shown in Supplementary Fig. 26). The final LFP price curve
+Note 2 and Supplementary Figs. 4 and 5). Finally, with knowledge of          is shown in Fig. 2d with predicted prices reaching $51 kWh−1 by 2030
+component price floors, actual historical price assessments and cumu-        assuming that lithium prices at the time are just under $22,000 tonne−1
+lative production experience, this sufficiently constrains the modified      (and as low as $45 kWh−1 if lithium prices are ~$10,500 tonne−1 per the
+Wright’s law to leave the learning rate as the only fitting parameter,       low price scenario in Supplementary Fig. 8 and Supplementary Note 4).
+per equation (3) in Methods. The learning curve then represents the          Supplementary Fig. 27 shows LFP and NMC price forecasts combined.
+non-mineral costs associated with the material component and is fit
+in a way so that the total (price floor + learning curve) matches histori-   Deconvoluting the sources of learning
+cal price assessments, shown in Fig. 1d. See Supplementary Note 3 for        Examining the fitted componential learning rates, learning rates appear
+additional comments on sources of uncertainty given data scarcity.           correlated with processing complexity, which may be anecdotally
+      Once a characteristic learning rate is established, forecasting        associated with the number of required control parameters during
+future prices can be performed based on forecasted market growth             production (a clearer definition and correlation of complexity to learn-
+and minerals pricing, assuming that learning rates do not change. It         ing rate is a subject of future work). Higher complexity processes (for
+is worth noting that endogeneity is expected between the two, but            example, cathode synthesis and cell assembly) tend to have higher rates
+we leave them independent. In addition, we recognize that the fore-          of learning, whereas lower complexity processes (for example, metal
+casted timespan is longer than that of the historical data used to fit the   foil and anode production) tend to have lower rates (see Supplemen-
+constant learning rate, but this provides a first-order approximation        tary Note 5 for further discussion). However, compared with previous
+sufficient for future simulation purposes. Forecasted Li-ion market          literature on Li-ion learning rates, we observe that our componential
+growth from several market intelligence sources were approximated            learning rates are all lower than the aggregate average rate experienced
+with Gompertz functions to obtain continuous curves (Methods and             by historical cell prices (Fig. 2b) of 21.1 ± 3.7% (refs. 3,4,14,15,17), which
+Supplementary Fig. 6), where the ‘LIB Base Case’ scenario assumes no         suggests that there must be another key contributor responsible for
+appreciable Na-ion deployment and LFP market penetration reach-              the aggressive price reductions in Li-ion. This can be explained by the
+ing 50% market share saturation by 2050 (Supplementary Fig. 7). This         technical advancements in the design of Li-ion cells over the past several
+can then be translated to NMC demand in Fig. 1e by mass. Forecasted          decades, now requiring substantially lower materials intensity on a
+minerals prices are again provided by data contributors and aggre-           per-kWh basis than before4,5. Specifically, the shift from cells optimized
+gated in Fig. 1f. As predicting future price movements of key minerals       for power to those optimized for energy enabled higher active material
+is inherently challenging, we also separately model fixed-price high/        utilization5,16,36. The steady improvements to material specific capaci-
+mid/low forecasted scenarios for lithium and nickel to test sensitivity      ties have also contributed to this phenomenon.
+(Supplementary Note 4 and Supplementary Figs. 8 and 9). Material                   Therefore, the aggressive Li-ion price trends appear to be a story
+component price floors can again be calculated (Fig. 1g). To ensure con-     of modest price reductions in materials from learning-by-doing com-
+tinuity between historical and forecasted materials price time series,       pounded by substantial engineering advancements and learnings. This
+both were constrained to converge on present-day (2023) pricing,             deconvolution of the traditional learning model into key constituent
+which were obtained from various industry sources and aggregated for         contributors is an important nuance to forecast realistic price trends
+robustness2,23,25–27 (a summary of Li-ion component price assessments        of incumbent and emerging technologies such as Li-ion and Na-ion,
+is presented in Supplementary Fig. 10). The final result is a material       respectively. To illustrate, Fig. 2d additionally compares price forecasts
+component price forecast that is responsive to dynamic minerals price        of LFP cells using our method—accounting for minerals price and engi-
+movements as well as market penetration (Fig. 1h).                           neering design floors—against the typical unconstrained single-factor
+      We repeat the above procedure for a full set of material compo-        learning curve form of Wright’s law (equation (1) in Methods) utiliz-
+nents used in Li-ion batteries, including various cathode material           ing the historical average Li-ion rate. This curve nearly intersects the
+chemistries. Whereas NMC was used as an illustrative example above,          calculated LFP minerals price floor in 2050, which may be unrealistic
+hereafter we focus on LFP in the Main Text as it is widely considered the    and overly optimistic.
+more relevant comparison with Na-ion with respect to performance and
+cost. Using the same methodology, the price forecast for LFP material        Forecasting Na-ion cell development roadmaps
+is shown in Fig. 2a. The remaining material price curves are presented       Like Li-ion, Na-ion is an umbrella term encompassing several mate-
+in Supplementary Figs. 11–18, and their fitted learning rates are sum-       rial chemistries generally categorized by cathode material classes.
+marized in Fig. 2b compared with average historical Li-ion learning          They include transition metal layered oxides, polyanions and Prussian
+rates aggregated from previous literature3,4,14,15,17.                       Blue analogues37. Recent commercialization efforts indicate strong
+                                                                             momentum behind (i) layered oxides with a general formula of Nax(M)
+Li-ion technology roadmaps                                                   O2 (x ~ 1, M = Ni, Fe, Mn, Cu) with NaNixMny(M)1−x−yO2 (NaNM) being the
+To establish Li-ion technology roadmaps, physically accurate models          most common and (ii) vanadium-free mixed polyanions with the for-
+of NMC and LFP cell designs representing past and present were devel-        mula Na4Fe3(PO4)2(P2O7) (NFPP)25. In almost all instances, disordered
+oped. Present cell designs were modelled based on recent teardowns           hard carbons (HCs) are used as Na-ion anode materials instead of the
+of state-of-the-art commercial cells published in literature31–33. Past      crystalline graphite used in Li-ion batteries owing to their low sodium
+cell designs were also modelled based on previously published com-           storage capacities38. Alternative anodes to HCs include emerging tech-
+mercial cell teardowns in literature and industry reports documenting        nology directions such as (i) metallic tin (Sn) that alloys with sodium39
+engineering progress at the time of their publication34–36 (Supplemen-       or (ii) ‘anode-free’ configurations that electrodeposit and strip sodium
+tary Figs. 19–23). This enabled fitting of materials intensity trends that   metal directly on current collectors40,41. Here, in reference to NaNM,
+correspond with development roadmaps (Supplementary Figs. 24 and             we specifically model NaNi0.33Mnx(M)0.67−xO2, where M includes Mg
+25). Note here that we do not model next-generation Li-ion roadmaps          and Ti dopants and that are currently being commercialized42–44. As
+(lithium manganese iron phosphate cathodes, silicon anodes and so on),       the non-nickel transition metals contribute negligible minerals costs
+which could substantially reduce materials intensity. Thus, our analysis     and redox activity44, our NaNM archetype also functionally represents
+presents a conservative case of anticipated price reductions for Li-ion.     compositions such as NaNi0.33Fe0.33Mn0.33O2 (NFM111). Given the recent
+
+
+Nature Energy | Volume 10 | March 2025 | 404–416                                                                                                      407
+Analysis                                                                                                                                                                                                                                     https://doi.org/10.1038/s41560-024-01701-9
+
+
+                      a                                                    LFP cathode material price curve fitting                                                                     b                                 Comparing fitted learning rates with historical LIB ranges
+                                                            70                                                                                      4,000                                                            35
+                                                                        Non-mineral costs (ref. Avicenne)                  Demand fit                                                                                           Historical range                    10−3      100       103        106
+
+
+
+
+                         Material price (USD2023 $ kg–1)
+                                                                        Minerals input costs (ref. Avicenne)               Demand (ref. Avicenne)   3,500                                                                       Estimated avg LR           106
+                                                            60                                                                                                                                                       30         (min–max range)                            Historical LIB avg LR
+                                                                        Fitted learning curve (LR = 15±3%)
+                                                                        Fitted LR + avg minerals floor (±95% CI)                                                                                                                                                           21.1 ± 3.7%
+
+
+
+
+                                                                                                                                                            Annual demand (kT)
+                                                                                                                                                    3,000                                                                                          –1      104
+
+
+
+
+                                                                                                                                                                                               Learning rates (%)
+                                                            50                                                                                                                                                       25
+                                                                                                                                                                                                                                                   $ kWh
+                                                                        LFP average price
+                                                                        Industry sources (multiple)                                                 2,500                                                                                                  10
+                                                                                                                                                                                                                                                                2
+
+
+                                                            40                                                                                                                                                       20
+                                                                                                                                                    2,000                                                                                                  100
+                                                                                                                                                                                                                                                                            Cumulative GWh
+                                                            30                                                                                                                                                       15
+                                                                                                                                                    1,500
+                                                            20                                                                                                                                                       10
+                                                                                                                                                    1,000
+
+                                                            10                                                                                      500                                                               5
+
+                                                            0                                                                                      0                                                                  0
+                                                                 2010      2012     2015      2017     2020        2022        2025    2027     2030                                                                      LF     A    C  N at . LC
+                                                                                                                                                                                                                                         S y g ra O
+                                                                                                                                                                                                                            P   C   M       n. ph
+                                                                                                                                                                                                                                               gr ite
+                                                                                                                                                                                                                               N   N        El pha
+                                                                                                                                                                                                                                               ec it
+                                                                                                                                                                                                                                                 tr e
+                                                                                                                                                                                                                                             Se oly
+                                                                                                                                                                                                                                                p a te
+                                                                                                                                                                                                                                                   ra
+                                                                                                                                                                                                                                                C  u  to r
+                                                                                                                                                                                                                                                     fo
+                                                                                                                                                                                                                                                 Al il
+                                                                                                                                                                                                                                        M an O oil
+                                                                                                                                                                                                                                            uf the   f
+                                                                                                                                                                                                                                               ac rs
+                                                                                                                                                                                                                                                  tu rin g
+
+                      c                                          Forecasted LFP technology curve component stack-up                                                                     d                                       Forecasted baseline Li-ion technology curves
+
+
+
+
+              Component costs (USD2023 $ kWh–1)
+                                                           700                                                                                                                                                      250
+                                                                                                                   Estimated avg cell cost                                                                                                                           Compiled Li-ion overall average
+
+
+
+
+                                                                                                                                                                                 Cell price (USD2023 $ kWh–1)
+                                                           600                                                     Estimated range                                                                                                                                   LFP historical price range
+                                                                                                                   Manufacturing                                                                                200                                                  LFP average minerals floor
+                                                           500                                                     Other components                                                                                                                                  Forecasted LFP price curve average
+                                                                                                                   Negative current collector                                                                                                                        Single-factor LFP learning curve
+                                                                                                                                                                                                                    150
+                                                           400                                                     Positive current collector                                                                                                           All ranges shown are ± 95% CI
+                                                                                                                   Separator
+                                                           300                                                     Electrolyte
+                                                                                                                                                                                                                    100
+                                                                                                                   Negative active material
+                                                           200                                                     Positive active material
+
+                                                                                                                                                                                                                    50
+                                                           100
+
+                                                            0                                                                                                                                                        0
+                                                                 2010        2015        2020          2025           2030         2035         2040                                                                  2015       2020     2025             2030             2035       2040        2045   2050
+
+Fig. 2 | Componential floor-constrained construction of technology price                                                                                          from literature and industry reports—shown in inset. See Supplementary Note
+curves. a, Example material component price curve generation for LFP material.                                                                                    5 for details. c, Total price curve for LFP-type cells constructed by summing up
+A learning curve (in blue) is fit against historical conversion cost data to capture                                                                              all constituent material components based on cell design models that inform
+experience as cumulative production increases (grey bars and dashed black line),                                                                                  materials intensity per energy content stored. See Supplementary Fig. 26 for
+while a minerals price floor (in green) rides upon the learning curve. Reasonable                                                                                 equivalent plots for NMC. d, Forecasted LFP Li-ion price curve for the baseline
+agreement between the generated price curve and average prices collected                                                                                          scenario, showing good agreement with historical averages. A typical single-
+from industry sources is observed. b, Fitted learning rates for key Li-ion battery                                                                                factor learning curve using the historical average learning rate (established in b)
+(LIB) material components (NCA, nickel-cobalt-aluminium oxide; LCO, lithium                                                                                       is also shown for comparison with potentially overly optimistic outcomes. CIs
+cobalt oxide; Nat. graphite, natural graphite; Syn. graphite, synthetic graphite)                                                                                 capture underlying uncertainty in minerals prices, starting materials prices and
+compared against the historical average learning rate (LR) for Li-ion compiled                                                                                    learning rates.
+
+
+
+interest in replacing nickel with earth-abundant elements such as iron                                                                                           Methods for details on fitting trends with a modified Moore’s law. A
+and manganese owing to high costs, we also model a material such as                                                                                              summary of the modelled technical roadmaps is tabulated in Table 1.
+Na0.67Fe0.5Mn0.5O2 (NaFM). However, as these materials still suffer from                                                                                              Evaluating Roadmap ‘NaNM|HC 7’ as an example: a NaNM|HC
+unresolved performance challenges, we model technical roadmaps that                                                                                              Baseline cell design (Supplementary Fig. 30) evolves to experience
+gradually reduce nickel to 0% by ~2040 (Supplementary Note 6 and                                                                                                 an increase in HC specific capacity from 330 mAh g−1 to 400 mAh g−1,
+Supplementary Figs. 28 and 29)—analogous to the gradual reduction of                                                                                             an increase in cell operating voltage from 4.0 V to 4.2 V, and a 20%
+cobalt content in NMC cathodes over the years. This is modelled sepa-                                                                                            increase to NaNM specific capacity (to ~175 mAh g−1 measured from
+rately from roadmaps that maintain a static 33% nickel stoichiometry.                                                                                            2.0 V to 4.25 V) (Supplementary Fig. 36)—all by 2030. The resulting
+     The three key market segments modelled were stationary ESS, two/                                                                                            materials intensity trends are shown in Fig. 3a. Pricing for key Na-ion
+three-wheelers and micromobility (TTW/MM), and EVs. Specifically,                                                                                                materials components are obtained by surveying industry expert
+we consider three hypothetical Na-ion market growth scenarios with                                                                                               sources to ensure commercial relevance25 (Methods). These values
+increasing degrees of penetration, ranging from the most conservative,                                                                                           are summarized in Fig. 3b. Applying various learning rates and market
+100% Na-ion penetration into ESS by 2040, to the most aggressive, 100%                                                                                           growth assumptions, we forecast Na-ion price curves via our compo-
+penetration into ESS by 2035, 100% of TTW/MM by 2040 and 25% EVs by                                                                                              nential construction methodology. Figure 3c illustrates a scenario with
+2040 (Supplementary Fig. 6). Note that the most conservative market                                                                                              the most conservative market penetration (100% Na-ion penetration
+penetration scenario matches more closely to forecasts provided by                                                                                               into ESS by 2040; Supplementary Fig. 6) and with novel cumulative
+industry data contributors.                                                                                                                                      experience applied to the anode material only (Supplementary Note 7).
+     Given the importance of capturing engineering advancements on                                                                                                    It is worth highlighting our key assumptions. Here we assume
+techno-economics, we model a multitude of Na-ion cell development                                                                                                (1) drop-in compatibility with existing Li-ion manufacturing infra-
+roadmaps for NaNM|HC, NaFM|HC, NFPP|HC, NaNM|Sn, NaFM|Sn,                                                                                                        structure, which implies immediate high-yield production and no
+NFPP|Sn, NaNM|Anode-free and NaFM|Anode-free cell designs (see                                                                                                   new manufacturing learnings (Supplementary Note 7 and Supple-
+Supplementary Figs. 30–47 for details on 18 different Na-ion cell                                                                                                mentary Fig. 61), (2) decoupled market penetration and technology
+designs and Supplementary Figs. 48–60 for details on modelled                                                                                                    pricing, whereby endogeneity captured within a typical demand curve
+roadmaps). These roadmaps assume gradual improvements from                                                                                                       is ignored for the sake of modelling and understanding intervention
+state-of-the-art 2024 designs towards future technical advancements                                                                                              opportunities, and (3) transferable learning rates from Li-ion to Na-ion,
+by 2030 that increase energy densities and thereby reduce prices. See                                                                                            where cathodes, anodes and other components learn at their same
+
+
+Nature Energy | Volume 10 | March 2025 | 404–416                                                                                                                                                                                                                                                                 408
+Analysis                                                                                              https://doi.org/10.1038/s41560-024-01701-9
+
+
+Table 1 | Summary of modelled Na-ion technical development roadmaps including gravimetric and volumetric energy
+densities (GED and VED) of modelled large-format pouch cells
+
+Roadmap name         Starting cell design (2024)                     Improved cell design (2030)                           GED/VEDWh kg−1)/(Wh l−1)
+                                                                                                                        2024           2030
+
+ NaNM|HC 0           NaNM|HC Baseline                          ⇒      NaNM|HC Baseline (no improvements)                134/272
+ NaNM|HC 1           NaNM|HC Baseline                          ⇒      Increased electrode loadings                      134/272         142/295
+ NaNM|HC 2           NaNM|HC Baseline                          ⇒      Anode capacity increase to 400 mAh g  −1
+                                                                                                                        134/272         157/325
+ NaNM|HC 3           NaNM|HC Baseline                          ⇒      Cathode 20% capacity increase                     134/272         160/314
+ NaNM|HC 4           NaNM|HC Baseline                          ⇒      Anode and cathode capacity increase               134/272         174/347
+ NaNM|HC 5           NaNM|HC 4.2 V Baseline                    ⇒      Anode and cathode capacity increase at 4.2 V      134/272         196/376
+ NaNM|HC 6           NaNM|HC Baseline                          ⇒      Anode capacity increase to 400 mAh g−1 at 4.2 V   134/272         181/359
+ NaNM|HC 7           NaNM|HC Baseline                          ⇒      Anode and cathode capacity increase at 4.2 V      155/303         196/376
+ NaFM|HC 1           NaFM|HC Baseline                          ⇒      Increased electrode loadings                      134/272         142/295
+ NaFM|HC 2           NaFM|HC Baseline                          ⇒      Anode capacity increase to 400 mAh g  −1
+                                                                                                                        134/272         157/325
+ NaFM|HC 3           NaFM|HC Baseline                          ⇒      Cathode 20% capacity increase                     134/272         160/314
+ NaFM|HC 4           NaFM|HC Baseline                          ⇒      Anode and cathode capacity increase               134/272         174/347
+ NaFM|HC 5           NaFM|HC 4.2 V Baseline                    ⇒      Anode and cathode capacity increase at 4.2 V      134/272         196/376
+ NaFM|HC 6           NaFM|HC Baseline                          ⇒      Anode capacity increase to 400 mAh g−1 at 4.2 V   134/272         181/359
+ NaNM|Sn 0           NaNM|Sn Baseline                          ⇒      NaNM|Sn Baseline (no improvements)                185/476
+ NaNM|Sn 1           NaNM|Sn Baseline                          ⇒      Cathode 20% capacity increase                     185/476         216/551
+ NaFM|Sn 0           NaFM|Sn Baseline                          ⇒      NaFM|Sn Baseline (no improvements)                185/476
+ NaFM|Sn 1           NaFM|Sn Baseline                          ⇒      Cathode 20% capacity increase                     185/476         216/551
+ NFPP|HC 0           NFPP|HC Baseline                          ⇒      NFPP|HC Baseline (no improvements)                111/210
+ NFPP|HC 1           NFPP|HC Baseline                          ⇒      Increased electrode loadings                      111/210         119/226
+ NFPP|HC 2           NFPP|HC Baseline                          ⇒      Anode capacity increase to 400 mAh g−1            111/210         126/241
+ NFPP|Sn 0           NFPP|Sn Baseline                          ⇒      NFPP|Sn Baseline (no improvements)                137/305
+ NFPP|Sn 1           NFPP|Sn Baseline                          ⇒      Increased electrode loadings                      137/305         147/330
+ NaNM|AF 0           NaNM|Anode-free Baseline                  ⇒      NaNM|Anode-free Baseline (no improvements)        207/547
+ NaNM|AF 1           NaNM|Anode-free Baseline                  ⇒      Increased electrode loadings                      207/547         239/635
+ NaNM|AF 2           NaNM|Anode-free Baseline                  ⇒      Cathode 20% capacity increase                     207/547         283/734
+ NaFM|AF 0           NaFM|Anode-free Baseline                  ⇒      NaFM|Anode-free Baseline (no improvements)        207/547
+ NaFM|AF 1           NaFM|Anode-free Baseline                  ⇒      Cathode 20% capacity increase                     207/547         283/734
+
+
+respective rates between the two alkali chemistries. This last assump-    in 2024. The scenario variables evaluated are detailed in Supplemen-
+tion may be supported by the earlier observation that materials produc-   tary Table 3. For each scenario, the Li-ion and Na-ion price curves are
+tion with similar degrees of process complexity have similar rates of     calculated and compared, producing plots exemplified by those shown
+learning (Supplementary Note 5), but more aggressive learning rates       in Fig. 4a. This example illustrates a ‘NaFM|HC 2’ roadmap where an
+are also evaluated in our scenarios analysis below. We note that the      initially 33% nickel stoichiometry cathode evolves to ~0% by 2040 while
+first two assumptions enable a best-case scenario to model Na-ion’s       maintaining the same specific capacity, and an HC anode evolves to
+techno-economic competitiveness as a starting point. In addition, we      increase its specific capacity to 400 mAh g−1 by 2030. Owing to the
+do not include next-generation Li-ion roadmaps (lithium manganese         reduction in nickel content, the minerals price floor decreases sub-
+iron phosphate cathodes, silicon anodes and so on) to again evaluate      stantially between 2024 and 2035.
+a best-case scenario for Na-ion. We finally emphasize that here we              Given that the forecasted curves carry uncertainty from confi-
+are only assessing the technologies at the cell level with the price of   dence intervals (CIs) of minerals prices (Supplementary Fig. 2), starting
+stored energy ($ kWh−1) as the primary figure of merit. Therefore, this   materials prices (Fig. 3b) and learning rates (Fig. 2b), we use methods
+work does not capture systems-level considerations (for example,          established in previous forecasting literature45 to quantify expected
+potential savings on pack integration owing to enhanced safety or         timelines for price parity and advantage by calculating the probability
+reduced thermal management) or alternative performance-enabled            at each time step that one technology is lower priced than the other.
+economic considerations (for example, potentially lower levelized         These probability plots are shown in the right-hand side of Fig. 4a,b
+price of storage owing to increased cycle life). We address these addi-   comparing LFP against the modelled example Na-ion scenarios. We
+tional complexities in future work.                                       further define a ‘Price Parity’ condition as the point in which Na-ion has
+                                                                          ≥20% probability of being lower priced than LFP, and a ‘Price Advantage’
+Modelling scenarios to find conditions for                                condition when that probability exceeds 80%. The yellow hatched
+competitiveness                                                           regions in Fig. 4a,b therefore mark the periods in which a Na-ion tech-
+Using the above approach, we evaluate 6,048 combinations of sce-          nology and LFP are competitive in pricing and may be considered
+narios, all assuming GWh-scale production for Na-ion commences            substitutes, performance notwithstanding.
+
+
+Nature Energy | Volume 10 | March 2025 | 404–416                                                                                                  409
+Analysis                                                                                                                                                                                                                               https://doi.org/10.1038/s41560-024-01701-9
+
+
+  a                                                                                                                                                                                  NaNM | HC roadmap 7
+                                                                                                                                                                                component materials intensity trends
+                                                   Cathode AM                             Anode AM                              Electrolyte                                          Positive CC           Negative CC                Others                 Separator*                   Cell
+                                                                                1.2                                                                                          0.35
+                                   3.0                                                                                                                                                             0.35                      0.4
+                                                                                                                  2.0                                                                                                                                                        350
+                                                                                                                                                                                                                                                    15.0
+
+
+
+   Materials intensity
+                                                                                1.0                                                                                          0.30
+                                     2.5                                                                                                                                                           0.30                                                                      300
+                                                                                                                                                                                                                                                    12.5
+
+                                                                                                                                                                                                                                                                                                       Specific energy
+                                                                                                                                                                             0.25                                            0.3
+                                                                                0.8                                1.5                                                                             0.25                                                                      250
+                                    2.0
+                                                                                                                                                                             0.20                                                                   10.0
+                                                                                                                                                                                                   0.20                                                                      200
+
+
+
+
+(kg kWh–1 or *m2 kWh–1)
+                                                                                                                                                                                                                                                                                                          (Wh kg–1)
+                                       1.5                                      0.6                                                                                                                                          0.2
+                                                                                                                   1.0                                                       0.15                                                                     7.5
+                                                                                                                                                                                                   0.15                                                                       150
+                                      1.0                                       0.4
+                                                                                                                                                                             0.10                  0.10                                               5.0                    100
+                                                                                                                  0.5                                                                                                        0.1
+                                   0.5                                          0.2                                                                                          0.05                                                                     2.5
+                                                                                                                                                                                                   0.05                                                                        50
+
+                                           0                                     0                                  0                                                          0                     0                        0                        0                        0
+                                           10               30          50           10        30       50          10            30      50                                    10     30     50      10         30    50      10      30      50       10     30     50        10      30       50
+                                      20               20          20           20         20       20             20             20    20                                    20       20    20     20       20       20     20      20     20        20      20    20        20        20       20
+
+
+
+  b                                                           Surveyed Na-ion materials prices                                                   c                                   Forecasted NaFM | HC technology curve component stack-up
+                                           50                                                                                                                                200
+                                                                                          China avg ± 95% CI                                                                                                                                                              Estimated avg cell cost
+
+
+
+
+                                                                                                                                         Component costs (USD2023 $ kWh–1)
+                                                                                          Japan avg ± 95% CI                                                                  175                                                                                         Estimated range
+                                           40                                                                                                                                                                                                                             Manufacturing
+                                                                                                                                                                              150
+
+
+
+
+                  Material price ($ kg )
+                 –1
+                                                                                                                                                                                                                                                                          Other components
+                                                            n=3
+                                                                                                                                                                              125                                                                                         Negative current collector
+                                           30
+                                                                                                                                                                                                                                                                          Positive current collector
+                                                                   n=1
+                                                                                                                                                                             100                                                                                          Separator
+                                                                                                                                                                                                                                                                          Electrolyte
+                                           20
+                                                                                                                                                                               75                                                                                         Negative active material
+                                                                                          n=5                n=1
+                                                                                                                                                                                                                                                                          Positive active material
+                                                                                                                                                                              50
+                                           10
+                                                                                                n=3
+                                                       n=6                    n=2                                                                                             25
+                                                                                                                          n=3
+                                                                 n=5
+                                               0                                                                                                                               0
+
+                                                       HC         C             HC
+                                                                                                    P        Ti
+                                                                                                               n             te                                                 2015        2020          2025        2030          2035       2040          2045
+                                                               sH                         NM     FP                      ol
+                                                                                                                            y
+                                                  in        as            ite         N         N                    tr
+                                               es                      ac                                         ec
+                                           .r            om         r                                         el
+                                  en                   Bi         th                                      B
+                    Ph                                        An                                        NI
+Fig. 3 | Exemplary Na-ion price curve construction based on cell modelling,                                                                                                                         and the 95% CI indicates the high- and low-range estimates of prices. Note
+road mapping and realistic materials price assessments. a, Fitted materials                                                                                                                         that each source may provide more than one value if also providing a range
+intensity trends that approach asymptotic engineering floors (horizontal dashed                                                                                                                     (Methods). Phen., phenolic. c, Componential construction of Na-ion price curve
+lines), shown here for Roadmap ‘NaNM|HC 7’. AM, active material; CC, current                                                                                                                        for given technical roadmap. Predicted bounds illustrate CIs on the total curve
+collector. b, Surveyed price assessments for present-day Na-ion materials.                                                                                                                          from underlying uncertainty in minerals prices, starting materials prices and
+The number of surveyed sources per material component (n) are also shown,                                                                                                                           learning rates.
+
+
+
+
+      Figure 4b models an identical set of assumptions as Fig. 4a with                                                                                                                              industry practitioners and soliciting feedback reflecting the realities
+the exception of a hypothetical graphite supply shock in 2027 that                                                                                                                                  of technology commercialization46.
+causes a permanent offset in prices but continues to learn at the same                                                                                                                                   Thus, a key outcome from our scenarios modelling is to reveal key
+rate (see Supplementary Note 8 and Supplementary Fig. 62 for details).                                                                                                                              trends in the conditions enabling maximum Na-ion techno-economic
+This enables analysis of techno-economic competitiveness and risk                                                                                                                                   competitiveness. Figure 5 shows a clustered plot of all 6,048 scenarios
+considering potential supply chain disruptions. In the absence of a                                                                                                                                 categorized by gravimetric energy density and supply chain conditions,
+graphite supply shock condition as illustrated in Fig. 4a, the Price Par-                                                                                                                           where a strong dependence on both factors reasonably describes the
+ity timeline is extended from 2032 to 2035, and the Price Advantage                                                                                                                                 modelled timelines to Na-ion Price Advantage over LFP. When supply
+timeline is delayed substantially from 2038 to 2047. This large dispar-                                                                                                                             chain conditions are unfavourable for Li-ion (specifically LFP)—such as
+ity is a result of the similar slopes of the price curves, which are nearly                                                                                                                         high lithium prices, graphite supply shocks or both—Na-ion competi-
+coinciding during this period.                                                                                                                                                                      tiveness is accelerated across the board. By contrast, when supply chain
+                                                                                                                                                                                                    conditions are unfavourable for Na-ion (specifically nickel-containing
+Discussion                                                                                                                                                                                          chemistries), competitiveness is severely hindered. As indicated by the
+It is worth emphasizing that whereas our approach enables calcula-                                                                                                                                  trends from left to right, pursuing technology development roadmaps
+tion of timelines to Price Advantage, the primary value proposition is                                                                                                                              that maximize energy densities is important to accelerate timelines to
+understanding the impacts of various market scenarios on the viability                                                                                                                              competitiveness. Note that a large subset (2,522) of scenarios do not
+of competing technology roadmaps instead of predicting specific                                                                                                                                     produce conditions for Na-ion Price Advantage before 2050, repre-
+years in which we anticipate crossover. The uncertainty associated                                                                                                                                  sented by the open circles in Fig. 5. Importantly, however, this does not
+with market forces—minerals pricing, demand growth and geopolitical                                                                                                                                 mean that Na-ion is not competitive. A similar clustered plot as Fig. 5 in
+conflicts—simply makes it too challenging to predict exact timelines                                                                                                                                Supplementary Fig. 63 shows the timelines to Na-ion Price Parity with
+with accuracy and is not the key objective. By contrast, our approach                                                                                                                               LFP, illustrating that over 40% of all modelled scenarios reach a Price
+enables quantitative evaluation of the relative robustness of certain                                                                                                                               Parity condition on or before 2030, and the average ‘parity period’
+technology roadmap propositions to withstand potentially disrup-                                                                                                                                    spans 5.6 ± 3.6 years. With Na-ion being a competitive, viable substi-
+tive market forces, thereby increasing confidence or challenging                                                                                                                                    tute to Li-ion having similar price curves (assuming that performance
+assumptions in the risk-reward profile motivating pursuit of technology                                                                                                                             parity is achieved), any disruptions to the Li-ion supply chain will likely
+development. Central to this approach involves deeply engaging with                                                                                                                                 present Na-ion as an immediately price advantageous alternative.
+
+
+Nature Energy | Volume 10 | March 2025 | 404–416                                                                                                                                                                                                                                                       410
+   Analysis                                                                                                                                                                                                                                https://doi.org/10.1038/s41560-024-01701-9
+
+
+                                                                       a                                                          NaFM | HC 2 roadmap - NIB market penetration 1 - baseline Li and Ni
+                                                                                         200                                                                                                                 1.0
+
+
+
+
+                                                                                                                                                                        Probability of NIB price advantage
+                                                                                                                                 LFP historical range
+                                                                                         175                                     Forecasted avg LFP price ± 95% CI
+                                                                                                                                 LFP minerals floor                                                          0.8
+                                                                                         150
+
+
+
+
+                                                                  Cell price ($ kWh–1)
+                                                                                                                                 Forecasted avg NIB price ± 95% CI                                                 Advantage year
+                                                                                                                                 NIB minerals floor                                                                2047
+                                                                                         125                                                                                                                 0.6
+                                                                                         100
+
+                                                                                          75                                                                                                                 0.4
+                                                                                                                                                                                                                   Parity year
+                                                                                          50                                                                                                                       2035
+                                                                                                                                                                                                             0.2
+                                                                                          25
+
+                                                                                          0                                                                                                                   0
+                                                                                           2015         2020    2025     2030         2035   2040     2045       2050                                          2015      2020       2025    2030   2035   2040   2045   2050
+
+                                                                       b                                             NaFM | HC 2 roadmap - NIB market penetration 1 - baseline Li and Ni - graphite supply shock
+                                                                                         200                                                                                                                 1.0
+
+
+
+
+                                                                                                                                                                        Probability of NIB price advantage
+                                                                                         175
+                                                                                                                                                                                                             0.8
+                                                                                         150
+
+
+
+
+                                                                  Cell price ($ kWh–1)
+                                                                                                                                                                                                                   Advantage year
+                                                                                                                                                                                                                   2038
+                                                                                         125                                                                                                                 0.6
+                                                                                         100
+
+                                                                                          75                                                                                                                 0.4
+                                                                                                                                                                                                                   Parity year
+                                                                                          50                                                                                                                       2032
+                                                                                                                                                                                                             0.2
+                                                                                          25
+
+                                                                                          0                                                                                                                   0
+                                                                                           2015         2020    2025     2030         2035   2040     2045       2050                                          2015      2020       2025    2030   2035   2040   2045   2050
+
+   Fig. 4 | Comparative price curve assessments to evaluate techno-economic                                                                                                      Comparative price curves (left) and probability profiles (right) allow evaluation
+   competitiveness considering hypothetical Li-ion supply chain disruptions.                                                                                                     of Price Parity and Price Advantage timelines. The example shown in b has a
+   a,b, Example of Roadmap ‘NaFM|HC 2’ with a conservative market penetration                                                                                                    4-year timeframe (yellow) where Na-ion and LFP are closely competitive, whereas
+   (NIB Market Penetration 1), baseline lithium and nickel prices, and no                                                                                                        the example in a has a 12-year competitive timeframe.
+   graphite supply shock (a) or a hypothetical graphite supply shock (b) in 2027.
+
+
+
+
+                                                                                               Summary of modelled scenarios                  NIB price advantage                    For example, if lithium prices increase between now and 2027
+                                                                                                                                                 year with LFP
+                                                                                                                                                          2050                  and remain high (~$50,000 tonne−1 lithium carbonate equivalent
+
+
+
+
+                                     Unfavourable for LFP
+                                                                                                                                                                                (LCE); Supplementary Fig. 8 and Supplementary Note 4), over 55%
+                                                                                                                                                                                of all Na-ion technical roadmaps lead to a Price Advantage condition
+                                                                                                                                                          2045                  before 2035. By contrast, if lithium minerals prices remain low (around
+                                                                                                                                                                                $10,000 tonne−1 LCE; Supplementary Fig. 8 and Supplementary Note
+                                                                                                                                                                                4), there will be virtually no Na-ion development scenarios that will
+
+
+
+
+Supply chain conditions
+                                                                                                                                                          2040                  result in a Price Advantage condition without a coinciding supply chain
+                                                                                                                                                                                disruption in graphite (or potentially other Li-ion specific materials).
+                                                                                                                                                                                For reference, the spot price of lithium at the time of this writing (2024)
+                                                                                                                                                          2035                  averages $10,000–15,000 tonne−1—the result from oversupply of bat-
+                                                                                                                                                                                tery metals owing to a slump in EV sales in the latter half of 20237,47.
+
+                          Unfavourable for
+                                                                                                                                                                                Whether lithium prices can continue to stay low is thus a question
+                                                                                                                                                          2030                  with profound implications, especially on the competitiveness of
+                                                                                                                                                                                Na-ion batteries.
+
+                          Ni-containing chemistries
+                                                                                                                                                                                     The fastest and most certain way for Na-ion to be price advanta-
+                                                                                                                                                          2025                  geous is to reduce materials intensity by increasing materials and
+                                                                                                                                                                                cell-level energy densities. This is supported quantitatively in the
+                                                            100                                150             200              250            300
+                                                                                                                                                                                parameter sensitivity analysis shown in Fig. 6, where some of the big-
+                                                                                                     Specific energy (Wh kg–1)
+                                                                                                                                                                                gest drivers of forecasted Na-ion cell prices in 2030 and 2040 are acces-
+   Fig. 5 | Na-ion techno-economic competitiveness highly dependent                                                                                                             sible upper voltage cut-offs, cathode and anode specific capacities, and
+   on supply chain conditions and technology development roadmaps                                                                                                               electrode thicknesses. Increasing accessible upper voltage cut-offs
+   towards higher energy densities. Heatmap showing timelines to Price
+                                                                                                                                                                                (a capability specific to layered oxide cathodes with solid-solution
+   Advantage. Supply chain conditions ranked categorically here via summation
+                                                                                                                                                                                intercalation behaviour) simultaneously increases available specific
+   of integer increments/decrements of lithium, graphite and nickel supply
+                                                                                                                                                                                capacity and the nominal voltage, which unsurprisingly compounds
+   chain conditions according to Na-ion favourability—with increased nickel
+   commodity pricing being unfavourable to only nickel-containing Na-ion
+                                                                                                                                                                                to provide the largest feature importance. However, this is not always
+   layered oxide cathodes. For example, a high lithium price scenario (+1)                                                                                                      an available option owing to material limitations, gas release or chal-
+   coinciding with a graphite supply shock (+1) will produce a supply chain score                                                                                               lenges with power electronics upon systems integration25 (see caption
+   of +2. The x-axis is ranked by the specific energy density targets achieved by                                                                                               in Supplementary Fig. 30). Therefore, increasing specific capacity
+   2030 in the various roadmaps.                                                                                                                                                alone is an important strategy. In nickel-containing cathodes, this
+                                                                                                                                                                                can ideally be done in conjunction with minimizing nickel content
+
+
+   Nature Energy | Volume 10 | March 2025 | 404–416                                                                                                                                                                                                                               411
+Analysis                                                                                                                                                                                                  https://doi.org/10.1038/s41560-024-01701-9
+
+                                                                                                           Parameter sensitivity on forecasted NIB cell price
+
+                                                         1
+
+                                                                                                                                                                                                                                                          n=2
+
+
+
+
+                           Parameter sensitivity (%)
+                                                        0
+                                                                  n=4
+                                                        –1
+
+
+                                                       –2
+
+                                                             Sample n = 3 for all parameters unless otherwise noted
+                                                       –3
+                                                                  2030 avg sensitivity ± s.d.
+                                                       –4         2040 avg sensitivity ± s.d.
+
+
+                                                       1.4
+
+                                                       1.2
+
+
+
+
+                     Sensitivity magnitude (%)
+                                                       1.0
+
+                                                       0.8
+
+                                                       0.6
+
+                                                       0.4
+
+                                                       0.2
+
+                                                        0
+                                                e                     st                   st                    st                  st                g                  n                   s               es                 ty                 ty            ff
+                                              od )              co                    co                   co                     co                in                tio                  te              ss                 ci                 ci            -o
+                                           th ly                                                                                                 ic               tra                  ra                                  pa                 pa             ut nly)
+                                        ca s on           i n g
+                                                                                i n g
+                                                                                                     i n g
+                                                                                                                            i n g             pr                e                  n g                k ne               a                  a              c
+                                                        t                     t                    t                      t                 y                 n                  i                 ic                  c                  c                     o
+                                     in e            ar                    ar                   ar                     ar                it                 e                 rn                th                   c                  c                ge s
+                                 nt id            st                    st                   st                    st                 od                 tp                ea                                    ifi                ifi                ta e
+                               te ox rial                           n g                   te                  i al                  m               r ke                tl                o de                ec                ec                  vol oxid
+                             n     d                            r i                   l y                   r                     m              a                   n                   r                s p               s p                  r
+                           co re          at
+                                             e               tu                    ro                  at
+                                                                                                          e                   co              M                   ne               ec
+                                                                                                                                                                                       t
+                                                                                                                                                                                                      de                  e                   pe red
+                         el ye          m              ac                     ct                  m                     el                                    po               El                                      od                 up e
+                     i ck (la         e              uf                  E le                   e                   i ck                                   m                                    A no               th                 l e (lay
+                   N                d              n                                          d                                                          o                                                       a
+                               th
+                                  o
+                                               M
+                                                 a
+                                                                                        An
+                                                                                            o                    N
+                                                                                                                                                   ia
+                                                                                                                                                      lc                                                       C                  sib
+                            Ca                                                                                                                  er                                                                            es
+                                                                                                                                             at                                                                          A cc
+                                                                                                                                          M
+Fig. 6 | Increasing energy densities and reducing critical minerals content                                                                         accessible voltage cut-off) are specific to layered oxide cathodes only. A pattern
+are biggest levers to affect Na-ion cell prices. Parameter sensitivity analysis                                                                     emerges indicating that design directions that increase energy densities
+on the relative importance of features affecting Na-ion cell prices in 2030 (blue)                                                                  (accessible voltage, cathode and anode specific capacities, and electrode
+and 2040 (orange). Error bars show standard deviation of parameter sensitivity                                                                      thicknesses) are key drivers of price. In addition, the reduction of nickel content
+between multiple one-at-a-time (OAT) perturbations, and the bottom plot shows                                                                       in cathodes has a significant impact on the minerals price floor—more so than the
+the absolute values of parameter sensitivities to enable comparison. Certain                                                                        absolute price of nickel commodities. These provide guidance on road mapping
+features (for example, reducing nickel content in cathodes and increasing                                                                           directions to maximize the techno-economic competitiveness of Na-ion.
+
+
+
+
+owing to its relative feature importance. It is worth noting here that the                                                                         alloy-based anodes appear to be effective tools to lower costs in the
+uncertainties associated with fitted learning rates and starting prices                                                                            short term but may require cathode improvements to stay competi-
+of material components (which are further elaborated in Supplemen-                                                                                 tive in the long term.
+tary Note 3) are unlikely to affect the conclusions significantly owing                                                                                  An alternative design direction is to forgo an anode material alto-
+to the low variability in present-day price assessments compounded                                                                                 gether and opt for an anode-free cell configuration. This of course
+with the lower sensitivity of both learning rates and starting costs to                                                                            would require higher-risk innovation but may not require substantial
+the forecasted outcomes as illustrated in Fig. 6.                                                                                                  improvements to current-generation Na-ion cathode technology.
+     Increasing the specific capacity of HC anodes is yet another critical                                                                         Roadmap ‘NaNM|AF 1’, for example, does not assume any improve-
+design direction identified. With low tap and calender densities, HCs                                                                              ments to cathode specific capacity and only assumes an increase
+impose practical thickness limitations that relegate a balanced cathode                                                                            in areal capacity loadings of state-of-the-art nickel-based layered
+to low areal capacity loadings (mAh cm−2). Knock-on effects include                                                                                oxides while maintaining a modest upper cut-off voltage of 4.0 V.
+requiring more electrolyte volume to saturate increased porosity                                                                                   However, advanced separators, electrolytes and/or current collectors
+within electrodes. In addition, the aggressively slopey voltage profiles                                                                           required to enable anode-free designs must do so without reversing the
+of HCs limit the deliverable cell energy, which negatively impacts cost                                                                            techno-economic argument. Here we highlight the importance of using
+performance48. For these reasons, HCs may enable the first genera-                                                                                 such a techno-economic toolkit to drive research decision-making as
+tion of Na-ion batteries to demonstrate commercial viability but may                                                                               opposed to applying it post facto.
+require considerable specific capacity improvements (>400 mAh g−1)                                                                                       Finally, despite NFPP cathodes being less than half the cost of NNM
+or outright replacement to enable long-term techno-economic com-                                                                                   and exhibiting a low minerals floor, the confluence of three technical
+petitiveness with Li-ion.                                                                                                                          parameters—low specific capacity, low tap density and low voltage—
+     Replacing HCs with alloying anodes, such as tin, is one approach                                                                              presents challenges to outright advantage on a $ kWh−1 basis. Its volu-
+to substantially increase anode specific capacity. In our models,                                                                                  metric capacity (mAh cm−3) is even lower than that of HCs, which results
+however, despite a NaNM|Sn baseline cell starting off ~30% lower                                                                                   in low areal capacity loadings. Necessary routes to compete therefore
+price than a NaNM|HC cell, its observed price curve appears to fall at                                                                             likely require dry electrode processing to enable ultra-thick electrodes
+a slower rate. This is explained by the minerals price floor and engi-                                                                             and incorporating alloy-based anodes to increase energy density.
+neering design floor of metallic tin both leaving little room for further                                                                          However, we again note that cell-level prices do not adequately capture
+improvements on cost and material-level performance. Therefore,                                                                                    other critical performance features, and NFPP-based Na-ion cells may
+
+
+Nature Energy | Volume 10 | March 2025 | 404–416                                                                                                                                                                                                                       412
+Analysis                                                                                                               https://doi.org/10.1038/s41560-024-01701-9
+
+prove more competitive at the systems level if safety, thermal robust-         accordingly. It also enables us to use actual quantities produced (in kT
+ness and cycle life metrics can be demonstrated to exceed those of LFP.        or Mm2, for example) in fitting historical data where such production
+     Both Figs. 5 and 6 illustrate that technical development roadmaps         data is available, and switch to using anticipated demand (in GWh) in
+are not only beneficial but also imperative to Na-ion’s techno-economic        projecting future price trends. Agreement on present pricing is there-
+competitiveness. Relying solely on learning-by-doing from scaling the          fore all that is required to yield continuity between historical and
+production of material components is insufficient to compete with the          forecasted prices. In this paper, we implement dynamically varying
+rapidly evolving Li-ion trends. Therefore, adjusting between the most          minerals price floors obtained from historical and forecasted price
+conservative and aggressive market penetration scenarios yielded               trends to capture the price evolution of individual component costs
+minimal feature importance on future Na-ion prices. Similarly, adjust-         of a battery. This enables us to capture individual learning rates, market
+ing material component learning rates to higher-than-typical (‘Aggres-         growth rates and price floors between material components, which
+sive’) values of 20 ± 3% for the Na-ion cathode, anode and electrolyte         are unlikely to always be the same.
+also had modest feature importance. These observations suggest that
+engineering advancements are a greater lever to affect prices than the         Physically accurate technology roadmaps
+limited room for materials price reductions via learning-by-doing. This        To capture the evolution of materials intensities within cell designs
+increases the likelihood of competitiveness, as price reductions do            owing to technical advancements in materials performance and
+not rely on a chicken-and-egg problem with capturing market share.             cell engineering, we implement a modified Moore’s law to capture
+     In closing, Na-ion deserves considerable research, development            improvements as a function of time. We first model physically accu-
+and commercialization attention. We caution against assumptions                rate cell designs via bottoms-up modelling to obtain exact materials
+and promises of immediate or near-term (pre-2030) price advantage              intensities for each component (in kg kWh−1 or m2 kWh−1) based on the
+against Li-ion, specifically LFP, but believe that it has a critical role to   bill-of-materials. Cell designs are then assigned to specific years that
+play in the energy transition as a viably scalable Li-ion substitute under     represent the requisite technological progress, and we fit a curve with
+circumstances of supply chain volatility. Therefore, we believe invest-        an asymptotic limit defined by theoretical or practical engineering
+ing in Na-ion development roadmaps to maintain a competitive track             limits. The curve follows the form
+with Li-ion would be prudent. In the same vein, investments in Li-ion
+supply chain security should not be foregone given the demonstrated                                                        M = Mmin + Ae−b∗(t−t0 )                                           (4)
+sensitivity to supply shocks.
+     The ultimate objective of developing low-cost batteries is to ena-        where Mmin is defined by equations (6)–(11) for each material com-
+ble rapid deployment of energy storage in vehicular and stationary             ponent. Here the cathode and anode minimum materials intensities
+applications to meet the needs of the energy transition. These goals           are defined by their respective maximum theoretical specific capaci-
+must be met even in the face of rising geopolitical tensions and sup-          ties and allowable electrode thicknesses. The minimum electrolyte
+ply chain volatilities. It is therefore not only important to accurately       materials intensity is defined by the total pore volume within the elec-
+forecast price trends for incumbent technologies but also critical to          trodes only. The minimum separator materials intensity (in m2 kWh−1)
+understand competitive or substitutional opportunities for emerging            is defined by a maximum cathode thickness and therefore capacity
+technologies. Our proposed modelling framework herein enables such             loading. The minimum positive and negative current collector materi-
+an approach. Modelled outcomes help guide research endeavours and              als intensities are then calculated from the separator materials intensity
+inform strategic investments commensurate with the probability of              but converted to a mass basis (kg kWh−1) based on the densities and
+techno-economic competitiveness and commercial success.                        minimum practical thicknesses of the foils. For the other material
+                                                                               components category, the asymptotic limit Mmin is omitted as there
+Methods                                                                        is no basis for a minimum limit. In a similar fashion, the maximum
+Componential floor-constrained learning curves                                 theoretical cell-level specific energy is calculated by summing up a bal-
+The typical Wright’s learning curve follows the form                           anced anode- or cathode-limited unit-cell based on the provided limits,
+                                                                               where equation (4) is modified to approach an asymptotic maximum
+                                   Y = Ax−b                             (1)    as opposed to a minimum, with the form
+
+where the price of a technology Y at a given cumulative experience x is                                                    SE = SEmax − Ae−b∗(t−t0 )                                         (5)
+described by the price of the first unit A and a rate of price reduction b.
+Here the learning rate (or experience rate) is defined as the percentage           The equations defining the calculation of minimum materials
+price reduction after every doubling of cumulative experience, given by        intensities is as follows:
+
+                                 LR = 1 − 2−b                           (2)                                             kg       1      g      1    1
+                                                                                                    MCATtheo [             ]=         [    ]×      [ ]                                       (6)
+                                                                                                                       kWh    qCATtheo mAh    Ecell V
+
+    As established above, these curves have been demonstrated
+                                                                                                                        kg       1      g      1    1
+to accurately capture the price trends across various sectors in a                                  MANDtheo [             ]=         [    ]×      [ ]                                       (7)
+                                                                                                                       kWh    qANDtheo mAh    Ecell V
+technology-agnostic manner, but they can also overestimate price
+reductions when technologies approach their price floors dictated
+                                                                                               kg                          g                     εCATmin [%]
+by physical limits. In such scenarios, the equation can be modified to            MELYtheo [         ] = ρELY [                ]×{
+                                                                                               kWh                     cm3           ρCATtheo [g/cm3 ]×qCATtheo [mAh/g]
+incorporate a floor constraint, shown by                                                                                                                                                     (8)
+                                                                                                                                                 εANDmin [%]                     1      1
+                                              xt −b                                                               +NPRatio ×                                              }×           [ ]
+                                                                                                                                  ρANDtheo [g/cm3 ]×qANDtheo [mAh/g]           Ecell    V
+                     Y = (A0 − Afloor,0 ) (      )    + Afloor,t        (3)
+                                              x0
+                                                                                                                  m2
+     Here Afloor,0 and Afloor,t illustrate that the price floors can evolve                    MSEPtheo [              ]
+                                                                                                                kWh
+dynamically with time. Cumulative experience is also normalized for                                                                          2
+a more practical implementation of the general form in equation (1)                              =                                                                                           (9)
+                                                                                                      tCATmax [μm]×ρCATtheo [g/cm3 ]×qCATtheo [mAh/g]×(1−εCATmin [%])
+that enables one to use the known price and cumulative ‘incurred’                                           1      1
+                                                                                                      ×           [ ]
+experience of components in the present and backcast and forecast                                         Ecell    V
+
+
+
+Nature Energy | Volume 10 | March 2025 | 404–416                                                                                                                                             413
+Analysis                                                                                                                 https://doi.org/10.1038/s41560-024-01701-9
+
+
+                 kg                 m2                                                         than standard logistic functions18. The annual production capacity at
+   MPCCtheo [       ] = MSEPtheo [     ] × ρPCCtheo [g/cm3 ] × tPCCmin [μm]            (10)
+                kWh                kWh                                                         year t can be defined as
+                                                                                                                                         qn,sat
+                                                                                                              qn,t = qn,base exp [ln (           ) (1 − exp [−rn t])]   (13)
+               kg                 m2                                                                                                     qn,base
+   MNCCtheo [     ] = MSEPtheo [     ] × ρNCCtheo [g/cm3 ] × tNCCmin [μm]              (11)
+              kWh                kWh
+
+                                                                                               where qn,base , qn,sat and rn represent the starting annual production
+     For each material component, the A and b parameters in equation                           capacity, the annual production capacity upon market saturation
+(4) are fitted after the Mmin parameter is calculated. Occasionally, when                      and growth rate of component n, respectively. Notably, not all battery
+one parameter is assumed to not experience marked improvements,                                components experience the same market growth conditions. For
+such as the specific capacity of graphite (current values ~360 mAh g−1                         example, whereas the demand for graphite materials in tonnes per
+are already near the theoretical capacity), the fitted parameter b may                         annum scales closely with the cumulative demand of total Li-ion
+end up <0, making the exponential term >0 with a very shallow slope.                           batteries owing to it being the predominant anode chemistry, LFP
+This is an artefact of fitting, and we do not expect actual material per-                      and NMC materials will each scale at a lower rate owing to their frac-
+formance to decline with time. Therefore, in cases where the fitted b                          tional market share. With this, the cumulative capacity can be
+parameter ends up negative, we instead use a flat line with zero slope                         obtained from
+centred at the average of the fitted values. The engineering limits used
+                                                                                                                                           T
+in our modelling are summarized in Supplementary Table 4.                                                                       xn,t = ∑ qn,t                           (14)
+                                                                                                                                          t=0
+
+Combining the modified Wright’s law with the modified
+Moore’s law                                                                                    Minerals pricing
+After having established (a) floor-constrained learning curves and                             Each mineral dataset was converted into aggregate averages with a
+(b) materials intensities for each component scaling as a function of                          sample size of n ≥ 3 if including proprietary industry sources, or n = 1 if
+cumulative experience and time, respectively, we can combine them to                           data was only available from USGS. Owing to the proprietary nature of
+produce a generalized equation, which captures the overall cell price.                         each of the industry-supplied forecasts, the minerals pricing datasets
+This is represented in general form as                                                         are averaged at each time step with 95% CI to prevent traceability to any
+                                                                                               one data source using the formula
+            k
+                                           xn,t −bn                         xmfg,t −bmfg
+  Ycell = (∑ Mn,t × [(an0 − anfloor,0 )(        )   + anfloor,t ]) + amfg (        )                                                            σ
+            n
+                                           xn,0                             xmfg,0                                               μ ± 1.96                               (15)
+                                                                                       (12)                                                    √n
+
+   The first term of the right-hand side aggregates the individual
+                                                                                                    While USGS datasets do not provide minerals price forecasts,
+material component costs of a battery cell, each defined by its own
+                                                                      xn,t
+                                                                                               industry intelligence firms do, and we use their 2023 forecasts as our
+learning rate, −bn, normalized cumulative experience, (                      ), price floor,   baseline scenario for the key minerals (lithium, nickel, cobalt and so on)
+                                                                      xn,0
+anfloor,t , and a material intensity scalar, Mn,t , that captures the kg kWh−1                 looking forward. As expected, there is good agreement on historical
+or m2 kWh−1 contribution required for the representative modelled cell                         minerals pricing but notably larger variances between forecasts within
+design. Here n ∈ positive active material, negative active material,                           the next decade. Owing to inherently large uncertainties associated
+electrolyte, separator, positive current collector, negative current                           with forecasting prices of volatile minerals, we also perform analysis
+collector and others. While in practice, all material components will                          of self-generated fixed price scenarios (for example, high/mid/low)
+have hard physical limits of a price floor, some components have neg-                          on the key commodities to evaluate the sensitivity of outcomes (Sup-
+ligible minerals costs, including polyolefins and conductive carbons.                          plementary Note 4 and Supplementary Figs. 8 and 9).
+Therefore, for those materials, anfloor,t and anfloor,0 are zeroed. The second
+term of the right-hand side captures the costs associated with manu-                           Historical material component pricing
+facturing, including equipment depreciation, labour, scrap, SG&A,                              All prices obtained from industry and literature were inflation-adjusted
+other overheads, warranty and profit. Notably, this second term is an                          to USD2023. For any year with multiple data points, averages and CIs
+unconstrained learning curve as there is no direct physical basis to                           were calculated using the same methodology above. For tabulating
+institute a hard price floor. One may consider implementing manufac-                           annual production quantities (in kT or Mm2), gaps in data were inter-
+turing CapEx as a potential price floor, but as we do not yet have a clear                     polated using the requisite compound annual growth rates (CAGRs)
+methodology to firmly establish a minimum, we leave it unconstrained                           established by the bounding years for which data was available, where
+in this paper. Note that the learning parameter associated with manu-                          CAGR is defined by
+facturing costs inherently captures other technical factors such as                                                                             1/t
+processing yield improvements and economies-of-scale, which we do                                                                          P2
+                                                                                                                            CAGR = (          )       −1                (16)
+not further resolve in our current work. See Supplementary Fig. 64 for                                                                     P1
+fitting details. The materials intensity scalar is used to capture the
+improvements to cell design and active materials specific capacities,                          Cell modelling
+both of which are key contributors to historic cell price declines. This                       To accurately model cells, representative half-cell voltage versus
+componential approach captures the nuance that different compo-                                specific capacity (mAh g−1) curves of positive and anode material
+nents of a battery will experience different materials improvements,                           candidates (for example, LFP, NMC622, NMC811 and graphite) were
+learn at different rates, experience different market growth scenarios                         extracted from literature and were mathematically scaled to meet
+and be constrained by respectively different floors.                                           target electrode coating mass loadings, active mass fractions, areal
+                                                                                               capacity loadings and calender densities (and therefore porosities).
+     The above learning curves can be correlated with time by defining                         Importantly, first cycle (de)lithiation or (de)sodiation curves were uti-
+individual component market growth rates. Here we use Gompertz                                 lized in order to capture differences in first cycle efficiencies between
+sigmoidal functions to describe the annual demand of individual bat-                           positive and negative electrode pairings, and full cell voltage curves
+tery components, as they provide better fits to market projections                             were obtained by subtracting negative from positive. This approach
+
+
+Nature Energy | Volume 10 | March 2025 | 404–416                                                                                                                        414
+Analysis                                                                                               https://doi.org/10.1038/s41560-024-01701-9
+
+is critical to obtaining accurate predictions of realizable energy densi-    3.  Lithium-Ion Battery Pack Prices Rise for First Time to an Average of
+ties48 (Supplementary Fig. 65). Cell modelling details are discussed at          $151/kWh (BloombergNEF, 2022); https://about.bnef.com/blog/
+length in Supplementary Note 9, along with validation against experi-            lithium-ion-battery-pack-prices-rise-for-first-time-to-an-average-
+mental data in Supplementary Note 10, Supplementary Table 5 and                  of-151-kwh/
+Supplementary Figs. 66 and 67.                                               4. Ziegler, M. S. & Trancik, J. E. Re-examining rates of lithium-ion
+      Once the electrode balancing procedure is completed to obtain              battery technology improvement and cost decline. Energy
+accurate unit cell designs, the electrode parameters were inputted to            Environ. Sci. 14, 1635–1651 (2021).
+the BatPaC (v5.1) spreadsheet model produced by Argonne National             5. Ziegler, M. S., Song, J. & Trancik, J. E. Determinants of lithium-ion
+Laboratory22 to obtain exact mass and areal quantities per stored                battery technology cost decline. Energy Environ. Sci. 14,
+energy content (kg kWh−1 or m2 kWh−1). In addition, we leverage the              6074–6098 (2021).
+detailed manufacturing cost calculations within BatPaC to obtain             6. Benchmark Cell Prices Assessment (Benchmark Mineral
+the present-day manufacturing costs on a per-kWh basis. We take this             Intelligence, 2024).
+approach for the following reasons. (1) Despite being highly detailed in     7. Khan, Y. Low battery metal prices set to persist in 2024, adding
+modelling manufacturing-related costs, BatPaC has shortcomings in                friction to energy transition. The Wall Street Journal https://www.
+capturing the true voltage, capacity and energy characteristics of cells         wsj.com/articles/low-battery-metal-prices-set-to-persist-in-2024-
+owing to inherent limitations of a spreadsheet approach. Especially              adding-friction-to-energy-transition-3773ba00 (2023).
+considering occasional mismatched first cycle efficiencies between           8. Stoikou, E. Battery prices are falling again as raw material costs
+cathode and anode pairings and uniquely slopey or stepped voltage                drop. Bloomberg https://www.bloomberg.com/news/articles/
+curves of emerging Na-ion materials, the true energy (Wh)—which is               2023-11-26/battery-prices-are-falling-again-as-raw-material-
+the area underneath the voltage curve between capacity and voltage               costs-drop (27 November 2023).
+windows—can often be miscalculated. This may result in errors in             9. Lee, A. Nickel price crash seen extending Indonesia’s grip on
+calculating true $ kWh−1 (ref. 48). (2) We note that BatPaC only models          supply. Bloomberg https://www.bloomberg.com/news/
+large format (>60 Ah) pouch cells, whereas some of the cells modelled            articles/2024-01-22/nickel-price-crash-seen-strengthening-
+(for example, Tesla 4680 cylindrical cells) do not share the same for-           indonesia-s-grip-on-supply (22 January 2024).
+mat. However, we replicate all cell designs using BatPaC to enable           10. McNulty, R. & Williams, E. OPINION: why sodium ion batteries will
+systematic comparisons across generations and chemistries, and                   take longer than people think. Benchmark Source https://source.
+we also note that materials intensity, energy densities and manufac-             benchmarkminerals.com/article/opinion-why-sodium-ion-
+turing costs at the GWh scale will not deviate substantially between             batteries-will-take-longer-than-people-think (2023).
+formats. This general approach allows us to systematically evaluate          11. Wright, T. P. Factors affecting the cost of airplanes. J. Aeronaut.
+new cell designs and obtain cell manufacturing costs associated with             Sci. 3, 122–128 (1936).
+each design while being more nuanced in electrode balancing. See             12. Nagy, B., Farmer, J. D., Bui, Q. M. & Trancik, J. E. Statistical basis for
+Supplementary Note 11 for details on BatPaC Modifications made in                predicting technological progress. PLoS ONE 8, e52669 (2013).
+our modelling efforts.                                                       13. Schmidt, O., Melchior, S., Hawkes, A. & Staffell, I. Projecting the
+                                                                                 future levelized cost of electricity storage technologies. Joule 3,
+Current Na-ion material price assessment survey                                  81–100 (2019).
+To obtain present-day pricing of materials used in the nascent industry      14. Schmidt, O., Hawkes, A., Gambhir, A. & Staffell, I. The future cost
+of Na-ion batteries, we take the approach of surveying industry experts          of electrical energy storage based on experience rates. Nat.
+and reports with insights on actual current-day pricing24,25. We survey          Energy 2, 17110 (2017).
+from n = 11 sources on the key material components used in Na-ion bat-       15. Frith, J. T., Lacey, M. J. & Ulissi, U. A non-academic perspective
+teries. Not all sources were able to provide estimates for every material        on the future of lithium-based batteries. Nat. Commun. 14, 420
+component, but most material components had at least n = 3 sources.              (2023).
+If a given source provided a range of pricing corresponding to a low         16. Nykvist, B. & Nilsson, M. Rapidly falling costs of battery packs for
+and high estimate, both values were used to appropriately weight the             electric vehicles. Nat. Clim. Change 5, 329–332 (2015).
+samples instead of the mid-range value. Specifically for biomass- and        17. Kittner, N., Lill, F. & Kammen, D. M. Energy storage deployment
+phenolic resin-based HC materials, which can currently be sourced                and innovation for the clean energy transition. Nat. Energy 2,
+from producers in China and Japan at substantially disparate costs, we           17125 (2017).
+also delineate which region the prices are quoting. In our modelling, we     18. Hsieh, I.-Y. L., Pan, M. S., Chiang, Y.-M. & Green, W. H. Learning
+only use prices from China given the substantially higher concentration          only buys you so much: practical limits on battery price
+of Na-ion commercialization activity in that region. The results of our          reduction. Appl. Energy 239, 218–224 (2019).
+pricing survey are shown in Fig. 3b.                                         19. McNerney, J., Doyne Farmer, J. & Trancik, J. E. Historical costs of
+                                                                                 coal-fired electricity and implications for the future. Energy Policy
+Data availability                                                                39, 3042–3054 (2011).
+The minerals prices and forecasts, cell price assessments, material price    20. Way, R., Ives, M. C., Mealy, P. & Farmer, J. D. Empirically grounded
+assessments and market size forecasts are provided from third-party              technology forecasts and the energy transition. Joule 6,
+industry sources that have contributed to this work and are individually         2057–2082 (2022).
+considered proprietary. However, aggregate averages and confidence           21. Nemet, G. F. Beyond the learning curve: factors influencing
+intervals are published in this work, and such data are available in Excel       cost reductions in photovoltaics. Energy Policy 34, 3218–3232
+format in the Supplementary Information. Source data are provided                (2006).
+with this paper.                                                             22. Knehr, K. W., Kubal, J. J., Nelson, P. A. & Ahmed, S. Battery
+                                                                                 Performance and Cost (BatPaC) v5.1 Spreadsheet Model (Chemical
+References                                                                       Sciences and Engineering Division, Argonne National Lab, 2022).
+1.   Electric Vehicle & Battery Supply Chain: Strategic Planning Outlook     23. Wang, A. & Yiu, N. Battery Component Price Report December
+     to 2050 (Wood Mackenzie, 2023).                                             2023 (Intercalation Station, 2023).
+2.   Pillot, C. The Rechargeable Battery Market and Main Trends              24. Jephcott, B. Sodium-Ion Battery Market Research Report
+     2022–2030 (Avicenne Energy, 2023).                                          (Golden Dragon Capital, 2024).
+
+
+Nature Energy | Volume 10 | March 2025 | 404–416                                                                                                       415
+Analysis                                                                                               https://doi.org/10.1038/s41560-024-01701-9
+
+25. Barker, J. et al. Industry Expert Panel (Personal Communication, 2024).   Foundation Graduate Research Fellowship Program (award number
+26. Anode Prices (Benchmark Mineral Intelligence, 2024).                      DGE-2146755; A.Y.). We thank the panel of industry consultants/
+27. Cathode Prices (Benchmark Mineral Intelligence, 2024).                    experts cited throughout the work, including those that provided
+28. Minerals Price Forecasts (Benchmark Mineral Intelligence, 2024).          written feedback/critique of the paper draft46. They include J. Barker,
+29. Battery Materials Pricing Data (S&P Capital IQ, 2023).                    C. Wessells (Natron Energy), B. Kelly (Peak Energy), S. Gore (Bedrock
+30. Mineral Commodity Summaries 2024 (United States Geological                Materials), A. Wang, D. Tan (Unigrid), L. Jing (Tesla), T. Evans (Mana
+    Survey, 2024); https://www.usgs.gov/centers/national-minerals-            Battery), N. Singstock (Mana Battery), H. A. S. Platt (Mana Battery),
+    information-center/mineral-commodity-summaries                            K. He (TDK Ventures), F. Renard (Avicenne Energy), C. Pillot (Avicenne
+31. Stock, S. et al. Cell teardown and characterization of an automotive      Energy), W. Yen (LongTime Technologies), W. Hwang (LongTime
+    prismatic LFP battery. Electrochim. Acta 471, 143341 (2023).              Technologies), K. Rodby (Volta Energy Technologies), S. Lux
+32. Ank, M. et al. Lithium-ion cells in automotive applications:              (Universität Münster), J. Wesselkämper (Universität Münster), P. Voß
+    Tesla 4680 cylindrical cell teardown and characterization.                (Universität Münster), C. Parker (Ratel Consulting), M. Munjal (MIT), the
+    J. Electrochem. Soc. 170, 120536 (2023).                                  Boston Consulting Group and B. Spatocco (Lucid Motors). We finally
+33. Günter, F. J. & Wassiliadis, N. State of the art of lithium-ion           thank K. Bhuwalka, H. Ramachandran, J. Frohmann and A. Geslin for
+    pouch cells in automotive applications: cell teardown and                 their thoughtful comments and feedback on the paper. We especially
+    characterization. J. Electrochem. Soc. 169, 030515 (2022).                thank K. Bhuwalka and H. Ramachandran for collecting formal
+34. Barnett, B. et al. PHEV Battery Cost Assessment (TIAX LLC, 2010).         responses and summarizing learnings from industry convenings46.
+35. Gallagher, K. G. & Nelson, P. A. in Lithium-Ion Batteries (ed. Pistoia,
+    G.) 97–126 (Elsevier, 2014).                                              Author contributions
+36. Lain, M. J., Brandon, J. & Kendrick, E. Design strategies for high        A.Y.: conceptualization, methodology, modelling, data gathering,
+    power vs. high energy lithium ion cells. Batteries 5, 64 (2019).          data contributor relations, data curation, analysis, visualization,
+37. Tarascon, J.-M. Na-ion versus Li-ion batteries: complementarity           writing, project administration and funding acquisition. S.M.B.:
+    rather than competitiveness. Joule 4, 1616–1620 (2020).                   conceptualization, resources, review, editing, supervision and funding
+38. Xu, Z.-L. et al. Tailoring sodium intercalation in graphite for high      acquisition. W.C.C.: conceptualization, resources, review, editing,
+    energy and power sodium ion batteries. Nat. Commun. 10, 2598              supervision and funding acquisition.
+    (2019).
+39. Zhang, B. et al. Microsized Sn as advanced anodes in                      Competing interests
+    glyme-based electrolyte for Na-ion batteries. Adv. Mater. 28,             A.Y. is among the founders of EnPower, a manufacturer of Li-ion
+    9824–9830 (2016).                                                         batteries. W.C.C. is among the founders of Mitra Chem, a developer
+40. Yang, T., Luo, D., Liu, Y., Yu, A. & Chen, Z. Anode-free sodium metal     of LFP cathode materials. The other authors declare no competing
+    batteries as rising stars for lithium-ion alternatives. iScience 26,      interests.
+    105982 (2023).
+41. Chen, Y. et al. Prospects for practical anode-free sodium batteries.      Additional information
+    Mater. Today https://doi.org/10.1016/j.mattod.2024.01.002 (2024).         Supplementary information The online version contains supplementary
+42. Rudola, A. et al. Commercialisation of high energy density                material available at https://doi.org/10.1038/s41560-024-01701-9.
+    sodium-ion batteries: Faradion’s journey and outlook. J. Mater.
+    Chem. A 9, 8279–8302 (2021).                                              Correspondence and requests for materials should be addressed to
+43. Barker, J. The Path to the Successful Commercialization of                Adrian Yao or William C. Chueh.
+    Sodium-Ion Batteries. Stanford StorageX International Symposium
+    (Stanford University, 2022).                                              Peer review information Nature Energy thanks the anonymous
+44. Rudola, A., Sayers, R., Wright, C. J. & Barker, J. Opportunities for      reviewers for their contribution to the peer review of this work.
+    moderate-range electric vehicles using sustainable sodium-ion
+    batteries. Nat. Energy 8, 215–218 (2023).                                 Reprints and permissions information is available at
+45. Farmer, J. D. & Lafond, F. How predictable is technological               www.nature.com/reprints.
+    progress? Res. Policy 45, 647–665 (2016).
+46. Yao, A., Benson, S. M. & Chueh, W. C. How quickly can sodium-ion          Publisher’s note Springer Nature remains neutral with regard to
+    learn? Assessing scenarios for techno-economic competitiveness            jurisdictional claims in published maps and institutional affiliations.
+    against lithium-ion batteries. Preprint at https://arxiv.org/abs/
+    2403.13759 (2024).                                                        Open Access This article is licensed under a Creative Commons
+47. Liu, S. & Patton, D. China lithium price poised for further decline in    Attribution-NonCommercial-NoDerivatives 4.0 International License,
+    2024—analysts. Reuters https://www.reuters.com/markets/                   which permits any non-commercial use, sharing, distribution and
+    commodities/china-lithium-price-poised-further-decline-2024-              reproduction in any medium or format, as long as you give appropriate
+    analysts-2023-12-01/ (2023).                                              credit to the original author(s) and the source, provide a link to the
+48. Innocenti, A., Beringer, S. & Passerini, S. Cost and performance          Creative Commons licence, and indicate if you modified the licensed
+    analysis as a valuable tool for battery material research. Nat. Rev.      material. You do not have permission under this licence to share
+    Mater. https://doi.org/10.1038/s41578-024-00657-2 (2024).                 adapted material derived from this article or parts of it. The images
+                                                                              or other third party material in this article are included in the article’s
+Acknowledgements                                                              Creative Commons licence, unless indicated otherwise in a credit
+This work was supported by three offices within the US Department             line to the material. If material is not included in the article’s Creative
+of Energy through the STEER Program, a partnership between the                Commons licence and your intended use is not permitted by statutory
+SLAC-Stanford Battery Center and the Stanford Precourt Institute for          regulation or exceeds the permitted use, you will need to obtain
+Energy. Specifically, the three offices are the Office of Electricity, the    permission directly from the copyright holder. To view a copy of this
+Vehicle Technologies Office under the Office of Energy Efficiency             licence, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
+and Renewable Energy, and the Office of Technology Transitions. In
+addition, this work was supported in part by the National Science             © The Author(s) 2025
+
+
+Nature Energy | Volume 10 | March 2025 | 404–416                                                                                                     416
+

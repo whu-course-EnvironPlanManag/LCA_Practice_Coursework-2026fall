@@ -1,0 +1,10 @@
+{
+  "scenarios": 2346,
+  "scenarios_per_price": 782,
+  "feasible": 1656,
+  "fronts": 441,
+  "stock_error_pct": 7.962378301093685e-13,
+  "process_error_pct": 3.2427328292227384e-14,
+  "project_CAPEX_difference": 0.0,
+  "project_OPEX_difference": -4.76837158203125e-07
+}

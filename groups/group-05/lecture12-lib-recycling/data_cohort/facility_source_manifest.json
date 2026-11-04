@@ -1,0 +1,38 @@
+[
+  {
+    "source_id": "GZ_YOUMEI_EIA2024",
+    "url": "https://sthjj.gz.gov.cn/gkmlpt/content/9/9802/post_9802113.html",
+    "bytes": 0,
+    "status": "online checked; download failed: 403 Client Error: Forbidden for url: https://sthjj.gz.gov.cn/gkmlpt/content/9/9802/post_9802113.html"
+  },
+  {
+    "source_id": "GZ_YOUMEI_ENERGY2024",
+    "url": "https://fgw.gz.gov.cn/tzgg/xmgg/content/post_9843213.html",
+    "bytes": 0,
+    "status": "online checked; download failed: 403 Client Error: Forbidden for url: https://fgw.gz.gov.cn/tzgg/xmgg/content/post_9843213.html"
+  },
+  {
+    "source_id": "GZ_YOUMEI_PLANNING2026",
+    "url": "https://ghzyj.gz.gov.cn/ywpd/cxgh/ghxkgsgb/phgbnew/gbt/2025/content/post_10802947.html",
+    "bytes": 0,
+    "status": "online checked; download failed: 403 Client Error: Forbidden for url: https://ghzyj.gz.gov.cn/ywpd/cxgh/ghxkgsgb/phgbnew/gbt/2025/con"
+  },
+  {
+    "source_id": "GZ_YOUMEI_OPERATION2026",
+    "url": "https://www.u-power.com.cn/detail/222.html",
+    "bytes": 0,
+    "status": "online checked; download failed: 403 Client Error: Forbidden for url: https://www.u-power.com.cn/detail/222.html"
+  },
+  {
+    "source_id": "GZ_HUADU_PLAN2025",
+    "url": "https://www.huadu.gov.cn/xxgk/zdxm/content/post_10213799.html",
+    "bytes": 0,
+    "status": "online checked; download failed: 403 Client Error: Forbidden for url: https://www.huadu.gov.cn/xxgk/zdxm/content/post_10213799.html"
+  },
+  {
+    "source_id": "GZ_HUADU_EIA_ACCEPT2025",
+    "url": "https://sthjj.gz.gov.cn/hjgl/jsxm/hpslgg/content/post_10604965.html",
+    "bytes": 0,
+    "status": "online checked; download failed: 403 Client Error: Forbidden for url: https://sthjj.gz.gov.cn/hjgl/jsxm/hpslgg/content/post_10604965."
+  }
+]

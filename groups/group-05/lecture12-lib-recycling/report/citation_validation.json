@@ -1,0 +1,17 @@
+{
+  "filepath": "\u5e7f\u5dde\u52a8\u529b\u7535\u6c60\u56de\u6536\u89c4\u5212_A\u65b9\u6848/lecture12-lib-recycling/data_cohort/references.bib",
+  "total_entries": 8,
+  "valid_entries": 8,
+  "errors": [],
+  "warnings": [],
+  "duplicates": [],
+  "venue_standard_checked": null,
+  "min_count_checked": null,
+  "manuscript_results": {
+    "checked": false,
+    "manuscript_filepath": null,
+    "cited_keys": [],
+    "missing_keys": [],
+    "unused_keys": []
+  }
+}

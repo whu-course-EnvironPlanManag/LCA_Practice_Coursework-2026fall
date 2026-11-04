@@ -1,0 +1,60 @@
+{
+  "as_of": "2026-11-04",
+  "cn_guidance": {
+    "source": "工信部2024年第42号，附件PDF物理第1—2、6—7页",
+    "legal_nature": "引导性规范条件，不具有行政审批前置性或强制性；在课程优化中自愿作为硬约束",
+    "li_smelting_min": 0.9,
+    "Ni_min": 0.98,
+    "Co_min": 0.98,
+    "Mn_min": 0.98,
+    "powder_min": 0.98,
+    "Al_impurity_strict_max": 0.015,
+    "Cu_impurity_strict_max": 0.015,
+    "repair_material_min": 0.99,
+    "energy_kgce_tLCE_strict_max": 2200,
+    "water_recycle_min": 0.9,
+    "recycling_capacity_principle_min_tpa": 5000,
+    "rd_min_fraction": 0.03
+  },
+  "course_additional_targets": {
+    "F_fixation_min": 0.995,
+    "Cu_min": 0.98,
+    "Al_min": 0.98,
+    "note": "任务书要求的保守设计目标；本轮核验的2024附件第三（三）3未出现F及Cu/Al回收率的这些定量条款，不能错误归为该条法定值"
+  },
+  "eu": {
+    "source": "EUR-Lex 02023R1542-20260813, Art8, Art77, AnnexXII PartC",
+    "lithium_recovery": {
+      "2027-12-31": 0.5,
+      "2031-12-31": 0.8
+    },
+    "other_material_recovery": {
+      "2027-12-31": 0.9,
+      "2031-12-31": 0.95
+    },
+    "recycled_content": {
+      "2031-08-18": {
+        "Li": 0.06,
+        "Co": 0.16,
+        "Ni": 0.06,
+        "Pb": 0.85
+      },
+      "2036-08-18": {
+        "Li": 0.12,
+        "Co": 0.26,
+        "Ni": 0.15,
+        "Pb": 0.85
+      }
+    },
+    "passport_date": "2027-02-18",
+    "gwp_threshold_kgCO2e_kWh": null,
+    "gwp_note": "第7条分声明/等级/阈值，不与护照统一为同一生效日；电动车最大碳阈值从2028-02-18或授权法生效18个月后取较晚者。未核验最新授权法，不以任意阈值自动通过"
+  },
+  "current_cn_update": {
+    "rule73_effective": "2026-04-01",
+    "announcement20_date": "2026-07-30",
+    "cascading_announcement_management": "已取消；已公告再生利用企业名单继续有效",
+    "ebike_reuse_prohibited": true,
+    "note": "禁止将废旧动力电池用于电动自行车等法定禁止领域；不把政策解释成全面禁止一切符合产品标准的再利用"
+  }
+}

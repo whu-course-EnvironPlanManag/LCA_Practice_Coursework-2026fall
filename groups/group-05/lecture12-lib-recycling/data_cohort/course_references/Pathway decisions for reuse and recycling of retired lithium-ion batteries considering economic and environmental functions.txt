@@ -1,0 +1,1149 @@
+                                    Article                                                                                                   https://doi.org/10.1038/s41467-024-52030-0
+
+
+                                    Pathway decisions for reuse and recycling of
+                                    retired lithium-ion batteries considering
+                                    economic and environmental functions
+                                    Received: 19 March 2024                             Ruifei Ma 1,4, Shengyu Tao 1,4, Xin Sun 2, Yifang Ren1, Chongbo Sun1,
+                                                                                        Guanjun Ji 1, Jiahe Xu1, Xuecen Wang1, Xuan Zhang 1 , Qiuwei Wu 1,3                                 &
+                                    Accepted: 22 August 2024
+                                                                                        Guangmin Zhou 1
+
+
+                                        Check for updates                               Reuse and recycling of retired electric vehicle (EV) batteries offer a sustainable
+
+1234567890():,;   1234567890():,;
+                                                                                        waste management approach but face decision-making challenges. Based on
+                                                                                        the process-based life cycle assessment method, we present a strategy to
+                                                                                        optimize pathways of retired battery treatments economically and envir-
+                                                                                        onmentally. The strategy is applied to various reuse scenarios with capacity
+                                                                                        conﬁgurations, including energy storage systems, communication base sta-
+                                                                                        tions, and low-speed vehicles. Hydrometallurgical, pyrometallurgical, and
+                                                                                        direct recycling considering battery residual values are evaluated at the end-of-
+                                                                                        life stage. For the optimized pathway, lithium iron phosphate (LFP) batteries
+                                                                                        improve proﬁts by 58% and reduce emissions by 18% compared to hydro-
+                                                                                        metallurgical recycling without reuse. Lithium nickel manganese cobalt oxide
+                                                                                        (NMC) batteries boost proﬁt by 19% and reduce emissions by 18%. Despite
+                                                                                        NMC batteries exhibiting higher immediate recycling returns, LFP batteries
+                                                                                        provide superior long-term beneﬁts through reuse before recycling. Our
+                                                                                        strategy features an accessible evaluation framework for pinpointing optimal
+                                                                                        pathways of retired EV batteries.
+
+
+                                    Climate change is one of the key bottlenecks for human society                 increased waste management pressures, reduced energy security, and
+                                    towards sustainable development goals (SDGs)1. To address the cli-             intensiﬁed supply chain risks10.
+                                    mate challenge, it is essential to accelerate the transition to clean               To mitigate these risks, scientiﬁc and industrial communities
+                                    energy, where the lithium-ion battery (LIB) plays a signiﬁcant role2–4.        advocate for the reuse and recycling of retired batteries11,12. Reuse aims
+                                    LIBs currently serve as the dominant power source of electriﬁed                to extend the useful lifetime of batteries, lower the investment and
+                                    mobility and the fastest-growing stationary energy storage5. Their             operational costs of energy systems, and minimize the demand for raw
+                                    predominant applications in the electric vehicle (EV) sector have not          materials. Recycling involves dismantling retired batteries to recover
+                                    only spurred a market revolution but also presented new challenges in          and repurpose valuable materials. Wang et al.13 and Yang et al.14 have
+                                    managing retired LIBs6. Global EV sales have surged from 0.7 million in        taken a holistic approach, considering the entire life cycle of the bat-
+                                    2015 to 10 million in 20227, with projections anticipating a reach of 30       tery itself, while others15–17 have focused on the reuse of energy storage
+                                    million by 20308. This rapid growth has led to the critical need for           systems (ESSs) within the power grid to analyse the effects of the
+                                    properly managing retired batteries9. Inappropriate handling of                energy system. Besides ESSs, retired batteries possess a diverse range
+                                    retired batteries may lead to environmental pollution, resource losses,        of potential applications18, spanning various ﬁelds, such as
+
+
+                                    1
+                                     Tsinghua-Berkeley Shenzhen Institute, Tsinghua Shenzhen International Graduate School, Tsinghua University, Shenzhen, China. 2Integrated Research on
+                                    Energy, Environment and Society (IREES), Energy and Sustainability Research Institute Groningen (ESRIG), University of Groningen, Groningen, The Neth-
+                                    erlands. 3School of Electrical and Information Engineering, Tianjin University, Tianjin, China. 4These authors contributed equally: Ruifei Ma, Shengyu Tao.
+                                       e-mail: xuanzhang@sz.tsinghua.edu.cn; quiwudtu@163.com; guangminzhou@sz.tsinghua.edu.cn
+
+
+                                    Nature Communications | (2024)15:7641                                                                                                                       1
+Article                                                                                                                   https://doi.org/10.1038/s41467-024-52030-0
+
+
+communication base stations (CBSs)14,17 and low-speed vehicles                               Recycling effectively manages waste resources but faces challenges
+(LSVs)19,20. Zhu et al.18 offered a comprehensive overview of second-life                    concerning proﬁt and resource conversion36. Aiming at extracting
+batteries (SLBs), highlighting the need for comprehensive evaluations                        valuable metals, recycling utilizes pyrometallurgical, hydro-
+of the remaining service life for proper performance assessment.                             metallurgical, direct26, other retirement options20 and integration of
+Recent research has focused on improving inconsistency detection21,22,                       these technologies37. A key overlooked factor is the impact of SOH on
+state of health (SOH) estimation23,24, and cathode material sorting25 to                     the outcomes of different recycling technologies38, which is essential
+allocate these batteries appropriately for reuse and recycling applica-                      for optimizing the recycling pathway. The inﬂuence of technological
+tions. Many studies have investigated the application of ESSs to retired                     innovation on the trade-off between various reuse and recycling sce-
+batteries for solar and wind power generation, primarily by examining                        narios has not been explored31,39. Selecting appropriate reuse and
+environmental13,26, economic27, and comprehensive sustainability                             recycling combinations using LCA methods could be promising for
+assessments28–30. Life cycle assessment (LCA) is important for evalu-                        establishing both economic and environmental pathways for retired
+ating the environmental impacts of LIBs throughout their lifecycle,                          LIBs. However, generally applicable and strategic pathway decisions
+from production to end-of-life (EOL) management. The prevailing                              for retired LIBs are currently lacking, leading to suboptimal scenario
+consensus is that battery reuse reduces life cycle environmental                             selection, compromised economic performance, and increased
+impacts compared to immediate recycling31, while there is a study                            greenhouse gas (GHG) emissions.
+presenting contrasting evidence32. In addition, the battery system                                 In this study, we present a reuse and recycling pathway decision
+capacity conﬁguration, a factor that inﬂuences economic                                      strategy for retired EV batteries, demonstrating its effectiveness
+performance33 and environmental beneﬁts34, is often overlooked                               through an accessible analysis of the economic and environmental
+regardless of its decisive role in practical deployment. Larger capa-                        beneﬁts spanning the entire lifecycle, namely, cradle-to-grave (CTG),
+cities can increase costs and maintenance, whereas optimal alignment                         as illustrated in Fig. 1. We focus on two prominent cathode chemistry
+with application needs enhances efﬁciency and economic returns18,35.                         types, i.e., lithium nickel manganese cobalt oxide (NMC) and lithium
+Variations in battery capacity impact electricity load patterns and                          iron phosphate (LFP), with various retired SOHs (70%, 80%, and 90%)
+environmental emissions34. A uniﬁed assessment methodology is cur-                           and diverse reuse scenarios (ESS, CBS, and LSV) considering capacity
+rently lacking, which highlights a signiﬁcant research gap in the                            conﬁgurations. We also assess the implications of three recycling
+rational reuse of SLBs in different applications with different                              technologies (hydrometallurgical, direct, and pyrometallurgical recy-
+requirements.                                                                                cling) for batteries with different SOH levels (40%, 50%, 60%, 70%, 80%,
+     When retired batteries are no longer suitable for reuse, recycling                      and 90%) at EOL stage. Ultimately, we developed an optimized path-
+has economic and environmental advantages at the EOL stage.                                  way for the reuse and recycling of retired LIBs for sustainable waste
+
+
+          Traditional                                Optimizing the Reuse and Recycling Pathway of Retired EV Batteries                                Beneficial battery
+        battery life cycle                                                                                                                                life cycle
+
+                                              Cell                EV               Disassembly               ESS            Pretreatment
+
+
+                                                                                   Reassembly                CBS                  Hydro-
+                                            Module                                                                                                              EV
+               EV
+
+                                                                                                              LSV                 Direct-
+
+                                              Pack                                                                                                        Refurbishment
+                                                                                                                                  Pyro-
+
+
+                                        New battery          First use           Refurbishment           Reuse              End-of-life
+                                                                                                                                                               Reuse
+                             Pathway
+                                                                                                                                                              scenarios
+                             decision      Battery cost       Electricity cost       SLB cost           Operation cost        Recycling cost
+
+                                           Materials          Electricity            Materials           Electricity          Materials        CO2
+
+                                           Electricity                               Electricity                              Electricity
+
+                                           Heat                                      Transportation                           Transportation
+           Recycling                                                                                                                                      Recycling
+                                           Transportation
+
+                                                  The transition from coarse use of batteries towards the optimized pathway
+
+                        Legend:
+                                        Traditional pathway      Economic optimized        Environmental optimized      Other pathways         Battery flow
+
+
+Fig. 1 | Reuse and recycling pathways considering economic and environmental                 communication base stations (CBSs), and low-speed vehicles (LSVs). When the
+functions. Our method encompasses the system boundaries of the lithium-ion                   batteries are subjected to the EOL stage, pretreatment and three recycling tech-
+battery life cycle, namely, cradle-to-grave, incorporating new battery production,           nologies are considered, including hydrometallurgical, direct, and pyr-
+ﬁrst use, refurbishment, reuse, and end-of-life (EOL) stages. The life cycle of a            ometallurgical recycling. Pink and teal icons illustrate the economic and
+battery begins with material extraction, reﬁnement, component (cell) production,             environmental functions of each stage. The second-life battery (SLB) costs are
+and assembly into modules and packs. These packs are used in electric vehicles               related to the state of health, residual capacity potential, resourcing, repurposing,
+(EVs) during the ﬁrst use stage, after which the battery packs are disassembled,             amount of retired batteries, refurbishment technology efﬁciency, and reuse rate.
+tested for viability, and reassembled for further use during the refurbishment stage.        The operation cost comprises daily maintenance costs and operational costs.
+Applications in the reuse phase include energy storage systems (ESSs),
+
+
+
+
+Nature Communications | (2024)15:7641                                                                                                                                           2
+Article                                                                                                https://doi.org/10.1038/s41467-024-52030-0
+
+
+management. Our work has useful implications for making economic              Figure 2d–f shows how the total proﬁt varies with battery type, SOH,
+and environmental pathway decisions for retired LIBs.                         and capacity during the reuse stage. The ranking for total proﬁt in the
+                                                                              ESS and CBS is LFP batteries (90%, 80%, 70% SOH), followed by NMC
+Results                                                                       batteries (90%, 80%, 70% SOH), with the best performance occurring at
+Economic and environmental performance for reuse scenarios                    the allowable maximum battery capacity (scale). A higher initial SOH
+We focus on economic performance and the carbon footprint as                  results in longer use for LFP batteries than for NMC batteries. The CBS
+analytical indicators across various scenarios considering the proﬁt-         experiences diminishing economic returns as the battery capacity
+ability of users and recyclers. Positive economic performance values          increases due to a 3-h operational limit. In contrast, LSV prioritizes
+denote a proﬁt, and negative values indicate a ﬁnancial loss. Economic        conﬁgurations with the lowest daily average cost, leading to different
+performance is composed of the cost of battery purchase (negative),           capacity conﬁgurations. LFP batteries, due to their longer lifespan,
+the cost of battery maintenance (negative), and the revenue of system         have lower capacity conﬁguration results than NMC batteries. These
+operation (positive). The carbon footprint is selected to demonstrate         results stem from a balance between investment and operational costs.
+and compare the life cycle environmental impact. A description of the         Figure 2g–i illustrates the daily cumulative proﬁt of the system under
+pricing models for both new batteries and SLBs, the maintenance               optimal conﬁgurations, starting with the initial purchase prices of the
+model, the operation model considering battery degradation, and the           SLBs. In the ESS and CBS, daily proﬁts decrease over time because of
+carbon footprint calculation can be found in the “Methods” section.           declining SOH and efﬁciency, and in the LSV, daily costs increase
+Figure 2 illustrates the economic performance of NMC and LFP SLBs             progressively. For the ESS and CBS scenarios, the time required to
+across different initial SOH levels in the ESS, CBS, and LSV scenarios at     transition from a loss to a proﬁt ranges from a minimum of 64 days to a
+the reuse stage. The aging curves of the NMC and LFP batteries can be         maximum of 628 days. Initially, batteries with lower SOHs are more
+found in Supplementary Fig. 1. Eight distinct scenarios are examined,         economical due to their reduced purchase prices. However, over the
+as detailed in Fig. 2a, including different load proﬁles for the ESS (large   long run, batteries with a higher initial SOH yield greater returns due to
+industries/government, light industries, and commercial areas)40,41,          their higher usable capacity and efﬁciency. For LSV scenarios, LFP SLBs
+CBS (commercial, high-speed railways, urban residential, and rural            with 70% SOH have the longest operational lifetimes and offer superior
+areas)42, and LSV (sightseeing car for tourism and recreation)43. The         long-term beneﬁts compared to those of other SLBs. In contrast, NMC
+government, light industry, commercial, railway, urban, rural, and            SLBs with 70% SOH deliver better short-term beneﬁts. Therefore, users
+sightseeing car scenarios are abbreviated as Gov, Lig, Com, Rai, Urb,         should select batteries based on their application requirements and
+Rur, and Sig, respectively. For example, ESS-Gov is the government            reuse durations.
+load proﬁle of the ESS application. Supplementary Figs. 2 and 3 pro-               To evaluate the economic performance of the SLBs, optimal
+vide detailed load proﬁle data.                                               operations are compared between the SLBs and new batteries. Sup-
+      Economic performance measures the proﬁtability of an operation          plementary Figs. 4–6 show that while new batteries often have a
+or investment. It encompasses metrics such as total proﬁt, which              higher total income, SLBs have a greater advantage under the same
+assesses the entire proﬁt earned during the operation period; unit            usage duration due to lower purchase costs. Supplementary Fig. 7
+battery proﬁt, which gauges the proﬁt per kWh battery; and average            demonstrates the economic performance in the LSV-Sig scenario
+daily proﬁt, which tracks the daily operational proﬁtability. The con-        using internal combustion engine vehicles for comparison, showing a
+ﬁguration and operation of the system considering battery degrada-            shift from negative to positive economic viability for LSV with the use
+tion across various scenarios are determined by optimizing the total          of retired batteries compared to the conventional fossil-based
+proﬁt (for the ESS and CBS) and daily average proﬁt (for the LSV) in the      paradigm.
+use stage. Figure 2b, c shows the results of the total proﬁt, the proﬁt            The above covers the economic performance during the use
+per kWh battery, and the daily average proﬁt for the NMC and LFP              phase, here we show the environmental impact analysis. Supple-
+batteries. The total proﬁt is calculated according to Eq. (2). The unit       mentary Fig. 11 presents a carbon footprint analysis for the NMC and
+proﬁt is the ratio of the total proﬁt to the battery system capacity. The     LFP battery modules and pack assembly. As a result of the recycling
+daily average proﬁt is calculated by dividing the total proﬁt by the          of waste generated during the refurbishment stage, the carbon
+number of operating days. LFP batteries generally perform better than         footprint associated with module/pack assembly for SLBs is partially
+NMC batteries due to their longer lifespan44–46 and higher efﬁciency40.       offset. This leads to the assembly process for new batteries having a
+Both the ESS and CBS scenarios are proﬁtable, with the former out-            higher carbon footprint per kWh battery compared to SLBs. Addi-
+performing the latter due to having larger photovoltaic (PV) systems.         tionally, the carbon footprint per kWh decreases slightly as the SOH
+In the ESS, the light industry scenario with more renewable energy is         of the batteries decreases. This is because a lower initial SOH requires
+the most proﬁtable, while in the CBS, total proﬁt is linked to load size.     more batteries to meet user demands, thereby increasing the battery
+The unit battery proﬁt shows that the ESS is losing its edge over the         amount. However, components such as the battery pack casing and
+CBS. In the ESS, the unit battery proﬁt aligns with the total proﬁt,          battery management system do not scale linearly with the number of
+whereas in the CBS, it decreases from the rural, railway, and com-            batteries, leading to scenarios such as the small-scale rural area with
+mercial scenarios to the urban scenario. Batteries with higher SOHs           the highest carbon footprint per kWh, while larger capacity ESS
+yield better unit battery proﬁt in the ESS and CBS because of their           scenarios have lower values. Due to the lower energy density of LFP
+longer lifespans. However, in some cases, such as in the ESS-Gov and          batteries, more materials are required for pack/module assembly,
+ESS-Com scenarios, using a 70% SOH LFP battery can be more proﬁt-             resulting in an increase in the carbon footprint per kWh, which is
+able daily than using an 80% SOH battery due to lower purchase costs          124.36%–146.82% greater than that of NMC batteries. The carbon
+and increased proﬁts of $0.13/day and $0.32/day, respectively. In the         footprint for batteries with different cathode chemistries and SOH
+LSV-Sig scenarios, both NMC and LFP SLBs have negative total proﬁt,           levels under various reuse scenarios can be observed in Supple-
+unit battery proﬁt, and average daily proﬁt due to the lack of renew-         mentary Figs. 12 and 13.
+able energy integration and reliance on grid electricity. Decision-                For reuse, SLBs are both economically beneﬁcial and envir-
+making for the reuse pathway should prioritize the ESS and CBS, with          onmentally friendly. Users can make choices based on factors such as
+surplus batteries allocated to the LSV.                                       total proﬁt, unit battery proﬁt, average daily proﬁt, and carbon foot-
+      Due to similar performances in the ESS and CBS scenarios, this          print when meeting load demand. These factors can be highly
+study focuses on the ESS-Lig and CBS-Rur scenarios for detailed ana-          dependent on the capacity degradation, efﬁciency fade, electricity
+lysis, with other cases displayed in Supplementary Figs. 4–10.                mix, and operation model31.
+
+
+Nature Communications | (2024)15:7641                                                                                                                 3
+Article                                                                                                                                                                                                           https://doi.org/10.1038/s41467-024-52030-0
+
+
+                       a                                           ESS                                                                 CBS                                                                        LSV
+
+
+                           Load (kWh)
+                                                         25                                         5                                                  1 Commercial 0.5
+                                                                                 1 Government                                                          2 Railway
+                                                                                 2 Light industries                                                                                                                              Sightseeing car
+                                                                                                                                                       3 Urban
+                                                          0                      3 Commercial       0                                                  4 Rural        0
+                                                           0                24                      0                                         24                       0                                                24
+                                                                 Time (h)                                                          Time (h)                                                                  Time (h)
+                                                               ×103
+
+
+
+
+                                                                                                                                                                                                                                    Unit battery profit ($/kWh battery)
+                                                                                                                                       NMC                                                                                   120                                          40
+                       b                                  40
+
+
+
+
+                                                                                                                                                                                                                                                                                 Average daily profit ($/day)
+                                                          30                                                                                                                                                                 90                                           30
+
+
+
+
+                           Total profit ($)
+                                                          20                                                                                                                                                                 60                                           20
+
+                                                          10                                                                                                                                                                 30                                           10
+
+                                                           0                                                                                                                                                                 0                                            0
+
+                                                         -10                                                                          -30                                                                                                                                 -10
+                                                              90 80 70 90 80 70 90 80 70 90 80 70 90 80 70 90 80 70 90 80 70 90 80 70
+                                                             ESS-Gov ESS-Lig ESS-Com CBS-Com CBS-Rai CBS-Urb CBS-Rur LSV-Sig
+                                                                                           Initial SOH (%)
+                                                            ×103                                  LFP
+
+
+
+
+                                                                                                                                                                                                                                    Unit battery profit ($/kWh battery)
+                       c                                 160                                                                          600                                                                                                                                 60
+
+
+
+
+                                                                                                                                                                                                                                                                                Average daily profit ($/day)
+                                                         120                                                                                                                                                                 450                                          45
+
+
+
+
+                           Total profit ($)
+                                                          80                                                                                                                                                                 300                                          30
+
+                                                          40                                                                                                                                                                 150                                          15
+
+                                                           0                                                                                                                                                                 0                                            0
+
+                                                         -40                                                                                                                                                                 -150                                         -15
+                                                                90 80 70 90 80 70 90 80 70 90 80 70 90 80 70 90 80 70 90 80 70 90 80 70
+                                                                ESS-Gov ESS-Lig ESS-Com CBS-Com CBS-Rai CBS-Urb CBS-Rur LSV-Sig
+                                                                                             Initial SOH (%)
+                                                                            Total profit                                             Unit battery profit           Average daily profit
+                                                               ×103                                                           6 ×10                                                                         4 ×10
+                                                                          ESS-Lig                                                   3         CBS-Rur                                                               3    LSV-Sig
+                       d                                 180                                  e                                                                       f
+                                                                                                                                                                     Total profit
+                                                         150          Configuration result                                    5                                                                             0
+
+                                                         120                                                                  4                                                                            -4
+                                                                                                                                                                         ($)
+
+
+                           Total profit ($)                                                    Total profit ($)
+                                                          90                                                                  3                                                                            -8
+
+                                                          60                                                                  2                                                                           -12
+
+                                                          30                                                                  1                                      Daily average                        -1.0
+
+
+                                                                                                                                                                     profit ($/day)
+                                                           0                                                                  0                                                                           -1.3
+
+                                                         -30                                                                  -1                                                                          -1.6
+                                                            0        271      542     813                                      5.4     10.8 16.3 21.7 27.1                                                   5.4 10.8 16.3 21.7 27.1 32.5
+                                                                   SLB capacity (kWh)                                                 SLB capacity (kWh)                                                           SLB capacity (kWh)
+                       g                                       ×103     ESS-Lig           h                                        ×103    CBS-Rur         i                                                   ×103     LSV-Sig
+                                                         200                                                                 6.0                                                                           0.0
+                                                               Operation ending point
+
+
+
+
+                           Daily cumulative profit ($)                                         Daily cumulative profit ($)                                                  Daily cumulative profit ($)
+                                                         160                                                                 4.5                                                                          -0.5
+
+                                                         120                                                                 3.0                                                                          -1.0
+
+                                                          80                                                                 1.5                                                                          -1.5
+
+                                                          40                                                                  0                                                                           -2.0
+
+                                                           0                                                             -1.5                                                                             -2.5
+
+                                                         -40                                                             -3.0                                                                             -3.0
+                                                            0     730 1460 2190 2920 3650                                    0         730 1460 2190 2920 3650                                                0     730 1460 2190 2920 3650
+                                                                    Reuse time (days)                                                    Reuse time (days)                                                            Reuse time (days)
+                                                                      NMC, 90% initial SOH                                     NMC, 80% initial SOH                 NMC, 70% initial SOH
+                                                                      LFP, 90% initial SOH                                     LFP, 80% initial SOH                 LFP, 70% initial SOH
+
+Fig. 2 | Economic performance under the various reuse scenarios. a Eight sce-                                                                      batteries (SLBs) under the ESS-Lig, CBS-Rur, and LSV-Sig scenarios and other sce-
+narios in the reuse stage involving three energy storage system (ESS) proﬁles, four                                                                narios are shown in Supplementary Figs. 4–10. g–i The daily cumulative proﬁt of
+communication base station (CBS) proﬁles, and one low-speed vehicle (LSV) pro-                                                                     NMC and LFP SLBs with different initial SOHs over time in the optimal conﬁgura-
+ﬁle. b The total proﬁt, unit battery proﬁt, and average daily proﬁt of lithium nickel                                                              tion. The government, light industry, commercial, railway, urban, rural, and sight-
+manganese cobalt oxide (NMC) battery conﬁgurations across distinct scenarios                                                                       seeing car are abbreviated as Gov, Lig, Com, Rai, Urb, Rur, and Sig, respectively. For
+under varying initial states of health (SOHs) and 40% ended SOHs in the reuse stage.                                                               example, ESS-Lig is the light industry load proﬁle of ESS application. Source data
+c The economic performance of lithium iron phosphate (LFP) batteries.                                                                              are provided as a Source Data ﬁle.
+d–f Changes in total proﬁt concerning the capacity of NMC and LFP second-life
+
+
+
+
+Nature Communications | (2024)15:7641                                                                                                                                                                                                                                                                           4
+Article                                                                                                                                               https://doi.org/10.1038/s41467-024-52030-0
+
+
+       a                                                          NMC                              b                                                          LFP
+                                     40                                                                                          40
+
+
+       Unit battery profit           20                                                            Unit battery profit           20
+
+
+
+        ($/kWh battery)                                                                             ($/kWh battery)
+                                       0                                                                                          0
+
+
+                                     -20                                                                                         -20
+                                              40      50       60      70       80          90                                            40     50       60      70       80        90
+                                                           SOH at EOL stage (%)                                                                       SOH at EOL stage (%)
+       c                                                                                           d
+                                     60                                                                                          60
+
+
+       Unit battery cost / revenue                                                                 Unit battery cost / revenue
+                                     40                                                                                          40
+
+                                     20                                                                                          20
+
+                                       0                                                                                          0
+
+
+
+             ($/kWh battery)                                                                             ($/kWh battery)
+                                     -20                                                                                         -20
+
+                                     -40                                                                                         -40
+
+                                     -60                                                                                         -60
+                                              40      50       60      70       80          90                                           40      50       60      70       80        90
+                                                           SOH at EOL stage (%)                                                                       SOH at EOL stage (%)
+                                     Hydro- recycling (profit)    Hydro- recycling (cost)    Hydro- recycling (revenue)                           Results with maximum price of Li2CO3
+                                     Direct recycling (profit)    Direct recycling (cost)    Direct recycling (revenue)                           Results with minimum price of Li2CO3
+                                     Pyro- recycling (profit)     Pyro- recycling (cost)     Pyro- recycling (revenue)                            Variation range of results
+
+       e                                     Copper 3.0%                                            f                                     Copper 3.4%
+                                           Graphite 4.5%                                                                               Graphite 5.1%                 Degraded NMC 29.1%
+                                                                          Degraded NMC 25.5%
+                                                                            Cost 43.7%                                                                                  Cost 36.5%
+          Revenue 56.3%                                      NMC                                        Revenue 63.5%                                     NMC
+                                                           40% SOH                                                                                      90% SOH
+                                                             Direct                                                                                       Direct        Li2CO3 2.8%
+                                                                            Li2CO3 14.7%                                                                                Labor 1.1%
+                    NMC622 47.4%                                                                                  NMC622 54.0%                                          Disassemble 0.7%
+                                                                           Labor 1.0%                                                                                  Electricity 0.6%
+                                                                         Disassemble 0.6%                                                                              Sewage treatment
+                                                                        Electricity 0.5%
+                                                                                                                                                                              0.5%
+       g                                Copper 10.5%                                               h                                    Copper 8.6%
+                                                                                                                                                                     Degraded LFP 22.2%
+                                                                          Degraded LFP 27.3%
+                                                                                                                                                                       Cost 37.8%
+            Li2CO3 17.7%                                                        Cost
+           Revenue 54.3%                                     LFP               45.7%                       Revenue 62.2%                                  LFP           Labor 3.8%
+                                                           40% SOH                                                                                      90% SOH         Water 2.9%
+                                                            Hydro-            Labor 4.7%                                                                 Hydro-
+                                                                                                                      Li2CO3 32.4%                                     Sewage treatment
+                                                                             Water 3.5%
+                                                                                                                                                                             1.8%
+                                                                          Sewage treatment 2.2%
+                                                                                                                                                                        Disassemble 1.5%
+                                                                          Disassemble 1.9%
+                                       FePO4 23.6%                                                                                                                  FePO4 19.3%
+                                                                         Electricity 1.7%
+
+Fig. 3 | Economic performance of the three recycling technologies in the end-                        90% SOH. g, h The cost and revenue proportion of using the optimal recycling
+of-life (EOL) stage. a, b Unit battery proﬁt of lithium nickel manganese cobalt oxide                technology (hydrometallurgical recycling) for LFP batteries with 40% and 90% SOH.
+(NMC) and lithium iron phosphate (LFP) batteries with 40%–90% state of health                        The proportions of other recycling technologies are provided in Supplementary
+(SOH) using different recycling technologies at the EOL stage. c, d Unit battery                     Figs. 15 and 16. Hydrometallurgical, direct, and pyrometallurgical recycling tech-
+costs and revenues of NMC and LFP batteries with 40%–90% SOH using different                         nologies are referred to as hydro-, direct, and pyro-, respectively. The black trian-
+recycling technologies. e, f The cost and revenue proportions associated with using                  gles in (a) and (b) may overlap, forming black hexagons. Source data are provided
+the optimal recycling technology (direct recycling) for NMC batteries with 40% and                   as a Source Data ﬁle.
+
+
+
+
+Economic and environmental performance of various recycling                                          leading to either fewer inputs (direct recycling) or more valuable
+technologies                                                                                         outputs (hydrometallurgical and pyrometallurgical recycling). For
+The economic performance resulting from the three battery recycling                                  NMC batteries, direct recycling is the most proﬁtable, as the SOH
+technologies for LFP and NMC batteries is presented in Fig. 3.                                       increases from 40% to 90%, due to its simplicity and the high value of
+Figure 3a–d indicates that for all methods, the unit battery proﬁt                                   the recovered NMC material. Proﬁts range from $11.01 to $22.99/kWh
+improves with increasing SOH due to decreased active material loss,                                  battery for direct recycling, while pyrometallurgical and
+
+
+Nature Communications | (2024)15:7641                                                                                                                                                         5
+Article                                                                                                 https://doi.org/10.1038/s41467-024-52030-0
+
+
+hydrometallurgical recycling yields range from −$8.59 to $2.41 and −           footprint per kWh battery decreases with increasing SOH during
+$8.31.08 to $2.66/kWh battery, respectively. For LFP batteries, hydro-         recycling. Batteries with higher initial SOHs in their reuse stage slightly
+metallurgical recycling is the most proﬁtable, followed by direct and          increase the carbon footprint per kWh during recycling due to the
+pyrometallurgical recycling. LFP recycling proﬁts ﬂuctuate less with           increased average amount of casing materials per kWh battery. NMC
+SOH changes than those of the NMC counterpart, with both costs and             batteries offer signiﬁcant environmental beneﬁts when recycled,
+revenues for LFP being smaller than those for NMC. Therefore,                  especially due to the carbon footprint of the positive electrode
+selecting a recycling technology in the EOL stage should consider the          material, while the carbon footprint beneﬁt of recycling LFP batteries is
+battery type and SOH.                                                          relatively low. Consequently, direct recycling stands out due to its
+      The economic performance of recycling varies with the price of           comparable proﬁtability, lower energy consumption, and reduced
+lithium salt (Li2CO3). Figure 3a–d also illustrates the sensitivity analysis   carbon footprint, indicating that direct recycling is a promising alter-
+of recycling based on lithium salt price ﬂuctuations. As shown in              native to conventional, energy-intensive pyrometallurgical and
+Fig. 3a, as the price of lithium salt increases from its lowest to highest,    hydrometallurgical technologies38,47.
+the advantage of direct recycling for NMC batteries gradually                       Recyclers can gain insights into the economic and carbon foot-
+decreases. Eventually, pyrometallurgical recycling marginally becomes          print beneﬁts of different recycling technologies. A proﬁtability-based
+the most favourable option. The priority order for recycling technol-          ranking is suggested for different SOH levels when recovering bat-
+ogies shifts from direct, pyrometallurgical, and hydrometallurgical to         teries. This facilitates the establishment of a mutually beneﬁcial rela-
+pyrometallurgical, direct, and hydrometallurgical. For LFP batteries           tionship between recyclers looking for higher SOH retired batteries
+(Fig. 3b), when lithium salt is inexpensive, the order of preference is        and users seeking to prolong the battery lifetime.
+direct, hydrometallurgical, and pyrometallurgical recycling. At the
+highest lithium salt price, the order changes to hydrometallurgical,           Economic and environmental performance for reuse and
+pyrometallurgical, and direct recycling. The reason for these changes          recycling
+in both NMC and LFP batteries is that lithium salt is an output material       The preceding analyses independently explored the economic and
+in hydrometallurgical and pyrometallurgical recycling but an input             carbon footprint beneﬁts of the reuse and recycling stages, respec-
+material in direct recycling. As the price of lithium salt increases, the      tively. Given their consecutive placement in the battery retirement
+proﬁtability of hydrometallurgical and pyrometallurgical recycling             pathway, holistic analysis is necessary to secure a comprehensive
+increases, while the proﬁtability of direct recycling decreases.               understanding by jointly considering reuse and recycling. Figure 4
+      The SOH at which batteries are recycled signiﬁcantly affects their       shows the unit battery proﬁt and carbon footprint during the lifecycle,
+economic performance and carbon footprint during both their reuse              including the refurbishment, reuse, and EOL stages. The recycling
+and EOL stages. For LFP batteries, a higher SOH at the EOL slightly            phase adopts the most economical technology, direct recycling for
+increases proﬁts, indicating that extended use before recycling is more        NMC and hydrometallurgical recycling for LFP. Supplementary
+beneﬁcial than early recycling. For instance, recycling (hydro-                Figs. 20–23 present the results of other ESS and CBS scenarios. In
+metallurgical technology) a one kWh LFP battery after its SOH drops            Fig. 4a, the economic beneﬁts of NMC SLBs are greater for ESSs and
+from 90% to 40% decreases proﬁt by $9.58/kWh, while its value in the           CBSs with wider SOH reuse intervals, indicating that delayed recycling
+reuse stage changes signiﬁcantly by at least $55/kWh (as shown in              maximizes proﬁt, while LSV shows negative performance. For NMC
+Fig. 2b). Supplementary Fig. 14 reveals that recycling proﬁts are only         batteries, the highest life cycle beneﬁt is $66.67/kWh battery, which is
+slightly affected by changes in the battery system accessories. The            achieved through direct recycling after CBS use from 90% to 40% SOH.
+proﬁts from CBS conﬁgurations are slightly greater than those from             The least proﬁtable is the −$59.26/kWh battery using direct recycling
+ESS and LSV due to more efﬁcient setups and reduced material waste.            of LSV-used batteries with 90% to 40% SOH.
+Therefore, prolonging the reuse phase and delaying recycling is                      The carbon footprint for NMC batteries is illustrated in Fig. 4b, c.
+advantageous for increasing economic performance.                              In Fig. 4b, when a battery is ﬁrst used in an EV, the carbon footprint
+      To gain a deeper understanding of the recycling phase, Fig. 3e–h         increases as the SOH decreases in the use stage, with the impact in the
+details the proportions of the optimal recycling tachnologies for NMC          EOL stage being slight. However, for the carbon footprint per kWh life
+and LFP batteries at 40% and 90% SOH, respectively, with the pro-              cycle of electricity delivery, extending the EV battery life reduces the
+portions of other recycling technologies in Supplementary                      carbon footprint, from 0.83 to 0.79 kg CO2-eq/kWh life cycle elec-
+Figs. 15 and 16. The proportions of costs and revenues vary, but the           tricity delivery, due to a larger manufacturing carbon footprint than
+ranking is consistent across different SOH levels for each method. For         decreased efﬁciency or recycling delays. Supplementary Figs. 24–27
+NMC batteries with 40% and 90% SOH, the cost-to-revenue ratio in               show the proportions of cost and carbon footprint during cell, module,
+direct recycling decreases from 0.80 to 0.58. The major costs include          and pack manufacturing. In Fig. 4c, in all the scenarios, the carbon
+those of degraded NMC (25.5%–29.1%), Li2CO3 (14.7%–2.8%), and                  footprint per kWh battery increases with a larger initial SOH when
+labour (1.0%–1.1%), while the main revenues come from NMC                      recycling at 40% SOH. This suggests that a high initial SOH increases
+(47.4%–54.0%), graphite (4.5%–5.1%), and copper (3.0%–3.4%). A higher          the use stage carbon footprint more than does refurbishment, and
+SOH reduces the amount of Li2CO3 and thus impacts other cost and               charge‒discharge efﬁciency improvements can reduce the carbon
+revenue factors. In hydrometallurgical recycling for LFP batteries with        footprint. The trends of the carbon footprint per kWh life cycle of
+40% and 90% SOH, the cost-to-revenue ratio decreases from 0.92 to              electricity delivery for the ESS, CBS, and LSV are different from those of
+0.60. Signiﬁcant costs are incurred for degraded LFP (27.3%–22.2%),            the carbon footprint per kWh battery. As the initial SOH decreases, the
+labour (4.7%–3.8%), and water (3.5%–2.9%). The major revenues are              carbon footprint of the ESS and CBS ﬁrst increases and then decreases,
+derived from FePO4 (23.6%–19.3%), Li2CO3 (17.7%–32.4%), and copper             while the carbon footprint of the LSV monotonically increases,
+(10.5%–8.6%). As with NMC, a higher SOH increases the share of Li2CO3,         reaching a 0.56 kg CO2-eq/kWh life cycle electricity delivery. The NMC
+affecting the proportions of other components. These shifts illustrate         SLBs with 70% SOH used in the ESS-Lig scenario resulted in a minimum
+the impact of recycling processes and the market price of materials,           carbon footprint of 0.23 kg CO2-eq/kWh life cycle electricity delivery.
+highlighting the importance of high-value materials for proﬁt                  For LFP batteries, Fig. 4d–f presents the unit battery proﬁt and carbon
+enhancement.                                                                   footprint results. Compared to NMC batteries, LFP batteries appear to
+      We have also analysed the carbon footprint of various recycling          amplify economic outcomes. LFP batteries consistently have a greater
+technologies at the EOL stage for NMC and LFP batteries with                   carbon footprint than NMC batteries during the ﬁrst use and reuse
+40%–90% SOH, as shown in Supplementary Figs. 17–19. The carbon                 stage. Unlike that of NMC SLBs, the carbon footprint per kWh life cycle
+
+
+Nature Communications | (2024)15:7641                                                                                                                   6
+Article                                                                                                                                                                                                                  https://doi.org/10.1038/s41467-024-52030-0
+
+
+      a                                                       b                                                                                                         c
+
+
+
+
+                                                                                                                                                                                                                                                                Carbon footprint (kg CO2 eq./kWh battery)
+                                                                                                           NMC                                                                                                                    NMC
+
+
+
+
+                                                                                                                            Carbon footprint (kg CO2 eq./kWh battery)
+                                       NMC                                                           0.9             1800                                                                                     0.8                                        800
+
+
+
+
+                                                              Carbon footprint (kg CO2 eq./kWh                                                                          Carbon footprint (kg CO2 eq./kWh
+                       80                                                                            0.8             1600                                                                                     0.7                                        700
+                                                                                                     0.7             1400                                                                                     0.6                                        600
+
+
+
+
+       Ended SOH (%)
+                       70                                                                            0.6             1200                                                                                     0.5                                        500
+                                                                                                     0.5             1000
+                                                                                                                                                                                                              0.4                                        400
+                       60                                                                            0.4             800
+                                                                                                                                                                                                              0.3                                        300
+                                                                                                     0.3             600
+
+
+
+                                                                 life cycle electricity delivery)                                                                          life cycle electricity delivery)
+                       50                                                                                                                                                                                     0.2                                        200
+                                                                                                     0.2             400
+                                                                                                     0.1             200                                                                                      0.1                                        100
+                       40                                                                              0             0                                                                                          0                                        0
+                                                                                                    -0.1             -200                                                                                     -0.1                                       -100
+                            90 80 70 90 80 70 90 80 70                                                   90 80 70                                                                                                    90 80 70 90 80 70 90 80 70
+                            ESS-Lig CBS-Rur LSV-Sig                                                         EV                                                                                                        ESS-Lig     CBS-Rur     LSV-Sig
+                                   Initial SOH (%)                                                    Ended SOH (%)                                                                                                           Initial SOH (%)
+
+      d                                                       e                                                                                                         f
+
+
+
+
+                                                                                                                            Carbon footprint (kg CO2 eq./kWh battery)                                                                                           Carbon footprint (kg CO2 eq./kWh battery)
+                                        LFP                                                          0.9    LFP      1800                                                                                                         LFP
+                                                                                                                                                                                                              0.8                                        800
+
+
+
+
+                                                              Carbon footprint (kg CO2 eq./kWh                                                                          Carbon footprint (kg CO2 eq./kWh
+                       80                                                                            0.8             1600                                                                                     0.7                                        700
+                                                                                                     0.7             1400                                                                                     0.6                                        600
+
+
+
+
+       Ended SOH (%)
+                       70                                                                            0.6             1200
+                                                                                                                                                                                                              0.5                                        500
+                                                                                                     0.5             1000
+                                                                                                                                                                                                              0.4                                        400
+                       60                                                                            0.4             800
+                                                                                                                                                                                                              0.3                                        300
+                                                                                                     0.3             600
+
+
+
+
+                                                                 life cycle electricity delivery)                                                                          life cycle electricity delivery)
+                       50                                                                            0.2             400                                                                                      0.2                                        200
+                                                                                                     0.1             200                                                                                      0.1                                        100
+                       40                                                                              0             0                                                                                          0                                        0
+                                                                                                    -0.1             -200                                                                                     -0.1                                       -100
+                            90 80 70 90 80 70 90 80 70                                                   90 80 70                                                                                                    90 80 70 90 80 70 90 80 70
+                            ESS-Lig CBS-Rur LSV-Sig                                                         EV                                                                                                        ESS-Lig     CBS-Rur     LSV-Sig
+                                   Initial SOH (%)                                                    Ended SOH (%)                                                                                                           Initial SOH (%)
+                        Unit battery profit ($/kWh battery)                                         Carbon footprint (kg CO2 eq./kWh life cycle electricity delivery)
+
+                                400       0    -300                                                 Cell   Module & pack                                 First use                                              Refurbishment     Reuse    End-of-life       Sum
+
+Fig. 4 | The economic performance and carbon footprint during the life cycle of                                         of NMC SLBs for repurposing pathways. The compositions of the other scenarios
+batteries. a The unit battery proﬁt of lithium nickel manganese cobalt oxide (NMC)                                      are shown in Supplementary Figs. 24–27. d–f Lithium iron phosphate (LFP) battery
+second-life batteries (SLBs) during the repurposing pathway, including the                                              cases with hydrometallurgical recycling. Traditional pathways include the cell,
+refurbishment (at 70%–90% state of health (SOH)), reuse (energy storage system                                          module, pack, ﬁrst use in electric vehicle (EV), and EOL (hydrometallurgical recy-
+(ESS), communication base station (CBS), and low-speed vehicle (LSV)) and end-of-                                       cling) stages. Repurposing pathways, including the refurbishment, reuse, and EOL
+life (EOL) (direct recycling at 40%–80% SOH) stages. The results of the other ESS                                       stages. Light industry, rural, and sightseeing cars are abbreviated as Lig, Rur, and
+and CBS scenarios are shown in Supplementary Figs. 20–23. b Carbon footprint per                                        Sig, respectively. For example, ESS-Lig is the light industry load proﬁle of ESS
+life cycle electricity delivery and per kWh battery of NMC batteries for traditional                                    application. Source data are provided as a Source Data ﬁle.
+pathways. c Carbon footprint per life cycle electricity delivery and per kWh battery
+
+
+
+electricity delivery capacity of LFP SLBs follows a different trend,                                                    EOL. Figure 5b provides the details, starting with a $97/kWh new bat-
+increasing due to extended battery life amplifying the                                                                  tery cost. The ﬁrst use in EVs increases user costs to $157/kWh battery.
+charging–discharging efﬁciency-induced carbon footprint. For SLBs,                                                      Finally, the battery is retired at 90% SOH and recycled using hydro-
+the order of carbon footprint, from low to high, is ESS, CBS, and LSV,                                                  metallurgical recycling. In contrast, the optimized pathway diverges
+while the unit of battery proﬁt ranks as CBS, ESS, and LSV.                                                             after the ﬁrst use stage. The process includes refurbishment, reuse,
+     Different battery types and SOHs yield distinct rankings in eco-                                                   and recycling. Users need to purchase SLBs with 90% SOH, increasing
+nomic and carbon footprint analyses, highlighting the need for a                                                        costs to $176/kWh in the refurbishment stage. SLBs are then used in the
+pathway design. Considering the entire SLB life cycle, including                                                        CBS-Rur area, where they perform well until they degrade to 40% of the
+selecting reuse scenarios and recycling technologies, our strategy can                                                  SOH, reducing the cost to the $103/kWh battery. Finally, the battery
+maximize economic and environmental beneﬁts for both users and                                                          reaches the EOL stage and is recycled via direct recycling, resulting in a
+recyclers.                                                                                                              ﬁnal life cycle cost of $91/kWh for the battery, which is $43/kWh lower
+                                                                                                                        than that of a traditional pathway.
+Evaluation of traditional and optimized pathways                                                                             For NMC SLBs retired from EVs at 80% SOH in Fig. 5c, the pro-
+The entire life cycle is crucial for sustainability and cost-effectiveness.                                             cesses are similar, but their unit battery proﬁt is not as good as that at
+Here, we design a prioritized pathway for different battery types and                                                   90% SOH. Late retirement in EVs means that these batteries consume
+SOH levels. Figure 5 illustrates the optimal pathway, which we compare                                                  more electricity in the ﬁrst use stage and have a lower price. A com-
+to the traditional pathway (direct retirement after EV use) to assess its                                               parison of NMC batteries retired at 70% SOH in Fig. 5d conﬁrmed this,
+effectiveness. Other pathways can be found in Supplementary                                                             with different reuse alternatives (CBS-Rai scenario). Different condi-
+Tables 1 and 2. In Fig. 5a, the traditional pathway for NMC batteries                                                   tions of retired batteries yield different pathway recommendations.
+involves a new battery, EV use, and hydrometallurgical recycling at the                                                 The comparison also emphasizes that early recycling beneﬁts for
+
+
+Nature Communications | (2024)15:7641                                                                                                                                                                                                                                                                       7
+Article                                                                                                                                       https://doi.org/10.1038/s41467-024-52030-0
+
+
+                                                                               Traditional pathway        Optimized pathway                Other pathways
+       a
+                                                                               EV
+                                                                                                                                             ESS-Gor                               Direct
+                                                                            90% SOH
+                                                                                                                                                                                 recycling
+                                                                                                                                             ESS-Lig
+
+                                                                                                                                            ESS-Com
+
+                                                                               EV                                                           CBS-Com
+                                                                            80% SOH                                                                                               Hydro-
+                                              NMC                                                                                            CBS-Rai                             recycling
+
+                                                                                                                                             CBS-Urb
+
+                                                                                                                                             CBS-Rur
+                                                                               EV                                                                                                  Pyro-
+                                                                            70% SOH                                                          LSV-Sig
+                                                                                                                                                                                 recycling
+
+
+                  New battery                                        Ended SOH at first use             Refurbishment                         Reuse                                 EOL
+       b                                                                                      c                                             d
+                                              -50   NMC             90% SOH                       NMC          80% SOH                          NMC             70% SOH
+
+
+
+
+       Unit battery profit ($/kWh battery)
+                                                                              40% SOH
+                                                                        CBS-Rur -91
+                                             -100   -97                                           -97                                           -97
+                                                        New battery price -103
+                                                                                     64
+                                                                                                                           40% SOH
+                                             -150                                    -155
+                                                             -157                                                      CBS-Rur -160
+                                                              EV                  90% SOH                               -172 38                                              40% SOH
+                                                                     -176
+                                                                                                                                                                        CBS-Rai -188
+                                             -200                                                       -198                      -198                                   -200 29
+                                                                                                         EV     -208           80% SOH                   -215      -220         -217
+                                                                                                                                                          EV                 70% SOH
+                                             -250
+       e                                                                                      f                                             g
+                                             150    LFP                                           LFP                                           LFP
+                                                                    90% SOH           121                      80% SOH                                          70% SOH
+                                             100                                115
+
+
+
+
+       Unit battery profit ($/kWh battery)
+                                                                                   40% SOH
+                                              50                              CBS-Rur
+                                               0
+                                                                                    271
+                                              -50
+                                                          New battery price                                                 40% SOH
+                                             -100   -97                                           -97                                           -97
+                                                                                                                        -118   -111
+                                             -150            -164                    -150                              CBS-Rur
+                                             -200                                 90% SOH                                     156                                              40% SOH
+                                                              EV
+                                                                     -227                                                                                                    -236  -229
+                                             -250
+                                                                                                        -279                      -267                                            92
+                                                                                                                                                                          CBS-Rur
+                                             -300                                                               -317           80% SOH
+                                                                                                         EV                                              -331                        -321
+                                             -350                                                                                                         EV       -353           70% SOH
+                                             -400
+
+
+
+
+Fig. 5 | Comparison of traditional, optimized, and other pathways for accessing                                 the carbon footprint are listed in Supplementary Tables 1–16. Applications in the
+retired electric vehicle (EV) batteries considering various conditions, including                               reuse phase include energy storage systems (ESSs), communication base stations
+cathode material types and state of health (SOH) after the ﬁrst use stage. a Life                               (CBSs), and low-speed vehicles (LSVs). Recycling technologies in the EOL stage
+cycle pathways considered in this work, from the new battery to the end-of-life                                 include hydrometallurgical, direct, and pyrometallurgical recycling. The govern-
+(EOL) stages, taking lithium nickel manganese cobalt oxide (NMC) as an example.                                 ment, light industry, commercial, railway, urban, rural, and sightseeing car are
+b–d Comparison of traditional and optimized pathways of NMC batteries retired                                   abbreviated as Gov, Lig, Com, Rai, Urb, Rur, and Sig, respectively. For example, ESS-
+from electric vehicles at 90%, 80%, and 70% SOH. e–g Comparison of traditional                                  Lig is the light industry load proﬁle of ESS application. Source data are provided as a
+and optimized pathways for lithium iron phosphate (LFP) batteries retired from EVs                              Source Data ﬁle.
+at 90%, 80%, and 70% SOH. The pathway details based on the unit battery proﬁt and
+
+
+
+
+Nature Communications | (2024)15:7641                                                                                                                                                                8
+Article                                                                                               https://doi.org/10.1038/s41467-024-52030-0
+
+
+recyclers are not as good as extended use beneﬁts for users. For the         interest concerns, forming a complex decision model. For research
+LFP batteries shown in Fig. 5e–g, the proﬁt margin expands due to their      and manufacturing, this study is crucial for technology advancement
+longer lifetime and higher charge‒discharge efﬁciency. The gap               and planning, thus indicating potential revenue growth through high-
+between traditional and optimized pathways narrows for low-SOH               performance materials. For reuse, this study explores the potential for
+batteries retired from EVs. Regardless of battery chemistries, batteries     SLBs to enhance circular economy practices and assess residual values.
+with higher SOHs retired from EVs yield higher proﬁts, even after            For recycling, this study suggests ways to decrease energy and material
+eliminating purchase costs. The carbon footprint corresponding to the        costs, minimize environmental impact, and boost industry scalability.
+traditional and optimized pathways in Fig. 5b–g shows in Supple-             There are many new direct recycling technologies51–53 that can be
+mentary Fig. 28. In contrast to the repurposing pathway shown in             evaluated using our model. A lack of data impedes the positive effects
+Fig. 4, this life cycle pathway includes cell, module, ﬁrst use, refurb-     mentioned above. Third-party platforms, such as China’s National BEV
+ishment, reuse, and EOL stages. A sensitivity analysis has been con-         Monitoring and Management-Traction, Europe’s Battery Pass, and the
+ducted on the carbon footprint of electricity ranging from 0.3140 to         USA’s Everledger, use technologies such as blockchain and artiﬁcial
+0.7488 kg CO2-eq/kWh based on changes in the proportion of elec-             intelligence for lifecycle transparency, hinting at future developments
+tricity sources in China from 2020 to 205048. Supplementary                  in a global battery passport system. It is urgent to jointly consider
+Tables 3–16 list the pathways chosen based on the carbon footprint           multiparty interests, ensuring the feasibility of the designed pathway
+from the policy-making perspective. The carbon footprint of elec-            in real cases. However, current studies often overlook the inter-
+tricity will signiﬁcantly change in the future and thus may signiﬁcantly     connectedness of these different stakeholders and constraints.
+affect the results26. Thus, the optimized pathway is contingent on the       Therefore, deploying a uniﬁed battery retirement pathway helps
+choice of indicators (unit battery proﬁt and carbon footprint) or their      bridge these gaps, creating a more cohesive and uniﬁed approach to
+assigned weights, with governments generally favouring the carbon            battery lifecycle management and signiﬁcantly enhancing the total
+footprint and users leaning towards economic performance.                    economic and environmental beneﬁts by simultaneously optimizing
+      The proposed pathway decisions for retired EV batteries support        multiparty interests.
+a suitable strategy for reuse scenarios and recycling technologies. It            Here, we discuss the impact of different battery chemistries on
+involves a comprehensive analysis of economic performance and                the results. The LFP and NMC622 studied in this paper are among the
+carbon footprint considerations, contributing to the sustainable bat-        current leading battery types dominating EV sales globally (~50% in
+tery industry by promoting responsible waste management and efﬁ-             2023), with other prevalent types including NMC811, NMC721,
+cient resource utilization. This aligns with a broader goal of fostering a   NMC532, NMC111, and lithium nickel cobalt aluminium (NCA)54,55.
+sustainability-conscious strategy for battery lifecycle management.          While chemistries with higher cobalt contents degrade slightly faster
+                                                                             due to reduced cycling stability, lifespan variations are minimal; thus,
+Discussion                                                                   carbon emissions and economic beneﬁts during the use stage remain
+In conclusion, we show that the ESS is the best choice for reuse in terms    similar across battery chemistries56. Manufacturing adjustments from
+of total proﬁt, while the CBS leads in terms of average daily proﬁt.         NMC111 to NMC811, with decreased cobalt levels and increased nickel
+Direct recycling is the most economical for NMC batteries, and               levels, have led to a 7.5% reduction in GHG emissions but a 104%
+hydrometallurgical recycling is the most economical for LFP batteries.       increase in sulfur oxide emissions, primarily from nickel
+Both chemical types have a minimal carbon footprint when using               production31,57. The manufacturing of low-cobalt chemistries results in
+direct recycling technology. The optimized pathway for retired EV LFP        comparable environmental impacts to those of high-cobalt chemis-
+batteries with 80% SOH yields economic proﬁts of $156/kWh and                tries, mainly from energy consumption and the use of nickel31. Eco-
+reduces the carbon footprint by 0.15 kg CO2-eq/kWh life cycle elec-          nomic considerations, such as rising cobalt prices and ethical concerns
+tricity delivery, achieved through CBS reuse and hydrometallurgical          about cobalt mining, have prompted a shift towards lower cobalt
+recycling. NMC batteries with an 80% SOH result in a proﬁt of $38/kWh        ratios, such as those of NMC622 and NMC811, which are, however,
+battery and a decrease of 0.14 kg CO2-eq/kWh for life cycle electricity      more challenging in manufacturing58. As the nickel content increases,
+delivery for CBS reuse and direct recycling. With a global retirement        battery manufacturing costs are projected to decline from $110/kWh
+scale of 150 GWh in 202549, the maximum reuse and recycling proﬁt            (NMC111) to $98/kWh (NMC811) by 2025 under base mineral cost
+will reach $13.6 billion, assuming a market share of 45% LFP and 55%         scenarios59. In the repurposing pathway, which encompasses the
+NMC batteries50. Our strategy is a universally applicable evaluation         refurbishment, reuse, and EOL stages, NMC622 has a 7% lower carbon
+framework for pinpointing optimal retirement pathways for SLBs               footprint than NMC11131. Kastanaki et al.55 suggest that the future
+across various types, utilization scenarios, and recycling options,          attractiveness of NCA batteries, which are similar to NMC in terms of
+advancing the sustainable industry in the foreseeable future.                lifespan and energy density and contain high levels of cobalt and
+      We have demonstrated the effectiveness of the battery retirement       nickel, might decrease due to cost, ethical, and supply issues. Future
+pathway in serving the dual purposes of economic and environmental           research could consider the pathway decisions of different battery
+viability. Such success can be rationalized by reasonably managing           chemistries for sustainability considerations.
+retired EV batteries through economic and environmental evaluations               The development of a generally applicable battery retirement
+throughout the whole life cycle, considering various reuse applications      pathway, especially under heterogeneous battery retirement condi-
+and recycling technologies for different batteries with different SOHs       tions, remains a challenge and is intensively coupled with many topics
+when retired from EVs. We stress that our evaluation strategy improves       and disciplines. First, there are safety issues, including the risk of ﬁres
+traditional LCA calculations by streamlining data management, redu-          and chemical leaks. The integration of SOH estimation and remaining
+cing computational costs, and enhancing standardization. It simpliﬁes        useful life (RUL) prediction into future pathway decisions should be
+sensitivity analysis and uncertainty evaluations while improving             studied and holds potential value60. Second, the disassembly process
+representatives of the results. Here, we further discuss the general         of battery packs is complex due to the variety and intricate inter-
+applicability of the retirement pathway decision strategy, its implica-      connections of components, making it labour intensive and energy
+tions for battery reuse and recycling decision-making, and future            consuming61. According to Blömeke et al.62, the disassembly stage
+considerations for potential methodological improvements.                    signiﬁcantly contributes to the overall recycling process by separating
+      The pathway decisions for retired EV batteries address the life-       more than 30% of the battery’s total mass, highlighting its potential
+cycles of battery research, manufacturing, reuse, recycling, and third-      impact on energy consumption. Automation and modern
+party services. Multiple parties can be associated with different            human–robot collaboration in production processes offer
+
+
+Nature Communications | (2024)15:7641                                                                                                                 9
+Article                                                                                                    https://doi.org/10.1038/s41467-024-52030-0
+
+
+opportunities to reduce the time and costs of disassembly. These            during the ﬁrst use stage of a battery is based on the electricity con-
+technological advancements could streamline the disassembly pro-            sumption and its price, which is calculated according to Eq. (1):
+cess, making it more efﬁcient and less energy intensive. Third, human
+behaviours signiﬁcantly inﬂuence battery lifespan and disposal pat-                               Cycle afX
+                                                                                                          ter f irst use
+
+terns. Factors such as charging habits, use frequency, and operation                     C EV =                            SOH ðCycleÞ  QEV , ini  cele
+                                                                                                                                                      buy   ð1Þ
+                                                                                                        Cycle = 1
+conditions affect the longevity and efﬁciency of batteries and are
+promising aspects for designing a human-in-the-loop battery retire-
+ment scheme. Fourth, government incentives play a pivotal role in           where QEV , ini is the initial capacity of the EV. SOHðCycleÞ denotes the
+promoting sustainable practices in the battery industry, including          SOH of the battery, which varies with the cycle number. cele        is the price
+                                                                                                                                            buy
+subsidies for battery reuse, recycling, and regulations for eco-friendly                                             PCycle af ter f irst use
+disposal. Despite these challenges, our battery retirement pathway          of electricity purchased from the grid. Cycle = 1                 SOH ðCycleÞ 
+decisions still present promise for facilitating a more sustainable bat-    QEV , ini deﬁnes the total throughput capacity of the battery, encom-
+tery ecosystem by reshaping disordered retired battery management           passing cycles from the ﬁrst (100% SOH) to the last (70%–90% SOH)
+in an organized manner. Future work will integrate considerations           during the ﬁrst use stage50. In some studies, battery electricity con-
+such as battery safety, labour cost, complex user behaviours, extended      sumption in EVs has often been assumed based on values such as daily
+reuse scenarios, advanced recycling processes, business models and          running kilometres and running years26,64. However, we consider the
+government considerations.                                                  total throughput of battery electricity consumption to assess battery
+                                                                            aging, a method widely acknowledged in the industry.
+Methods                                                                           This research delves into the analysis of the reuse stage span
+Goal and scope deﬁnition                                                    across three distinct applications, three ESS working proﬁles, four CBS
+We propose a pathway decision strategy for retired EV batteries             working proﬁles, and one LSV working proﬁle. Particular emphasis is
+through economic and environmental evaluation. The intended ﬁeld            placed on the purchase cost of retired batteries and economic per-
+and audience include battery research and development, manufactur-          formance during the reuse stage40. Our work includes the optimal
+ing, reuse, recycling, and third-party services. Two battery chemistries,   conﬁguration and operation models of the ESS, CBS, and LSV con-
+LFP and NMC, which dominate the market, are studied. The evaluation         sidering battery degradation. The economic performance objective
+examines diverse reuse scenarios and recycling technologies. The            function maximizes the total proﬁt by changing the battery conﬁg-
+entire battery system life cycle, namely, that of CTG, is analysed from     uration capacity, as shown in Eq. (2):
+two perspectives: one including reuse and the other not including                                                                 
+reuse. The latter serves as a baseline for comparison. In the ﬁrst case,                                 max C inv + C mai + C ope                          ð2Þ
+the life cycle encompasses cell production, assembly of modules and
+packs, use in EVs, refurbishment, reuse in ESS/CBS/LSV, and ﬁnally,         where C inv is the investment cost (the price of SLBs, including
+recycling. In the second case, the life cycle includes cell production,     resourcing and refurbishment), C mai is the maintenance cost, and C ope
+assembly of modules and packs, EV/ESS/CBS/LSV use, and recycling.           is the operation cost. The investment cost C inv of both the new battery
+Pathway decisions involve the new battery production stage because          and the SLB is deﬁned as Eq. (3):
+cell/module/pack design affects both inputs and outputs in the
+refurbishment stage, while the cell composition impacts the recycling                                               C inv = cu  N                         ð3Þ
+stage. The ﬁrst use stage is compared with the beneﬁcial pathway.
+     The unit battery proﬁt per kWh battery (economic perspective)          where cu is the cost of the unit battery (cell or module). N is the number
+and carbon footprint per kWh life cycle electricity delivery (environ-      of batteries in the system. Typically, within a battery pack, a fully serial
+mental perspective) are the functional units. These two indicators aim      or hybrid connection conﬁguration can be applied, resulting in a
+to maximize beneﬁts by assessing the optimal battery reuse and              relatively large number of cells, and a hybrid packet can be composed
+recycling decision. The conﬁguration of the system battery capacity         of m modules in series with n units (mPnS)65. An increase in the number
+across various scenarios is guided by optimizing total proﬁt in the         of series will reduce the inconsistency of the current distribution
+reuse stage. The pricing models for new and retired batteries are           caused by parallel66, while for the parallel module, the difference in
+introduced, along with the system conﬁguration and operation model          currents between cells inside the module increases with the discharge
+considering battery degradation geared toward economic optimiza-            rate67. In addition, Chang et al.65 reported that the capacity of a battery
+tion. Afterwards, the analysis of the carbon footprint is conducted. The    system increased as the number of series or parallel increases, but the
+failure rate of LIB cells during the refurbishment stage is not             growth rate gradually slowed. In this study, a nonlinear correlation
+considered63. Three technologies, hydrometallurgical, direct, and           between the battery system capacity and total number of batteries is
+pyrometallurgical recycling, are analysed in the EOL stage. The recy-       introduced by ﬁtting Fig. 9 in ref. 65. The initial capacity of ESS/CBS/
+cling output qualities, namely, the battery grade, are not considered.      LSV Qini can be expressed as Eq. (4):
+Economic and environmental metrics are used to evaluate pathways,
+                                                                                                         
+considering that the closed-loop process of recycling retired batteries                 Qini = qu  1  γc  N, γc = 1:826N 0:006232  1:826                ð4Þ
+into new LIBs is still in the design stage51,53. This model offers
+immediate insights into the variations in economic performance and          where qu is the initial capacity of unit SLB, and γc is the capacity
+carbon footprint resulting from changes in speciﬁc parameters within        difference rate.
+battery systems, which facilitates future conﬁrmation of scenarios and           For the new battery, cu is selected from ref. 68. When the battery is
+optimization of capacity conﬁgurations.                                     in reuse mode40, cu is deﬁned as Eq. (5):
+
+                                                                                                          h                                 i
+Economic performance indicators                                                       cu = AC  αdc  qu = ω1 + ω2  qa1      T b  α dc  qu     ð5Þ
+                                                                                                                          r
+The traditional pathway involves battery manufacturing, use in EVs,                                                                              
+and EOL. The price of new batteries designed for EVs is denoted as the      where AC is the average SLB cost per kWh, AC = ω1 qr + ω2 qar T b =qr . qr
+investment cost C inv , and their power consumption during the use          is the capacity of all retired batteries available from EVs. ω1 and ω2 are
+stage is considered without accounting for interactions (ancillary ser-     the unit prices for resourcing and repurposing, respectively. a and b
+vices) with the power grid. Therefore, the economic performance C EV        are the elasticity parameters accounting for the number of retired
+
+
+Nature Communications | (2024)15:7641                                                                                                                       10
+Article                                                                                                                                         https://doi.org/10.1038/s41467-024-52030-0
+
+
+batteries and the refurbishment technology efﬁciency, respectively.                                            illustrated in Eq. (8):
+T 2 ½0, 1 is the reuse rate. α dc is the degradation curve indicator, which
+measures the relative capability SLB during its reuse stage to that of                                                               Cycle afX
+                                                                                                                                             ter f irst use
+
+the market average, and a large αdc indicates that the battery can                                                        CO2EV =                             SOH ðCycleÞ  QEV , ini  CO2ele           ð8Þ
+                                                                                                                                           Cycle = 1
+release more capacity. Supplementary Table 18 lists the α dc values.
+More details about Eq. (5) can be found in Supplementary Note 1
+and ref. 40.                                                                                                   where CO2ele represents the carbon footprint per kWh of power grid
+     The daily maintenance cost C mai is calculated as Eq. (6):                                                electricity.
+                                                                                                                    After the ﬁrst use stage, the battery pack enters the refurbish-
+                                                                                                               ment phase, which involves collection, SOH and RUL testing, and
+                                    Day X                             
+                                        after use
+                                                                     1 + ir    y
+                                                                                                               physical breakdown and repacking of the battery system18. Initially,
+                     C mai =                           cmai P max                                   ð6Þ
+                                                                        1 + id                                 the cost of battery collection is driven primarily by geography, where
+                                         d=1
+                                                                                                               collection costs are kept lower by keeping transportation require-
+                                                                                                               ments low. Subsequently, the SOH and RUL of the battery are
+where cmai is the maintenance cost per kWh battery. P max is the max-
+                                                                                                               assessed to determine whether the battery is suitable for reuse.
+imum power of the battery system. ir and id are the inﬂation rate and
+                                                                                                               Successful refurbishment involves evaluating the suitability of the
+discount rate, respectively35. d and y represent the operation day and
+                                                                                                               used battery for a reuse scenario20. Due to the decreases in the SOH
+year, respectively. Day af ter use indicates the operation day number
+                                                                                                               and RUL, retired batteries may ﬁnd applications in the same scenario
+of the battery system when it reaches the EOL stage or the end of the
+                                                                                                               as new batteries, but with larger amounts. Finally, disassembly is
+use stage.
+                                                                                                               performed at the module level26, considering the substantial energy
+     The daily operation cost C ope is calculated as Eq. (7):
+                                                                                                               consumption, labour intensity, and potential hazards associated with
+                                                                                                               thermal runaway and toxic chemicals26,71. This phase encompasses
+                          (                                                                              )
+                 X
+             Day af ter use   X24 h                                                     i 1 + i     y         material output and energy input. During the assembly process, the
+                                                                                                 r
+ C ope =                          cele                         ele
+                                    buy ðd, t ÞP buy ðd, t Þ  cbuy ðd, t ÞP sel ðd, t Þ                       quantity of related components is determined based on the
+                 d=1          t=1
+                                                                                          1 + id
+                                                                                                               requirements, involving the inputs of materials and electricity. A
+                                                                                                         ð7Þ   more in-depth understanding of the refurbishment process can be
+                                                                                                               found in ref. 20. The capacity conﬁguration illustrated in the pre-
+where cbuy ðd, t Þ and csel ðd, t Þ are the electricity prices for buying from                                 vious sections determines the carbon footprint associated with raw
+and selling to the grid, respectively, on the dth day and at the tth hour.                                     materials, manufacturing processes, and electricity consumption
+P buy ðd, t Þ and P sel ðd, t Þ are the electricity bought from and sold to the                                during the refurbishment and reuse stages. The carbon footprint in
+grid, respectively. In this study, cbuy ðd, t Þ and csel ðd, t Þ are set to be the                             the reuse phase CO2ope is given by Eq. (9):
+same, as illustrated in Supplementary Fig. 3 for electricity prices in
+                                                                                                                                               (                                                     )
+Shenzhen, China. The constraints of the ESS, CBS, and LSV can be                                                                  X
+                                                                                                                              Day af ter use    X24 h                                            i
+found in Supplementary Note 1.                                                                                     CO2ope =                             CO2ele P buy ðd, t Þ + CO2PV P PV ðd, t Þ        ð9Þ
+                                                                                                                                  d=1            t =1
+       Mature recycling technologies can be divided into two primary
+categories, pyrometallurgical and hydrometallurgical recycling, the                                            where CO2PV represents the carbon footprint per kWh of renewable
+latter of which is associated with lower environmental impacts and is                                          energy generation. P PV ðd, t Þ is the power output from renewable
+more practical51. Thus, this study adopts hydrometallurgical recycling                                         sources on the dth day and at the tth hour.
+via a traditional pathway. Direct recycling, recognized as a promising                                              The EOL phase consists of pretreatment and recycling. The allo-
+green technology, is notable for its environmental efﬁciency26.                                                cation of recovered materials from recycling is performed assuming an
+Although direct recycling is currently in its infancy51,52, it is developing                                   open-loop process with no market disequilibrium31. A description of
+very rapidly, and insights have already been proposed to facilitate the                                        the recycling cost model and carbon footprint calculations, incorpor-
+transition from laboratory research to industrial production53. In                                             ating different recycling methods during the EOL stage, is provided in
+comparison to hydrometallurgical recycling, direct recycling has sig-                                          Supplementary Note 3.
+niﬁcant advantages, consuming only ~15% of the energy, generating                                                   The life cycle inventory, excluding the EOL stage, is available in
+~25% less of the carbon footprint, and reducing costs by ~50%11. Direct                                        Supplementary Note 2. The carbon footprint analysis is based on the
+landﬁll disposal or other coarse treatments of batteries are not ana-                                          LCA method, and the carbon footprint factor data are sourced from
+lysed here due to legal constraints69,70, poor economic beneﬁts, and                                           Ecoinvent version 3.972. We employ GWP100 indicators, which mea-
+environmental impacts. The economic performance during the recy-                                               sure the impact of GHGs over a 100-year period. The life cycle is
+cling phase is calculated with reference to the environmental impact of                                        examined within the context of Guangdong, China, in 2023, repre-
+this stage and is provided in Supplementary Note 3.                                                            senting our baseline case. In this baseline scenario, we do not account
+                                                                                                               for temporal or spatial variations in the power grid. Consequently, the
+Environment impact indicator                                                                                   environmental impacts associated with electricity consumption are
+The environmental impact in this paper is evaluated using the carbon                                           considered constant throughout the study period.
+footprint as the metric. The carbon footprint, deﬁned as the total
+amount of GHG emitted during the life cycle of the LIB, is utilized to                                         Sensitivity analysis
+quantify and compare environmental impacts. At the beginning of the                                            Sensitivity analysis is performed to evaluate the key assumptions of
+life cycle, batteries undergo a sequential process of assembling raw                                           lithium salt price, electricity generation, the SOH range in the reuse
+materials into cells, followed by the formation of modules and ulti-                                           stage and the SOH in the EOL stage. Lithium salt prices have experi-
+mately packs. This process encompasses the inputs of materials,                                                enced signiﬁcant ﬂuctuations73; thus, the impact of lithium salt price
+electricity, and heat, with a more detailed description available in                                           ﬂuctuations (ranging from the minimum value of $5496 on October 26,
+Supplementary Note 2. Subsequently, the transition to the ﬁrst use                                             2020, to the maximum value of $84,942 on November 7, 2022) on
+stage occurs, where the SOH in EVs ranges from 100% to 70%–90%. The                                            proﬁt, cost, and revenue during the recycling stage is examined, and
+carbon footprint in the ﬁrst use stage CO2EV is based on electricity                                           the results are shown in Fig. 3. The carbon footprint of electricity will
+consumption and the carbon intensity of the mixed electricity used, as                                         signiﬁcantly change in the future26, and the effect of emissions from
+
+
+Nature Communications | (2024)15:7641                                                                                                                                                                    11
+Article                                                                                                    https://doi.org/10.1038/s41467-024-52030-0
+
+
+electricity (ranging from 0.3140 to 0.7488 kg CO2-eq/kWh) on the                 13. Wang, Y. et al. Environmental impact assessment of second life and
+pathway results is detailed in Supplementary Tables 3–16. Due to the                 recycling for LiFePO4 power batteries in China. J. Environ. Manag.
+different conditions of the battery when it is retired and recycled, the             314, 115083 (2022).
+SOH is projected to range from 70% to 90% at the end of the ﬁrst use             14. Yang, J., Gu, F. & Guo, J. Environmental feasibility of secondary use
+stage in EVs, while it is estimated to be within the 40%–80% range at                of electric vehicle lithium-ion batteries in communication base
+the end of the reuse stage. This broader SOH range at the EOL stage,                 stations. Resour. Conserv. Recycl. 156, 104713 (2020).
+spanning from 40% to 90%, accommodates the diverse conditions of                 15. Kamath, D., Shukla, S., Arsenault, R., Kim, H. C. & Anctil, A. Evalu-
+practical batteries. Additionally, batteries characterized by distinct               ating the cost and carbon footprint of second-life electric vehicle
+SOH ranges have different RULs, degradation curves, throughput                       batteries in residential and utility-level applications. Waste Manag.
+capacities, and charging–discharging efﬁciency impacts and thus yield                113, 497–507 (2020).
+varying operational outcomes. In this paper, the SOH of retired EV               16. Bhatt, A., Ongsakul, W. & Madhu M, M. Optimal techno-economic
+batteries is set at 70%, 80%, and 90%, while the SOH at the EOL stage is             feasibility study of net-zero carbon emission microgrid integrating
+set at 90%, 80%, 70%, 60%, 50%, and 40%. This stratiﬁcation by 10%                   second-life battery energy storage system. Energy Convers. Manag.
+intervals allows for a detailed observation of aging processes, enhan-               266, 115825 (2022).
+ces the clarity of the data, and aids in the visual representation of            17. Yang, J., Weil, M. & Gu, F. Environmental-economic analysis of the
+ﬁndings. Through sensitivity analysis, we can obtain more information                secondary use of electric vehicle batteries in the load shifting of
+on pathway decisions and enhance reliability.                                        communication base stations: a case study in China. J. Energy
+                                                                                     Storage 55, 105823 (2022).
+Data availability                                                                18. Zhu, J. et al. End-of-life or second-life options for retired electric
+The authors declare that the data supporting the ﬁndings of this study               vehicle batteries. Cell Rep. Phys. Sci. 2, 100537 (2021).
+are available within the paper and its Supplementary Information                 19. Hossain, E. et al. A comprehensive review on second-life batteries:
+ﬁles. Source data are provided with this paper.                                      current state, manufacturing considerations, applications, impacts,
+                                                                                     barriers & potential solutions, business strategies, and policies. IEEE
+Code availability                                                                    Access 7, 73215–73252 (2019).
+The code for the pathway decisions model generated in this study is              20. Borner, M. F. et al. Challenges of second-life concepts for retired
+available at https://github.com/RuifeiMa/Reuse-and-recycling-pathway-                electric vehicle batteries. Cell Rep. Phys. Sci. 3, 101095 (2022).
+of-retired-batteries.                                                            21. Wang, Q., Wang, Z., Zhang, L., Liu, P. & Zhang, Z. A novel con-
+                                                                                     sistency evaluation method for series-connected battery systems
+References                                                                           based on real-world operation data. In IEEE Transactions on Trans-
+1.  Sagar, A. D. et al. Mission Energy Access for a just and sustainable             portation Electriﬁcation Vol. 7, 437–451 (IEEE, 2021).
+    future for all. Nat. Energy 8, 1171–1173 (2023).                             22. He, K. et al. A novel quick screening method for the second usage of
+2. Gutsch, M. & Leker, J. Costs, carbon footprint, and environmental                 parallel-connected lithium-ion cells based on the current distribu-
+    impacts of lithium-ion batteries—from cathode active material                    tion. J. Electrochem. Soc. 170, 030514 (2023).
+    synthesis to cell manufacturing and recycling. Appl. Energy 353,             23. Zhang, J. et al. Realistic fault detection of li-ion battery via dyna-
+    122132 (2024).                                                                   mical deep learning. Nat. Commun. 14, 5940 (2023).
+3. Moraski, J. W., Popovich, N. D. & Phadke, A. A. Leveraging rail-based         24. Roman, D., Saxena, S., Robu, V., Pecht, M. & Flynn, D. Machine
+    mobile energy storage to increase grid reliability in the face of cli-           learning pipeline for battery state-of-health estimation. Nat. Mach.
+    mate uncertainty. Nat. Energy 8, 736–746 (2023).                                 Intell. 3, 447–456 (2021).
+4. Peng, L., Mauzerall, D. L., Zhong, Y. D. & He, G. Heterogeneous               25. Tao, S. et al. Collaborative and privacy-preserving retired battery
+    effects of battery storage deployment strategies on decarboniza-                 sorting for proﬁtable direct recycling via federated machine
+    tion of provincial power systems in China. Nat. Commun. 14,                      learning. Nat. Commun. 14, 8032 (2023).
+    4858 (2023).                                                                 26. Yanqiu, T., Rahn, C. D., Archer, L. A. & You, F. Second life and
+5. Aguilar Lopez, F., Lauinger, D., Vuille, F. & Müller, D. B. On the                recycling: energy and environmental sustainability perspectives for
+    potential of vehicle-to-grid and second-life batteries to provide                high-performance lithium-ion batteries. Sci. Adv. 7,
+    energy and material security. Nat. Commun. 15, 4179 (2024).                      eabi7633 (2021).
+6. Degen, F., Winter, M., Bendig, D. & Tübke, J. Energy consumption of           27. Wu, W., Lin, B., Xie, C., Elliott, R. J. R. & Radcliffe, J. Does energy
+    current and future production of lithium-ion and post lithium-ion                storage provide a proﬁtable second life for electric vehicle bat-
+    battery cells. Nat. Energy 8, 1284–1295 (2023).                                  teries? Energy Econ. 92, 105010 (2020).
+7. IEA. Global EV Data Explorer (IEA, Paris, 2023).                              28. Cheng, M., Sun, H., Wei, G., Zhou, G. & Zhang, X. A sustainable
+8. IEA. Global EV Outlook 2022 (IEA, 2022).                                          framework for the second-life battery ecosystem based on block-
+9. Xu, C. et al. Electric vehicle batteries alone could satisfy short-term           chain. eTransportation 14, 100206 (2022).
+    grid storage demand by as early as 2030. Nat. Commun. 14,                    29. Hannan, M. A. et al. Impact assessment of battery energy storage
+    119 (2023).                                                                      systems towards achieving sustainable development goals. J.
+10. Zeng, A. et al. Battery technology and recycling alone will not save             Energy Storage 42, 103040 (2021).
+    the electric mobility transition from future cobalt shortages. Nat.          30. Wewer, A., Bilge, P. & Dietrich, F. Advances of 2nd life applications for
+    Commun. 13, 1341 (2022).                                                         lithium ion batteries from electric vehicles based on energy demand.
+11. Huang, Y. & Li, J. Key challenges for grid-scale lithium-ion battery             Sustainability 13 https://doi.org/10.3390/su13105726 (2021).
+    energy storage. Adv. Energy Mater. 2202197 https://doi.org/10.               31. Dunn, J., Ritter, K., Velázquez, J. M. & Kendall, A. Should high-cobalt
+    1002/aenm.202202197 (2022).                                                      EV batteries be repurposed? Using LCA to assess the impact of
+12. Canals Casals, L., Amante García, B. & González Benítez, M. M. in                technological innovation on the waste hierarchy. J. Ind. Ecol. 27,
+    Project Management and Engineering Research, 2014: Selected                      1277–1290 (2023).
+    Papers from the 18th International AEIPRO Congress held in Alcañiz,          32. Steckel, T., Kendall, A. & Ambrose, H. Applying levelized cost of
+    Spain, in 2014 (eds Muñoz, J. L. A., Blanco, J. L. Y. & Capuz-Rizo, S. F.)       storage methodology to utility-scale second-life lithium-ion battery
+    129–141 (Springer International Publishing, 2016).                               energy storage systems. Appl. Energy 300, 117309 (2021).
+
+
+
+Nature Communications | (2024)15:7641                                                                                                                      12
+Article                                                                                                 https://doi.org/10.1038/s41467-024-52030-0
+
+
+33. Jiang, Y., Kang, L. & Liu, Y. Optimal conﬁguration of battery energy      55. Kastanaki, E. & Giannis, A. Dynamic estimation of end-of-life electric
+    storage system with multiple types of batteries based on supply-              vehicle batteries in the EU-27 considering reuse, remanufacturing
+    demand characteristics. Energy 206, 118093 (2020).                            and recycling options. J. Clean. Prod. 393, 136349 (2023).
+34. Liang, Y., Cai, H. & Zou, G. Conﬁguration and system operation for        56. Jung, R. et al. Effect of ambient storage on the degradation of Ni-
+    battery swapping stations in Beijing. Energy 214, 118883 (2021).              rich positive electrode materials (NMC811) for Li-ion batteries. J.
+35. Tang, R., Xu, Q., Fang, J., Xia, Y. & Shi, Y. Optimal conﬁguration            Electrochem. Soc. 165, A132 (2018).
+    strategy of hybrid energy storage system on industrial load side          57. Winjobi, O., Kelly, J. C. & Dai, Q. Life-cycle analysis, by global region,
+    based on frequency division algorithm. J. Energy Storage 50,                  of automotive lithium-ion nickel manganese cobalt batteries of
+    104645 (2022).                                                                varying nickel content. Sustain. Mater. Technol. 32, e00415 (2022).
+36. Kang, Z. et al. Recycling technologies, policies, prospects, and          58. IEA. Global EV Outlook 2023 (IEA, Paris, 2023).
+    challenges for spent batteries. iScience 26, 108072 (2023).               59. Chen, W.-H. & Hsieh, I. Y. L. Techno-economic analysis of lithium-
+37. Sommerville, R. et al. A qualitative assessment of lithium ion                ion battery price reduction considering carbon footprint based on
+    battery recycling processes. Resour. Conserv. Recycl. 165,                    life cycle assessment. J. Clean. Prod. 425, 139045 (2023).
+    105219 (2021).                                                            60. Tao, S. et al. Rapid and sustainable battery health diagnosis for
+38. Ji, G. et al. Direct regeneration of degraded lithium-ion battery             recycling pretreatment using fast pulse test and random forest
+    cathodes with a multifunctional organic lithium salt. Nat. Commun.            machine learning. J. Power Sources 597, 234156 (2024).
+    14, 584 (2023).                                                           61. Cerdas, F., Andrew, S., Thiede, S. & Herrmann, C. in Recycling of
+39. Kamath, D., Arsenault, R., Kim, H. C. & Anctil, A. Economic and               Lithium-Ion Batteries: The LithoRec Way (eds Kwade, A. & Diekmann,
+    environmental feasibility of second-life lithium-ion batteries as fast-       J.) 267–288 (Springer International Publishing, 2018).
+    charging energy storage. Environ. Sci. Technol. 54,                       62. Blömeke, S. et al. Material and energy ﬂow analysis for environ-
+    6878–6887 (2020).                                                             mental and economic impact assessment of industrial recycling
+40. Cheng, M. et al. Sustainability evaluation of second-life battery             routes for lithium-ion traction batteries. J. Clean. Prod. 377,
+    applications in grid-connected PV-battery systems. J. Power Sour-             134344 (2022).
+    ces 550, 232132 (2022).                                                   63. Ahmadi, L. et al. Energy efﬁciency of Li-ion battery packs re-used in
+41. Ning, L., Si, L., Nian, L. & Fei, Z. Network reconﬁguration based on an       stationary power applications. Sustain. Energy Technol. Assess. 8,
+    edge-cloud-coordinate framework and load forecasting. Front.                  9–17 (2014).
+    Energy Res. 9, 679275 (2021).                                             64. Philippot, M. et al. Environmental impact of the second life of an
+42. Zhong, L. et al. Double-layer K-means++ clustering method for                 automotive battery: reuse and repurpose based on ageing tests. J.
+    evaluation of dispatchable potential of massive regional 5G base              Clean. Prod. 366, 132872 (2022).
+    stations. IEEE Access 10, 82870–82882 (2022).                             65. Chang, L. et al. Correlations of lithium-ion battery parameter var-
+43. Wang, T. et al. An optimized energy management strategy for fuel              iations and connected conﬁgurations on pack statistics. Appl.
+    cell hybrid power system based on maximum efﬁciency range                     Energy 329, 120275 (2023).
+    identiﬁcation. J. Power Sources 445, 227333 (2020).                       66. Fan, X. et al. Simpliﬁed battery pack modeling considering incon-
+44. Baumhöfer, T., Brühl, M., Rothgang, S. & Sauer, D. U. Production              sistency and evolution of current distribution. In IEEE Transactions
+    caused variation in capacity aging trend and correlation to initial           on Intelligent Transportation Systems Vol. 22, 630–639 (IEEE, 2021).
+    cell performance. J. Power Sources 247, 332–338 (2014).                   67. Wang, B. et al. Study of non-uniform temperature and discharging
+45. Xiong, W., Mo, Y. & Yan, C. Online state-of-health estimation for             distribution for lithium-ion battery modules in series and parallel
+    second-use lithium-ion batteries based on weighted least squares              connection. Appl. Therm. Eng. 168, 114831 (2020).
+    support vector machine. IEEE Access 9, 1870–1881 (2021).                  68. Fallahifar, R. & Kalantar, M. Optimal planning of lithium ion battery
+46. Cook, R., Swan, L. & Plucknett, K. Impact of test conditions while            energy storage for microgrid applications: considering capacity
+    screening lithium-ion batteries for capacity degradation in low               degradation. J. Energy Storage 57, 106103 (2023).
+    earth orbit cubesat space applications. Batteries 7 https://doi.org/      69. Ministry of Industry and Information Technology of the Peopleʼs
+    10.3390/batteries7010020 (2021).                                              Republic of China. Interim Provisions of the Traceability Manage-
+47. Zhou, Q. et al. A closed-loop regeneration of LiNi0.6Co0.2Mn0.2O2             ment of the Recovery and Utilization of New Energy Vehicle Power
+    and graphite from spent batteries via efﬁcient lithium supple-                Battery (2018). Available at: https://www.gov.cn/zhengce/
+    mentation and structural remodelling. Sustain. Energy Fuels 5,                zhengceku/2018-12/31/content_5439636.htm.
+    4981–4991 (2021).                                                         70. Council of the European Union, European Parliament. Regulation
+48. Šimaitis, J., Allen, S. & Vagg, C. Are future recycling beneﬁts mis-          (EU) 2023/1542 concerning batteries and waste batteries, amending
+    leading? Prospective life cycle assessment of lithium-ion batteries.          Directive 2008/98/EC and Regulation (EU) 2019/1020 and repealing
+    J. Ind. Ecol. 27, 1291–1303 (2023).                                           Directive 2006/66/EC (2023). Available at: https://eur-lex.europa.
+49. Stringer, D. & Ma, J. in Bloomberg Businesswee (Bloomberg, New                eu/eli/reg/2023/1542/oj.
+    York, 2018).                                                              71. Harper, G. et al. Recycling lithium-ion batteries from electric vehi-
+50. Geng, J. et al. Potential of electric vehicle batteries second use in         cles. Nature 575, 75–86 (2019).
+    energy storage systems: the case of China. Energy 253,                    72. Wernet, G. et al. The ecoinvent database version 3 (part I): overview
+    124159 (2022).                                                                and methodology. Int. J. Life Cycle Assess. 21, 1218–1230 (2016).
+51. Mao, J. et al. Toward practical lithium-ion battery recycling: adding     73. Sun, X., Ouyang, M. & Hao, H. Surging lithium price will not impede
+    value, tackling circularity and recycling-oriented design. Energy             the electric vehicle boom. Joule 6, 1738–1742 (2022).
+    Environ. Sci. 15, 2732–2752 (2022).
+52. Xu, P. et al. A materials perspective on direct recycling of lithium-     Acknowledgements
+    ion batteries: principles, challenges and opportunities. Adv. Funct.      This work was supported by Shenzhen Science and Technology Pro-
+    Mater. 33, 2213168 (2023).                                                gram (Grant No. KQTD20170810150821146) [X.Z.], Tsinghua Shenzhen
+53. Shan, M. et al. Recycling of LiFePO4 cathode materials: from              International Graduate School Interdisciplinary Innovative Fund (Grant
+    laboratory scale to industrial production. Mater. Today 73,               No. JC2021006) [X.Z., G.Z.], Shenzhen Ubiquitous Data Enabling Key Lab
+    130–150 (2024).                                                           (Grant No. ZDSYS20220527171406015) [X.Z.], Tsinghua-Berkeley
+54. IEA. Batteries and Secure Energy Transition (IEA, Paris, 2024).           Shenzhen Institute Phase II Research Funding [X.Z.], the Tsinghua
+
+
+Nature Communications | (2024)15:7641                                                                                                                    13
+Article                                                                                               https://doi.org/10.1038/s41467-024-52030-0
+
+
+Shenzhen International Graduate School-Shenzhen Pengrui Young               contribution to the peer review of this work. A peer review ﬁle is avail-
+Faculty Program of Shenzhen Pengrui Foundation (Grant No.                   able.
+SZPR2023007) [G.Z.], and the Guangdong Basic and Applied Basic
+Research Foundation (Grant No. 2023B1515120099) [G.Z.].                     Reprints and permissions information is available at
+                                                                            http://www.nature.com/reprints
+Author contributions
+R.M. conceptualized, designed, and implemented the numerical                Publisher’s note Springer Nature remains neutral with regard to jur-
+experiments and prepared the manuscript draft; S.T. conceptualized,         isdictional claims in published maps and institutional afﬁliations.
+reviewed, discussed, and supervised this work; X.S. reviewed, dis-
+cussed, and supervised this work; Y.R. contributed to the optimal con-      Open Access This article is licensed under a Creative Commons
+ﬁguration analysis during the use stage; C.S. and G.J. contributed to the   Attribution-NonCommercial-NoDerivatives 4.0 International License,
+recycling analysis; J.X. and X.W. reviewed and discussed this work; and     which permits any non-commercial use, sharing, distribution and
+X.Z., Q.W., and G.Z. conceptualized, reviewed, discussed, supervised        reproduction in any medium or format, as long as you give appropriate
+this work and retrieved funding.                                            credit to the original author(s) and the source, provide a link to the
+                                                                            Creative Commons licence, and indicate if you modiﬁed the licensed
+Competing interests                                                         material. You do not have permission under this licence to share adapted
+The authors declare no competing interests.                                 material derived from this article or parts of it. The images or other third
+                                                                            party material in this article are included in the article’s Creative
+Additional information                                                      Commons licence, unless indicated otherwise in a credit line to the
+Supplementary information The online version contains                       material. If material is not included in the article’s Creative Commons
+supplementary material available at                                         licence and your intended use is not permitted by statutory regulation or
+https://doi.org/10.1038/s41467-024-52030-0.                                 exceeds the permitted use, you will need to obtain permission directly
+                                                                            from the copyright holder. To view a copy of this licence, visit http://
+Correspondence and requests for materials should be addressed to            creativecommons.org/licenses/by-nc-nd/4.0/.
+Xuan Zhang, Qiuwei Wu or Guangmin Zhou.
+                                                                            © The Author(s) 2024
+Peer review information Nature Communications thanks Eleni Kasta-
+naki, Shizhang Qiao and the other, anonymous, reviewer(s) for their
+
+
+
+
+Nature Communications | (2024)15:7641                                                                                                                14
+
