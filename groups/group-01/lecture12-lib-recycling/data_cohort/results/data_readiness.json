@@ -1,0 +1,7 @@
+{
+  "ready": true,
+  "issues": [],
+  "interface_ready": true,
+  "evidence_ready": false,
+  "scope": "接口就绪不等于证据就绪；本项目为待核验的条件情景"
+}
