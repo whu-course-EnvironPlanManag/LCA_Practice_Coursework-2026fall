@@ -1,0 +1,14 @@
+﻿benchmark_id,item,value,unit,basis,region,project_capacity_t_y,assumption_flag,source,source_locator,notes
+CAPEX_HUIZHOU_5WT,capex_unit,6200,CNY_per_t_y,总投资约3.1亿元÷5万吨/年,广东惠州,50000,documented,惠州市生态环境局 惠市环建〔2025〕23号 广东恒赋能循环科技有限公司年处理5万吨废旧锂离子电池再生利用项目环境影响报告书批复,批复正文"项目总投资约3.1亿元"；data_cohort/raw/references/sources_2026/huizhou_5wt_lib_recycling_eia.pdf,含5条拆解线+80台分容柜+2条资源化线；以拆解与梯次检测为主，不能直接当作纯湿法厂单位投资
+CAPEX_XIANGYANG_5WT,capex_unit,12117.42,CNY_per_t_y,60587.1万元÷5万吨/年,湖北襄阳谷城,50000,documented,襄阳市生态环境局 襄环审评〔2023〕35号 骆驼集团资源循环襄阳有限公司年处理5万吨动力锂电池资源回收综合利用项目（重新报批）环境影响报告书批复,http://sthjj.xiangyang.gov.cn/hjxx/hjglywxxgk/hpsp/202312/t20231225_3539998.shtml 正文第一条,湖北省内湿法全链项目；与鄂发改审批服务〔2023〕344号同一项目
+CAPEX_FUJIAN_5WT,capex_unit,23240.08,CNY_per_t_y,116200.42万元÷5万吨/年,福建龙岩上杭,50000,documented,福建省工业和信息化厅 闽工信行政服务〔2024〕78号 福建优锂新能源有限公司5万吨/年磷酸铁锂综合利用项目节能报告审查意见,http://gxt.fujian.gov.cn 2024-08-12 正文"项目总投资116200.42万元"；data_cohort/raw/references/sources_2026/fujian_5wt_lfp_recycling_investment.html,5条干法炭化破碎线+5条湿法线；含磷铁净化液产品，单位投资上限参考
+ENERGY_CAMEL_ELEC,electricity_intensity,810.17,kWh_per_t,4050.85万kWh÷5万吨/年,湖北襄阳谷城,50000,documented,湖北省发展和改革委员会 鄂发改审批服务〔2023〕344号,data_cohort/raw/references/sources_2026/hubei_drc_2023_camel_50kt_energy_review.md 正文第一条,湿法全链综合电耗；与Land Reclamation 2025约800 kWh/t一致
+ENERGY_CAMEL_GAS,gas_intensity,160.84,m3_per_t,804.19万m³÷5万吨/年,湖北襄阳谷城,50000,documented,同上,同上,热解/焚烧与天然气锅炉合计
+ENERGY_CAMEL_WATER,water_intake,2.08,m3_per_t,10.40万吨÷5万吨/年,湖北襄阳谷城,50000,documented,同上,同上,厂区直接取水；不含上游发电用水
+ENERGY_CAMEL_TCE,comprehensive_energy,294.88,kgce_per_t,14744吨标煤÷5万吨/年（当量值）,湖北襄阳谷城,50000,documented,同上,同上,等价值为439.58 kgce/t
+ENERGY_FUJIAN_ELEC,electricity_intensity,1685.99,kWh_per_t,8429.96万kWh÷5万吨/年,福建龙岩上杭,50000,documented,福建省工业和信息化厅 闽工信行政服务〔2024〕78号,data_cohort/raw/references/sources_2026/fujian_5wt_lfp_recycling_investment.html 正文,含干法炭化；高于湖北湿法厂，作上限对照
+ENERGY_FUJIAN_STEAM,steam_intensity,0.7627,t_per_t,38135.3吨÷5万吨/年,福建龙岩上杭,50000,documented,同上,同上,0.4MPa/143℃外购蒸汽
+OPEX_FIXED_LOW,fixed_opex_rate,0.03,fraction_of_capex_per_year,按CAPEX的3%计年度固定运行费（含维护、人工、保险、管理）,研究假设,50000,reasonable_assumption,行业通行固定资产年固定费用率区间3%—6%,本研究设定；无湖北企业决算,低值情景；仅用于敏感性，不进入正式主结果
+OPEX_FIXED_HIGH,fixed_opex_rate,0.06,fraction_of_capex_per_year,按CAPEX的6%计年度固定运行费,研究假设,50000,reasonable_assumption,同上,同上,高值情景
+COLLECTION_STORAGE,collection_and_storage,250,CNY_per_t_battery,0.45元/(t·km)×平均OSRM里程198.7km×危废运输溢价1.5倍≈134元/t，加暂存检测约116元/t,湖北省内,50000,reasonable_assumption,运输单价与里程来自road_distances.csv；危废运输较普通货运高50%—100%为公开报道口径,本表计算；不冒充企业结算单,用于补足collection节点variable_handling_cny_t=0的空档；属合理假设
+COLLECTION_STORAGE_RANGE,collection_and_storage_range,134-279,CNY_per_t_battery,仅运输134元/t；含暂存检测上限279元/t,湖北省内,50000,reasonable_assumption,同上,同上,敏感性区间；不含跨省长距离极端值3000—6000元/t
