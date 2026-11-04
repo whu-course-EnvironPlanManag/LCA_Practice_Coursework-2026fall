@@ -26,15 +26,11 @@ def calculate_lca(route, chemistry, green_power_ratio=0.3, mass_t=50000.0):
     disassembly_gwp = 0.05
     power_gwp = electricity_kwh * grid_cf
     total_gwp = transport_gwp + disassembly_gwp + gwp_process + power_gwp
-    li_content = float(chem["li_content_kg_per_kg"])
-    primary_brine_gwp = 1.5 * li_content
-    primary_spodumene_gwp = 14.5 * li_content
     water_total = water + 0.01
+    # 注：与原生锂的对比采用 LCE 口径（文献4：再生锂 6.1 vs 硬岩锂 14.5 kg CO2e/kg LCE，减排58%），
+    # 与本表每 kg 电池处理量口径分母不同，不在表内混算（旧版按每kg电池折算原生锂的做法口径错误，已移除）
     return {"route": route, "chemistry": chemistry, "green_power_ratio": green_power_ratio,
-        "gwp_kgCO2e_per_kg": round(total_gwp, 4), "water_L_per_kg": round(water_total, 4),
-        "primary_brine_gwp": round(primary_brine_gwp, 4),
-        "primary_spodumene_gwp": round(primary_spodumene_gwp, 4),
-        "gwp_reduction_vs_spodumene_pct": round((1 - total_gwp / primary_spodumene_gwp) * 100, 1) if primary_spodumene_gwp > 0 else 0}
+        "gwp_kgCO2e_per_kg": round(total_gwp, 4), "water_L_per_kg": round(water_total, 4)}
 
 def run_lca():
     results = []
@@ -46,10 +42,11 @@ def run_lca():
     with open(out, "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=results[0].keys()); w.writeheader(); w.writerows(results)
     print("=" * 80); print("全生命周期 LCA 核算"); print("=" * 80)
-    print(f"{'工艺':<18}{'化学':<8}{'绿电比':>8}{'GWP(kgCO2e/kg)':>18}{'水耗(L/kg)':>12}{'较硬岩减排%':>14}")
-    print("-" * 80)
+    print(f"{'工艺':<18}{'化学':<8}{'绿电比':>8}{'GWP(kgCO2e/kg)':>18}{'水耗(L/kg)':>12}")
+    print("-" * 70)
     for r in results:
-        print(f"{r['route']:<18}{r['chemistry']:<8}{r['green_power_ratio']:>8.0%}{r['gwp_kgCO2e_per_kg']:>18.4f}{r['water_L_per_kg']:>12.4f}{r['gwp_reduction_vs_spodumene_pct']:>14.1f}")
+        print(f"{r['route']:<18}{r['chemistry']:<8}{r['green_power_ratio']:>8.0%}{r['gwp_kgCO2e_per_kg']:>18.4f}{r['water_L_per_kg']:>12.4f}")
+    print("\n注：与原生硬岩锂对比采用 LCE 口径（文献4，减排 58%），见报告 §6.2 结论①")
     print(f"\n输出: {out}"); print("=" * 80)
     return results
 

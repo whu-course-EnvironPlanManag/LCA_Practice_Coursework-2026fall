@@ -7,3 +7,4 @@
 | fig5 | fig5_lca_contribution.png | 再生路径GWP显著低于原生硬岩锂 | 05_lca.py |
 | fig6 | fig6_sensitivity_heatmap.png | SOH阈值与价格对LCOR显著交互 | 06_pareto_sensitivity.py |
 | fig7 | fig7_pareto_front.png | 拐点方案平衡环境与经济目标 | 06_pareto_sensitivity.py |
+| fig5b | fig5b_lca_simple.png | 挖矿vs回收对比与绿电-三工艺实测（§6.2） | 07_make_figures.py |

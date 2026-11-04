@@ -15,7 +15,7 @@ lecture12-lib-recycling/
 │   ├── 04_echelon_tea.py         # 模块3a：梯次 TEA + 回收 TEA + 价格反转
 │   ├── 05_lca.py                 # 模块3b：LCA GWP/水耗
 │   ├── 06_pareto_sensitivity.py  # 模块3c：帕累托寻优 + 敏感性
-│   ├── 07_make_figures.py        # 模块4：7 张图
+│   ├── 07_make_figures.py        # 模块4：8 张图（含 fig5b）
 │   └── tests/test_policy_engine.py
 ├── data_cohort/                  # 输入数据
 ├── results_output/               # 计算结果
