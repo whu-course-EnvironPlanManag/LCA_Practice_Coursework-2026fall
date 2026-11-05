@@ -49,6 +49,18 @@
       "below_font_floor": 0
     },
     {
+      "file": "fig11_dmfa_lithium_flows.png",
+      "collision_exit": 0,
+      "collision_summary": {
+        "fail": 0,
+        "warn": 0,
+        "contained_fill_overlays": 0,
+        "contained_image_overlays": 0
+      },
+      "minimum_font_pt": 9.0,
+      "below_font_floor": 0
+    },
+    {
       "file": "fig1_stock_and_retirement.png",
       "collision_exit": 0,
       "collision_summary": {
@@ -181,7 +193,7 @@
       "below_font_floor": 0
     }
   ],
-  "count": 15,
+  "count": 16,
   "audit_artifacts": "outside working repository: hubei_lec12_research/CANONICAL_QA",
   "scope": "All formal PNGs only; optional QA PDF/SVG excluded from formal submission."
 }

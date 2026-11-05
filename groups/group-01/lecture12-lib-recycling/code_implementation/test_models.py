@@ -18,6 +18,7 @@ from policy_engine import evaluate_policy, financial_adjustments
 from lca_tea import capital_recovery_factor, compare_pathway, evaluate_inventory, find_procurement_quote
 from network_model import solve_network
 from decision import pareto_frontier
+from plot_dmfa import summarize_lithium_flows
 
 PROVENANCE = {"source": "SYNTHETIC_TEST_ONLY", "source_locator": "unit test; not a provincial estimate"}
 RULES = json.loads((common.DATA / "policy_rules.json").read_text("utf-8"))
@@ -90,6 +91,24 @@ class InputValidationTests(unittest.TestCase):
 
 
 class DynamicMFATests(unittest.TestCase):
+    def test_report_lithium_flows_close_with_and_without_echelon_release(self):
+        # 合成守恒算例：100 t退役Li，收集70 t；另有0或20 t期初梯次Li释放。
+        for opening in (0, 20):
+            with self.subTest(opening_echelon_li_t=opening):
+                refining = 70+opening
+                annual = [{"year": 2030, "Li_retired_kg": 100000, "Li_collected_kg": 70000,
+                           "Li_refining_input_kg": refining*1000, "Li_secondary_kg": refining*.9*1000}]
+                balance = [{"year": 2030, "element": "Li", "recovered_product_kg": refining*.9*1000,
+                            "refining_residue_kg": refining*.1*1000, "outside_formal_system_kg": 30000,
+                            "opening_echelon_kg": opening*1000, "closing_echelon_kg": 0}]
+                result = summarize_lithium_flows(annual, balance, "SYNTHETIC_TEST_ONLY")[0]
+                self.assertEqual(result["retired_li_t"], 100)
+                self.assertAlmostEqual(result["secondary_li_t"], 63 if opening == 0 else 81)
+                self.assertEqual(result["outside_formal_li_t"], 30)
+                balance[0]["outside_formal_system_kg"] = 31000
+                with self.assertRaises(InputError):
+                    summarize_lithium_flows(annual, balance, "SYNTHETIC_TEST_ONLY")
+
     def test_annual_cdf_difference_and_retained_tail(self):
         p = sum(retirement_probability(age, 8, 3) for age in range(1, 10))
         self.assertAlmostEqual(p+survival(9, 8, 3), 1)

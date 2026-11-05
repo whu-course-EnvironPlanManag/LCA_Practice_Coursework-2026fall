@@ -8,6 +8,7 @@ import json
 from common import DATA, RESULTS, OUTPUT, write_csv, write_json, number, read_csv
 from lca_tea import capital_recovery_factor
 from plot_results import save
+from plot_dmfa import build_dmfa_outputs
 import matplotlib.pyplot as plt
 
 
@@ -95,6 +96,7 @@ def build_summary():
     ax.set(xlabel="假设设计规模（万吨/年）", ylabel="情景LCOR（万元/吨LCE）", title="投资与利用率敏感性；固定OPEX率3%、收集费250元/吨为假设")
     ax.legend(frameon=False, fontsize=9)
     save(fig, OUTPUT, "fig10_capital_sensitivity")
+    build_dmfa_outputs()
     max_year = next(r for r in annual if r["year"] == 2040)
     frontier = rows("pareto_brine.csv")
     min_distance = min(float(r["utopia_distance"]) for r in frontier)

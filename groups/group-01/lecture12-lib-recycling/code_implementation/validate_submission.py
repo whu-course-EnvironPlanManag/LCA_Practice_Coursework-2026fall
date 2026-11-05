@@ -3,11 +3,13 @@ from pathlib import Path
 import ast
 import hashlib
 import json
+import math
 import re
 import subprocess
 import sys
 from PIL import Image
 from common import ROOT, DATA, RESULTS, OUTPUT, read_csv, write_json
+from plot_dmfa import summarize_lithium_flows
 
 
 def validate():
@@ -27,6 +29,21 @@ def validate():
         balance=read_csv(name,directory=RESULTS)
         assert balance and max(float(r["relative_error"]) for r in balance)<.0005
     checks.append("基准及两种推荐工况元素守恒")
+    lithium = read_csv("dmfa_lithium_flow_summary.csv", directory=RESULTS)
+    lithium_lookup = {(r["scenario"], int(r["year"])): r for r in lithium}
+    assert len(lithium_lookup) == len(lithium), "DMFA锂流汇总含重复情景/年份"
+    expected = []
+    for scenario, flow_file, balance_file in (("baseline", "dmfa_annual.csv", "element_balance.csv"),
+                                             ("B", "recommended_dmfa_brine.csv", "recommended_balance_brine.csv")):
+        expected.extend(summarize_lithium_flows(read_csv(flow_file, directory=RESULTS),
+                                              read_csv(balance_file, directory=RESULTS), scenario))
+    assert len(expected) == len(lithium), "DMFA锂流汇总缺少或多出年份"
+    for expected_row in expected:
+        actual = lithium_lookup[(expected_row["scenario"], expected_row["year"])]
+        for field, value in expected_row.items():
+            if field not in {"scenario", "year"}:
+                assert math.isclose(float(actual[field]), value, rel_tol=1e-9, abs_tol=1e-9), "DMFA锂流汇总不一致: "+field
+    checks.append("新增DMFA逐年锂流汇总与原始输出逐值一致")
     scenarios=read_csv("scenario_results.csv",directory=RESULTS)
     lookup={r["case_id"]:r for r in scenarios}
     anchors=read_csv("anchors.csv",directory=RESULTS)
