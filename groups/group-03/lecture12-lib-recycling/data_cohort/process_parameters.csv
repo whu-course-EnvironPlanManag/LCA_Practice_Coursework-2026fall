@@ -1,0 +1,4 @@
+process,li_recovery_rate,ni_recovery_rate,co_recovery_rate,mn_recovery_rate,energy_MJ_per_kg_material,water_L_per_kg_material,gwp_kgCO2e_per_kg_material,lfp_net_margin_CNY_per_kg,nmc_net_margin_CNY_per_kg,capex_CNY_per_t_capacity,opex_CNY_per_kg_battery,fluorine_fixation_rate,electrode_powder_recovery_rate,wastewater_recycle_rate,reference
+hydrometallurgy,0.92,0.98,0.98,0.98,44.4,21.5,6.1,-14.35,28.07,56000000,5.95,0.996,0.985,0.92,Machala_2025
+pyrometallurgy,0.80,0.98,0.98,0.98,65.0,30.0,9.8,-8.40,38.50,84000000,7.70,0.997,0.982,0.88,Machala_2025
+direct_recycling,0.99,0.99,0.99,0.98,28.0,12.0,3.2,9.10,30.59,105000000,4.90,0.998,0.992,0.95,Machala_2025
