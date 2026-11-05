@@ -1,5 +1,0 @@
-﻿pathway,chemistry,Li_effective_recovery,Ni_effective_recovery,Co_effective_recovery,Mn_effective_recovery,source,source_locator
-hydro_LCE,LFP,0.85,0.96,0.96,0.94,湿法/火法全链有效回收率情景：综合Machala et al. 2025与工信部2024年本≥90%冶炼锂回收下限；有效值不高于工序值,全链进入产品口径，非单一冶炼工序；LFP/NCM分列，取文献区间中值
-hydro_LCE,NCM,0.88,0.98,0.98,0.96,湿法/火法全链有效回收率情景：综合Machala et al. 2025与工信部2024年本≥90%冶炼锂回收下限；有效值不高于工序值,全链进入产品口径，非单一冶炼工序；LFP/NCM分列，取文献区间中值
-pyro_LCE,LFP,0.7,0.95,0.95,0.9,湿法/火法全链有效回收率情景：综合Machala et al. 2025与工信部2024年本≥90%冶炼锂回收下限；有效值不高于工序值,全链进入产品口径，非单一冶炼工序；LFP/NCM分列，取文献区间中值
-pyro_LCE,NCM,0.75,0.96,0.96,0.92,湿法/火法全链有效回收率情景：综合Machala et al. 2025与工信部2024年本≥90%冶炼锂回收下限；有效值不高于工序值,全链进入产品口径，非单一冶炼工序；LFP/NCM分列，取文献区间中值
