@@ -1,0 +1,3 @@
+﻿chemistry,mass_share,annual_mass_t_a,annual_basis,data_type,source_ids,note
+LFP,0.6,48000.0,80000 t/a,group_planning_assumption_not_observed_market_share,SRC031,规划假设，非市场实测份额；梯次利用分流（M01）未扣除
+MIXED_NMC_UNSPECIFIED,0.4,32000.0,80000 t/a,group_planning_assumption_not_observed_market_share,SRC031,规划假设，非市场实测份额；梯次利用分流（M01）未扣除

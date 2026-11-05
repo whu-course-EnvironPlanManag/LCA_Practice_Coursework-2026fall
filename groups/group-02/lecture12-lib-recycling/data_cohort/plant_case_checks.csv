@@ -1,0 +1,43 @@
+﻿check_id,section,item,status,detail
+X01,工况自检,"设计来料 80,000 t/a",PASS,"80,000 t/a"
+X02,工况自检,实际来料 = 设计 × 负荷,PASS,"80,000 × 0.85 = 68,000.0 t/a"
+X03,工况自检,梯次分配 = 梯次能力 × 负荷,PASS,"10,000 × 0.85 = 8,500 t/a"
+X04,工况自检,分流比 = 梯次分配 / 实际来料,PASS,"8,500 / 68,000 = 0.125000"
+X05,工况自检,再生入口 = 实际来料 − 梯次分配,PASS,"68,000 − 8,500 = 59,500.0 t/a"
+X06,工况自检,设计再生能力与实际再生入口分开登记,PASS,"设计 70,000 t/a ≠ 实际 59,500 t/a；不得互代，也不得把比值当负荷证据"
+X07,工况自检,体系质量份额合计 = 1,PASS,1.000000
+X08,工况自检,各体系进料合计 = 实际来料,PASS,"68,000 t/a"
+X09,工况自检,梯次分配按同比例分摊到体系,PASS,"8,500 t/a"
+X10,工况自检,再使用出货容量与三个乘子必须 null,PASS,sale_kwh_a / SOH / screen_pass_mass_fraction / repack_yield 均为 null；分配质量不是产品
+X11,工况自检,正式分线电/蒸汽能量/取水必须 null,PASS,同源活动量缺失 → 保持 null；不因总量已知而反算分线
+X12,工况自检,已登记删除 ND−LS 电耗反算,PASS,跨项目、跨边界、跨单位拼接，且蒸汽焓为占位值；强配总量会制造假的分线电耗
+X13,工况自检,快照纪律：六项开关全部 false,PASS,"modifies_upstream=False, may_be_cited_as_measurement=False, activates_candidate_parameters=False, activates_supplement_routes=False, unlocks_formal_lca_or_lcor_gate=False, missing_written_as_zero=False"
+S01,补充包自检,补充包 sha256 与登记一致,PASS,8a7edbd0c3f09def…
+S02,补充包自检,所有参考路线与捕集情景均未自动生效,PASS,LS/ANL/JIANG automatically_adopted=false；ND22 selected_as_plant_energy=False（未提供该字段不等于采纳）；捕集情景 false
+S03,补充包自检,捕集 + 未捕集 = 组分库存,PASS,最大相对残差 0.00e+00
+S04,补充包自检,EV I 与 EV II 并列、不平均,PASS,EV I 0.9328（n=3，SD 0.0405）vs EV II 0.8353（SD 0.0363）
+S05,补充包自检,LS 粉料部分组成 0.772665 未归一化,PASS,assay_mass_sum=0.772665；其余 22.73% 为未列组分，不放大
+S06,补充包自检,LS 粗碳酸锂/磷酸铁渣不得记电池级可售品,PASS,roles: 内部进入铁锂生产线，不是已达电池级可售品 / 内部进入磷铁生产线；不是8万t/a磷酸铁成品
+S07,补充包自检,ANL 无可售产品量且恢复率为全路线口径,PASS,"totalmaterialrecovered/thatmaterialininputcells, not hydrostage only. Cannotmultiplyanextr"
+S08,补充包自检,JIANG 表6 舍入残差 > 5e-4，不得宣称已通过,PASS,合计 87.75 kg / 输入 87.8 kg；残差 0.000569；源文 99.94% 只是报告值
+S09,补充包自检,ND22 不作为本厂电/汽活动量,PASS,"全项目电 444,988,200 kWh/a；蒸汽 2 股"
+S10,补充包自检,未解决输入全部保持 null,PASS,11 项：M02_ACTUAL;M03_COMPAT;M05_PRODUCTS;M05_LI_PARTITIONS;M08_ELECTRIC;M08_STEAM;M08_WATER;M01_REUSE_SALE;M10_ALLOCATION;M13_FACTORS;D-PARK-LINK
+S11,补充包自检,LS 蒸汽只有质量，不转 MJ,PASS,1.1747755 t_steam/t_powder；压力/温度/返凝水未核
+S12,补充包自检,code_review 含 A01—A07,PASS,"14 条；A 侧 ['A01', 'A02', 'A03', 'A04', 'A05', 'A06', 'A07']"
+P01,成果自检,各体系整包级组分库存合计 = 再生入口,PASS,最大相对残差 0.00e+00
+P02,成果自检,黑粉捕集 + 未捕集 = 库存（两情景均满足）,PASS,最大相对残差 0.00e+00
+P03,成果自检,所有 saleable_product 行数量为空,PASS,9 行；D-04;D-05;D-19;D-27-1;D-27-2;D-27-3;D-27-4;D-27-5;D-27-6
+P04,成果自检,所有 unresolved_null 行数量为空（未把缺数写成 0）,PASS,3 行
+P05,成果自检,磷酸铁统一为 FePO4·2H2O，无无水形态行,PASS,11 行；违规 []
+P06,成果自检,已填报的蒸汽行不以 MJ 计量,PASS,"蒸汽行 ['E-03-1', 'E-03-2', 'E-05', 'E-07']；null 行 ['E-07'] 声明的是待补 MJ 口径，无数量"
+P07,成果自检,再使用出货容量 null 且三个乘子保留字段,PASS,D-04；公式 sale_kwh_a = sum(reuse_allocated_pack_t × nameplate_Wh_per_kg × screen_pass_mass_fraction × SOH × repack_yield)
+P08,成果自检,32% 液碱同时给出商品吨与有效吨,PASS,"13,788.612 × 0.32 = 4,412.356"
+P09,成果自检,不存在“综合能耗减蒸汽余量=电耗”行，正式电/汽仍为 null,PASS,removed_conversion=ND_SEC 综合能耗 − LS 蒸汽 = 正式电耗；E-06/E-07 数量均为空
+P10,成果自检,主表 item_id 唯一,PASS,重复 []
+P11,成果自检,每行保留 source_ids 与 status,PASS,131 行；缺项 []
+P12,成果自检,黑粉元素参考含量以库存为分母，不按捕集率同率分配,PASS,17 行元素参考；未乘捕集率
+P13,成果自检,捕集情景并列且不取均值,PASS,"{'EV_I_M02_TRANSFER_SCREENING': 0.9328, 'EV_II': 0.8353}"
+P14,成果自检,JR 与 LS 产品情景独立登记、不合成区间,PASS,"D-08 3,142.425 t LCE（JR） / D-18 5,195.981 t FePO4·2H2O（LS）"
+P15,成果自检,FePO4 按限制元素 min 计算,PASS,"D-17 / D-18 均使用 min(kmol_Fe, kmol_P)"
+P16,成果自检,"设计再生能力 70,000 与实际 59,500 分开登记",PASS,"A-05 70,000 / A-06 59,500"
+P17,成果自检,候选参数仍全部未激活,PASS,20 项候选，激活 0 项
