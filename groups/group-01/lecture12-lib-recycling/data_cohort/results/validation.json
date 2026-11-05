@@ -1,0 +1,19 @@
+{
+  "code_and_artifact_checks_passed": true,
+  "checks": [
+    "Python语法",
+    "实际输入哈希与复算记录",
+    "20张年鉴原件哈希",
+    "基准及两种推荐工况元素守恒",
+    "新增DMFA逐年锂流汇总与原始输出逐值一致",
+    "锚点与原始情景逐值一致",
+    "推荐物质流与节点工程容量/已计资本一致",
+    "模块0—7、全部PNG引用、300 DPI、相对链接及公式转义",
+    "未显式接受情景时阻止误作实证运行"
+  ],
+  "pictures": 16,
+  "scenarios": 4000,
+  "research_evidence_ready": false,
+  "member_signatures_complete": false,
+  "limitations": "见report/Data_and_Code_Audit.md；测试不证明输入真实，未代签成员。"
+}

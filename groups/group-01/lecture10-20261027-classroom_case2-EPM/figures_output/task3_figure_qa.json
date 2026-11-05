@@ -1,0 +1,24 @@
+{
+  "png_pixels": [
+    3840,
+    1860
+  ],
+  "png_metadata_dpi": [
+    299.9994,
+    299.9994
+  ],
+  "svg_editable_text_elements": 42,
+  "visual_review": "Both final panels inspected; labels, legends and the coincident optimum are readable without clipping.",
+  "pdf_collision_audit": "PASS: zero failures and zero warnings",
+  "pdf_minimum_text_pt": 9,
+  "panel_alignment": "PASS: local and external checks",
+  "static_preflight_warnings_reviewed": [
+    "300 DPI PNG follows the coursework requirement; TIFF/600 DPI journal defaults do not apply.",
+    "325.1 mm width is a coursework decision chart, with no journal-specific size requirement."
+  ],
+  "files_sha256": {
+    "fig2_pareto_decision_frontier.png": "a254665a0f74e2217fd5438a5ad7b405e3f28d114cea49e2a34a0198b003bdc6",
+    "fig2_pareto_decision_frontier.svg": "2eeb496f03a2432732904db8427f5108b4cf8f223d34ad2ba7b122c43a9ec2b2",
+    "fig2_pareto_decision_frontier.pdf": "e3e96f1c590d9cf994f50d278d53be493ddd15a34482cc9334f3155bd3f5d3c5"
+  }
+}

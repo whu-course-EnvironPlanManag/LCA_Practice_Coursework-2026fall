@@ -1,0 +1,30 @@
+{
+  "scenarios": 4000,
+  "feasible": 2200,
+  "input_sha256": {
+    "collection_rates.csv": "05e70863a1220fca0648799c11cd10b61c322cfd0d1ad460db63f47cb9c1785d",
+    "echelon_parameters.csv": "0ef446128f611ccf917c591bedca17db7a978731695df4c157a95ab12f1fb4bb",
+    "energy_factors.csv": "babcf4a5e001b94543bdc1e974bee445bce32d8bf0c815319e6a481e8789bdb6",
+    "hubei_yearbook_context.csv": "a8b72e536c66730899891dfb815caf73f8036af006637fb02a9ee3fbeb5d4562",
+    "installation_cohorts.csv": "9b0a76929a4603b9823c5234ea8f0de10f532c2befb7f4339ae082e570b778c5",
+    "lci.csv": "9e70c77cfacc2a754b2a2bbc47e4661eb59db0102a53c2299f8cc00defc8c237",
+    "material_parameters.csv": "cb7feedec582776fb34025fc2ac3e5b291d175e0aeac6ae0f9ac092d41388707",
+    "model_config.json": "9031c01f1b73d86ac40d1832eb711361a60d35aab2fb7c0deeec305ffada86c8",
+    "network_nodes.csv": "02a6d5b58d4f467fe3888b53e819cbd57ebb84bb714bea6b62e9d3ed1a8437e9",
+    "opening_stock.csv": "3d7038e39dcf6053b87fe1ff54d396b6f25c02544c18a94f997a82bbd23c9821",
+    "pathway_fields_reference.json": "e0e883dfdf4ca137ff7c858771978bbfe78d913d223b128c20967283aeca3fb2",
+    "policy_rules.json": "c95e868d89bfc612ba2b3af541d24473086536292ff31dfb5608548186fbff9b",
+    "primary_lce_baselines.csv": "5f620db449361092d64a1a88153b4b6a9c5c95dbb8e9aa0494936574c57c0eb2",
+    "procurement_quotes.csv": "1cfb2a25d6d7f4e39e208c26dd8fbe105e5503e5e2d4d836b5c9a218191d9f83",
+    "recovery_parameters.csv": "1027ceaa5dd4ff83032f9c57df391b8ec887dce1f0e25b8df08366e7cc0b58f9",
+    "road_distances.csv": "727520b8f136406435edc7c04ebf25249f40633e178e05398098da49bb869b7e",
+    "tea_cost_benchmarks.csv": "076a36c0cd1d21cf5b0494fed9c33a29c7314b645198ae4e9e50551565247022",
+    "yearbook_cells.csv": "8292220c25d23a7ed206f1d7a39059ceb119efd94084388c19c448e45545481a",
+    "yearbook_source_manifest.json": "354c8105c38560715613835973753ce1d7fb9d53c5a3ee4498807eb270deb739"
+  },
+  "scope": "固定输入、工艺与情景网格下的条件前沿；物流网络先按费用最小求解，不声称全连续空间全局多目标最优",
+  "contains_documented_scenarios": true,
+  "observed_hubei_forecast": false,
+  "evidence_ready": false,
+  "analysis_mode": "exploratory_scenario"
+}
