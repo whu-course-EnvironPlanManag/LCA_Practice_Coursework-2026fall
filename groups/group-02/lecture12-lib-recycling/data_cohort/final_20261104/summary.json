@@ -382,8 +382,26 @@
   ],
   "environment_total_gwp_t": 23447.312430717437,
   "credit_total_gwp_t": 129876.78463189908,
+  "seasonal_green": {
+    "wet_months": 5.0,
+    "dry_months": 7.0,
+    "weight_wet": 0.4167,
+    "weight_dry": 0.5833,
+    "hydro_cap_wet": 1.0,
+    "hydro_cap_dry": 0.35,
+    "g_wet_costopt": 1.0,
+    "g_dry_costopt": 0.35,
+    "annual_costopt_green": 0.6208,
+    "dry_green_needed_for_target": 0.6571,
+    "g_dry_target": 0.6571,
+    "annual_target_green": 0.8,
+    "annual_target_met": true,
+    "green_price_CNY": 0.51,
+    "grid_price_CNY": 0.62
+  },
   "notes": [
     "情景价格为规划参考价，不是已核实成交价；补贴、碳信用和溢价均为0。",
-    "政策可行仅指已编码定量项通过；缺失项保持UNKNOWN，不构成法律合规认证。"
+    "政策可行仅指已编码定量项通过；缺失项保持UNKNOWN，不构成法律合规认证。",
+    "季节性绿电为组内设定/情景假设：丰水期水电可覆盖100%、枯水期基荷约35%，非实时调度。"
   ]
 }

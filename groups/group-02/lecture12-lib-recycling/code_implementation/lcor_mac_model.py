@@ -179,6 +179,18 @@ ECON = {
     "employees": 120,
 }
 
+# 季节性绿电（宜昌水电丰枯期）规划参数。宜昌临近三峡/葛洲坝水电群，
+# 水电出力随丰枯季变化：丰水期（6—10月，5个月）富余、枯水期（11—次年5月，7个月）
+# 仅维持基荷。绿电到户价（风光直购 0.51 元/kWh）低于网电（0.62 元/kWh），
+# 故各季成本最小解 = 喝满水电可覆盖上限。数值为组内设定/情景假设，非实时调度数据。
+SEASONAL_GREEN = {
+    "wet_months": 5.0,       # 丰水期月数（6—10月）
+    "dry_months": 7.0,       # 枯水期月数（11—次年5月）
+    "hydro_cap_wet": 1.00,   # 丰水期水电可覆盖园区电耗上限比例
+    "hydro_cap_dry": 0.35,   # 枯水期水电基荷可覆盖园区电耗上限比例
+    "annual_target": 0.80,   # 课程考核：年加权绿电比例目标
+}
+
 
 def price(key):
     return PRICES[key][0]
@@ -931,3 +943,52 @@ def knee_point(front):
         if d < best_d:
             best, best_d = p, d
     return best
+
+
+# ---------------------------------------------------------------------------
+# 5. 季节性绿电最优比例（宜昌水电丰枯期）
+# ---------------------------------------------------------------------------
+def seasonal_green_plan(annual_target=None, hydro_cap_wet=None, hydro_cap_dry=None,
+                        wet_months=None, dry_months=None):
+    """季节最优绿电比例调度。
+
+    绿电价（风光直购 0.51 元/kWh，含到户附加）低于网电（0.62 元/kWh），
+    故成本最小解为各季「喝满水电可覆盖上限」：
+      丰水期 = min(水电上限, 100%)；枯水期 = min(水电基荷上限, 100%)。
+    若年加权结果低于课程年目标，差额由枯水期风光直购补足（绿电价仍低于网电），
+    得到「达标调度」所需枯水期补充比例。GWP 与 LCOR 对绿电比例近似线性，
+    年加权绿电比例可直接映射到同工况的年净 GWP/LCOR。
+    """
+    a = SEASONAL_GREEN["annual_target"] if annual_target is None else annual_target
+    hw = SEASONAL_GREEN["hydro_cap_wet"] if hydro_cap_wet is None else hydro_cap_wet
+    hd = SEASONAL_GREEN["hydro_cap_dry"] if hydro_cap_dry is None else hydro_cap_dry
+    wm = SEASONAL_GREEN["wet_months"] if wet_months is None else wet_months
+    dm = SEASONAL_GREEN["dry_months"] if dry_months is None else dry_months
+
+    w_wet = wm / (wm + dm)
+    w_dry = dm / (wm + dm)
+
+    # 各季纯成本最优：喝满水电上限
+    g_wet_cost = min(hw, 1.0)
+    g_dry_cost = min(hd, 1.0)
+    annual_costopt = w_wet * g_wet_cost + w_dry * g_dry_cost
+
+    # 达标调度：年目标不足部分由枯水期风光直购补足
+    shortfall = max(0.0, a - w_wet * g_wet_cost)
+    g_dry_needed = shortfall / w_dry if w_dry > 0 else 0.0
+    g_dry_target = min(1.0, max(g_dry_cost, g_dry_needed))
+    annual_target_ach = w_wet * g_wet_cost + w_dry * g_dry_target
+
+    return {
+        "wet_months": wm, "dry_months": dm,
+        "weight_wet": round(w_wet, 4), "weight_dry": round(w_dry, 4),
+        "hydro_cap_wet": hw, "hydro_cap_dry": hd,
+        "g_wet_costopt": g_wet_cost, "g_dry_costopt": g_dry_cost,
+        "annual_costopt_green": round(annual_costopt, 4),
+        "dry_green_needed_for_target": round(g_dry_needed, 4),
+        "g_dry_target": round(g_dry_target, 4),
+        "annual_target_green": round(annual_target_ach, 4),
+        "annual_target_met": annual_target_ach >= a - 1e-9,
+        "green_price_CNY": round(price("green") + price("green_adder"), 4),
+        "grid_price_CNY": round(price("grid"), 4),
+    }

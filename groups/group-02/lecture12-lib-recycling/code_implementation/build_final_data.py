@@ -219,7 +219,30 @@ def main():
     for v in ("saltlake", "spodumene"):
         add_sens("原生基准", v, M.evaluate(m, linkage=0.80, recovery_case="improved",
                                           rd_compliance=True, primary=v))
+
+    # 季节性绿电（宜昌水电丰枯期）最优比例与达标调度
+    sgp = M.seasonal_green_plan()
+    add_sens("季节绿电(成本最优年加权)", sgp["annual_costopt_green"],
+             M.evaluate(m, linkage=0.80, green_fraction=sgp["annual_costopt_green"],
+                        recovery_case="improved", rd_compliance=True))
+    add_sens("季节绿电(年目标80%)", sgp["annual_target_green"],
+             M.evaluate(m, linkage=0.80, green_fraction=sgp["annual_target_green"],
+                        recovery_case="improved", rd_compliance=True))
     write_csv(DATA / "sensitivity_final.csv", sens)
+
+    seasonal_rows = [
+        {"season": "丰水期(6—10月)", "months": sgp["wet_months"],
+         "weight": sgp["weight_wet"], "hydro_cap": sgp["hydro_cap_wet"],
+         "costopt_green": sgp["g_wet_costopt"], "target_green": sgp["g_wet_costopt"]},
+        {"season": "枯水期(11—次年5月)", "months": sgp["dry_months"],
+         "weight": sgp["weight_dry"], "hydro_cap": sgp["hydro_cap_dry"],
+         "costopt_green": sgp["g_dry_costopt"], "target_green": sgp["g_dry_target"]},
+        {"season": "年加权", "months": sgp["wet_months"] + sgp["dry_months"],
+         "weight": 1.0, "hydro_cap": None,
+         "costopt_green": sgp["annual_costopt_green"],
+         "target_green": sgp["annual_target_green"]},
+    ]
+    write_csv(DATA / "seasonal_green_dispatch.csv", seasonal_rows)
 
     summary = {
         "date": "2026-11-04",
@@ -243,9 +266,11 @@ def main():
         "pareto": front,
         "environment_total_gwp_t": env["gwp_kg"] / 1000.0,
         "credit_total_gwp_t": credit["avoided_kg"] / 1000.0,
+        "seasonal_green": sgp,
         "notes": [
             "情景价格为规划参考价，不是已核实成交价；补贴、碳信用和溢价均为0。",
             "政策可行仅指已编码定量项通过；缺失项保持UNKNOWN，不构成法律合规认证。",
+            "季节性绿电为组内设定/情景假设：丰水期水电可覆盖100%、枯水期基荷约35%，非实时调度。",
         ],
     }
     (DATA / "summary.json").write_text(json.dumps(summary, ensure_ascii=False, indent=2),
