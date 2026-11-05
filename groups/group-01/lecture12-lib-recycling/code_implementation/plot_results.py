@@ -41,6 +41,42 @@ def save(fig, output, name, rect=None):
     plt.close(fig)
 
 
+def plot_pareto(rows, frontier, chosen, figures, primary):
+    """左图保留全部可行解，右图仅缩放前沿坐标范围；不改动目标值。"""
+    if not frontier:
+        raise InputError("帕累托放大图需要非空的计算前沿")
+    x = np.array([float(r["gwp_kg_per_t_lce"]) for r in frontier])
+    y = np.array([float(r["lcor_cny_per_t_lce"]) for r in frontier])
+    fig, axes = plt.subplots(1, 2, figsize=(12, 5))
+    axes[0].scatter([float(r["gwp_kg_per_t_lce"]) for r in rows],
+                    [float(r["lcor_cny_per_t_lce"]) for r in rows],
+                    s=12, alpha=0.35, color="#6e9ba6", label="通过筛选的情景")
+    grouped = defaultdict(list)
+    for r in chosen:
+        grouped[(float(r["gwp_kg_per_t_lce"]), float(r["lcor_cny_per_t_lce"]))].append(r["anchor"][0])
+    for ax in axes:
+        ax.scatter(x, y, s=30, color="#1b6069", label="非支配集合", zorder=3)
+        for point, labels in grouped.items():
+            ax.scatter(*point, marker="*", s=110, color="#b17a26", zorder=4)
+            ax.annotate("=".join(labels), point, xytext=(5, 8),
+                        textcoords="offset points", fontsize=9)
+        ax.set(xlabel="碳影响筛查值（kg CO2e/吨LCE）", ylabel="已计费用LCOR（元/吨LCE）")
+        ax.ticklabel_format(axis="both", style="plain", useOffset=False)
+    axes[0].set_title("(a) 全部可行情景")
+    axes[0].legend(frameon=False, fontsize=9)
+    # 只调整显示范围；即使前沿退化为一点，也提供非零边距。
+    x_pad = max(float(np.ptp(x))*0.10, float(np.max(np.abs(x)))*1e-6, 1e-6)
+    y_pad = max(float(np.ptp(y))*0.20, float(np.max(np.abs(y)))*1e-6, 1e-6)
+    axes[1].set(xlim=(x.min()-x_pad, x.max()+x_pad),
+                ylim=(y.min()-y_pad, y.max()+y_pad), title="(b) 非支配前沿局部放大")
+    axes[1].grid(axis="y", alpha=0.20, linewidth=0.6)
+    axes[1].set_axisbelow(True)
+    fig.suptitle("条件帕累托前沿：两种原生参考共用", fontsize=12)
+    fig.text(0.5, 0.025, f"左右图纵轴范围不同；前沿LCOR极差为 {np.ptp(y):.2f} 元/吨LCE。原始目标值与A/B/C选择保持一致。",
+             ha="center", fontsize=9)
+    save(fig, Path(figures), f"fig2_pareto_{primary}", rect=(0, 0.07, 1, 0.94))
+
+
 def render_results(output, figure_output=None):
     output = Path(output)
     figures = Path(figure_output) if figure_output is not None else output
@@ -87,19 +123,8 @@ def render_results(output, figure_output=None):
             ax.axhline(0, color="#969696", linewidth=0.8)
             ax.set(xlabel="碳酸锂价格（元/吨LCE）", ylabel="净收益（元/吨精炼进料）", title="固定工艺、收集率与绿电份额的价格敏感性")
             save(fig, figures, f"fig8_price_profit_{primary}")
-        fig, ax = plt.subplots(figsize=(7, 5))
-        ax.scatter([float(r["gwp_kg_per_t_lce"]) for r in rows], [float(r["lcor_cny_per_t_lce"]) for r in rows], s=12, alpha=0.35, color="#6e9ba6", label="通过筛选的情景")
         frontier = read(output / f"pareto_{primary}.csv")
-        ax.scatter([float(r["gwp_kg_per_t_lce"]) for r in frontier], [float(r["lcor_cny_per_t_lce"]) for r in frontier], s=30, color="#1b6069", label="非支配集合")
-        grouped = defaultdict(list)
-        for r in chosen:
-            grouped[(float(r["gwp_kg_per_t_lce"]), float(r["lcor_cny_per_t_lce"]))].append(r["anchor"][0])
-        for point, labels in grouped.items():
-            ax.scatter(*point, marker="*", s=110, color="#b17a26", zorder=4)
-            ax.annotate("=".join(labels), point, xytext=(5, 8), textcoords="offset points", fontsize=9)
-        ax.set(xlabel="碳影响筛查值（kg CO2e/吨LCE）", ylabel="已计费用LCOR（元/吨LCE）", title="条件帕累托前沿：两种原生参考共用")
-        ax.legend(frameon=False)
-        save(fig, figures, f"fig2_pareto_{primary}")
+        plot_pareto(rows, frontier, chosen, figures, primary)
         fig, ax = plt.subplots(figsize=(7, 5))
         points = ax.scatter([float(r["gwp_kg_per_t_lce"]) for r in rows], [float(r["water_l_per_t_lce"]) for r in rows],
                             c=[float(r["green_share"]) for r in rows], cmap="viridis", s=14)

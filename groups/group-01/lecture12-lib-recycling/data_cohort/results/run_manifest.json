@@ -22,6 +22,41 @@
     "yearbook_cells.csv": "8292220c25d23a7ed206f1d7a39059ceb119efd94084388c19c448e45545481a",
     "yearbook_source_manifest.json": "354c8105c38560715613835973753ce1d7fb9d53c5a3ee4498807eb270deb739"
   },
+  "policy_layers": {
+    "legal_feasible": 4000,
+    "planning_feasible": 2200,
+    "note": "法规可行域只排除Redline_Vetoed与Data_Incomplete；70%收集率为规划目标，只进入规划情景前沿"
+  },
+  "frontier_diagnostics": {
+    "planning_brine": {
+      "rows": 275,
+      "objective_groups": 25,
+      "group_sizes": [
+        11
+      ]
+    },
+    "legal_brine": {
+      "rows": 500,
+      "objective_groups": 25,
+      "group_sizes": [
+        20
+      ]
+    },
+    "planning_spodumene": {
+      "rows": 275,
+      "objective_groups": 25,
+      "group_sizes": [
+        11
+      ]
+    },
+    "legal_spodumene": {
+      "rows": 500,
+      "objective_groups": 25,
+      "group_sizes": [
+        20
+      ]
+    }
+  },
   "scope": "固定输入、工艺与情景网格下的条件前沿；物流网络先按费用最小求解，不声称全连续空间全局多目标最优",
   "contains_documented_scenarios": true,
   "observed_hubei_forecast": false,

@@ -55,8 +55,9 @@ python code_implementation/validate_submission.py
 | `run_analysis.py` | 4000组合、1800规划目标不满足工况、2200可用条件情景 |
 | `plot_results.py` | 从数值结果自动制图，合并两种原生基准的重复图 |
 | `postprocess.py` | 年度与物流汇总、已计费用拆解、可复现资本敏感性 |
+| `plot_dmfa.py` | 汇总逐年锂流并校验去向，绘制二次锂供应与代表年比例流图 |
 | `build_report.py` | 数值驱动报告、成员分工及图表引用 |
-| `test_models.py` / `validate_submission.py` | 26项模型测试及跨文件一致性、原始哈希、图文引用等核验 |
+| `test_models.py` / `validate_submission.py` | 27项模型测试及跨文件一致性、原始哈希、图文引用等核验 |
 
 ## 图片与正文对应
 
@@ -64,6 +65,7 @@ python code_implementation/validate_submission.py
 | --- | --- |
 | `fig0a_yearbook_private_cars`、`fig0b_yearbook_electricity`、`fig0c_yearbook_city_electricity` | 第1章真实年鉴背景 |
 | `fig1_stock_and_retirement` | 第2章在用锂与分体系首次退役锂 |
+| `fig11_dmfa_lithium_flows` | 第2章年度二次锂供应及2030年B的锂流去向，新增图2-2 |
 | `fig6_network_brine` | 第4章固定目的地运输示意；不是全省最优选址 |
 | `fig7_primary_comparison_brine` | 第5章两种原生参考与B，同一图中展示 |
 | `fig5_breakdown_0_brine`、`fig5_breakdown_1_brine` | 第5章碳影响/水耗分项 |

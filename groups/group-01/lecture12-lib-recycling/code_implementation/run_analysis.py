@@ -36,6 +36,24 @@ def calculate_mfa(bundle, pathway, collection_override=None):
                     cfg["planning_end_year"], collections, diversions, recoveries[pathway["id"]], opening)
 
 
+def frontier_groups(frontier, relative_tolerance=1e-9):
+    """按与pareto_frontier相同的相对容差合并等价目标向量，仅供诊断使用。"""
+    if not frontier:
+        return {"objective_groups": 0, "group_sizes": []}
+    gwp = [float(row["gwp_kg_per_t_lce"]) for row in frontier]
+    lcor = [float(row["lcor_cny_per_t_lce"]) for row in frontier]
+    tol_gwp = relative_tolerance*max(1.0, max(abs(value) for value in gwp))
+    tol_lcor = relative_tolerance*max(1.0, max(abs(value) for value in lcor))
+    sizes, anchor = [], None
+    for g, c in sorted(zip(gwp, lcor)):
+        if anchor and abs(g-anchor[0]) <= tol_gwp and abs(c-anchor[1]) <= tol_lcor:
+            sizes[-1] += 1
+        else:
+            sizes.append(1)
+            anchor = (g, c)
+    return {"objective_groups": len(sizes), "group_sizes": sorted(set(sizes))}
+
+
 def evaluate_case(bundle, pathway, rows, green_share, lce_price, baseline, network_cache):
     cfg, tables, *_ = bundle
     year = cfg["decision_year"]
@@ -233,10 +251,19 @@ def run_full():
     write_csv(OUTPUT / "scenario_results.csv", records, fieldnames)
     # 两种原生基准分别排序，避免混合比较边界或把基准差异当作技术改进。
     anchor_export = []
+    diagnostics = {}
     for primary in ("brine", "spodumene"):
         feasible = [r for r in records if r["status"] == "Feasible" and r["primary_route"] == primary]
         frontier, anchors = pareto_frontier(feasible)
         write_csv(OUTPUT / f"pareto_{primary}.csv", frontier)
+        diagnostics[f"planning_{primary}"] = {"rows": len(frontier), **frontier_groups(frontier)}
+        # 政策分层复核：法规/课程红线与数据完整性均通过者构成“法规可行域”；
+        # 70%收集率是小组自定规划目标，只约束“规划情景前沿”，不并入法规可行域。
+        legal_feasible = [r for r in records if r["status"] in {"Feasible", "Below_Planning_Target"} and r["primary_route"] == primary]
+        legal_frontier, legal_anchors = pareto_frontier(legal_feasible)
+        write_csv(OUTPUT / f"pareto_legal_{primary}.csv", legal_frontier)
+        write_csv(OUTPUT / f"anchors_legal_{primary}.csv", [{"anchor": name, **anchor} for name, anchor in legal_anchors.items()])
+        diagnostics[f"legal_{primary}"] = {"rows": len(legal_frontier), **frontier_groups(legal_frontier)}
         for name, anchor in anchors.items():
             anchor_export.append({"anchor": name, **anchor})
         if anchors:
@@ -261,6 +288,10 @@ def run_full():
     write_csv(OUTPUT / "anchors.csv", anchor_export)
     manifest = {p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in DATA.iterdir() if p.is_file() and p.suffix in {".csv", ".json"}}
     write_json(OUTPUT / "run_manifest.json", {"scenarios": len(records), "feasible": len(details), "input_sha256": manifest,
+        "policy_layers": {"legal_feasible": len([r for r in records if r["status"] in {"Feasible", "Below_Planning_Target"}]),
+                          "planning_feasible": len(details),
+                          "note": "法规可行域只排除Redline_Vetoed与Data_Incomplete；70%收集率为规划目标，只进入规划情景前沿"},
+        "frontier_diagnostics": diagnostics,
         "scope": "固定输入、工艺与情景网格下的条件前沿；物流网络先按费用最小求解，不声称全连续空间全局多目标最优", "contains_documented_scenarios": True, "observed_hubei_forecast": False, "evidence_ready": False, "analysis_mode": cfg.get("analysis_mode", "unspecified")})
     if not details:
         raise InputError("已记录全部工况，但没有可用方案；查看scenario_results.csv原因，不生成虚假前沿")

@@ -1,0 +1,21 @@
+﻿pathway,chemistry,component,quantity_per_t_battery,unit,gwp_kg_per_unit,water_l_per_unit,cost_cny_per_unit,source,source_locator
+hydro_LCE,LFP,electricity_mix,900,kWh,0,0,0,湿法/火法回收单元过程清单情景：电耗800-1100 kWh/t（Land Reclamation Journal 2025综述约800 kWh/t），水耗与药剂按文献区间；电力由energy_factors计算，本行不重复,每吨进入精炼整包电池；电耗、热耗、药剂、治理为研究设计代表值，非单厂实测
+hydro_LCE,LFP,pretreatment,1,t,15,100,180,湿法/火法回收单元过程清单情景：电耗800-1100 kWh/t（Land Reclamation Journal 2025综述约800 kWh/t），水耗与药剂按文献区间；电力由energy_factors计算，本行不重复,每吨进入精炼整包电池；电耗、热耗、药剂、治理为研究设计代表值，非单厂实测
+hydro_LCE,LFP,process_heat,1,t,80,500,220,湿法/火法回收单元过程清单情景：电耗800-1100 kWh/t（Land Reclamation Journal 2025综述约800 kWh/t），水耗与药剂按文献区间；电力由energy_factors计算，本行不重复,每吨进入精炼整包电池；电耗、热耗、药剂、治理为研究设计代表值，非单厂实测
+hydro_LCE,LFP,reagents,1,t,120,0,900,湿法/火法回收单元过程清单情景：电耗800-1100 kWh/t（Land Reclamation Journal 2025综述约800 kWh/t），水耗与药剂按文献区间；电力由energy_factors计算，本行不重复,每吨进入精炼整包电池；电耗、热耗、药剂、治理为研究设计代表值，非单厂实测
+hydro_LCE,LFP,pollution_control,1,t,40,0,180,湿法/火法回收单元过程清单情景：电耗800-1100 kWh/t（Land Reclamation Journal 2025综述约800 kWh/t），水耗与药剂按文献区间；电力由energy_factors计算，本行不重复,每吨进入精炼整包电池；电耗、热耗、药剂、治理为研究设计代表值，非单厂实测
+hydro_LCE,NCM,electricity_mix,1100,kWh,0,0,0,湿法/火法回收单元过程清单情景：电耗800-1100 kWh/t（Land Reclamation Journal 2025综述约800 kWh/t），水耗与药剂按文献区间；电力由energy_factors计算，本行不重复,每吨进入精炼整包电池；电耗、热耗、药剂、治理为研究设计代表值，非单厂实测
+hydro_LCE,NCM,pretreatment,1,t,18,100,200,湿法/火法回收单元过程清单情景：电耗800-1100 kWh/t（Land Reclamation Journal 2025综述约800 kWh/t），水耗与药剂按文献区间；电力由energy_factors计算，本行不重复,每吨进入精炼整包电池；电耗、热耗、药剂、治理为研究设计代表值，非单厂实测
+hydro_LCE,NCM,process_heat,1,t,100,500,260,湿法/火法回收单元过程清单情景：电耗800-1100 kWh/t（Land Reclamation Journal 2025综述约800 kWh/t），水耗与药剂按文献区间；电力由energy_factors计算，本行不重复,每吨进入精炼整包电池；电耗、热耗、药剂、治理为研究设计代表值，非单厂实测
+hydro_LCE,NCM,reagents,1,t,160,0,1300,湿法/火法回收单元过程清单情景：电耗800-1100 kWh/t（Land Reclamation Journal 2025综述约800 kWh/t），水耗与药剂按文献区间；电力由energy_factors计算，本行不重复,每吨进入精炼整包电池；电耗、热耗、药剂、治理为研究设计代表值，非单厂实测
+hydro_LCE,NCM,pollution_control,1,t,50,0,220,湿法/火法回收单元过程清单情景：电耗800-1100 kWh/t（Land Reclamation Journal 2025综述约800 kWh/t），水耗与药剂按文献区间；电力由energy_factors计算，本行不重复,每吨进入精炼整包电池；电耗、热耗、药剂、治理为研究设计代表值，非单厂实测
+pyro_LCE,LFP,electricity_mix,300,kWh,0,0,0,湿法/火法回收单元过程清单情景：电耗800-1100 kWh/t（Land Reclamation Journal 2025综述约800 kWh/t），水耗与药剂按文献区间；电力由energy_factors计算，本行不重复,每吨进入精炼整包电池；电耗、热耗、药剂、治理为研究设计代表值，非单厂实测
+pyro_LCE,LFP,pretreatment,1,t,20,100,180,湿法/火法回收单元过程清单情景：电耗800-1100 kWh/t（Land Reclamation Journal 2025综述约800 kWh/t），水耗与药剂按文献区间；电力由energy_factors计算，本行不重复,每吨进入精炼整包电池；电耗、热耗、药剂、治理为研究设计代表值，非单厂实测
+pyro_LCE,LFP,process_heat,1,t,300,500,600,湿法/火法回收单元过程清单情景：电耗800-1100 kWh/t（Land Reclamation Journal 2025综述约800 kWh/t），水耗与药剂按文献区间；电力由energy_factors计算，本行不重复,每吨进入精炼整包电池；电耗、热耗、药剂、治理为研究设计代表值，非单厂实测
+pyro_LCE,LFP,reagents,1,t,80,0,400,湿法/火法回收单元过程清单情景：电耗800-1100 kWh/t（Land Reclamation Journal 2025综述约800 kWh/t），水耗与药剂按文献区间；电力由energy_factors计算，本行不重复,每吨进入精炼整包电池；电耗、热耗、药剂、治理为研究设计代表值，非单厂实测
+pyro_LCE,LFP,pollution_control,1,t,60,0,200,湿法/火法回收单元过程清单情景：电耗800-1100 kWh/t（Land Reclamation Journal 2025综述约800 kWh/t），水耗与药剂按文献区间；电力由energy_factors计算，本行不重复,每吨进入精炼整包电池；电耗、热耗、药剂、治理为研究设计代表值，非单厂实测
+pyro_LCE,NCM,electricity_mix,350,kWh,0,0,0,湿法/火法回收单元过程清单情景：电耗800-1100 kWh/t（Land Reclamation Journal 2025综述约800 kWh/t），水耗与药剂按文献区间；电力由energy_factors计算，本行不重复,每吨进入精炼整包电池；电耗、热耗、药剂、治理为研究设计代表值，非单厂实测
+pyro_LCE,NCM,pretreatment,1,t,22,100,200,湿法/火法回收单元过程清单情景：电耗800-1100 kWh/t（Land Reclamation Journal 2025综述约800 kWh/t），水耗与药剂按文献区间；电力由energy_factors计算，本行不重复,每吨进入精炼整包电池；电耗、热耗、药剂、治理为研究设计代表值，非单厂实测
+pyro_LCE,NCM,process_heat,1,t,340,500,680,湿法/火法回收单元过程清单情景：电耗800-1100 kWh/t（Land Reclamation Journal 2025综述约800 kWh/t），水耗与药剂按文献区间；电力由energy_factors计算，本行不重复,每吨进入精炼整包电池；电耗、热耗、药剂、治理为研究设计代表值，非单厂实测
+pyro_LCE,NCM,reagents,1,t,100,0,500,湿法/火法回收单元过程清单情景：电耗800-1100 kWh/t（Land Reclamation Journal 2025综述约800 kWh/t），水耗与药剂按文献区间；电力由energy_factors计算，本行不重复,每吨进入精炼整包电池；电耗、热耗、药剂、治理为研究设计代表值，非单厂实测
+pyro_LCE,NCM,pollution_control,1,t,70,0,220,湿法/火法回收单元过程清单情景：电耗800-1100 kWh/t（Land Reclamation Journal 2025综述约800 kWh/t），水耗与药剂按文献区间；电力由energy_factors计算，本行不重复,每吨进入精炼整包电池；电耗、热耗、药剂、治理为研究设计代表值，非单厂实测

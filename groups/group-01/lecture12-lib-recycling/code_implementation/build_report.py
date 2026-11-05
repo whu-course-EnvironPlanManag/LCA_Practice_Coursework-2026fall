@@ -6,6 +6,7 @@ AI提示词：按任务书模块0—7及组员框架成文，全部数值读取�
 from pathlib import Path
 import json
 from common import ROOT, DATA, RESULTS, OUTPUT, read_csv
+from lca_tea import LI_TO_LCE
 
 
 def table(headers, rows):
@@ -25,10 +26,28 @@ def build_report():
     macros["annual_avoided_gwp_kg"] = float(macros["annual_avoided_gwp_kg"])
     route_rows = read_csv("network_routes.csv", directory=RESULTS)
     cfg = json.loads((DATA/"model_config.json").read_text("utf-8"))
-    recovered_li = b["annual_lce_t"]/((2*6.94+12.011+3*15.999)/(2*6.94))
+    lithium_flows = read_csv("dmfa_lithium_flow_summary.csv", directory=RESULTS)
+    baseline_li = {int(r["year"]): {k: float(v) for k, v in r.items() if k not in {"scenario", "year"}}
+                   for r in lithium_flows if r["scenario"] == "baseline"}
+    recommended_li = {int(r["year"]): {k: float(v) for k, v in r.items() if k not in {"scenario", "year"}}
+                      for r in lithium_flows if r["scenario"] == "B"}
+    li2030, li2040 = recommended_li[2030], recommended_li[2040]
+    effective_recovery = {r["chemistry"]: float(r["Li_effective_recovery"])
+                          for r in read_csv("recovery_parameters.csv") if r["pathway"] == b["pathway"]}
+    dmfa = read_csv("dmfa_annual.csv", directory=RESULTS)
+    lfp2030 = sum(float(r["Li_retired_kg"])/1000 for r in dmfa if r["year"] == "2030" and r["chemistry"] == "LFP")
+    lfp2040 = sum(float(r["Li_retired_kg"])/1000 for r in dmfa if r["year"] == "2040" and r["chemistry"] == "LFP")
+    recovered_li = b["annual_lce_t"]/LI_TO_LCE
+    assert abs(recovered_li-li2030["secondary_li_t"]) < 1e-6, "报告Li与LCE换算不一致"
+    assert abs(b["refining_input_t"]-float(y2030["b_collected_battery_t"])) < 1e-6, "代表年B处理量与物质流不一致"
     table_mfa = table(["年份", "在用Li/t", "退役电池/t", "退役Li/t", "基准收集电池/t", "基准再生Li/t"],
         [(r["year"],f(r["li_stock_t"]),f(r["retired_battery_t"]),f(r["retired_li_t"]),f(r["baseline_collected_battery_t"]),f(r["baseline_secondary_li_t"])) for r in annual if r["year"] in {"2020","2024","2025","2030","2040"}])
     table_balance = table(["元素", "最大相对误差", "阈值", "程序检查"],[(e,f"{v:.3e}","<5×10⁻⁴","通过") for e,v in m["balance_max_relative_error"].items()])
+    table_supply = table(["年份", "首次退役Li/t", "基准收集率/%", "基准再生Li/t", "B收集率/%", "B再生Li/t", "B正规系统外Li/t"],
+        [(year, f(baseline_li[year]["retired_li_t"]),
+          f(100*baseline_li[year]["collected_li_t"]/baseline_li[year]["retired_li_t"]), f(baseline_li[year]["secondary_li_t"]),
+          f(100*recommended_li[year]["collected_li_t"]/recommended_li[year]["retired_li_t"]), f(recommended_li[year]["secondary_li_t"]),
+          f(recommended_li[year]["outside_formal_li_t"])) for year in (2030, 2035, 2040)])
     table_anchor = table(["锚点", "收集率/%", "绿电/%", "碳筛查kg CO2e/t LCE", "水筛查m³/t LCE", "LCOR元/t LCE", "MAC元/t CO2e"],
         [(r["anchor"][0],f(float(r["collection_fraction"])*100),f(float(r["green_share"])*100),f(r["gwp_kg_per_t_lce"]),f(float(r["water_l_per_t_lce"])/1000),f(r["lcor_cny_per_t_lce"]),f(r["mac_cny_per_t_co2e"])) for r in selected])
     table_routes = table(["图中序号", "核算单元", "B年收集量/t", "至假设精炼点道路km"],[(r["index"],r["city"],f(r["flow_t"]),f(r["road_distance_km"],1)) for r in route_rows])
@@ -146,6 +165,10 @@ R_{{i,c,t}}=\sum_{{v\lt t}} I_{{i,c,v}}\,p_c(t-v),\qquad K_{{i,c,t}}=\sum_{{v\le
 
 ![图2-1 在用锂及分体系退役锂](../figures_output/fig1_stock_and_retirement.png)
 
+图2-1区分在用存量与年度退役流量：2030—2040年在用Li从{f(y2030['li_stock_t'])}吨增至{f(y2040['li_stock_t'])}吨，年度首次退役Li由{f(y2030['retired_li_t'])}吨增至{f(y2040['retired_li_t'])}吨，为2030年的{f(float(y2040['retired_li_t'])/float(y2030['retired_li_t']))}倍。退役量取决于历年安装队列及其服役年龄，不能直接用当年新能源汽车产量或安装量代替；在用Li也不能全部视为当年可回收资源。
+
+按正极体系分解，LFP在2030年和2040年的首次退役Li分别为{f(lfp2030)}吨和{f(lfp2040)}吨，占相应年份退役Li的{f(100*lfp2030/li2030['retired_li_t'])}%和{f(100*lfp2040/li2040['retired_li_t'])}%。在给定安装结构与材料参数下，远期资源流中LFP占比上升，工艺与费用评估应保留分体系清单，不能把全部退役整包套用三元电池的金属强度或采购价格。该变化来自当前安装与材料情景，不是对湖北未来市场份额的独立验证。
+
 ### 2.3 正规收集、有效供应与守恒
 
 正规收集率与工序回收率不同。在本次梯次分流为0的情景中，各元素再生产品为“退役元素量×正规收集率×全链有效回收率”。有梯次分流时，需要对往年进入库存的元素按延迟释放，不能简单把当年退役量相乘后计为当年产品。
@@ -159,6 +182,24 @@ R_{{i,c,t}}=\sum_{{v\lt t}} I_{{i,c,v}}\,p_c(t-v),\qquad K_{{i,c,t}}=\sum_{{v\le
 {table_balance}
 
 上述结果证明账面元素去向闭合，不证明寿命、装机、收集率或排放清单准确。Cu、Al、P、F未纳入完整元素平衡，不能从四种金属的闭合推称整包电池所有元素已核验。
+
+### 2.4 二次锂供应演变与代表年流向
+
+![图2-2 年度二次锂供应及2030年推荐B锂流向](../figures_output/fig11_dmfa_lithium_flows.png)
+
+图2-2(a)将首次退役Li、基准再生产品Li与B收集率情景的再生产品Li并列，说明退役资源量需要经过正规收集和有效回收后才能形成二次锂供应。基准采用逐年收集率，B将规划期收集率固定为{f(b['collection_fraction']*100)}%，两者采用同一湿法回收参数。该年度延伸只核算物质流潜力，尚未逐年施加网络容量约束或优化扩建；不能把2040年的曲线值直接作为现有设施可交付产品量。
+
+表2-3 二次锂供应的情景比较，单位为锂元素吨，不是整包电池吨或LCE吨。
+
+{table_supply}
+
+2030年B的再生Li为{f(li2030['secondary_li_t'])}吨，比基准{f(baseline_li[2030]['secondary_li_t'])}吨增加{f(li2030['secondary_li_t']-baseline_li[2030]['secondary_li_t'])}吨，增幅{f(100*(li2030['secondary_li_t']/baseline_li[2030]['secondary_li_t']-1))}%，差异来自正规收集率由50%提高到{f(b['collection_fraction']*100)}%，不是工艺回收率提高。基准收集率到2040年升至85%，高于固定B，因此基准再生Li达到{f(baseline_li[2040]['secondary_li_t'])}吨，B为{f(li2040['secondary_li_t'])}吨；B是2030年代表方案，不能据此宣称其固定收集率在整个规划期始终优于逐年改善的基准。
+
+图2-2(b)展开2030年B的流向：首次退役Li为{f(li2030['retired_li_t'])}吨，其中{f(li2030['collected_li_t'])}吨进入正规收集和精炼，{f(li2030['outside_formal_li_t'])}吨未进入本模型的正规回收系统。精炼进料进一步分成{f(li2030['secondary_li_t'])}吨再生产品Li和{f(li2030['refining_residue_li_t'])}吨残余Li；两级分流均闭合。正规系统外流出是边界外去向，不等同于全部排入环境；精炼残余是所跟踪Li的去向，不代表残渣、废水等全部介质的总质量。
+
+本情景的湿法全链Li有效回收率分别为LFP {f(100*effective_recovery['LFP'],0)}%、NCM {f(100*effective_recovery['NCM'],0)}%，按2030年精炼进料锂量加权为{f(100*li2030['secondary_li_t']/li2030['refining_input_li_t'])}%；相对于全部退役Li，实际进入再生产品的比例为{f(100*li2030['secondary_li_t']/li2030['retired_li_t'])}%。全链有效值与第3章的单一冶炼工序90%筛选值分母不同，不能直接互换。再生产品中的{f(li2030['secondary_li_t'])}吨Li换算为{f(b['annual_lce_t'])}吨LCE，与第4章工程清单和第5章B一致；增加的碳、氧质量不来自退役锂，不能将LCE吨数直接代入Li守恒。当前梯次分流和库存均为0，图中未绘制无数值依据的梯次利用流带。
+
+图2-2与表2-3由`plot_dmfa.py`汇总`dmfa_annual.csv`、`element_balance.csv`及两张推荐B对应表生成，逐年锂流写入`dmfa_lithium_flow_summary.csv`。据此，近期应分别跟踪正规收集缺口与精炼残余，远期则在核实安装队列和企业能力后重新评估收集率与扩建节奏；现有物质流潜力不能替代产能、产品质量和市场消纳论证。
 
 ## 第3章 规划目标与指标体系
 
@@ -184,7 +225,7 @@ R_{{i,c,t}}=\sum_{{v\lt t}} I_{{i,c,v}}\,p_c(t-v),\qquad K_{{i,c,t}}=\sum_{{v\le
 
 ### 3.3 政策数值引擎与验证
 
-引擎支持湿法、火法和材料修复分支、能源/杂质严格不等式、是否含Ni/Co/Mn、欧盟生效日期及电池护照条件。代表工况包括不达标粗放回收、常规达标湿法和先进材料修复；与其他模型测试合计26项通过。输入中的1900 kgce/t产品及达标率为工况假设，不是从当前聚合LCI独立证实的企业数据。
+引擎支持湿法、火法和材料修复分支、能源/杂质严格不等式、是否含Ni/Co/Mn、欧盟生效日期及电池护照条件。代表工况包括不达标粗放回收、常规达标湿法和先进材料修复；与其他模型测试合计27项通过。输入中的1900 kgce/t产品及达标率为工况假设，不是从当前聚合LCI独立证实的企业数据。
 
 欧盟材料Li回收要求为2027年末50%、2031年末80%；再生含量6%/12%的日期分别是2031与2036年8月18日，不能提前列为2030年义务。相关产品的电池护照要求另按法规第77条核查。出口溢价没有法规统一固定金额，本项目没有合同凭证，未计入收入。[S7]
 
