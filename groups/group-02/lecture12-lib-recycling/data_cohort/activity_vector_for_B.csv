@@ -1,0 +1,13 @@
+﻿activity_key,expected_unit,b_default_placeholder,a_formal_value_per_fu,a_screening_annual,a_screening_annual_unit,a_screening_profile,per_fu_denominator,status,basis,assumption,source_ids,note
+electricity_kwh,kWh/t_LCE,8000.0,,11232000.0,kWh/a,LS23_LFP_NATIVE_POWDER,,blocked_M08,组合电表（预处理+湿法+公辅）,不可拆单线；跨规模代理,SRC040,正式 per-FU 电耗 null（A04 已删除 ND−LS 反算）；组合量不得除以粉量或 LCE
+natural_gas,MJ/t_LCE,12000.0,,681361.632,Nm3/a,LS23_LFP_NATIVE_POWDER,,blocked_M08,预处理天然气体积 × LFP 电芯量,只给体积，未折 MJ,SRC040,"若沿用 B 的 12,000 MJ/t 须另声明总量口径；不得与 Nm3 混用"
+process_steam,MJ/t_LCE,,,11065.04069676302,t_steam/a,LS23_LFP_NATIVE_POWDER,,blocked_M08,LS 蒸汽质量（1.1747755 t/t 粉料）,压力/温度/返凝水未核,SRC040,只给商品吨；未转 MJ。ND22 两股蒸汽（1.5 MPa/200 ℃ 与 3.5 MPa/243 ℃）为整项目参考，不是本厂
+sulfuric_acid_H2SO4,kg/t_LCE,2500.0,,5303.3120284874,t_commercial/a,LS23_LFP_NATIVE_POWDER,,blocked_M06,98% 硫酸商品吨；主版本 0.5630527 t/t 粉料,"有效吨 5,197.246 t/a；第二版本 4,617.123 t/a 并列",SRC040,"B 的 2,500 kg/t 与 B 自身 6.0969 t 粉料/t LCE 分母相关；A 的 per-FU 需先确定 LCE 产量"
+hydrogen_peroxide_H2O2,kg/t_LCE,400.0,,5651.3133088473605,m3/a,JIANG24_NATIVE_LFP_PILOT,,blocked_M06,中试 1.2 m3/2 t 粉料 × LS 粉量,体积单位，浓度与商品规格未交代,SRC021,LS 原表无 H2O2 系数；此值来自另一 profile，只作量级参照
+sodium_hydroxide_NaOH,kg/t_LCE,1500.0,,13788.61202757568,t_commercial/a,LS23_LFP_NATIVE_POWDER,,blocked_M06,32% 液碱商品吨,"有效吨 4,412.356 t/a；不得用商品吨判工艺异常",SRC040,B 的 8.9 t/t LCE 属商品吨×6.1 t 粉料分母；A 的正式 per-FU null
+sodium_carbonate_Na2CO3,kg/t_LCE,1600.0,,3532.0708180296,t/a,JIANG24_NATIVE_LFP_PILOT,,blocked_M06,中试 750 kg/2 t 粉料 × LS 粉量（kg→t）,中试单耗线性放大属假设,SRC021,源表为申报质量，纯度未交代
+lime_CaO,kg/t_LCE,800.0,,276.91435213352065,t_commercial/a,LS23_LFP_NATIVE_POWDER,,blocked_M06,92% 氧化钙商品吨,有效吨 254.761 t/a,SRC040,商品规格须随单价声明
+diesel_truck,t·km/t_LCE,2000.0,,12240000.0,t·km/a,A_GROUP_CASE,,conditional_transport,"实际进料 68,000 t/a × 到厂距离 180 km（C 假设）",距离为 C 的运输假设；未取得实际运距分布,SRC031,环境运输排放与经济到厂价分别核算一次；C 的单独运费项为 0 且注明 delivered_included，故不重复计费
+wastewater_treatment,m3/t_LCE,30.0,,3797.2662301316745,m3/a,LS23_LFP_NATIVE_POWDER,,blocked_M08,纯水 + 洗涤补水 + 地坪水（过程用水）,处理量≠用水量；无全厂水平衡,SRC040,M08_WATER 未解；本厂取水 null
+fluoride_wastewater_advanced,m3/t_LCE,10.0,,,m3/a,NONE,,blocked_M08,含氟高盐废水未量化,99.5% 固氟率是阈值，不是实测收率,SRC035,缺数不补 0
+hazardous_residue_disposal,t/t_LCE,1.5,,,t/a,NONE,,blocked_M13,固废属性未逐项核定,LS 固渣已量化为一般固废口径，未含危废,SRC040,危废量与一般固废量不可混用
