@@ -3,7 +3,7 @@
 """lecture12 案例三 · 成员 A：R1 背景情景（2026-11-04）图表。
 
 产出（300 DPI，全部由 data_cohort/a_group_r1_scenario_20261104.json 驱动）：
-    fig5_r1_split_flow.png    R1 分流与再生入口示意图（q/y/SOH 弃用回流 → 60,579.50 t/a）
+    fig5_r1_split_flow.png    [已停用] 旧版 R1 分流示意图（与 fig1/fig01 重叠，不再输出）
     fig6_r1_future_dmfa.png   R1 未来 2026—2040 首装/替换流入 + 校核年退出/收集
 
 图注纪律：
@@ -126,11 +126,9 @@ def draw_split_flow(r1: dict) -> Path:
              "弃用回流保持 0.60/0.40 组成，故再生入口再分体系为 LFP 60% = 36,347.70 t/a、未细分三元 40% = 24,231.80 t/a。",
              fontsize=8.2, color="#5b6672")
     fig.tight_layout(rect=(0, 0.028, 1, 1))
-    FIG_DIR.mkdir(parents=True, exist_ok=True)
-    out = FIG_DIR / "fig5_r1_split_flow.png"
-    fig.savefig(out, dpi=DPI, facecolor="white")
+    # 旧版 R1 分流示意图（fig5_r1_split_flow）与 fig1/fig01 重叠，保留绘制但不写盘
     plt.close(fig)
-    return out
+    return None
 
 
 def draw_future_dmfa(r1: dict) -> Path:
@@ -207,6 +205,8 @@ def main() -> int:
     p2 = draw_future_dmfa(r1)
     print("生成 R1 图表（DPI=%d）：" % DPI)
     for p in (p1, p2):
+        if p is None:
+            continue
         print(f"    {p.relative_to(WORKDIR)}  {p.stat().st_size / 1024:,.0f} KB  {DPI} DPI")
     print("完成：两张 R1 图来自 a_group_r1_scenario_20261104.json，图上情景假设均已标注。")
     return 0

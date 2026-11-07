@@ -106,7 +106,7 @@ def _plot_gwp_sensitivity(df: pd.DataFrame) -> None:
     ax.set_xlabel("kg CO2e/t Li2CO3 摆幅")
     ax.grid(alpha=0.3, axis="x")
     fig.tight_layout()
-    fig.savefig(os.path.join(_FIG, "fig_b3_sensitivity.png"), dpi=300)
+    # 旧版 GWP 敏感性图（fig_b3_sensitivity）已被 final_20261104 图件取代，保留计算但不写盘
     plt.close(fig)
 
 
@@ -186,7 +186,7 @@ def make_charts(df: pd.DataFrame, model: LCAModel) -> dict:
         _plot_env_contribution(ref_res, subtitle)
         _plot_gwp_sensitivity(df)
         out["contribution"] = os.path.join(_FIG, "fig_b1_environmental_contribution.png")
-        out["sensitivity"] = os.path.join(_FIG, "fig_b3_sensitivity.png")
+        out["sensitivity"] = None  # 旧版图已并入 final_20261104，不写盘
         print("[寻优] 无正式可行结果：已输出环境贡献拆解(基准参考工况)与 GWP 敏感性；"
               "帕累托前沿/锚点待正式政策指标与成员 C 完整 TEA（合成/试填结果已排除）。")
         return out, None
@@ -227,10 +227,9 @@ def make_charts(df: pd.DataFrame, model: LCAModel) -> dict:
     ax.legend(loc="best", fontsize=8)
     ax.grid(alpha=0.3)
     fig.tight_layout()
-    p_pareto = os.path.join(_FIG, "fig_b4_pareto_frontier.png")
-    fig.savefig(p_pareto, dpi=300)
+    # 旧版 B-4 帕累托图（fig_b4_pareto_frontier）已被 final_20261104/fig07_pareto 取代，保留计算但不写盘
     plt.close(fig)
-    out["pareto"] = p_pareto
+    out["pareto"] = None
 
     # 图3 敏感性 tornado
     gwp_sens = {v: sensitivity_range(feas, v, "gwp_kgco2e")
@@ -250,10 +249,9 @@ def make_charts(df: pd.DataFrame, model: LCAModel) -> dict:
         ax.set_xlabel(unit + " 摆幅")
         ax.grid(alpha=0.3, axis="x")
     fig.tight_layout()
-    p_sens = os.path.join(_FIG, "fig_b3_sensitivity.png")
-    fig.savefig(p_sens, dpi=300)
+    # 旧版敏感性图（fig_b3_sensitivity）已被 final_20261104 图件取代，保留计算但不写盘
     plt.close(fig)
-    out["sensitivity"] = p_sens
+    out["sensitivity"] = None
 
     # 图1 环境贡献拆解（推荐方案 B）
     b_row = feas.loc[anchor_b]
@@ -291,7 +289,7 @@ def main() -> None:
     figs, anchors = make_charts(df, model)
     print("[寻优] 已生成图表：")
     for k, v in figs.items():
-        print(f"  {k}: {os.path.basename(v)}")
+        print(f"  {k}: {os.path.basename(v) if v else '（已停写盘）'}")
 
     if anchors is None:
         print("\n[推荐方案] 尚未标定：正式政策引擎无PASS工况或LCOR未就绪，"

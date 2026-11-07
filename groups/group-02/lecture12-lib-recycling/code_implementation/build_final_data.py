@@ -220,27 +220,70 @@ def main():
         add_sens("原生基准", v, M.evaluate(m, linkage=0.80, recovery_case="improved",
                                           rd_compliance=True, primary=v))
 
-    # 季节性绿电（宜昌水电丰枯期）最优比例与达标调度
-    sgp = M.seasonal_green_plan()
-    add_sens("季节绿电(成本最优年加权)", sgp["annual_costopt_green"],
-             M.evaluate(m, linkage=0.80, green_fraction=sgp["annual_costopt_green"],
-                        recovery_case="improved", rd_compliance=True))
-    add_sens("季节绿电(年目标80%)", sgp["annual_target_green"],
-             M.evaluate(m, linkage=0.80, green_fraction=sgp["annual_target_green"],
-                        recovery_case="improved", rd_compliance=True))
     write_csv(DATA / "sensitivity_final.csv", sens)
 
+    # 绿电采购与宜昌水电季节性调度（R3–R7 官方来源 + 组内情景假设）
+    ge = M.green_electricity(m)
+    load_kwh = ge["load_kWh"]
+    grid_p = ge["grid_price_CNY"]
+    green_p = ge["green_price_CNY"]
+
+    # 50 / 80 / 100% 绿电工况分别计算（LCOR/GWP/购电成本，不混用）
+    green_comparison = []
+    for g in (0.5, 0.8, 1.0):
+        r = M.evaluate(m, linkage=0.80, green_fraction=g,
+                       recovery_case="improved", rd_compliance=True)
+        green_comparison.append({
+            "green_ratio": g,
+            "lcor_CNY_per_t": round(r["lcor_CNY_per_t"], 2),
+            "gwp_kg_per_t_lce": round(r["gwp_kg_per_t_lce"], 2),
+            "mac_CNY_per_tCO2e": round(r["mac_CNY_per_tCO2e"], 2),
+            "purchase_cost_CNY": round(load_kwh * (grid_p * (1 - g) + green_p * g), 2),
+        })
+    write_csv(DATA / "green_ratio_comparison.csv", green_comparison)
+
+    # 季度水电季节形状（R3–R6 长江电力 2025 发电量占比）
+    hydro_shape = M.hydro_seasonal_shape()
+    hydro_src = {"Q1": "R3", "Q2": "R4", "Q3": "R5", "Q4": "R6"}
+    hydro_shape_rows = [
+        {"quarter": q, "generation_亿kWh": M.HYDRO_QUARTERLY_2025[q],
+         "shape": hydro_shape[q], "source_id": hydro_src[q]}
+        for q in ("Q1", "Q2", "Q3", "Q4")
+    ]
+    write_csv(DATA / "hydro_seasonal_shape.csv", hydro_shape_rows)
+
+    # 情景级调度表（A 历史假设 / B1-B2 成本最优 / C 目标约束 / D 权衡）
     seasonal_rows = [
-        {"season": "丰水期(6—10月)", "months": sgp["wet_months"],
-         "weight": sgp["weight_wet"], "hydro_cap": sgp["hydro_cap_wet"],
-         "costopt_green": sgp["g_wet_costopt"], "target_green": sgp["g_wet_costopt"]},
-        {"season": "枯水期(11—次年5月)", "months": sgp["dry_months"],
-         "weight": sgp["weight_dry"], "hydro_cap": sgp["hydro_cap_dry"],
-         "costopt_green": sgp["g_dry_costopt"], "target_green": sgp["g_dry_target"]},
-        {"season": "年加权", "months": sgp["wet_months"] + sgp["dry_months"],
-         "weight": 1.0, "hydro_cap": None,
-         "costopt_green": sgp["annual_costopt_green"],
-         "target_green": sgp["annual_target_green"]},
+        {"scenario_id": "A", "name": ge["A"]["name"],
+         "load_kWh": load_kwh, "green_ratio": ge["A"]["annual_green_ratio"],
+         "procurement_cost_CNY": None,
+         "target_or_optimum": "历史假设（组内，非最优）",
+         "source_ids": "组内假设(原0.62/0.41/0.10、100%/35%覆盖上限)",
+         "note": ge["A"]["method"]},
+        {"scenario_id": "B1", "name": ge["B1"]["name"],
+         "load_kWh": load_kwh, "green_ratio": ge["B1"]["green_ratio"],
+         "procurement_cost_CNY": ge["B1"]["procurement_cost_CNY"],
+         "target_or_optimum": "成本最优（价格求解）",
+         "source_ids": "R1,R2；组内价格",
+         "note": ge["B1"]["conclusion"]},
+        {"scenario_id": "B2", "name": ge["B2"]["name"],
+         "load_kWh": load_kwh, "green_ratio": ge["B2"]["annual_green_ratio"],
+         "procurement_cost_CNY": None,
+         "target_or_optimum": "条件最优（情景，合同水平未定）",
+         "source_ids": "R3,R4,R5,R6；组内价格",
+         "note": ge["B2"]["note"]},
+        {"scenario_id": "C", "name": ge["C"]["name"],
+         "load_kWh": load_kwh, "green_ratio": ge["C"]["green_ratio"],
+         "procurement_cost_CNY": ge["C"]["procurement_cost_CNY"],
+         "target_or_optimum": "目标约束80%（外生）",
+         "source_ids": "R1,R2；组内价格",
+         "note": ge["C"]["conclusion"]},
+        {"scenario_id": "D", "name": ge["D"]["name"],
+         "load_kWh": load_kwh, "green_ratio": None,
+         "procurement_cost_CNY": None,
+         "target_or_optimum": "权衡（未设碳价/权重）",
+         "source_ids": "R7",
+         "note": ge["D"]["conclusion"]},
     ]
     write_csv(DATA / "seasonal_green_dispatch.csv", seasonal_rows)
 
@@ -266,11 +309,14 @@ def main():
         "pareto": front,
         "environment_total_gwp_t": env["gwp_kg"] / 1000.0,
         "credit_total_gwp_t": credit["avoided_kg"] / 1000.0,
-        "seasonal_green": sgp,
+        "seasonal_green": ge,
+        "green_ratio_comparison": green_comparison,
+        "hydro_seasonal_shape_r3r6": hydro_shape,
         "notes": [
             "情景价格为规划参考价，不是已核实成交价；补贴、碳信用和溢价均为0。",
             "政策可行仅指已编码定量项通过；缺失项保持UNKNOWN，不构成法律合规认证。",
-            "季节性绿电为组内设定/情景假设：丰水期水电可覆盖100%、枯水期基荷约35%，非实时调度。",
+            "水电季节形状用长江电力2025季度发电量占比(R3-R6)，仅刻画季节性，非园区可采购/可认证绿电量。",
+            "网电0.62、风光直购0.41+0.10元/kWh及原100%/35%覆盖上限为组内假设，未取得成交原件。",
         ],
     }
     (DATA / "summary.json").write_text(json.dumps(summary, ensure_ascii=False, indent=2),

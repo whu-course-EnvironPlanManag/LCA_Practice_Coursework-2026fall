@@ -179,16 +179,26 @@ ECON = {
     "employees": 120,
 }
 
-# 季节性绿电（宜昌水电丰枯期）规划参数。宜昌临近三峡/葛洲坝水电群，
-# 水电出力随丰枯季变化：丰水期（6—10月，5个月）富余、枯水期（11—次年5月，7个月）
-# 仅维持基荷。绿电到户价（风光直购 0.51 元/kWh）低于网电（0.62 元/kWh），
-# 故各季成本最小解 = 喝满水电可覆盖上限。数值为组内设定/情景假设，非实时调度数据。
-SEASONAL_GREEN = {
-    "wet_months": 5.0,       # 丰水期月数（6—10月）
-    "dry_months": 7.0,       # 枯水期月数（11—次年5月）
-    "hydro_cap_wet": 1.00,   # 丰水期水电可覆盖园区电耗上限比例
-    "hydro_cap_dry": 0.35,   # 枯水期水电基荷可覆盖园区电耗上限比例
-    "annual_target": 0.80,   # 课程考核：年加权绿电比例目标
+# 绿电与水电季节性数据（R3–R7 官方来源 + 组内情景假设）
+# R3–R6：长江电力 2025 年三峡/葛洲坝各季度发电量（亿 kWh/季度），仅用于刻画
+#   水电季节性供给形状，不当作园区合同电量、可采购上限或可认证绿电量。
+# R7：2024 年全国电力碳足迹因子（kg CO2e/kWh），全国均值非湖北/宜昌本地因子。
+# 价格（网电 0.62、风光直购 0.41 + 到户附加 0.10 = 0.51 元/kWh）沿用
+#   economic_parameters_final.csv 组内报价，未取得成交原件。
+HYDRO_QUARTERLY_2025 = {          # 三峡+葛洲坝，亿 kWh/季度（R3–R6 公告第1页主表）
+    "Q1": 147.93 + 35.24,
+    "Q2": 194.51 + 46.84,
+    "Q3": 357.76 + 64.56,
+    "Q4": 256.95 + 47.16,
+}
+
+CARBON_FACTOR_R7 = {              # 2024 全国电力碳足迹因子，kg CO2e/kWh（R7）
+    "national_average": 0.5777,   # 全国电力平均（用户端口径）
+    "hydro": 0.0141,              # 水力发电（发电侧）
+    "wind": 0.0324,               # 风力发电（发电侧）
+    "solar": 0.0520,              # 光伏发电（发电侧）
+    "td_incl_loss": 0.0327,       # 输配电（含线损）
+    "td_excl_loss": 0.0046,       # 输配电（不含线损）
 }
 
 
@@ -946,49 +956,116 @@ def knee_point(front):
 
 
 # ---------------------------------------------------------------------------
-# 5. 季节性绿电最优比例（宜昌水电丰枯期）
+# 5. 绿电采购与宜昌水电季节性调度
 # ---------------------------------------------------------------------------
-def seasonal_green_plan(annual_target=None, hydro_cap_wet=None, hydro_cap_dry=None,
-                        wet_months=None, dry_months=None):
-    """季节最优绿电比例调度。
+def hydro_seasonal_shape():
+    """R3–R6：三峡+葛洲坝 2025 各季度发电量占比（仅季节形状，非园区可采购量）。"""
+    total = sum(HYDRO_QUARTERLY_2025.values())
+    return {q: round(v / total, 4) for q, v in HYDRO_QUARTERLY_2025.items()}
 
-    绿电价（风光直购 0.51 元/kWh，含到户附加）低于网电（0.62 元/kWh），
-    故成本最小解为各季「喝满水电可覆盖上限」：
-      丰水期 = min(水电上限, 100%)；枯水期 = min(水电基荷上限, 100%)。
-    若年加权结果低于课程年目标，差额由枯水期风光直购补足（绿电价仍低于网电），
-    得到「达标调度」所需枯水期补充比例。GWP 与 LCOR 对绿电比例近似线性，
-    年加权绿电比例可直接映射到同工况的年净 GWP/LCOR。
+
+def park_electricity_kwh(m):
+    """园区年用电量（R1 口径）：LFP 湿法 + 三元湿法 + 梯次测试。"""
+    return (m["lfp_electricity_kwh"] + m["nmc_electricity_kwh"]
+            + m["reuse_testing_kwh"])
+
+
+def green_electricity(m, annual_target=0.80, hydro_annual_share=None):
+    """绿电采购调度（宜昌水电 + 风光，季度粒度，电量加权）。
+
+    年绿电比例统一 = sum(合格绿电量 kWh) / sum(园区用电量 kWh)；
+    等季用电为显式情景假设（无园区分月负荷数据），不计按月数加权。
+
+    四个情景：
+      A  原丰枯期组内假设（历史参考，非最优）
+      B1 成本最优（绿电供应/合同不受限）
+      B2 成本最优（仅水电，季节形状 R3–R6；全年水电合同上限为情景假设）
+      C  年度绿电目标 80%（外生约束下最低成本）
+      D  成本—碳排放（R7 因子，全国均值代理；未设碳价/权重）
     """
-    a = SEASONAL_GREEN["annual_target"] if annual_target is None else annual_target
-    hw = SEASONAL_GREEN["hydro_cap_wet"] if hydro_cap_wet is None else hydro_cap_wet
-    hd = SEASONAL_GREEN["hydro_cap_dry"] if hydro_cap_dry is None else hydro_cap_dry
-    wm = SEASONAL_GREEN["wet_months"] if wet_months is None else wet_months
-    dm = SEASONAL_GREEN["dry_months"] if dry_months is None else dry_months
+    load = park_electricity_kwh(m)
+    grid_price = price("grid")
+    green_price = price("green") + price("green_adder")
+    shape = hydro_seasonal_shape()
+    quarters = ["Q1", "Q2", "Q3", "Q4"]
+    load_q = {q: load / 4.0 for q in quarters}   # 等季用电（情景假设）
 
-    w_wet = wm / (wm + dm)
-    w_dry = dm / (wm + dm)
-
-    # 各季纯成本最优：喝满水电上限
-    g_wet_cost = min(hw, 1.0)
-    g_dry_cost = min(hd, 1.0)
-    annual_costopt = w_wet * g_wet_cost + w_dry * g_dry_cost
-
-    # 达标调度：年目标不足部分由枯水期风光直购补足
-    shortfall = max(0.0, a - w_wet * g_wet_cost)
-    g_dry_needed = shortfall / w_dry if w_dry > 0 else 0.0
-    g_dry_target = min(1.0, max(g_dry_cost, g_dry_needed))
-    annual_target_ach = w_wet * g_wet_cost + w_dry * g_dry_target
-
-    return {
-        "wet_months": wm, "dry_months": dm,
-        "weight_wet": round(w_wet, 4), "weight_dry": round(w_dry, 4),
-        "hydro_cap_wet": hw, "hydro_cap_dry": hd,
-        "g_wet_costopt": g_wet_cost, "g_dry_costopt": g_dry_cost,
-        "annual_costopt_green": round(annual_costopt, 4),
-        "dry_green_needed_for_target": round(g_dry_needed, 4),
-        "g_dry_target": round(g_dry_target, 4),
-        "annual_target_green": round(annual_target_ach, 4),
-        "annual_target_met": annual_target_ach >= a - 1e-9,
-        "green_price_CNY": round(price("green") + price("green_adder"), 4),
-        "grid_price_CNY": round(price("grid"), 4),
+    out = {
+        "load_kWh": round(load, 2),
+        "grid_price_CNY": grid_price,
+        "green_price_CNY": green_price,
+        "price_basis": "组内报价（未取得成交原件）：网电 grid=0.62、风光直购 green=0.41+到户附加0.10=0.51",
+        "source_ids": ["R1", "R2", "R3", "R4", "R5", "R6", "R7"],
     }
+
+    # --- A 原丰枯期组内假设（历史参考，非最优）---
+    wet_months, dry_months = 5.0, 7.0
+    out["A"] = {
+        "name": "原丰枯期组内假设（历史参考，非最优）",
+        "annual_green_ratio": round(wet_months / 12 * 1.0 + dry_months / 12 * 0.35, 6),
+        "method": "丰水期(6-10月)覆盖1.00、枯水期覆盖0.35，组内假设；非数据求解的最优值",
+        "is_optimum": False,
+    }
+
+    # --- B1 成本最优（绿电供应/合同不受限）---
+    cost_0 = load * grid_price
+    cost_100 = load * green_price
+    out["B1"] = {
+        "name": "成本最优·绿电供应/合同不受限",
+        "green_ratio": 1.0,
+        "procurement_cost_CNY": round(cost_100, 2),
+        "cost_0green_CNY": round(cost_0, 2),
+        "saving_vs_0green_CNY": round(cost_0 - cost_100, 2),
+        "conclusion": "绿电(%.4f) < 网电(%.4f)，成本最小 ⇒ 100%% 绿电" % (green_price, grid_price),
+        "is_optimum": True,
+    }
+
+    # --- B2 成本最优（仅水电，季节形状 R3–R6；全年水电合同上限为情景假设）---
+    # 无园区分月/合同数据，全年可签约水电量取"年用电量 x hydro_annual_share"情景假设，
+    # 该水平未取得实际成交，仅作方法演示，不构成结论。
+    if hydro_annual_share is None:
+        hydro_annual_share = 0.60
+    b2_q = {}
+    for q in quarters:
+        hydro_q = load * hydro_annual_share * shape[q]   # 季度水电可采购量（合同上限）
+        eligible_q = min(hydro_q, load_q[q])             # 合格量 ≤ min(合同,用电)
+        b2_q[q] = {
+            "load_kWh": round(load_q[q], 2),
+            "hydro_eligible_kWh": round(eligible_q, 2),
+            "green_ratio": round(eligible_q / load_q[q], 4),
+        }
+    ann_b2 = sum(b2_q[q]["hydro_eligible_kWh"] for q in quarters) / load
+    out["B2"] = {
+        "name": "成本最优·仅水电（季节形状R3-R6；全年水电合同=年用电%d%%情景假设）"
+                % round(hydro_annual_share * 100),
+        "hydro_annual_share_assumption": hydro_annual_share,
+        "quarterly": b2_q,
+        "annual_green_ratio": round(ann_b2, 4),
+        "conclusion": "水电到户价 < 网电，各季用满水电合同上限；年绿电比例 = 全年水电合同上限（情景假设）",
+        "is_optimum": True,
+        "note": "全年水电可签约水平未取得，%d%%仅为方法演示值，非园区真实合同" % round(hydro_annual_share * 100),
+    }
+
+    # --- C 年度目标 80% 约束下最低成本 ---
+    target = annual_target
+    cost_target = load * (grid_price * (1 - target) + green_price * target)
+    out["C"] = {
+        "name": "年度绿电目标80%约束下最低成本",
+        "target": target,
+        "green_ratio": round(target, 4),
+        "procurement_cost_CNY": round(cost_target, 2),
+        "saving_vs_0green_CNY": round(cost_0 - cost_target, 2),
+        "conclusion": "80%为外生目标约束；绿电<网电，故达标购电成本随绿电比例上升而下降",
+        "is_optimum": True,  # 满足目标约束下的最低成本
+    }
+
+    # --- D 成本—碳排放（R7 因子，全国均值代理；未设碳价/权重）---
+    out["D"] = {
+        "name": "成本—碳排放（R7 因子，全国均值代理，未设碳价/权重）",
+        "carbon_factor_R7": CARBON_FACTOR_R7,
+        "conclusion": ("当前价格下绿电在成本与碳排两维均占优（绿电价与碳强度均低于网电），"
+                       "无成本—碳权衡冲突；因未设碳价或排放约束，不构造联合优化权重，"
+                       "不产生'宜昌唯一最优比例'；R7 为全国均值，非宜昌/湖北本地因子"),
+        "is_optimum": False,
+    }
+    return out

@@ -383,25 +383,120 @@
   "environment_total_gwp_t": 23447.312430717437,
   "credit_total_gwp_t": 129876.78463189908,
   "seasonal_green": {
-    "wet_months": 5.0,
-    "dry_months": 7.0,
-    "weight_wet": 0.4167,
-    "weight_dry": 0.5833,
-    "hydro_cap_wet": 1.0,
-    "hydro_cap_dry": 0.35,
-    "g_wet_costopt": 1.0,
-    "g_dry_costopt": 0.35,
-    "annual_costopt_green": 0.6208,
-    "dry_green_needed_for_target": 0.6571,
-    "g_dry_target": 0.6571,
-    "annual_target_green": 0.8,
-    "annual_target_met": true,
+    "load_kWh": 21592610.24,
+    "grid_price_CNY": 0.62,
     "green_price_CNY": 0.51,
-    "grid_price_CNY": 0.62
+    "price_basis": "组内报价（未取得成交原件）：网电 grid=0.62、风光直购 green=0.41+到户附加0.10=0.51",
+    "source_ids": [
+      "R1",
+      "R2",
+      "R3",
+      "R4",
+      "R5",
+      "R6",
+      "R7"
+    ],
+    "A": {
+      "name": "原丰枯期组内假设（历史参考，非最优）",
+      "annual_green_ratio": 0.620833,
+      "method": "丰水期(6-10月)覆盖1.00、枯水期覆盖0.35，组内假设；非数据求解的最优值",
+      "is_optimum": false
+    },
+    "B1": {
+      "name": "成本最优·绿电供应/合同不受限",
+      "green_ratio": 1.0,
+      "procurement_cost_CNY": 11012231.22,
+      "cost_0green_CNY": 13387418.35,
+      "saving_vs_0green_CNY": 2375187.13,
+      "conclusion": "绿电(0.5100) < 网电(0.6200)，成本最小 ⇒ 100% 绿电",
+      "is_optimum": true
+    },
+    "B2": {
+      "name": "成本最优·仅水电（季节形状R3-R6；全年水电合同=年用电60%情景假设）",
+      "hydro_annual_share_assumption": 0.6,
+      "quarterly": {
+        "Q1": {
+          "load_kWh": 5398152.56,
+          "hydro_eligible_kWh": 2061230.57,
+          "green_ratio": 0.3818
+        },
+        "Q2": {
+          "load_kWh": 5398152.56,
+          "hydro_eligible_kWh": 2716782.22,
+          "green_ratio": 0.5033
+        },
+        "Q3": {
+          "load_kWh": 5398152.56,
+          "hydro_eligible_kWh": 4753397.22,
+          "green_ratio": 0.8806
+        },
+        "Q4": {
+          "load_kWh": 5398152.56,
+          "hydro_eligible_kWh": 3422860.57,
+          "green_ratio": 0.6341
+        }
+      },
+      "annual_green_ratio": 0.5999,
+      "conclusion": "水电到户价 < 网电，各季用满水电合同上限；年绿电比例 = 全年水电合同上限（情景假设）",
+      "is_optimum": true,
+      "note": "全年水电可签约水平未取得，60%仅为方法演示值，非园区真实合同"
+    },
+    "C": {
+      "name": "年度绿电目标80%约束下最低成本",
+      "target": 0.8,
+      "green_ratio": 0.8,
+      "procurement_cost_CNY": 11487268.65,
+      "saving_vs_0green_CNY": 1900149.7,
+      "conclusion": "80%为外生目标约束；绿电<网电，故达标购电成本随绿电比例上升而下降",
+      "is_optimum": true
+    },
+    "D": {
+      "name": "成本—碳排放（R7 因子，全国均值代理，未设碳价/权重）",
+      "carbon_factor_R7": {
+        "national_average": 0.5777,
+        "hydro": 0.0141,
+        "wind": 0.0324,
+        "solar": 0.052,
+        "td_incl_loss": 0.0327,
+        "td_excl_loss": 0.0046
+      },
+      "conclusion": "当前价格下绿电在成本与碳排两维均占优（绿电价与碳强度均低于网电），无成本—碳权衡冲突；因未设碳价或排放约束，不构造联合优化权重，不产生'宜昌唯一最优比例'；R7 为全国均值，非宜昌/湖北本地因子",
+      "is_optimum": false
+    }
+  },
+  "green_ratio_comparison": [
+    {
+      "green_ratio": 0.5,
+      "lcor_CNY_per_t": 5.96,
+      "gwp_kg_per_t_lce": -35375.95,
+      "mac_CNY_per_tCO2e": -2996.98,
+      "purchase_cost_CNY": 12199824.79
+    },
+    {
+      "green_ratio": 0.8,
+      "lcor_CNY_per_t": -210.69,
+      "gwp_kg_per_t_lce": -36439.91,
+      "mac_CNY_per_tCO2e": -2931.58,
+      "purchase_cost_CNY": 11487268.65
+    },
+    {
+      "green_ratio": 1.0,
+      "lcor_CNY_per_t": -355.13,
+      "gwp_kg_per_t_lce": -37149.21,
+      "mac_CNY_per_tCO2e": -2889.65,
+      "purchase_cost_CNY": 11012231.22
+    }
+  ],
+  "hydro_seasonal_shape_r3r6": {
+    "Q1": 0.1591,
+    "Q2": 0.2097,
+    "Q3": 0.3669,
+    "Q4": 0.2642
   },
   "notes": [
     "情景价格为规划参考价，不是已核实成交价；补贴、碳信用和溢价均为0。",
     "政策可行仅指已编码定量项通过；缺失项保持UNKNOWN，不构成法律合规认证。",
-    "季节性绿电为组内设定/情景假设：丰水期水电可覆盖100%、枯水期基荷约35%，非实时调度。"
+    "水电季节形状用长江电力2025季度发电量占比(R3-R6)，仅刻画季节性，非园区可采购/可认证绿电量。",
+    "网电0.62、风光直购0.41+0.10元/kWh及原100%/35%覆盖上限为组内假设，未取得成交原件。"
   ]
 }

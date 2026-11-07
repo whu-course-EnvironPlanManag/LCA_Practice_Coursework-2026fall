@@ -55,7 +55,8 @@ def _summarize() -> None:
                    and (df["result_grade"] == "provisional_all_a").any())
     literature = ("literature_scenario" in df.columns
                   and (df["literature_scenario"] != "").any())
-    pareto_png = os.path.join(_FIG, "fig_b4_pareto_frontier.png")
+    # 正式帕累托图由成员 C 的 build_final_data.py 生成于 final_20261104/fig07_pareto.png
+    pareto_png = os.path.join(_FIG, "final_20261104", "fig07_pareto.png")
 
     print("\n========== 汇总 ==========")
     print(f"  总工况        {len(df)}")
