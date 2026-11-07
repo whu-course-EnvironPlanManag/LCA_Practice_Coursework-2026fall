@@ -1,0 +1,103 @@
+[
+  {
+    "file": "fig01_dmfa",
+    "caption": "图1 广州车辆存量与退役量；虚线为模型情景，圆点为原始年末观测。",
+    "source_tables": [
+      "annual_dmfa.csv"
+    ],
+    "dpi": 320
+  },
+  {
+    "file": "fig02_lithium",
+    "caption": "图2 材料结构与锂去向。未收集部分留在系统边界外，未计作已回收产品。",
+    "source_tables": [
+      "chemistry_dmfa.csv",
+      "process_balance.csv"
+    ],
+    "dpi": 320
+  },
+  {
+    "file": "fig03_network",
+    "caption": "图3 区级候选网络；采用人口代理和直线距离×1.3，并非厂址测绘或实际行车路线。",
+    "source_tables": [
+      "network_assignments.csv",
+      "network_options.csv",
+      "raw/DATAV_440100.json"
+    ],
+    "dpi": 320
+  },
+  {
+    "file": "fig07_pareto",
+    "caption": "图7 ABC从同一基准价格的双目标帕累托集合选择；锂量反向归一化；颜色表示事后评价的净减排。",
+    "source_tables": [
+      "all_scenarios.csv",
+      "pareto_front.csv",
+      "anchors.json"
+    ],
+    "dpi": 320
+  },
+  {
+    "file": "fig04_carbon",
+    "caption": "图4 2030年B方案碳足迹。副产物信用以替代相应原生材料核算；负值不是厂内负排放。",
+    "source_tables": [
+      "design_inventory.json",
+      "primary_lithium_baselines.json"
+    ],
+    "dpi": 320
+  },
+  {
+    "file": "fig05_water_energy",
+    "caption": "图5 水—碳权衡与原生对照；盐湖水耗中值24.15 L/kg LCE，范围15.5—32.8；回收毛负荷全部计于锂，副产物未分配。",
+    "source_tables": [
+      "design_inventory.json",
+      "primary_water_energy.json"
+    ],
+    "dpi": 320
+  },
+  {
+    "file": "fig06_finance",
+    "caption": "图6 工程投资与逐年收支，EPR为拟议合同服务费，不是已获得财政补贴。",
+    "source_tables": [
+      "projects.csv",
+      "financing.csv",
+      "recommended_annual.csv"
+    ],
+    "dpi": 320
+  },
+  {
+    "file": "fig08_sensitivity",
+    "caption": "图8 左侧固定B压力测试；右侧三个外生价格分别重选ABC，两种分析不混用。",
+    "source_tables": [
+      "sensitivity.csv",
+      "anchors_by_price.json"
+    ],
+    "dpi": 320
+  },
+  {
+    "file": "fig09_capacity",
+    "caption": "图9 退役预测假设范围及B分期能力；2026—2027委托处理量纳入成本与环境账。",
+    "source_tables": [
+      "uncertainty.csv",
+      "recommended_annual.csv"
+    ],
+    "dpi": 320
+  },
+  {
+    "file": "fig10_pathways",
+    "caption": "图10 再利用延迟与技术路径探索。材料修复使用Ma补锂代理，尚未计专线投资及验证费用，不纳入主方案双目标排序。",
+    "source_tables": [
+      "reuse_delay.csv",
+      "route_comparison.csv"
+    ],
+    "dpi": 320
+  },
+  {
+    "file": "fig11_environment",
+    "caption": "图11 成本—净减排辅助分析及ABC事后碳足迹评价。",
+    "source_tables": [
+      "environment_pareto_front.csv",
+      "anchors.json"
+    ],
+    "dpi": 320
+  }
+]

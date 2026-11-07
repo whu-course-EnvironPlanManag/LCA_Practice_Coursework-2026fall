@@ -1,0 +1,160 @@
+[
+  {
+    "id": "MIIT2024",
+    "url": "https://jxt.hubei.gov.cn/bmdt/rdjj/202412/P020241228550305312661.pdf",
+    "checked": "2026-11-04",
+    "status": "downloaded",
+    "path": "raw_current/MIIT2024.pdf",
+    "sha256": "42bb9c170999a0f6fe2b4a8e6fc0ede95a53c469da13f342ad2c6ea47add7781",
+    "bytes": 346903
+  },
+  {
+    "id": "MIIT2026_20",
+    "url": "https://wap.miit.gov.cn/jgsj/jns/zhlyh/art/2026/art_68252019ef6648f886b2c070ef8ced02.html",
+    "checked": "2026-11-04",
+    "status": "downloaded",
+    "path": "raw_current/MIIT2026_20.html",
+    "sha256": "1272683b080875a27b9f74711ebae89b42efb5b64adea747cab275dd70c1f71e",
+    "bytes": 12408
+  },
+  {
+    "id": "MIIT2026_73",
+    "url": "https://www.miit.gov.cn/gyhxxhb/jgsj/cyzcyfgs/bmgz/jdcjxl/art/2026/art_392462fdc40c415ea4a4129cac3028c2.html",
+    "checked": "2026-11-04",
+    "status": "downloaded",
+    "path": "raw_current/MIIT2026_73.html",
+    "sha256": "ca4b43e554b2ca17714eb50b52c6f58a5888b6bb721674ffa3c26ca14dc0ddce",
+    "bytes": 57808
+  },
+  {
+    "id": "EU2026",
+    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:02023R1542-20260813",
+    "checked": "2026-11-04",
+    "status": "unavailable",
+    "error": "empty or non-PDF response"
+  },
+  {
+    "id": "GRID2024",
+    "url": "https://www.mee.gov.cn/xxgk2018/xxgk/xxgk01/202510/W020251024569470952545.pdf",
+    "checked": "2026-11-04",
+    "status": "downloaded",
+    "path": "raw_current/GRID2024.pdf",
+    "sha256": "68aa11aea4c3d14d2ee1c4859ae03552a986fad529bf7bf59136fa2e078e7718",
+    "bytes": 125983
+  },
+  {
+    "id": "KELLY2021",
+    "url": "https://www.osti.gov/servlets/purl/1868964",
+    "checked": "2026-11-04",
+    "status": "downloaded",
+    "path": "raw_current/KELLY2021.pdf",
+    "sha256": "2db6a555bf0734cecd1be3cfa49944ca0c81ecaebed3effef085da5c6a98c287",
+    "bytes": 1727797
+  },
+  {
+    "id": "YOUMEI_EIA",
+    "url": "https://sthjj.gz.gov.cn/gkmlpt/content/9/9802/post_9802113.html",
+    "checked": "2026-11-04",
+    "status": "downloaded",
+    "path": "raw_current/YOUMEI_EIA.html",
+    "sha256": "44e80ca9ba29de546e2248d78bb1effeb1d83a7db98d45fbf5a89f2ae6e3bd66",
+    "bytes": 59518
+  },
+  {
+    "id": "YOUMEI_ENERGY",
+    "url": "https://fgw.gz.gov.cn/tzgg/xmgg/content/post_9843213.html",
+    "checked": "2026-11-04",
+    "status": "downloaded",
+    "path": "raw_current/YOUMEI_ENERGY.html",
+    "sha256": "f1d1baa356dc85d2500b41bb6c29545d7cf1de0f2d22d9a509cb3994ceeaee0c",
+    "bytes": 19248
+  },
+  {
+    "id": "HUADU",
+    "url": "https://www.huadu.gov.cn/xxgk/zdxm/content/post_10213799.html",
+    "checked": "2026-11-04",
+    "status": "downloaded",
+    "path": "raw_current/HUADU.html",
+    "sha256": "f293036dfaa224dfe61038c30999cd8cf0b561dca6b72ba9d947dbc155287446",
+    "bytes": 43285
+  },
+  {
+    "id": "CROSSREF1",
+    "url": "https://api.crossref.org/works/10.1038/s41467-024-54634-y",
+    "checked": "2026-11-04",
+    "status": "downloaded",
+    "path": "raw_current/CROSSREF1.json",
+    "sha256": "3f7b681503864ca33f8ae37e5ecc4d5c518ec8593c8cf836962f5507efa167eb",
+    "bytes": 25670
+  },
+  {
+    "id": "CROSSREF2",
+    "url": "https://api.crossref.org/works/10.1038/s41560-024-01701-9",
+    "checked": "2026-11-04",
+    "status": "downloaded",
+    "path": "raw_current/CROSSREF2.json",
+    "sha256": "572692ca926f75d97484c4aab0430e9f617ecded2f328c8be863a257bc2856eb",
+    "bytes": 17031
+  },
+  {
+    "id": "CROSSREF3",
+    "url": "https://api.crossref.org/works/10.1038/s43247-024-01667-2",
+    "checked": "2026-11-04",
+    "status": "downloaded",
+    "path": "raw_current/CROSSREF3.json",
+    "sha256": "46b045ee8e98f65f22e15597df7252291cb55281d9e49dce067a93599cb1944f",
+    "bytes": 18196
+  },
+  {
+    "id": "CROSSREF4",
+    "url": "https://api.crossref.org/works/10.1038/s41467-025-56063-x",
+    "checked": "2026-11-04",
+    "status": "downloaded",
+    "path": "raw_current/CROSSREF4.json",
+    "sha256": "f889843cc2c4cc4059ecd8952dea4ccee160b8f5c864ede1aa7d6a9e1631bfdf",
+    "bytes": 26531
+  },
+  {
+    "id": "CROSSREF5",
+    "url": "https://api.crossref.org/works/10.1038/s41467-025-61481-y",
+    "checked": "2026-11-04",
+    "status": "downloaded",
+    "path": "raw_current/CROSSREF5.json",
+    "sha256": "9a4d0da2b98bb8cda3aaeff462ea44c896d160bd437f7565c3a0962c1daa9ff6",
+    "bytes": 31577
+  },
+  {
+    "id": "CROSSREF6",
+    "url": "https://api.crossref.org/works/10.1038/s41467-024-52030-0",
+    "checked": "2026-11-04",
+    "status": "downloaded",
+    "path": "raw_current/CROSSREF6.json",
+    "sha256": "5feb0b9a529ce979250393a46f7eb8a0e03bf690996943387f4a041f0036189e",
+    "bytes": 29990
+  },
+  {
+    "id": "CROSSREF7",
+    "url": "https://api.crossref.org/works/10.1016/j.resconrec.2021.105762",
+    "checked": "2026-11-04",
+    "status": "downloaded",
+    "path": "raw_current/CROSSREF7.json",
+    "sha256": "f9c2096869f8e18e2b3185d56fc7341caf5023d1c5c49164b558b9088b56ab8a",
+    "bytes": 8859
+  },
+  {
+    "id": "CROSSREF8",
+    "url": "https://api.crossref.org/works/10.1038/s43247-026-03643-4",
+    "checked": "2026-11-04",
+    "status": "downloaded",
+    "path": "raw_current/CROSSREF8.json",
+    "sha256": "5ef30072f55cf4277ce0ea838c58a4bf6b728da0181400f67f59aaf3b40224b4",
+    "bytes": 38684
+  },
+  {
+    "id": "OPENALEX",
+    "url": "https://api.openalex.org/works?search=lithium%20battery%20recycling&per-page=5",
+    "checked": "2026-11-04",
+    "status": "unavailable",
+    "error": "HTTP Error 429: Too Many Requests"
+  }
+]

@@ -1,0 +1,911 @@
+                                    Article                                                                                                  https://doi.org/10.1038/s41467-025-61481-y
+
+
+                                    Lithium-ion battery recycling relieves the
+                                    threat to material scarcity amid China’s
+                                    electric vehicle ambitions
+                                    Received: 6 September 2023                         Bin Zhang 1, Qingyao Xin 1 , Siyuan Chen2, Bo Wang                        1
+                                                                                                                                                                  , Hao Li3,
+                                                                                       Zhaohua Wang 4 & Prateek Bansal 5
+                                    Accepted: 23 June 2025
+
+
+                                                                                       The electric automotive transition is crucial for achieving carbon neutrality,
+                                        Check for updates                              especially in emerging economies like China. However, the scarcity of critical
+
+1234567890():,;   1234567890():,;
+                                                                                       materials in lithium-ion batteries (LIBs) challenges electric vehicle (EV)
+                                                                                       deployment targets. Our work delivers a comprehensive framework of EV
+                                                                                       battery recycling, considering resource compensation, environmental per-
+                                                                                       formance, geospatial optimization, and cost feasibility of closed-loop LIB
+                                                                                       recycling under China’s carbon neutrality. Our ﬁndings show that meeting EV
+                                                                                       deployment targets will widen the supply-demand gap, with cobalt and man-
+                                                                                       ganese demand exceeding 2022 production levels by 54-fold and 116-fold,
+                                                                                       respectively. Battery recycling is crucial for mitigating material scarcity,
+                                                                                       necessitating a minimum 84% collection rate to stabilize supply by 2060.
+                                                                                       Battery recycling remains economically viable in most scenarios, generating a
+                                                                                       net proﬁt of US$58 billion in the optimal scenario. Here, our work underscores
+                                                                                       inherent trade-offs among integrated metrics, informing battery recycling
+                                                                                       strategies to strengthen supply chain resilience and advance automotive
+                                                                                       electriﬁcation under decarbonization goals.
+
+
+
+                                    Circular economy strategies, including recycling, are promising to                The EV sales volume has been booming amidst China’s carbon
+                                    lead the world onto a resilient and renewable path aligned with              neutrality (CN60) target being put forward14,15. The number of EVs is
+                                    Sustainable Development Goals1–5. Lithium-ion battery (LIB) recy-            estimated to exceed 10 million (with over 70% market penetration),
+                                    cling, a key component of recycling frameworks in major jurisdic-            potentially reducing cumulative passenger car sector emissions in
+                                    tions, mitigates environmental impacts by reducing or offsetting             2050 by half16,17. Such a huge rise in EV demand, particularly related to
+                                    emissions associated with battery raw material production and                LIBs manufacturing, raises a concern about the availability of critical
+                                    landﬁll disposal at end-of-life6,7. China issued extended producer           materials18,19. EV batteries accounted for ~60% of lithium demand, 30%
+                                    responsibility mandates, urging power battery enterprises and                of cobalt demand, and 10% of nickel demand in 202220, increasing two-
+                                    automobile manufacturers to establish a waste LIBs recycling                 to four-fold in just ﬁve years. More seriously, nickel, lithium, and cobalt
+                                    system8. Besides, recycling LIBs using closed-loop recycling tech-           had over 80% of import reliance in China21–23. Thus, we pose the
+                                    nology could alleviate the supply-side scarcity of critical materials        imperative questions: To what extent can LIB recycling assist China’s
+                                    (e.g., cobalt, lithium, nickel, manganese) to a varying degree9,10.          EV deployment ambition under China’s CN60 target? Further, what are
+                                    Therefore, LIB recycling has shown promise in the context of electric        the corresponding implications of LIB recycling in terms of environ-
+                                    vehicles (EVs)11–13.                                                         mental performance, spatial conﬁguration, and economic feasibility?
+
+
+                                    1
+                                     School of Management, Beijing Institute of Technology, Beijing, China. 2School of Economics and Management, North China Electric Power University,
+                                    Beijing, China. 3College of Economics and Management, Nanjing University of Aeronautics and Astronautics, Nanjing, China. 4School of Economics, Beijing
+                                    Institute of Technology, Beijing, China. 5Department of Civil and Environmental Engineering, National University of Singapore, Singapore, Singapore.
+                                       e-mail: xinqingyao123@163.com; wangzhaohua@bit.edu.cn; prateekb@nus.edu.sg
+
+
+                                    Nature Communications | (2025)16:6661                                                                                                                 1
+Article                                                                                                 https://doi.org/10.1038/s41467-025-61481-y
+
+
+Finally, what is the optimal recycling strategy when considering a          projected to reach 54 and 116 times their 2022 production capacities
+multidimensional assessment?                                                when EVs are sufﬁciently deployed under China’s climate goal. The
+      Two practical challenges should be considered while answering         latest direct cathode recycling technologies create synergistic bene-
+these questions. First, unclear recycling responsibilities and inade-       ﬁts, achieving self-sufﬁciency in critical materials, offsetting 1550 Mt of
+quate infrastructure lead to low battery collection rates24. Informal       cumulative carbon emissions, and generating US$58 billion in recy-
+market entities with poor technical capabilities compete to purchase        cling proﬁt by 2060.
+scrapped batteries as the upstream materials price increases25. Con-
+sequently, only 20% of scrapped LIBs ﬂow into formal recycling              Results
+channels, enlarging the gap between demand and supply of the critical       Historical ﬂows and the demand-supply imbalance of critical
+material. Second, the uncertainty of a secondary supply of critical         materials
+material stems from uncertainty in the technical evolution of               Integrated lifetime distribution modeling and dynamic material ﬂow
+batteries26. Valuable cathode materials like nickel manganese cobalt        analysis (dMFA), the historical-critical material (including cobalt, lithium,
+(NMC) and lithium nickel cobalt aluminum (NCA) are favored in LIBs          nickel and manganese) ﬂows from EV manufacturing to LIB scrappage in
+recycling, while EV manufacturing stakeholders, including giants like       China during 2010–2020 are illustrated in Fig. 1. We assume most of the
+Tesla, are increasingly focused on lithium iron phosphate (LFP) bat-        waste batteries are recycled after echelon reuse for extending the bat-
+teries with the potential risk of soaring prices and unstable supply of     tery lifespan and enhancing resource efﬁciency. In detail, if the service
+critical materials27. Therefore, the lack of long-term insights into bat-   life of the battery is longer than its warranty period (normal failure
+tery technology evolution and recycling process could strain EV             battery), 80% percent of the end-of-life battery would be repurposed for
+deployment efforts, creating resource constraints and supply chain          echelon applications, and the remaining part would enter the recycling
+vulnerability in the domestic battery industry. To address uncertainty,     market27. Based on the battery’s state of health (SOH), the option for
+we devise a scenario-based strategy for LIB recycling (See Methods          direct reuse (SOH exceeds 85%; used for the low-speed EVs) or indirect
+section for details of scenarios).                                          reuse (SOH falls within the range of 80% to 85%; used for the energy
+      With reference to the environmental impacts, the recycling            storage systems) could be identiﬁed. When the SOH is below 80%, the
+strategy portfolio for LIBs can help reduce the life-cycle carbon emis-     end-of-life batteries would be transferred from the reuse application to
+sion by partially offsetting the energy consumption and emissions           the recycling process (See details of battery recycling roadmap from
+from battery manufacturing and logistics28. However, as emissions           Methods, Supplementary note 4 and Supplementary Fig. 2).
+from battery manufacturing decrease due to the expected cleaner                   The LIB recycling roadmap reveals that the total demand for
+energy mix, the environmental gains from recycling could also               cobalt, lithium, nickel, and manganese in EV production surged to 204,
+diminish. To account for changes in energy sources, we consider a           222, 602, and 195 hundred tons, respectively, in 2020, a 900-fold
+CN60 electricity mix and incorporate a scenario-based strategy into         increase over 2010 levels (Fig. 1). However, the supply of these mate-
+the life-cycle assessment (LCA), creating a dynamic model to reﬂect         rials from recycled sources remains marginal, covering only 1.3% of the
+decreasing carbon intensity due to the renewable energy transition.         demand for cobalt, nickel, and manganese, and an even lower 1.1% for
+      Economic feasibility is also crucial in determining whether battery   lithium. A huge demand-supply imbalance exists in the closed-loop LIB
+recycling is an efﬁcient and versatile industry pillar and must be eval-    recycling due to a low battery collection rate. Consequently, the lim-
+uated across multiple dimensions29. First, process-based cost evalua-       ited recovery of these critical materials intensiﬁes supply risk concerns
+tion, which decomposes the cost produced in the recycling process           for the EV industry.
+into discrete analysis units, reveals granular cost differences across            The future adoption trajectory of EVs under China’s CN60 path-
+various recycling technologies30. Second, ﬁnancial returns evolve over      way (see details in the Methods and Supplementary note 3) is shown in
+time owing to the economies of scale driven by technological progress       Fig. 2a. The overall EV adoption will experience rapid growth in the
+and improved resource allocation. Third, considering the capital-           coming years and reach 34 million in 2030, and thereafter, the devel-
+intensive nature of LIB recycling, the optimized spatial conﬁguration       opment of EV will tend to stabilize relatively until 2060. Based on the
+can reduce logistics costs, a factor that is often overlooked. To con-      projected EV demand, trends in scrapped LIBs are illustrated
+sider all these dimensions, we geographically optimize location-based       (Fig. 2b–d). There will be 46 Mt waste batteries generated by 2060,
+cost factors and embed them within the process-based cost assess-           38% of which will come from electriﬁed compact cars and 60% from
+ment, providing insight into how the spatiotemporal evolution of LIB        electric large cars and sport utility vehicles (SUVs) (Fig. 2b). According
+recycling conﬁguration affects the supply chain ﬁnancial costs.             to the current cathode chemistry market, retired batteries equipped
+      Here, our study evaluates how economically feasible strategies of     with LFP cathode will account for nearly half in 2060 (Fig. 2c). In terms
+closed-loop LIB recycling could meet the future LIB material demand         of battery recycling and cascade utilization, 43% of overall waste bat-
+and identify the optimal pathway to achieve EV diffusion targets. A lack    teries in 2060 will be recycled, and 58% will undergo cascade utiliza-
+of deep understanding of this issue could result in delayed EV transi-      tion. Among the cascaded batteries, 44% will be used in energy storage
+tion, hindering the process of decarbonization under China’s CN60           systems, and 35% will eventually be recycled (Fig. 2d).
+target 31–33. Here, we develop a dynamic and systemic assessment fra-             Based on the annual pathway of LIB scrappage and prospective
+mework of LIB recycling, elucidating the holistic view of resource          dMFA, Fig. 2e shows that the large-scale demand-supply strain for
+compensation, environmental performance, geospatial optimization,           critical materials will arise when EVs are sufﬁciently deployed toward
+and cost feasibility. This customized integrated model incorporates         China’s CN60 target. The cumulative imbalance (the gap between
+modules to forecast vehicle-speciﬁc demand and cathode-speciﬁc              materials demand and self-sufﬁciency by closed-loop recycling) will
+battery scrappage, explorative scenario-based materials ﬂow simula-         increase substantially over the next four decades to 4638 kt for cobalt,
+tion, life-cycle environmental assessment, and optimal layout cost          5226 kt for lithium, 4434 kt for manganese, and 13665 kt for nickel.
+modeling. The overview of the model integrating all modules is shown        Notably, the closed-loop supply and demand imbalance for these cri-
+in Supplementary Fig. 1. We ﬁnd the optimal pathway for the LIB             tical materials exceeds the production capacity. By 2060, the imbal-
+closed-loop recycling system by simulating a range of pessimistic to        ance volumes of cobalt and manganese are projected to reach 54 and
+optimistic situations, considering various LIB retirement patterns,         116 times their 2022 production capacities, respectively, exacerbating
+changing cathode chemistries, recycling processes, critical material        fragility and interruptions across supply chains34–36. In the case of
+recycling technologies, and battery collection strategies. Our ﬁndings      cobalt (its price now looming larger), tied with the low battery col-
+demonstrate that the supply-demand gap for cobalt and manganese is          lection rate and nascent material recycling infrastructure, its demand
+
+
+Nature Communications | (2025)16:6661                                                                                                                  2
+Article                                                                                                                                                 https://doi.org/10.1038/s41467-025-61481-y
+
+
+       a                                            Cobalt cycle                                           b                                            Lithium cycle
+                                                                                     Waste management                                                                                      Waste management
+       EV manufacturing & Use                   LIBs use               Secondary use    & Recovery         EV manufacturing & Use                   LIBs use               Secondary use      & Recovery
+                                                                                           201.7                                                                                                219.3
+                                  48.0                 15.9                                                                           52.0                 14.4
+                      Car BEV                                  NCA                      Waste management                   Car BEV                                 NCA                      Waste management
+                                                                         0.2                                                                                                 0.2
+                        Car       14.1                                                                                       Car      15.3                 94.6
+                       PHEV
+                                          EV-LIBs      42.5
+                                                                                                                            PHEV
+                                                                                                                                              EV-LIBs              LFP
+                                                              NMC111
+           EV                     109.5                                                                        EV                     118.7                16.0
+                      Large Car                                                                                           Large Car
+                                                                                                                                                                  NMC111
+                         BEV                           41.5                                                                  BEV
+                                                              NMC523           0.1                                                                                                 0.1
+                      Large Car                                                                                           Large Car
+                                                                                            Recovery                                                              NMC523                        Recovery
+                        PHEV      32.1                                                                                      PHEV      34.9                 28.0
+                      Mini Car                                NMC622                                                       Mini Car
+                                                       92.4                                                                                                       NMC622
+                        BEV       0.6                                                                                        BEV      0.6                  54.4
+                      Mini Car                                                                                             Mini Car
+                                                              NMC811                                                                                              NMC811
+                       PHEV       0.2                  12.1                                                                 PHEV      0.2                  14.3
+                                                                                            2.7                                                                                                 2.4
+                2.8                                                                                                 3.1
+
+
+
+
+       c                                            Nickel cycle                                           d                                     Manganese cycle
+                                                                                       Waste management                                                                                    Waste management
+       EV manufacturing & Use                   LIBs use               Secondary use      & Recovery       EV manufacturing & Use                   LIBs use               Secondary use      & Recovery
+                                                                                           594.4                                                                                               192.9
+                                  141.3                84.0                                                                           45.8                 39.7
+                      Car BEV                                  NCA                      Waste management                  Car BEV                                 NMC111                    Waste management
+                                                                         0.5                                                                                                 0.2
+                        Car       41.5                                                                                       Car      13.5
+                       PHEV
+                                          EV-LIBs      42.4
+                                                                                                                            PHEV
+                                                                                                                                              EV-LIBs
+                                                              NMC111                                                                                       58.0
+           EV                     322.6                                                                        EV                     104.7                       NMC523
+                      Large Car                                                                                           Large Car
+                         BEV                          103.4                                                                  BEV
+                                                              NMC523           0.2                                                                                                 0.1
+                      Large Car                                                                                           Large Car
+                        PHEV      94.7                                                      Recovery                        PHEV      30.7                        NMC622
+                                                                                                                                                                                                Recovery
+                      Mini Car                                NMC622                                                      Mini Car                         86.4
+                        BEV       1.7                 276.2                                                                 BEV       0.6
+                      Mini Car                                                                                            Mini Car
+                                                              NMC811                                                                                              NMC811
+                       PHEV       0.5                  96.4                                                                PHEV       0.2                  11.3
+                                                                                            7.9                                                                                                 2.6
+                8.3                                                                                                 2.7
+
+
+
+
+Fig. 1 | Historical critical materials ﬂow in China from 2010 to 2020. a Cobalt                            large car and sport utility vehicle, Mini Car BEV mini-sized battery electric car, Mini
+cycle, b Lithium cycle, c Nickel cycle, d Manganese cycle. LIBs lithium-ion batteries,                     Car PHEV mini-sized plug-in hybrid electric car, NCA nickel cobalt aluminum, LFP
+EV electric vehicle, EV-LIBs lithium-ion battery for EVs, Car BEV compact battery                          lithium iron phosphate, NMC nickel manganese cobalt. In the secondary use pro-
+electric car, Car PHEV compact plug-in hybrid electric car, Large Car BEV battery                          cess, the waste batteries are initially used for the direct application (low-speed EVs)
+electric large car and sport utility vehicle, Large Car PHEV plug-in hybrid electric                       and then used for indirect application (energy storage systems).
+
+
+
+and self-sufﬁciency imbalance is projected to increase to 120 kt by                                        peak at 184 kt in 2060; however, closed-loop recycling could yield
+2060 in China, requiring the equivalent of 60 new average-sized mines                                      87–134% self-sufﬁciency potential (SP, the percentage of material
+to bridge this supply-demand gap37. Such enormous scarcity means                                           supply via closed-loop recycling could make up for demand). Although
+that critical material consumption is heavily import-dependent,                                            the CC-NMC scenario requires high nickel and manganese, it is not
+threatening road transport electriﬁcation under China’s climate target.                                    concerning provided that the collection rate of these materials
+                                                                                                           exceeds 84%. The extended battery lifespan in the SL-HIGH scenario
+Demand for critical materials and the corresponding supply                                                 dwarfs the SP of each critical material relative to the RS scenario due to
+from battery recycling                                                                                     the decline of retired batteries (the reduction ranges from 22–34% for
+In this work, we develop a scenario combination approach to evaluate                                       cobalt, nickel, and manganese, and 17–26% for lithium).
+EV material demand and recovery in the process of LIB recycling                                                  The recycling technology contributes substantially to the pro-
+(Fig. 3a). Nine selected scenarios (Table 1) are presented to explore the                                  spective material supplement embodied in LIBs. Direct cathode recy-
+demand and self-sufﬁciency imbalance from LIBs and the annual                                              cling technology (in the RP-DIR scenario) would achieve 80–123% self-
+material circularity of cobalt, lithium, nickel, and manganese, con-                                       sufﬁciency in cobalt, nickel, and manganese materials, and 67–104%
+sidering changing cathode chemistries (CC-LFP, CC-NMC, and CC-                                             for lithium speciﬁcally, lower than those in the RS scenario in 2060.
+NCA), recycling processes (RP-PYR and RP-DIR), LIB service life (SL-                                       This technology is at the laboratory stage and has not yet been com-
+HIGH), and material recycling rate (MRR-PRO). The optimal technol-                                         mercialized, resulting in lower material recovery rates. Pyr-
+ogy scenario (OPT) means that the battery and its recycling technology                                     ometallurgical recycling technology (in the RP-PYR scenario) has the
+successfully realize the best technology evolution pathway. The                                            lowest material recovery due to the high-temperature processing and
+reference scenario (RS) illustrates the current LIB technology and                                         the loss of lithium and manganese in the slag. Additionally, in the best
+recycling process in China, where the 2020 market share is maintained                                      optimal technology practice (OPT scenario), critical materials could be
+until 2060 (48% LFP, 6% NMC111, 9% NMC523, 24% NMC622, 7%                                                  on the verge of reaching a demand-supply balance by 2060 with the
+NMC811, and 6% NCA cathode). Since the waste batteries are likely to                                       theoretically best-case collection rate. Moreover, assuming improved
+end up in regulated and informal recycling channels, the real-world                                        collection practices, the battery collection rate for cobalt, nickel, and
+collection rate is uncertain26. To capture its uncertainty and variability,                                manganese in 2060 should rise to 84% and 90% for lithium to exactly
+we design three baseline collection rates (65%, 85%, and 100%),                                            achieve the demand-supply balance. Therefore, critical material cir-
+reﬂecting the recycling infrastructure evolution from moderate to                                          cularity for LIBs will be vital in the transition to electrifying and dec-
+ideal assumption over the next 4 decades9,12,38.                                                           arbonizing the automotive sector along China’s CN60 pathway.
+      LIB technology variability will substantially affect the critical                                          The vehicle-speciﬁc contribution analysis in Fig. 3b shows that over
+material demand and supply in the future. In terms of LIB cathode                                          85% of the material recycling is from the battery electric vehicle (BEV)
+chemistry, the cobalt demand will reach 164 kt in 2060 for the RS                                          sector, especially electriﬁed large cars and SUVs account for 59%.
+scenario, while the demand would reach 132 kt with the evolution of                                        However, the cumulative secondary supply is difﬁcult to keep up with
+low-cobalt and high-nickel battery cathode (CC-NMC scenario; NMC                                           the cumulative demand in 2060 (accounting for 47–65%). The cathode-
+cathode with the greatest potential to reach dominant adoption). As                                        speciﬁc contribution analysis in Fig. 3c illustrates that under CC-NMC
+long as the cathode chemistry market tends to develop advanced,                                            and CC-NCA scenarios, the SP of cobalt, lithium, nickel, and manganese
+cheap and cobalt-free materials (CC-LFP scenario; the most common                                          embodied in LIB recycled from dominant cathode chemistry in each
+cathode today), the estimated cobalt demand will stand at approxi-                                         scenario ranges from 46–52%, 31–34%, 54–61%, and 0–58%, indicating
+mately 35 kt in 2060, as LFP cathode does not contain this high-value                                      the closed association of demand and recycling conﬁguration of future
+material39. In the CC-NCA scenario, the cobalt demand for EVs would                                        critical material with cathode chemistry market.
+
+
+Nature Communications | (2025)16:6661                                                                                                                                                                          3
+Article                                                                                                                                                      https://doi.org/10.1038/s41467-025-61481-y
+
+
+
+
+                                                       Co demand in 2040       Mn demand in 2040       Li recycling in 2060
+                                              550      Co recycling in 2040    Mn recycling in 2040    Ni demand in 2060
+                                                                                                                                                                                       15,000
+                                                                                                                                              -353.2
+                                                       Li demand in 2040       Co demand in 2060       Ni recycling in 2060
+                                              500      Li recycling in 2040    Co recycling in 2060    Mn demand in 2060                                                               13,500
+                                                       Ni demand in 2040       Li demand in 2060       Mn recycling in 2060
+                                                       Ni recycling in 2040    Cumulative difference
+                                              450                                                                                                                                      12,000
+
+
+
+
+                  Demand and recycling (kt)
+                                                                        -362.0
+
+
+
+
+                                                                                                                                                                                                  Cumulative difference (kt)
+                                                                                                                                       -140.8
+                                              400                                                                                                                                      10,500
+                                              250                                                                                                                                      7,500
+                                                                                                                          -119.9
+                                                              -137.5
+                                              200                                                                                                                                      6,000
+                                                                                                  -117.5
+                                                    -122.9
+                                                                                                                                                                             -114.6
+                                              150                                                                                                                                      4,500
+
+                                              100                                                                                                                                      3,000
+
+                                              50                                                                                                                                       1,500
+
+                                               0                                                                                                                                       0
+                                                          Co              Li            Ni             Mn                             Co          Li          Ni         Mn
+                                                                               2040                                                                    2060
+Fig. 2 | Electric vehicle (EV) adoption trajectory, lithium-ion batteries (LIB)                                               supply from closed-loop recycling; the noted number denotes the cumulative
+scrappage, and the demand and self-sufﬁciency imbalance of critical materials                                                 difference between the demand and secondary supply. Car BEV compact battery
+under China’s carbon neutrality (CN60) target. a EV adoption trajectory. b The                                                electric car, Car PHEV compact plug-in hybrid electric car, Large Car BEV battery
+mass of LIB scrapages. c Scrappage of cathode-speciﬁc LIB. d The structure of LIB                                             electric large car and sport utility vehicle, Large Car PHEV plug-in hybrid electric
+cascading and recycling use. e The demand and secondary supply gap of critical                                                large car and sport utility vehicle, Mini Car BEV mini-sized battery electric car, Mini
+materials under China’s CN60 target. The black dashed lines denote the overall                                                Car PHEV mini-sized plug-in hybrid electric car, RE replaced battery, NF normal
+volumes of EV adoption and LIB scrappage in a, b, respectively. e The left bar                                                failure battery, ESS energy storage system, Co cobalt, Li lithium, Ni nickel, Mn
+represents the demand for critical materials, while the right bar represents the                                              manganese.
+
+
+
+
+Nature Communications | (2025)16:6661                                                                                                                                                                                          4
+Article                                                                                                  https://doi.org/10.1038/s41467-025-61481-y
+
+
+Life-cycle CO2 emission in LIB                                                well-structured recycling network (and cascading use facilities; the
+We assess the life-cycle CO2 emissions under nine developed recycling         Chinese government has approved 156 retired LIB recycling operators,
+scenarios with medium battery collection rate and emphasize the role of       including those focused on recycling and cascading use) is essential to
+battery recycling in mitigating emissions, considering two energy mixes       avoid increased transportation costs and risks, such as ﬁre or explo-
+in electricity grid (Fig. 4). Figure 4a shows the cumulative LIB life-cycle   sion during the transport of hazardous materials. The spatial layout
+CO2 emission and the shares involving the battery manufacturing, col-         also interacts with economies of scale. In areas with high battery
+lection, transportation, and recycling under CN60 electricity mix and         supply, centralized recycling hubs promote industrial clustering
+baseline electricity mix40–42. A higher penetration of renewable energy is    through shared logistics, technology, and supply chains, driving down
+linked to relatively lower life-cycle emissions from batteries.               costs. In remote regions with lower battery availability, distributed
+     Battery manufacturing is a substantial contributor to battery life-      facilities help reduce logistics costs. Our results of optimizing geos-
+cycle emissions, especially in the process of cathode material,               patial conﬁguration suggest that large-scale recycling hubs and cas-
+accounting for 42–56% of CO2 emissions in the CN60 electricity mix. In        cading use facilities should be established in battery-rich regions such
+addition, CO2 emissions in transportation and scrapped LIB collection         as Guangdong, Henan, and Chongqing, as well as in areas connecting
+have a negligible effect on the life-cycle emissions of batteries (~1–3%).    remote locations like Jilin, Guizhou, and Shanxi.
+Recycling technology plays an imperative role in the battery’s life-cycle           We analyze the unit costs associated with battery recycling under
+emissions. Especially, the transition to direct cathode recycling in the      focused recycling strategies (Fig. 5a). Based on the spatial distribution
+RP-DIR scenario could cumulatively mitigate 1671 Mt CO2-eq emissions          of battery recycling facilities, the unit costs for the collection and
+in 2060, equivalently offsetting 55% emissions from other processes.          transportation of end-of-life LIBs are optimized and remain stable over
+     Figure 4b presents the detailed carbon emissions of battery              time. Across different battery cathode chemistries, transportation and
+recycling under the considered scenarios for two electricity mixes. In        collection costs range from $0.98 kg−1 to $1.05 kg−1 between 2030 and
+2060, cumulative net CO₂ emissions could be reduced by 192–346 Mt             2060. When aggregating costs and revenues across transportation and
+in the RS, CC-NMC, and CC-NCA scenarios through battery recycling.            collection, disassembly, and recycling processes, we observe that unit
+The extended lifetime of LIB would help avoid emissions (140 or 147 Mt        recycling costs (or revenues) are shaped by economies of scale, driven
+CO2-eq reduction in 2060 in the SL-HIGH scenario), but slightly lower         by recycling expansion and technological progress. Although LFP
+than the RS scenario. While comparing the emission impact of differ-          batteries, made from inexpensive materials, are not economically
+ent recycling processes, we estimate that carbon mitigation with direct       suited for hydrometallurgical recycling, they still beneﬁt from econo-
+cathode recycling over the next 40 years (in the RP-DIR scenario) is          mies of scale, with unit recycling losses narrowing from $2.05 kg−1 in
+ninefold greater for hydrometallurgical recycling (in the RS scenario).       2030 to $2.00 kg−1 in 2060 under the RS scenario. Conversely, the unit
+Given the optimal battery and its recycling technology (OPT scenario),        proﬁt for NCA battery recycling rises from $0.74 kg−1 in 2030 to
+cumulative CO2 emissions of approximately 1550 Mt CO2-eq will be              $0.89 kg−1 in 2060; the unit proﬁt of NMC111 battery recycling
+avoided by LIB recycling in 2060 with CN60 electricity mix, which is          increases from $1.67 kg−1 in 2030 to $1.81 kg−1 in 2060. Among the
+equivalent to twice the annual carbon emission of China’s passenger           various recycling processes, direct cathode recycling stands out as the
+car sector16.                                                                 most cost-effective, yielding positive revenues even for LFP batteries.
+     The vehicle-speciﬁc breakdown of cumulative CO2 mitigation               Under the OPT scenario, the unit proﬁt of LFP battery recycling grows
+under the CN60 electricity mix in Fig. 4c indicates that over 85% of the      from $1.30 kg−1 in 2030 to $1.32 kg−1 in 2060. Other cathode chemis-
+reduction is from BEVs: ~30% from compact cars and ~55% from large            tries achieve even higher unit proﬁts over this period: NCA from
+cars and SUVs. The cathode-based breakdown reﬂects that the use of            $4.10 kg−1 to $4.18 kg−1, NMC111 from $4.01 kg−1 to $4.06 kg−1, NMC532
+LFP cathodes may increase emissions during the recycling process,             from $4.17 kg−1 to $4.21 kg−1, NMC622 from $4.35 kg−1 to $4.37 kg−1, and
+potentially adding up to 137 Mt of cumulative carbon emissions.               NMC811 from $4.16 kg−1 to $4.22 kg−1 (See more details of the unit costs
+However, if it is linked with advanced recycling technologies, speciﬁ-        in Supplementary Data 1–6).
+cally direct cathode recycling in the RP-DIR scenario, considerable                 The costs associated with battery recycling at the industry level
+emissions (−430 Mt) could be avoided.                                         are compared across nine recycling scenarios, as illustrated in Fig. 5b.
+                                                                              The results indicate that the CC-LFP scenarios incur the highest recy-
+Economically feasible LIB recycling considering the synergy of                cling costs, reaching a total loss of $3 billion by 2060. In contrast, the
+optimizing geospatial conﬁguration                                            OPT scenario yields the highest recycling proﬁt, primarily due to the
+Battery recycling offers signiﬁcant beneﬁts for resource conservation         adoption of direct cathode recycling technologies and advanced
+and emission reduction, but the cost feasibility of different recycling       infrastructure, which maximize the material recycling rate for high-
+strategies requires further investigation, as it determines the potential     value materials, generating a net proﬁt of $58 billion. Overall, battery
+for the commercial deployment of the industry. Using a process-based          recycling remains economically feasible under most scenarios,
+cost evaluation approach, this study evaluates the costs associated           emphasizing the signiﬁcant inﬂuence of recycling technologies on
+with recycling, considering phases such as transportation and collec-         ﬁnancial outcomes. Furthermore, the material recycling rate plays a
+tion, disassembly, and the recycling process. Our breakdown model             crucial role in determining economic feasibility across different bat-
+incorporates multiple cost components, including materials and                tery chemistries.
+energy costs, direct labor, capital investment, variable overhead, and
+research and development. Furthermore, the effects of economies of            Discussion
+scale are embedded in the analysis, indicating that during the early          Shifting to EVs is a compelling strategy to decarbonize the transport
+stages of the recycling process, ﬁxed and operational costs decline as        sector, but the scarcity of critical materials embodied in LIBs may delay
+recycling scales up, driven by technological progress and improved            the EV deployment schedule to achieve China’s climate target. When
+resource allocation. This cost-reduction mechanism plays a crucial role       EVs are fully deployed on China’s CN60 path, the closed-loop supply of
+in enhancing economic feasibility.                                            critical materials remains insufﬁcient to meet demand, far surpassing
+     Our cost model incorporates the optimal spatial layout of battery        mining production capacities. By 2060, shortages of cobalt and man-
+recycling facilities to minimize long-distance transportation and col-        ganese are expected to reach 54 and 116 times their 2022 production
+lection costs, enhancing resource recovery efﬁciency and regional             levels. The cobalt shortage in China in 2060 will reach 120 kt, ninefold
+supply chain resilience to support the circular economy. Given China’s        that in 2021, requiring the equivalent of 60 new average-sized mines.
+vast geography and the dispersed distribution of retired batteries, a         According to ofﬁcial data, China’s cobalt reserves only constitute 1.1%
+
+
+Nature Communications | (2025)16:6661                                                                                                                 5
+Article                                                                                                               https://doi.org/10.1038/s41467-025-61481-y
+
+
+of the global total43, partly because the cobalt concentration in                      portion for LIB manufacturing. Subjected to price volatility, diverse
+domestic deposits is very low (~0.02%)44; however, this emerging                       geopolitical inﬂuence, supply uncertainties, and globally intensifying
+economy is responsible for 39.7% of cobalt consumption45, a large                      trade frictions, cobalt, regarded as more insecure than oil, may incur
+
+         a Scenario-specific
+
+
+
+
+         b Vehicle-specific
+
+
+
+
+         c Cathode-specific
+
+
+                                                                                                                                                            NCA
+                                                                                                                                                            LFP
+                                                                                                                                                            NMC111
+                                                                                                                                                            NMC523
+                                                                                                                                                            NMC622
+                                                                                                                                                            NMC811
+                                                                                                                                                            Recycling SP
+
+
+
+
+Fig. 3 | Prospective demand, recycling, and self-sufﬁciency potential (SP) of          NMC-dominated, and NCA-dominated cathode evolution scenario,s respectively.
+critical materials embodied in lithium-ion batteries (LIBs) for electric               SL-HIGH is the high battery service life scenario. Under the RP-PYR and RP-DIR
+vehicles (EVs). a Demand and potential secondary supply from recycling under           scenarios, the batteries are adopted pyrometallurgical recycling and direct cathode
+nine selected scenarios. b Vehicle-speciﬁc demand and potential secondary supply       recycling technology, respectively. MRR-PRO refers to the progressive critical
+in 2060. c Cathode-speciﬁc demand and potential secondary supply in 2060. The          material recycling rate. And the OPT scenario denotes the optimal battery tech-
+SP across nine recycling strategies based on three battery collection rates is dis-    nology and recycling technology transition. The scenarios are detailed in Table 1.
+played from the lower to the upper bound. The light red dashed line denotes the        Co cobalt, Li lithium, Ni nickel, Mn manganese, Car BEV compact battery electric
+breakeven between the demand and secondary supply from battery recycling. The          car, Car PHEV compact plug-in hybrid electric car, Large Car BEV battery electric
+white square indicates the average SP displayed on the secondary axis between          large car and sport utility vehicle, Large Car PHEV plug-in hybrid electric large car
+2021 and 2060. RS refers to the baseline scenario in which the cathode chemistry,      and sport utility vehicle, Mini Car BEV mini-sized battery electric car, Mini Car PHEV
+battery lifespan, recycling technology, and critical material rate develop according   mini-sized plug-in hybrid electric car, NCA nickel cobalt aluminum, LFP lithium iron
+to current trends. CC-LFP, CC-NMC,, and CC-NCA represent the LFP-dominated,            phosphate, NMC nickel manganese cobalt.
+
+
+
+
+Nature Communications | (2025)16:6661                                                                                                                                      6
+                                                                                                                                                                                                                                                                      Article
+
+
+
+
+                                        Table 1 | Description of the scenario narratives
+                                        Strategy       RS                     CC-LFP                  CC-NMC                  CC-NCA                    SL-HIGH                RP-PYR                  RP-DIR             MRR-PRO                 OPT
+Nature Communications | (2025)16:6661
+
+
+
+                                        Scenario       The current battery    The cathode chem-       The evolution of        The widespread avail-     The battery lifetime   The mature technol-     The materials      The critical material   The battery and
+                                        narrative      technology and         istry market turns to   cathode technology      ability of cutting-edge   will be extended by    ogy in the pyr-         recovery rate      recycling rate will     its recycling
+                                                       recycling process      developing cobalt-      to “low-cobalt and      battery technology        advanced               ometallurgical recy-    will increase      increase due to the     technology suc-
+                                                       stay even              free battery technol-   high-nickel”, such as   with low-cobalt and       technologies.          cling process will be   through high-      advancement of          cessfully realize
+                                                       until 2060.            ogy to reduce cost      NMC811, and             manganese-free                                   adapted.                end technology     recycling               the best tech-
+                                                                              and high-value mate-    advanced NCA.           equipment, high                                                          in the recycling   technology.             nology evolution
+                                                                              rial supply risk.                               energy capacity.                                                         process.                                   pathway.
+                                        Parameters     RS                     CC-LFP                  CC-NMC                  CC-NCA                    SL-HIGH                RP-PYR                  RP-DIR             MRR-PRO                 OPT
+                                        1. EV market   EV evolution under     EV evolution under      EV evolution under      EV evolution under        EV evolution under     EV evolution under      EV evolution       EV evolution under      EV evolution
+                                                       China’s carbon         China’s carbon neu-     China’s carbon neu-     China’s carbon neu-       China’s carbon         China’s carbon neu-     under China’s      China’s carbon neu-     under China’s
+                                                       neutrality target      trality target          trality target          trality target            neutrality target      trality target          carbon neu-        trality target          carbon neu-
+                                                                                                                                                                                                       trality target                             trality target
+                                        2. Battery     Business-as-usual      LFP-dominated           NMC-dominated           NCA-dominated             Business-as-usual      Business-as-usual       Business-as-       Business-as-usual       NCA-dominated
+                                        cathode        chemistry              chemistry               chemistry               chemistry                 chemistry              chemistry               usual chemistry    chemistry               chemistry
+                                        market
+                                        shares
+                                        3. Battery     Low                    Low                     Low                     Low                       High                   Low                     Low                Low                     High
+                                        lifespan
+                                        4. Recycling   Hydrometallurgy        Hydrometallurgy         Hydrometallurgy         Hydrometallurgy           Hydrometallurgy        Pyrometallurgy          Direct cathode     Hydrometallurgy         Direct cathode
+                                        process                                                                                                                                                        recycling                                  recycling
+                                        5. Battery     Low: 65%, Medium:      Low: 65%, Medium:       Low: 65%, Medium:       Low: 65%, Medium:         Low: 65%, Medium:      Low: 65%, Medium:       Low: 65%, Med-     Low: 65%, Medium:       Low: 65%, Med-
+                                        collection     85%, High: 100%        85%, High: 100%         85%, High: 100%         85%, High: 100%           85%, High: 100%        85%, High: 100%         ium: 85%,          85%, High: 100%         ium: 85%,
+                                        rate                                                                                                                                                           High: 100%                                 High: 100%
+                                        6. Critical    lithium: 80%,          lithium: 80%, cobalt:   lithium: 80%, cobalt:   lithium: 80%, cobalt:     lithium: 80%,          lithium: 80%, cobalt:   lithium: 80%,      100% for critical       100% for critical
+                                        materials      cobalt: 95%, nickel:   95%, nickel: 95%, and   95%, nickel: 95%,       95%, nickel: 95%, and     cobalt: 95%, nickel:   95%, nickel: 95%, and   cobalt: 95%,       materials               materials
+                                        recycling      95%, and manga-        manganese: 95%          and manga-              manganese: 95%            95%, and manga-        manganese: 95%          nickel: 95%, and
+                                        rate           nese: 95%                                      nese: 95%                                         nese: 95%                                      manganese:
+                                                                                                                                                                                                       95%
+
+
+
+
+7
+                                                                                                                                                                                                                                                                      https://doi.org/10.1038/s41467-025-61481-y
+Article                                                                                                https://doi.org/10.1038/s41467-025-61481-y
+
+
+          a Battery life-cycle emissions
+
+
+
+
+           b Recycling process emissions
+
+
+
+
+                                                                                                                                       mix
+
+
+
+
+          c Recycling process emissions - Vehicle/Cathode specific
+
+
+
+
+dramatic supply risk in the medium and long run46–48. Thus, China may       under the optimal direct cathode recycling technology, while also
+be obliged to slow its EV action plan because of the deﬁcient supply of     offsetting 55% emissions from other processes in the LIB supply chain.
+critical materials, affecting its climate target.                           Battery collection rate advancement driven by relevant regulations to
+      LIB recycling has the potential to handle critical material shorta-   construct an efﬁcient recovery system is a vital strategy to achieve self-
+ges to support ﬂeet electriﬁcation and bring substantial environmental      sufﬁciency of critical materials. To achieve a balanced supply and
+co-beneﬁts. Our scenario-based simulations suggest that critical            demand for cobalt, nickel, and manganese in 2060, the required bat-
+materials, except lithium, could achieve a demand-supply balance            tery collection rate is up to 84%, which is 90% for lithium. Generally,
+
+
+Nature Communications | (2025)16:6661                                                                                                               8
+Article                                                                                                                  https://doi.org/10.1038/s41467-025-61481-y
+
+Fig. 4 | Prospectively life-cycle CO2 emission related to lithium-ion battery (LIB)       electricity mix. b The output is the annual avoided carbon emissions from battery
+under the nine selected scenarios. a LIB life-cycle CO2 emissions under China’s           recycling. RS refers to the baseline scenario in which the cathode chemistry, battery
+carbon neutrality electricity mix (CN60 electricity mix) and baseline electricity mix     lifespan, recycling technology, and critical material rate develop according to
+(BAU electricity mix) in 2060. b Battery recycling process CO2 emissions under            current trends. CC-LFP, CC-NMC and CC-NCA represent the LFP-dominated, NMC-
+CN60 electricity mix. c CO2 emissions of vehicle/cathode-speciﬁc battery recycling        dominated, and NCA-dominated cathode evolution scenarios, respectively. SL-
+process under CN60 electricity mix. a The bars illustrate the speciﬁc material inputs     HIGH is the high battery service life scenario. Under RP-PYR and RP-DIR scenarios,
+involved in the battery manufacturing process, including steel, aluminum, copper          the batteries are adopted pyrometallurgical recycling and direct cathode recycling
+wire, cathode materials, graphite, polyvinylidene ﬂuoride (PVDF), lithium hexa-           technology, respectively. MRR-PRO refers to the progressive critical material
+ﬂuorophosphate (LiPF₆), electrolyte, and polypropylene. In the circular chart of (a),     recycling rate. And the OPT scenario denotes the optimal battery technology and
+recycling emissions are shown on the right side of the origin to represent an             recycling technology transition. Car BEV compact battery electric car, Car PHEV
+increase in emissions resulting from the recycling process, indicating their con-         compact plug-in hybrid electric car, Large Car BEV battery electric large car and
+tribution to the lifecycle total. Conversely, recycling emissions are shown on the left   sport utility vehicle, Large Car PHEV plug-in hybrid electric large car and sport
+side of the origin to represent a reduction in emissions, highlighting the avoided        utility vehicle, Mini Car BEV mini-sized battery electric car, Mini Car PHEV mini-
+emissions that offset those from battery manufacturing, transportation, and col-          sized plug-in hybrid electric car, NCA nickel cobalt aluminum, LFP lithium iron
+lection. BAU - CN60 value displayed in the secondary axis denotes the difference in       phosphate, NMC nickel manganese cobalt.
+cumulative life-cycle carbon emissions between BAU electricity mix and CN60
+
+
+
+most batteries go missing at the end of their lifecycle rather than being                      Our cost assessment model accounts for the impact of spatial
+available to recyclers. Since there is no clear pricing mechanism for                     conﬁguration on the recycling supply chain, showing that a well-
+power battery recycling in China, many LIBs ﬂow to irregular market                       planned layout improves system efﬁciency and ﬁnancial sustainability,
+participants, such as small workshops and second-hand car markets,                        and lowers environmental burdens. Ideally, optimizing logistics path-
+by means of bidding on scrapped cars installed with spent batteries,                      ways can reduce the unit transportation cost of end-of-life EV batteries
+resulting in few batteries being obtained by ofﬁcially certiﬁed battery                   to $0.98–1.05 km−1. Policymakers must consider the spatial deploy-
+recyclers49,50. Policymakers concerned with resources and the envir-                      ment of recycling facilities to balance economies of scale with logistics
+onment should pay attention to establishing sound regulations and                         efﬁciency, ensuring an optimal distribution of resources and enhan-
+standards to propel the battery recycling industry. For example, an                       cing battery recycling industrial clustering beneﬁts.
+extended producer responsibility system and design for remanu-                                 In summary, it is imperative to account for multiple factors
+facturing, reuse, and recycling should be promoted to stimulate                           to select the most suitable and well-founded battery recycling
+closed-loop recycling among manufacturers51,52.                                           strategy due to trade-offs between critical material supply and
+      The cathode chemistry development of LIBs affects critical                          demand, environmental impacts, and technological cost (Sup-
+material recovery and environmental performance. Cathode market                           plementary Tables 27–29 and Supplementary Fig. 31). Cutting-
+structure has a critical inﬂuence on the absolute volume of demand                        edge cathode direct recycling technology brings potential bene-
+and recycling of critical materials; for example, the demand for cobalt                   ﬁts to resource availability, environmental performance, and
+and manganese can vary signiﬁcantly, depending on the different                           economic gain. Therefore, advancing toward commercial-scale
+cathode chemistries used. NCA, with cathode chemistry beneﬁcial not                       application is crucial for the technology’s future trajectory. LIB
+only for the circularity potential of critical materials but also for                     recycling performance with the state-of-the-art facility presented
+environmental improvement, represents a technology challenge for                          in a best-case material recovery condition would achieve a
+many LIB producers due to its delayed research. Although inexpensive-                     30%–41% material surplus after satisfying the material demand of
+material cathode technology (LFP currently) could help reduce China’s                     EV deployment. In terms of strategy involving extending battery
+dependence on critical materials like cobalt, manganese, and nickel, it                   lifespan, although a reduced quantity of batteries would lead to
+fails to address the lithium shortage as long as LIBs remain the main-                    lower emissions, it inevitably results in the lowest self-sufﬁciency
+stream technology. Moreover, this cathode type is the least effective in                  potential of critical materials. Moreover, despite closed-loop
+mitigating emissions. As EV adoption accelerates under China’s CN60                       recycling supplying lower critical materials for EV deployment at
+target, lithium will play an increasingly vital role in the national eco-                 the material level when shifting towards the direct cathode
+nomic system17,53. Therefore, greater research efforts should be                          recycling technology, it helps with the preservation of structure
+directed toward advancing battery cathode technology, such as                             and composition of LIBs, the improvement of material reuse, and
+sodium batteries, which serve as a low-cost alternative to LIBs and are                   the maximization of environmental beneﬁt and economic rev-
+crucial for alleviating the burden on the critical materials supply chain                 enue. By integrating optimal battery and recycling technology,
+caused by LIBs54,55.                                                                      secondary supply through recycling could basically balance the
+      Techno-economic evaluation determines whether resource-                             supply and demand of critical materials, and achieve decreased
+efﬁcient and environmentally friendly battery recycling strategies                        life-cycle CO2 emission and maximum yields. To better support
+can achieve commercial viability, supporting EV deployment under                          EV deployment under China’s emission mitigation pledge, the
+climate targets. Our analysis indicates that while NMC and NCA bat-                       balanced and tailored selection between the resource, environ-
+tery recycling are ﬁnancially advantageous, LFP battery recycling is                      ment, and economic beneﬁts is urgently required.
+economically viable only when direct cathode recycling technology                              There are some limitations in this study. The impacts and con-
+is applied. This ﬁnding highlights the importance of integrating                          tributions of our ﬁndings are limited to the domestic market of China,
+advancements in cathode chemistry, recycling technologies, and                            while the international products trade (such as EVs, LIBs, and critical
+infrastructure improvements to enhance cost efﬁciency. The transi-                        materials) could potentially impact the demand-supply structure.
+tion to optimized battery compositions and recycling strategies                           Future studies can investigate optimal pathways for LIB recycling,
+presents the most effective solution, as direct cathode recycling                         considering geopolitical dynamics in a global economy. Moreover,
+combined with high material recovery rates maximizes resource                             while we consider three different cathode chemistries (LFP, NCA, and
+utilization and enhances economic returns. Furthermore, economies                         NMC), there is an uncertainty in the required resources and the
+of scale are evident across all recycling scenarios as the recycling                      environment of the battery recycling process due to evolving battery
+scale expands.                                                                            technology. For example, if the adoption of lithium-air, lithium-sulfur,
+
+
+
+Nature Communications | (2025)16:6661                                                                                                                                        9
+Article                                                                                                                 https://doi.org/10.1038/s41467-025-61481-y
+
+
+        a Unit battery recycling costs and profit in 2030 and 2060
+
+
+
+
+         b Recycling cost assessment of LIBs at the industry level
+
+
+
+
+Fig. 5 | Economic assessment of lithium-ion battery (LIB) recycling at unit and          pyrometallurgical recycling and direct cathode recycling technology, respectively.
+industry levels considering the economy of scale and geospatial conﬁguration.            MRR-PRO refers to the progressive critical material recycling rate. And the OPT
+a Unit battery recycling costs and proﬁts in 2030 and 2060. b Recycling cost             scenario denotes the optimal battery technology and recycling technology transi-
+assessment of LIBs at the industry level across nine recycling scenarios. RS refers to   tion. In each scenario of (a), the left dot denotes the unit battery recycling costs/
+the baseline scenario in which the cathode chemistry, battery lifespan, recycling        proﬁts in 2030, while the right dot indicates the unit battery recycling costs/proﬁts
+technology, and critical material rate develop according to current trends. CC-LFP,      in 2060, reﬂecting the impact of economies of scale. The battery recycling net
+CC-NMC, and CC-NCA represent the LFP-dominated, NMC-dominated, and NCA-                  proﬁts aggregate the cost and revenue of disassembly and recycling processes, and
+dominated cathode evolution scenarios, respectively. SL-HIGH is the high battery         the cost of transportation and collection related to LIB recycling.
+service life scenario. Under RP-PYR and RP-DIR scenarios, the batteries are adopted
+
+
+
+sodium batteries, and solid-state batteries becomes more predictable,                    Methods
+the future supply chain of LIBs and critical materials will be sub-                      Modeling overview
+stantially altered. Future studies could consider broader cathode                        We develop a uniﬁed, system-level model for analysis of the demand-
+chemistry while modeling the battery market dynamics.                                    supply dynamic of critical materials, carbon environmental impacts,
+
+
+Nature Communications | (2025)16:6661                                                                                                                                     10
+Article                                                                                                https://doi.org/10.1038/s41467-025-61481-y
+
+
+optimal geographic layout, and economic prospects associated with           and carbon price obtained from the GCAM to the Bass model, we
+LIBs embodied in EVs under China’s CN60 target. Our integrated              couple these two forecasting models, outputting the long-term S-
+model contains six major modules related to future EV uptake, battery       shaped growing trend of EVs. The methodological framework of the
+scrappage dynamics, critical materials cycle, life-cycle CO2 emissions,     truck is based on the stock-driven dMFA model27. We calculate the
+recycling layout optimization, and cost-effectiveness quantiﬁcation.        vehicle-speciﬁc (e.g., light truck, medium truck, and heavy truck) stock
+The modeling framework can be found in Supplementary Note 1 and             associated with the vehicle traveled kilometer, transportation demand,
+Supplementary Fig. 1.                                                       and load factor (obtained from GCAM). The inﬂow and outﬂow of the
+      In detail, we ﬁrst construct China’s CN60 target using the Global     truck sector can be identiﬁed once its stock is determined. Therefore,
+Change Assessment Model (GCAM; https://github.com/JGCRI/gcam-               truck adoption and scrappage trajectories are simulated.
+core), which simulates the future climate scenarios through the com-
+bination of the Shared Socioeconomic Pathways (SSPs) and Repre-             LIB scrappage roadmap
+sentative Concentration Pathways (RCPs)56. We then couple the GCAM          The wasted batteries could be recycled from three sources27: i) Battery
+model with the bottom-up strategy, such as the technologically rich         replaced by early failure. When the battery failure occurs during its
+Bass model, predicting the EV adoption trajectory under China’s CN60        warranty period (8 years)27,60, some of the batteries (70%) could be
+target. Then, based on retirement patterns (estimated by a Weibull          repaired and reused in the EV. However, the rest of the parts (30%) are
+distribution) of various EV types, including compact car, large car and     replaced and then enter the recycling market. ii) Recycling from the
+SUV, mini car, light truck, medium truck, and heavy truck, the vehicle-     echelon. In terms of normal failure batteries (the service life of LIBs
+speciﬁc end-of-life LIB generation is simulated using dMFA27. The           exceeds their warranty period), there are two end-of-life pathways
+battery’s secondary and recycling use, based on battery service life-       available: recycling and cascading use. To extend the battery lifespan
+span and its SOH distribution, are modeled. Further, we examine the         and maximize ﬂexibility in applications, most part of the battery is
+retrospective and prospective material demand and recovery of               prioritized for second-life use before recycling. The batteries enter into
+cobalt, lithium, nickel, and manganese at the pack level based on stock-    the echelon accounting for 80% proportion from the overall normal
+driven dMFA. Note that our nested dMFA covers three layers, ensuring        failure batteries. Battery SOH above 85% would be reused directly in
+that ﬂows from EVs to LIBs to materials3. The vehicle stock determines      low-speed EV applications (Direct reuse). SOH between 80% and 85%
+the waste battery stock and thus determines its inﬂow and outﬂow. The       would be reused in the energy storage systems (Indirect reuse)12. Until
+LIB ﬂow is a determining factor for the critical material requirement.      the condition of SOH below 80% is satisﬁed, eventually, the batteries
+Subsequently, estimates of co-beneﬁts with CO2 reduction are also           are collected into the recycling market61. iii) Direct recycling. Except
+considered by LCA57. The processes, including battery manufacture,          for the cascaded utilization of normal failure batteries, the remaining
+transportation, collection, and recycling, are considered in LCA. Since     part (20%) of normal failure batteries is directly recycled. The stages of
+the traditional LCA is static and may amplify the environmental ben-        the battery pack calendar and cycle lifetime for LIBs are illustrated in
+eﬁts in the long term, we obtain the electricity mix by the GCAM model      Supplementary Figs. 2 and 3. See more details in Supplemen-
+under China’s CN60 scenario and update the carbon emission factor           tary Note 4.
+every 5 years from 2020 to 2060 to capture the dynamic electricity
+emission in the battery manufacturing and recycling process. Next, the      Scenario settings
+location-optimized logistics model is reﬁned by minimizing transpor-        To evaluate the integrated inﬂuence of technical, economic, environ-
+tation distance and cost, generating an optimal conﬁguration for the        mental, and spatial factors, we adopt the explorative scenario-based
+ﬂow of end-of-life batteries from potential collection sites to recycling   analysis. Given the uncertainty of forecasts of markets and technolo-
+facilities. Finally, leveraging the process-driven EverBatt model, we       gies, we take diverse aspects of potential scenarios, involving LIB
+assess the recycling cost composition of LIBs, and the effect of            retirement patterns, cathode chemistries, recycling processes, and
+economies of scale stemming from recovery activities is considered.         recycling advancement, into consideration, as listed below and
+The optimal spatial and temporal conﬁguration of recycling facilities,      detailed in Table 1. We deﬁne two LIB retirement patterns (low and
+derived from the recycling geospatial optimization model, is input into     high battery service life), four changing cathode chemistries (business-
+the cost evaluation process to minimize transportation and logistics        as-usual, LFP-dominated, NMC-dominated and NCA-dominated cath-
+expenses along the LIB supply chain.                                        ode), three recycling processes (pyrometallurgical recycling process,
+                                                                            hydrometallurgical recycling process and direct cathode recycling
+The forecasting of EV adoption under China’s carbon                         process), two critical material recycling technologies, and three bat-
+neutrality target                                                           tery collection rates driven by the assumption of recycling infra-
+We construct an integrated top-down and bottom-up model to simu-            structure advancement (low, medium, and high battery collection
+late the EV deployment trajectory under China’s CN60 target, which          rate). See detailed scenario and parameter settings in Table 1, Sup-
+directly determines the demand for critical materials (See details in       plementary Note 2 and Supplementary Table 1.
+Supplementary Note 3). In the top-down module, we use the GCAM
+model to assess the interaction between socioeconomic, energy, and          Simulation of critical material ﬂows
+climate systems, simulating the outlook for future sustainable miti-        We use a dMFA method to quantify the retrospective ﬂows of critical
+gation. Through converging SSP1 (Sustainability-Taking the Green            materials embedded in China EV batteries from 2010 to 2020. We
+Road) with regional-level RCP pathway (China’s net-zero emission            consider the material lifecycle, including EV manufacturing, EV use, LIB
+objective), China will achieve net-zero carbon dioxide emissions by the     use, LIB secondary use, and LIB waste management and recovery. The
+year 206058. We then link this macroeconomic model to the bottom-up         stocks in use and waste ﬂow generation are simulated by historical EV
+strategy for the passenger car sector and truck sector modeling.            consumption and retirement curves (e.g., waste stream in LIBs from
+     Two different bottom-up models are employed for the car and            battery use to waste management and recovery)62. Here, we assume
+truck sectors, owing to delayed levels of electriﬁcation and insufﬁcient    that the EV stock in use before 2010 is marginal due to its limited
+historical data on trucks. For the passenger car, we consider the Bass      consumption. Meanwhile, we deduce the other upper- and lower-
+model to capture the role of inﬂuential elements59, e.g., vehicle own-      stream ﬂows by the mass balance principle and transfer coefﬁcients
+ership costs, infrastructure factor, and user’s driving behavior, in the    (e.g., recycling rate) from statistics and literature.
+electriﬁed passenger car adoption. By inputting the parameters such               Based on a prospective product-speciﬁc stock-driven model, the
+as socioeconomic development, population, vehicle share, energy,            expected material demand and recovery of cobalt, lithium, nickel, and
+
+
+Nature Communications | (2025)16:6661                                                                                                              11
+Article                                                                                                   https://doi.org/10.1038/s41467-025-61481-y
+
+
+manganese under different scenario settings are quantiﬁed63. Speciﬁ-          assessment. In alignment with national policies on battery recycling,
+cally, we model the demand for these critical materials in terms of EV        EV manufacturers’ sales networks are used as proxies for collection
+use, as well as upstream and downstream ﬂows on the basis of the              points, and authorized operators are identiﬁed as potential recycling
+current use situation and development potential for technological             or second-life facilities. Battery waste volumes are allocated across
+transition. These critical materials are simulated by the battery capacity    collection points based on population distribution.
+and density, material intensity, ﬂeet type, ﬂeet lifespan, LIB capacity,            The Location-Allocation analysis deﬁnes recycling sites as facil-
+battery cathode chemistry market shares, and material recycling level.        ities and collection points as demand nodes, minimizing total travel
+                                                                              distances and logistics costs71. Facility layouts are re-optimized every
+Calculating the future life-cycle CO2 emissions of a battery                  decade, offering dynamic insights into the evolution of LIB recycling
+In our work, the research boundary covers the life-cycle stage of LIBs        and second-life utilization networks from 2020 to 2060.
+(see details in Supplementary Note 6). Speciﬁcally, LCA is employed to
+evaluate an environmental load, Global Warming Potential, from battery        Cost assessment associated with battery recycling
+manufacturing, transportation, collection, and recycling64,65. In relation    We assess the costs associated with battery recycling using the Ever-
+to battery manufacturing, the primary emissions originate from the            Batt model, a process-based, modular techno-economic analysis tool
+production of battery cathodes. Thus, we model the battery cathodes           developed by Argonne National Laboratory72,73 (See more details in
+ﬁrst by the LCA method and then incorporate them as a vital material          Supplementary Note 8). EverBatt divides closed-loop battery recycling
+input in the cathode-speciﬁc battery manufacturing process. In refer-         into submodules, including logistics and collection, disassembly and
+ence to battery recycling, the carbon emissions of 1 kg of batteries in       preprocessing, and recycling process74. The model incorporates
+recycling technology, including pyrometallurgical, hydrometallurgical,        economies of scale, simulating how costs evolve as production scales
+and direct cathode recycling technologies, under different recycling and      up or down. Inputs for the recycling process include material costs,
+cathode chemistry scenarios are computed. Note that there are two             direct labor, capital equipment, and building costs. EverBatt supports
+elements considerably affecting the battery emissions in these stages.        customized parameter inputs, enabling tailored scenario analysis. We
+One is the battery capacity or density, which profoundly affects the          further integrate the model with a spatial location optimization model
+material and energy input and output in the assessment process. The           to link optimal recycling logistics routes to EverBatt’s transportation
+other is the future electricity mix. Ignorance of the electricity dec-        and collection module70. This combined approach allows us to evalu-
+arbonization would result in the biased estimation of carbon emission as      ate cost-effectiveness under various recycling strategies while mini-
+the penetration of renewable energy increases. Therefore, we also             mizing transportation routes, ensuring efﬁcient economic
+explore carbon emissions in the extended battery capacity (density) and       performance and environmental sustainability across the battery
+grid-cleaner transition scenarios. We obtain the future electricity gen-      recycling network.
+eration structure under China’s CN60 scenario, simulated by the GCAM
+model as well. The input of energy and feedstock, and output of carbon        Data availability
+emissions in manufacturing and recycling processes are determined by          All data used in this study are publicly available. The energy input and
+Simpro 9 software66 (with ecoinvent 3.8 database, updated in September        carbon emissions in the battery manufacturing and recycling process
+2021 for up-to-date battery data module).                                     are obtained from the ecoinvent 3.8 database (updated in September
+     In addition, the GREET 2023 model (https://www.anl.gov/topic/            2021 for up-to-date battery data module) at https://simapro.com/. The
+greet) was developed for vehicle- and fuel-technology-related energy          data supporting and generated in this study are provided in the Sup-
+and environmental assessment67,68, which is employed in our work to           plementary Information, Supplementary Data 1–6 and Source Data
+evaluate carbon emissions in transportation and the collection of             ﬁle. Source data are provided with this paper.
+LIBs. First and foremost, we need to ascertain the transportation and
+collection distance. We use ArcGIS to calculate the distance of               Code availability
+transportation and collection, comprehensively considering multiple           The simulation of China’s carbon neutrality target is based on the
+factors such as road networks, population distribution, automotive            GCAM model. GCAM model is an open-source integrated assessment
+service facilities, energy infrastructure, etc. The average distance          model, available at: https://github.com/JGCRI/gcam-core. Projections
+from the LIB manufacturer to the EV manufacturer is 301 km; the               on future EV adoption and battery scrappage, and the critical material
+average distance from the EV manufacturer to the EV dealers is                inﬂow and outﬂow, are conducted using MATLAB. The energy input
+392 km. Nowadays, the extended producer responsibility is com-                and CO2 emissions in the battery manufacturing and recycling process
+plemented, and thus EV manufacturers are collaborating with their             were determined by the Simpro 9 software. The emissions in battery
+EV dealers to recycle scrapped batteries69. For this reason, we assume        transportation and collection are computed by ArcGIS and GREET
+the average collection distance is obtained between EV dealers and            2023 (https://www.anl.gov/topic/greet). The geospatial conﬁguration
+authorized waste LIB recycling operators. The average distance to             of the battery recycling facility is optimized by ArcGIS. The cost fea-
+collect the LIBs from EV dealers to LIB recycling operators is 231 km.        sibility analysis is determined by EverBatt 2023 (https://www.anl.gov/
+The detailed distance information of LIB manufacturers, EV makers,            amd/everbatt). Code is available with this paper, which is deposited in
+EV dealers, and LIB recycling operators is shown in Supplementary             the Zenodo database under the accession code https://zenodo.org/
+Data 1–6.                                                                     records/15342229.
+
+Optimizing the geospatial conﬁguration of battery recycling                   References
+We employ Location-Allocation analysis in ArcGIS to optimize the              1.   Govindan, K. How digitalization transforms the traditional circular
+spatial distribution of battery recycling facilities by identifying optimal        economy to a smart circular economy for achieving SDGs and net
+locations and minimizing transportation costs between collection                   zero. Transport. Res. Part E: Logist. Transport. Rev. 177, 103147 (2023).
+points and recycling sites70 (See more details in Supplementary               2.   Song, L. et al. China’s bulk material loops can be closed but deep
+Note 7). The analysis integrates high-resolution road networks, can-               decarbonization requires demand reduction. Nat. Clim. Change 13,
+didate facilities, collection points, and transportation infrastructure to         1136–1143 (2023).
+reﬂect real-world connectivity. Economic-technical and geospatial             3.   Aguilar Lopez, F., Lauinger, D., Vuille, F. & Müller, D. B. On the
+factors such as demographics, automotive service facilities, and                   potential of vehicle-to-grid and second-life batteries to provide
+energy infrastructure are incorporated to enhance site suitability                 energy and material security. Nat. Commun. 15, 4179 (2024).
+
+
+Nature Communications | (2025)16:6661                                                                                                                    12
+Article                                                                                                     https://doi.org/10.1038/s41467-025-61481-y
+
+
+4.  Franks, D. M., Keenan, J. & Hailu, D. Mineral security essential to          27. Wang, H. et al. China’s electric vehicle and climate ambitions jeo-
+    achieving the sustainable development goals. Nat. Sustain.6,                     pardized by surging critical material prices. Nat. Commun. 14,
+    21–27 (2023).                                                                    1246 (2023).
+5. Morseletto, P. Targets for a circular economy. Resour. Conserv.               28. Qiao, D. et al. Exploring the potential impact of electric passenger
+    Recycl. 153, 104553 (2020).                                                      vehicle battery recycling on China’s cobalt supply and demand
+6. Vaccari, M. et al. Assessing performance in lithium-ion batteries                 under the goals of carbon peaking and carbon neutrality during
+    recycling processes: a quantitative modeling perspective. Resour.                2010–2060. J. Clean. Prod. 444, 141139 (2024).
+    Conserv. Recycl. 206, 107643 (2024).                                         29. Ma, R. et al. Pathway decisions for reuse and recycling of retired
+7. Harper, G. et al. Recycling lithium-ion batteries from electric vehi-             lithium-ion batteries considering economic and environmental
+    cles. Nature 575, 75–86 (2019).                                                  functions. Nat. Commun. 15, 7641 (2024).
+8. Li, K., Qin, Y., Zhu, D. & Zhang, S. Upgrading waste electrical and           30. Ciez, R. E. & Whitacre, J. F. Examining different recycling processes
+    electronic equipment recycling through extended producer                         for lithium-ion batteries. Nat. Sustain. 2, 148–156 (2019).
+    responsibility: a case study. Circ. Econ. 2, 100025 (2023).                  31. Liu, B. et al. The impacts of critical metal shortage on China’s
+9. Liu, M., Liu, W., Liu, W., Chen, Z. & Cui, Z. To what extent can                  electric vehicle industry development and countermeasure poli-
+    recycling batteries help alleviate metal supply shortages and                    cies. Energy 248, 123646 (2022).
+    environmental pressures in China?. Sustain. Prod. Consum. 36,                32. Watari, T. et al. Integrating circular economy strategies with low-
+    139–147 (2023).                                                                  carbon scenarios: lithium use in electric vehicles. Environ. Sci.
+10. Dunn, J., Kendall, A. & Slattery, M. Electric vehicle lithium-ion battery        Technol. 53, 11657–11665 (2019).
+    recycled content standards for the US – targets, costs, and envir-           33. Hao, H., Liu, F., Sun, X., Liu, Z. & Zhao, F. Quantifying the energy,
+    onmental impacts. Resour. Conserv. Recycl. 185, 106488 (2022).                   environmental, economic, resource Co-beneﬁts and risks of GHG
+11. Richter, J. L. A circular economy approach is needed for electric                emissions abatement: the case of passenger vehicles in China.
+    vehicles. Nat. Electron. 5, 5–7 (2022).                                          Sustainability 11, 1344 (2019).
+12. Baars, J., Domenech, T., Bleischwitz, R., Melin, H. E. & Heidrich, O.        34. Cheng, A. L., Fuchs, E. R. H., Karplus, V. J. & Michalek, J. J. Electric
+    Circular economy strategies for electric vehicle batteries reduce                vehicle battery chemistry affects supply chain disruption vulner-
+    reliance on raw materials. Nat. Sustain. 4, 71–79 (2021).                        abilities. Nat. Commun. 15, 2143 (2024).
+13. Xu, C. et al. Electric vehicle batteries alone could satisfy short-term      35. United States Geological Survey. Mineral commodity summaries
+    grid storage demand by as early as 2030. Nat. Commun. 14,                        2023. https://www.usgs.gov/publications/mineral-commodity-
+    119 (2023).                                                                      summaries-2023 (2023).
+14. Liang, X. et al. Air quality and health beneﬁts from ﬂeet elec-              36. IEA. Global Supply Chains of EV Batteries, https://www.ieaorg/
+    triﬁcation in China. Nat. Sustain. 2, 962–971 (2019).                            reports/global-supply-chains-of-ev-batteries (2022).
+15. Yu, Y. et al. Which type of electric vehicle is worth promoting mostly       37. National Energy Administration of China. Classiﬁcation standards
+    in the context of carbon peaking and carbon neutrality? A case study             for the scale of mineral resource reserves. https://www.neagovcn/
+    for a metropolis in China. Sci. Total Environ. 837, 155626 (2022).               2011-08/19/c_131059659htm (2011).
+16. Chen, W. et al. Carbon neutrality of China’s passenger car sector            38. Xu, C. et al. Future material demand for automotive lithium-based
+    requires coordinated short-term behavioral changes and long-term                 batteries. Commun. Mater. 1, 99 (2020).
+    technological solutions. One Earth 5, 875–891 (2022).                        39. Olivetti, E. A., Ceder, G., Gaustad, G. G. & Fu, X. Lithium-ion battery
+17. Sun, X., Hao, H., Zhao, F. & Liu, Z. The dynamic equilibrium                     supply chain considerations: analysis of potential bottlenecks in
+    mechanism of regional lithium ﬂow for transportation electriﬁca-                 critical. Met. Joule 1, 229–243 (2017).
+    tion. Environ. Sci. Technol. 53, 743–751 (2019).                             40. Fan, J.-L. et al. Co-ﬁring plants with retroﬁtted carbon capture and
+18. Zhang, C., Zhao, X., Sacchi, R. & You, F. Trade-off between critical             storage for power-sector emissions mitigation. Nat. Clim. Change
+    metal requirement and transportation decarbonization in auto-                    13, 807–815 (2023).
+    motive electriﬁcation. Nat. Commun. 14, 1616 (2023).                         41. Wang, Y. et al. Accelerating the energy transition towards photo-
+19. Woodley, L. et al. Climate impacts of critical mineral supply chain              voltaic and wind in China. Nature 619, 761–767 (2023).
+    bottlenecks for electric vehicle deployment. Nat. Commun. 15,                42. Zhuo, Z. et al. Cost increase in the electricity supply to achieve
+    6813 (2024).                                                                     carbon neutrality in China. Nat. Commun. 13, 3172 (2022).
+20. IEA. Global EV Outlook 2023. https://www.ieaorg/reports/global-              43. Zhang, T. et al. Cradle-to-gate life cycle assessment of cobalt sul-
+    ev-outlook-2023 (2023).                                                          fate production derived from a nickel–copper–cobalt mine in China.
+21. MINING.COM. China faces risks due to high chrome, manganese,                     Int. J. Life Cycle Assess. 26, 1198–1210 (2021).
+    nickel import reliance — report. https://www.miningcom/china-                44. Chen, Z., Zhang, L. & Xu, Z. Analysis of cobalt ﬂows in mainland
+    faces-risks-due-to-high-chrome-manganese-nickel-import-                          China: Exploring the potential opportunities for improving resource
+    reliance-report/ (2021).                                                         efﬁciency and supply security. J. Clean. Prod. 275, 122841 (2020).
+22. Hao, H., Liu, Z., Zhao, F., Geng, Y. & Sarkis, J. Material ﬂow analysis of   45. Qiao, D. et al. Exploring potential opportunities for the efﬁcient
+    lithium in China. Resour. Policy 51, 100–106 (2017).                             development of the cobalt industry in China by quantitatively
+23. Liu, W., Li, X., Liu, C., Wang, M. & Liu, L. Resilience assessment of the        tracking cobalt ﬂows during the entire life cycle from 2000 to 2021.
+    cobalt supply chain in China under the impact of electric vehicles               J. Environ. Manag. 318, 115599 (2022).
+    and geopolitical supply risks. Resour. Policy 80, 103183 (2023).             46. Zeng, A. et al. Battery technology and recycling alone will not save
+24. Chen, J., Zhang, W., Gong, B., Zhang, X. & Li, H. Optimal policy for             the electric mobility transition from future cobalt shortages. Nat.
+    the recycling of electric vehicle retired power batteries. Technol.              Commun. 13, 1341 (2022).
+    Forecast. Soc. Change 183, 121930 (2022).                                    47. Becker, J. M. General equilibrium impacts on the U.S. economy of a
+25. Li, J., Wang, Z., Li, H. & Jiao, J. Which policy can effectively promote         disruption to Chinese cobalt supply. Resour. Policy 71, 102005
+    the formal recycling of power batteries in China?. Energy 299,                   (2021).
+    131445 (2024).                                                               48. Rachidi, N. R., Nwaila, G. T., Zhang, S. E., Bourdeau, J. E. & Ghorbani,
+26. Dunn, J., Slattery, M., Kendall, A., Ambrose, H. & Shen, S. Circularity          Y. Assessing cobalt supply sustainability through production fore-
+    of lithium-ion battery materials in electric vehicles. Environ. Sci.             casting and implications for green energy policies. Resour. Policy
+    Technol. 55, 5189–5198 (2021).                                                   74, 102423 (2021).
+
+
+Nature Communications | (2025)16:6661                                                                                                                     13
+Article                                                                                                    https://doi.org/10.1038/s41467-025-61481-y
+
+
+49. He, L. & Sun, B. Exploring the EPR system for power battery recy-          68. Cheng, A. L., Fuchs, E. R. H. & Michalek, J. J. US industrial policy may
+    cling from a supply-side perspective: an evolutionary game analy-              reduce electric vehicle battery supply chain vulnerabilities and
+    sis. Waste Manag. 140, 204–212 (2022).                                         inﬂuence technology choice. Nat. Energy 9, 1561–1570 (2024).
+50. Jiang, S. et al. Assessment of end-of-life electric vehicle batteries in   69. Qi, X., Liu, Z. & Li, T. Design incentives of extended producer
+    China: future scenarios and economic beneﬁts. Waste Manag. 135,                responsibility for electric vehicle producers with competition and
+    70–78 (2021).                                                                  cooperation. Omega 133, 103266 (2025).
+51. Woodard, R. Waste management in small and medium enterprises               70. Nguyen-Tien, V., Dai, Q., Harper, G. D. J., Anderson, P. A. & Elliott, R.
+    (SMEs) – a barrier to developing circular cities. Waste Manag. 118,            J. R. Optimising the geospatial conﬁguration of a future lithium ion
+    369–379 (2020).                                                                battery recycling industry in the transition to electric vehicles and a
+52. Peng, B., Tu, Y., Elahi, E. & Wei, G. Extended producer responsibility         circular economy. Appl. Energy 321, 119230 (2022).
+    and corporate performance: effects of environmental regulation             71. Gonzales-Calienes, G., Yu, B. & Bensebaa, F. Development of a
+    and environmental strategy. J. Environ. Manag. 218, 181–189                    reverse logistics modeling for end-of-life lithium-ion batteries and
+    (2018).                                                                        its impact on recycling viability—a case study to support end-of-life
+53. Sun, X., Hao, H., Geng, Y., Liu, Z. & Zhao, F. Exploring the potential         electric vehicle battery strategy in Canada. Sustainability 14,
+    for improving material utilization efﬁciency to secure lithium supply          15321 (2022).
+    for China’s battery supply chain. Fundam. Res. 4, 167–177 (2024).          72. Lander, L. et al. Financial viability of electric vehicle lithium-ion
+54. Vaalma, C., Buchholz, D., Weil, M. & Passerini, S. A cost and resource         battery recycling. iScience 24, 102787 (2021).
+    analysis of sodium-ion batteries. Nat. Rev. Mater. 3, 18013                73. Xiong, S., Ji, J. & Ma, X. Environmental and economic evaluation of
+    (2018).                                                                        remanufacturing lithium-ion batteries from electric vehicles. Waste
+55. Yao, A., Benson, S. M. & Chueh, W. C. Critically assessing sodium-             Manag. 102, 579–586 (2020).
+    ion technology roadmaps and scenarios for techno-economic                  74. Dai Q. et al. EverBAtt: a closed-loop battery recycling cost and
+    competitiveness against lithium-ion batteries. Nat. Energy 10,                 environmental impacts model. Argonne National Laboratory
+    404–416 (2025).                                                                https://publications.anl.gov/anlpubs/2019/07/153050.pdf
+56. Milovanoff, A., Posen, I. D. & MacLean, H. L. Electriﬁcation of light-         (2019).
+    duty vehicle ﬂeet alone will not meet mitigation targets. Nat. Clim.
+    Change 10, 1102–1107 (2020).                                               Acknowledgements
+57. Martínez-Hernando, M.-P., Bolonio, D., Ortega, M. F., Llamas, J. F. &      This study is supported by the National Natural Science Foundation of
+    García-Martínez, M.-J. Material ﬂow analysis and regional greenhouse       China (Grant No. 72222017, 72174023) [B.Z.], (Grant No. 72321002,
+    gas emissions associated to permanent magnets and batteries used           72141302, 72140002) [Z.W.], (Grant No. 72104021) [S.C.], and (Grant No.
+    in electric vehicles. Sci. Total Environ. 904, 166368 (2023).              72243001) [B.W.]; the Beijing Natural Science Foundation (Grant No.
+58. Wang, Z. et al. Unequal residential heating burden caused by               9232017) [B.Z.]; the Key Research Project of Philosophy and Social Sci-
+    combined heat and power phase-out under climate goals. Nat.                ences of the Ministry of Education of China (Grant No. 21JZD027) [Z.W.];
+    Energy 8, 881–890 (2023).                                                  and the Science and Technology Innovation Program for Innovative
+59. Kumar, R. R., Guha, P. & Chakraborty, A. Comparative assessment            Talents in Beijing Institute of Technology (Grant No. 2024CX01017) [B.Z.].
+    and selection of electric vehicle diffusion models: A global outlook.
+    Energy 238, 121932 (2022).                                                 Author contributions
+60. Zubi, G., Dufo-López, R., Carvalho, M. & Pasaoglu, G. The lithium-ion      B.Z., Q.X., and Z.W. conceptualized the study and designed the meth-
+    battery: state of the art and future perspectives. Renew. Sustain.         odology. S.C. and B.W. collected the data. Q.X. and H.L. conducted data
+    Energy Rev. 89, 292–308 (2018).                                            analysis and contributed to the result interpretation. B.Z., Q.X., and P.B.
+61. Tao, Y., Rahn, C. D., Archer, L. A. & You, F. Second life and recycling:   drafted the manuscript. Z.W. and P.B. provided supervision, project
+    energy and environmental sustainability perspectives for high-             administration, and critical revisions. B.Z., Q.X., S.C., B.W., H.L, Z.W., and
+    performance lithium-ion batteries. Sci. Adv. 7, eabi7633 (2021).           P.B. contributed to discussions, reviewed the manuscript, and approved
+62. Rasmussen, K. D., Wenzel, H., Bangs, C., Petavratzi, E. & Liu, G.          the ﬁnal submission.
+    Platinum demand and potential bottlenecks in the global green
+    transition: a dynamic material ﬂow analysis. Environ. Sci. Technol.        Competing interests
+    53, 11541–11551 (2019).                                                    The authors declare no competing interests.
+63. Dong, Z. et al. Projecting future critical material demand and
+    recycling from China’s electric passenger vehicles considering             Additional information
+    vehicle segment heterogeneity. Resour. Conserv. Recycl. 207,               Supplementary information The online version contains
+    107691 (2024).                                                             supplementary material available at
+64. Rosenberg, S. et al. Combining dynamic material ﬂow analysis and           https://doi.org/10.1038/s41467-025-61481-y.
+    life cycle assessment to evaluate environmental beneﬁts of recy-
+    cling – a case study for direct and hydrometallurgical closed-loop         Correspondence and requests for materials should be addressed to
+    recycling of electric vehicle battery systems. Resour. Conserv.            Qingyao Xin, Zhaohua Wang or Prateek Bansal.
+    Recycl. 198, 107145 (2023).
+65. Feng, T. et al. Energy transition in the new era: The impact of            Peer review information Nature Communications thanks Wei Liu, Viet
+    renewable electric power on the life cycle assessment of auto-             Nguyen-Tien, and the other, anonymous, reviewer(s) for their contribu-
+    motive power batteries. Renew. Energy 236, 121365 (2024).                  tion to the peer review of this work. A peer review ﬁle is available.
+66. Yang, H. et al. Life cycle assessment of secondary use and physical
+    recycling of lithium-ion batteries retired from electric vehicles in       Reprints and permissions information is available at
+    China. Waste Manag. 178, 168–175 (2024).                                   http://www.nature.com/reprints
+67. Machala, M. L. et al. Life cycle comparison of industrial-scale
+    lithium-ion battery recycling and mining supply chains. Nat. Com-          Publisher’s note Springer Nature remains neutral with regard to jur-
+    mun. 16, 988 (2025).                                                       isdictional claims in published maps and institutional afﬁliations.
+
+
+
+Nature Communications | (2025)16:6661                                                                                                                     14
+Article                                                                        https://doi.org/10.1038/s41467-025-61481-y
+
+
+Open Access This article is licensed under a Creative Commons
+Attribution-NonCommercial-NoDerivatives 4.0 International License,
+which permits any non-commercial use, sharing, distribution and
+reproduction in any medium or format, as long as you give appropriate
+credit to the original author(s) and the source, provide a link to the
+Creative Commons licence, and indicate if you modiﬁed the licensed
+material. You do not have permission under this licence to share adapted
+material derived from this article or parts of it. The images or other third
+party material in this article are included in the article’s Creative
+Commons licence, unless indicated otherwise in a credit line to the
+material. If material is not included in the article’s Creative Commons
+licence and your intended use is not permitted by statutory regulation or
+exceeds the permitted use, you will need to obtain permission directly
+from the copyright holder. To view a copy of this licence, visit http://
+creativecommons.org/licenses/by-nc-nd/4.0/.
+
+© The Author(s) 2025
+
+
+
+
+Nature Communications | (2025)16:6661                                                                                 15
+
