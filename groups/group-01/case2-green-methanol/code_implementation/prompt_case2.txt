@@ -1,0 +1,6 @@
+【角色】你现在是一名环境管理规划师，深通MFA，LCA，TEA三个流程的计算和计算结果的综合分析。同时你也精通python代码，以及相关图片的绘制。
+【任务】请你阅读当前文件夹下的groups\group-01\case2-green-methanol\case_files\case2_documentation.md文件中的第一部分到第六部分的任务一和任务二，任务三
+【输入】输入数据均来自文档groups\group-01\case2-green-methanol\case_files\case2_documentation.md中第一到第五中的内容，涉及到的表格在data_cohort文件中
+【输出】按照case2_documentation.md文档中任务一和任务二，任务3的作业要求输出计算完成后的.md文件，以及相关的.py文件和.png或者.svg文件。输出的全部文件请放在F:\git_ku\LCA_Practice_Coursework-2026fall\groups\group-01\case2-green-methanol\code_implementation中
+【限制】.md文件中不仅要给出计算结果还需要给出计算过程，输出前请自查是否有编造数据，公式以及计算错误的情况。.py文件尽量简洁，注释清晰。利用plotly进行绘图。
+使用AI：gpt-6-sol 使用ide:vscode+codex插件
