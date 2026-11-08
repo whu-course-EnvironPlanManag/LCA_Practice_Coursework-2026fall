@@ -1,0 +1,324 @@
+{
+  "energy_share_lce": 0.08416343557755442,
+  "conditions": {
+    "W1 粗放回收": {
+      "values": {
+        "li": 0.85,
+        "nico": 0.9,
+        "powder": 0.95,
+        "cual": 0.95,
+        "f": 0.99,
+        "ww": 0.7,
+        "energy": 1190.5278582131884,
+        "recycled": 0.03,
+        "capacity": 20000
+      },
+      "assertions": [
+        {
+          "code": "CN-1",
+          "rule": "锂回收率 ≥ 90%",
+          "value": 0.85,
+          "threshold": 0.9,
+          "unit": "%",
+          "pass": false
+        },
+        {
+          "code": "CN-2",
+          "rule": "镍钴锰综合回收率 ≥ 98%",
+          "value": 0.9,
+          "threshold": 0.98,
+          "unit": "%",
+          "pass": false
+        },
+        {
+          "code": "CN-3",
+          "rule": "电极粉料回收率 ≥ 98%",
+          "value": 0.95,
+          "threshold": 0.98,
+          "unit": "%",
+          "pass": false
+        },
+        {
+          "code": "CN-4",
+          "rule": "铜铝回收率 ≥ 98%",
+          "value": 0.95,
+          "threshold": 0.98,
+          "unit": "%",
+          "pass": false
+        },
+        {
+          "code": "CN-5",
+          "rule": "氟固化率 ≥ 99.5%",
+          "value": 0.99,
+          "threshold": 0.995,
+          "unit": "%",
+          "pass": false
+        },
+        {
+          "code": "CN-6",
+          "rule": "碳酸锂单位能耗 < 2200 kgce/t",
+          "value": 1190.5279,
+          "threshold": 2200,
+          "unit": "kgce/t",
+          "pass": true
+        },
+        {
+          "code": "CN-7",
+          "rule": "废水循环利用率 ≥ 90%",
+          "value": 0.7,
+          "threshold": 0.9,
+          "unit": "%",
+          "pass": false
+        },
+        {
+          "code": "EU-1",
+          "rule": "欧盟 2031 锂回收率 ≥ 80%",
+          "value": 0.85,
+          "threshold": 0.8,
+          "unit": "%",
+          "pass": true
+        },
+        {
+          "code": "EU-2",
+          "rule": "欧盟 2031 镍钴回收率 ≥ 95%",
+          "value": 0.9,
+          "threshold": 0.95,
+          "unit": "%",
+          "pass": false
+        },
+        {
+          "code": "EU-3",
+          "rule": "欧盟 2031 再生锂含量 ≥ 6%",
+          "value": 0.03,
+          "threshold": 0.06,
+          "unit": "%",
+          "pass": false
+        },
+        {
+          "code": "CN-8",
+          "rule": "再生利用产能 ≥ 5000 t/a",
+          "value": 20000,
+          "threshold": 5000,
+          "unit": "t/a",
+          "pass": true
+        }
+      ],
+      "pass_count": 3,
+      "total": 11,
+      "verdict": "FAIL"
+    },
+    "W2 达标湿法": {
+      "values": {
+        "li": 0.92,
+        "nico": 0.98,
+        "powder": 0.98,
+        "cual": 0.98,
+        "f": 0.995,
+        "ww": 0.92,
+        "energy": 700.5798550254533,
+        "recycled": 0.06,
+        "capacity": 20000
+      },
+      "assertions": [
+        {
+          "code": "CN-1",
+          "rule": "锂回收率 ≥ 90%",
+          "value": 0.92,
+          "threshold": 0.9,
+          "unit": "%",
+          "pass": true
+        },
+        {
+          "code": "CN-2",
+          "rule": "镍钴锰综合回收率 ≥ 98%",
+          "value": 0.98,
+          "threshold": 0.98,
+          "unit": "%",
+          "pass": true
+        },
+        {
+          "code": "CN-3",
+          "rule": "电极粉料回收率 ≥ 98%",
+          "value": 0.98,
+          "threshold": 0.98,
+          "unit": "%",
+          "pass": true
+        },
+        {
+          "code": "CN-4",
+          "rule": "铜铝回收率 ≥ 98%",
+          "value": 0.98,
+          "threshold": 0.98,
+          "unit": "%",
+          "pass": true
+        },
+        {
+          "code": "CN-5",
+          "rule": "氟固化率 ≥ 99.5%",
+          "value": 0.995,
+          "threshold": 0.995,
+          "unit": "%",
+          "pass": true
+        },
+        {
+          "code": "CN-6",
+          "rule": "碳酸锂单位能耗 < 2200 kgce/t",
+          "value": 700.5799,
+          "threshold": 2200,
+          "unit": "kgce/t",
+          "pass": true
+        },
+        {
+          "code": "CN-7",
+          "rule": "废水循环利用率 ≥ 90%",
+          "value": 0.92,
+          "threshold": 0.9,
+          "unit": "%",
+          "pass": true
+        },
+        {
+          "code": "EU-1",
+          "rule": "欧盟 2031 锂回收率 ≥ 80%",
+          "value": 0.92,
+          "threshold": 0.8,
+          "unit": "%",
+          "pass": true
+        },
+        {
+          "code": "EU-2",
+          "rule": "欧盟 2031 镍钴回收率 ≥ 95%",
+          "value": 0.98,
+          "threshold": 0.95,
+          "unit": "%",
+          "pass": true
+        },
+        {
+          "code": "EU-3",
+          "rule": "欧盟 2031 再生锂含量 ≥ 6%",
+          "value": 0.06,
+          "threshold": 0.06,
+          "unit": "%",
+          "pass": true
+        },
+        {
+          "code": "CN-8",
+          "rule": "再生利用产能 ≥ 5000 t/a",
+          "value": 20000,
+          "threshold": 5000,
+          "unit": "t/a",
+          "pass": true
+        }
+      ],
+      "pass_count": 11,
+      "total": 11,
+      "verdict": "PASS"
+    },
+    "W3 绿电直接再生": {
+      "values": {
+        "li": 0.95,
+        "nico": 0.99,
+        "powder": 0.99,
+        "cual": 0.99,
+        "f": 0.998,
+        "ww": 0.95,
+        "energy": 526.5796295942948,
+        "recycled": 0.08,
+        "capacity": 20000
+      },
+      "assertions": [
+        {
+          "code": "CN-1",
+          "rule": "锂回收率 ≥ 90%",
+          "value": 0.95,
+          "threshold": 0.9,
+          "unit": "%",
+          "pass": true
+        },
+        {
+          "code": "CN-2",
+          "rule": "镍钴锰综合回收率 ≥ 98%",
+          "value": 0.99,
+          "threshold": 0.98,
+          "unit": "%",
+          "pass": true
+        },
+        {
+          "code": "CN-3",
+          "rule": "电极粉料回收率 ≥ 98%",
+          "value": 0.99,
+          "threshold": 0.98,
+          "unit": "%",
+          "pass": true
+        },
+        {
+          "code": "CN-4",
+          "rule": "铜铝回收率 ≥ 98%",
+          "value": 0.99,
+          "threshold": 0.98,
+          "unit": "%",
+          "pass": true
+        },
+        {
+          "code": "CN-5",
+          "rule": "氟固化率 ≥ 99.5%",
+          "value": 0.998,
+          "threshold": 0.995,
+          "unit": "%",
+          "pass": true
+        },
+        {
+          "code": "CN-6",
+          "rule": "碳酸锂单位能耗 < 2200 kgce/t",
+          "value": 526.5796,
+          "threshold": 2200,
+          "unit": "kgce/t",
+          "pass": true
+        },
+        {
+          "code": "CN-7",
+          "rule": "废水循环利用率 ≥ 90%",
+          "value": 0.95,
+          "threshold": 0.9,
+          "unit": "%",
+          "pass": true
+        },
+        {
+          "code": "EU-1",
+          "rule": "欧盟 2031 锂回收率 ≥ 80%",
+          "value": 0.95,
+          "threshold": 0.8,
+          "unit": "%",
+          "pass": true
+        },
+        {
+          "code": "EU-2",
+          "rule": "欧盟 2031 镍钴回收率 ≥ 95%",
+          "value": 0.99,
+          "threshold": 0.95,
+          "unit": "%",
+          "pass": true
+        },
+        {
+          "code": "EU-3",
+          "rule": "欧盟 2031 再生锂含量 ≥ 6%",
+          "value": 0.08,
+          "threshold": 0.06,
+          "unit": "%",
+          "pass": true
+        },
+        {
+          "code": "CN-8",
+          "rule": "再生利用产能 ≥ 5000 t/a",
+          "value": 20000,
+          "threshold": 5000,
+          "unit": "t/a",
+          "pass": true
+        }
+      ],
+      "pass_count": 11,
+      "total": 11,
+      "verdict": "PASS"
+    }
+  },
+  "certification_label": "CN_SPEC_2024_Compliant | EU_2023_1542_2031_Compliant"
+}
