@@ -1,0 +1,137 @@
+{
+  "capacity_t_per_year": 20000,
+  "per_tonne": {
+    "element_input_kg": {
+      "Li": 17.534748,
+      "Ni": 66.10296,
+      "Co": 8.793245999999998,
+      "Mn": 6.791399999999999,
+      "Fe": 62.44559999999999,
+      "P": 34.7508,
+      "Cu": 78.39999999999999,
+      "Al": 105.83999999999999
+    },
+    "product_kg": {
+      "Li": 16.213038072,
+      "Ni": 64.78090079999998,
+      "Co": 8.617381079999998,
+      "Mn": 6.655571999999999,
+      "Fe": 58.823755199999994,
+      "P": 32.7352536,
+      "Cu": 78.39999999999999,
+      "Al": 105.83999999999999
+    },
+    "wastewater_kg": {
+      "Li": 0.17534748,
+      "Ni": 0.19830888,
+      "Co": 0.026379737999999996,
+      "Mn": 0.0203742,
+      "Fe": 0.24978239999999996,
+      "P": 0.1390032,
+      "Cu": 0.0,
+      "Al": 0.0
+    },
+    "tailings_kg": {
+      "Li": 1.1463624480000005,
+      "Ni": 1.1237503200000125,
+      "Co": 0.14948518200000044,
+      "Mn": 0.11545380000000006,
+      "Fe": 3.372062399999998,
+      "P": 1.8765431999999982,
+      "Cu": 0.0,
+      "Al": 0.0
+    },
+    "black_mass_t": 0.44883999999999996,
+    "cu_kg": 78.39999999999999,
+    "al_kg": 105.83999999999999,
+    "li2co3_kg": 62.71708670304001,
+    "lfp_powder_kg": 104.75999999999999,
+    "ni_sulfate_kg": 290.4973130044842,
+    "co_sulfate_kg": 41.03514799999999,
+    "mn_sulfate_kg": 20.478683076923073,
+    "fepo4_kg": 41.45388152663868
+  },
+  "annual": {
+    "cells_t": 20000,
+    "li2co3_t": 1254.3417340608003,
+    "lfp_powder_t": 2095.2,
+    "black_mass_t": 8976.8,
+    "cu_t": 1567.9999999999998,
+    "al_t": 2116.8,
+    "fepo4_t": 829.0776305327737,
+    "ni_sulfate_t": 5809.946260089684,
+    "co_sulfate_t": 820.7029599999998,
+    "mn_sulfate_t": 409.57366153846147
+  },
+  "closure_error_max_pct": 0.0,
+  "route_allocation": {
+    "direct_share_lfp": 0.6,
+    "rc_share_nmc": 0.3
+  },
+  "rows": [
+    {
+      "element": "Li",
+      "input_kg": 17.534748,
+      "product_kg": 16.213038072,
+      "wastewater_kg": 0.17534748,
+      "tailings_kg": 1.1463624480000005,
+      "closure_error_pct": 0.0
+    },
+    {
+      "element": "Ni",
+      "input_kg": 66.10296,
+      "product_kg": 64.78090079999998,
+      "wastewater_kg": 0.19830888,
+      "tailings_kg": 1.1237503200000125,
+      "closure_error_pct": 0.0
+    },
+    {
+      "element": "Co",
+      "input_kg": 8.793245999999998,
+      "product_kg": 8.617381079999998,
+      "wastewater_kg": 0.026379737999999996,
+      "tailings_kg": 0.14948518200000044,
+      "closure_error_pct": 0.0
+    },
+    {
+      "element": "Mn",
+      "input_kg": 6.791399999999999,
+      "product_kg": 6.655571999999999,
+      "wastewater_kg": 0.0203742,
+      "tailings_kg": 0.11545380000000006,
+      "closure_error_pct": 0.0
+    },
+    {
+      "element": "Fe",
+      "input_kg": 62.44559999999999,
+      "product_kg": 58.823755199999994,
+      "wastewater_kg": 0.24978239999999996,
+      "tailings_kg": 3.372062399999998,
+      "closure_error_pct": 0.0
+    },
+    {
+      "element": "P",
+      "input_kg": 34.7508,
+      "product_kg": 32.7352536,
+      "wastewater_kg": 0.1390032,
+      "tailings_kg": 1.8765431999999982,
+      "closure_error_pct": 0.0
+    },
+    {
+      "element": "Cu",
+      "input_kg": 78.39999999999999,
+      "product_kg": 78.39999999999999,
+      "wastewater_kg": 0.0,
+      "tailings_kg": 0.0,
+      "closure_error_pct": 0.0
+    },
+    {
+      "element": "Al",
+      "input_kg": 105.83999999999999,
+      "product_kg": 105.83999999999999,
+      "wastewater_kg": 0.0,
+      "tailings_kg": 0.0,
+      "closure_error_pct": 0.0
+    }
+  ]
+}
