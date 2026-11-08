@@ -1,0 +1,137 @@
+{
+  "_meta": {
+    "project": "lecture12 方向B：浙江衢州华友循环资源再生产业园——退役动力电池再生精炼水-碳协同与多目标技术经济规划",
+    "design_capacity_t_cells_per_year": 20000,
+    "base_year": 2025,
+    "near_term_year": 2028,
+    "long_term_year": 2035,
+    "functional_unit": "1 t 退役动力电池（LFP 60% / NMC811 35% / NCA 5% 混合来料）"
+  },
+
+  "park": {
+    "name": "浙江衢州华友循环资源再生产业园（华友钴业衢州基地循环板块）",
+    "location": "浙江省衢州市智造新城（衢州高新技术产业开发区）",
+    "operators": ["衢州华友钴新材料有限公司", "衢州华友资源再生科技有限公司"],
+    "plan_capacity_t_per_year": {"phase1_2028": 20000, "phase2_2035": 60000},
+    "existing_capacity_t_per_year": 65000,
+    "collection_radius_km": 200,
+    "service_region": "长三角（浙江、江苏、上海、安徽）退役动力电池与电池厂废料",
+    "grid": {"region": "华东电网（浙江）", "ef_base": 0.5366, "note": "未取得浙江省级逐年电网因子，保守采用生态环境部全国平均值；敏感性覆盖 0.3140—0.7488"},
+    "green_power": {"pilot_share": 0.55, "source": "园区屋顶光伏 + 浙江绿电交易（2025 年浙江绿电交易规模持续扩大）；55% 为帕累托拐点解，非现状值"},
+    "water": {"river": "衢江（钱塘江上游），属浙江省生态屏障区，水环境容量敏感", "fresh_water_price_yuan_per_m3": 3.6, "wastewater_treat_yuan_per_m3": 6.0},
+    "source": [
+      "华友钴业（603799.SH）在上交所 e 互动平台答复：公司'目前具备年处理废旧电池料 6.5 万吨产能'，子公司衢州华友钴新材料有限公司、衢州华友资源再生科技有限公司分别进入工信部综合利用规范条件企业名单（2021-07-23，凤凰网/东方财富/每日经济新闻转载）",
+      "衢州市生态环境局智造新城分局：衢州华友钴新材料有限公司'新增年处理 10,000 吨电池再生循环利用改造项目'环境影响报告书受理/批复（2025-02），项目实施后每年可减少废水排放 43.8 万吨、回收硫酸钠 2.19 万吨（证券之星、今日头条 2025-02/03 报道）",
+      "华友循环：'已形成以浙江衢州废旧动力蓄电池回收再生基地为中心，辐射长三角地区'，已建产能每年可回收 5,783 吨钴（新浪财经 2019-09-18）",
+      "华友钴业官网'循环产业'板块：材料再制造 + 动力电池再制造 + 梯级利用（叉车/AGV/二轮换电/工商业储能/户用储能/通信基站/特种车辆/低速车）闭环生态"
+    ]
+  },
+
+  "feedstock": {
+    "source": "化学计量比按文献1 (Peiseler et al., 2024, Nat. Commun. 15:10301) 与文献4 (Machala et al., 2025, Nat. Commun. 16:988) 的功能单位定义推导；正极材料占比取工业电芯典型结构",
+    "share": {"LFP": 0.60, "NMC811": 0.35, "NCA": 0.05},
+    "composition": {
+      "LFP":    {"active": 0.30, "graphite": 0.15, "electrolyte": 0.12, "separator": 0.04, "Cu": 0.08, "Al": 0.10, "casing": 0.21},
+      "NMC811": {"active": 0.33, "graphite": 0.14, "electrolyte": 0.12, "separator": 0.04, "Cu": 0.08, "Al": 0.12, "casing": 0.11},
+      "NCA":    {"active": 0.33, "graphite": 0.14, "electrolyte": 0.12, "separator": 0.04, "Cu": 0.08, "Al": 0.12, "casing": 0.11}
+    },
+    "active_element_fraction": {
+      "LFP":    {"Li": 0.0440, "Fe": 0.3540, "P": 0.1970},
+      "NMC811": {"Li": 0.0760, "Ni": 0.5140, "Co": 0.0645, "Mn": 0.0600},
+      "NCA":    {"Li": 0.0724, "Ni": 0.4900, "Co": 0.0923, "Al": 0.0140}
+    }
+  },
+
+  "process": {
+    "source": "回收率红线取工信部《新能源汽车废旧动力电池综合利用行业规范条件（2024年本）》；工业实测湿法路线取文献4（Ni/Co 95%、Li 92%）",
+    "pretreatment": {
+      "black_mass_recovery": 0.98,
+      "copper_al_recovery": 0.98,
+      "fluorine_fixation": 0.995,
+      "electricity_kwh_per_t": 180,
+      "water_m3_per_t": 0.35
+    },
+    "routes": {
+      "Hy":      {"name": "强化湿法（浸出-萃取-沉淀）",          "Li": 0.92, "NiCoMn": 0.98, "FeP": 0.90, "energy_GJ_per_t": 15.3, "thermal_share": 0.20, "water_m3_per_t": 7.42, "reagent_cost_yuan_per_t": 1200},
+      "RC_Hy":   {"name": "还原焙烧+湿法（混合金属盐）",        "Li": 0.90, "NiCoMn": 0.98, "FeP": 0.85, "energy_GJ_per_t": 18.0, "thermal_share": 0.35, "water_m3_per_t": 8.20, "reagent_cost_yuan_per_t": 950},
+      "Direct":  {"name": "直接正极补锂再生（仅 LFP）",          "Li": 0.95, "NiCoMn": 0.00, "FeP": 0.97, "energy_GJ_per_t": 7.6,  "thermal_share": 0.20, "water_m3_per_t": 3.28, "reagent_cost_yuan_per_t": 700}
+    },
+    "wastewater_recycle": 0.92,
+    "li2co3_per_li": 5.32,
+    "lce_energy_ceiling_kgce_per_t": 2200,
+    "kwh_to_kgce": 0.1229,
+    "direct_suitability_cap": 0.60,
+    "_direct_suitability_note": "直接正极再生仅适用于电芯结构完整、化学体系可识别且 SOH<80% 的退役 LFP；按文献6（Ma et al., 2024）SOH 分级分流口径与文献5（Zhang et al., 2025）分选机制，取 LFP 来料中 60% 满足直接再生适用条件（工程假设，敏感性见 ABC_README_data_sources.md）"
+  },
+
+  "lca": {
+    "source": "文献4（Machala et al., 2025）：原生精炼 193.9 MJ/kg、77.3 L/kg、14.5 kg CO2e/kg NCA-eq；循环精炼 44.4 MJ/kg、21.5 L/kg、6.1 kg CO2e/kg NCA-eq；直接再生取文献4 废料流 22.0 MJ/kg、9.5 L/kg、2.8 kg CO2e/kg",
+    "nca_eq_per_t_cells": 0.345,
+    "primary":   {"energy_GJ_per_t": 66.9, "water_m3_per_t": 26.7, "co2_kg_per_t": 5000},
+    "grid_ef":   {"base": 0.5366, "low": 0.3140, "high": 0.7488,
+                  "source": "基线取生态环境部《2022年电力二氧化碳排放因子》全国平均 0.5366 kg CO2/kWh；低/高值取文献6（Ma et al., 2024）敏感性区间 0.3140—0.7488"},
+    "grid_water_m3_per_kwh": {"base": 0.0012, "low": 0.0025, "high": 0.0010,
+                  "source": "中国区域电网单位供电耗水强度区间 0.6—2.5 L/kWh（水电/核电占比高的低排放电网取上限 2.5 L/kWh，煤电为主电网取 1.0—1.2 L/kWh），用于复现文献4（Machala et al., 2025）揭示的“电网水—碳权衡”关系；属工程假设，见 data_cohort/ABC_README_data_sources.md"},
+    "green_water_m3_per_kwh": 0.0005,
+    "natural_gas_kg_co2e_per_GJ": 56.1,
+    "green_residual_ef": 0.05,
+    "transport": {"distance_km": 200, "kg_co2e_per_t_km": 0.11},
+    "reagents": {"H2SO4": 300, "NaOH": 80, "Na2CO3": 150, "H2O2": 60,
+                 "kg_co2e_per_kg": {"H2SO4": 0.12, "NaOH": 0.60, "Na2CO3": 0.40, "H2O2": 0.30},
+                 "source": "试剂上游隐含排放取 Ecoinvent 通用酸/碱/氧化剂中位值，按 2026 年工艺清单折算（工程假设，见 README_data_sources）"}
+  },
+
+  "tea": {
+    "source": "采购成本按碳酸锂价格联动（文献2 基准 22,000 USD/t、文献6 区间 5,496—84,942 USD/t）；单位收益方向与文献5（Zhang et al., 2025）一致",
+    "fx_cny_per_usd": 7.2,
+    "li2co3_price_usd_per_t": {"base": 22000, "low": 10000, "high": 50000},
+    "nickel_price_yuan_per_t": 130000,
+    "cobalt_price_yuan_per_t": 220000,
+    "copper_price_yuan_per_t": 70000,
+    "aluminum_price_yuan_per_t": 18000,
+    "fepo4_price_yuan_per_t": 4000,
+    "lfp_powder": {
+      "li2co3_coef": 0.24,
+      "base_yuan_per_t": 8500,
+      "regenerated_discount": 0.88,
+      "source": "再生 LFP 正极粉价格与碳酸锂价格联动：P_LFP = 0.24×P_Li2CO3 + 8,500 元/t（LFP 正极材料行业通行锂价传导式），再生粉按新粉价格 88% 折价（品质不确定性与认证溢价缺失）。原始 22,000 元/t 固定价仅适用于 Li2CO3 ≤ 72,000 元/t 的低价情景，基准锂价下会系统性低估再生粉价值"
+    },
+    "salt_discount": 0.85,
+    "purchase_li_coef": 0.72,
+    "purchase_nico_coef": 0.35,
+    "purchase_fixed_yuan_per_t": 1500,
+    "collection_transport_yuan_per_t": 1200,
+    "electricity_price_yuan_per_kwh": 0.62,
+    "green_premium": {"linear_yuan_per_kwh": 0.05, "quad_yuan_per_kwh": 0.12,
+                      "source": "绿电溢价随消纳比例凸性上升：专线/绿证边际成本 0.05 元/kWh，超过 50% 消纳后需配置 4 h 储能调峰，等效溢价增至 0.17 元/kWh（区间 0.03—0.18 元/kWh，参照国内绿电交易与储能租赁报价，属工程假设）"},
+    "heat_price_yuan_per_GJ": 65,
+    "fresh_water_price_yuan_per_m3": 3.6,
+    "wastewater_treat_yuan_per_m3": 6.0,
+    "labor_yuan_per_t": 800,
+    "env_cost_yuan_per_t": 450,
+    "capex_yuan": 720000000,
+    "wacc": 0.08,
+    "life_years": 20,
+    "recycled_content_li": 0.06,
+    "carbon_price_yuan_per_t": 80,
+    "eu_premium_yuan_per_t_lce": 1200
+  },
+
+  "policy": {
+    "source": "工信部公告 2024 年第 42 号《新能源汽车废旧动力电池综合利用行业规范条件（2024年本）》；欧盟 Regulation (EU) 2023/1542",
+    "cn": {"li_recovery": 0.90, "nico_mn_recovery": 0.98, "powder_recovery": 0.98,
+           "cu_al_recovery": 0.98, "f_fixation": 0.995, "material_repair": 0.99,
+           "lce_energy_kgce_per_t": 2200, "wastewater_recycle": 0.90,
+           "capacity_echelon_t_per_year": 1000, "capacity_recycle_t_per_year": 5000},
+    "eu": {"li_recovery_2027": 0.50, "li_recovery_2031": 0.80,
+           "nico_cu_pb_recovery_2027": 0.90, "nico_cu_pb_recovery_2031": 0.95,
+           "recycled_li_2031": 0.06, "recycled_li_2036": 0.12,
+           "recycled_co_2031": 0.16, "recycled_ni_2031": 0.06}
+  },
+
+  "scenarios": {
+    "base": {"grid_ef": 0.5366, "green_share": 0.0,  "direct_share_lfp": 0.20, "price_usd": 22000},
+    "green": {"grid_ef": 0.5366, "green_share": 1.0, "direct_share_lfp": 0.60, "price_usd": 22000},
+    "knee":  {"grid_ef": 0.5366, "green_share": 0.55, "direct_share_lfp": 0.60, "price_usd": 22000}
+  }
+}
