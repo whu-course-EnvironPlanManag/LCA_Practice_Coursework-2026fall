@@ -1,0 +1,101 @@
+﻿parameter,value,unit,source_id,locator,status
+LFP_Li,0.087,kg/kWh,ZHANG2025,"7-Parameter input/MFA/metal_intensity/metal_intensity.mat [2,1]; RS_scenario_example.m defines row/column order",literature_transfer
+LFP_Ni,0.0,kg/kWh,ZHANG2025,"7-Parameter input/MFA/metal_intensity/metal_intensity.mat [3,1]; RS_scenario_example.m defines row/column order",literature_transfer
+LFP_Co,0.0,kg/kWh,ZHANG2025,"7-Parameter input/MFA/metal_intensity/metal_intensity.mat [1,1]; RS_scenario_example.m defines row/column order",literature_transfer
+LFP_Mn,0.0,kg/kWh,ZHANG2025,"7-Parameter input/MFA/metal_intensity/metal_intensity.mat [4,1]; RS_scenario_example.m defines row/column order",literature_transfer
+NCA_Li,0.106,kg/kWh,ZHANG2025,"7-Parameter input/MFA/metal_intensity/metal_intensity.mat [2,2]; RS_scenario_example.m defines row/column order",literature_transfer
+NCA_Ni,0.618,kg/kWh,ZHANG2025,"7-Parameter input/MFA/metal_intensity/metal_intensity.mat [3,2]; RS_scenario_example.m defines row/column order",literature_transfer
+NCA_Co,0.117,kg/kWh,ZHANG2025,"7-Parameter input/MFA/metal_intensity/metal_intensity.mat [1,2]; RS_scenario_example.m defines row/column order",literature_transfer
+NCA_Mn,0.0,kg/kWh,ZHANG2025,"7-Parameter input/MFA/metal_intensity/metal_intensity.mat [4,2]; RS_scenario_example.m defines row/column order",literature_transfer
+NMC111_Li,0.118,kg/kWh,ZHANG2025,"7-Parameter input/MFA/metal_intensity/metal_intensity.mat [2,3]; RS_scenario_example.m defines row/column order",literature_transfer
+NMC111_Ni,0.312,kg/kWh,ZHANG2025,"7-Parameter input/MFA/metal_intensity/metal_intensity.mat [3,3]; RS_scenario_example.m defines row/column order",literature_transfer
+NMC111_Co,0.313,kg/kWh,ZHANG2025,"7-Parameter input/MFA/metal_intensity/metal_intensity.mat [1,3]; RS_scenario_example.m defines row/column order",literature_transfer
+NMC111_Mn,0.292,kg/kWh,ZHANG2025,"7-Parameter input/MFA/metal_intensity/metal_intensity.mat [4,3]; RS_scenario_example.m defines row/column order",literature_transfer
+NMC532_Li,0.137590303030303,kg/kWh,ZHANG2025,"7-Parameter input/MFA/metal_intensity/metal_intensity.mat [2,4]; RS_scenario_example.m defines row/column order",literature_transfer
+NMC532_Ni,0.507002424242424,kg/kWh,ZHANG2025,"7-Parameter input/MFA/metal_intensity/metal_intensity.mat [3,4]; RS_scenario_example.m defines row/column order",literature_transfer
+NMC532_Co,0.203630303030303,kg/kWh,ZHANG2025,"7-Parameter input/MFA/metal_intensity/metal_intensity.mat [1,4]; RS_scenario_example.m defines row/column order",literature_transfer
+NMC532_Mn,0.284739696969697,kg/kWh,ZHANG2025,"7-Parameter input/MFA/metal_intensity/metal_intensity.mat [4,4]; RS_scenario_example.m defines row/column order",literature_transfer
+NMC622_Li,0.1,kg/kWh,ZHANG2025,"7-Parameter input/MFA/metal_intensity/metal_intensity.mat [2,5]; RS_scenario_example.m defines row/column order",literature_transfer
+NMC622_Ni,0.508,kg/kWh,ZHANG2025,"7-Parameter input/MFA/metal_intensity/metal_intensity.mat [3,5]; RS_scenario_example.m defines row/column order",literature_transfer
+NMC622_Co,0.17,kg/kWh,ZHANG2025,"7-Parameter input/MFA/metal_intensity/metal_intensity.mat [1,5]; RS_scenario_example.m defines row/column order",literature_transfer
+NMC622_Mn,0.159,kg/kWh,ZHANG2025,"7-Parameter input/MFA/metal_intensity/metal_intensity.mat [4,5]; RS_scenario_example.m defines row/column order",literature_transfer
+NMC811_Li,0.09,kg/kWh,ZHANG2025,"7-Parameter input/MFA/metal_intensity/metal_intensity.mat [2,6]; RS_scenario_example.m defines row/column order",literature_transfer
+NMC811_Ni,0.608,kg/kWh,ZHANG2025,"7-Parameter input/MFA/metal_intensity/metal_intensity.mat [3,6]; RS_scenario_example.m defines row/column order",literature_transfer
+NMC811_Co,0.076,kg/kWh,ZHANG2025,"7-Parameter input/MFA/metal_intensity/metal_intensity.mat [1,6]; RS_scenario_example.m defines row/column order",literature_transfer
+NMC811_Mn,0.071,kg/kWh,ZHANG2025,"7-Parameter input/MFA/metal_intensity/metal_intensity.mat [4,6]; RS_scenario_example.m defines row/column order",literature_transfer
+capacity_archetype_1,36.0,kWh/vehicle,ZHANG2025,"general/battery_capacity/battery_capacity_low/battery_capacity.mat [1,1]",literature_transfer
+capacity_archetype_2,18.0,kWh/vehicle,ZHANG2025,"general/battery_capacity/battery_capacity_low/battery_capacity.mat [2,1]",literature_transfer
+capacity_archetype_3,77.0,kWh/vehicle,ZHANG2025,"general/battery_capacity/battery_capacity_low/battery_capacity.mat [3,1]",literature_transfer
+capacity_archetype_4,38.5,kWh/vehicle,ZHANG2025,"general/battery_capacity/battery_capacity_low/battery_capacity.mat [4,1]",literature_transfer
+capacity_archetype_5,17.0,kWh/vehicle,ZHANG2025,"general/battery_capacity/battery_capacity_low/battery_capacity.mat [5,1]",literature_transfer
+capacity_archetype_6,8.5,kWh/vehicle,ZHANG2025,"general/battery_capacity/battery_capacity_low/battery_capacity.mat [6,1]",literature_transfer
+capacity_archetype_7,36.0,kWh/vehicle,ZHANG2025,"general/battery_capacity/battery_capacity_low/battery_capacity.mat [7,1]",literature_transfer
+capacity_archetype_8,80.0,kWh/vehicle,ZHANG2025,"general/battery_capacity/battery_capacity_low/battery_capacity.mat [8,1]",literature_transfer
+capacity_archetype_9,270.0,kWh/vehicle,ZHANG2025,"general/battery_capacity/battery_capacity_low/battery_capacity.mat [9,1]",literature_transfer
+Geographic Par.!G75,337.3191677461571,see worksheet unit,EVERBATT2023,Geographic Par.!G75,literature_transfer
+Geographic Par.!G88,205178.19050029633,see worksheet unit,EVERBATT2023,Geographic Par.!G88,literature_transfer
+Geographic Par.!F33,0.08838709677419355,see worksheet unit,EVERBATT2023,Geographic Par.!F33,literature_transfer
+Geographic Par.!F35,0.002,see worksheet unit,EVERBATT2023,Geographic Par.!F35,literature_transfer
+Materials!C4,50.3535208,see worksheet unit,EVERBATT2023,Materials!C4,literature_transfer
+Materials!C5,16.853,see worksheet unit,EVERBATT2023,Materials!C5,literature_transfer
+Materials!C6,3.1492555776,see worksheet unit,EVERBATT2023,Materials!C6,literature_transfer
+Materials!C17,1.4594,see worksheet unit,EVERBATT2023,Materials!C17,literature_transfer
+Materials!C29,0.1432,see worksheet unit,EVERBATT2023,Materials!C29,literature_transfer
+Materials!C31,0.08335856525689118,see worksheet unit,EVERBATT2023,Materials!C31,literature_transfer
+GREET IO!AI61,1358.1526633620617,see worksheet unit,EVERBATT2023,GREET IO!AI61,literature_transfer
+GREET IO!F84,11866.590584003228,see worksheet unit,EVERBATT2023,GREET IO!F84,literature_transfer
+GREET IO!AE84,76.1904599938846,see worksheet unit,EVERBATT2023,GREET IO!AE84,literature_transfer
+GREET IO!G84,599.4898462829624,see worksheet unit,EVERBATT2023,GREET IO!G84,literature_transfer
+GREET IO!E84,30.906970432787446,see worksheet unit,EVERBATT2023,GREET IO!E84,literature_transfer
+GREET IO!M84,6390.633069233355,see worksheet unit,EVERBATT2023,GREET IO!M84,literature_transfer
+GREET IO!N84,22933.281947043015,see worksheet unit,EVERBATT2023,GREET IO!N84,literature_transfer
+GREET IO!AI84,19346.55357555421,see worksheet unit,EVERBATT2023,GREET IO!AI84,literature_transfer
+GREET IO!AJ84,7096.898201229622,see worksheet unit,EVERBATT2023,GREET IO!AJ84,literature_transfer
+GREET IO!B27,3.4611542510826787,see worksheet unit,EVERBATT2023,GREET IO!B27,literature_transfer
+GREET IO!B39,6702.18450544115,see worksheet unit,EVERBATT2023,GREET IO!B39,literature_transfer
+GREET IO!B14,59366.94950326987,see worksheet unit,EVERBATT2023,GREET IO!B14,literature_transfer
+GREET IO!AQ56,2436097.5728905513,see worksheet unit,EVERBATT2023,GREET IO!AQ56,literature_transfer
+GREET IO!AI56,1051124.5748727412,see worksheet unit,EVERBATT2023,GREET IO!AI56,literature_transfer
+GREET IO!B22,113249.59303072518,see worksheet unit,EVERBATT2023,GREET IO!B22,literature_transfer
+GREET IO!AE79,0.5180477765653373,see worksheet unit,EVERBATT2023,GREET IO!AE79,literature_transfer
+GREET IO!E79,5.0815372194494755,see worksheet unit,EVERBATT2023,GREET IO!E79,literature_transfer
+GREET IO!G79,14.824113930128727,see worksheet unit,EVERBATT2023,GREET IO!G79,literature_transfer
+GREET IO!F79,115.60350067401865,see worksheet unit,EVERBATT2023,GREET IO!F79,literature_transfer
+LFP_eta,7.499999999999803,year,WU2024,"Lithium resource supply structure analysis/Initial data/life_curve.xlsx S0!A2:A16, C2:C16 or E2:E16; least-squares refit to published density points; NOT Guangzhou calibration",published_curve_refit
+LFP_beta,4.099999999999539,1,WU2024,same as eta,published_curve_refit
+ternary_eta,5.200000000000365,year,WU2024,"Lithium resource supply structure analysis/Initial data/life_curve.xlsx S0!A2:A16, C2:C16 or E2:E16; least-squares refit to published density points; NOT Guangzhou calibration",published_curve_refit
+ternary_beta,2.999999999999293,1,WU2024,same as eta,published_curve_refit
+LFP_Cu_cell_fraction,0.15913523785765613,kg/kg cell,WU2024,"Lithium resource supply structure analysis/Initial data/proportion_elements_contained_include_waste.xlsx LFP!B6; label read from header, overlapping categories not summed",literature_transfer
+LFP_Al_cell_fraction,0.0825751716993108,kg/kg cell,WU2024,"Lithium resource supply structure analysis/Initial data/proportion_elements_contained_include_waste.xlsx LFP!B7; label read from header, overlapping categories not summed",literature_transfer
+LFP_F_cell_fraction,0.005674134999740121,kg/kg cell,WU2024,"Lithium resource supply structure analysis/Initial data/proportion_elements_contained_include_waste.xlsx LFP!B16; label read from header, overlapping categories not summed",literature_transfer
+NCA_Cu_cell_fraction,0.18822223920956452,kg/kg cell,WU2024,"Lithium resource supply structure analysis/Initial data/proportion_elements_contained_include_waste.xlsx NCA!B6; label read from header, overlapping categories not summed",literature_transfer
+NCA_Al_cell_fraction,0.0942229031365451,kg/kg cell,WU2024,"Lithium resource supply structure analysis/Initial data/proportion_elements_contained_include_waste.xlsx NCA!B7; label read from header, overlapping categories not summed",literature_transfer
+NCA_F_cell_fraction,0.004946121256450747,kg/kg cell,WU2024,"Lithium resource supply structure analysis/Initial data/proportion_elements_contained_include_waste.xlsx NCA!B16; label read from header, overlapping categories not summed",literature_transfer
+NMC111_Cu_cell_fraction,0.18082191648711063,kg/kg cell,WU2024,"Lithium resource supply structure analysis/Initial data/proportion_elements_contained_include_waste.xlsx NMC111!B6; label read from header, overlapping categories not summed",literature_transfer
+NMC111_Al_cell_fraction,0.09099906082156425,kg/kg cell,WU2024,"Lithium resource supply structure analysis/Initial data/proportion_elements_contained_include_waste.xlsx NMC111!B7; label read from header, overlapping categories not summed",literature_transfer
+NMC111_F_cell_fraction,0.005206165396105069,kg/kg cell,WU2024,"Lithium resource supply structure analysis/Initial data/proportion_elements_contained_include_waste.xlsx NMC111!B16; label read from header, overlapping categories not summed",literature_transfer
+NMC532_Cu_cell_fraction,0.173607973413008,kg/kg cell,WU2024,"Lithium resource supply structure analysis/Initial data/proportion_elements_contained_include_waste.xlsx NMC523!B6; label read from header, overlapping categories not summed",literature_transfer
+NMC532_Al_cell_fraction,0.08762174137984102,kg/kg cell,WU2024,"Lithium resource supply structure analysis/Initial data/proportion_elements_contained_include_waste.xlsx NMC523!B7; label read from header, overlapping categories not summed",literature_transfer
+NMC532_F_cell_fraction,0.005495722309246519,kg/kg cell,WU2024,"Lithium resource supply structure analysis/Initial data/proportion_elements_contained_include_waste.xlsx NMC523!B16; label read from header, overlapping categories not summed",literature_transfer
+NMC622_Cu_cell_fraction,0.18082191648711063,kg/kg cell,WU2024,"Lithium resource supply structure analysis/Initial data/proportion_elements_contained_include_waste.xlsx NMC622!C6; label read from header, overlapping categories not summed",literature_transfer
+NMC622_Al_cell_fraction,0.09099906082156425,kg/kg cell,WU2024,"Lithium resource supply structure analysis/Initial data/proportion_elements_contained_include_waste.xlsx NMC622!C7; label read from header, overlapping categories not summed",literature_transfer
+NMC622_F_cell_fraction,0.005206165396105069,kg/kg cell,WU2024,"Lithium resource supply structure analysis/Initial data/proportion_elements_contained_include_waste.xlsx NMC622!C16; label read from header, overlapping categories not summed",literature_transfer
+NMC811_Cu_cell_fraction,0.18607157063622876,kg/kg cell,WU2024,"Lithium resource supply structure analysis/Initial data/proportion_elements_contained_include_waste.xlsx NMC811!C6; label read from header, overlapping categories not summed",literature_transfer
+NMC811_Al_cell_fraction,0.09377231498173243,kg/kg cell,WU2024,"Lithium resource supply structure analysis/Initial data/proportion_elements_contained_include_waste.xlsx NMC811!C7; label read from header, overlapping categories not summed",literature_transfer
+NMC811_F_cell_fraction,0.011109853461304588,kg/kg cell,WU2024,"Lithium resource supply structure analysis/Initial data/proportion_elements_contained_include_waste.xlsx NMC811!C16; label read from header, overlapping categories not summed",literature_transfer
+brine_gwp,4.701012902708847,kgCO2e/kgLCE,PEISELER2024,"results/Source Data.xlsx Figure 1!B3:I18; production-weighted CL+AR or AU subset, not a global mean",derived_literature
+spodumene_gwp,17.01678092680731,kgCO2e/kgLCE,PEISELER2024,"results/Source Data.xlsx Figure 1!B3:I18; production-weighted CL+AR or AU subset, not a global mean",derived_literature
+CO2_H2SO4_mar,0.17502633,see author code,MA2024,LFPBasicData.m scalar CO2_H2SO4_mar,literature_transfer
+CO2_H2O2_mar,1.4111259,see author code,MA2024,LFPBasicData.m scalar CO2_H2O2_mar,literature_transfer
+CO2_Na2CO3_mar,1.2532021,see author code,MA2024,LFPBasicData.m scalar CO2_Na2CO3_mar,literature_transfer
+CO2_water_mar,0.00013415404,see author code,MA2024,LFPBasicData.m scalar CO2_water_mar,literature_transfer
+CO2_Li2CO3_mar,7.6438322,see author code,MA2024,LFPBasicData.m scalar CO2_Li2CO3_mar,literature_transfer
+CO2_NiSO4_pro,7.5469634,see author code,MA2024,LFPBasicData.m scalar CO2_NiSO4_pro,literature_transfer
+CO2_CoSO4_pro,28.624957,see author code,MA2024,LFPBasicData.m scalar CO2_CoSO4_pro,literature_transfer
+CO2_MnSO4_pro,0.74296024,see author code,MA2024,LFPBasicData.m scalar CO2_MnSO4_pro,literature_transfer
+CO2_Al_pro,15.584382,see author code,MA2024,LFPBasicData.m scalar CO2_Al_pro,literature_transfer
+CO2_Cu_pro,8.583233,see author code,MA2024,LFPBasicData.m scalar CO2_Cu_pro,literature_transfer
+CO2_FePO4_pro,6.2405375,see author code,MA2024,LFPBasicData.m scalar CO2_FePO4_pro,literature_transfer
+CO2_LiFePO4_pro,6.2405375,see author code,MA2024,LFPBasicData.m scalar CO2_LiFePO4_pro,literature_transfer
+CO2_NMC622_pro,18.4290125,see author code,MA2024,LFPBasicData.m scalar CO2_NMC622_pro,literature_transfer
+ExchangeRate,7.04,see author code,MA2024,LFPBasicData.m scalar ExchangeRate,literature_transfer

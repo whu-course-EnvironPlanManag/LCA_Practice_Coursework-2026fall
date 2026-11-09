@@ -1,0 +1,16 @@
+{
+  "CO2_H2SO4_mar": 0.17502633,
+  "CO2_H2O2_mar": 1.4111259,
+  "CO2_Na2CO3_mar": 1.2532021,
+  "CO2_water_mar": 0.00013415404,
+  "CO2_Li2CO3_mar": 7.6438322,
+  "CO2_NiSO4_pro": 7.5469634,
+  "CO2_CoSO4_pro": 28.624957,
+  "CO2_MnSO4_pro": 0.74296024,
+  "CO2_Al_pro": 15.584382,
+  "CO2_Cu_pro": 8.583233,
+  "CO2_FePO4_pro": 6.2405375,
+  "CO2_LiFePO4_pro": 6.2405375,
+  "CO2_NMC622_pro": 18.4290125,
+  "ExchangeRate": 7.04
+}

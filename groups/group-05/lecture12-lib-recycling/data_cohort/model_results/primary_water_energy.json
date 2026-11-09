@@ -1,0 +1,20 @@
+{
+  "source": "Kelly2021 Table6 PDF p11",
+  "brine_water_L_kgLCE": [
+    15.5,
+    32.8
+  ],
+  "ore_water_L_kgLCE": [
+    77,
+    77
+  ],
+  "brine_energy_MJ_kgLCE": [
+    30,
+    36
+  ],
+  "ore_energy_MJ_kgLCE": [
+    218,
+    218
+  ],
+  "note": "数值须与Table6逐项核验；回收水采用新水消耗情景，原生为蓝水；矿区卤水蒸发另列"
+}

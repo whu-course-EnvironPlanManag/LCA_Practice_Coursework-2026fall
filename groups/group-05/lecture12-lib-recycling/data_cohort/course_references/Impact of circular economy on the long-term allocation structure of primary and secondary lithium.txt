@@ -1,0 +1,761 @@
+                                    communications earth & environment                                                                                                                  Article
+
+
+
+                                                                                                                                                    https://doi.org/10.1038/s43247-024-01667-2
+
+
+                                    Impact of circular economy on the long-
+                                    term allocation structure of primary and
+                                    secondary lithium
+                                                                                                                                                                                  Check for updates
+
+                                    Yufeng Wu        , Qingbin Yuan, Ming Yang, Mengyu Zhai, Guangwen Hu & Yifan Gu
+
+
+                                    Lithium is key for a clean energy transition but faces sustainability challenges in the global supply.
+                                    Here, we use a bottom-up approach to study the evolution of the global lithium-ion battery industry
+                                    from 2023 to 2050. The supply and demand trends are predicted to determine the supply potential and
+
+1234567890():,;   1234567890():,;
+                                    allocation structure of primary and secondary lithium. The results indicate a projected global lithium
+                                    demand of 1.93 million metric tons in 2050, a signiﬁcant increase of 26.2 times compared to 2023. In
+                                    the process of global lithium resources shifting from underground reserves to in-use stocks,
+                                    population and Gross Domestic Product (GDP) inﬂuence regions’ lithium endowment and per capita
+                                    primary consumption, respectively. If the European Union’s new battery regulation is implemented
+                                    globally, then it is projected to reduce global primary lithium consumption by 1.03 million metric tons
+                                    by 2050, with a 53.48% decrease in the proportion of primary lithium consumption.
+
+
+                                    Lithium, with its distinctive chemical and physical properties1,2, has become      energy sources will soar from the current 28% to 91% by 205015.
+                                    a pivotal mineral for today’s energy transition, with extensive applications in    Moreover, it is anticipated that the demand for BESSs will increase by
+                                    sectors such as batteries and renewable energy3,4. Over the last three decades,    50% accordingly16. Moreover, continuous advancements in electriﬁca-
+                                    global lithium production has surged dramatically, increasing from 6100            tion will drive the rapid development of EVs, with the demand for LiBs
+                                    metric tons in 1994 to 180,000 metric tons in 2023—an almost thirteenfold          for automotive use expected to increase 217-fold by 205017. Propelled by
+                                    increase5. Since 2000, Australia has been at the forefront of primary lithium      the meteoric proliferation of renewable energy sources, lithium demand
+                                    production, contributing 47.7% to the global output in 2023, with Chile            is poised to sustain an annual growth of 18% over the next three
+                                    trailing at 24.4%6. Both countries are expected to continue as principal           decades18. However, with lithium production growing annually by only
+                                    lithium suppliers. Owing to its pivotal role in modern technology, profound        3-6%, the widening gap between supply and demand is expected to
+                                    economic signiﬁcance, scarcity, and ﬁnite future availability, lithium has         result in rising lithium prices and may lead to a lithium supply crisis in
+                                    been designated a critical material by entities such as the US, the EU, Japan,     the medium to long term19,20.
+                                    and the United Nations Environment Programme7,8. Similarly, key pro-                     After consumption, primary lithium gradually accumulates in societal
+                                    ducing nations such as Australia and Chile have recognized lithium as a            systems, exhibiting a trend of shifting from underground reserves to in-use
+                                    critical mineral. Consequently, ensuring a sustainable supply of lithium           stocks. The demand for LiBs has concurrently spurred an increase in the
+                                    represents a key challenge for global development9–11.                             mass of scraped LiBs. Due to the relatively long lifecycle of LiBs, scraped LiBs
+                                          Lithium is applied in the guise of lithium oxide and lithium                 have not reached a large-scale generation stage, with an average annual
+                                    hydroxide, and these two compounds collectively account for more than              growth of only 1–3 GWh21. However, subsequent growth will increase
+                                    90% of global lithium consumption12. In recent years, lithium has                  notably, and it is estimated that by 2035, the scraped mass of LiBs for global
+                                    undergone a burgeoning adoption in battery production, underpinned                 EVs alone will reach 305.9 GWh, an increase of 240 times compared to the
+                                    by its attributes—notably, its high energy density, extended lifecycle,            amount in 202322. Thus, recovering lithium from scraped LiBs has become a
+                                    and comparatively low self-discharge rate13. Lithium-ion batteries                 key focus for addressing resource shortages and will gradually form an
+                                    (LiBs) have assumed a pivotal role, with their application in electric             allocation pattern where both primary and secondary lithium are able to
+                                    vehicles (EVs) and battery energy storage systems (BESSs) accounting               meet market demand23,24. However, unlike the natural endowment of
+                                    for 88% of the LiB market14. Aligned with the global ability to arrest the         lithium reserves in different countries, secondary lithium comes from the in-
+                                    temperature rise to being within 1.5 °C, the growth of renewable energy            use stocks of each country, which in turn come from that country’s previous
+                                    sources, spanning solar and wind power, is primed for exponential                  consumption and trade of primary lithium25,26. Thus, as the proportion of
+                                    proliferation. Projections indicate that it the use of such renewable              secondary lithium increases notably, its great uncertainty in the regional
+
+
+                                    Institute of Circular Economy, Beijing University of Technology, Beijing, China.    e-mail: guyifan@bjut.edu.cn
+
+
+                                    Communications Earth & Environment | (2024)5:503                                                                                                                 1
+https://doi.org/10.1038/s43247-024-01667-2                                                                                                                 Article
+
+supply structure and lithium quantity will arise, thus necessitating quanti-        level societal demand for BESSs. Compared to other regions, the shift of in-
+tative evaluation.                                                                  use lithium stock towards BESSs will be more pronounced in Europe and
+      At the same time, due to the limited recycling scale, currently, only         Melanesia by 2050, increasing by 15-fold and 16-fold, respectively. In terms
+approximately 5% of scraped batteries worldwide are ofﬁcially collected and         of cathode materials, by 2050, nickel-cobalt-aluminum oxide (NCA) and
+recycled27. To address the lithium supply-demand gap and promote the                lithium ferro phosphate (LFP) battery cells are expected to account for a
+circular utilization of lithium resources, the EU took the lead in issuing the      notable market share of in-use lithium stocks, reaching 34.76% and 15.83%,
+Regulation concerning Batteries and Waste Batteries (EU 2023/1542) in               respectively (as shown in Fig. 1); these battery cells are used primarily in EVs.
+2023. This regulation requires the full lifecycle management of batteries,          For BESSs, except for East Asia, NCA battery cells are still the mainstream
+promotes the development of a circular economy in the LiB industry, and             (46.4%), increasing from 8.75 thousand metric tons in 2023 to 151.26
+explicitly mandates a minimum proportion of recycled lithium in LiBs and a          thousand metric tons by 2050.
+minimum recovery and recycling rate for LiBs starting in 2027, which is
+expected to notably enhance the circular utilization of lithium resources28.        Global ﬂow of lithium
+However, there is a lack of quantitative research supporting how the circular       With the widespread application of LiBs in EVs and BESSs, lithium con-
+economy will affect the process of lithium resources shifting from under-           sumption is projected to exhibit a notable growth trend during the forecast
+ground reserves to societal in-use stocks and will affect the future allocation     period (Supplementary Fig. 5). The lithium consumption trends for NCA
+of primary and secondary lithium in different countries. Consequently, the          and NMC523 battery cells are similar (Fig. 2a, b). Under a business-as-usual
+widespread global adoption of circular economy policies has yet to be rea-          scenario, South Asia, North America, and Sub-Saharan Africa emerge as the
+lized, owing to the lack of quantitative research substantiating the impli-         primary regions driving global lithium consumption for the two battery cell
+cations of such policies.                                                           types. In 2050, South Asia’s lithium consumption for these two battery cell
+      This study adopts a bottom-up research framework, considering the             types will reach 0.32 and 0.14 million metric tons, respectively. Furthermore,
+primary application domains of the following two LiB types: EVs and BESSs.          before 2030, the lithium consumption of NMC523 battery cells in North
+EVs, which are closely related to public demand, are studied by forecasting         America will follow a similar trend to that of NCA battery cells, but after
+the per capita stock of EVs based on historical data. Using a stock-driven          2030, the consumption of this cell type will decrease, and the consumption
+approach, we calculate the annual installation and scraps of EV LiB cells up        of NCA battery cells will increase (Supplementary Fig. 4).
+to 2050. BESSs, conversely, serve as a fundamental infrastructure for the                 The regions with notable lithium consumption of LFP battery cells will
+peak shaving of renewable energy such as photovoltaic and wind power.               be East Asia and North America, accounting for 60.24% and 17.08%,
+Based on SSP1-RCP1.9 societal energy data and using a ﬂow-driven                    respectively, of the global total in 2050 (Fig. 2c). Compared to that in 2030,
+approach, we estimate the annual installation and scrapping rates of LiB cells      the share of global lithium consumption for LFP battery cells in East Asia
+for global BESSs. By integrating these two LiB application domains, we              will decrease to 85.99% by 2050, even though the overall lithium con-
+predict the trends in in-use lithium stock, lithium consumption, and scraps         sumption for LFP battery cells will increase by 10% in that same period. The
+from 2023 to 2050 across 133 countries and six typical types of LiB cells. This     reason for this is primarily due to the fact that East Asian countries such as
+study traces the evolutionary pathway from lithium reserves to in-use               Japan and South Korea are increasingly favoring the use of NCA battery
+lithium stocks and analyses the impact of the Regulation (EU 2023/1542) on          cells. The lithium consumption trends for NMC111, NMC622, and
+the lithium supply and demand structure across different regions globally,          NMC811 battery cells (Fig. 2d–f) are similar. Over the 2030-2050 time-
+thus providing quantitative support for the sustainable supply of global            frame, the regions with notable lithium consumption of the three battery cell
+lithium.                                                                            types will be East Asia, South Asia, and Sub-Saharan Africa. This shift in
+                                                                                    regional lithium consumption patterns will represent a notable departure
+Results                                                                             from the trends observed prior to 2030, particularly in the case of Sub-
+Global in-use lithium stock                                                         Saharan Africa.
+The in-use lithium stock of EVs and BESSs is projected to increase from 0.2               However, lithium scrap from LiBs exhibits a notable time lag compared
+million metric tons in 2023 to 14.02 million metric tons by 2050. The global        to lithium consumption. The lag period varies notably among the six LiB
+share of regions such as Europe and East Asia is gradually decreasing,              types (Supplementary Fig. 6). Our calculations suggest that the lag period for
+showing a trend of shifting towards regions such as South Asia. In 2023, East       lithium scrap from EVs is approximately 6–8 years, while for BESSs, it is 2–3
+Asia emerged as the dominant region in terms of global in-use lithium stock,        years due to differences in LiB lifespans (several years or a decade).
+accounting for a 38.31% share, as detailed in Supplementary Fig. 2. More-
+over, West Europe held a 20.18% stake in the global in-use lithium stock            Global shift in lithium endowment
+landscape, while North America claimed the third-largest share, con-                As lithium reserves are continually depleted, the amount of in-use lithium
+tributing 10.40% to the worldwide in-use lithium stock in 2023. By 2050, the        stock is constantly increasing. In 2023, the regions with abundant lithium
+landscape is projected to shift notably. The region with the largest share of       reserves had relatively small populations, resulting in large per capita
+global in-use lithium stock is expected to be South Asia, accounting for            lithium reserves, such as 185 kg per person in Australia and New Zealand. In
+36.4%, a remarkable 1790-fold increase compared to the share in 2023.               the early stages of the development of the lithium industry, the rapid growth
+Following South Asia, Sub-Saharan Africa is anticipated to have the second-         of the new energy industry led to a rapid depletion of lithium reserves, as the
+highest share, at 11.96%, a 1234-fold increase from the 2023 level. As all          social stock was still limited and products had not yet reached the con-
+regions aim to achieve decarbonization targets globally, the relatively late-       centrated scrapping cycle (Fig. 3a). Assuming the current proportions of
+starting regions, South Asia and Africa, are expected to become key focus           primary lithium supply (business-as-usual scenario), the lithium reserves of
+areas for the accumulation of in-use lithium stock.                                 the traditional lithium-rich regions of Latin America and the Caribbean and
+      From an application standpoint, the in-use lithium stock of EVs is            Australia and New Zealand are projected to decrease by 90.35% and 54.97%,
+projected to experience exponential growth, rising from 0.17 million metric         respectively, by 2050. As lithium resources gradually shift from lithium
+tons in 2023 to 13.83 million metric tons by 2050 (Supplementary Fig. 3). In        reserves to in-use stock and as LiBs reach their scrapping cycle, secondary
+contrast, the in-use lithium stock of BESSs is expected to grow at a relatively     lithium will continuously replenish social demand (lithium reserves data see
+slower, yet still notable, rate. BESS-related in-use lithium stock is expected to   Supplementary Figs. 10–12 and Tables 5–6). The speed of this transition
+increase from 0.029 million metric tons in 2023 to 0.49 million metric tons         from lithium reserves to the in-use stock of lithium supply sources ﬁrst
+by 2050—a nearly 16-fold increase. The proportion of in-use lithium stock           increases and then decreases, with the peak expected to reach 20.79 million
+from BESSs is expected to decrease from 14.80% to 3.48%, as the growth in           metric tons in 2043. In 2042, the in-use stock is projected to surpass the
+demand for EVs is faster than that for BESSs, despite the continued high-           lithium reserves and become the primary source of the global lithium
+
+
+Communications Earth & Environment | (2024)5:503                                                                                                                   2
+https://doi.org/10.1038/s43247-024-01667-2                                                                                                                            Article
+
+                                                             (10kt)                 (10kt)
+                                                                                                                (kt)
+                                     (10kt)                                                                                              (Mt)
+
+
+
+                 (10kt)
+
+
+
+
+                                                                                                                                                   (100kt)
+
+
+
+
+       (0.1Mt)
+
+
+
+
+                                                                                                                                                       (t)
+
+
+
+
+          (0.1Mt)
+
+
+
+
+                                     (10kt)                (0.1Mt)                      (10kt)                         (Mt)                 (kt)
+
+
+
+
+Fig. 1 | In-use lithium stock of EVs and BESSs by region and cathode materials              application domains; the upper part of the bars is for EVs, and the lower part is for
+in 2050. The map section represents the total in-use lithium stock by region. The bar       BESSs. kt = 1000 metric tons, and Mt = 1 million metric tons. White areas in the map
+charts represent the lithium in-use stock of different cathode materials in the two         indicate missing data.
+
+
+
+supply. By 2050, the in-use stock is expected to reach 14.02 million metric                 Enhancing effect of the global circular economy model
+tons, which is 129.76% greater than the available lithium reserves.                         Scenario setting. To analyse the impact of the global circular economy
+     We expand the concept of lithium endowment to include both lithium                     model on the evolutionary trends of lithium resources, we set up the
+reserves and in-use stock. The evolutionary trends of regional lithium                      following scenarios based on the EU Regulation (EU 2023/1542)
+endowments indicate a global redistribution of lithium resources (Fig. 3b).                 regarding lithium recycling requirements (Supplementary Table 7) and
+The lithium-rich regions of Latin America and the Caribbean and Australia                   based on relevant literature: the battery collection scenario, lithium
+and New Zealand will experience a continuous decline in their lithium                       recycling scenario, enhanced lithium recycling scenario, lithium reduc-
+endowment, while traditional lithium-poor regions such as South Asia will                   tion scenario, and combined scenario (see Table 1).
+experience a steady increase, with their share of global lithium endowment
+growing from 0% to 25.37% by 2050. The lithium endowments of Central                        Effects of policy implementation. As shown in Fig. 4a, the business-as-
+Asia and West Asia are projected to increase 114-fold and 457-fold,                         usual scenario (scenario 1) trend indicates that in 2050, global primary
+respectively. By 2050, Asia is expected to account for more than 50% of the                 lithium consumption will increase by 25.53 times compared to that in
+global lithium endowment, as depicted in Supplementary Fig. 13–14.                          2023. By implementing circular economy policies, global primary lithium
+Concurrently, a notable shift is projected to occur across North Europe,                    consumption will show varying degrees of reduction. By 2050, when
+North America, and Sub-Saharan Africa. These lithium endowments are                         juxtaposed against the business-as-usual scenario (scenario 1), scenario 2
+expected to transition from being dominated primarily by lithium reserves                   will culminate in a marginal 1.08% contraction of global primary lithium
+to becoming dominated by in-use lithium stock around 2025, 2044, and                        consumption. In contrast, scenarios 3 and 4 will achieve more substantial
+2037, respectively. Other regions in the Americas, Europe, and Africa are                   reductions, cutting primary lithium consumption by 8.07% and 22.15%,
+also expected to exhibit similar trends, and thus, these three regions should               respectively. However, scenario 5 will exhibit the most profound impact,
+actively optimize their lithium supply structures around 2040. Further                      remarkably curtailing global primary lithium consumption by an
+analysis shows that the range (difference between the maximum and                           astonishing 32.09%, equivalent to a staggering 8-fold reduction in the
+minimum) of the amount of global lithium endowment across different                         global primary lithium consumption level recorded in 2023. The impact
+regions is expected to decrease by 54.98%, declining by 11.35 million metric                of the combined scenario (scenario 6) will further decrease by 33.62%
+tons from 2023 to 2050, indicating a gradual convergence towards a more                     compared to that of scenario 5. This ﬁnding indicates that merely
+balanced global lithium endowment.                                                          increasing the battery collection rate or lithium recovery rate will have a
+
+
+
+Communications Earth & Environment | (2024)5:503                                                                                                                               3
+https://doi.org/10.1038/s43247-024-01667-2                                                                                                            Article
+
+
+
+
+Fig. 2 | Trends in lithium consumption and scrap across six cathode materials   NMC811. The y-axis labels on the subplots are colour-coded according to the ﬁve
+from 2030 to 2050. The heatmap on the left shows the lithium consumption        major continents, and the heatmap boundaries are separated by dashed lines. The
+(Consumption) from LiB cells with different cathode materials, broken down by   heatmap on the right shows the lithium scrap generation (Waste) measured in
+region. (a) NCA, (b) NMC523, (c) LFP, (d) NMC111, (e) NMC622, and (f)           million metric tons.
+
+
+very limited effect on reducing global primary lithium consumption.             consumption in South Asia. Speciﬁcally, the impact of the circular economy
+Lithium mass reduction is crucial for reducing global primary lithium           on primary lithium consumption has not been notable during the policy
+consumption, and the combination of scenarios enhances the effect of the        implementation period, but it will become more apparent after 2038 and
+circular economy to the optimal level, reducing primary lithium con-            peak around 2042. Compared with scenario 1, scenario 6 will reduce pri-
+sumption by more than half of the global primary lithium consumption            mary lithium consumption by 36.54%. From 2042 to 2050, the impact will
+compared to that in Scenario 1.                                                 exhibit a ﬂuctuating growth trend (the trends during the policy imple-
+     As shown in Figs. 4b–p, the circular economy has varying degrees of        mentation period can be seen in Supplementary Fig. 18).
+impact on the primary lithium consumption of the 15 regions in this paper.           For the Americas, Europe, and Oceania, the circular economy’s
+For Asia, the effects of the circular economy on reducing primary lithium       inﬂuence was initially muted during the policy implementation period
+consumption in East Asia and Southeast Asia have begun to manifest during       across the Americas. However, its inﬂuence has steadily ampliﬁed and
+the policy implementation period and will gradually amplify after 2038. By      manifested itself in an increasingly conspicuous manner as time has pro-
+2050, the lithium reduction measures implemented in scenario 5 will exert       gressed. Among these, in 2050, compared with scenario 1, scenario 6 will
+the most profound impact on curbing primary lithium consumption in East         reduce primary lithium consumption in North America by 58.19%. For
+Asia, resulting in remarkable reductions of 37.73% and 27.09%, compared to      Australia and New Zealand, Western Europe, and Eastern Europe, the
+those in scenario 1. However, scenario 6 will prove even more potent, further   impact of the circular economy on primary lithium consumption was more
+diminishing primary lithium consumption by an additional 31.44% and             noticeable towards the end of the policy implementation period, with
+33.26% relative to the already substantial cuts achieved under scenario 5.      Australia decreasing by 34.91% and the other two regions decreasing by
+The circular economy will have a lagging effect on primary lithium              approximately 30% compared to scenario 1. As the energy transition in
+
+
+Communications Earth & Environment | (2024)5:503                                                                                                              4
+https://doi.org/10.1038/s43247-024-01667-2                                                                                                                       Article
+
+        a                                                                            b
+                              Lithium reserves
+
+
+
+
+                              0
+
+
+
+
+                            163                   In-use lithium stock
+
+
+
+
+                              Lithium reserves
+
+
+
+                              0
+
+
+
+                                                 In-use lithium stock
+
+                            121
+
+
+
+
+                             Lithium reserves
+
+
+                              0
+
+
+
+
+                                                 In-use lithium stock
+                             70
+
+
+
+
+Fig. 3 | Trends in the changes in the lithium supply structure from 2030 to 2050. a Lithium reserves and in-use lithium stock across regions over time in business-as-usual
+scenario. b Lithium endowment across regions over time in business-as-usual scenario.
+
+
+most European regions gradually matures, the impact of the circular                    Melanesia is not notable (comparisons of other scenarios can be found in
+economy on the European region will slow after 2038. During 2038-2050,                 Supplementary Figs. 19–25). Overall, the circular economy not only has a
+scenario 6 will increase primary lithium consumption in Eastern Europe                 notable impact on regions prioritizing energy transition (Western Europe,
+and Northern Europe by 49.81% and 20.65%, respectively. However, the                   Eastern Europe, East Asia, and North America) but also has a more notable
+impact of the circular economy on Australia and New Zealand and Latin                  improvement on primary lithium-producing regions (Australia and New
+America and the Caribbean will not weaken during this period. For instance,            Zealand and Latin America and the Caribbean).
+from 2038 to 2050, scenario 6 will reduce primary lithium consumption in                     The analysis depicted in Fig. 5 scrutinizes the inﬂuence of population
+Australia by 25.15%. In 2050, compared to scenario 1, scenario 6 will reduce           and economic factors on primary lithium consumption across different
+primary lithium consumption in Latin America by 52.75%.                                nations and regions, contrasting the scenarios before and after the imple-
+      For the African region, the effect of the circular economy also shows a          mentation of circular economy policies (scenarios 1 and 6). Figure 5a shows
+trend of being weak at ﬁrst and then becoming stronger. The impact of                  that in 2050, the primary lithium consumption of different countries will be
+scenario 6 on primary lithium consumption in North Africa and Sub-                     positively correlated with population size (upper-right ﬁgure). However, for
+Saharan Africa will reach its peak in 2042 and 2048, respectively, and then            individual countries (blue dots, lower-left ﬁgure), there is no clear correla-
+stabilize. However, the impact of the circular economy on West Asia and                tion between per capita GDP and per capita primary lithium consumption.
+
+
+Communications Earth & Environment | (2024)5:503                                                                                                                         5
+https://doi.org/10.1038/s43247-024-01667-2                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     Article
+
+
+
+                                                                                                                                                                                                                                                                                                                                                               50% battery collection rate, 6% lithium recovery rate, and the mandatory                                                                                   70% battery collection rate, 36% lithium recovery rate, and the mandatory
+                                                                                                                  50% battery collection rate, 6% lithium recovery rate, and 1% recycled         70% battery collection rate, 6% lithium recovery rate, and 1% recycled         50% battery collection rate, 36% lithium recovery rate, and 1% recycled                                                                                      50% battery collection rate, 6% lithium recovery rate, and 1% recycled
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          From a regional perspective (red dots), regional GDP and per capita primary
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          lithium consumption exhibit a signiﬁcant positive correlation (r = 0.84).
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Figure 5b shows that after the implementation of circular economy
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          policies (scenario 6), the impact of population and economic factors on
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          primary lithium consumption will be weaken. The upper-right ﬁgure
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          shows that the total primary lithium consumption decreases for coun-
+
+
+                                                                                                                                                                                                                                                                                                                                                               minimum levels of recycled lithium will increase from 17% by 2050 for new                                                                                  minimum levels of recycled lithium will increase from 17% by 2050 for new
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          tries with the same population, while the lower-left ﬁgure shows that the
+
+
+
+
+                                                                                                                                                                                                                                                                                lithium by 2050 for new battery manufacturing; the average energy density
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          per capita primary lithium consumption also decreases for regions with
+
+
+
+                                                                                                                  lithium by 2050 for new battery manufacturing; the average energy density      lithium by 2050 for new battery manufacturing; the average energy density                                                                                                                                                                   lithium by 2050 for new battery manufacturing; the average energy density
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          the same GDP. A comparative analysis of Figs. 5a, b reveals that after the
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          implementation of circular economy policies, the dispersion of per capita
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          primary lithium consumption will decrease by 58%, while the dispersion
+
+
+                                                                                                                                                                                                                                                                                                                                                               battery manufacturing; the average energy density of battery cells will be                                                                                 battery manufacturing; the average energy density of battery cells has been
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          of total consumption will decrease by 57%, indicating a congruence in the
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          magnitudes of change. After contrasting Figs. 5a, b, it becomes evident
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          that following the enactment of circular economy policies, the dispersion
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          of per capita primary lithium consumption will decrease by a substantial
+
+
+
+                                                                                                                  of battery cells will be 250 Wh/kg by 2050.                                    of battery cells will be 250 Wh/kg by 2050.                                    of battery cells will be 250 Wh/kg by 2050.                                                                                                                  of battery cells has been increasing by 3.6% per year.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          58%, while the dispersion of total consumption will exhibit a commen-
+
+
+                                                                                                                                                                                                                                                                                                                                                               250 Wh/kg by 2050.                                                                                                                                         increasing by 3.6% per year.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          surate reduction of 57%, signifying a striking congruence in the magni-
+
+                                                                      2040–2050
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          tudes of change. Remarkably, however, the decline in the mean value of
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          per capita consumption will be approximately 48%, decreasing from 0.15
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          to 0.078, which will prove to be markedly lower than the 55% decrease in
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          the mean value of total consumption, decreasing from 5.9 × 10 × 4 to
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                            Annual growth 3.6%47, the limit is                                           Annual growth 3.6%47, the limit is
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          2.5 × 10 × 4. As shown in the changes in the lower-left ﬁgure, after
+
+
+                                                                                  Average gravimetric energy
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          implementing the circular economy, the number of countries within the
+
+
+
+
+                                                                                                               250 Wh/kg cell by 204046                                                       250 Wh/kg cell by 204046                                                       250 Wh/kg cell by 204046                                                       250 Wh/kg cell by 204046
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          optimal range of per capita consumption will increase from 65 to 84,
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          implying that the relationship between economic development and
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          consumption will tend to be more balanced, which will thus be conducive
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                            435 Wh/kg cell48                                                             435 Wh/kg cell48
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          to narrowing the global gap (the relationships between other factors are
+
+                                                                                  density of battery cells
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          detailed in the Supplementary Fig. 15–17).
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Figure 5c analyses the changes in the proportion of primary lithium
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          consumption on different continents under a single policy scenario at dif-
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          ferent time points. In 2030, except for Europe, the policy impact will not be
+
+
+                                                                                  Mandatory minimum levels                                                                                                                                                                                                                                                     6% by 2031, 12% by 2037,                                                                                                                                   6% by 2031, 12% by 2037,
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          notable on other continents. In 2040, the changes within continents will be
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          relatively balanced, with scenarios 3 and 4 having a notable impact, parti-
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        Requirements regarding lithium recycling stipulated in the Regulation concerning Batteries and Waste Batteries (EU 2023/1542)49
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          cularly in reducing primary lithium consumption in the Americas and
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          Oceania. In 2050, the impact of scenario 4 will be more pronounced than
+
+
+                                                                                  of recycled lithium          1% by 204016                                                                   1% by 204016                                                                   1% by 204016                                                                      17% by 2040*                                                                 1% by 204016                                                                  17% by 2040*
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          that of scenario 3, with a particularly signiﬁcant effect on Europe. On the
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          whole, the policy measures will prove efﬁcacious in curbing the proportion
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          of primary lithium consumption in the Americas and Oceania regions over
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          the short term. However, in the long run, the primary impact will be con-
+
+
+
+
+Table 1 | Single-strategy targets and combination scenario settings
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          centrated on diminishing the proportional consumption in European and
+
+                                                                                                                                                                                                                                                                                12% by 2027, 24% by
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          Oceanic countries.
+
+
+
+
+                                                                                  Lithium recovery rate
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          12% by 2027, 24% by                                                                                                                                                                                             Discussion
+
+
+                                                                                                               6% by 204045                                                                   6% by 204045                                                                      2031 and 36% by 2040*                                                       6% by 204045                                                                    6% by 204045
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          The global demand for lithium continues to surge, driven primarily by the
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          2031, 36% by 2040*
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          pivotal role of lithium-ion battery manufacturing and renewable energy
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          sectors. However, the substantial demand for lithium and its uneven dis-
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          tribution have sparked widespread concerns worldwide regarding its future
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          supply security and sustainability. Lithium endowments exhibit notable
+
+
+                                                                                                                                                                                                 50% to 65% by 2025, 65% to                                                                                                                                                                                                                                                                                               50% to 65% by 2025, 65% to
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          disparities across different regions, not only due to variations in geological
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          reserves but also attributable to different consumption patterns and resource
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          management strategies. In recent years, the in-use lithium stock in North
+
+
+
+                                                                                  LiB collection rate
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          America, East Asia, and Europe has gradually emerged as the primary
+
+
+
+                                                                                                               50% by 204044                                                                     70% by 2030, 70% by 2040*                                                   50% by 204044                                                                  50% by 204044                                                                   50% by 204044                                                                 70% by 2030, 70% by 2040*
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          reserve for these regions. This transition has been facilitated by the emphasis
+
+
+                                                                      2025–2040
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          in these regions on lithium recycling and the application of advanced
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          technologies, effectively enhancing lithium reuse efﬁciency29. In contrast,
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          Australia and Latin America have nearly depleted their lithium reserves, as
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          these regions have relied heavily on intense lithium mining activities for an
+
+
+                                                                                                                                                                                                 Scenario 2 (battery collection                                                 Scenario 3 (Lithium recycling                                                  Scenario 4 (enhanced lithium
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          extended period, lacking effective resource recycling policies, leading to a
+
+                                                                                                                  Scenario 1 (business-as-                                                                                                                                                                                                                                                                                                   Scenario 5 (lithium mass
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          rapid depletion of their reserves. The evolution of global lithium use indi-
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          Scenario 6 (combined
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          cates that the future storage and supply of lithium will increasingly depend
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          on in-use stocks rather than on traditional mining. With advancements in
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          resource recycling technologies and heightened global environmental
+
+                                                                      Scenario                                    usual scenario)                                                                scenario)                                                                      scenario)                                                                      recycling scenario)                                                           reduction scenario)                                                          scenario)
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          awareness, it is anticipated that the total lithium reserves in most regions
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          worldwide will gradually converge, forming a more balanced and sustain-
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        *                                                                                                                                 able global lithium management landscape.
+
+
+Communications Earth & Environment | (2024)5:503                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       6
+https://doi.org/10.1038/s43247-024-01667-2                                                                                                                  Article
+
+
+
+
+Fig. 4 | Changes in primary lithium consumption across 15 regions under the         consumption over time for 15 regions under six categories of circular economy
+circular economy. a Different colored curves represent the changes in global pri-   policies. The x-axis represents years, and the y-axis represents primary lithium
+mary lithium consumption over time under six categories of circular economy         consumption in metric tons. The dashed lines represent the starting years of the
+policies. b–p Different colored curves represent the changes in primary lithium     Batteries and Waste Batteries Regulation (policy design).
+
+
+
+      During the ongoing process of global lithium endowment redistribu-            an essential component of lithium management strategies30. Recognizing
+tion, population and economic factors largely determine trends in in-use            dissipated lithium resources as a vital component of urban mining can
+lithium stock changes. The persistent growth in the population and the              contribute to the establishment of a comprehensive lithium recovery system
+acceleration of urbanization processes have not only substantially increased        and the enhancement of lithium management strategies.
+the demand for energy transition minerals (ETMs) such as lithium but also                 In summary, faced with the challenges of uneven global lithium dis-
+driven the development of circular economy policies and resource recovery           tribution and rapid consumption growth, the adoption of a comprehensive
+technologies. Actively promoting circular economy policies for lithium              and integrated management strategy is crucial. Such a strategy includes but
+worldwide, particularly in regions with high levels of population growth            is not limited to promoting circular economy policies, strengthening tech-
+potential, provides a safeguard for a sustainable lithium supply. For instance,     nological innovation, improving resource recovery and utilization efﬁ-
+the EU Regulation concerning Batteries and Waste Batteries (EU 2023/                ciency, and fostering policy coordination and cooperation globally,
+1542) strictly regulates battery recycling rates and the use of recycled            particularly in regions with rapid population growth and high levels of
+materials, effectively mitigating global lithium scarcity and improving             lithium demand (Supplementary Fig. 1). Through these measures, sus-
+resource utilization efﬁciency (see Table 1). Furthermore, the imple-               tainable lithium management can be achieved, meeting the future demands
+mentation of this directive can effectively narrow the gaps in lithium supply       of energy transition while maintaining global resources and environmental
+in Asia, North America, and Australia, and we recommend that this policy            security.
+model be extended to these regions in advance. We also ﬁnd that a sub-
+stantial portion of lithium resources are wasted within social systems; for         Methods
+example, in 2022, Cameroon’s lithium dissipation was on par with its annual         Research framework
+demand, and by 2050, some countries (such as Germany, Italy, and Por-               Lithium consumption is driven by the following two types of LiBs:
+tugal) will have lithium dissipation levels exceeding their demand25. Lithium       those used in EVs and those used in BESSs. The number of EVs is
+mining and puriﬁcation processes not only are costly but also have negative         closely related to population size, and their in-use stock is often
+environmental effects, making the effective recovery of this wasted lithium         counted at the household level31. By combining data on the per capita
+
+
+Communications Earth & Environment | (2024)5:503                                                                                                                       7
+https://doi.org/10.1038/s43247-024-01667-2                                                                                                                Article
+
+
+
+
+Fig. 5 | Factors affecting primary lithium consumption across countries and       represented by the correlation coefﬁcient “R”, where an absolute value of R
+regions. a and b describe the relationships between population, GDP, per capita   close to 1 indicates a strong correlation between the two types of variables. The
+primary lithium consumption, and total primary lithium consumption in             red dashed boxes indicate the optimal range divided by annual per capita
+countries or regions in 2050, as inﬂuenced by the circular economy. Scenario 1    primary lithium resource consumption, with “Number” representing the count
+(a) and Scenario 6 (b) represent the baseline scenario and the optimal policy     of countries entering the optimal range. The downward black arrows below
+scenario, respectively. The vertical dashed lines perpendicular to the x-axis     indicate the decrease in corresponding values. c shows the impact of different
+indicate the average annual primary lithium consumption (per capita or total)     circular economy policies on the primary lithium usage ratio (the ratio of
+in the dataset of countries under both scenarios. The inclined dashed lines       primary lithium consumption to total lithium consumption) across ﬁve con-
+represent the ﬁtting lines generated to describe the correlation between annual   tinents in 2030, 2040, and 2050. The box plots in different colors distinguish the
+primary lithium consumption and population (for countries) or between annual      median and quartiles of the primary lithium usage ratio for all countries in the
+per capita primary lithium consumption and GDP (for regions) under both           ﬁve continents under different circular economy policies. Outliers in the data
+scenarios, used to compare the changes in correlation between the two types of    sets are not included. Other scenarios can be found in Supplementary
+variables as inﬂuenced by the circular economy. The red solid boxes indicate      Figs. 26–29.
+the speciﬁc values corresponding to the dashed lines. The correlation is
+
+
+in-use stock of EVs, we use a stock-driven approach to calculate the                                       M Ui ðtÞ ¼ Di ðtÞ  Oi ðtÞ × εi                      ð2Þ
+global number of LiB installations in EVs over their lifespan. In
+contrast, BESSs are deployed in the industrial sector, often in con-              where Mi(t) is the lithium consumption of domain i in year t, Si(t) is the in-
+junction with facilities such as photovoltaic or wind power facilities,           use lithium stock of domain i in year t, Oi(t) is the lithium scrap of domain i
+making it difﬁcult to predict their LiB installation levels based on              in year t, MiU(t) is the primary lithium consumption of domain i in year t,
+population data32. Therefore, we use a ﬂow-driven approach, select-               Di(t) is the lithium demand, and t0 is the year when the in-use lithium stock
+ing social energy data from the SSP1-RCP1.9 scenario (Supplemen-                  ﬁrst appears.
+tary Tables 2–3) as the basis for estimating global LiB installation                    For the calculation of the two types of battery-related quantities, the
+levels in BESSs33. Based on the law of conservation of mass, the                  only distinction made is in the installed amount. The lithium mass is cal-
+changes in the in-use stock of the two types of batteries should be               culated by converting the lithium content in different types of LiBs (Sup-
+consistent with the changes in ﬂow (Eq. (1)). The lithium demand is               plementary Table 8). To elucidate the coupling conﬁguration structure and
+met by both the production from mineral resources and the recycled                evolutionary trends of primary and secondary lithium in various countries,
+amount converted from scrapping batteries (Eq. (2)).                              we choose per capita consumption and the usage ratio of primary lithium as
+                                                                                  indicators and analyse the impact of various scenarios on these two metrics
+                                  ZT                                              (Fig. 6). For the scope of this study, we limit our analysis to the period until
+                       Si ðtÞ ¼        ðM i ðtÞ  Oi ðtÞÞdt                ð1Þ    2050 only by mentioning a clause that in the next two decades no notable
+                                  t0                                              replacement of lithium is going to happen.
+
+
+Communications Earth & Environment | (2024)5:503                                                                                                                  8
+https://doi.org/10.1038/s43247-024-01667-2                                                                                                                                                                             Article
+
+
+
+
+                                                                            Lithium-ion battery in EV
+                                                                                                                                                                Battery collection             Metal recovery
+                                                                              SSP1-RCP1.9: Population
+
+                                                                                                                                              Scenario
+                                                                                                                                                                       rate                         rate
+
+                                                                               Electric vehicle           Lithium-ion battery                                            The mandatory minimum
+                                                                                In-use stock             lifespan distribution                                          levels of recycled content
+
+
+                                                                                                                                       Stock-flow Analysis
+                                                                                  Stock-driven           Lithium-ion battery
+
+
+
+
+           Subdivide global regions down to the national level.
+                                                                                   approach                  installation                                                   Scrap mass        Secondary
+                                                                                                                                                             In-use stock
+                                                                                                                                                                                                supply
+
+                                                                                                                                             New mass                                              Lithium
+                                                                                                                                                                          Lithium               recycling rate
+                                                                                                                              Installation                              consumption
+                                                                            Lithium-ion battery in BESS
+                                                                              SSP1-RCP1.9: GDP per
+                                                                               capita and population                                                           Mining       Smelting              Conservation
+                                                                                                                                                                                                    of mass
+                                                                                                        Lithium-ion battery                                      Lithium reserve
+                                                                               Primary energy               installation
+                                                                                consumption
+
+
+                                                                                Renewable energy
+
+
+                                                                                                                                                Indicators
+                                                                                  consumption                 Inflow-driven                                                                  Primary lithium
+                                                                                                                approach                                                                       usage ratio
+                                                                                                                                                                 Per capita primary
+                                                                                 Policy guidelines                                                             lithium consumption
+
+
+
+
+                                                                     Starting from 2010, through the period of circular economy policy constraints, and continuing until 2050.
+
+
+Fig. 6 | Bottom-up research framework. The top-down research framework is                                                               framework, namely: the LiB installation in EV calculation module, the LiB
+interpreted as the computational logic for each target country, composed of the                                                         installation in BESS calculation module, and the stock-ﬂow analysis module. Solid
+content in the yellow area, showing the changes in various indicates of the                                                             arrows with endpoints indicate the direction of primary lithium ﬂow, while dashed
+framework over time (up to 2050). Within the framework, variables in oval boxes are                                                     arrows with endpoints represent the ﬂow of secondary lithium. Underlined text
+obtained through calculations, while variables in rectangular boxes are derived from                                                    denotes key input variables.
+literature or reports. Dashed boxes represent the three modules included in the
+
+
+Global LiB installation in EVs                                                                                                          Global LiB installation in BESSs
+The forecast of EV LiB installation depends on the lifespan of the EVs and                                                              Renewable energy sources such as wind and solar power are affected by
+the ﬁnal disposition of the LiBs. A Weibull density function with two                                                                   climate conditions such as sunlight intensity and wind speed, leading to
+parameters (Eq. 3) is used to calculate the lifespan distribution of LiBs for                                                           notable ﬂuctuations in the energy supply. Accompanying electrochemical
+EVs as follows:                                                                                                                         storage systems can facilitate a stable energy supply. The consumption of
+                                                                                                                                        primary energy determines the upper limit of renewable energy
+                                                                                             
+                                                                                  β t β1       t                                       consumption34,35, and LiB installation in BESSs is closely related to the
+                                                                  Gt ðtjη; βÞ ¼           exp     ;t≥0                          ð3Þ    consumption of renewable energy36. Therefore, we use renewable energy
+                                                                                  η η           η
+                                                                                                                                        consumption data as an indirect means through which to achieve LiB
+where η is the scale parameter indicating when most EVs will fail, and β is                                                             installation in BESSs (Eq. (5)). More detailed information on the calculation
+the shape parameter of the function. However, in the actual use of EVs, due                                                             process can be found in Supplementary Figs. 7–9.
+to their chemical stability in batteries, their degradation occurs over a shorter
+time than that of the EVs themselves (detailed in Supplementary Table 1),                                                                                                        X
+                                                                                                                                                                                 T
+
+thus leading to situations where battery replacement occurs during the use                                                                                              MðtÞ ¼       Eg ðtÞ × ðμw  Rwo þ μs  Rso Þ       ð5Þ
+                                                                                                                                                                                 t
+of EVs. In this study, the actual retirement process of LiBs used in vehicles is
+divided into two parts (Eq. (4)).                                                                                                       where Eg(t) is the consumption of renewable energy in year t and M(t) is the
+                                                                                                                                        LiB installation in BESSs in year t. The process of converting energy to
+                                                                   Z t
+                                                                                                                                        electricity incurs energy loss, and the actual ratio of energy converted to
+         OðtÞ ¼                                                           ðM EVb ðtÞ × GEVb ðtÞ þ M EV ðtÞ × GEV ðtÞ × εÞdt      ð4Þ    electricity is referred to as the energy conversion rate. Row is the wind energy
+                                                                     t0
+                                                                                                                                        conversion coefﬁcient, and Ros is the solar energy conversion coefﬁcient. μw
+where MEVb is the consumption (mass) of LiB cells in EVs, MEV represents                                                                is the energy storage device conversion coefﬁcient in wind power genera-
+the consumption (number) of EVs, GEVb is the lifespan curve of LiBs, GEV is                                                             tion, and μs is the energy storage device conversion coefﬁcient in solar
+the lifespan curve of EVs, ɛ is the mass conversion coefﬁcient, and t is the                                                            photovoltaic power generation. Notably, the conversion rate of energy
+lifespan of LiBs.                                                                                                                       storage devices differs for different power generation sources (solar
+
+
+Communications Earth & Environment | (2024)5:503                                                                                                                                                                             9
+https://doi.org/10.1038/s43247-024-01667-2                                                                                                             Article
+
+photovoltaic or wind power). We assume that renewable energy sources               15. International Renewable Energy Agency (IRENA). World Energy
+other than solar and wind power will remain unchanged in the future (see               Transitions Outlook 2023. (2023).
+Supplementary Table 4).                                                            16. Santecchia, A. et al. The critical role of electricity storage for a clean
+                                                                                       and renewable European economy. Energy Environ. Sci. 16,
+Data availability                                                                      5350–5370 (2023).
+In order to more comprehensively explore the reality of the two types of           17. Wood Mackenzie. Electric Vehicle & Battery Supply Chain: Strategic
+lithium-ion batteries, this study further subdivided the ﬁve continents into           Planning Outlook to 2050. (2023).
+15 regions based on the United Nations’ M49 standard37, Primary energy             18. IEA. Total lithium demand by sector and scenario, 2020-2040.
+and renewable energy data come from the Statistical Review of World                    IEA (2021).
+Energy Database38, The battery power data of grid-connected energy storage         19. Hund, K., La Porta, D., Fabregas, T. P., Laing, T. & Drexhage, J.
+equipment comes from DOE Global Energy Storage Database39. The pro-                    Minerals for Climate Action: The Mineral Intensity of the Clean Energy
+portion of renewable energy consumption in total energy consumption in                 Transition. (World Bank, 2023). https://doi.org/10.1596/40002.
+2050 is as follows: India, 77%40; European Union, 97%41; United States,            20. Clare Church, A. C. Green Conﬂict Minerals: The fuels of conﬂict in the
+76%42; China, 68%43 and another region, 74%15. The model output data used              transition to a low-carbon economy. IISD (2018).
+to produce Figures are available at: [https://zenodo.org/records/11160283].        21. SNE Research. Recycling/Reuse Technology Trends and Market
+                                                                                       Outlook. (2023).
+Code availability                                                                  22. Andy Leach. Lithium-Ion Battery Recycling Market Outlook
+The code for the machine learning classiﬁer, as well as for processing and             2024. (2024).
+visualizing the data, is made available at: [https://zenodo.org/records/           23. Harper, G. et al. Recycling lithium-ion batteries from electric vehicles.
+11160283].                                                                             Nature 575, 75–86 (2019).
+                                                                                   24. Tao, Y., Rahn, C. D., Archer, L. A. & You, F. Second life and recycling:
+Received: 4 January 2024; Accepted: 30 August 2024;                                    Energy and environmental sustainability perspectives for high-
+                                                                                       performance lithium-ion batteries. Sci. Adv. 7, eabi7633 (2021).
+                                                                                   25. Degen, F., Winter, M., Bendig, D. & Tübke, J. Energy consumption of
+References                                                                             current and future production of lithium-ion and post lithium-ion battery
+1.    Peshin, T., Sengupta, S. & Azevedo, I. M. L. Should India Move toward            cells. Nat Energy (2023) https://doi.org/10.1038/s41560-023-01355-z.
+      Vehicle Electriﬁcation? Assessing Life-Cycle Greenhouse Gas and              26. Greim, P., Solomon, A. A. & Breyer, C. Assessment of lithium criticality
+      Criteria Air Pollutant Emissions of Alternative and Conventional Fuel            in the global energy transition and addressing policy gaps in
+      Vehicles in India. Environ. Sci. Technol. 56, 9569–9582 (2022).                  transportation. Nat. Commun. 11, 4570 (2020).
+2.    Miedema, J. H. & Moll, H. C. Lithium availability in the EU27 for battery-   27. Baum, Z. J., Bird, R. E., Yu, X. & Ma, J. Lithium-Ion Battery
+      driven vehicles: The impact of recycling and substitution on the                 Recycling─Overview of Techniques and Trends. ACS Energy Lett. 7,
+      confrontation between supply and demand until2050. Resour. Policy                712–719 (2022).
+      38, 204–211 (2013).                                                          28. European Parliament. New EU Regulatory Framework for Batteries -
+3.    Richter, J. L. A circular economy approach is needed for electric                Setting Sustainability Requirements. https://www.europarl.europa.
+      vehicles. Nat. Electron. 5, 5–7 (2022).                                          eu/thinktank/en/document/EPRS_BRI (2021)689337 (2023).
+4.    Jones, N. The new car batteries that could power the electric vehicle        29. Lèbre, É. et al. Source risks as constraints to future metal supply.
+      revolution. Nature 626, 248–251 (2024).                                          Environ. Sci. Technol. 53, 10571–10579 (2019).
+5.    IEA. World Energy Outlook 2023. IEA https://www.iea.org/reports/             30. Haddad, A. Z. et al. How to make lithium extraction cleaner, faster and
+      world-energy-outlook-2023 (2023).                                                cheaper — in six steps. Nature 616, 245–248 (2023).
+6.    USGS. Mineral Commodity Summaries: Lithium. (2024).                          31. Watari, T., Nansai, K. & Nakajima, K. Major metals demand, supply,
+7.    Brottrager, M., Crespo Cuaresma, J., Kniveton, D. & Ali, S. H. Natural           and environmental impacts to 2100: A critical review. Resour.
+      resources modulate the nexus between environmental shocks and                    Conserv. Recycl. 164, 105107 (2021).
+      human mobility. Nat. Commun. 14, 1393 (2023).                                32. Glöser, S., Soulier, M. & Tercero Espinoza, L. A. Dynamic analysis of
+8.    Tessa Di Grandi. Nine Critical Energy Minerals for Investors. Virtual            global copper ﬂows. Global stocks, postconsumer material ﬂows,
+      Capitalist (2024).                                                               recycling indicators, and uncertainty evaluation. Environ. Sci.
+9.    Miatto, A., Wolfram, P., Reck, B. K. & Graedel, T. E. Uncertain Future of        Technol. 47, 6564–6572 (2013).
+      American Lithium: A Perspective until 2050. Environ. Sci. Technol. 55,       33. Gütschow, J. et al. The PRIMAP-hist national historical emissions time
+      16184–16194 (2021).                                                              series. Earth Syst. Sci. Data 8, 571–603 (2016).
+10.   Ziegler, M. S., Song, J. & Trancik, J. E. Determinants of lithium-ion        34. Fell, H., Gilbert, A., Jenkins, J. D. & Mildenberger, M. Nuclear power
+      battery technology cost decline. Energy Environ. Sci. 14,                        and renewable energy are both associated with national
+      6074–6098 (2021).                                                                decarbonization. Nat. Energy 7, 25–29 (2022).
+11.   Baars, J., Domenech, T., Bleischwitz, R., Melin, H. E. & Heidrich, O.        35. Sovacool, B. K., Schmid, P., Stirling, A., Walter, G. & MacKerron, G.
+      Circular economy strategies for electric vehicle batteries reduce                Differences in carbon emissions reduction between countries
+      reliance on raw materials. Nat. Sustain 4, 71–79 (2020).                         pursuing renewable electricity versus nuclear power. Nat. Energy 5,
+12.   IEA. The Role of Critical Minerals in Clean Energy Transitions. IEA              928–935 (2020).
+      https://www.iea.org/reports/the-role-of-critical-minerals-in-clean-          36. Zyadin, A., Halder, P., Kähkönen, T. & Puhakka, A. Challenges to
+      energy-transitions (2021).                                                       renewable energy: A bulletin of perceptions from international
+13.   Salado, M., Gonçalves, R., Costa, C. M. & Lanceros‐Méndez, S.                    academic arena. Renew. Energy 69, 82–88 (2014).
+      Lithium‐Ion Batteries. in Sustainable Energy Storage in the Scope of         37. Statistics Division. Standard country or area codes for statistical use
+      Circular Economy 43–68 (Wiley, 2023).                                            (M49). United Nations https://unstats.un.org/unsd/methodology/
+14.   McKinsey & Company. Battery 2030: Resilient, sustainable, and                    m49/overview/ (1999).
+      circular. McKinsey & Company https://www.mckinsey.com/                       38. Energy Institute. Statistical Review of World Energy 2023. https://
+      industries/automotive-and-assembly/our-insights/battery-2030-                    www.energyinst.org/statistical-review/resources-and-data-
+      resilient-sustainable-and-circular (2023).                                       downloads (2023).
+
+
+
+Communications Earth & Environment | (2024)5:503                                                                                                              10
+https://doi.org/10.1038/s43247-024-01667-2                                                                                                             Article
+
+39. DOE Ofﬁce of Electricity. DOE Global Energy Storage Database.               Competing interests
+    https://sandia.gov/ess-ssl/gesdb/public/index.html (2022).                  The authors declare no competing interests.
+40. SHELL. India: Transforming to a Net-Zero Emissions Energy
+    System. (2021).
+41. Greens/European Free Alliance Group and Öko-Institut e.V. The Vision        Additional information
+    Scenario for the European Union 2017 Update for the EU-28. http://          Supplementary information The online version contains
+    extranet.greens-efa-service.eu/public/media/ﬁle/1/5491 (2018).              supplementary material available at
+42. SDSN. America’s Zero Carbon Action Plan. https://irp-cdn.                   https://doi.org/10.1038/s43247-024-01667-2.
+    multiscreensite.com/6f2c9f57/ﬁles/uploaded/zero-carbon-action-
+    plan.pdf (2020).                                                            Correspondence and requests for materials should be addressed to
+43. Kejun, J. et al. Transition of the Chinese Economy in the Face of Deep      Yifan Gu.
+    Greenhouse Gas Emissions Cuts in the Future. Asian Economic Policy
+    Rev. 16, 142–162 (2021).                                                    Peer review information Communications Earth & Environment thanks the
+44. Swain, B. Recovery and recycling of lithium: A review. Sep Purif.           anonymous reviewers for their contribution to the peer review of this work.
+    Technol. 172, 388–403 (2017).                                               Primary Handling Editors: Sadia Ilyas and Carolina Ortiz Guerrero. A peer
+45. Commission, E., Directorate-General for Internal Market                     review ﬁle is available.
+    Entrepreneurship and SMEs, I., Grohol, M. & Veeh, C. Study on the
+    Critical Raw Materials for the EU 2023 – Final Report. (Publications        Reprints and permissions information is available at
+    Ofﬁce of the European Union, 2023). https://doi.org/10.2873/725585.         http://www.nature.com/reprints
+46. Li, H. Practical Evaluation of Li-Ion Batteries. Joule 3, 911–914 (2019).
+47. Cao, W., Zhang, J. & Li, H. Batteries with high theoretical energy          Publisher’s note Springer Nature remains neutral with regard to
+    densities. Energy Storage Mater. 26, 46–55 (2020).                          jurisdictional claims in published maps and institutional afﬁliations.
+48. Duffner, F. et al. Post-lithium-ion battery cell production and its
+    compatibility with lithium-ion cell production infrastructure. Nat.         Open Access This article is licensed under a Creative Commons
+    Energy 6, 123–134 (2021).                                                   Attribution-NonCommercial-NoDerivatives 4.0 International License,
+49. The European Parliament. Regulation (EU) 2023/1542 of the European          which permits any non-commercial use, sharing, distribution and
+    Parliament and of the Council of 12 July 2023 concerning batteries          reproduction in any medium or format, as long as you give appropriate
+    and waste batteries. EU (2023).                                             credit to the original author(s) and the source, provide a link to the Creative
+                                                                                Commons licence, and indicate if you modiﬁed the licensed material. You
+Acknowledgements                                                                do not have permission under this licence to share adapted material
+The authors gratefully acknowledge the ﬁnancial support from National           derived from this article or parts of it. The images or other third party
+Natural Science Foundation of China (52070007) and the Changzhou                material in this article are included in the article’s Creative Commons
+Leading Innovative Talent Introduction and Cultivation Project                  licence, unless indicated otherwise in a credit line to the material. If material
+(CQ20220070).                                                                   is not included in the article’s Creative Commons licence and your intended
+                                                                                use is not permitted by statutory regulation or exceeds the permitted use,
+Author contributions                                                            you will need to obtain permission directly from the copyright holder. To
+G.Y., and W.Y. led the project and conceived the original idea. G.Y. and Y.Q.   view a copy of this licence, visit http://creativecommons.org/licenses/by-
+designed the research. Y.Q., Z.M. and Y.M. developed the model, ran the         nc-nd/4.0/.
+simulation, drew the ﬁgures and paper. W.Y. and H.G. enhanced the discussion.
+All authors analyzed the results and contributed to writing this paper.         © The Author(s) 2024
+
+
+
+
+Communications Earth & Environment | (2024)5:503                                                                                                              11
+
