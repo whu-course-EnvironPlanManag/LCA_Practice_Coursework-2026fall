@@ -1,0 +1,3 @@
+reportlab
+pypdfium2
+Pillow

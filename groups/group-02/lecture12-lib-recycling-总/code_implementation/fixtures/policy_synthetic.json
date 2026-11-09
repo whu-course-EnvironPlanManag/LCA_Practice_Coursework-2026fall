@@ -1,0 +1,102 @@
+[
+  {
+    "data_status": "synthetic_test_only",
+    "evaluation_date": "2026-11-03",
+    "route": "smelting",
+    "metals_present": [
+      "Li",
+      "Ni",
+      "Co",
+      "Mn",
+      "Cu",
+      "Al"
+    ],
+    "eu_material_recovery_scope": false,
+    "eu_new_battery_scope": false,
+    "produces_lithium_carbonate": true,
+    "metrics": {
+      "li_smelting_recovery": 0.85,
+      "ni_smelting_recovery": 0.98,
+      "co_smelting_recovery": 0.98,
+      "mn_smelting_recovery": 0.98,
+      "cu_recovery": 0.98,
+      "al_recovery": 0.98,
+      "electrode_powder_recovery": 0.98,
+      "powder_al_impurity": 0.014,
+      "powder_cu_impurity": 0.014,
+      "fluorine_fixation": 0.995,
+      "lce_energy_kgce_per_t": 2300,
+      "process_wastewater_reuse": 0.8,
+      "recycling_capacity_t_per_year": 5000,
+      "rd_revenue_fraction": 0.03
+    },
+    "case_id": "rough_fail"
+  },
+  {
+    "data_status": "synthetic_test_only",
+    "evaluation_date": "2026-11-03",
+    "route": "smelting",
+    "metals_present": [
+      "Li",
+      "Ni",
+      "Co",
+      "Mn",
+      "Cu",
+      "Al"
+    ],
+    "eu_material_recovery_scope": false,
+    "eu_new_battery_scope": false,
+    "produces_lithium_carbonate": true,
+    "metrics": {
+      "li_smelting_recovery": 0.9,
+      "ni_smelting_recovery": 0.98,
+      "co_smelting_recovery": 0.98,
+      "mn_smelting_recovery": 0.98,
+      "cu_recovery": 0.98,
+      "al_recovery": 0.98,
+      "electrode_powder_recovery": 0.98,
+      "powder_al_impurity": 0.014,
+      "powder_cu_impurity": 0.014,
+      "fluorine_fixation": 0.995,
+      "lce_energy_kgce_per_t": 2199,
+      "process_wastewater_reuse": 0.9,
+      "recycling_capacity_t_per_year": 5000,
+      "rd_revenue_fraction": 0.03
+    },
+    "case_id": "conventional_pass"
+  },
+  {
+    "data_status": "synthetic_test_only",
+    "evaluation_date": "2026-11-03",
+    "route": "repair",
+    "metals_present": [
+      "Li",
+      "Ni",
+      "Co",
+      "Mn",
+      "Cu",
+      "Al"
+    ],
+    "eu_material_recovery_scope": false,
+    "eu_new_battery_scope": false,
+    "produces_lithium_carbonate": false,
+    "metrics": {
+      "li_smelting_recovery": 0.9,
+      "ni_smelting_recovery": 0.98,
+      "co_smelting_recovery": 0.98,
+      "mn_smelting_recovery": 0.98,
+      "cu_recovery": 0.98,
+      "al_recovery": 0.98,
+      "electrode_powder_recovery": 0.98,
+      "powder_al_impurity": 0.014,
+      "powder_cu_impurity": 0.014,
+      "fluorine_fixation": 0.995,
+      "lce_energy_kgce_per_t": 2199,
+      "process_wastewater_reuse": 0.9,
+      "recycling_capacity_t_per_year": 5000,
+      "rd_revenue_fraction": 0.03,
+      "repair_material_recovery": 0.995
+    },
+    "case_id": "advanced_repair_pass"
+  }
+]

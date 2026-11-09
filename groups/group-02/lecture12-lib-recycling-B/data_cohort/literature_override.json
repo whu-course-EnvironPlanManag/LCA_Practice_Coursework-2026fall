@@ -1,0 +1,182 @@
+{
+  "dataset": {
+    "document_id": "B_literature_override_v1",
+    "title": "成员 B · 文献迁移补充数据（补齐 A 所缺分支指标并标出来源）",
+    "schema_version": "1.0",
+    "status": "literature_transfer_not_formal",
+    "prepared_by": "成员 B（LCA 环境维度）",
+    "consumed_by": [
+      "code_implementation/literature_override.py",
+      "code_implementation/c_interface.py（USE_LITERATURE_OVERRIDE）",
+      "code_implementation/scenario_analysis.py（双情景 result_grade=literature）",
+      "code_implementation/optimization.py（文献vs阈值诊断图 + B-4 标题标注）"
+    ],
+    "boundary_note": "文献值为『文献/工程迁移情景』，非成员 A 厂房实测、非成员 C 正式 TEA；结果显式标记 literature，不得与 A 实测或 C 正式 TEA 混淆。",
+    "adoption_rule": "不覆盖 A/C 只读快照；作为独立 override 层，仅经 USE_LITERATURE_OVERRIDE 开关启用。"
+  },
+
+  "missing_inputs_resolved": [
+    {
+      "a_input_id": "M02_ACTUAL",
+      "missing": "园区分体系黑粉捕集率（A 无实测）",
+      "literature_value": 0.9328,
+      "unit": "fraction（回收黑粉 / 可回收黑粉基准）",
+      "source_id": "NEW-MECH2026",
+      "source_url": "https://www.sciencedirect.com/science/article/pii/S258900422603110X",
+      "locator": "Table 1（RouteEV I）；STAR Methods Black mass mechanical separation",
+      "transfer_assumption": "同源 EV 模块手工拆解中试（13 kg/批、100 kg/h）总黑粉捕集率移用于 JR 组分库存；忽略放大效应；对 LFP 属跨体系代理。备选 RouteEV II=0.8353 另列不平均。",
+      "adopted_in": "electrode_powder_recovery（忠实情景）"
+    },
+    {
+      "a_input_id": "M05_PRODUCTS / M05_LI_PARTITIONS",
+      "missing": "电池级 Li2CO3 / 各元素盐收率与流向（A 无实测出货/分配）",
+      "literature_value": { "Li": 0.90, "Ni": 0.98, "Co": 0.98, "Mn": 0.98, "Cu": 0.90, "Al": 0.90 },
+      "unit": "fraction（全路线默认总回收率，按进料电芯物质量）",
+      "source_id": "SRC043",
+      "source_url": "https://publications.anl.gov/anlpubs/2019/07/153050.pdf",
+      "locator": "Table 12（印刷 p28 / PDF42）；Table 10 活动量（p26 / PDF40）",
+      "transfer_assumption": "ANL EverBatt 通用电芯级湿法路线默认值；非国内工业实测、非最优技术；是全路线总回收率，不得再叠乘独立黑粉损失。Ni/Co/Mn/Li 与 2024 规范一致，Cu/Al 仅 0.90（低于任务书 0.98）。",
+      "adopted_in": "li/ni/co/mn/cu/al_smelting_recovery"
+    },
+    {
+      "a_input_id": "M05_LI_PARTITIONS（LFP 路线）",
+      "missing": "LFP 粉料 Li 各流向分配",
+      "literature_value": 0.8177676537585421,
+      "unit": "Li 进入 Li2CO3 的占比（Li2CO3 去向比）",
+      "source_id": "SRC021",
+      "source_url": "https://hgxb.cip.com.cn/CN/10.11949/0438-1157.20240004",
+      "locator": "表 6（粉料 Li 87.8kg → Li2CO3 71.8kg、Li3PO4 10.4kg）；煅烧后浸出率 0.976（表 2）",
+      "transfer_assumption": "LFP 中试批次（2 t 废粉）；0.976 是煅烧后浸出率，非全链总收率；Li2CO3 去向比≠总 Li 回收率（Li3PO4 另 0.118），不得与 JR/LS 不同品位粉料混用。",
+      "adopted_in": "参考/备选，不直接改写 li_smelting_recovery（保持 ANL 0.90 为忠实基线）"
+    },
+    {
+      "a_input_id": "M08_STEAM / M08_ELECTRIC / M08_WATER（分线能水）",
+      "missing": "分线电耗、蒸汽压力/温度、分线用水",
+      "literature_value": {
+        "electricity_kwh_per_t_cell": 34.72222222222222,
+        "natural_gas_MJ_per_t_cell": 2500,
+        "diesel_MJ_per_t_cell": 600,
+        "water_m3_per_t_cell": 3.785411784,
+        "reagents_kg_per_kg_cell": { "H2SO4": 1.08, "H2O2": 0.366, "NaOH": 0.561, "HCl": 0.012, "NH4OH": 0.031, "Na2CO3": 0.02 }
+      },
+      "unit": "per 1 kg 电芯（Table 10 通用默认）",
+      "source_id": "SRC043",
+      "source_url": "https://publications.anl.gov/anlpubs/2019/07/153050.pdf",
+      "locator": "Table 10（印刷 p26 / PDF40）；电芯基准 p5 / PDF19",
+      "transfer_assumption": "通用电芯级默认，非整包、非本园区实测；试剂商业浓度未交代处不擅自替换为 98% 酸/某浓度液碱；仅作独立 NMC 参考，不叠价本厂前处理。",
+      "adopted_in": "参考（活动量独立参考，未并入正式 build_activities 以避重复计量）"
+    },
+    {
+      "a_input_id": "M03_COMPAT / M05_PRODUCTS（LFP 粉料化验与产物）",
+      "missing": "JR 产粉与湿法入料同口径化验/含水、产品纯度/合格率",
+      "literature_value": {
+        "powder_H2O": 0.0215,
+        "powder_Li": 0.024155,
+        "powder_Fe": 0.151873,
+        "powder_P": 0.085381,
+        "powder_C": 0.45537,
+        "crude_Li2CO3_moisture": 0.20,
+        "crude_Li2CO3_dry_purity": 0.99,
+        "FePO4_slag_moisture": 0.40,
+        "FePO4_slag_dry_purity": 0.99
+      },
+      "unit": "kg/kg 粉料（as-received 假设）；产品含水/干纯度 fraction",
+      "source_id": "SRC040",
+      "source_url": "https://hbj.yueyang.gov.cn/uploadfiles/202312/2023120609494581990.pdf",
+      "locator": "表 3.5-4（p76/PDF88，粉料元素）；表 3.4-1（p65/PDF77，粗 Li2CO3 / FePO4 渣）",
+      "transfer_assumption": "朗赛 EIA 设计值，非宜昌实测；其余元素干/湿基未明，取 as-received 为显式假设；产品为中间粗品，非电池级可售达标的直接证据。",
+      "adopted_in": "参考（不声明为 JR/LS 同口径匹配）"
+    },
+    {
+      "a_input_id": "M01_REUSE_SALE / M10_ALLOCATION / M13_FACTORS",
+      "missing": "再使用 SOH/筛选率、多产品分配、因子版本",
+      "literature_value": null,
+      "source_id": null,
+      "note": "本轮未获可作本园区证据的文献值；SOH/筛选率与分配口径需 A/C 联合决策，禁止以阈值或无依据精制率强行补齐。",
+      "adopted_in": "无（保持 UNKNOWN/未闭合）"
+    }
+  ],
+
+  "branch_metrics_faithful": {
+    "label": "忠实文献值（cu/al=0.90、电极粉=0.9328，诚实触发 policy FAIL，无可行性）",
+    "metrics": {
+      "li_smelting_recovery": 0.90,
+      "ni_smelting_recovery": 0.98,
+      "co_smelting_recovery": 0.98,
+      "mn_smelting_recovery": 0.98,
+      "cu_recovery": 0.90,
+      "al_recovery": 0.90,
+      "electrode_powder_recovery": 0.9328,
+      "powder_al_impurity": 0.01,
+      "powder_cu_impurity": 0.01,
+      "fluorine_fixation": 0.995,
+      "process_wastewater_reuse": 0.90,
+      "repair_material_recovery": 0.99,
+      "rd_revenue_fraction": 0.03
+    },
+    "non_literature_fields": ["powder_al_impurity", "powder_cu_impurity", "fluorine_fixation", "process_wastewater_reuse", "repair_material_recovery", "rd_revenue_fraction"],
+    "non_literature_note": "上述字段无文献证据，保留 2024 规范/任务书边界代理（非文献、非实测），仅用于忠实情景的对照展示。"
+  },
+
+  "branch_metrics_proxy": {
+    "label": "混合口径（Li/Ni/Co/Mn=ANL 真文献值；cu/al/电极粉=规范阈值代理，明示非文献）",
+    "metrics": {
+      "li_smelting_recovery": 0.90,
+      "ni_smelting_recovery": 0.98,
+      "co_smelting_recovery": 0.98,
+      "mn_smelting_recovery": 0.98,
+      "cu_recovery": 0.98,
+      "al_recovery": 0.98,
+      "electrode_powder_recovery": 0.98,
+      "powder_al_impurity": 0.01,
+      "powder_cu_impurity": 0.01,
+      "fluorine_fixation": 0.995,
+      "process_wastewater_reuse": 0.90,
+      "repair_material_recovery": 0.99,
+      "rd_revenue_fraction": 0.03
+    },
+    "non_literature_fields": ["cu_recovery", "al_recovery", "electrode_powder_recovery", "powder_al_impurity", "powder_cu_impurity", "fluorine_fixation", "process_wastewater_reuse", "repair_material_recovery", "rd_revenue_fraction"],
+    "non_literature_note": "cu/al/电极粉取 CN2024 规范阈值 0.98 作代理（非文献实测）；Li/Ni/Co/Mn 取 ANL 表12 文献值。"
+  },
+
+  "diagnostic_vs_threshold": [
+    { "metric": "li_smelting_recovery", "label": "锂回收率", "literature": 0.90, "threshold": 0.90, "op": ">=", "source_id": "SRC043" },
+    { "metric": "ni_smelting_recovery", "label": "镍回收率", "literature": 0.98, "threshold": 0.98, "op": ">=", "source_id": "SRC043" },
+    { "metric": "co_smelting_recovery", "label": "钴回收率", "literature": 0.98, "threshold": 0.98, "op": ">=", "source_id": "SRC043" },
+    { "metric": "mn_smelting_recovery", "label": "锰回收率", "literature": 0.98, "threshold": 0.98, "op": ">=", "source_id": "SRC043" },
+    { "metric": "cu_recovery", "label": "铜回收率", "literature": 0.90, "threshold": 0.98, "op": ">=", "source_id": "SRC043" },
+    { "metric": "al_recovery", "label": "铝回收率", "literature": 0.90, "threshold": 0.98, "op": ">=", "source_id": "SRC043" },
+    { "metric": "electrode_powder_recovery", "label": "电极粉捕集率", "literature": 0.9328, "threshold": 0.98, "op": ">=", "source_id": "NEW-MECH2026" }
+  ],
+
+  "sources": [
+    {
+      "source_id": "SRC043",
+      "title": "EverBatt: A Closed-loop Battery Recycling Cost and Environmental Impacts Model",
+      "url": "https://publications.anl.gov/anlpubs/2019/07/153050.pdf",
+      "citation": "DAI Q, SPANGENBERGER J, AHMED S, et al. EverBatt: A Closed-loop Battery Recycling Cost and Environmental Impacts Model: ANL-19/16[R/OL]. Argonne National Laboratory, 2019. DOI:10.2172/1530874.",
+      "used_for": "全路线默认回收率（Table 12）与电芯级活动量（Table 10）"
+    },
+    {
+      "source_id": "NEW-MECH2026",
+      "title": "Baseline techno-economic and life cycle assessment of black mass production",
+      "url": "https://www.sciencedirect.com/science/article/pii/S258900422603110X",
+      "citation": "YINGNAKORN T, KANSOMKET C, LONGBUTSRI C, et al. Baseline techno-economic and life cycle assessment of black mass production[J]. iScience, 2026, 29(10):117729. DOI:10.1016/j.isci.2026.117729.",
+      "used_for": "黑粉捕集率（EV I 0.9328 / EV II 0.8353）"
+    },
+    {
+      "source_id": "SRC040",
+      "title": "湖南朗赛废旧磷酸铁锂电池绿色高效循环利用项目环境影响报告书",
+      "url": "https://hbj.yueyang.gov.cn/uploadfiles/202312/2023120609494581990.pdf",
+      "citation": "湖南朗赛科技有限公司. 湖南朗赛废旧磷酸铁锂电池绿色高效循环利用项目环境影响报告书[R/OL]. 2023.",
+      "used_for": "LFP 粉料化验、粗 Li2CO3/FePO4 渣含水与纯度、分线用水/蒸汽/试剂"
+    },
+    {
+      "source_id": "SRC021",
+      "title": "废旧磷酸铁锂粉料综合回收中试研究",
+      "url": "https://hgxb.cip.com.cn/CN/10.11949/0438-1157.20240004",
+      "citation": "江洋, 彭长宏, 陈伟, 等. 废旧磷酸铁锂粉料综合回收中试研究[J]. 化工学报, 2024, 75(6): 2353-2361. DOI:10.11949/0438-1157.20240004.",
+      "used_for": "LFP 中试 Li 流向（Li2CO3 去向比 0.817768、煅烧后浸出率 0.976）"
+    }
+  ]
+}

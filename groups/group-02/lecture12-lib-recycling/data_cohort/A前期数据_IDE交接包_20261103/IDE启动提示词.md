@@ -1,0 +1,9 @@
+请把本JSON作为A成员阶段一数据交接文件，先读conventions、case_definition、baseline_inputs、calculation_gates，再建中期代码。
+先实现数据加载/校验、gross来料及组分存量、预处理和Li流股的数据结构、缺失输入报告；mfa_model.py与engineering_plan.py分开。
+只从baseline_inputs读取已选的规划设定和前端代理。source/evidence中的数值不是自动启用的输入。候选参数active均为false；选用时另写本组决策/参数覆盖文件，保留来源和选择理由，不修改本交接快照。
+所有比例均按0–1读取；raw evidence的百分数不可再当fraction。完整pack/cell组分可检查sum≈1，粉料部分元素清单不能强行归一化；PO4不当P。
+读取null必须报告缺失，禁止fillna(0)、缺收率就设100%、循环水直接当耗水、kgce直接换成电耗、把回收率阈值当实际收率。
+received_component_inventory只表示进厂来料构成的规划估算；full_plant_li_mfa与其名称/输出必须分开。M01–M05未解决时完整Li衡算应返回not_ready与原因，不能输出PASS或假定残渣量来填平。
+后续完整Li相对误差要求严格<0.0005（即0.05%）；若输入Li为0应报告不可定义，不除0。必须跟踪外加Li、产品及废液/渣/粉尘等，循环流不重复算外边界输入输出。
+不实现B负责的>=500工况寻优或C负责的政策引擎作为A的默认任务；保留接口。数据加载和完整性校验可以先验证；模型数值结论待相应calculation_gates就绪。
+不得将代理数据写成宜昌邦普实测，不覆盖原始文件，不执行外联、安装skill、克隆仓库或提交Git。

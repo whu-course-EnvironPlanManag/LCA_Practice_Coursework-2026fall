@@ -1,0 +1,132 @@
+{
+  "passed": true,
+  "check_count": 25,
+  "checks": [
+    {
+      "check": "68000=80000×0.85",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "设计/实际再生能力区分",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "实际质量分流守恒",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "JR整包和电芯完整组成均和为1",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "黑粉库存未称捕集量",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "捕集+非捕集库存守恒",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "捕集总量独立目标",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "EV I与II不平均",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "LS含水与纯度分开",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "LS Li到粗品表间推导",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "LS酸不同版本保留",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "LS年度蒸汽只列一条，旧LS_STEAM系数为同源别名不重复计量",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "LS单线电与精制产品仍缺失",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ANL电芯基不是整包基",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ANL电耗MJ到kWh",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ANL商品浓度未擅填",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "JIANG工序浸出率不是产品回收率",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "补充不自动激活任何来源工艺",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "新缺口全为null",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "原候选参数全部保持inactive",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "来源ID唯一",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "新数据所有数为有限数",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "所有来源引用可解析",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "B占位状态计数已核",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "原件快照本次构建前后未变",
+      "status": "PASS",
+      "detail": "仅覆盖input_snapshot列出的文件；未运行原目录生成入口"
+    }
+  ],
+  "limitations": "验证数据口径与算术/引用，未验证厂测收率、可售规格、完整LCA/LCOR或法律达标。C原有46项测试和dMFA93行内存复算另由只读审计核对。"
+}

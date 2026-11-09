@@ -1,0 +1,31 @@
+{
+  "entry_point": "yichang_dmfa_dataset.json",
+  "dataset_id": "YICHANG_DMFA_INTEGRATED_HANDOFF_20261103",
+  "files": [
+    {
+      "name": "IDE_数据接入提示词.md",
+      "bytes": 1525,
+      "sha256": "ba1d53517cd478867d215b383cb5f4692061b7df6c609f01afc5182fbd4105a8"
+    },
+    {
+      "name": "README_数据口径与使用顺序.md",
+      "bytes": 3829,
+      "sha256": "1d06a721c9aa5d9fc2d007959fc927bc7ba935df13cf138696ecce60faec7e21"
+    },
+    {
+      "name": "yichang_dmfa_dataset.json",
+      "bytes": 543091,
+      "sha256": "8664ee30c3de14fc08d186ed49e35e044e0b55d9cca5589bdcfe2ff36771b758"
+    },
+    {
+      "name": "yichang_dmfa_dataset.schema.json",
+      "bytes": 5746,
+      "sha256": "1faadcc156648742f3461d2ab0a7d3896f11edcbed59d08b2b588adbe5cf42e8"
+    },
+    {
+      "name": "校验报告.json",
+      "bytes": 4101,
+      "sha256": "a6ae7a23f825eeb6a3a0094ce4f0a3a3e12d59bf0c1813d6506712e5a9903e8a"
+    }
+  ]
+}

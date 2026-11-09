@@ -1,0 +1,15 @@
+﻿key,value,unit,attribute,note
+scenario_id,R1_PLANNING_20261104,-,情景假设,背景情景，automatically_adopted=false
+base_year_2025_install,10501.884741,t整包/a,文献迁移,沿用原 A 条件重建
+first_install_growth_rate,0.05,1/a,情景假设,5%/a
+future_LFP_share,0.867249613,1,情景假设,固定
+future_NMC_share,0.132750387,1,情景假设,固定
+vehicle_life_k,2.07,-,文献原值,Zhang 2025 SI Table 2
+vehicle_life_lambda,14.46,年,文献原值,Zhang 2025 SI Table 2
+collection_rate_c,0.8,1,情景假设,c=0.80
+vehicle_battery_independent,True,-,情景假设,相互独立
+broken_immediate_replace,True,-,情景假设,存续车辆失效包立即替换
+cross_city_migration,True,-,情景假设,不计迁移
+2025_end_stock_LFP,23774.21,t整包,情景重建,"99,750 辆车锚点，非宜昌实测库存"
+2025_end_stock_NMC,5360.48,t整包,情景重建,同上
+2025_end_stock_total,29134.69,t整包,情景重建,同上

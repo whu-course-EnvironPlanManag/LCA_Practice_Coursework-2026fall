@@ -1,0 +1,13 @@
+﻿module,status,blocking,conditions
+input_loading_and_provenance_validation,READY(conditional),—,—
+historical_vehicle_and_first_install_reconstruction,READY(conditional),—,YC_DMFA01_RECON_V2;A01—A10、A17—A19
+historical_first_service_cohort_retirement_and_stock,READY(conditional),—,显式选取EXP_V2_HLFP_WU_*情景;只解释2010—2025新车首装队列;不是全市所有电池在用存量
+conditional_formal_collection_of_first_service_exits,READY(conditional),—,显式选取C065/C085/C100;输出collected_after_first_service，不冒称全部送入再生
+legacy_cohort_release_2026_2040,READY(conditional),—,只计算2010—2025既有首装队列贡献;未来新增排除是队列边界，不代表真实城市未来流入为0
+LFP_only_Li_cohort_accounting,READY(conditional),—,使用每个车型配套的Li强度;输出标记partial_LFP_only，不能当全市总Li
+NMC622_NMC811_separate_flows_and_Li,BLOCKED,D06-NMC,—
+total_city_Li_inventory,BLOCKED,D06-NMC;D06-OTHER;D01-REP;D01-MIG;D05-FLEET,—
+full_city_forecast_2026_2040,BLOCKED,D01-FUT;D01-REP;D01-MIG;D05-FLEET,—
+city_to_park_feed,BLOCKED,D-PARK-LINK,—
+recycling_and_second_life_flows,BLOCKED,M01;D01-REP,原园区M01等缺参与新市域口径须匹配，不自动迁移
+spatial_network,BLOCKED,D07-SPATIAL,—

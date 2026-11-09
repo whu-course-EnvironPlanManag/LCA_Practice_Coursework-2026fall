@@ -1,0 +1,31 @@
+{
+  "date": "2026-11-03",
+  "primary_data_file": "a_phase1_ide_handoff.json",
+  "files": [
+    {
+      "file": "a_phase1_ide_handoff.json",
+      "bytes": 339693,
+      "sha256": "720add518d60da9232e269ba6def7a0030c841669710c25d883790ae608a0b2b"
+    },
+    {
+      "file": "a_phase1_ide_handoff.schema.json",
+      "bytes": 5690,
+      "sha256": "ad8400ef5d4c4ca46bb4ac2c612f8d4cb9e3ac9ba871c02016255e5a2baf4082"
+    },
+    {
+      "file": "IDE启动提示词.md",
+      "bytes": 1710,
+      "sha256": "5a496134a1270381d9dea4eefb1ebb608999fdb617b3129c7b4434cd5ee7d15e"
+    },
+    {
+      "file": "README_交给IDE前先读.md",
+      "bytes": 3171,
+      "sha256": "07a0db069dc9eef7f1497c878167155162db39afe57089a9120f04b44df1281e"
+    },
+    {
+      "file": "数据交接校验结果.json",
+      "bytes": 5230,
+      "sha256": "ecc10270cd2a577bafb4d0dcd0510d1f8abdb8afa47d37040727f302659349cd"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+﻿item_id,block,item_name,chemistry,quantity_kind,quantity_per_year,unit,value_basis,attribute,status,formula,source,note
+S-01,SPLIT,梯次候选来料（整包当量）,,input_allocation,8500.0,t_pack/a,整包质量,组内设定,conditional_group_assumption,10000×0.85,组内设定,
+S-02,SPLIT,梯次筛选通过率 q,,scenario_value,0.9,1,候选旧电池整包当量,情景假设,scenario_assumption,情景假设,无本园区实测,
+S-03,SPLIT,重组保留比例 y,,scenario_value,0.97,1,通过筛选旧电池整包当量,情景假设,scenario_assumption,情景假设,无本园区实测,
+S-04,SPLIT,保留电池平均 SOH,,scenario_value,0.8,1,容量情景,情景假设,scenario_assumption,容量情景非筛选合格率,无本园区实测,
+S-05,SPLIT,筛选弃用并返回再生,,input_allocation,850.0,t_pack/a,整包当量,情景假设,scenario_value,8500×(1−q),情景假设,返回再生线
+S-06,SPLIT,重组弃用并返回再生,,input_allocation,229.5,t_pack/a,整包当量,情景假设,scenario_value,8500×q×(1−y),情景假设,返回再生线
+S-07,SPLIT,梯次保留旧电池整包当量,,recovered_intermediate,7420.5,t_pack/a,整包当量（非重组后成品质量）,情景假设,scenario_value,8500×q×y,情景假设,不是加壳重组后成品质量
+S-08,SPLIT,再生整包当量,,input_allocation,60579.5,t_pack/a,整包质量,文献迁移,scenario_value,68000−保留,文献迁移,R1 口径
+S-09,SPLIT,再生整包当量 LFP,LFP,input_allocation,36347.7,t_pack/a,整包质量,组内设定,scenario_value,60579.5×0.60,组内设定,
+S-10,SPLIT,再生整包当量 未细分三元,MIXED_NMC_UNSPECIFIED,input_allocation,24231.8,t_pack/a,整包质量,组内设定,scenario_value,60579.5×0.40,组内设定,
+LP-01,LFP_MAIN,LFP 电芯（拆解后）,LFP,input_allocation,24087.62079,t_cell/a,整包×0.6627,文献原值,literature_transfer,36347.70×0.6627,LS23 表3.4-3 比例代理（湖南金瑞）,整包到电芯比例来自金瑞，电芯之后来自朗赛
+LP-02,LFP_MAIN,LFP 粉料（总粉）,LFP,input_allocation,12043.810395,t_powder/a,电芯×0.50,文献原值,literature_transfer,24087.62×0.50,LS23 原生粉产率,0.50 是 t总粉/t电芯产率，不是黑粉捕集效率
+LP-03,LFP_MAIN,粗 Li2CO3（湿产品）,LFP,recovered_intermediate,1710.95,t/a,湿基,文献迁移,recovered_intermediate,迁移,LS23 表3.4-1,水分 0.20、干基纯度 0.99；非合格电池级成品
+LP-04,LFP_MAIN,粗 Li2CO3 折干纯,LFP,recovered_intermediate,1355.08,t/a,干基,文献迁移,recovered_intermediate,湿×0.80×0.99,LS23 表3.4-1,与 LP-03 同一物流不同表述，不重复计产量/收入
+LP-05,LFP_MAIN,FePO4 渣（湿产品）,LFP,recovered_intermediate,9027.87,t/a,湿基,文献迁移,recovered_intermediate,迁移,LS23 表3.4-1,水分 0.40、干基纯度 0.99；非电池级磷酸铁
+LP-06,LFP_MAIN,FePO4 渣折干纯,LFP,recovered_intermediate,5362.56,t/a,干基,文献迁移,recovered_intermediate,湿×0.60×0.99,LS23 表3.4-1,与 LP-05 同一物流不同表述
+LP-07,LFP_MAIN,铜箔产品,LFP,recovered_intermediate,3341.24,t/a,Cu 质量分数 0.97,文献迁移,recovered_intermediate,迁移,LS23 表3.4-1,
+LP-08,LFP_MAIN,铝箔产品,LFP,recovered_intermediate,1431.96,t/a,Al 质量分数 0.97,文献迁移,recovered_intermediate,迁移,LS23 表3.4-1,
+AS-01,LFP_ASSAY,粉料水分,LFP,scenario_value,0.0215,1,收到基,文献原值,literature_value,原值 2.15%,LS23 表3.5-4,
+AS-02,LFP_ASSAY,粉料元素 C 质量分数,LFP,scenario_value,0.45537,1,元素干湿基未明确,文献原值,literature_value,原值 45.5370%,LS23 表3.5-4,
+AS-03,LFP_ASSAY,粉料元素 Li 质量分数,LFP,scenario_value,0.024155,1,按收到基解释,文献原值,literature_value,原值 2.4155%,LS23 表3.5-4,本情景按收到基，不扣水不归一化
+AS-04,LFP_ASSAY,粉料元素 F 质量分数,LFP,scenario_value,0.0023452,1,由 11.726 t F/5000 t 粉反推,文献迁移,literature_value,元素平衡推导,LS23 表4.2-3/印刷页132,不与他项合称同份化验
+AS-05,LFP_ASSAY,湿法粉料胶黏剂残留,LFP,null_missing,,1,无,无,null_missing,,,电芯入口胶黏剂含量不能代替粉中残留
+LI-01,LFP_LI,粉料 Li 输入,LFP,scenario_value,290.91824,t元素Li/a,粉料×0.024155,文献迁移,scenario_value,12043.81×0.024155,LS23 表3.5-4,
+LI-02,LFP_LI,粗碳酸锂中 Li,LFP,scenario_value,254.54714,t元素Li/a,干纯 Li2CO3×0.187843,文献迁移,scenario_value,迁移,LS23,
+LI-03,LFP_LI,浸出渣（磷铁富渣）夹带 Li,LFP,element_loss_stream,14.54844,t元素Li/a,损耗×0.4,情景假设,scenario_loss_assumption,36.37110×0.4,本研究占位拆分,损耗比例是显式标注的情景假设，非实测损耗分布
+LI-04,LFP_LI,洗涤废水 Li,LFP,element_loss_stream,11.638752,t元素Li/a,损耗×0.32,情景假设,scenario_loss_assumption,36.37110×0.32,本研究占位拆分,损耗比例是显式标注的情景假设，非实测损耗分布
+LI-05,LFP_LI,负极碳渣/滤渣夹带 Li,LFP,element_loss_stream,7.27422,t元素Li/a,损耗×0.2,情景假设,scenario_loss_assumption,36.37110×0.2,本研究占位拆分,损耗比例是显式标注的情景假设，非实测损耗分布
+LI-06,LFP_LI,其他未定位损耗 Li,LFP,element_loss_stream,2.909688,t元素Li/a,损耗×0.08,情景假设,scenario_loss_assumption,36.37110×0.08,本研究占位拆分,损耗比例是显式标注的情景假设，非实测损耗分布
+RG-01,LFP_REAGENT,98% 硫酸（主情景）,LFP,scenario_value,6781.3,t商品/a,0.5630527 t商品/t粉,文献迁移,scenario_value,迁移,LS23 表3.5-1,与 RG-02 并列不平均
+RG-02,LFP_REAGENT,98% 硫酸（独立备选）,LFP,scenario_value,5903.88,t商品/a,0.4902 t商品/t粉,文献迁移,scenario_value,迁移,LS23 §4.3.1.2,与 RG-01 并列不平均；仅适用该 LFP 粉料路线
+RG-03,LFP_REAGENT,32% 液碱（预处理+湿法合计）,LFP,scenario_value,19317.51,t商品/a,商品吨,文献迁移,scenario_value,迁移,LS23 表3.5-1,商品吨与有效吨须成对
+RG-04,LFP_REAGENT,92% 氧化钙（合计）,LFP,scenario_value,727.45,t商品/a,商品吨,文献迁移,scenario_value,迁移,LS23 表3.5-1,
+RG-05,LFP_REAGENT,85% 磷酸,LFP,scenario_value,1183.17,t商品/a,商品吨,文献迁移,scenario_value,迁移,LS23 表3.5-1,
+RG-06,LFP_REAGENT,99% 铁粉,LFP,scenario_value,158.26,t商品/a,商品吨,文献迁移,scenario_value,迁移,LS23 表3.5-1,
+NC-NMC622-01,NMC,三元电芯（拆解后）,MIXED_NMC_UNSPECIFIED,input_allocation,15378.954188,t_cell/a,整包×0.63466,文献原值,literature_transfer,24231.80×0.63466,JR23 比例 + ANL19 组成,两技术端点情景共用同一电芯量
+NC-NMC622-02,NMC,纯 Li2CO3 当量（NMC622）,MIXED_NMC_UNSPECIFIED,reference_material_ceiling,1709.26,t/a,正极 Li 回收后折算,文献迁移,reference_material_ceiling,Li回收×M_LCE/2M_Li,ANL19 Table 4/12,理论当量，不等于合格商品盐产量
+NC-NMC622-03,NMC,回收 Ni（NMC622）,MIXED_NMC_UNSPECIFIED,reference_material_ceiling,1774.13,t元素/a,元素基,文献迁移,reference_material_ceiling,电芯×wNi×0.98,ANL19 Table 4/12,
+NC-NMC622-04,NMC,回收 Co（NMC622）,MIXED_NMC_UNSPECIFIED,reference_material_ceiling,593.8,t元素/a,元素基,文献迁移,reference_material_ceiling,电芯×wCo×0.98,ANL19 Table 4/12,
+NC-NMC622-05,NMC,回收 Mn（NMC622）,MIXED_NMC_UNSPECIFIED,reference_material_ceiling,553.54,t元素/a,元素基,文献迁移,reference_material_ceiling,电芯×wMn×0.98,ANL19 Table 4/12,
+NC-NMC622-06,NMC,回收 Cu（NMC622）,MIXED_NMC_UNSPECIFIED,reference_material_ceiling,2228.41,t元素/a,元素基,文献迁移,reference_material_ceiling,电芯×wCu×0.90,ANL19 Table 4/12,
+NC-NMC622-07,NMC,回收 Al（NMC622）,MIXED_NMC_UNSPECIFIED,reference_material_ceiling,1162.65,t元素/a,元素基,文献迁移,reference_material_ceiling,电芯×wAl×0.90,ANL19 Table 4/12,
+NC-NMC622-08,NMC,沉锂模块 Na2CO3 商品（NMC622）,MIXED_NMC_UNSPECIFIED,scenario_value,2724.26,t商品/a,碳酸根全由 Na2CO3 提供,情景假设,scenario_value,纯LCE×105.988/73.888×1.10/0.99,新增反应模块,替换原碳酸钠项，不重复添加，并同步核算新增钠与水
+NC-NMC811-01,NMC,三元电芯（拆解后）,MIXED_NMC_UNSPECIFIED,input_allocation,15378.954188,t_cell/a,整包×0.63466,文献原值,literature_transfer,24231.80×0.63466,JR23 比例 + ANL19 组成,两技术端点情景共用同一电芯量
+NC-NMC811-02,NMC,纯 Li2CO3 当量（NMC811）,MIXED_NMC_UNSPECIFIED,reference_material_ceiling,1634.75,t/a,正极 Li 回收后折算,文献迁移,reference_material_ceiling,Li回收×M_LCE/2M_Li,ANL19 Table 4/12,理论当量，不等于合格商品盐产量
+NC-NMC811-03,NMC,回收 Ni（NMC811）,MIXED_NMC_UNSPECIFIED,reference_material_ceiling,2262.39,t元素/a,元素基,文献迁移,reference_material_ceiling,电芯×wNi×0.98,ANL19 Table 4/12,
+NC-NMC811-04,NMC,回收 Co（NMC811）,MIXED_NMC_UNSPECIFIED,reference_material_ceiling,283.96,t元素/a,元素基,文献迁移,reference_material_ceiling,电芯×wCo×0.98,ANL19 Table 4/12,
+NC-NMC811-05,NMC,回收 Mn（NMC811）,MIXED_NMC_UNSPECIFIED,reference_material_ceiling,264.71,t元素/a,元素基,文献迁移,reference_material_ceiling,电芯×wMn×0.98,ANL19 Table 4/12,
+NC-NMC811-06,NMC,回收 Cu（NMC811）,MIXED_NMC_UNSPECIFIED,reference_material_ceiling,2173.05,t元素/a,元素基,文献迁移,reference_material_ceiling,电芯×wCu×0.90,ANL19 Table 4/12,
+NC-NMC811-07,NMC,回收 Al（NMC811）,MIXED_NMC_UNSPECIFIED,reference_material_ceiling,1134.97,t元素/a,元素基,文献迁移,reference_material_ceiling,电芯×wAl×0.90,ANL19 Table 4/12,
+NC-NMC811-08,NMC,沉锂模块 Na2CO3 商品（NMC811）,MIXED_NMC_UNSPECIFIED,scenario_value,2605.51,t商品/a,碳酸根全由 Na2CO3 提供,情景假设,scenario_value,纯LCE×105.988/73.888×1.10/0.99,新增反应模块,替换原碳酸钠项，不重复添加，并同步核算新增钠与水
+EN-01,ENERGY,LFP 组合电耗（α=0.50 分摊）,LFP,diagnostic,20291411.75,kWh/a,"11,232,000×分摊",情景假设,diagnostic,"11,232,000×[0.5×电芯/10000+0.5×粉料/10000]",LS23 表3.5-1,α=0.50 分摊假设；α=0/1 对应 13.53/27.06 GWh/a
+EN-02,ENERGY,LFP 湿法蒸汽（质量）,LFP,diagnostic,14148.77,t蒸汽/a,蒸汽质量,文献迁移,diagnostic,迁移,LS23 表3.5-1,热态及返凝未知，不转 MJ
+EN-03,ENERGY,LFP 预处理天然气,LFP,diagnostic,693723.48,Nm³/a,体积,文献迁移,diagnostic,迁移,LS23 预处理清单,不折 MJ
+EN-04,ENERGY,LFP 已列分线自来水补水,LFP,diagnostic,28566.06,m³/a,分线,文献迁移,diagnostic,迁移,LS23 §4.2.8.1,不含共享生活/检验用水
+EN-05,ENERGY,LFP 外供纯水,LFP,diagnostic,4204.65,m³/a,分列,文献迁移,diagnostic,迁移,LS23 §4.2.8.1,与自来水分列
+EN-06,ENERGY,LFP 已列相关排口废水小计,LFP,diagnostic,6825.04,m³/a,分列,文献迁移,diagnostic,迁移,LS23 §4.2.8.1,非全厂完整外排量
+EN-07,ENERGY,三元 ANL 文献电耗代理,MIXED_NMC_UNSPECIFIED,diagnostic,533991.46,kWh/a,0.125 MJ/kg 退役电芯年化,文献迁移,diagnostic,迁移,ANL19 Table 10,尚未复现 EverBatt 完整规模模型
+EN-08,ENERGY,三元 ANL 过程用水代理,MIXED_NMC_UNSPECIFIED,diagnostic,58215.67,m³/a,1 US gal/kg 退役电芯年化,文献迁移,diagnostic,迁移,ANL19 Table 10,
+EN-09,ENERGY,全厂完整能耗/水平衡,,null_missing,,-,无,无,null_missing,,,各分线量不相加后宣称全厂完整能耗/水平衡
+RU-01,REUSE,梯次测试电耗,,diagnostic,767207.02,kWh/a,8500×118×(8.72/11.4),文献迁移,diagnostic,8500×118×(8.72/11.4),JRC Table 7/10,仅覆盖测试活动，不代表完整梯次工厂能耗
+RU-02,REUSE,梯次交付可用容量,,recovered_intermediate,700495.2,kWh/a,7420.5×118×0.80,情景假设,scenario_value,7420.5×118×0.80,SOH=0.80 情景,当年交付可用容量，非年度供电量
