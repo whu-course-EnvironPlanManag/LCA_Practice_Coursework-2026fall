@@ -1,0 +1,14 @@
+record_id,source_type,title,url_or_path,used_for,locator,status,limitation
+SRC-A-R1,组内交接,A分工补充数据与建模依据——规划情景R1,D:\作业12\题录_202611031052.txt,物料流/梯次/产品/能耗/水,全文,组内设定+文献迁移,非企业实测
+SRC-LS23,公开环评,湖南朗赛废旧磷酸铁锂电池绿色高效循环利用项目环境影响报告书,https://hbj.yueyang.gov.cn/uploadfiles/202312/2023120609494581990.pdf,LFP产品产率/粉料组成/药剂/蒸汽/水/渣,表3.4-1/3.5-1/3.5-4/4.3-23,文献原值,设计值非运行值
+SRC-ANL19,公开报告,EverBatt: A Closed-loop Battery Recycling Cost and Environmental Impacts Model,https://publications.anl.gov/anlpubs/2019/07/153050.pdf,三元电芯组成/湿法药剂/回收率,Table 4/10/12,文献原值,通用模型非本厂
+SRC-B-EF,组内交接,B环境因子表,D:\作业12\lecture12-lib-recycling-B\lecture12-lib-recycling-B\data_cohort\environmental_factors.csv,电力/热力/药剂/运输/三废GWP与水,全表,参考值,部分为Ecoinvent/GREET通用值待核
+SRC-P1,期刊,Peiseler et al. Carbon footprint distributions of LIBs and materials,https://doi.org/10.1038/s41467-024-54634-y,原生锂盐GWP量级,Fig.1/2,文献原值,盐湖/锂辉石量级
+SRC-P2,期刊,Yao et al. Critically assessing sodium-ion technology roadmaps,https://doi.org/10.1038/s41560-025-01730-y,锂价情景,Fig.2/Suppl,文献原值,非回收成本
+SRC-P4,期刊,Machala et al. Life cycle comparison of industrial-scale recycling and mining,https://doi.org/10.1038/s41467-025-56063-x,工业回收与原生链对比,正文/Fig,文献原值,FU为NCA-eq
+SRC-P6,期刊,Ma et al. Pathway decisions for reuse and recycling of retired LIBs,https://doi.org/10.1038/s41467-024-52030-0,梯次/回收成本与碳足迹方法,Fig.2-5,文献原值,按kWh不可直接作LCOR
+SRC-POL-CN,政策文件,工信部新能源汽车废旧动力电池综合利用行业规范条件（2024年本）,https://www.miit.gov.cn/,锂/镍钴锰/铜铝/粉料/固氟/能耗/水/研发阈值,三（三）3,已核条款,行业引导性规范
+SRC-POL-EU,法规,Regulation (EU) 2023/1542,https://eur-lex.europa.eu/,材料回收率/再生含量,Art.8/Annex XII,已核条款,仅适用欧盟对象
+SRC-GB31573,标准,GB 31573-2015 无机化学工业污染物排放标准,—,含氟废水/排放,全文,标准,地方限值待核
+SRC-GBT2589,标准,GB/T 2589 综合能耗计算通则,—,折标系数,附录A,标准,—
+SRC-PRICE,组内报价,C经济参数与公开价格审查,D:\作业12\lecture12-lib-recycling\data_cohort\economic_parameters_revised_20261103.csv,38项价格/投资/人工,全表,规划参考价,未取得成交原件

@@ -1,0 +1,12 @@
+# B先读：C年度接口v2
+
+本包接入A_ABC_READONLY_SUPPLEMENT_20261103。A补充仍明确正式LCOR未就绪，不能把粗碳酸锂当电池级销量或将LS、ANL、JR拼成一条已确认物理链。旧包q=3000的297条partial LCOR仅保留历史演示，本轮不适用。
+
+1. 运行python run_annual_case.py（Python标准库）核对主case，结果应为NOT_READY、formal_result_eligible=false，并给出缺字段及479840000元/年已定价运行费用部分小计。该小计不是完整成本或利润。
+2. C_to_B_annual_bundle_v2.json含实际分配/物料、独立LS/ANL参考、年度case、费用映射、政策状态和剩余输入。PARK、LS、ANL是不同边界，不加总。
+3. C_to_B_existing_case_status_v2.json保留B原3267个case_id和五项参数；按ID连接同时验证参数。正式LCOR为空，不能导入为0，不进入正式可行前沿。未知结果请列未就绪/缺项，勿重启合成值或阈值填充。
+4. 函数annual_tea_interface.evaluate_annual_case(case)按传入的年度数量/价格重新调用C引擎；不读固定基准、不把参数变化忽略。quantity_per_year、unit_price须同商品单位，price_unit、currency、price_year逐项核对。revenue_items只有sale_status=saleable_confirmed_for_case的产品才能计收入。
+5. 完整规划case还需whole_boundary_activities_complete、saleable_product_quantities_complete、profile_compatibility_confirmed为true且所有字段齐全；data_status=confirmed_planning_case才进入确认规划结果。不能为了强行运行随意改true，须有完整年度清单及依据。允许有明示规划假设，不要求所有值厂测；合成联动测试始终不是正式结果。
+6. 政策调用请显式传包内policy_parameters.json路径；包内run_policy_checks.py已配置。不要凭设计能力通过或EV捕集率认定全项目合规。
+
+本轮已做两组年度输入变化测试，成本数量/产品价格改变时LCOR正确联动；详见测试日志。不代表本园区正式LCOR已有数值。

@@ -1,0 +1,88 @@
+{
+  "case_id": "SYNTHETIC_TEST_ONLY",
+  "data_status": "synthetic_test_only",
+  "currency": "CNY",
+  "price_year": 2026,
+  "functional_unit": "t_feed",
+  "feed_t_per_year": 100,
+  "fu_per_year": 100,
+  "discount_rate": 0,
+  "operating_years": 10,
+  "capex": 10000,
+  "cost_items": [
+    {
+      "name": "feed_purchase",
+      "category": "feedstock",
+      "quantity_per_year": 100,
+      "unit_price": 100,
+      "unit": "t_feed",
+      "source_id": "SYNTHETIC_TEST_ONLY"
+    },
+    {
+      "name": "transport",
+      "category": "transport",
+      "quantity_per_year": 100,
+      "unit_price": 10,
+      "unit": "t_feed",
+      "source_id": "SYNTHETIC_TEST_ONLY"
+    },
+    {
+      "name": "electricity",
+      "category": "utilities",
+      "quantity_per_year": 1000,
+      "unit_price": 1,
+      "unit": "kWh",
+      "source_id": "SYNTHETIC_TEST_ONLY"
+    },
+    {
+      "name": "reagents",
+      "category": "reagents",
+      "quantity_per_year": 10,
+      "unit_price": 100,
+      "unit": "t_reagent",
+      "source_id": "SYNTHETIC_TEST_ONLY"
+    },
+    {
+      "name": "labor",
+      "category": "labor",
+      "quantity_per_year": 1,
+      "unit_price": 1000,
+      "unit": "annual_budget",
+      "source_id": "SYNTHETIC_TEST_ONLY"
+    },
+    {
+      "name": "maintenance",
+      "category": "maintenance",
+      "quantity_per_year": 1,
+      "unit_price": 1000,
+      "unit": "annual_budget",
+      "source_id": "SYNTHETIC_TEST_ONLY"
+    },
+    {
+      "name": "pollution_control",
+      "category": "pollution_control",
+      "quantity_per_year": 1,
+      "unit_price": 1000,
+      "unit": "annual_budget",
+      "source_id": "SYNTHETIC_TEST_ONLY"
+    },
+    {
+      "name": "taxes_fees",
+      "category": "taxes_fees",
+      "quantity_per_year": 1,
+      "unit_price": 0,
+      "unit": "annual_budget",
+      "source_id": "SYNTHETIC_TEST_ONLY"
+    }
+  ],
+  "revenue_items": [
+    {
+      "name": "product",
+      "quantity_per_year": 10,
+      "unit_price": 2000,
+      "unit": "t_product",
+      "source_id": "SYNTHETIC_TEST_ONLY"
+    }
+  ],
+  "scenario_adjustments": []
+}

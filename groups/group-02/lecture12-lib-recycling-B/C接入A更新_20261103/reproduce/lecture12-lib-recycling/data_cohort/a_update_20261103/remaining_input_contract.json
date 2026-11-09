@@ -1,0 +1,80 @@
+[
+  {
+    "input_id": "M02_ACTUAL",
+    "value": null,
+    "missing": "园区分体系黑粉捕集率",
+    "what_is_now_available": "已有EV I实验代理/LS原生推导，实际厂测仍缺；核分母和胶黏剂范围"
+  },
+  {
+    "input_id": "M03_COMPAT",
+    "value": null,
+    "missing": "JR产粉与选定湿法入料的同口径化验/含水率",
+    "what_is_now_available": "LS有含水2.15%，不自动证明JR粉含水或元素干/湿基"
+  },
+  {
+    "input_id": "M05_PRODUCTS",
+    "value": null,
+    "missing": "最终电池级Li2CO3/FePO4、Ni/Co/Mn盐的质量/水合形态/纯度/合格率",
+    "what_is_now_available": "LS仅粗品中间物；ANL恢复率是全路线默认；不得把浸出97.6%当总收率"
+  },
+  {
+    "input_id": "M05_LI_PARTITIONS",
+    "value": null,
+    "missing": "各实际出厂/处置流股Li及连续工序分配",
+    "what_is_now_available": "JR平衡略、LS粉线保密，残渣水电解液Li仍未闭合"
+  },
+  {
+    "input_id": "M08_ELECTRIC",
+    "value": null,
+    "missing": "同工艺分线电耗与公辅分摊",
+    "what_is_now_available": "LS组合电耗可保留；未辨设备负荷不能拆成已核湿法电耗"
+  },
+  {
+    "input_id": "M08_STEAM",
+    "value": null,
+    "missing": "蒸汽压力/温度及返凝水或购热结算口径",
+    "what_is_now_available": "LS仅有质量，可先按t计价；禁止无依据填2500MJ/t"
+  },
+  {
+    "input_id": "M08_WATER",
+    "value": null,
+    "missing": "全厂取水/纯水/循环/耗水/外排及处理层级",
+    "what_is_now_available": "分线LS数据已补，但非本厂整套水系统"
+  },
+  {
+    "input_id": "M01_REUSE_SALE",
+    "value": null,
+    "missing": "再使用产品SOH、筛选合格率、重组损失和应用标准证据",
+    "what_is_now_available": "8500t是分配输入；可售kWh=分配t×额定Wh/kg×筛选率×SOH×重组率（如另定义可用窗口再乘，不重复SOH）"
+  },
+  {
+    "input_id": "M10_ALLOCATION",
+    "value": null,
+    "missing": "LCA的多产品分配/系统扩展与经济口径",
+    "what_is_now_available": "物理年耗不因分配方法改变；LCOR须定义总成本/共产品回款/功能产物分母"
+  },
+  {
+    "input_id": "M13_FACTORS",
+    "value": null,
+    "missing": "B各试剂、能源、处置因子的版本与浓度边界",
+    "what_is_now_available": "非全部因子已核；数据补齐不自动得到正式LCA"
+  },
+  {
+    "input_id": "D-PARK-LINK",
+    "value": null,
+    "missing": "市域队列到园区的捕获率、外部来料与跨区域供给",
+    "what_is_now_available": "当前首装队列只是区域需求分析一部分，不等于全市所有未来退役"
+  },
+  {
+    "input_id": "C_PRICE_SPEC",
+    "value": null,
+    "missing": "铁粉/磷酸/氧气/CO2/32%液碱等匹配报价；残渣分类及单位；商品浓度；不以近似报价冒充实价",
+    "owner": "C"
+  },
+  {
+    "input_id": "BC_PRODUCT_BASKET",
+    "value": null,
+    "missing": "全路线产品篮子/功能单位、年度量映射与环境因子浓度口径",
+    "owner": "B+C"
+  }
+]

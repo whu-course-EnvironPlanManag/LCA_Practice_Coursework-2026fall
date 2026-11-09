@@ -1,0 +1,178 @@
+{
+  "case_id": "C_HYD_CONDITIONAL_20261103",
+  "currency": "CNY",
+  "price_year": 2026,
+  "data_status": "explicit_conditional_scenario_not_validated_plant",
+  "functional_unit": "t_battery_grade_LCE_product",
+  "feed_t_per_year": 68000.0,
+  "fu_per_year": 3000,
+  "capex": 456000000.0,
+  "discount_rate": 0.07,
+  "operating_years": 20,
+  "cost_items": [
+    {
+      "name": "feed_delivered",
+      "category": "feedstock",
+      "quantity_per_year": 68000.0,
+      "unit_price": 6640.0,
+      "unit": "t_pack",
+      "source_id": "USER_QUOTE_FS03; beta_explicit_scenario"
+    },
+    {
+      "name": "separate_inbound_freight",
+      "category": "transport",
+      "quantity_per_year": 68000.0,
+      "unit_price": 0.0,
+      "unit": "t_pack",
+      "source_id": "USER_REVISED_FS:delivered_included"
+    },
+    {
+      "name": "grid_power",
+      "category": "utilities",
+      "quantity_per_year": 13657399.296636926,
+      "unit_price": 0.62,
+      "unit": "kWh",
+      "source_id": "B_pure_hydro_activity;USER_UT01"
+    },
+    {
+      "name": "green_power",
+      "category": "utilities",
+      "quantity_per_year": 13657399.296636926,
+      "unit_price": 0.41,
+      "unit": "kWh",
+      "source_id": "B_pure_hydro_activity;USER_UT02"
+    },
+    {
+      "name": "process_steam",
+      "category": "utilities",
+      "quantity_per_year": 53708106.19221411,
+      "unit_price": 0.085,
+      "unit": "MJ",
+      "source_id": "B_steam_proxy;USER_UT03"
+    },
+    {
+      "name": "makeup_water",
+      "category": "utilities",
+      "quantity_per_year": 90000,
+      "unit_price": 4.2,
+      "unit": "m3",
+      "source_id": "C_water_budget_assumption;USER_UT04"
+    },
+    {
+      "name": "acid98",
+      "category": "reagents",
+      "quantity_per_year": 7653.0612244897975,
+      "unit_price": 480.0,
+      "unit": "t_commercial_product",
+      "source_id": "B_reagent_proxy;C_active_basis_assumption;USER_RG-01"
+    },
+    {
+      "name": "peroxide27_5",
+      "category": "reagents",
+      "quantity_per_year": 4363.636363636364,
+      "unit_price": 1450.0,
+      "unit": "t_commercial_product",
+      "source_id": "B_reagent_proxy;C_active_basis_assumption;USER_RG-02"
+    },
+    {
+      "name": "naoh99",
+      "category": "reagents",
+      "quantity_per_year": 4545.454545454545,
+      "unit_price": 3100.0,
+      "unit": "t_commercial_product",
+      "source_id": "B_reagent_proxy;C_active_basis_assumption;USER_RG-03"
+    },
+    {
+      "name": "soda",
+      "category": "reagents",
+      "quantity_per_year": 4800.0,
+      "unit_price": 2600.0,
+      "unit": "t_commercial_product",
+      "source_id": "B_reagent_proxy;C_active_basis_assumption;USER_RG-04"
+    },
+    {
+      "name": "lime90",
+      "category": "reagents",
+      "quantity_per_year": 2666.666666666667,
+      "unit_price": 720.0,
+      "unit": "t_commercial_product",
+      "source_id": "B_reagent_proxy;C_active_basis_assumption;USER_RG-05"
+    },
+    {
+      "name": "staff",
+      "category": "labor",
+      "quantity_per_year": 120,
+      "unit_price": 85000.0,
+      "unit": "person_year",
+      "source_id": "C_staff_budget;USER_LB01:no_VAT_deflation"
+    },
+    {
+      "name": "maintenance",
+      "category": "maintenance",
+      "quantity_per_year": 456000000.0,
+      "unit_price": 0.02,
+      "unit": "CNY_selected_capex",
+      "source_id": "C_2pct_budget_not_measured"
+    },
+    {
+      "name": "residue_disposal",
+      "category": "pollution_control",
+      "quantity_per_year": 4500.0,
+      "unit_price": 2200.0,
+      "unit": "t_residue",
+      "source_id": "B_residue_proxy;USER_WS01:waste_code_pending"
+    },
+    {
+      "name": "basic_wastewater",
+      "category": "pollution_control",
+      "quantity_per_year": 90000,
+      "unit_price": 8,
+      "unit": "m3",
+      "source_id": "B_volume_proxy;C_budget_unit_price"
+    },
+    {
+      "name": "advanced_increment",
+      "category": "pollution_control",
+      "quantity_per_year": 30000,
+      "unit_price": 25,
+      "unit": "m3_incremental",
+      "source_id": "C_increment_not_double_volume_assumption"
+    },
+    {
+      "name": "rd_budget",
+      "category": "other",
+      "quantity_per_year": 1,
+      "unit_price": 5000000,
+      "unit": "annual_budget",
+      "source_id": "C_explicit_budget"
+    },
+    {
+      "name": "other_services",
+      "category": "other",
+      "quantity_per_year": 1,
+      "unit_price": 3000000,
+      "unit": "annual_budget",
+      "source_id": "C_explicit_budget:insurance_quality_warranty_and_unlisted_services"
+    },
+    {
+      "name": "other_fees",
+      "category": "taxes_fees",
+      "quantity_per_year": 1,
+      "unit_price": 1000000,
+      "unit": "annual_budget",
+      "source_id": "C_budget_excluding_VAT_income_tax_and_incentives"
+    }
+  ],
+  "revenue_items": [
+    {
+      "name": "LCE_sales_only",
+      "quantity_per_year": 3000,
+      "unit_price": 133000,
+      "unit": "t_battery_grade_LCE",
+      "source_id": "C_LCE_volume_scenario;USER_or_literature_price_assumption"
+    }
+  ],
+  "scenario_adjustments": [],
+  "boundary_id": "C_gross_quote_budget_LCE_revenue_only_other_products_net_credit_unresolved",
+  "source_note": "统一采用收到的含税报价现金金额，不作VAT清算；工资原额不除税；不是已确定的税前利润"
+}

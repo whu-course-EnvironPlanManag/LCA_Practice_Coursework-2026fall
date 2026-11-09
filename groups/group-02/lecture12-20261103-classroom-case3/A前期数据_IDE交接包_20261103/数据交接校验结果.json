@@ -1,0 +1,224 @@
+{
+  "checked_on": "2026-11-03",
+  "validation_scope": "Data integrity, unit contract, provenance and readiness gates; no MFA/LCA/TEA calculation",
+  "result": "passed",
+  "check_count": 42,
+  "sources": 45,
+  "evidence_records": 224,
+  "composition_profiles": 7,
+  "reference_literature_parameters": 52,
+  "candidate_process_parameters": 20,
+  "unresolved_input_groups": 14,
+  "checks": [
+    {
+      "check": "json_types_and_required_contract",
+      "result": "passed",
+      "detail": "JSON Schema generated; jsonschema dependency unavailable; semantic checks below performed"
+    },
+    {
+      "check": "source_ids_unique",
+      "result": "passed",
+      "detail": ""
+    },
+    {
+      "check": "evidence_ids_unique",
+      "result": "passed",
+      "detail": ""
+    },
+    {
+      "check": "all_canonical_source_and_evidence_references_resolve",
+      "result": "passed",
+      "detail": ""
+    },
+    {
+      "check": "selected_profiles_exist",
+      "result": "passed",
+      "detail": ""
+    },
+    {
+      "check": "selected_front_end_profiles_are_complete",
+      "result": "passed",
+      "detail": ""
+    },
+    {
+      "check": "JR23_NMC_PACK_fraction_values",
+      "result": "passed",
+      "detail": ""
+    },
+    {
+      "check": "JR23_NMC_PACK_partition_sum",
+      "result": "passed",
+      "detail": ""
+    },
+    {
+      "check": "JR23_LFP_PACK_fraction_values",
+      "result": "passed",
+      "detail": ""
+    },
+    {
+      "check": "JR23_LFP_PACK_partition_sum",
+      "result": "passed",
+      "detail": ""
+    },
+    {
+      "check": "JR23_NMC_CELL_fraction_values",
+      "result": "passed",
+      "detail": ""
+    },
+    {
+      "check": "JR23_NMC_CELL_partition_sum",
+      "result": "passed",
+      "detail": ""
+    },
+    {
+      "check": "JR23_LFP_CELL_fraction_values",
+      "result": "passed",
+      "detail": ""
+    },
+    {
+      "check": "JR23_LFP_CELL_partition_sum",
+      "result": "passed",
+      "detail": ""
+    },
+    {
+      "check": "JR23_NMC_POWDER_fraction_values",
+      "result": "passed",
+      "detail": ""
+    },
+    {
+      "check": "JR23_NMC_POWDER_partial_assay_not_normalized",
+      "result": "passed",
+      "detail": ""
+    },
+    {
+      "check": "JR23_LFP_POWDER_fraction_values",
+      "result": "passed",
+      "detail": ""
+    },
+    {
+      "check": "JR23_LFP_POWDER_partial_assay_not_normalized",
+      "result": "passed",
+      "detail": ""
+    },
+    {
+      "check": "LS23_LFP_POWDER_fraction_values",
+      "result": "passed",
+      "detail": ""
+    },
+    {
+      "check": "LS23_LFP_POWDER_partial_assay_not_normalized",
+      "result": "passed",
+      "detail": ""
+    },
+    {
+      "check": "chemistry_shares_sum_one",
+      "result": "passed",
+      "detail": ""
+    },
+    {
+      "check": "all_candidate_process_parameters_inactive",
+      "result": "passed",
+      "detail": ""
+    },
+    {
+      "check": "steam_unit_corrected",
+      "result": "passed",
+      "detail": ""
+    },
+    {
+      "check": "ambiguous_gas_not_enabled",
+      "result": "passed",
+      "detail": ""
+    },
+    {
+      "check": "acid_conflict_preserved",
+      "result": "passed",
+      "detail": ""
+    },
+    {
+      "check": "product_energy_indicator_preserved",
+      "result": "passed",
+      "detail": ""
+    },
+    {
+      "check": "water_estimate_preserved_unconverted",
+      "result": "passed",
+      "detail": ""
+    },
+    {
+      "check": "specific_reagent_intensity_can_exceed_one",
+      "result": "passed",
+      "detail": ""
+    },
+    {
+      "check": "reported_recovery_bounds_preserved",
+      "result": "passed",
+      "detail": ""
+    },
+    {
+      "check": "closure_not_recovery",
+      "result": "passed",
+      "detail": ""
+    },
+    {
+      "check": "li_element_not_product_mass",
+      "result": "passed",
+      "detail": ""
+    },
+    {
+      "check": "no_candidates_auto_activated",
+      "result": "passed",
+      "detail": ""
+    },
+    {
+      "check": "missing_not_zero",
+      "result": "passed",
+      "detail": ""
+    },
+    {
+      "check": "upstream_gate_blockers_inherited",
+      "result": "passed",
+      "detail": ""
+    },
+    {
+      "check": "economic_and_factor_inputs_explicit",
+      "result": "passed",
+      "detail": ""
+    },
+    {
+      "check": "gates_consistent_with_missing_inputs",
+      "result": "passed",
+      "detail": ""
+    },
+    {
+      "check": "full_model_not_ready",
+      "result": "passed",
+      "detail": ""
+    },
+    {
+      "check": "correct_strict_li_tolerance",
+      "result": "passed",
+      "detail": ""
+    },
+    {
+      "check": "initial_snapshot_unchanged",
+      "result": "passed",
+      "detail": ""
+    },
+    {
+      "check": "supplement_snapshot_unchanged",
+      "result": "passed",
+      "detail": ""
+    },
+    {
+      "check": "front_end_proposal_snapshot_unchanged",
+      "result": "passed",
+      "detail": ""
+    },
+    {
+      "check": "original_records_preserved_without_value_changes",
+      "result": "passed",
+      "detail": ""
+    }
+  ]
+}

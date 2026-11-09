@@ -1,0 +1,17 @@
+{
+  "tests_run": 60,
+  "tests_passed": true,
+  "new_annual_tests": 14,
+  "B_packet_run_passed": true,
+  "B_policy_checks": 6,
+  "B_existing_case_ids_preserved": 3267,
+  "source_files_unchanged": true,
+  "annual_tea_status": "NOT_READY_WITH_PARTIAL_COSTS",
+  "formal_LCOR": null,
+  "complete_project_profit": null,
+  "MAC": null,
+  "formal_result_eligible": false,
+  "PDF_visual_review": "5 pages inspected after final render",
+  "Word_output": "not generated this round",
+  "minimal_reproduction_summary_identical": true
+}

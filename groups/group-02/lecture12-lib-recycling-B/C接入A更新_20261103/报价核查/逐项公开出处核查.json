@@ -1,0 +1,886 @@
+{
+  "review_date": "2026-11-03",
+  "scope": "38项逐项检索；搜索不保证穷尽，未命中不证明不存在；仅来源审计，不是采购确认或完整法规审查",
+  "records": [
+    {
+      "param_id": "EXCH-01",
+      "name": "USD兑CNY基准汇率",
+      "received_value": "7.2",
+      "unit": "CNY/USD",
+      "claimed_source": "中国外汇交易中心2026年10月USD中间价均值区间7.17-7.24取基准",
+      "review_date": "2026-11-03",
+      "status": "规划假设；所称月均未核",
+      "exact_original_quote_verified": false,
+      "source_ids": [
+        "CFETS"
+      ],
+      "finding": "未取得7.17—7.24月均区间的官方日序列和计算。",
+      "action": "保留7.2为压力参数，删“已核2026-10月均”表述。",
+      "search_query": "中国货币网 2026-10 人民币中间价 美元 月均",
+      "model_value_changed": false
+    },
+    {
+      "param_id": "PRC-01",
+      "name": "价格基准年",
+      "received_value": "2026",
+      "unit": "年",
+      "claimed_source": "建设项目经济评价方法与参数(第四版)",
+      "review_date": "2026-11-03",
+      "status": "小组设定；书目未核",
+      "exact_original_quote_verified": false,
+      "source_ids": [
+        "NDRC_REV"
+      ],
+      "finding": "2026价格基年是小组选定；不能由方法书直接证明。",
+      "action": "保留价格基年；第四版与忽略PPI的依据待核。",
+      "search_query": "国家发改委 建设项目经济评价方法与参数 第四版",
+      "model_value_changed": false
+    },
+    {
+      "param_id": "FIN-01",
+      "name": "项目运营年限",
+      "received_value": "20",
+      "unit": "年",
+      "claimed_source": "HG/T 20636-2017;邦普/格林美公开可研",
+      "review_date": "2026-11-03",
+      "status": "规划假设；原引标准范围疑点",
+      "exact_original_quote_verified": false,
+      "source_ids": [
+        "HG"
+      ],
+      "finding": "20年未由可核原文支持；所引标准目录为自控专业设计管理。",
+      "action": "保留年限假设，撤去标准强制寿命暗示。",
+      "search_query": "HG/T 20636-2017 标准 年限",
+      "model_value_changed": false
+    },
+    {
+      "param_id": "FIN-02",
+      "name": "WACC实际折现率(剔除通胀)",
+      "received_value": "7",
+      "unit": "%",
+      "claimed_source": "中国循环经济协会动力电池回收项目技术经济测算指南(2025)",
+      "review_date": "2026-11-03",
+      "status": "规划假设；精确出处未定位",
+      "exact_original_quote_verified": false,
+      "source_ids": [
+        "CACE"
+      ],
+      "finding": "未定位原表所称2025技术经济测算指南及7%条款。",
+      "action": "7%实际折现率保持假设，做利率敏感性；不虚构协会页码。",
+      "search_query": "中国循环经济协会 动力电池回收项目技术经济测算指南 2025",
+      "model_value_changed": false
+    },
+    {
+      "param_id": "FIN-03",
+      "name": "年运行负荷系数",
+      "received_value": "85",
+      "unit": "%",
+      "claimed_source": "环评技术规范+白名单企业达产调研",
+      "review_date": "2026-11-03",
+      "status": "小组运行情景",
+      "exact_original_quote_verified": false,
+      "source_ids": [],
+      "finding": "85%负荷不是已核实际运行率；未取得普遍禁止满负荷的规范依据。",
+      "action": "按情景保留，区分设计8万和预算6.8万。",
+      "search_query": "环评 白名单 电池回收 年运行负荷 85%",
+      "model_value_changed": false
+    },
+    {
+      "param_id": "CAP-01",
+      "name": "预处理产线(仓储放电拆解破碎分选)",
+      "received_value": "7200",
+      "unit": "万元",
+      "claimed_source": "甘肃1万吨物理拆解环评+行业设备调研",
+      "review_date": "2026-11-03",
+      "status": "类比线索；原值未核",
+      "exact_original_quote_verified": false,
+      "source_ids": [
+        "GS_CAP"
+      ],
+      "finding": "仅有相近拆解项目投资报道，不是本案7200万元设备清单。",
+      "action": "补原环评、设备/土建边界及规模分母；不线性照搬。",
+      "search_query": "甘肃 1万吨 废旧锂电池 拆解 投资 900万元",
+      "model_value_changed": false
+    },
+    {
+      "param_id": "CAP-02",
+      "name": "梯次利用重组产线(1万t/a)",
+      "received_value": "3600",
+      "unit": "万元",
+      "claimed_source": "行业设备调研报告",
+      "review_date": "2026-11-03",
+      "status": "类比线索；原值未核",
+      "exact_original_quote_verified": false,
+      "source_ids": [
+        "GZ_CAP"
+      ],
+      "finding": "有1万吨拆包检测重组项目，但总投资范围与本项不同。",
+      "action": "3600万元继续作为预算；参考项目只作类比。",
+      "search_query": "梯次利用 3600万元 1万吨 投资",
+      "model_value_changed": false
+    },
+    {
+      "param_id": "CAP-03",
+      "name": "湿法冶金主产线",
+      "received_value": "22400",
+      "unit": "万元",
+      "claimed_source": "湿法回收设备投资调研；每万吨约1亿元",
+      "review_date": "2026-11-03",
+      "status": "精确出处未定位",
+      "exact_original_quote_verified": false,
+      "source_ids": [],
+      "finding": "未定位到22400万元湿法设备投资的同口径原件；包/粉料能力分母不清。",
+      "action": "保留预算；须工程清单支撑，不把每万吨1亿元当已核系数。",
+      "search_query": "湿法 回收 22400 电池 每万吨 1亿元 投资",
+      "model_value_changed": false
+    },
+    {
+      "param_id": "CAP-04",
+      "name": "直接正极再生示范线(2万吨当量)",
+      "received_value": "4000",
+      "unit": "万元",
+      "claimed_source": "中科院物理所+行业技术经济评估",
+      "review_date": "2026-11-03",
+      "status": "精确出处未定位",
+      "exact_original_quote_verified": false,
+      "source_ids": [],
+      "finding": "未定位2万吨直接修复线4000万元的原技术经济评估。",
+      "action": "本轮纯湿法已排除此项；其他路线须独立估算。",
+      "search_query": "直接再生 正极 修复 4000万元 2万吨 投资",
+      "model_value_changed": false
+    },
+    {
+      "param_id": "CAP-05",
+      "name": "三废综合治理工程",
+      "received_value": "6400",
+      "unit": "万元",
+      "claimed_source": "正规回收企业环保投入约占设备投资20-30%",
+      "review_date": "2026-11-03",
+      "status": "比例依据未核；有不同项目线索",
+      "exact_original_quote_verified": false,
+      "source_ids": [
+        "ENV_PAPER"
+      ],
+      "finding": "不同工艺与项目的环保占比不一致；现有证据不证明固定20—30%。",
+      "action": "6400万元保留预算，按治理设施拆项核算。",
+      "search_query": "电池回收 环保投资 占比 20% 30%",
+      "model_value_changed": false
+    },
+    {
+      "param_id": "CAP-06",
+      "name": "园区公用工程(循环水蒸汽配电消防)",
+      "received_value": "4800",
+      "unit": "万元",
+      "claimed_source": "化工循环产业园环评通用取值",
+      "review_date": "2026-11-03",
+      "status": "精确出处未定位",
+      "exact_original_quote_verified": false,
+      "source_ids": [],
+      "finding": "未定位600万元/万吨公辅通用系数及4800万元工程量。",
+      "action": "按供水配电消防等实际能力补估。",
+      "search_query": "公用工程 600万元/万吨 电池回收",
+      "model_value_changed": false
+    },
+    {
+      "param_id": "CAP-07",
+      "name": "绿电微网配套(光伏+储能)",
+      "received_value": "2400",
+      "unit": "万元",
+      "claimed_source": "新能源循环园区配套参考",
+      "review_date": "2026-11-03",
+      "status": "类比线索；范围不匹配",
+      "exact_original_quote_verified": false,
+      "source_ids": [
+        "PV"
+      ],
+      "finding": "公开备案有相同2400万元金额但规模、设施和地点不同。",
+      "action": "本轮外购绿电已排除该项；自建方案需MW/MWh和发电量。",
+      "search_query": "光伏 储能 2400万元 园区 投资",
+      "model_value_changed": false
+    },
+    {
+      "param_id": "CAP-08",
+      "name": "数字化平台(电池数字护照+MRV)",
+      "received_value": "1200",
+      "unit": "万元",
+      "claimed_source": "课程任务书欧盟电池法规数字护照要求",
+      "review_date": "2026-11-03",
+      "status": "功能要求存在；金额未核",
+      "exact_original_quote_verified": false,
+      "source_ids": [
+        "EU"
+      ],
+      "finding": "数字护照法规不提供1200万元造价。",
+      "action": "按硬件点位/软件服务/运维报价估算，法规只证功能。",
+      "search_query": "电池数字护照 1200万元 平台 投资",
+      "model_value_changed": false
+    },
+    {
+      "param_id": "CAP-09",
+      "name": "静态总投资合计",
+      "received_value": "52000",
+      "unit": "万元",
+      "claimed_source": "上述分项合计",
+      "review_date": "2026-11-03",
+      "status": "派生算术通过",
+      "exact_original_quote_verified": false,
+      "source_ids": [],
+      "finding": "八项CAPEX相加=52000万元；只证明加法，不证明造价。",
+      "action": "保留控制总额；纯湿法选定组合45600万元另列。",
+      "search_query": "本地 CAP-01 至 CAP-08 加总",
+      "model_value_changed": false
+    },
+    {
+      "param_id": "FS-01",
+      "name": "退役LFP电池包进厂价(到厂口径)",
+      "received_value": "5200",
+      "unit": "元/t",
+      "claimed_source": "陶志军2025废旧电池回收调研+SMM2026.10白名单收购价",
+      "review_date": "2026-11-03",
+      "status": "来源类别可核；精确价格受限",
+      "exact_original_quote_verified": false,
+      "source_ids": [
+        "SMM_METHOD",
+        "SMM_SCRAP"
+      ],
+      "finding": "找到废电池报价类别及方法；未取得5200元/t整包同月原价。",
+      "action": "保留到厂采购假设；不能用废电芯/粉料价冒充整包。",
+      "search_query": "陶志军 2025 废旧电池 回收 5200 SMM 磷酸铁锂 电池包",
+      "model_value_changed": false
+    },
+    {
+      "param_id": "FS-02",
+      "name": "退役NMC混合三元包进厂价(到厂口径)",
+      "received_value": "8800",
+      "unit": "元/t",
+      "claimed_source": "SMM废料行情+百川盈孚2026锂电废料周报",
+      "review_date": "2026-11-03",
+      "status": "精确价格未核；公开数值受限",
+      "exact_original_quote_verified": false,
+      "source_ids": [
+        "SMM_SCRAP"
+      ],
+      "finding": "未取得8800元/t混合三元整包到厂报价原件。",
+      "action": "明确体系、SOH、税运和金属含量；保留假设。",
+      "search_query": "三元 电池包 8800 SMM 百川盈孚 回收价格",
+      "model_value_changed": false
+    },
+    {
+      "param_id": "FS-03",
+      "name": "加权采购价(LFP60%+NMC40%)",
+      "received_value": "6640",
+      "unit": "元/t",
+      "claimed_source": "加权计算5200×0.6+8800×0.4",
+      "review_date": "2026-11-03",
+      "status": "派生算术通过",
+      "exact_original_quote_verified": false,
+      "source_ids": [],
+      "finding": "5200×0.6+8800×0.4=6640，底价仍未获凭据。",
+      "action": "只标加权计算通过，不标市场价核实。",
+      "search_query": "本地 FS-01 FS-02 60% 40% 加权",
+      "model_value_changed": false
+    },
+    {
+      "param_id": "TR-01",
+      "name": "危废到厂运输(平均运距180km)",
+      "received_value": "500",
+      "unit": "元/t",
+      "claimed_source": "危险废物收集贮存运输技术规范经济调研+国内第九类危废物流报价",
+      "review_date": "2026-11-03",
+      "status": "历史代理线索；原值未核",
+      "exact_original_quote_verified": false,
+      "source_ids": [
+        "HAINAN"
+      ],
+      "finding": "文献运输费用与燃料动力费用分列，不能用500燃料费支持500运费。",
+      "action": "180km与500元/t保留假设；到厂采购已含运，现金基准不重复计。",
+      "search_query": "退役电池 运输 500元/吨 180km",
+      "model_value_changed": false
+    },
+    {
+      "param_id": "UT-01",
+      "name": "大工业网电(华中)",
+      "received_value": "0.62",
+      "unit": "元/kWh",
+      "claimed_source": "湖北电网大工业两部制电价2026公示",
+      "review_date": "2026-11-03",
+      "status": "计价结构可核；原值未核",
+      "exact_original_quote_verified": false,
+      "source_ids": [
+        "ELEC_RULE"
+      ],
+      "finding": "未核到与用户电压、两部制、分时负荷相符的0.62完整综合价。",
+      "action": "补当月电价表与负荷曲线；容量费等分列。",
+      "search_query": "湖北 2026 大工业 两部制 代理购电 0.62",
+      "model_value_changed": false
+    },
+    {
+      "param_id": "UT-02",
+      "name": "风光直购绿电",
+      "received_value": "0.41",
+      "unit": "元/kWh",
+      "claimed_source": "湖北电力交易中心绿电交易成交均价2026Q3",
+      "review_date": "2026-11-03",
+      "status": "原值未核；交易边界风险",
+      "exact_original_quote_verified": false,
+      "source_ids": [
+        "ELEC_RULE",
+        "HB_041"
+      ],
+      "finding": "检索中相同0.41出现在余电售电报道；不是所称2026Q3直购均价证明。",
+      "action": "完整到户费用未核前，不声称已证明绿电必然便宜。",
+      "search_query": "湖北 2026 三季度 绿电 成交均价 0.41",
+      "model_value_changed": false
+    },
+    {
+      "param_id": "UT-03",
+      "name": "工艺蒸汽",
+      "received_value": "0.085",
+      "unit": "元/MJ",
+      "claimed_source": "宜昌化工园区集中供热报价",
+      "review_date": "2026-11-03",
+      "status": "类比线索；单位适配待核",
+      "exact_original_quote_verified": false,
+      "source_ids": [
+        "YC_UTIL",
+        "YC_STEAM"
+      ],
+      "finding": "有特定项目元/吨蒸汽线索；未证明0.085元/MJ。",
+      "action": "核压力温度/焓差和热量计费，再做单位换算。",
+      "search_query": "宜昌 工业园 蒸汽 报价 0.085 MJ",
+      "model_value_changed": false
+    },
+    {
+      "param_id": "UT-04",
+      "name": "工业新水",
+      "received_value": "4.2",
+      "unit": "元/m3",
+      "claimed_source": "湖北精细化工园区自来水/中水定价",
+      "review_date": "2026-11-03",
+      "status": "官方入口定位；原值未核",
+      "exact_original_quote_verified": false,
+      "source_ids": [
+        "YC_UTIL"
+      ],
+      "finding": "官方页面正文超时；未找到支持本案工业新水4.2元/m3的具体表项。",
+      "action": "不把自来水与中水或含污水费综合水价混用。",
+      "search_query": "宜昌 工业 水价 4.2 湖北 园区",
+      "model_value_changed": false
+    },
+    {
+      "param_id": "RG-01",
+      "name": "98%硫酸",
+      "received_value": "480",
+      "unit": "元/t",
+      "claimed_source": "卓创资讯2026大宗化工品报价",
+      "review_date": "2026-11-03",
+      "status": "地区区间代理线索",
+      "exact_original_quote_verified": false,
+      "source_ids": [
+        "ACID"
+      ],
+      "finding": "其他地区区间包含480，不是同年本案到厂报价证实。",
+      "action": "480仍作收到假设；核浓度与运费。",
+      "search_query": "卓创 2026 98% 硫酸 480 元/吨",
+      "model_value_changed": false
+    },
+    {
+      "param_id": "RG-02",
+      "name": "27.5%双氧水",
+      "received_value": "1450",
+      "unit": "元/t",
+      "claimed_source": "卓创资讯",
+      "review_date": "2026-11-03",
+      "status": "精确原值未核；浓度年份风险",
+      "exact_original_quote_verified": false,
+      "source_ids": [
+        "PEROXIDE"
+      ],
+      "finding": "2026参考线索与1450不同；检索也有旧年同数值，不能移作当年价。",
+      "action": "1450保留假设，核27.5%商品溶液吨，不拿50%或纯物质价格替代。",
+      "search_query": "卓创 27.5% 双氧水 1450 2026",
+      "model_value_changed": false
+    },
+    {
+      "param_id": "RG-03",
+      "name": "片碱NaOH",
+      "received_value": "3100",
+      "unit": "元/t",
+      "claimed_source": "卓创资讯",
+      "review_date": "2026-11-03",
+      "status": "同值代理；浓度与报价性质不同",
+      "exact_original_quote_verified": false,
+      "source_ids": [
+        "NAOH"
+      ],
+      "finding": "已读公告3100元/t对应98%采购控制价，不是本案99%市场成交价。",
+      "action": "可列类比证据，需声明规格差异；浓度换算随选定规格同步。",
+      "search_query": "片碱 3100 2026 98% 99%",
+      "model_value_changed": false
+    },
+    {
+      "param_id": "RG-04",
+      "name": "纯碱Na2CO3",
+      "received_value": "2600",
+      "unit": "元/t",
+      "claimed_source": "卓创资讯",
+      "review_date": "2026-11-03",
+      "status": "公开对照差异；规格另核",
+      "exact_original_quote_verified": false,
+      "source_ids": [
+        "SODA",
+        "SODA_HZ"
+      ],
+      "finding": "公开轻质基准1025及华中重质区间线索均不支持原2600为同月普通行情。",
+      "action": "2600不能称已核2026行情；选工艺等级后另定代理并复跑。",
+      "search_query": "纯碱 2600 2026-10 华中 重质 价格",
+      "model_value_changed": false
+    },
+    {
+      "param_id": "RG-05",
+      "name": "生石灰CaO",
+      "received_value": "720",
+      "unit": "元/t",
+      "claimed_source": "卓创资讯",
+      "review_date": "2026-11-03",
+      "status": "弱代理线索；精确原值未核",
+      "exact_original_quote_verified": false,
+      "source_ids": [
+        "LIME"
+      ],
+      "finding": "厂家区域区间包含720，但仅摘要且日期/纯度/运费不匹配。",
+      "action": "不能升级已核报价；补湖北规格原件或保留预算。",
+      "search_query": "生石灰 CaO 720 元/吨 2026",
+      "model_value_changed": false
+    },
+    {
+      "param_id": "LB-01",
+      "name": "人均年薪酬(含社保福利)",
+      "received_value": "85000",
+      "unit": "元/(人·a)",
+      "claimed_source": "湖北宜昌化工产业园制造业薪酬调研2026",
+      "review_date": "2026-11-03",
+      "status": "官方统计代理；成本范围不同",
+      "exact_original_quote_verified": false,
+      "source_ids": [
+        "WAGE",
+        "VAT"
+      ],
+      "finding": "制造业工资85571可作工资参照，不是85000含雇主社保福利的直接证明。",
+      "action": "分工资和雇主负担，保留85000预算，不再按工资含6%VAT除税。",
+      "search_query": "湖北 2025 制造业 平均工资 2026 宜昌 薪酬",
+      "model_value_changed": false
+    },
+    {
+      "param_id": "WS-01",
+      "name": "浸出渣危废稳定化处置费",
+      "received_value": "2200",
+      "unit": "元/t",
+      "claimed_source": "湖北危废处置中心2026报价(HW49)",
+      "review_date": "2026-11-03",
+      "status": "精确出处未定位",
+      "exact_original_quote_verified": false,
+      "source_ids": [],
+      "finding": "未定位2200元/t对应本案残渣的湖北处置报价；原HW49标签未证实。",
+      "action": "按废物鉴别/代码、含水、运距、固化和处置范围询证。",
+      "search_query": "湖北 危废 2200 元/吨 稳定化 填埋 处置费",
+      "model_value_changed": false
+    },
+    {
+      "param_id": "TX-01",
+      "name": "综合增值税率",
+      "received_value": "13",
+      "unit": "%",
+      "claimed_source": "国家税务总局现行锂电材料增值税税率",
+      "review_date": "2026-11-03",
+      "status": "税率原文可核；统一适用不成立",
+      "exact_original_quote_verified": false,
+      "source_ids": [
+        "VAT"
+      ],
+      "finding": "货物一般税率条款存在，工资和其他交易分类不能统一13%。",
+      "action": "维持报价现金预算，不做全表统一除税；另核凭证和交易。",
+      "search_query": "中华人民共和国增值税法 第六条 第十条 13%",
+      "model_value_changed": false
+    },
+    {
+      "param_id": "TX-02",
+      "name": "企业所得税率",
+      "received_value": "25",
+      "unit": "%",
+      "claimed_source": "一般工业企业；资源综合利用可三免三减半",
+      "review_date": "2026-11-03",
+      "status": "一般税率有依据；优惠未证",
+      "exact_original_quote_verified": false,
+      "source_ids": [
+        "CIT"
+      ],
+      "finding": "一般企业所得税25%有官方法律引用；不证明回收业务自动享三免三减半。",
+      "action": "税前/报价预算不直接扣所得税；若扩展税后现金流再审核资格。",
+      "search_query": "企业所得税法 第四条 25% 资源综合利用",
+      "model_value_changed": false
+    },
+    {
+      "param_id": "TX-03",
+      "name": "资源综合利用即征即退退税比例",
+      "received_value": "30",
+      "unit": "%",
+      "claimed_source": "财政部税务总局公告2021年第40号",
+      "review_date": "2026-11-03",
+      "status": "原引目录与30%不符",
+      "exact_original_quote_verified": false,
+      "source_ids": [
+        "REFUND"
+      ],
+      "finding": "所引2022目录3.1为50%且列资源产品与条件，并非一切铁盐都适用。",
+      "action": "不自动改为项目实得50%；基准激励仍为0，留资格待核。",
+      "search_query": "2021年第40号 2022目录 3.1 废旧电池 退税",
+      "model_value_changed": false
+    },
+    {
+      "param_id": "PR-01",
+      "name": "电池级碳酸锂(≥99.5%)",
+      "received_value": "133000",
+      "unit": "元/t",
+      "claimed_source": "集邦TrendForce2026-10原生140000再生折价5%",
+      "review_date": "2026-11-03",
+      "status": "基准价部分支持；折价为假设",
+      "exact_original_quote_verified": false,
+      "source_ids": [
+        "TREND"
+      ],
+      "finding": "已读2026-10-22页面可支持14万元参考；乘95%得到13.3万，不证明再生售价。",
+      "action": "记录基准日期与5%假设；税运和项目质量另核。",
+      "search_query": "集邦 2026-10 电池级 碳酸锂 140000",
+      "model_value_changed": false
+    },
+    {
+      "param_id": "PR-02",
+      "name": "电池级磷酸铁(前驱体级)",
+      "received_value": "48600",
+      "unit": "元/t",
+      "claimed_source": "隆众资讯原生磷酸铁51200再生折价5%",
+      "review_date": "2026-11-03",
+      "status": "商品/数量级风险；原价未证",
+      "exact_original_quote_verified": false,
+      "source_ids": [
+        "TREND"
+      ],
+      "finding": "同日磷酸铁前驱体参考16300，明显不同于原48600；不能因此断言原数值出处必为另一商品。",
+      "action": "需核FePO4/LiFePO4及等级；51200×95%=48640，48600另有取整。",
+      "search_query": "磷酸铁 51200 48600 隆众 磷酸铁锂",
+      "model_value_changed": false
+    },
+    {
+      "param_id": "PR-03",
+      "name": "Ni-Co-Mn浓缩混合硫酸盐",
+      "received_value": "32400",
+      "unit": "元/t",
+      "claimed_source": "硫酸镍钴锰现货加权折算再生折价5%",
+      "review_date": "2026-11-03",
+      "status": "精确出处与折算公式未定位",
+      "exact_original_quote_verified": false,
+      "source_ids": [
+        "TREND",
+        "METAL"
+      ],
+      "finding": "分立硫酸镍等单盐参考不能直接证明混合盐32400。",
+      "action": "A先给水合形态/有效金属组成，C按明确计价公式换算。",
+      "search_query": "Ni Co Mn 混合硫酸盐 32400 价格",
+      "model_value_changed": false
+    },
+    {
+      "param_id": "PR-04",
+      "name": "再生阴极铜(99.9%)",
+      "received_value": "62000",
+      "unit": "元/t",
+      "claimed_source": "长江有色2026.10现货",
+      "review_date": "2026-11-03",
+      "status": "公开对照不匹配；商品适配待核",
+      "exact_original_quote_verified": false,
+      "source_ids": [
+        "COPPER"
+      ],
+      "finding": "已读同月1号铜价格不是62000；也不等于拆解铜箔可售净价。",
+      "action": "62000仅保留假设；按实际商品形态及精炼费用重估。",
+      "search_query": "长江有色 2026年10月 铜 62000",
+      "model_value_changed": false
+    },
+    {
+      "param_id": "PR-05",
+      "name": "再生铝锭(99.7%)",
+      "received_value": "18200",
+      "unit": "元/t",
+      "claimed_source": "长江有色2026.10现货",
+      "review_date": "2026-11-03",
+      "status": "公开对照不匹配；商品适配待核",
+      "exact_original_quote_verified": false,
+      "source_ids": [
+        "METAL"
+      ],
+      "finding": "同月A00铝对照23610而非18200；原表规格99.7%与拆解铝仍需匹配。",
+      "action": "不直接套铝锭价给分选料，补熔炼损耗费用。",
+      "search_query": "长江有色 2026年10月 铝 18200",
+      "model_value_changed": false
+    },
+    {
+      "param_id": "PR-06",
+      "name": "梯次储能模组(SOH70-85%)",
+      "received_value": "480",
+      "unit": "元/kWh",
+      "claimed_source": "中国储能网梯次电池市场报价2026",
+      "review_date": "2026-11-03",
+      "status": "历史算例代理；原值未核",
+      "exact_original_quote_verified": false,
+      "source_ids": [
+        "REUSE"
+      ],
+      "finding": "找到历史假设售价465元/kWh线索，不证明2026年480成交。",
+      "action": "按剩余/标称kWh、SOH、用途、BMS和质保确认商品范围。",
+      "search_query": "梯次 储能 模组 480 元/kWh 2026",
+      "model_value_changed": false
+    }
+  ],
+  "sources": {
+    "CFETS": {
+      "title": "中国货币网人民币汇率中间价查询",
+      "url": "https://www.chinamoney.com.cn/chinese/bkccpr/index.html?tab=2",
+      "source_date": "",
+      "access": "检索摘要可读；未取得本次月度原始序列",
+      "finding": "提供官方查询入口；不证明2026年10月均值为7.2。",
+      "access_date": "2026-11-03"
+    },
+    "NDRC_REV": {
+      "title": "建设项目经济评价方法与参数修订建议稿遴选公告",
+      "url": "https://www.ndrc.gov.cn/xwdt/tzgg/202306/t20230620_1357700_ext.html",
+      "source_date": "2023-06-20",
+      "access": "正文已读",
+      "finding": "公告启动第三版修订；不是原表所称第四版的完整出版核验。",
+      "access_date": "2026-11-03"
+    },
+    "HG": {
+      "title": "HG/T20636-2017标准目录（非官方目录）",
+      "url": "https://www.bzxz.net/bzxz/173275.html",
+      "source_date": "2023-06-25（目录页发布时间）",
+      "access": "仅检索摘要；非官方目录、未核标准全文",
+      "finding": "目录指向自控设计管理范围，不能据此证明20年运营寿命；标准正式原文仍待核。",
+      "access_date": "2026-11-03"
+    },
+    "CACE": {
+      "title": "中国循环经济协会科技成果评价通知",
+      "url": "https://www.chinacace.org/science/view?id=254",
+      "source_date": "2025-02-18",
+      "access": "检索摘要；仅用于辨认机构",
+      "finding": "确有协会官网及相关通知；未定位到原表声称的2025动力电池TEA指南。通知不支持7%。",
+      "access_date": "2026-11-03"
+    },
+    "GS_CAP": {
+      "title": "甘肃定西1万吨废旧锂电池回收项目落地（SMM报道）",
+      "url": "https://news.smm.cn/news/103980323",
+      "source_date": "2026-06-30",
+      "access": "检索摘要可读；未核原环评",
+      "finding": "报道投资880万元、拆解1万吨/年；项目对象和投资范围仍需原环评，不能直接证明900万元/万吨系数。",
+      "access_date": "2026-11-03"
+    },
+    "GZ_CAP": {
+      "title": "广州新环年处理1万吨回收及梯次利用项目环评",
+      "url": "https://sthjj.gz.gov.cn/attachment/7/7718/7718613/9971378.pdf",
+      "source_date": "",
+      "access": "检索摘要；PDF打开因18.55MB体积受限",
+      "finding": "摘要列总投资5200万元，含拆包检测重组等且不拆电芯；不是本案梯次产线3600万元的原件。",
+      "access_date": "2026-11-03"
+    },
+    "ENV_PAPER": {
+      "title": "锂离子电池工业化回收技术环境影响评价研究",
+      "url": "https://www.eep1987.com/article/doi/10.20078/j.eep.20251103?viewType=HTML",
+      "source_date": "2026年第40卷第1期（检索线索）",
+      "access": "期刊正文页摘要已读；经济数值只见PDF检索摘要，PDF下载404",
+      "finding": "检索PDF线索列不同项目环保占比4.73%/6.8%；尚未核经济段全文，仅用于提醒20—30%不是由此证实的普遍系数。",
+      "access_date": "2026-11-03"
+    },
+    "PV": {
+      "title": "中山市2024年9月备案项目信息",
+      "url": "https://www.zs.gov.cn/attachment/0/518/518321/2451159.pdf",
+      "source_date": "2024-09（备案期）",
+      "access": "仅检索摘要，未逐页核PDF",
+      "finding": "含5.99MW光伏、约2400万元及年发电量信息；不同地点且并非本项目光储微网，仅是结构化投资代理线索。",
+      "access_date": "2026-11-03"
+    },
+    "EU": {
+      "title": "欧盟电池法规2023/1542",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32023R1542",
+      "source_date": "2023-07-12（原法规）",
+      "access": "检索到原文及2025整合版线索；本轮未完整重核所有修订",
+      "finding": "第77条电池护照要求可解释功能需求，不能支持平台1200万元；适用对象及后续修订另核。",
+      "access_date": "2026-11-03"
+    },
+    "SMM_METHOD": {
+      "title": "SMM新增废旧磷酸铁锂相关价格点公告",
+      "url": "https://news.smm.cn/news/102146863",
+      "source_date": "2023-03-23",
+      "access": "正文已读",
+      "finding": "区分电池、极片、黑粉及锂系数计价；本页不提供5200元到厂包价。",
+      "access_date": "2026-11-03"
+    },
+    "SMM_SCRAP": {
+      "title": "SMM废金属及废电池行情",
+      "url": "https://m.smm.cn/hq/fjs",
+      "source_date": "2026-11-02（检索所见更新）",
+      "access": "检索可见类别和到厂标记，价格登录受限",
+      "finding": "只能核查报价类别；未读取到FS-01/02所称2026-10原价。",
+      "access_date": "2026-11-03"
+    },
+    "HAINAN": {
+      "title": "海南退役动力电池回收利用全链条研究",
+      "url": "https://www.efchina.org/Attachments/Report/report-ctp-20221114/海南省电动汽车退役动力电池回收利用处理全链条方案研究及政策建议.pdf",
+      "source_date": "2022（报告发布路径；正文日期未复核）",
+      "access": "仅PDF检索摘要",
+      "finding": "表格线索区分运输400元/t与燃料动力500元/t；不证明本案180km运输500元/t。",
+      "access_date": "2026-11-03"
+    },
+    "ELEC_RULE": {
+      "title": "电力中长期市场基本规则",
+      "url": "https://zfxxgk.ndrc.gov.cn/web/iteminfo.jsp?id=20581",
+      "source_date": "2025-12-17",
+      "access": "正文已读；第17、26、33条",
+      "finding": "绿电分电能量与环境价值，电网另有费用收取职责；不是0.41或0.62的成交凭证。",
+      "access_date": "2026-11-03"
+    },
+    "HB_041": {
+      "title": "湖北357座中石化加油站用上绿电（湖北日报）",
+      "url": "https://epaper.hubeidaily.net/pc/attachment/202511/26/34b656cc-a3d1-458c-90b4-f9416d8ccc18.pdf",
+      "source_date": "2025-11-26",
+      "access": "PDF检索摘要；未逐页核读",
+      "finding": "0.41是报道中的光伏余电售电计算价，不能作为本园区2026Q3购买绿电完整到户价。",
+      "access_date": "2026-11-03"
+    },
+    "YC_UTIL": {
+      "title": "宜昌招商要素：供水蒸汽天然气自备水源",
+      "url": "https://www.yichang.gov.cn/show-62359-1024745-1.html",
+      "source_date": "2025-03-05（检索页标日期）",
+      "access": "检索摘要可见，正文两次超时",
+      "finding": "找到宜昌官方公辅信息入口，但未读到证明蒸汽0.085元/MJ及工业新水4.2元/m3的内容。",
+      "access_date": "2026-11-03"
+    },
+    "YC_STEAM": {
+      "title": "宜昌公共资源交易答疑",
+      "url": "https://ggzy.sc.yichang.gov.cn/jyxx/003001/003001003/20250306/0b17027a-2843-4ce3-8abf-f4784e41c7ea.html",
+      "source_date": "2025-03-06",
+      "access": "检索摘要；本轮未打开正文",
+      "finding": "线索为特定项目暂定183.79元/t蒸汽，条件含170℃、0.7MPa；需先核原页及热量换算，不能直接替换MJ价。",
+      "access_date": "2026-11-03"
+    },
+    "ACID": {
+      "title": "隆众硫酸日评20260519",
+      "url": "https://nenghua.m.mysteel.com/a/26051917/57C45415A4218E8C_abc.html",
+      "source_date": "2026-05-19",
+      "access": "检索摘要；打开Cache miss",
+      "finding": "河南98%冶炼酸380—480元/t参考区间；不同地域/物流，未证明卓创湖北到厂480元。",
+      "access_date": "2026-11-03"
+    },
+    "PEROXIDE": {
+      "title": "隆众双氧水日评20260624",
+      "url": "https://nenghua.m.mysteel.com/a/26062416/9FD369E6D417FD87_abc.html",
+      "source_date": "2026-06-24",
+      "access": "检索摘要；打开Cache miss",
+      "finding": "河北27.5%参考650元/t线索，不是1450的原证据。历史2018研报也出现1450，但不能充作2026原价。",
+      "access_date": "2026-11-03"
+    },
+    "NAOH": {
+      "title": "黑猫环保2026片碱采购第二次询价公告转载",
+      "url": "https://www.chemall.com.cn/hangye/show-85850.html",
+      "source_date": "2026-06-15",
+      "access": "正文已读；原发布者平台附件未核读",
+      "finding": "98%片碱10吨，控制单价3100元/t，含运税；是景德镇采购控制价而非卓创99%片碱成交价。",
+      "access_date": "2026-11-03"
+    },
+    "SODA": {
+      "title": "生意社轻质纯碱基准价",
+      "url": "https://www.100ppi.com/news/detail-20261030-6417422.html",
+      "source_date": "2026-10-30",
+      "access": "正文已读",
+      "finding": "轻质纯碱1025元/t，属于模型基准价；不能当重质/电池工艺等级到厂合同价，也不支持原2600。",
+      "access_date": "2026-11-03"
+    },
+    "SODA_HZ": {
+      "title": "隆众华中纯碱价格",
+      "url": "https://www.mysteel.com/oilchem/a/26101611/CCF981988484585B.html",
+      "source_date": "2026-10-16",
+      "access": "仅检索摘要；打开Cache miss",
+      "finding": "华中重质1050—1150元/t线索；须复核原表交付、规格及税价后才可选为代理。",
+      "access_date": "2026-11-03"
+    },
+    "LIME": {
+      "title": "润丰矿业黑龙江生石灰介绍",
+      "url": "https://runfengcn.com/detail/2899.html",
+      "source_date": "",
+      "access": "仅检索摘要；打开Cache miss，厂家宣传类",
+      "finding": "含量≥85%的区间及高活性品680—720元/t线索；无可核精确发布日期，不证明湖北90%灰720元。",
+      "access_date": "2026-11-03"
+    },
+    "WAGE": {
+      "title": "湖北省统计局2025年在岗职工平均工资答复",
+      "url": "https://tjj.hubei.gov.cn/hdjl/lxgs/202605/t20260519_5938848.shtml",
+      "source_date": "2026-05-19（统计期2025）",
+      "access": "正文已读",
+      "finding": "制造业85571元/年；与85000接近，但工资统计不等于含雇主社保福利的2026宜昌园区人均人工总成本。",
+      "access_date": "2026-11-03"
+    },
+    "VAT": {
+      "title": "中华人民共和国增值税法",
+      "url": "https://shanghai.chinatax.gov.cn/zcfw/zcfgk/zzs/202412/t474694.html",
+      "source_date": "2024-12-25通过；页面2024-12-30；2026-01-01施行",
+      "access": "正文已读；第6、10、16条",
+      "finding": "工资服务不征VAT；货物一般13%有例外，交易/凭证决定处理，不能一律13%除税。",
+      "access_date": "2026-11-03"
+    },
+    "CIT": {
+      "title": "税务总局问答引用企业所得税法第四条",
+      "url": "https://www.chinatax.gov.cn/chinatax/c102449/c5237520/content.html",
+      "source_date": "2024-12-30",
+      "access": "检索摘要；官方问答但主题为非居民所得",
+      "finding": "可核一般税率25%的法律引用；项目优惠及完整所得税现金流未据此确认。",
+      "access_date": "2026-11-03"
+    },
+    "REFUND": {
+      "title": "财政部税务总局2021年第40号及2022目录",
+      "url": "https://fgk.chinatax.gov.cn/zcfgk/c102416/c5202062/content.html",
+      "source_date": "2021-12-30",
+      "access": "正文及附件提取文本已读；目录PDF第6页3.1",
+      "finding": "所引目录废电池项为50%且有资源、产品和技术条件，不支持原统一30%；本轮不证明项目资格或全部后续政策。",
+      "access_date": "2026-11-03"
+    },
+    "TREND": {
+      "title": "集邦锂电产业链价格趋势",
+      "url": "https://www.trendforce.cn/price/battery-price/li_co_ni",
+      "source_date": "2026-10-22",
+      "access": "正文已读",
+      "finding": "可见电池级碳酸锂14万元/t及磷酸铁前驱体1.63万元/t；无本项目再生折价成交依据。",
+      "access_date": "2026-11-03"
+    },
+    "COPPER": {
+      "title": "长江有色上海1号铜走势图",
+      "url": "https://copper.ccmn.cn/quota/c8282c1efedb4c778ad4be004a5d635c.html",
+      "source_date": "2026-10-22",
+      "access": "正文已读",
+      "finding": "所见1号铜109790元/t，不支持原表所称同月62000；拆解铜箔料与精炼铜规格仍不同。",
+      "access_date": "2026-11-03"
+    },
+    "METAL": {
+      "title": "中国有色网转载长江有色现货行情",
+      "url": "https://www.cnmn.com.cn/ShowNews1.aspx?id=474811",
+      "source_date": "2026-10-21",
+      "access": "正文已读，转载来源长江有色",
+      "finding": "含税13%的A00铝23610元/t及明确商品分类；不证明18200，更不证明拆解铝可直接按铝锭售价成交。",
+      "access_date": "2026-11-03"
+    },
+    "REUSE": {
+      "title": "电动汽车退役电池储能应用潜力及成本分析",
+      "url": "https://www.escn.com.cn/news/show-1752108.html",
+      "source_date": "2020年前后（检索显示约6.4年前，精确日期待核）",
+      "access": "仅检索摘要，历史研究非最新报价",
+      "finding": "有465元/kWh的假设算例，不支持2026年480的真实模组成交及质保条件。",
+      "access_date": "2026-11-03"
+    }
+  }
+}
