@@ -1,0 +1,3 @@
+﻿scenario,nmc_pyro_hydro_share_of_recycling_feed_percent,lfp_direct_share_of_recycling_feed_percent,lfp_hydromet_share_of_recycling_feed_percent,nmc_battery_equivalent_t_per_year,lfp_direct_battery_equivalent_t_per_year,lfp_hydromet_battery_equivalent_t_per_year,lfp_net_value_low_usd_per_year,lfp_net_value_high_usd_per_year,increment_vs_baseline_low_usd_per_year,increment_vs_baseline_high_usd_per_year
+A_baseline_50_50_LFP_split,40.0,30.0,30.0,6400.0,4800.0,4800.0,-3600000.0,-3264000.0,0.0,0.0
+economic_only_all_LFP_direct,40.0,60.0,0.0,6400.0,9600.0,0.0,12480000.0,12672000.0,15744000.0,16272000.0
