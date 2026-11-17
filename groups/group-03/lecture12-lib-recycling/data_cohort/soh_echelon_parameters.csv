@@ -1,0 +1,4 @@
+soh_range_lower,soh_range_upper,echelon_scenario,capacity_fade_rate_per_year,remaining_life_years,annual_energy_throughput_kWh_per_kWh,revenue_CNY_per_kWh,refurb_cost_CNY_per_kWh,reference
+85,100,LSV,0.060,3,1200,0.55,120,Zhang_2025
+80,85,ESS,0.040,5,2500,0.68,150,Zhang_2025
+70,80,CBS,0.045,4,1800,0.62,130,Ma_2024

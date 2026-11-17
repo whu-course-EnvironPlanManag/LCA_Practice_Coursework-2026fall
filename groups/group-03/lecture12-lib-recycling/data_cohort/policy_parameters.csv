@@ -1,0 +1,12 @@
+policy,item,threshold,unit,effective_year,reference
+miit_2024,li_recovery_min,0.90,ratio,2025,MIIT_2024
+miit_2024,ni_co_mn_recovery_min,0.98,ratio,2025,MIIT_2024
+miit_2024,electrode_powder_recovery_min,0.98,ratio,2025,MIIT_2024
+miit_2024,fluorine_fixation_min,0.995,ratio,2025,MIIT_2024
+miit_2024,material_repair_rate_min,0.99,ratio,2025,MIIT_2024
+miit_2024,li2co3_energy_max,2200,kgce_per_t,2025,MIIT_2024
+miit_2024,wastewater_recycle_min,0.90,ratio,2025,MIIT_2024
+eu_2023_1542,li_recovery_2027,0.50,ratio,2027,EU_2023_1542
+eu_2023_1542,li_recovery_2031,0.80,ratio,2031,EU_2023_1542
+eu_2023_1542,recycled_li_2031,0.06,ratio,2031,EU_2023_1542
+eu_2023_1542,recycled_li_2036,0.12,ratio,2036,EU_2023_1542

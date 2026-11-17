@@ -1,0 +1,9 @@
+element,process,input_kg,product_kg,residue_kg,loss_kg,rel_error_pct
+Li,hydrometallurgy,3745000.0,3445400.0,0.0,299600.0,0.0
+Ni,hydrometallurgy,17045000.0,16704100.0,0.0,340900.0,0.0
+Co,hydrometallurgy,2555000.0,2503900.0,0.0,51100.0,0.0
+Mn,hydrometallurgy,2135000.0,2092300.0,0.0,42700.0,0.0
+Cu,hydrometallurgy,4900000.0,4802000.0,0.0,98000.0,0.0
+Al,hydrometallurgy,1750000.0,1715000.0,0.0,35000.0,0.0
+Fe,hydrometallurgy,10885000.0,9796500.0,0.0,1088500.0,0.0
+P,hydrometallurgy,6090000.0,5176500.0,0.0,913500.0,0.0
