@@ -1,0 +1,55 @@
+{
+  "project": {
+    "name": "衢州华友循环资源再生产业园政策合规评估",
+    "design_capacity_t_per_year": 20000,
+    "base_year": 2026,
+    "planning_years": [2030, 2031, 2035, 2036],
+    "source_data": "成员A《数据手册_完整版.md》，版本2026-11-03"
+  },
+  "decision_variables": [
+    {
+      "id": "x1",
+      "name": "冶炼锂回收率",
+      "unit": "%",
+      "baseline_percent": 92.0,
+      "scenario_range_percent": [80.0, 99.0],
+      "grid_step_percent": 1.0,
+      "china_minimum_percent": 90.0,
+      "eu_minimum_percent_by_2027": 50.0,
+      "eu_minimum_percent_by_2031": 80.0,
+      "source": "工信部《新能源汽车废旧动力电池综合利用行业规范条件（2024年本）》；Regulation (EU) 2023/1542"
+    },
+    {
+      "id": "x2",
+      "name": "工艺废水循环利用率",
+      "unit": "%",
+      "baseline_percent": null,
+      "scenario_range_percent": [80.0, 98.0],
+      "grid_step_percent": 1.0,
+      "china_minimum_percent": 90.0,
+      "source": "工信部《新能源汽车废旧动力电池综合利用行业规范条件（2024年本）》"
+    }
+  ],
+  "china_requirements": [
+    {"id":"li_recovery","name":"冶炼过程锂回收率","metric":"li_recovery_percent","operator":">=","threshold":90.0,"unit":"%","source":"工信部《新能源汽车废旧动力电池综合利用行业规范条件（2024年本）》"},
+    {"id":"recycling_capacity","name":"再生利用年综合利用能力","metric":"recycling_capacity_t_per_year","operator":">=","threshold":5000.0,"unit":"t/a","source":"工信部《新能源汽车废旧动力电池综合利用行业规范条件（2024年本）》"},
+    {"id":"cascade_capacity","name":"梯次利用年综合利用能力","metric":"cascade_capacity_t_per_year","operator":">=","threshold":1000.0,"unit":"t/a","source":"工信部《新能源汽车废旧动力电池综合利用行业规范条件（2024年本）》"},
+    {"id":"rd_expense_ratio","name":"研发及工艺改进费用占业务收入比例","metric":"rd_expense_ratio_percent","operator":">=","threshold":3.0,"unit":"%","source":"工信部《新能源汽车废旧动力电池综合利用行业规范条件（2024年本）》"},
+    {"id":"ni_recovery","name":"镍回收率","metric":"ni_recovery_percent","operator":">=","threshold":98.0,"unit":"%","source":"工信部《新能源汽车废旧动力电池综合利用行业规范条件（2024年本）》"},
+    {"id":"co_recovery","name":"钴回收率","metric":"co_recovery_percent","operator":">=","threshold":98.0,"unit":"%","source":"工信部《新能源汽车废旧动力电池综合利用行业规范条件（2024年本）》"},
+    {"id":"mn_recovery","name":"锰回收率","metric":"mn_recovery_percent","operator":">=","threshold":98.0,"unit":"%","source":"工信部《新能源汽车废旧动力电池综合利用行业规范条件（2024年本）》"},
+    {"id":"black_mass_recovery","name":"电极粉料回收率","metric":"black_mass_recovery_percent","operator":">=","threshold":98.0,"unit":"%","source":"工信部《新能源汽车废旧动力电池综合利用行业规范条件（2024年本）》"},
+    {"id":"copper_recovery","name":"铜回收率","metric":"copper_recovery_percent","operator":">=","threshold":98.0,"unit":"%","source":"工信部《新能源汽车废旧动力电池综合利用行业规范条件（2024年本）》"},
+    {"id":"aluminum_recovery","name":"铝回收率","metric":"aluminum_recovery_percent","operator":">=","threshold":98.0,"unit":"%","source":"工信部《新能源汽车废旧动力电池综合利用行业规范条件（2024年本）》"},
+    {"id":"material_repair","name":"材料修复工艺材料回收比重","metric":"material_repair_percent","operator":">=","threshold":99.0,"unit":"%","source":"工信部《新能源汽车废旧动力电池综合利用行业规范条件（2024年本）》"},
+    {"id":"fluorine_solidification","name":"氟固化率","metric":"fluorine_solidification_percent","operator":">=","threshold":99.5,"unit":"%","source":"工信部《新能源汽车废旧动力电池综合利用行业规范条件（2024年本）》"},
+    {"id":"lithium_carbonate_energy","name":"碳酸锂单位综合能耗","metric":"lithium_carbonate_energy_kgce_per_t","operator":"<","threshold":2200.0,"unit":"kgce/t Li2CO3","source":"工信部《新能源汽车废旧动力电池综合利用行业规范条件（2024年本）》"},
+    {"id":"wastewater_reuse","name":"工艺废水循环利用率","metric":"wastewater_reuse_percent","operator":">=","threshold":90.0,"unit":"%","source":"工信部《新能源汽车废旧动力电池综合利用行业规范条件（2024年本）》"}
+  ],
+  "eu_requirements": [
+    {"id":"eu_li_recovery_2027","name":"欧盟锂回收率目标（2027）","metric":"li_recovery_percent","operator":">=","threshold":50.0,"unit":"%","source":"Regulation (EU) 2023/1542"},
+    {"id":"eu_li_recovery_2031","name":"欧盟锂回收率目标（2031）","metric":"li_recovery_percent","operator":">=","threshold":80.0,"unit":"%","source":"Regulation (EU) 2023/1542"},
+    {"id":"eu_recycled_content_2031","name":"欧盟新电池再生锂含量目标（2031）","metric":"recycled_lithium_content_percent","operator":">=","threshold":6.0,"unit":"%","source":"Regulation (EU) 2023/1542"},
+    {"id":"eu_recycled_content_2036","name":"欧盟新电池再生锂含量目标（2036）","metric":"recycled_lithium_content_percent","operator":">=","threshold":12.0,"unit":"%","source":"Regulation (EU) 2023/1542"}
+  ]
+}
