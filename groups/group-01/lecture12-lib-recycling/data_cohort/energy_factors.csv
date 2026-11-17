@@ -1,0 +1,3 @@
+﻿year,grid_gwp_kg_per_kwh,green_gwp_kg_per_kwh,grid_water_l_per_kwh,green_water_l_per_kwh,grid_price_cny_per_kwh,green_price_cny_per_kwh,source,source_locator
+2023,0.4044,0.02,2.0,0.05,0.691333,0.697493,生态环境部2023年省级电力CO2因子；中国电网淡水消耗2.0 L/kWh（ACS EST 2021）；国网湖北2026年3月1-10kV单一制电价0.691333元/kWh；绿证2026年均价6.16元/个,MEE 2023公告附表湖北0.4044；EST 2021c07155摘要；国网湖北代理购电价表2026-03；国家能源局2026-09绿证交易数据
+2030,0.4044,0.02,2.0,0.05,0.691333,0.697493,同上；2030年沿用2023年最新官方省级因子（不假设电网自动 decarbonization），绿电为风/光生命周期代表值,保守情景：2030年湖北电网因子保持0.4044 kgCO2/kWh；绿电GWP 0.02、水耗0.05为研究设计
