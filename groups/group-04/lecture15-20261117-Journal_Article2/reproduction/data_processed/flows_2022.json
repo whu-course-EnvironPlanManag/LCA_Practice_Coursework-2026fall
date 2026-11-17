@@ -1,0 +1,316 @@
+{
+  "year": 2022,
+  "unit": "Mt P/a",
+  "p": {
+    "mined": 23.33,
+    "ore_to_cis": 22.53,
+    "fert": 20.5,
+    "industrial": 1.6,
+    "deposition": 2.0,
+    "seed": 0.6,
+    "forage": 7.0,
+    "ind_feed": 1.2,
+    "byproduct": 0.6,
+    "import_feed": 1.8,
+    "manure_recycle": 5.0,
+    "sludge_recycle": 2.5,
+    "straw_return": 0.9,
+    "harvest": 9.9,
+    "runoff": 3.6,
+    "food": 7.4,
+    "feed_crop": 1.6,
+    "animal_products": 2.4,
+    "pasture_soil": 1.2,
+    "field_loss": 0.5,
+    "manure_waste": 1.3,
+    "eaten": 8.1,
+    "food_waste": 1.7,
+    "ww": 4.5,
+    "rural_direct": 3.6,
+    "landfill": 1.0,
+    "discharge": 4.0,
+    "outflow": 2.2
+  },
+  "subsystems": {
+    "磷矿开采": {
+      "inflow": {
+        "原矿磷": 23.33
+      },
+      "outflow": {
+        "矿石→磷化工": 22.53,
+        "尾矿损失": 0.7999999999999972
+      },
+      "stock": 0.0
+    },
+    "磷化工": {
+      "inflow": {
+        "矿石磷": 22.53
+      },
+      "outflow": {
+        "化肥": 20.5,
+        "工业磷": 1.6,
+        "磷石膏": 0.43000000000000105
+      },
+      "stock": 0.0
+    },
+    "农田": {
+      "inflow": {
+        "化肥": 20.5,
+        "粪肥还田": 5.0,
+        "污泥回用": 2.5,
+        "秸秆还田": 0.9,
+        "大气沉降": 2.0,
+        "种子": 0.6
+      },
+      "outflow": {
+        "作物收获": 9.9,
+        "径流流失": 3.6,
+        "土壤遗留": 18.0
+      },
+      "stock": 0.0
+    },
+    "畜禽养殖": {
+      "inflow": {
+        "作物饲料": 1.6,
+        "工业饲料": 1.2,
+        "农副产物": 0.6,
+        "牧草": 7.0
+      },
+      "outflow": {
+        "动物产品": 2.4,
+        "粪肥还田": 5.0,
+        "牧场土壤": 1.2,
+        "田间流失": 0.5,
+        "粪污处理": 1.3,
+        "其他粪污损失": 0.0
+      },
+      "stock": 0.0
+    },
+    "居民消费": {
+      "inflow": {
+        "作物食物": 7.4,
+        "动物产品": 2.4
+      },
+      "outflow": {
+        "人体摄入": 8.1,
+        "食物浪费": 1.7
+      },
+      "stock": 0.0
+    },
+    "污水处理": {
+      "inflow": {
+        "生活污水": 4.5,
+        "粪污": 1.3,
+        "食物垃圾": 1.7
+      },
+      "outflow": {
+        "污泥回用": 2.5,
+        "填埋": 1.0,
+        "尾水排放": 4.0
+      },
+      "stock": 0.0
+    },
+    "水环境": {
+      "inflow": {
+        "农田径流": 3.6,
+        "粪肥流失": 0.5,
+        "农村直排": 3.6,
+        "尾水排放": 4.0
+      },
+      "outflow": {
+        "入海输出": 2.2,
+        "沉积埋藏": 9.5
+      },
+      "stock": 0.0
+    }
+  },
+  "links": [
+    {
+      "source": "磷矿开采",
+      "target": "磷化工",
+      "value": 22.53,
+      "kind": "矿石"
+    },
+    {
+      "source": "磷矿开采",
+      "target": "尾矿",
+      "value": 0.8,
+      "kind": "损失"
+    },
+    {
+      "source": "磷化工",
+      "target": "农田",
+      "value": 20.5,
+      "kind": "化肥"
+    },
+    {
+      "source": "磷化工",
+      "target": "工业利用",
+      "value": 1.6,
+      "kind": "工业"
+    },
+    {
+      "source": "磷化工",
+      "target": "磷石膏",
+      "value": 0.43,
+      "kind": "损失"
+    },
+    {
+      "source": "大气沉降",
+      "target": "农田",
+      "value": 2.0,
+      "kind": "自然输入"
+    },
+    {
+      "source": "种子",
+      "target": "农田",
+      "value": 0.6,
+      "kind": "自然输入"
+    },
+    {
+      "source": "进料(进口)",
+      "target": "畜禽养殖",
+      "value": 1.8,
+      "kind": "贸易"
+    },
+    {
+      "source": "草地",
+      "target": "畜禽养殖",
+      "value": 7.0,
+      "kind": "自然输入"
+    },
+    {
+      "source": "农田",
+      "target": "作物收获",
+      "value": 9.9,
+      "kind": "作物"
+    },
+    {
+      "source": "农田",
+      "target": "水环境",
+      "value": 3.6,
+      "kind": "损失"
+    },
+    {
+      "source": "农田",
+      "target": "土壤遗留",
+      "value": 18.0,
+      "kind": "累积"
+    },
+    {
+      "source": "作物收获",
+      "target": "居民消费",
+      "value": 7.4,
+      "kind": "食物"
+    },
+    {
+      "source": "作物收获",
+      "target": "畜禽养殖",
+      "value": 1.6,
+      "kind": "饲料"
+    },
+    {
+      "source": "作物收获",
+      "target": "农田",
+      "value": 0.9,
+      "kind": "秸秆"
+    },
+    {
+      "source": "畜禽养殖",
+      "target": "居民消费",
+      "value": 2.4,
+      "kind": "食物"
+    },
+    {
+      "source": "畜禽养殖",
+      "target": "农田",
+      "value": 5.0,
+      "kind": "粪肥"
+    },
+    {
+      "source": "畜禽养殖",
+      "target": "牧场土壤",
+      "value": 1.2,
+      "kind": "累积"
+    },
+    {
+      "source": "畜禽养殖",
+      "target": "水环境",
+      "value": 0.5,
+      "kind": "损失"
+    },
+    {
+      "source": "畜禽养殖",
+      "target": "污水处理",
+      "value": 1.3,
+      "kind": "粪污"
+    },
+    {
+      "source": "居民消费",
+      "target": "污水处理",
+      "value": 1.7,
+      "kind": "垃圾"
+    },
+    {
+      "source": "居民消费",
+      "target": "污水处理",
+      "value": 4.5,
+      "kind": "污水"
+    },
+    {
+      "source": "居民消费",
+      "target": "水环境",
+      "value": 3.6,
+      "kind": "直排"
+    },
+    {
+      "source": "污水处理",
+      "target": "农田",
+      "value": 2.5,
+      "kind": "回用"
+    },
+    {
+      "source": "污水处理",
+      "target": "填埋",
+      "value": 1.0,
+      "kind": "损失"
+    },
+    {
+      "source": "污水处理",
+      "target": "水环境",
+      "value": 4.0,
+      "kind": "排放"
+    },
+    {
+      "source": "水环境",
+      "target": "沉积埋藏",
+      "value": 9.5,
+      "kind": "累积"
+    },
+    {
+      "source": "水环境",
+      "target": "入海输出",
+      "value": 2.2,
+      "kind": "损失"
+    },
+    {
+      "source": "工业利用",
+      "target": "工业库存",
+      "value": 1.6,
+      "kind": "存量"
+    }
+  ],
+  "mass_balance": {
+    "inputs": 34.73,
+    "sinks": 34.73,
+    "rel_error": 0.0,
+    "subsystem_rel_error": 1.813e-16
+  },
+  "indicators": {
+    "crop_pue": 0.3142857142857143,
+    "fertilizer_share": 0.6507936507936508,
+    "legacy_share": 0.5714285714285714,
+    "livestock_pue": 0.23076923076923075,
+    "water_pue": 0.811965811965812
+  }
+}
