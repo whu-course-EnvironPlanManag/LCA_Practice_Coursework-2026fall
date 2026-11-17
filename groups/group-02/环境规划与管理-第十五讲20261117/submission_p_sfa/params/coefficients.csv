@@ -1,0 +1,41 @@
+symbol,value,unit,description,source,page,type,used_in
+alpha1,0.4364,dimensionless,P2O5 折算纯磷系数,SI Table S3,120,SI,PMS/CIS
+alpha3,0.31,fraction,磷矿精矿平均含磷率（2022 年与 USGS MYB2022_T10 同版本 P2O5 交叉核对：31.159 Mt P）,SI Table S3,120,SI,PMS
+alpha4,1.0,Mt/Mt concentrate,采矿现场砂废弃物产生系数,SI Table S3,120,SI,PMS
+alpha5,0.0008,fraction,现场砂废弃物含磷率,SI Table S3,120,SI,PMS
+alpha6,1.0,Mt/Mt concentrate,一次矿泥产生系数,SI Table S3,120,SI,PMS
+alpha7,0.0388,fraction,一次矿泥含磷率,SI Table S3,120,SI,PMS
+alpha8,3.2,Mt/Mt concentrate,尾矿产生系数,SI Table S3,120,SI,PMS
+alpha9,0.038,fraction,尾矿含磷率,SI Table S3,120,SI,PMS
+alpha11,4.8,Mt/Mt P2O5,磷石膏产生系数,SI Table S3,120,SI,CIS
+alpha12,0.004,fraction,磷石膏含磷率,SI Table S3,120,SI,CIS
+alpha18,0.15,fraction,非肥料用磷中洗涤剂占比,SI Table S3,120,SI,CIS
+alpha19,0.25,fraction,非肥料用磷中食品/饲料添加剂占比,SI Table S3,120,SI,CIS
+alpha20,0.50,fraction,非肥料用磷中工业用途占比,SI Table S3,120,SI,CIS
+alpha21,0.10,fraction,非肥料用磷中其他用途占比,SI Table S3,120,SI,CIS
+beta1,0.40,fraction,作物秸秆用作有机肥比例,SI Table S3,121,SI,ACS
+beta2,0.25,fraction,作物收获物用作饲料比例,SI Table S3,121,SI,ACS/LBS
+beta3,0.67,fraction,畜禽粪便用作有机肥比例（2022基准）,SI Table S3,121,SI,LBS
+beta4,0.005,fraction,饲料添加剂占饲料磷比例,SI Table S3,121,SI,LBS
+beta5,0.47,kg P/capita/yr,人均年磷排泄量,SI Table S3,121,SI,RCS
+beta6,0.44,fraction,农村人粪尿还田比例,SI Table S3,121,SI,RCS
+beta7,0.22,fraction,城市人粪尿还田比例,SI Table S3,121,SI,RCS
+lambda1,0.4,kg P/ha/yr,耕地大气沉降系数,SI Table S3,121,SI,ACS
+lambda3,1.8,kg P/ha/yr,耕地径流系数,SI Table S3,121,SI,ACS
+lambda5,0.34,kg P/ha/yr,耕地淋溶系数,SI Table S3,121,SI,ACS
+kappa_drainage,2.1,kg P/ha/yr,农田排水流失系数,SI Table S4,123,SI,ACS
+kappa_leaching,0.2,kg P/ha/yr,农田淋溶流失系数,SI Table S4,123,SI,ACS
+s_deposition,25,kg P/km2/yr,单位面积大气磷沉降,SI Table S4,123,SI,ACS
+h,0.30,fraction,施肥/粪肥/人粪尿进入土壤淀积的比例,SI Table S4,123,SI,ACS
+phi1,0.568,fraction,植物性食物占膳食磷比例,SI Table S4,124,SI,RCS
+phi2,0.271,fraction,动物性食物占膳食磷比例,SI Table S4,124,SI,RCS
+phi3,0.056,fraction,其他食物占膳食磷比例,SI Table S4,124,SI,RCS
+pue_lbs,0.23,fraction,畜禽养殖系统磷利用效率（文献值；接入存栏粪磷后仅作回退与核对，模型 PUE 为输出 25.2%）,论文正文 5.1 节,na,paper,LBS
+residue_ratio,0.45,fraction,作物残留磷/收获磷（由 κu/κh 归并）,SI Table S3 推导,120,derived,ACS
+eta_cis,0.90,fraction,磷化工肥料磷产出率,假设（SI 未直接给出）,na,assumption,CIS
+nonfert_share,0.05,fraction,磷化工非肥料产品占投料比例,假设（SI 未直接给出）,na,assumption,CIS
+manure_substitution,0.50,fraction,新增有机肥对矿物磷肥的替代系数,假设（行为参数，待敏感性检验）,na,assumption,ACS/CIS
+struvite_base,0.10,fraction,2022基准污水鸟粪石回收率,课程假设（任务书未给基准）,na,course_scenario,RCS
+reduce_rate,0.20,fraction,课程情景：化肥减施比例,任务书 3R 设定,na,course_scenario,Scenario
+manure_target,0.75,fraction,课程情景：粪便堆肥利用率目标,任务书 3R 设定,na,course_scenario,Scenario
+recovery_target,0.60,fraction,课程情景：污水鸟粪石回收率目标,任务书 3R 设定,na,course_scenario,Scenario
