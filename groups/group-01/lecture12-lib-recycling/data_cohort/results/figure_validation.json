@@ -1,0 +1,187 @@
+{
+  "figures": [
+    {
+      "file": "fig0a_yearbook_private_cars.png",
+      "collision_exit": 0,
+      "collision_summary": {
+        "fail": 0,
+        "warn": 0,
+        "contained_fill_overlays": 0,
+        "contained_image_overlays": 0
+      },
+      "minimum_font_pt": 9.0,
+      "below_font_floor": 0
+    },
+    {
+      "file": "fig0b_yearbook_electricity.png",
+      "collision_exit": 0,
+      "collision_summary": {
+        "fail": 0,
+        "warn": 0,
+        "contained_fill_overlays": 0,
+        "contained_image_overlays": 0
+      },
+      "minimum_font_pt": 9.0,
+      "below_font_floor": 0
+    },
+    {
+      "file": "fig0c_yearbook_city_electricity.png",
+      "collision_exit": 0,
+      "collision_summary": {
+        "fail": 0,
+        "warn": 0,
+        "contained_fill_overlays": 0,
+        "contained_image_overlays": 0
+      },
+      "minimum_font_pt": 9.0,
+      "below_font_floor": 0
+    },
+    {
+      "file": "fig10_capital_sensitivity.png",
+      "collision_exit": 0,
+      "collision_summary": {
+        "fail": 0,
+        "warn": 0,
+        "contained_fill_overlays": 0,
+        "contained_image_overlays": 0
+      },
+      "minimum_font_pt": 9.0,
+      "below_font_floor": 0
+    },
+    {
+      "file": "fig1_stock_and_retirement.png",
+      "collision_exit": 0,
+      "collision_summary": {
+        "fail": 0,
+        "warn": 0,
+        "contained_fill_overlays": 0,
+        "contained_image_overlays": 0
+      },
+      "minimum_font_pt": 8.0,
+      "below_font_floor": 0
+    },
+    {
+      "file": "fig2_pareto_brine.png",
+      "collision_exit": 0,
+      "collision_summary": {
+        "fail": 0,
+        "warn": 0,
+        "contained_fill_overlays": 0,
+        "contained_image_overlays": 0
+      },
+      "minimum_font_pt": 9.0,
+      "below_font_floor": 0
+    },
+    {
+      "file": "fig3_water_carbon_brine.png",
+      "collision_exit": 0,
+      "collision_summary": {
+        "fail": 0,
+        "warn": 0,
+        "contained_fill_overlays": 0,
+        "contained_image_overlays": 0
+      },
+      "minimum_font_pt": 10.0,
+      "below_font_floor": 0
+    },
+    {
+      "file": "fig4_sensitivity_brine.png",
+      "collision_exit": 0,
+      "collision_summary": {
+        "fail": 0,
+        "warn": 0,
+        "contained_fill_overlays": 0,
+        "contained_image_overlays": 0
+      },
+      "minimum_font_pt": 10.0,
+      "below_font_floor": 0
+    },
+    {
+      "file": "fig5_breakdown_0_brine.png",
+      "collision_exit": 0,
+      "collision_summary": {
+        "fail": 0,
+        "warn": 0,
+        "contained_fill_overlays": 0,
+        "contained_image_overlays": 0
+      },
+      "minimum_font_pt": 10.0,
+      "below_font_floor": 0
+    },
+    {
+      "file": "fig5_breakdown_1_brine.png",
+      "collision_exit": 0,
+      "collision_summary": {
+        "fail": 0,
+        "warn": 0,
+        "contained_fill_overlays": 0,
+        "contained_image_overlays": 0
+      },
+      "minimum_font_pt": 10.0,
+      "below_font_floor": 0
+    },
+    {
+      "file": "fig5_breakdown_2_brine.png",
+      "collision_exit": 0,
+      "collision_summary": {
+        "fail": 0,
+        "warn": 0,
+        "contained_fill_overlays": 0,
+        "contained_image_overlays": 0
+      },
+      "minimum_font_pt": 10.0,
+      "below_font_floor": 0
+    },
+    {
+      "file": "fig6_network_brine.png",
+      "collision_exit": 0,
+      "collision_summary": {
+        "fail": 0,
+        "warn": 0,
+        "contained_fill_overlays": 0,
+        "contained_image_overlays": 0
+      },
+      "minimum_font_pt": 8.0,
+      "below_font_floor": 0
+    },
+    {
+      "file": "fig7_primary_comparison_brine.png",
+      "collision_exit": 0,
+      "collision_summary": {
+        "fail": 0,
+        "warn": 0,
+        "contained_fill_overlays": 0,
+        "contained_image_overlays": 0
+      },
+      "minimum_font_pt": 10.0,
+      "below_font_floor": 0
+    },
+    {
+      "file": "fig8_price_profit_brine.png",
+      "collision_exit": 0,
+      "collision_summary": {
+        "fail": 0,
+        "warn": 0,
+        "contained_fill_overlays": 0,
+        "contained_image_overlays": 0
+      },
+      "minimum_font_pt": 10.0,
+      "below_font_floor": 0
+    },
+    {
+      "file": "fig9_cost_revenue.png",
+      "collision_exit": 0,
+      "collision_summary": {
+        "fail": 0,
+        "warn": 0,
+        "contained_fill_overlays": 0,
+        "contained_image_overlays": 0
+      },
+      "minimum_font_pt": 10.0,
+      "below_font_floor": 0
+    }
+  ],
+  "count": 15,
+  "audit_artifacts": "outside working repository: hubei_lec12_research/CANONICAL_QA",
+  "scope": "All formal PNGs only; optional QA PDF/SVG excluded from formal submission."
+}
