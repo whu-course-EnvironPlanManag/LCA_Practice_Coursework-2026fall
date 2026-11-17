@@ -1,0 +1,146 @@
+﻿[
+    {
+        "local":  "001.pdf",
+        "path":  "starter_materials/lecture15-20261117-Journal_Article2/Future-strategies-for-phosphorus-sustainability-amid-worsening-global-cycle-imbalances.pdf",
+        "size":  16513014,
+        "sha":  "a6d639ef00531667c24f7b8de8c2e7b77d47edad"
+    },
+    {
+        "local":  "002.pdf",
+        "path":  "starter_materials/lecture15-20261117-Journal_Article2/Future-strategies-for-phosphorus-sustainability-amid-worsening-global-cycle-imbalances_sapp.pdf",
+        "size":  29851388,
+        "sha":  "82a1ecdfa330fad3b6ee8b65e8476e5f02d9db0b"
+    },
+    {
+        "local":  "003.md",
+        "path":  "starter_materials/lecture15-20261117-Journal_Article2/assignment_documentation.md",
+        "size":  12871,
+        "sha":  "fd1268fe3bd26340ca826df76573e9aa31f4ff13"
+    },
+    {
+        "local":  "004.csv",
+        "path":  "starter_materials/lecture15-20261117-Journal_Article2/source_data/Origin data/7.Global and national level CPF application and trade data/Nutrient phosphate P2O5 use data at the national level.csv",
+        "size":  14843701,
+        "sha":  "1d3dbf73e6dedf7075454eb8992c08b08b56d994"
+    },
+    {
+        "local":  "005.csv",
+        "path":  "starter_materials/lecture15-20261117-Journal_Article2/source_data/Origin data/8.Global land use data/Global level cropland area.csv",
+        "size":  193370,
+        "sha":  "e2535407d78de8bef04da82e117dcc9ba5cc4c88"
+    },
+    {
+        "local":  "006.md",
+        "path":  "starter_materials/lecture15-20261117-Journal_Article2/source_data/README.md",
+        "size":  10803,
+        "sha":  "c37139201a3cef899ae2cb811c5166a3d0de80b1"
+    },
+    {
+        "local":  "007.docx",
+        "path":  "starter_materials/lecture15-20261117-Journal_Article2/source_data/READ_ME.docx",
+        "size":  16991,
+        "sha":  "f062e601dde72d123ffc03365dc1ab812aba9130"
+    },
+    {
+        "local":  "008.py",
+        "path":  "starter_materials/lecture15-20261117-Journal_Article2/source_data/Supplementary Data_PNAS Second Revision/PNAS Second Revision – Cross-Sensitivity Analysis Code/无交叉项.py",
+        "size":  8139,
+        "sha":  "133bc07afbe24a7cc52facdb56cc7dd59bf8e72d"
+    },
+    {
+        "local":  "009.py",
+        "path":  "starter_materials/lecture15-20261117-Journal_Article2/source_data/Supplementary Data_PNAS Second Revision/PNAS Second Revision – Cross-Sensitivity Analysis Code/有交叉项.py",
+        "size":  9892,
+        "sha":  "d4003c3605cebe087be33b4962392ed478539715"
+    },
+    {
+        "local":  "010.docx",
+        "path":  "starter_materials/lecture15-20261117-Journal_Article2/source_data/Supplementary Data_PNAS Second Revision/Principle of the Cross-Sensitivity Analysis Algorithm.docx",
+        "size":  341212,
+        "sha":  "797af49dce094b723198ee1e894e93f6e46ac3ea"
+    },
+    {
+        "local":  "011.xlsx",
+        "path":  "starter_materials/lecture15-20261117-Journal_Article2/source_data/Supplementary Data_PNAS Second Revision/Results_CrossSensitivity_All Combinations_Production.xlsx",
+        "size":  36171,
+        "sha":  "85b027715cf9c7f5759595d29b737f4811618113"
+    },
+    {
+        "local":  "012.xlsx",
+        "path":  "starter_materials/lecture15-20261117-Journal_Article2/source_data/Supplementary Data_PNAS Second Revision/Results_CrossSensitivity_All Combinations_Trade.xlsx",
+        "size":  41355,
+        "sha":  "b9c4c412b5682ac27592488e80224c09f985ddfe"
+    },
+    {
+        "local":  "013.xlsx",
+        "path":  "starter_materials/lecture15-20261117-Journal_Article2/source_data/Supplementary Data_PNAS Second Revision/Results_Sensitivity_All Combinations_Production.xlsx",
+        "size":  33865,
+        "sha":  "aeac047647b5b385d9c1ea97325e989acad2d4bc"
+    },
+    {
+        "local":  "014.xlsx",
+        "path":  "starter_materials/lecture15-20261117-Journal_Article2/source_data/Supplementary Data_PNAS Second Revision/Results_Sensitivity_All Combinations_Trade.xlsx",
+        "size":  38700,
+        "sha":  "0608239b7d68b6c8b0bd36a50b5b76bfa156171b"
+    },
+    {
+        "local":  "015.xlsx",
+        "path":  "starter_materials/lecture15-20261117-Journal_Article2/source_data/Supplementary_dataset_PNAS_First_Revision/1.Country-level raw data on agricultural production and P calculations/Agricultural products_P_result_national level（1961-2022）.xlsx",
+        "size":  1319564,
+        "sha":  "cfdafeef50e07f8bb4088d6252422b32722a0b09"
+    },
+    {
+        "local":  "016.xlsx",
+        "path":  "starter_materials/lecture15-20261117-Journal_Article2/source_data/Supplementary_dataset_PNAS_First_Revision/2.Country-level origin data on agricultural trade and P calculations/Calculated data on P in agricultural exports at the national level.xlsx",
+        "size":  1380224,
+        "sha":  "9d62cb2777a42c6db8fa61c29c18de9291958027"
+    },
+    {
+        "local":  "017.xlsx",
+        "path":  "starter_materials/lecture15-20261117-Journal_Article2/source_data/Supplementary_dataset_PNAS_First_Revision/2.Country-level origin data on agricultural trade and P calculations/Calculated data on P in agricultural imports at the national level.xlsx",
+        "size":  1504977,
+        "sha":  "5785c72b19cec9bce9a0d8330ef5fd4677144397"
+    },
+    {
+        "local":  "018.xlsx",
+        "path":  "starter_materials/lecture15-20261117-Journal_Article2/source_data/Supplementary_dataset_PNAS_First_Revision/3.P content coefficient of products_Production.xlsx",
+        "size":  18746,
+        "sha":  "3d37c8ab741bd915ba113d0361d5e64decf491bb"
+    },
+    {
+        "local":  "019.xlsx",
+        "path":  "starter_materials/lecture15-20261117-Journal_Article2/source_data/Supplementary_dataset_PNAS_First_Revision/4.P content coefficient of products_Trade.xlsx",
+        "size":  27892,
+        "sha":  "0522f2654a177e2104c8b09a2022f1f018b08dc8"
+    },
+    {
+        "local":  "020.xlsx",
+        "path":  "starter_materials/lecture15-20261117-Journal_Article2/source_data/Supplementary_dataset_PNAS_First_Revision/5.Sensitivity Analysis Results_Production.xlsx",
+        "size":  472569,
+        "sha":  "9d44efe7cf8b1ec1f0bc76d32e4c41bab46606b7"
+    },
+    {
+        "local":  "021.xlsx",
+        "path":  "starter_materials/lecture15-20261117-Journal_Article2/source_data/Supplementary_dataset_PNAS_First_Revision/6.Sensitivity Analysis Results_Trade.xlsx",
+        "size":  817311,
+        "sha":  "1cca23ac773ff0fe17eaec7a4355f79b559449c2"
+    },
+    {
+        "local":  "022.xlsx",
+        "path":  "starter_materials/lecture15-20261117-Journal_Article2/source_data/Supplementary_dataset_PNAS_First_Revision/7.Global population projection data for P sustainability scenario analysis.xlsx",
+        "size":  24175035,
+        "sha":  "7b30ad535bf595794274623c4222f9bc8eccb701"
+    },
+    {
+        "local":  "023.py",
+        "path":  "starter_materials/lecture15-20261117-Journal_Article2/source_data/Supplementary_dataset_PNAS_First_Revision/8.Code implementation of P_SFA modeling_cropping system case.py",
+        "size":  8917,
+        "sha":  "6aecad225127837109e33567cc9ee0eec34bd3ae"
+    },
+    {
+        "local":  "024.docx",
+        "path":  "starter_materials/lecture15-20261117-Journal_Article2/source_data/Supplementary_dataset_PNAS_First_Revision/READ ME.docx",
+        "size":  17773,
+        "sha":  "9be0e537e19765783dcc880166cc4209acb10c15"
+    }
+]

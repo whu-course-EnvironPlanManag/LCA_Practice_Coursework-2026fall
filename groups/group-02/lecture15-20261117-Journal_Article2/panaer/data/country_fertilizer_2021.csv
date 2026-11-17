@@ -1,0 +1,4 @@
+﻿Domain Code,Domain,Area Code (M49),Area,Element Code,Element,Item Code,Item,Year Code,Year,Unit,Value,Flag,Flag Description,Note,P(t)
+RFN,Fertilizers by Nutrient,156,"China, mainland",5157,Agricultural Use,3103,Nutrient phosphate P2O5 (total),2021,2021,t,10094565.83,I,Imputed value,,
+RFN,Fertilizers by Nutrient,356,India,5157,Agricultural Use,3103,Nutrient phosphate P2O5 (total),2021,2021,t,7828500.0,A,Official figure,,
+RFN,Fertilizers by Nutrient,840,United States of America,5157,Agricultural Use,3103,Nutrient phosphate P2O5 (total),2021,2021,t,3930508.94,A,Official figure,Official data from questionnaire,

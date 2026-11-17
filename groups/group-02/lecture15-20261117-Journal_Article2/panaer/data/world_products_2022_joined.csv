@@ -1,0 +1,258 @@
+﻿Domain,Area,Element,Item,Year,Unit,Value,Flag,Flag Description,Product,Category,Coefficient,P_t
+Crops and livestock products,World,Production,"Abaca, manila hemp, raw",2022,t,107494.92,E,Estimated value,"Abaca, manila hemp, raw",A,0.00089,95.6704788
+Crops and livestock products,World,Production,"Agave fibres, raw, n.e.c.",2022,t,40639.24,E,Estimated value,"Agave fibres, raw, n.e.c.",A,0.00089,36.1689236
+Crops and livestock products,World,Production,"Almonds, in shell",2022,t,3630427.66,E,Estimated value,"Almonds, in shell",B,0.00454,16482.1415764
+Crops and livestock products,World,Production,"Anise, badian, coriander, cumin, caraway, fennel and juniper berries, raw",2022,t,2751010.4,E,Estimated value,"Anise, badian, coriander, cumin, caraway, fennel and juniper berries, raw",D,0.00051,1403.015304
+Crops and livestock products,World,Production,Apples,2022,t,95835964.97,A,Official figure,Apples,B,0.00011,10541.9561467
+Crops and livestock products,World,Production,Apricots,2022,t,3863179.61,E,Estimated value,Apricots,B,0.00021,811.2677181
+Crops and livestock products,World,Production,Areca nuts,2022,t,2542072.1,E,Estimated value,Areca nuts,B,0.00409,10397.074889
+Crops and livestock products,World,Production,Artichokes,2022,t,1584513.73,A,Official figure,Artichokes,B,0.0013,2059.8678489999998
+Crops and livestock products,World,Production,Asparagus,2022,t,8824150.02,A,Official figure,Asparagus,B,0.00045,3970.8675089999997
+Crops and livestock products,World,Production,Asses,2022,,,,,Asses,M,0.0,
+Crops and livestock products,World,Production,Avocados,2022,t,8978275.2,E,Estimated value,Avocados,B,0.00043,3860.6583359999995
+Crops and livestock products,World,Production,"Balata, gutta-percha, guayule, chicle and similar natural gums in primary forms or in plates, sheets or strip",2022,,,,,"Balata, gutta-percha, guayule, chicle and similar natural gums in primary forms or in plates, sheets or strip",A,0.0002,
+Crops and livestock products,World,Production,"Bambara beans, dry",2022,t,246511.3,E,Estimated value,"Bambara beans, dry",F,0.00419,1032.882347
+Crops and livestock products,World,Production,Bananas,2022,t,135112326.37,E,Estimated value,Bananas,B,0.00023,31075.835065100004
+Crops and livestock products,World,Production,Barley,2022,t,154877139.86,A,Official figure,Barley,E,0.00342,529679.8183212
+Crops and livestock products,World,Production,"Beans, dry",2022,t,28346198.86,E,Estimated value,"Beans, dry",F,0.00419,118770.5732234
+Crops and livestock products,World,Production,"Beer of barley, malted",2022,,,,,"Beer of barley, malted",J,0.00032,
+Crops and livestock products,World,Production,Beeswax,2022,t,65063.47,E,Estimated value,Beeswax,C,0.0,0.0
+Crops and livestock products,World,Production,Blueberries,2022,t,1228595.98,A,Official figure,Blueberries,B,0.00013,159.71747739999998
+Crops and livestock products,World,Production,"Brazil nuts, in shell",2022,t,79277.79,E,Estimated value,"Brazil nuts, in shell",B,0.00674,534.3323045999999
+Crops and livestock products,World,Production,"Broad beans and horse beans, dry",2022,t,6144394.66,E,Estimated value,"Broad beans and horse beans, dry",E,0.00426,26175.1212516
+Crops and livestock products,World,Production,"Broad beans and horse beans, green",2022,t,1642153.15,E,Estimated value,"Broad beans and horse beans, green",E,0.00037,607.5966655
+Crops and livestock products,World,Production,Buckwheat,2022,t,2235193.31,E,Estimated value,Buckwheat,E,0.00294,6571.4683314
+Crops and livestock products,World,Production,Buffalo,2022,,,,,Buffalo,M,0.00282,
+Crops and livestock products,World,Production,"Buffalo fat, unrendered",2022,t,416812.2,E,Estimated value,"Buffalo fat, unrendered",C,0.0,0.0
+Crops and livestock products,World,Production,Butter and ghee of sheep milk,2022,,,,,Butter and ghee of sheep milk,G,0.00021,
+Crops and livestock products,World,Production,Butter of buffalo milk,2022,,,,,Butter of buffalo milk,G,0.00021,
+Crops and livestock products,World,Production,Butter of cow milk,2022,,,,,Butter of cow milk,G,0.00021,
+Crops and livestock products,World,Production,Butter of goat milk,2022,,,,,Butter of goat milk,G,0.00021,
+Crops and livestock products,World,Production,"Buttermilk, dry",2022,,,,,"Buttermilk, dry",G,0.0009,
+Crops and livestock products,World,Production,Cabbages,2022,t,72603754.67,E,Estimated value,Cabbages,B,0.00036,26137.3516812
+Crops and livestock products,World,Production,Camels,2022,,,,,Camels,M,0.0,
+Crops and livestock products,World,Production,Canary seed,2022,t,245568.03,E,Estimated value,Canary seed,A,0.0085,2087.3282550000004
+Crops and livestock products,World,Production,Cantaloupes and other melons,2022,t,28558068.57,E,Estimated value,Cantaloupes and other melons,B,0.00024,6853.9364568
+Crops and livestock products,World,Production,Carrots and turnips,2022,t,42233349.85,E,Estimated value,Carrots and turnips,B,0.00035,14781.672447500001
+Crops and livestock products,World,Production,"Cashew nuts, in shell",2022,t,3852868.11,E,Estimated value,"Cashew nuts, in shell",B,0.00373,14371.1980503
+Crops and livestock products,World,Production,Cashewapple,2022,t,1329862.29,E,Estimated value,Cashewapple,B,0.00011,146.2848519
+Crops and livestock products,World,Production,Cassava leaves,2022,,,,,Cassava leaves,A,0.0,
+Crops and livestock products,World,Production,"Cassava, fresh",2022,t,330408753.77,E,Estimated value,"Cassava, fresh",B,0.00038,125555.3264326
+Crops and livestock products,World,Production,Castor oil seeds,2022,t,1829521.75,E,Estimated value,Castor oil seeds,C,0.0,0.0
+Crops and livestock products,World,Production,Cattle,2022,,,,,Cattle,M,0.00282,
+Crops and livestock products,World,Production,"Cattle fat, unrendered",2022,t,3392342.85,E,Estimated value,"Cattle fat, unrendered",G,0.0,0.0
+Crops and livestock products,World,Production,Cauliflowers and broccoli,2022,t,26058228.25,E,Estimated value,Cauliflowers and broccoli,B,0.00052,13550.27869
+Crops and livestock products,World,Production,Cereals n.e.c.,2022,t,8713290.37,E,Estimated value,Cereals n.e.c.,E,0.00175,15248.258147499999
+Crops and livestock products,World,Production,"Cheese from milk of buffalo, fresh or processed",2022,,,,,"Cheese from milk of buffalo, fresh or processed",G,0.00627,
+Crops and livestock products,World,Production,"Cheese from milk of goats, fresh or processed",2022,,,,,"Cheese from milk of goats, fresh or processed",G,0.005,
+Crops and livestock products,World,Production,"Cheese from milk of sheep, fresh or processed",2022,,,,,"Cheese from milk of sheep, fresh or processed",G,0.005,
+Crops and livestock products,World,Production,Cheese from skimmed cow milk,2022,,,,,Cheese from skimmed cow milk,G,0.005,
+Crops and livestock products,World,Production,Cheese from whole cow milk,2022,,,,,Cheese from whole cow milk,G,0.005,
+Crops and livestock products,World,Production,Cherries,2022,t,2765827.38,A,Official figure,Cherries,B,0.00023,636.1402974
+Crops and livestock products,World,Production,"Chestnuts, in shell",2022,t,2131240.64,A,Official figure,"Chestnuts, in shell",B,0.00409,8716.774217600001
+Crops and livestock products,World,Production,"Chick peas, dry",2022,t,18095248.28,E,Estimated value,"Chick peas, dry",B,0.00332,60076.2242896
+Crops and livestock products,World,Production,Chickens,2022,,,,,Chickens,M,0.013,
+Crops and livestock products,World,Production,Chicory roots,2022,t,32662.22,E,Estimated value,Chicory roots,B,0.00023,7.5123106
+Crops and livestock products,World,Production,"Chillies and peppers, dry (Capsicum spp., Pimenta spp.), raw",2022,t,4909320.76,E,Estimated value,"Chillies and peppers, dry (Capsicum spp., Pimenta spp.), raw",D,0.00032,1570.9826432
+Crops and livestock products,World,Production,"Chillies and peppers, green (Capsicum spp. and Pimenta spp.)",2022,t,36972494.42,E,Estimated value,"Chillies and peppers, green (Capsicum spp. and Pimenta spp.)",D,0.00019,7024.7739398
+Crops and livestock products,World,Production,"Cinnamon and cinnamon-tree flowers, raw",2022,t,222523.87,E,Estimated value,"Cinnamon and cinnamon-tree flowers, raw",D,0.00061,135.7395607
+Crops and livestock products,World,Production,"Cloves (whole stems), raw",2022,t,183452.31,E,Estimated value,"Cloves (whole stems), raw",D,0.00018,33.0214158
+Crops and livestock products,World,Production,Cocoa beans,2022,t,5874581.94,E,Estimated value,Cocoa beans,F,0.00656,38537.257526400004
+Crops and livestock products,World,Production,Coconut oil,2022,,,,,Coconut oil,C,0.0,
+Crops and livestock products,World,Production,"Coconuts, in shell",2022,t,62409431.22,E,Estimated value,"Coconuts, in shell",B,0.00094,58664.8653468
+Crops and livestock products,World,Production,"Coffee, green",2022,t,10782333.89,E,Estimated value,"Coffee, green",I,0.0016,17251.734224000003
+Crops and livestock products,World,Production,"Coir, raw",2022,t,1939429.8,E,Estimated value,"Coir, raw",B,0.00094,1823.064012
+Crops and livestock products,World,Production,"Cotton lint, ginned",2022,,,,,"Cotton lint, ginned",A,0.0064,
+Crops and livestock products,World,Production,Cotton seed,2022,,,,,Cotton seed,H,0.00524,
+Crops and livestock products,World,Production,Cottonseed oil,2022,,,,,Cottonseed oil,C,0.0,
+Crops and livestock products,World,Production,"Cow peas, dry",2022,t,9774865.72,E,Estimated value,"Cow peas, dry",F,0.00375,36655.74645
+Crops and livestock products,World,Production,Cranberries,2022,t,582923.64,E,Estimated value,Cranberries,B,0.0001,58.292364000000006
+Crops and livestock products,World,Production,"Cream, fresh",2022,,,,,"Cream, fresh",G,0.00085,
+Crops and livestock products,World,Production,Cucumbers and gherkins,2022,t,94718396.55,E,Estimated value,Cucumbers and gherkins,B,0.00017,16102.1274135
+Crops and livestock products,World,Production,Currants,2022,t,764498.98,A,Official figure,Currants,B,0.0011,840.948878
+Crops and livestock products,World,Production,Dates,2022,t,9747570.04,E,Estimated value,Dates,B,0.00057,5556.1149227999995
+Crops and livestock products,World,Production,Ducks,2022,,,,,Ducks,M,0.013,
+Crops and livestock products,World,Production,"Edible offal of buffalo, fresh, chilled or frozen",2022,t,1173340.36,E,Estimated value,"Edible offal of buffalo, fresh, chilled or frozen",G,0.0016,1877.3445760000002
+Crops and livestock products,World,Production,"Edible offal of cattle, fresh, chilled or frozen",2022,t,9570873.57,E,Estimated value,"Edible offal of cattle, fresh, chilled or frozen",G,0.0016,15313.397712000002
+Crops and livestock products,World,Production,"Edible offal of goat, fresh, chilled or frozen",2022,t,1260496.26,E,Estimated value,"Edible offal of goat, fresh, chilled or frozen",G,0.0016,2016.794016
+Crops and livestock products,World,Production,"Edible offal of pigs, fresh, chilled or frozen",2022,t,8013905.39,E,Estimated value,"Edible offal of pigs, fresh, chilled or frozen",G,0.0016,12822.248624
+Crops and livestock products,World,Production,"Edible offal of sheep, fresh, chilled or frozen",2022,t,1823000.38,E,Estimated value,"Edible offal of sheep, fresh, chilled or frozen",G,0.0016,2916.800608
+Crops and livestock products,World,Production,"Edible offals of camels and other camelids, fresh, chilled or frozen",2022,t,88365.03,E,Estimated value,"Edible offals of camels and other camelids, fresh, chilled or frozen",G,0.0016,141.384048
+Crops and livestock products,World,Production,"Edible roots and tubers with high starch or inulin content, n.e.c., fresh",2022,t,8877780.12,E,Estimated value,"Edible roots and tubers with high starch or inulin content, n.e.c., fresh",G,0.00038,3373.5564455999997
+Crops and livestock products,World,Production,Eggplants (aubergines),2022,t,59312599.76,E,Estimated value,Eggplants (aubergines),B,0.00021,12455.6459496
+Crops and livestock products,World,Production,"Eggs from other birds in shell, fresh, n.e.c.",2022,t,6171896.31,E,Estimated value,"Eggs from other birds in shell, fresh, n.e.c.",G,0.00214,13207.858103399998
+Crops and livestock products,World,Production,"Eggs from other birds in shell, fresh, n.e.c.",2022,1000 No,97341452.0,E,Estimated value,"Eggs from other birds in shell, fresh, n.e.c.",G,0.00214,208310.70728
+Crops and livestock products,World,Production,Fat of camels,2022,t,27654.96,E,Estimated value,Fat of camels,G,0.0,0.0
+Crops and livestock products,World,Production,Fat of pigs,2022,t,11125680.86,E,Estimated value,Fat of pigs,G,0.0,0.0
+Crops and livestock products,World,Production,Figs,2022,t,1242449.04,E,Estimated value,Figs,B,0.00032,397.58369280000005
+Crops and livestock products,World,Production,"Flax, raw or retted",2022,t,875994.92,A,Official figure,"Flax, raw or retted",A,0.00089,779.6354788
+Crops and livestock products,World,Production,Fonio,2022,t,658707.96,A,Official figure,Fonio,E,0.00341,2246.1941435999997
+Crops and livestock products,World,Production,"Game meat, fresh, chilled or frozen",2022,t,2032707.36,E,Estimated value,"Game meat, fresh, chilled or frozen",G,0.0021,4268.685456
+Crops and livestock products,World,Production,Geese,2022,,,,,Geese,M,0.013,
+Crops and livestock products,World,Production,Ghee from buffalo milk,2022,,,,,Ghee from buffalo milk,D,0.00021,
+Crops and livestock products,World,Production,Ghee from cow milk,2022,,,,,Ghee from cow milk,D,0.00021,
+Crops and livestock products,World,Production,"Ginger, raw",2022,t,4874216.17,E,Estimated value,"Ginger, raw",D,0.0,0.0
+Crops and livestock products,World,Production,"Goat fat, unrendered",2022,t,256756.06,E,Estimated value,"Goat fat, unrendered",C,0.0,0.0
+Crops and livestock products,World,Production,Goats,2022,,,,,Goats,M,0.00028,
+Crops and livestock products,World,Production,Gooseberries,2022,t,95425.32,E,Estimated value,Gooseberries,B,0.0003,28.627596
+Crops and livestock products,World,Production,Grapes,2022,t,74942572.95,E,Estimated value,Grapes,B,0.00016,11990.811672000002
+Crops and livestock products,World,Production,Green corn (maize),2022,t,9868461.38,E,Estimated value,Green corn (maize),K,0.00083,8190.822945400001
+Crops and livestock products,World,Production,Green garlic,2022,t,29149437.66,E,Estimated value,Green garlic,B,0.00134,39060.2464644
+Crops and livestock products,World,Production,"Green tea (not fermented), black tea (fermented) and partly fermented tea, in immediate packings of a content not exceeding 3 kg",2022,,,,,"Green tea (not fermented), black tea (fermented) and partly fermented tea, in immediate packings of a content not exceeding 3 kg",C,0.00314,
+Crops and livestock products,World,Production,Groundnut oil,2022,,,,,Groundnut oil,C,0.0,
+Crops and livestock products,World,Production,"Groundnuts, excluding shelled",2022,t,54238560.13,E,Estimated value,"Groundnuts, excluding shelled",B,0.00341,184953.4900433
+Crops and livestock products,World,Production,"Hazelnuts, in shell",2022,t,1195732.16,A,Official figure,"Hazelnuts, in shell",B,0.00333,3981.7880928
+Crops and livestock products,World,Production,Hempseed,2022,t,42266.75,E,Estimated value,Hempseed,A,0.0085,359.267375
+Crops and livestock products,World,Production,"Hen eggs in shell, fresh",2022,t,86999551.14,E,Estimated value,"Hen eggs in shell, fresh",G,0.00214,186179.0394396
+Crops and livestock products,World,Production,"Hen eggs in shell, fresh",2022,1000 No,1652287528.0,E,Estimated value,"Hen eggs in shell, fresh",G,0.00214,3535895.30992
+Crops and livestock products,World,Production,Hop cones,2022,t,158545.32,E,Estimated value,Hop cones,J,0.015,2378.1798
+Crops and livestock products,World,Production,"Horse meat, fresh or chilled",2022,t,775543.24,E,Estimated value,"Horse meat, fresh or chilled",G,0.00216,1675.1733984
+Crops and livestock products,World,Production,Horses,2022,,,,,Horses,M,0.0027,
+Crops and livestock products,World,Production,Jojoba seeds,2022,t,146.58,E,Estimated value,Jojoba seeds,C,0.0,0.0
+Crops and livestock products,World,Production,"Jute, raw or retted",2022,t,3503448.24,E,Estimated value,"Jute, raw or retted",A,0.00089,3118.0689336
+Crops and livestock products,World,Production,"Kapok fibre, raw",2022,,,,,"Kapok fibre, raw",A,0.00089,
+Crops and livestock products,World,Production,Kapok fruit,2022,t,283287.08,E,Estimated value,Kapok fruit,A,0.00524,1484.4242992
+Crops and livestock products,World,Production,Kapokseed in shell,2022,,,,,Kapokseed in shell,A,0.00524,
+Crops and livestock products,World,Production,Karite nuts (sheanuts),2022,t,815825.1,E,Estimated value,Karite nuts (sheanuts),B,0.00409,3336.724659
+Crops and livestock products,World,Production,"Kenaf, and other textile bast fibres, raw or retted",2022,t,224926.49,E,Estimated value,"Kenaf, and other textile bast fibres, raw or retted",A,0.00089,200.1845761
+Crops and livestock products,World,Production,Kiwi fruit,2022,t,4539471.22,A,Official figure,Kiwi fruit,B,0.00031,1407.2360781999998
+Crops and livestock products,World,Production,Kola nuts,2022,t,315024.47,E,Estimated value,Kola nuts,B,0.00076,239.4185972
+Crops and livestock products,World,Production,Leeks and other alliaceous vegetables,2022,t,2109066.16,E,Estimated value,Leeks and other alliaceous vegetables,B,0.00048,1012.3517568000001
+Crops and livestock products,World,Production,Lemons and limes,2022,t,21529604.13,E,Estimated value,Lemons and limes,B,0.00016,3444.7366608
+Crops and livestock products,World,Production,"Lentils, dry",2022,t,6655827.78,E,Estimated value,"Lentils, dry",F,0.00411,27355.4521758
+Crops and livestock products,World,Production,Lettuce and chicory,2022,t,27149446.41,E,Estimated value,Lettuce and chicory,B,0.00023,6244.372674300001
+Crops and livestock products,World,Production,Linseed,2022,t,3973931.78,A,Official figure,Linseed,H,0.00662,26307.4283836
+Crops and livestock products,World,Production,Locust beans (carobs),2022,t,56423.36,E,Estimated value,Locust beans (carobs),B,0.0048,270.83212799999995
+Crops and livestock products,World,Production,Lupins,2022,t,1644690.67,A,Official figure,Lupins,B,0.0048,7894.515215999999
+Crops and livestock products,World,Production,Maize (corn),2022,t,1163497383.13,E,Estimated value,Maize (corn),E,0.00213,2478249.4260669
+Crops and livestock products,World,Production,"Mangoes, guavas and mangosteens",2022,t,59151822.83,E,Estimated value,"Mangoes, guavas and mangosteens",B,0.00013,7689.736967899999
+Crops and livestock products,World,Production,Margarine and shortening,2022,,,,,Margarine and shortening,C,0.0,
+Crops and livestock products,World,Production,Maté leaves,2022,t,1653166.8,E,Estimated value,Maté leaves,C,0.00314,5190.943752
+Crops and livestock products,World,Production,"Meat of asses, fresh or chilled",2022,t,104304.69,E,Estimated value,"Meat of asses, fresh or chilled",G,0.0019,198.178911
+Crops and livestock products,World,Production,"Meat of buffalo, fresh or chilled",2022,t,6903483.83,E,Estimated value,"Meat of buffalo, fresh or chilled",G,0.0019,13116.619277
+Crops and livestock products,World,Production,"Meat of camels, fresh or chilled",2022,t,604530.26,E,Estimated value,"Meat of camels, fresh or chilled",G,0.0019,1148.607494
+Crops and livestock products,World,Production,"Meat of cattle with the bone, fresh or chilled",2022,t,69346116.17,E,Estimated value,"Meat of cattle with the bone, fresh or chilled",G,0.0019,131757.620723
+Crops and livestock products,World,Production,"Meat of chickens, fresh or chilled",2022,t,123631334.72,E,Estimated value,"Meat of chickens, fresh or chilled",G,0.00165,203991.702288
+Crops and livestock products,World,Production,"Meat of ducks, fresh or chilled",2022,t,6068757.07,E,Estimated value,"Meat of ducks, fresh or chilled",G,0.00196,11894.7638572
+Crops and livestock products,World,Production,"Meat of geese, fresh or chilled",2022,t,4418971.74,E,Estimated value,"Meat of geese, fresh or chilled",G,0.00184,8130.908001600001
+Crops and livestock products,World,Production,"Meat of goat, fresh or chilled",2022,t,6367497.2,E,Estimated value,"Meat of goat, fresh or chilled",G,0.0019,12098.24468
+Crops and livestock products,World,Production,"Meat of mules, fresh or chilled",2022,t,13839.46,E,Estimated value,"Meat of mules, fresh or chilled",G,0.0019,26.294974
+Crops and livestock products,World,Production,"Meat of other domestic camelids, fresh or chilled",2022,t,33135.0,A,Official figure,"Meat of other domestic camelids, fresh or chilled",G,0.0019,62.9565
+Crops and livestock products,World,Production,"Meat of other domestic rodents, fresh or chilled",2022,t,18700.82,E,Estimated value,"Meat of other domestic rodents, fresh or chilled",G,0.0,0.0
+Crops and livestock products,World,Production,"Meat of pig with the bone, fresh or chilled",2022,t,122585397.38,E,Estimated value,"Meat of pig with the bone, fresh or chilled",G,0.00192,235363.9629696
+Crops and livestock products,World,Production,"Meat of pigeons and other birds n.e.c., fresh, chilled or frozen",2022,t,18669.43,E,Estimated value,"Meat of pigeons and other birds n.e.c., fresh, chilled or frozen",G,0.0025,46.673575
+Crops and livestock products,World,Production,"Meat of rabbits and hares, fresh or chilled",2022,t,756476.01,E,Estimated value,"Meat of rabbits and hares, fresh or chilled",G,0.00216,1633.9881816
+Crops and livestock products,World,Production,"Meat of sheep, fresh or chilled",2022,t,10272315.46,E,Estimated value,"Meat of sheep, fresh or chilled",G,0.00162,16641.1510452
+Crops and livestock products,World,Production,"Meat of turkeys, fresh or chilled",2022,t,5081497.88,E,Estimated value,"Meat of turkeys, fresh or chilled",G,0.00175,8892.62129
+Crops and livestock products,World,Production,Melonseed,2022,t,968692.23,E,Estimated value,Melonseed,B,0.00618,5986.517981399999
+Crops and livestock products,World,Production,Millet,2022,t,30859664.24,E,Estimated value,Millet,E,0.00275,84864.07665999999
+Crops and livestock products,World,Production,Mixed grain,2022,t,2223144.27,A,Official figure,Mixed grain,E,0.00341,7580.9219606999995
+Crops and livestock products,World,Production,Molasses,2022,,,,,Molasses,C,0.0,
+Crops and livestock products,World,Production,Mules and hinnies,2022,,,,,Mules and hinnies,M,0.0027,
+Crops and livestock products,World,Production,Mushrooms and truffles,2022,t,48335996.08,E,Estimated value,Mushrooms and truffles,B,0.00125,60419.9951
+Crops and livestock products,World,Production,Mustard seed,2022,t,852807.53,E,Estimated value,Mustard seed,B,0.0085,7248.864005
+Crops and livestock products,World,Production,Natural honey,2022,t,1830767.92,E,Estimated value,Natural honey,G,3e-05,54.9230376
+Crops and livestock products,World,Production,Natural rubber in primary forms,2022,t,15125392.71,E,Estimated value,Natural rubber in primary forms,A,0.0002,3025.078542
+Crops and livestock products,World,Production,"Nutmeg, mace, cardamoms, raw",2022,t,138887.87,E,Estimated value,"Nutmeg, mace, cardamoms, raw",B,0.0,0.0
+Crops and livestock products,World,Production,Oats,2022,t,26385330.04,A,Official figure,Oats,E,0.00342,90237.82873679999
+Crops and livestock products,World,Production,Oil of maize,2022,,,,,Oil of maize,C,0.0,
+Crops and livestock products,World,Production,Oil of palm kernel,2022,,,,,Oil of palm kernel,C,0.0,
+Crops and livestock products,World,Production,Oil of sesame seed,2022,,,,,Oil of sesame seed,C,0.0,
+Crops and livestock products,World,Production,Oil palm fruit,2022,t,424587459.57,E,Estimated value,Oil palm fruit,C,0.0,0.0
+Crops and livestock products,World,Production,Okra,2022,t,11232656.48,E,Estimated value,Okra,B,0.00052,5840.9813696
+Crops and livestock products,World,Production,Olives,2022,t,21449867.5,A,Official figure,Olives,B,0.00017,3646.477475
+Crops and livestock products,World,Production,"Onions and shallots, dry (excluding dehydrated)",2022,t,110616269.81,E,Estimated value,"Onions and shallots, dry (excluding dehydrated)",B,0.00243,268797.5356383
+Crops and livestock products,World,Production,"Onions and shallots, green",2022,t,4970614.74,E,Estimated value,"Onions and shallots, green",B,0.00033,1640.3028642000002
+Crops and livestock products,World,Production,Oranges,2022,t,76410037.46,E,Estimated value,Oranges,B,0.0002,15282.007491999999
+Crops and livestock products,World,Production,"Other beans, green",2022,t,23340915.7,E,Estimated value,"Other beans, green",B,0.00037,8636.138809
+Crops and livestock products,World,Production,Other berries and fruits of the genus vaccinium n.e.c.,2022,t,1021643.25,E,Estimated value,Other berries and fruits of the genus vaccinium n.e.c.,B,0.00013,132.81362249999998
+Crops and livestock products,World,Production,Other birds,2022,,,,,Other birds,G,0.00214,
+Crops and livestock products,World,Production,Other camelids,2022,,,,,Other camelids,M,0.0,
+Crops and livestock products,World,Production,"Other meat n.e.c. (excluding mammals), fresh, chilled or frozen",2022,t,1563629.79,E,Estimated value,"Other meat n.e.c. (excluding mammals), fresh, chilled or frozen",G,0.0019,2970.896601
+Crops and livestock products,World,Production,"Other nuts (excluding wild edible nuts and groundnuts), in shell, n.e.c.",2022,t,1051017.39,E,Estimated value,"Other nuts (excluding wild edible nuts and groundnuts), in shell, n.e.c.",B,0.00409,4298.6611250999995
+Crops and livestock products,World,Production,"Other oil seeds, n.e.c.",2022,t,2527518.38,E,Estimated value,"Other oil seeds, n.e.c.",C,0.0,0.0
+Crops and livestock products,World,Production,Other pome fruits,2022,t,129481.01,A,Official figure,Other pome fruits,B,0.00016,20.7169616
+Crops and livestock products,World,Production,Other rodents,2022,,,,,Other rodents,M,0.0,
+Crops and livestock products,World,Production,Other stone fruits,2022,t,615694.71,E,Estimated value,Other stone fruits,B,0.00052,320.16124919999993
+Crops and livestock products,World,Production,"Other tropical fruits, n.e.c.",2022,t,28359402.21,E,Estimated value,"Other tropical fruits, n.e.c.",B,0.0002,5671.880442000001
+Crops and livestock products,World,Production,Palm kernels,2022,,,,,Palm kernels,C,0.0,
+Crops and livestock products,World,Production,Peaches and nectarines,2022,t,26354497.05,E,Estimated value,Peaches and nectarines,B,0.00021,5534.4443805
+Crops and livestock products,World,Production,Pears,2022,t,26324873.5,A,Official figure,Pears,B,0.00012,3158.98482
+Crops and livestock products,World,Production,"Peas, dry",2022,t,14166029.75,E,Estimated value,"Peas, dry",F,0.00375,53122.611562499995
+Crops and livestock products,World,Production,"Peas, green",2022,t,20945188.58,E,Estimated value,"Peas, green",B,0.00113,23668.063095399997
+Crops and livestock products,World,Production,"Peppermint, spearmint",2022,t,51081.46,E,Estimated value,"Peppermint, spearmint",B,0.0,0.0
+Crops and livestock products,World,Production,"Pig fat, rendered",2022,,,,,"Pig fat, rendered",I,0.0,
+Crops and livestock products,World,Production,"Pigeon peas, dry",2022,t,5326932.03,E,Estimated value,"Pigeon peas, dry",B,0.00332,17685.4143396
+Crops and livestock products,World,Production,Pineapples,2022,t,29361138.34,E,Estimated value,Pineapples,B,9e-05,2642.5024506
+Crops and livestock products,World,Production,"Pistachios, in shell",2022,t,1026802.86,E,Estimated value,"Pistachios, in shell",B,0.005,5134.0143
+Crops and livestock products,World,Production,Plums and sloes,2022,t,12391467.17,E,Estimated value,Plums and sloes,B,0.00017,2106.5494189
+Crops and livestock products,World,Production,"Pumpkins, squash and gourds",2022,t,22806320.54,E,Estimated value,"Pumpkins, squash and gourds",B,0.00044,10034.7810376
+Crops and livestock products,World,Production,Quinces,2022,t,702015.15,E,Estimated value,Quinces,B,8e-05,56.161212000000006
+Crops and livestock products,World,Production,Rabbits and hares,2022,,,,,Rabbits and hares,M,0.013,
+Crops and livestock products,World,Production,"Ramie, raw or retted",2022,t,7625.16,E,Estimated value,"Ramie, raw or retted",A,0.00089,6.7863923999999995
+Crops and livestock products,World,Production,Rape or colza seed,2022,t,87221220.62,A,Official figure,Rape or colza seed,C,0.00546,476227.8645852
+Crops and livestock products,World,Production,Raspberries,2022,t,947852.03,A,Official figure,Raspberries,B,0.0001,94.78520300000001
+Crops and livestock products,World,Production,Raw hides and skins of buffaloes,2022,t,1409454.73,E,Estimated value,Raw hides and skins of buffaloes,G,0.00042,591.9709866000001
+Crops and livestock products,World,Production,Raw hides and skins of cattle,2022,t,8698960.19,E,Estimated value,Raw hides and skins of cattle,G,0.00042,3653.5632798
+Crops and livestock products,World,Production,Raw hides and skins of goats or kids,2022,t,1267833.86,E,Estimated value,Raw hides and skins of goats or kids,G,0.00042,532.4902212000001
+Crops and livestock products,World,Production,Raw hides and skins of sheep or lambs,2022,t,1981012.57,E,Estimated value,Raw hides and skins of sheep or lambs,G,0.00042,832.0252794
+Crops and livestock products,World,Production,Raw milk of buffalo,2022,t,143573178.18,A,Official figure,Raw milk of buffalo,G,0.0009,129215.860362
+Crops and livestock products,World,Production,Raw milk of camel,2022,t,4116669.03,E,Estimated value,Raw milk of camel,G,0.0009,3705.0021269999997
+Crops and livestock products,World,Production,Raw milk of cattle,2022,t,753320577.84,E,Estimated value,Raw milk of cattle,G,0.00092,693054.9316128001
+Crops and livestock products,World,Production,Raw milk of goats,2022,t,19191572.8,E,Estimated value,Raw milk of goats,G,0.0009,17272.41552
+Crops and livestock products,World,Production,Raw milk of sheep,2022,t,10093015.52,E,Estimated value,Raw milk of sheep,G,0.0009,9083.713968
+Crops and livestock products,World,Production,Raw silk (not thrown),2022,,,,,Raw silk (not thrown),G,0.00015,
+Crops and livestock products,World,Production,Rice,2022,t,776461456.61,A,Official figure,Rice,E,0.00282,2189621.3076402
+Crops and livestock products,World,Production,Rye,2022,t,13143054.91,A,Official figure,Rye,E,0.00337,44292.0950467
+Crops and livestock products,World,Production,Safflower seed,2022,t,995507.6,E,Estimated value,Safflower seed,H,0.0085,8461.8146
+Crops and livestock products,World,Production,"Safflower-seed oil, crude",2022,,,,,"Safflower-seed oil, crude",C,0.0,
+Crops and livestock products,World,Production,"Seed cotton, unginned",2022,t,69668142.85,E,Estimated value,"Seed cotton, unginned",H,0.00524,365061.06853399996
+Crops and livestock products,World,Production,Sesame seed,2022,t,6741479.41,E,Estimated value,Sesame seed,H,0.00409,27572.6507869
+Crops and livestock products,World,Production,Sheep,2022,,,,,Sheep,M,0.00028,
+Crops and livestock products,World,Production,"Sheep fat, unrendered",2022,t,576408.85,E,Estimated value,"Sheep fat, unrendered",C,0.0,0.0
+Crops and livestock products,World,Production,"Shorn wool, greasy, including fleece-washed shorn wool",2022,t,1759760.1,E,Estimated value,"Shorn wool, greasy, including fleece-washed shorn wool",G,0.00015,263.964015
+Crops and livestock products,World,Production,Silk-worm cocoons suitable for reeling,2022,t,414788.45,E,Estimated value,Silk-worm cocoons suitable for reeling,G,0.00015,62.218267499999996
+Crops and livestock products,World,Production,"Sisal, raw",2022,t,213304.53,E,Estimated value,"Sisal, raw",A,0.00089,189.8410317
+Crops and livestock products,World,Production,Skim milk and whey powder,2022,,,,,Skim milk and whey powder,G,0.0102,
+Crops and livestock products,World,Production,Skim milk of cows,2022,,,,,Skim milk of cows,G,0.00097,
+Crops and livestock products,World,Production,"Skim milk, condensed",2022,,,,,"Skim milk, condensed",G,0.00714,
+Crops and livestock products,World,Production,"Skim milk, evaporated",2022,,,,,"Skim milk, evaporated",G,0.00714,
+Crops and livestock products,World,Production,"Snails, fresh, chilled, frozen, dried, salted or in brine, except sea snails",2022,t,20799.43,E,Estimated value,"Snails, fresh, chilled, frozen, dried, salted or in brine, except sea snails",G,0.0,0.0
+Crops and livestock products,World,Production,Sorghum,2022,t,57581942.77,E,Estimated value,Sorghum,E,0.0033,190020.41114100002
+Crops and livestock products,World,Production,Sour cherries,2022,t,1593024.7,A,Official figure,Sour cherries,B,0.00019,302.674693
+Crops and livestock products,World,Production,Soya bean oil,2022,,,,,Soya bean oil,C,0.0,
+Crops and livestock products,World,Production,Soya beans,2022,t,348856427.48,E,Estimated value,Soya beans,F,0.0055,1918710.35114
+Crops and livestock products,World,Production,Spinach,2022,t,33116288.11,E,Estimated value,Spinach,B,0.00046,15233.4925306
+Crops and livestock products,World,Production,Strawberries,2022,t,9569864.9,A,Official figure,Strawberries,B,0.00026,2488.164874
+Crops and livestock products,World,Production,String beans,2022,t,1375583.93,E,Estimated value,String beans,B,0.00037,508.96605409999995
+Crops and livestock products,World,Production,Sugar beet,2022,t,260998613.64,A,Official figure,Sugar beet,C,0.00022,57419.6950008
+Crops and livestock products,World,Production,Sugar cane,2022,t,1922059850.8,E,Estimated value,Sugar cane,C,0.00024,461294.364192
+Crops and livestock products,World,Production,Sunflower seed,2022,t,54285948.66,A,Official figure,Sunflower seed,E,0.00618,335487.16271879995
+Crops and livestock products,World,Production,"Sunflower-seed oil, crude",2022,,,,,"Sunflower-seed oil, crude",C,0.0,
+Crops and livestock products,World,Production,Sweet potatoes,2022,t,86410354.75,E,Estimated value,Sweet potatoes,B,0.00041,35428.2454475
+Crops and livestock products,World,Production,Swine / pigs,2022,,,,,Swine / pigs,M,0.00046,
+Crops and livestock products,World,Production,Tallow,2022,,,,,Tallow,C,0.0,
+Crops and livestock products,World,Production,Tallowtree seeds,2022,t,1038670.93,E,Estimated value,Tallowtree seeds,C,0.0,0.0
+Crops and livestock products,World,Production,"Tangerines, mandarins, clementines",2022,t,44179830.73,E,Estimated value,"Tangerines, mandarins, clementines",B,0.0002,8835.966146
+Crops and livestock products,World,Production,Taro,2022,t,17718128.9,E,Estimated value,Taro,B,0.00041,7264.432848999999
+Crops and livestock products,World,Production,Tea leaves,2022,t,29760667.52,E,Estimated value,Tea leaves,C,0.00314,93448.4960128
+Crops and livestock products,World,Production,Tomatoes,2022,t,186107972.48,E,Estimated value,Tomatoes,B,0.00022,40943.7539456
+Crops and livestock products,World,Production,Triticale,2022,t,14157880.72,A,Official figure,Triticale,E,0.0038,53799.946736000005
+Crops and livestock products,World,Production,"True hemp, raw or retted",2022,t,247064.39,A,Official figure,"True hemp, raw or retted",A,0.00089,219.8873071
+Crops and livestock products,World,Production,Tung nuts,2022,t,453685.31,E,Estimated value,Tung nuts,B,0.00409,1855.5729179
+Crops and livestock products,World,Production,Turkeys,2022,,,,,Turkeys,M,0.013,
+Crops and livestock products,World,Production,Unmanufactured tobacco,2022,t,5780939.51,E,Estimated value,Unmanufactured tobacco,A,0.00109,6301.2240659
+Crops and livestock products,World,Production,"Vanilla, raw",2022,t,7704.03,E,Estimated value,"Vanilla, raw",A,0.0011,8.474433
+Crops and livestock products,World,Production,Vetches,2022,t,684263.78,E,Estimated value,Vetches,K,0.00362,2477.0348836000003
+Crops and livestock products,World,Production,"Walnuts, in shell",2022,t,3874024.7,A,Official figure,"Walnuts, in shell",B,0.00409,15844.761023000001
+Crops and livestock products,World,Production,Watermelons,2022,t,99957595.15,E,Estimated value,Watermelons,B,9e-05,8996.1835635
+Crops and livestock products,World,Production,Wheat,2022,t,808441568.18,E,Estimated value,Wheat,E,0.00341,2756785.7474938
+Crops and livestock products,World,Production,"Whey, condensed",2022,,,,,"Whey, condensed",G,0.00043,
+Crops and livestock products,World,Production,"Whey, dry",2022,,,,,"Whey, dry",G,0.00576,
+Crops and livestock products,World,Production,Whole milk powder,2022,,,,,Whole milk powder,G,0.00714,
+Crops and livestock products,World,Production,"Whole milk, condensed",2022,,,,,"Whole milk, condensed",G,0.00714,
+Crops and livestock products,World,Production,"Whole milk, evaporated",2022,,,,,"Whole milk, evaporated",G,0.00714,
+Crops and livestock products,World,Production,Wine,2022,,,,,Wine,J,0.00028,
+Crops and livestock products,World,Production,Yams,2022,t,88257159.31,E,Estimated value,Yams,B,0.00041,36185.4353171
+Crops and livestock products,World,Production,Yautia,2022,t,396406.96,E,Estimated value,Yautia,B,0.00041,162.5268536
+Crops and livestock products,World,Production,Yoghurt,2022,,,,,Yoghurt,G,0.00092,

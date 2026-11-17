@@ -1,0 +1,13 @@
+﻿Domain,Area,Element,Item,Year,Unit,Value,Flag,Flag Description,Product,Category,Coefficient,P_t
+Crops and livestock products,"China, mainland",Production,Maize (corn),2022,t,277203000.0,A,Official figure,Maize (corn),E,0.00213,590442.39
+Crops and livestock products,"China, mainland",Production,Rice,2022,t,208494800.0,A,Official figure,Rice,E,0.00282,587955.336
+Crops and livestock products,"China, mainland",Production,Wheat,2022,t,137720000.0,A,Official figure,Wheat,E,0.00341,469625.19999999995
+Crops and livestock products,India,Production,Maize (corn),2022,t,33729540.0,A,Official figure,Maize (corn),E,0.00213,71843.9202
+Crops and livestock products,India,Production,Rice,2022,t,196245700.0,A,Official figure,Rice,E,0.00282,553412.874
+Crops and livestock products,India,Production,Wheat,2022,t,107742070.0,A,Official figure,Wheat,E,0.00341,367400.45869999996
+Crops and livestock products,United States of America,Production,Maize (corn),2022,t,348750930.0,A,Official figure,Maize (corn),E,0.00213,742839.4809
+Crops and livestock products,United States of America,Production,Rice,2022,t,7274170.0,A,Official figure,Rice,E,0.00282,20513.1594
+Crops and livestock products,United States of America,Production,Wheat,2022,t,44902320.0,A,Official figure,Wheat,E,0.00341,153116.9112
+Crops and livestock products,World,Production,Maize (corn),2022,t,1163497383.13,E,Estimated value,Maize (corn),E,0.00213,2478249.4260669
+Crops and livestock products,World,Production,Rice,2022,t,776461456.61,A,Official figure,Rice,E,0.00282,2189621.3076402
+Crops and livestock products,World,Production,Wheat,2022,t,808441568.18,E,Estimated value,Wheat,E,0.00341,2756785.7474938
