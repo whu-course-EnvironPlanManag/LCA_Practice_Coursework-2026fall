@@ -1,0 +1,79 @@
+﻿profile_id,activity_key,activity_label,quantity,unit,basis_denominator,annual_value,annual_unit,per_fu_value,per_fu_unit,per_fu_denominator,specification_fraction,source_ids,assumption,status,note
+LS23_LFP_NATIVE_POWDER,LS23_MOISTURE,粉料含水 H2O,0.0215,kg_H2O/kg_powder,1 kg 报告申报粉料,,,,,,,SRC040,同表 as-received；其余元素干/湿基未明,reference_profile_screening,"部分组成合计 0.772665，不归一化；定位 印刷p76/PDF88, Table3.5-4"
+LS23_LFP_NATIVE_POWDER,LS23_ASSAY_LI,Li,0.024155,kg_element/kg_powder,1 kg 报告申报粉料,,,,,,,SRC040,同表 as-received；其余元素干/湿基未明,reference_profile_screening,"部分组成合计 0.772665，不归一化；定位 印刷p76/PDF88, Table3.5-4"
+LS23_LFP_NATIVE_POWDER,LS23_ASSAY_FE,Fe,0.151873,kg_element/kg_powder,1 kg 报告申报粉料,,,,,,,SRC040,同表 as-received；其余元素干/湿基未明,reference_profile_screening,"部分组成合计 0.772665，不归一化；定位 印刷p76/PDF88, Table3.5-4"
+LS23_LFP_NATIVE_POWDER,LS23_ASSAY_P,P,0.085381,kg_element/kg_powder,1 kg 报告申报粉料,,,,,,,SRC040,同表 as-received；其余元素干/湿基未明,reference_profile_screening,"部分组成合计 0.772665，不归一化；定位 印刷p76/PDF88, Table3.5-4"
+LS23_LFP_NATIVE_POWDER,LS23_ASSAY_C,C,0.45537,kg_element/kg_powder,1 kg 报告申报粉料,,,,,,,SRC040,同表 as-received；其余元素干/湿基未明,reference_profile_screening,"部分组成合计 0.772665，不归一化；定位 印刷p76/PDF88, Table3.5-4"
+LS23_LFP_NATIVE_POWDER,LS23_DERIVED_LI_TO_CRUDE,表间推导：粉料 Li 进入粗碳酸锂比例,0.8749782653694888,t_Li_crude/t_Li_powder,粉料 Li（as-received 假设）,,,,,,,SRC040,跨表推导，非实测；余 Li 去向未闭合,diagnostic_only,≠浸出率；与文献 0.90—0.976、JIANG 0.976 分母不同，不可混成区间
+LS23_LFP_NATIVE_POWDER,LS23_NATIVE_POWDER_YIELD,正负极粉总产率,0.5,t_powder/t_cell,1 t LFP 电芯,,,,,,,SRC040,总粉物流含 97% 极粉，不是元素回收率,diagnostic_only,与 JR 电芯组成得到的黑粉占比不同口径
+LS23_LFP_NATIVE_POWDER,LS23_DERIVED_POWDER_COMPONENT_CAPTURE,目标组分隐含捕集率,0.9897959183673469,t_target_in_powder/t_target_in_cell,正负极活性粉=38%+11% 电芯质量,,,,,,,SRC040,须假设 97% 级粉含量对应正负极目标组分且同质量基,diagnostic_only,分母与 EV I 0.9328 不同：非冲突值、不平均、不当 Li 捕集率
+LS23_LFP_NATIVE_POWDER,LS_ACID,98%硫酸,,t_commercial/t_powder,0.56305270 t/t 粉料（由年量反算）,5303.3120284874,t_commercial/a,5.004368733850245,t_commercial/t_LCE,"1,059.736 t LCE（LS 情景干纯粗碳酸锂）",0.98,SRC040,LS 同源路线；跨体系代理到 JR 粉料；商品规格按申报浓度,reference_profile_screening,"有效吨 5,197.246 t/a；商品吨与有效吨并列，不得混用"
+LS23_LFP_NATIVE_POWDER,LS_FE,99%铁粉,,t_commercial/t_powder,0.01314000 t/t 粉料（由年量反算）,123.7637614637572,t_commercial/a,0.11678730101603674,t_commercial/t_LCE,"1,059.736 t LCE（LS 情景干纯粗碳酸锂）",0.99,SRC040,LS 同源路线；跨体系代理到 JR 粉料；商品规格按申报浓度,reference_profile_screening,有效吨 122.526 t/a；商品吨与有效吨并列，不得混用
+LS23_LFP_NATIVE_POWDER,LS_NAOH,32%液碱,,t_commercial/t_powder,1.46393710 t/t 粉料（由年量反算）,13788.61202757568,t_commercial/a,13.011359419044432,t_commercial/t_LCE,"1,059.736 t LCE（LS 情景干纯粗碳酸锂）",0.32,SRC040,LS 同源路线；跨体系代理到 JR 粉料；商品规格按申报浓度,reference_profile_screening,"有效吨 4,412.356 t/a；商品吨与有效吨并列，不得混用"
+LS23_LFP_NATIVE_POWDER,LS_CAO,92%氧化钙,,t_commercial/t_powder,0.02940000 t/t 粉料（由年量反算）,276.91435213352065,t_commercial/a,0.2613049200815433,t_commercial/t_LCE,"1,059.736 t LCE（LS 情景干纯粗碳酸锂）",0.92,SRC040,LS 同源路线；跨体系代理到 JR 粉料；商品规格按申报浓度,reference_profile_screening,有效吨 254.761 t/a；商品吨与有效吨并列，不得混用
+LS23_LFP_NATIVE_POWDER,LS_PACID,85%磷酸,,t_commercial/t_powder,0.09823900 t/t 粉料（由年量反算）,925.298946913093,t_commercial/a,0.8731406137377802,t_commercial/t_LCE,"1,059.736 t LCE（LS 情景干纯粗碳酸锂）",0.85,SRC040,LS 同源路线；跨体系代理到 JR 粉料；商品规格按申报浓度,reference_profile_screening,有效吨 786.504 t/a；商品吨与有效吨并列，不得混用
+LS23_LFP_NATIVE_POWDER,LS_CO2,液CO2,,t_commercial/t_powder,0.11100000 t/t 粉料（由年量反算）,1045.4929621367617,t_commercial/a,0.9865593921446024,t_commercial/t_LCE,"1,059.736 t LCE（LS 情景干纯粗碳酸锂）",0.9990000000000001,SRC040,LS 同源路线；跨体系代理到 JR 粉料；商品规格按申报浓度,reference_profile_screening,"有效吨 1,044.447 t/a；商品吨与有效吨并列，不得混用"
+LS23_LFP_NATIVE_POWDER,LS_O2,液氧,,t_commercial/t_powder,0.01200000 t/t 粉料（由年量反算）,113.02626617694722,t_commercial/a,0.10665506942103811,t_commercial/t_LCE,"1,059.736 t LCE（LS 情景干纯粗碳酸锂）",0.9990000000000001,SRC040,LS 同源路线；跨体系代理到 JR 粉料；商品规格按申报浓度,reference_profile_screening,有效吨 112.913 t/a；商品吨与有效吨并列，不得混用
+LS23_LFP_NATIVE_POWDER,LS_ACID_ALT,98% 硫酸（第二版本 0.4902）,0.4902,t_commercial/t_powder,§4.3.1.2 稀释酸雾源强,4617.1229733282935,t_commercial/a,,,,0.98,SRC040,与主版本 0.5630527 同称 98% 硫酸、同条粉线，冲突未解,diagnostic_only,两版本并列、不平均；M07 未解前不选一个当正式值
+LS23_LFP_NATIVE_POWDER,LS23_COMBINED_ELECTRICITY,组合电耗（预处理+湿法+公辅）,,kWh/t_powder,1 万 t 电芯 + 1 万 t 粉料 + 公辅的组合电表,11232000.0,kWh/a,,,,,SRC040,不可拆成单线,diagnostic_only,不除以粉量充当湿法单耗；本厂分线电耗 null（M08_ELECTRIC）
+LS23_LFP_NATIVE_POWDER,LS23_STEAM,蒸汽（质量）,1.1747755,t_steam/t_powder,1 t 申报粉料,11065.04069676302,t_steam/a,10.441313542219563,t_steam/t_LCE,"1,059.736 t LCE",,SRC040,压力/温度/返凝水/购热结算口径未取得,diagnostic_only,只给 t；M08_STEAM 未解前不转 MJ（禁止无依据填 2500 MJ/t）
+LS23_LFP_NATIVE_POWDER,LS23_PURE_WATER,纯水,0.3491132,m3/t_powder,1 t 申报粉料,3288.246789090484,m3/a,,,,,SRC040,同一 LS 边界；取水与耗水未分,reference_profile_screening,循环水≠耗水；处理量≠用水量（M08_WATER）
+LS23_LFP_NATIVE_POWDER,LS23_SCRUBBER_MAKEUP,洗涤/吹扫补水,0.0462186,m3/t_powder,1 t 申报粉料,435.326315493821,m3/a,,,,,SRC040,同一 LS 边界；取水与耗水未分,reference_profile_screening,循环水≠耗水；处理量≠用水量（M08_WATER）
+LS23_LFP_NATIVE_POWDER,LS23_FLOOR_WATER,地坪冲洗水,0.007824,m3/t_powder,1 t 申报粉料,73.69312554736958,m3/a,,,,,SRC040,同一 LS 边界；取水与耗水未分,reference_profile_screening,循环水≠耗水；处理量≠用水量（M08_WATER）
+LS23_LFP_NATIVE_POWDER,LS23_MVR_CONDENSATE_DISCHARGE,MVR 冷凝外排,0.5604255,m3/t_powder,1 t 申报粉料,5278.566811279061,m3/a,,,,,SRC040,同一 LS 边界；取水与耗水未分,reference_profile_screening,循环水≠耗水；处理量≠用水量（M08_WATER）
+LS23_LFP_NATIVE_POWDER,LS23_SCRUBBER_WW,酸雾洗涤废水,0.00144,m3/t_powder,1 t 申报粉料,13.563151941233667,m3/a,,,,,SRC040,同一 LS 边界；取水与耗水未分,reference_profile_screening,循环水≠耗水；处理量≠用水量（M08_WATER）
+LS23_LFP_NATIVE_POWDER,LS23_FLOOR_WW,地坪废水,0.0062591999999999995,m3/t_powder,1 t 申报粉料,58.95450043789566,m3/a,,,,,SRC040,同一 LS 边界；取水与耗水未分,reference_profile_screening,循环水≠耗水；处理量≠用水量（M08_WATER）
+LS23_LFP_NATIVE_POWDER,LS23_CAUSTIC_RESIDUE,碱渣,0.01566,t/t_powder,1 t 申报粉料,147.49927736091612,t/a,,,,,SRC040,固废属性未逐项核定,reference_profile_screening,一般固废/危废分类与处置路径未定（M13）
+LS23_LFP_NATIVE_POWDER,LS23_CARBON_RESIDUE,碳渣,0.5624991,t/t_powder,1 t 申报粉料,5298.0977500744375,t/a,,,,,SRC040,固废属性未逐项核定,reference_profile_screening,一般固废/危废分类与处置路径未定（M13）
+LS23_LFP_NATIVE_POWDER,LS23_WET_SCRUBBER_RESIDUE,湿式除尘渣（湿法段）,0.0078929,t/t_powder,1 t 申报粉料,74.34208469233555,t/a,,,,,SRC040,固废属性未逐项核定,reference_profile_screening,一般固废/危废分类与处置路径未定（M13）
+LS23_LFP_NATIVE_POWDER,LS23_PRE_SCRUBBER_WATER,预处理酸雾洗涤水,0.5469014,m3/t_cell,1 t LFP 电芯,12938.806612745999,m3/a,,,,,SRC040,"按 LS 单耗线性放大到本组 23,658.390 t LFP 电芯（跨规模代理）",reference_profile_screening,天然气只给体积不折 MJ；氮气非燃料
+LS23_LFP_NATIVE_POWDER,LS23_PRE_COOL_WATER,预处理冷却水,0.576,m3/t_cell,1 t LFP 电芯,13627.232639999998,m3/a,,,,,SRC040,"按 LS 单耗线性放大到本组 23,658.390 t LFP 电芯（跨规模代理）",reference_profile_screening,天然气只给体积不折 MJ；氮气非燃料
+LS23_LFP_NATIVE_POWDER,LS23_PRE_QUENCH_WATER,预处理淬冷水,0.036,m3/t_cell,1 t LFP 电芯,851.7020399999999,m3/a,,,,,SRC040,"按 LS 单耗线性放大到本组 23,658.390 t LFP 电芯（跨规模代理）",reference_profile_screening,天然气只给体积不折 MJ；氮气非燃料
+LS23_LFP_NATIVE_POWDER,LS23_PRE_NG,预处理天然气,28.8,Nm3/t_cell,1 t LFP 电芯,681361.632,Nm3/a,,,,,SRC040,"按 LS 单耗线性放大到本组 23,658.390 t LFP 电芯（跨规模代理）",reference_profile_screening,天然气只给体积不折 MJ；氮气非燃料
+LS23_LFP_NATIVE_POWDER,LS23_PRE_N2,预处理氮气,216.0,Nm3/t_cell,1 t LFP 电芯,5110212.24,Nm3/a,,,,,SRC040,"按 LS 单耗线性放大到本组 23,658.390 t LFP 电芯（跨规模代理）",reference_profile_screening,天然气只给体积不折 MJ；氮气非燃料
+LS23_LFP_NATIVE_POWDER,LS23_PRE_WET_SCRUBBER_RESIDUE,湿式除尘渣（预处理段）,0.0345069,t/t_cell,1 t LFP 电芯,816.377697891,t/a,,,,,SRC040,"按 LS 单耗线性放大到本组 23,658.390 t LFP 电芯（跨规模代理）",reference_profile_screening,天然气只给体积不折 MJ；氮气非燃料
+LS23_LFP_NATIVE_POWDER,LS23_PRODUCT_CRUDE_LIC,粗碳酸锂,,t_product/t_powder,由年量反算,1338.0510913947232,t_product/a,,,,,SRC040,LS 同源路线；不是电池级成品,recovered_intermediate_not_saleable,product_role=内部进入铁锂生产线，不是已达电池级可售品；可售电池级量为 null
+LS23_LFP_NATIVE_POWDER,LS23_PRODUCT_FEP_SLAG,磷酸铁渣,,t_product/t_powder,由年量反算,7060.243171761647,t_product/a,,,,,SRC040,LS 同源路线；不是电池级成品,recovered_intermediate_not_saleable,product_role=内部进入磷铁生产线；不是8万t/a磷酸铁成品；可售电池级量为 null
+LS23_LFP_NATIVE_POWDER,LS23_PRODUCT_ALP,磷酸铝,,t_product/t_powder,由年量反算,1270.4952921007618,t_product/a,,,,,SRC040,LS 同源路线；不是电池级成品,recovered_intermediate_not_saleable,product_role=外售副产品；可售电池级量为 null
+LS23_LFP_NATIVE_POWDER,LS23_PRODUCT_SODIUM_SULFATE,硫酸钠,,t_product/t_powder,由年量反算,8168.389418896945,t_product/a,,,,,SRC040,LS 同源路线；不是电池级成品,recovered_intermediate_not_saleable,product_role=外售；未明确水合形态/水分；可售电池级量为 null
+LS23_LFP_NATIVE_POWDER,LS23_PRODUCT_SPONGE_CU,海绵铜,,t_product/t_powder,由年量反算,372.7983012736309,t_product/a,,,,,SRC040,LS 同源路线；不是电池级成品,recovered_intermediate_not_saleable,product_role=外售Cu-40，纯度指Cu质量分数；可售电池级量为 null
+ANL19_GENERIC_HYD_CELL,H2SO4,H2SO4,1.08,kg_declared_chemical/kg_cell,1 kg 电芯（申报化学品，商业浓度 null）,16313.300640000001,t_declared_chemical/a,,,,,SRC043,ANL 模型内含预处理与湿法的综合剂量；商业浓度未交代,reference_profile_screening,无产品量 → 不换算 per FU；不得与 LS 药剂相加
+ANL19_GENERIC_HYD_CELL,H2O2,H2O2,0.366,kg_declared_chemical/kg_cell,1 kg 电芯（申报化学品，商业浓度 null）,5528.396328,t_declared_chemical/a,,,,,SRC043,ANL 模型内含预处理与湿法的综合剂量；商业浓度未交代,reference_profile_screening,无产品量 → 不换算 per FU；不得与 LS 药剂相加
+ANL19_GENERIC_HYD_CELL,NaOH,NaOH,0.561,kg_declared_chemical/kg_cell,1 kg 电芯（申报化学品，商业浓度 null）,8473.853388000001,t_declared_chemical/a,,,,,SRC043,ANL 模型内含预处理与湿法的综合剂量；商业浓度未交代,reference_profile_screening,无产品量 → 不换算 per FU；不得与 LS 药剂相加
+ANL19_GENERIC_HYD_CELL,HCl,HCl,0.012,kg_declared_chemical/kg_cell,1 kg 电芯（申报化学品，商业浓度 null）,181.258896,t_declared_chemical/a,,,,,SRC043,ANL 模型内含预处理与湿法的综合剂量；商业浓度未交代,reference_profile_screening,无产品量 → 不换算 per FU；不得与 LS 药剂相加
+ANL19_GENERIC_HYD_CELL,NH4OH,NH4OH,0.031,kg_declared_chemical/kg_cell,1 kg 电芯（申报化学品，商业浓度 null）,468.252148,t_declared_chemical/a,,,,,SRC043,ANL 模型内含预处理与湿法的综合剂量；商业浓度未交代,reference_profile_screening,无产品量 → 不换算 per FU；不得与 LS 药剂相加
+ANL19_GENERIC_HYD_CELL,Na2CO3,Na2CO3,0.02,kg_declared_chemical/kg_cell,1 kg 电芯（申报化学品，商业浓度 null）,302.09816,t_declared_chemical/a,,,,,SRC043,ANL 模型内含预处理与湿法的综合剂量；商业浓度未交代,reference_profile_screening,无产品量 → 不换算 per FU；不得与 LS 药剂相加
+ANL19_GENERIC_HYD_CELL,electricity,electricity,34.72222222222222,kWh/t_cell,0.125 MJ/kg_cell,524475.9722222222,kWh/a,,,,,SRC043,模型内部分配；柴油为车用/场内，与厂内天然气同为模型输出,diagnostic_only,独立模型参考，不是园区实测；柴油能耗不等于运输柴油
+ANL19_GENERIC_HYD_CELL,natural_gas_energy,natural_gas_energy,2500.0,MJ/t_cell,2.5 MJ/kg_cell,37762270.0,MJ/a,,,,,SRC043,模型内部分配；柴油为车用/场内，与厂内天然气同为模型输出,diagnostic_only,独立模型参考，不是园区实测；柴油能耗不等于运输柴油
+ANL19_GENERIC_HYD_CELL,diesel_energy,diesel_energy,600.0,MJ/t_cell,0.6 MJ/kg_cell,9062944.799999999,MJ/a,,,,,SRC043,模型内部分配；柴油为车用/场内，与厂内天然气同为模型输出,diagnostic_only,独立模型参考，不是园区实测；柴油能耗不等于运输柴油
+ANL19_GENERIC_HYD_CELL,water,water,3.785411784,m3/t_cell,1 USgal/kg_cell,57178.29673943587,m3/a,,,,,SRC043,模型内部分配；柴油为车用/场内，与厂内天然气同为模型输出,diagnostic_only,独立模型参考，不是园区实测；柴油能耗不等于运输柴油
+ANL19_GENERIC_HYD_CELL,recovery_Li,Li 默认回收率,0.9,t_recovered/t_in_route,全路线默认（含预处理与湿法）,,,,,,,SRC043,模型默认值，非实测,diagnostic_only,全路线口径：若采用只乘一次，且不得再乘黑粉捕集损失
+ANL19_GENERIC_HYD_CELL,recovery_Ni,Ni 默认回收率,0.98,t_recovered/t_in_route,全路线默认（含预处理与湿法）,,,,,,,SRC043,模型默认值，非实测,diagnostic_only,全路线口径：若采用只乘一次，且不得再乘黑粉捕集损失
+ANL19_GENERIC_HYD_CELL,recovery_Co,Co 默认回收率,0.98,t_recovered/t_in_route,全路线默认（含预处理与湿法）,,,,,,,SRC043,模型默认值，非实测,diagnostic_only,全路线口径：若采用只乘一次，且不得再乘黑粉捕集损失
+ANL19_GENERIC_HYD_CELL,recovery_Mn,Mn 默认回收率,0.98,t_recovered/t_in_route,全路线默认（含预处理与湿法）,,,,,,,SRC043,模型默认值，非实测,diagnostic_only,全路线口径：若采用只乘一次，且不得再乘黑粉捕集损失
+ANL19_GENERIC_HYD_CELL,recovery_Cu,Cu 默认回收率,0.9,t_recovered/t_in_route,全路线默认（含预处理与湿法）,,,,,,,SRC043,模型默认值，非实测,diagnostic_only,全路线口径：若采用只乘一次，且不得再乘黑粉捕集损失
+ANL19_GENERIC_HYD_CELL,recovery_Al,Al 默认回收率,0.9,t_recovered/t_in_route,全路线默认（含预处理与湿法）,,,,,,,SRC043,模型默认值，非实测,diagnostic_only,全路线口径：若采用只乘一次，且不得再乘黑粉捕集损失
+ANL19_GENERIC_HYD_CELL,recovery_steel,steel 默认回收率,0.9,t_recovered/t_in_route,全路线默认（含预处理与湿法）,,,,,,,SRC043,模型默认值，非实测,diagnostic_only,全路线口径：若采用只乘一次，且不得再乘黑粉捕集损失
+ANL19_GENERIC_HYD_CELL,recovery_graphite,graphite 默认回收率,0.9,t_recovered/t_in_route,全路线默认（含预处理与湿法）,,,,,,,SRC043,模型默认值，非实测,diagnostic_only,全路线口径：若采用只乘一次，且不得再乘黑粉捕集损失
+JIANG24_NATIVE_LFP_PILOT,J-T7-1,废旧LFP/C粉料,1.0,t/t_powder,每 2.0 t 粉料单批,,,,,,,SRC021,中间规模中试（500 t/a 装置）；不能线性放大为工业单耗,diagnostic_only,单批值 2.0 t；单批处理2.0 t废旧LFP/C粉料；input；不得与 LS/ANL 相加
+JIANG24_NATIVE_LFP_PILOT,J-T7-2,硫酸,1.0,t/t_powder,每 2.0 t 粉料单批,,,,,,,SRC021,中间规模中试（500 t/a 装置）；不能线性放大为工业单耗,diagnostic_only,单批值 2.0 t；单批处理2.0 t废旧LFP/C粉料；input；不得与 LS/ANL 相加
+JIANG24_NATIVE_LFP_PILOT,J-T7-3,磷酸,85.0,kg/t_powder,每 2.0 t 粉料单批,,,,,,,SRC021,中间规模中试（500 t/a 装置）；不能线性放大为工业单耗,diagnostic_only,单批值 170 kg；单批处理2.0 t废旧LFP/C粉料；input；不得与 LS/ANL 相加
+JIANG24_NATIVE_LFP_PILOT,J-T7-4,工业铁粉,55.0,kg/t_powder,每 2.0 t 粉料单批,,,,,,,SRC021,中间规模中试（500 t/a 装置）；不能线性放大为工业单耗,diagnostic_only,单批值 110 kg；单批处理2.0 t废旧LFP/C粉料；input；不得与 LS/ANL 相加
+JIANG24_NATIVE_LFP_PILOT,J-T7-5,自来水,5.0,m3/t_powder,每 2.0 t 粉料单批,,,,,,,SRC021,中间规模中试（500 t/a 装置）；不能线性放大为工业单耗,diagnostic_only,单批值 10 m3；单批处理2.0 t废旧LFP/C粉料；input；不得与 LS/ANL 相加
+JIANG24_NATIVE_LFP_PILOT,J-T7-6,磷酸二氢钠,75.0,kg/t_powder,每 2.0 t 粉料单批,,,,,,,SRC021,中间规模中试（500 t/a 装置）；不能线性放大为工业单耗,diagnostic_only,单批值 150 kg；单批处理2.0 t废旧LFP/C粉料；input；不得与 LS/ANL 相加
+JIANG24_NATIVE_LFP_PILOT,J-T7-7,双氧水,0.6,m3/t_powder,每 2.0 t 粉料单批,,,,,,,SRC021,中间规模中试（500 t/a 装置）；不能线性放大为工业单耗,diagnostic_only,单批值 1.2 m3；单批处理2.0 t废旧LFP/C粉料；input；不得与 LS/ANL 相加
+JIANG24_NATIVE_LFP_PILOT,J-T7-8,氢氧化钠,1.6,t/t_powder,每 2.0 t 粉料单批,,,,,,,SRC021,中间规模中试（500 t/a 装置）；不能线性放大为工业单耗,diagnostic_only,单批值 3.2 t；单批处理2.0 t废旧LFP/C粉料；input；不得与 LS/ANL 相加
+JIANG24_NATIVE_LFP_PILOT,J-T7-9,碳酸钠,375.0,kg/t_powder,每 2.0 t 粉料单批,,,,,,,SRC021,中间规模中试（500 t/a 装置）；不能线性放大为工业单耗,diagnostic_only,单批值 750 kg；单批处理2.0 t废旧LFP/C粉料；input；不得与 LS/ANL 相加
+JIANG24_NATIVE_LFP_PILOT,J-T7-10,副产亚铁,135.0,kg/t_powder,每 2.0 t 粉料单批,,,,,,,SRC021,中间规模中试（500 t/a 装置）；不能线性放大为工业单耗,diagnostic_only,单批值 270 kg；单批处理2.0 t废旧LFP/C粉料；input；不得与 LS/ANL 相加
+JIANG24_NATIVE_LFP_PILOT,J-T7-11,一般固废处理,0.5,t/t_powder,每 2.0 t 粉料单批,,,,,,,SRC021,中间规模中试（500 t/a 装置）；不能线性放大为工业单耗,diagnostic_only,单批值 1.0 t；单批处理2.0 t废旧LFP/C粉料；waste_output；不得与 LS/ANL 相加
+JIANG24_NATIVE_LFP_PILOT,J-T7-12,危废处理,150.0,kg/t_powder,每 2.0 t 粉料单批,,,,,,,SRC021,中间规模中试（500 t/a 装置）；不能线性放大为工业单耗,diagnostic_only,单批值 300 kg；单批处理2.0 t废旧LFP/C粉料；waste_output；不得与 LS/ANL 相加
+JIANG24_NATIVE_LFP_PILOT,J-T7-13,电池用磷酸铁,0.6,t/t_powder,每 2.0 t 粉料单批,,,,,,,SRC021,中间规模中试（500 t/a 装置）；不能线性放大为工业单耗,diagnostic_only,单批值 1.2 t；单批处理2.0 t废旧LFP/C粉料；product_output；不得与 LS/ANL 相加
+JIANG24_NATIVE_LFP_PILOT,J-T7-14,陶瓷用磷酸铁,420.0,kg/t_powder,每 2.0 t 粉料单批,,,,,,,SRC021,中间规模中试（500 t/a 装置）；不能线性放大为工业单耗,diagnostic_only,单批值 840 kg；单批处理2.0 t废旧LFP/C粉料；product_output；不得与 LS/ANL 相加
+JIANG24_NATIVE_LFP_PILOT,J-T7-15,电池级碳酸锂,192.5,kg/t_powder,每 2.0 t 粉料单批,,,,,,,SRC021,中间规模中试（500 t/a 装置）；不能线性放大为工业单耗,diagnostic_only,单批值 385 kg；单批处理2.0 t废旧LFP/C粉料；product_output；不得与 LS/ANL 相加
+JIANG24_NATIVE_LFP_PILOT,J-T7-16,磷酸锂,29.0,kg/t_powder,每 2.0 t 粉料单批,,,,,,,SRC021,中间规模中试（500 t/a 装置）；不能线性放大为工业单耗,diagnostic_only,单批值 58 kg；单批处理2.0 t废旧LFP/C粉料；product_output；不得与 LS/ANL 相加
+JIANG24_NATIVE_LFP_PILOT,Li_to_Li2CO3,Li 去向：碳酸锂,0.8177676537585421,t_Li/t_Li_in,表6 Li 平衡,,,,,,,SRC021,表6 公开舍入值，闭合 99.94% 只是报告值,diagnostic_only,舍入残差 ≈0.00057 > 5e-4，不得宣称严格通过；Li→Li3PO4 0.118451
+JIANG24_NATIVE_LFP_PILOT,li_leaching_fraction,煅烧后浸出率,0.976,t_Li_leached/t_Li_feed,煅烧后渣,,,,,,,SRC021,工序值，不是全流程收率,diagnostic_only,0.976 不得当总收率
+ND22_WHOLE_CATHODE_PROJECT_REFERENCE,whole_project_electricity,全项目用电,,kWh/t_cathode_sheet,5.3 万 t 三元 + 4.7 万 t LFP 正极片,444988200.0,kWh/a,,,,,SRC042,整项目含多产品,diagnostic_only,selected_as_plant_energy=false
+ND22_WHOLE_CATHODE_PROJECT_REFERENCE,steam_1,蒸汽 1.5 MPa / 200 ℃,,t_steam/a,整项目,541360.0,t_steam/a,,,,,SRC042,整项目边界,diagnostic_only,只给质量；状态已知但不是本厂结算口径
+ND22_WHOLE_CATHODE_PROJECT_REFERENCE,steam_2,蒸汽 3.5 MPa / 243 ℃,,t_steam/a,整项目,50814.0,t_steam/a,,,,,SRC042,整项目边界,diagnostic_only,只给质量；状态已知但不是本厂结算口径
+ND22_WHOLE_CATHODE_PROJECT_REFERENCE,lfp_lce_specific_total_energy,LFP 碳酸锂综合能耗,1729.26,kgce/t_LCE,整项目 LFP 线,,,,,,,SRC042,多产品综合能耗,diagnostic_only,禁止用综合能耗减 LS 蒸汽、把余量当电耗（A04）

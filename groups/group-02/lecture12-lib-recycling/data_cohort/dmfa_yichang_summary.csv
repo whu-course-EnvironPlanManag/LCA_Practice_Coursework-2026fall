@@ -1,0 +1,4 @@
+﻿case_id,collection_scenario,collection_rate,cum_first_install_2010_2025_t,cum_retired_2010_2040_t,peak_retirement_year,peak_retirement_t,cum_collected_2010_2040_t,stock_2025_t,stock_2040_t,li_LFP_stock_2025_kg,li_LFP_cum_retired_kg,li_LFP_cum_collected_kg,stock_flow_identity_LFP,stock_flow_identity_NMC,li_identity_LFP,scope_note
+EXP_V2_HLFP_WU_C065,C065,0.650000,29791.060,29765.403,2029,4817.446,19347.512,27492.847,25.657,239596.127,256009.930,166406.454,PASS,PASS,PASS,首装队列贡献，非全市总退役/总在用；正规收集≠进入再生≠进入园区
+EXP_V2_HLFP_WU_C085,C085,0.850000,29791.060,29765.403,2029,4817.446,25300.592,27492.847,25.657,239596.127,256009.930,217608.440,PASS,PASS,PASS,首装队列贡献，非全市总退役/总在用；正规收集≠进入再生≠进入园区
+EXP_V2_HLFP_WU_C100,C100,1.000000,29791.060,29765.403,2029,4817.446,29765.403,27492.847,25.657,239596.127,256009.930,256009.930,PASS,PASS,PASS,首装队列贡献，非全市总退役/总在用；正规收集≠进入再生≠进入园区

@@ -1,0 +1,14 @@
+﻿check_id,item,status,detail
+D01,顶层必需键完整,PASS,15 个键齐全
+D02,数据集标志与模型未执行状态,PASS,schema=2.0.0；conditional_ready=True；retirement_model_executed=False
+D03,DMFA 来源引用可解析,PASS,全部来源引用均可解析
+D04,DMFA-01 年度记录 2010—2025 连续,PASS,16 条，2010—2025
+D05,首装包质量无缺失,PASS,16 年全部有值（条件重建）
+D06,车型份额合计为 1 且包质量=容量/比能量,PASS,Σshare=1.000000000000；包质量换算逐类一致
+D07,化学情景分体系质量合计=首装总量,PASS,最大相对偏差=1.738e-16
+D08,LFP/三元寿命参数存在且均值可复算,PASS,"LFP k=3.1,scale=5.5；三元 k=2.1,scale=7.3"
+D09,寿命尾部不重归一化且 L(age) 单调不增,PASS,lifetime_tail.renormalize_truncated_pmf=False；L(age) 0—40 年逐点不增
+D10,三个收集率情景齐全、0≤c≤1 且案例引用一致,PASS,C065=0.65;C085=0.85;C100=1.0；案例 3 个
+D11,Li 强度换算一致且未细分三元为 null,PASS,16 条车型×体系记录；三元全部 null（不平均 622/811）
+D12,未就绪模块保持阻断（不补零）,PASS,阻断模块 6 个：NMC622_NMC811_separate_flows_and_Li;total_city_Li_inventory;full_city_forecast_2026_2040;city_to_park_feed;recycling_and_second_life_flows;spatial_network
+D13,未解决输入 11 项保持 null,PASS,"11 项：D01-OBS,D01-FUT,D01-REP,D01-MIG,D01-TYPE,D04-OBS,D05-FLEET,D06-NMC,D06-OTHER,D07-SPATIAL,D-PARK-LINK"

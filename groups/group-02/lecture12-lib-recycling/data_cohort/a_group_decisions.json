@@ -1,0 +1,272 @@
+{
+  "schema_version": "2.0.0",
+  "decision_file_id": "A_GROUP_DECISIONS_20261103_V2",
+  "case_id": "A_YICHANG_LIB_PARK_80000_CONDITIONAL_V2",
+  "written_by": "成员 A（MFA / dMFA）",
+  "date": "2026-11-03",
+  "purpose": "登记成员 A 在 8 万 t/a 园区工况下的组内决策、补充数据采用范围与不可用项；供 plant_case.py 读取，供 B/C 复核",
+  "snapshot_policy": {
+    "modifies_upstream": false,
+    "may_be_cited_as_measurement": false,
+    "activates_candidate_parameters": false,
+    "activates_supplement_routes": false,
+    "unlocks_formal_lca_or_lcor_gate": false,
+    "missing_written_as_zero": false,
+    "instruction": "本文件只登记口径与假设，不填写任何上游未解决输入的数值；缺数保持 null，不代 0，不取平均，不合成置信区间"
+  },
+  "supplement_registry": {
+    "supplement_dir": "A_BC补充数据_20261103",
+    "main_json": "A_BC补充数据_20261103/A_给BC的补充数据.json",
+    "main_json_sha256": "8a7edbd0c3f09def26e868b3a2078f4cdd7d575676cfe6144505ef5706523cbf",
+    "main_json_bytes": 87497,
+    "delivered_by": "Codex 2026-11-03（A_BC核查与数据补充_20261103）",
+    "automatically_adopted": false,
+    "adopted_scope": [
+      "mechanical_capture_screening：仅作为 M02 文献迁移情景（EV_I_M02_TRANSFER_SCREENING，η=0.9328），并列 EV II（0.8353）不平均",
+      "reference_routes：LS23 / ANL19 / JIANG24 / ND22 仅作参考 profile，按 profile_id 隔离，不拼成同一座工厂",
+      "code_review A01—A07：已按 IDE 修正 plant_case.py 与 dmfa_yichang.py",
+      "unresolved_inputs：并入缺口表，全部保持 null"
+    ],
+    "not_adopted": [
+      "任何 profile 的 automatically_adopted 均为 false，不转正式输入",
+      "ANL19 的 saleable_product_masses=null 不得被替代为估算产量",
+      "ND22 的 selected_as_plant_energy=false，不得作为本厂电/汽活动量",
+      "JIANG24 0.976 仅为煅烧后浸出率，不当总收率"
+    ]
+  },
+  "operating_case": {
+    "design_received_pack_t_a": 80000.0,
+    "load_factor": 0.85,
+    "actual_received_pack_t_a": 68000.0,
+    "design_reuse_capacity_t_a": 10000.0,
+    "conditional_reuse_allocated_pack_t_a": 8500.0,
+    "design_recycling_capacity_t_a": 70000.0,
+    "actual_recycling_inlet_pack_t_a": 59500.0,
+    "reuse_split_mass_fraction": 0.125,
+    "chemistry_mass_shares": {
+      "LFP": 0.6,
+      "MIXED_NMC_UNSPECIFIED": 0.4
+    },
+    "nominal_calendar_candidate_hours_a": 7200,
+    "actual_operating_hours_a": null,
+    "basis": "整包质量；负荷只乘一次（进料已含 0.85），不再乘到电耗或台时",
+    "source": "A/data_cohort/a_group_decisions.json 与 C/C_final_assumptions.json；补充包 operating_case",
+    "note": "设计再生能力 70,000 t/a 与实际再生入口 59,500 t/a 必须分开登记与引用；59,500 不是 70,000 的替代值，也不是其负荷率证据；同体系 12.5% 分流是规划假设（pro rata），不是 SOH 推导或合格出货率"
+  },
+  "conditional_overrides": {
+    "M01": {
+      "override_status": "conditional_group_assumption",
+      "value_used": 0.125,
+      "basis": "8,500 / 68,000；同体系按整包质量同比例分流",
+      "does_not_unlock_gate": true,
+      "note": "SOH 阈值不等于数量分布；梯次出货量仍需 M01_REUSE_SALE"
+    },
+    "M02": {
+      "override_status": "conditional_literature_transfer_scenario",
+      "scenario_id": "EV_I_M02_TRANSFER_SCREENING",
+      "value_used": 0.9328,
+      "does_not_unlock_gate": true,
+      "still_blocked": "园区实测分体系黑粉捕集率未取得"
+    },
+    "M03": {"override_status": "still_blocked", "note": "JR 产粉与湿法入料的同口径化验/含水率未取得"},
+    "M05": {"override_status": "still_blocked", "note": "电池级成品质量/水合形态/纯度/合格率未取得"},
+    "M06": {"override_status": "still_blocked", "note": "湿法体系未选定；LS 与 ANL 互为备选"},
+    "M07": {"override_status": "still_blocked", "note": "LS 硫酸 0.5630527 与 0.4902 并列不平均"},
+    "M08": {"override_status": "still_blocked", "note": "分线电耗、蒸汽状态与水平衡均未取得"},
+    "M10": {"override_status": "still_blocked", "note": "多产品分配/系统扩展未定，故不给出可售品分配量"}
+  },
+  "blackmass_capture_screening": {
+    "selected_scenario_id": "EV_I_M02_TRANSFER_SCREENING",
+    "capture_fraction": 0.9328,
+    "sd_fraction": 0.0405,
+    "sample_n": 3,
+    "denominator": "同一来源 EV 模块经手工拆解测得的可回收黑粉基准质量；非整包质量、非 Li 质量",
+    "alternative_scenario_id": "EV_II",
+    "alternative_capture_fraction": 0.8353,
+    "alternative_sd_fraction": 0.0363,
+    "scenario_rule": "两条机械流程并列情景，不平均、不加权、不合成区间",
+    "transfer_assumptions": [
+      "把同源模块实验的总黑粉捕集率移用到 JR 组分库存，忽略装置放大对分选的影响",
+      "LFP 采用同一数值属跨体系代理，不宣称 LFP 实测或法规达标",
+      "只给黑粉总质量，不据此推定 Li/Ni/Co/Mn 各元素同率分配",
+      "未捕集部分（粗粒/箔材附粉/粉尘）去向未量化，不全部记大气排放、危废或消失"
+    ],
+    "not_a_li_recovery_rate": true,
+    "does_not_unlock_gate": "M02"
+  },
+  "route_assignment": {
+    "profile_isolation": true,
+    "no_interval_synthesis": true,
+    "LFP": {
+      "primary_reference_profile": "LS23_LFP_NATIVE_POWDER",
+      "source_id": "SRC040",
+      "role": "LFP 粉料湿法参考路线（外购粉+自产粉混合口径）",
+      "supplementary_profiles": ["JIANG24_NATIVE_LFP_PILOT"],
+      "not_used_for_plant_quantities": ["ND22_WHOLE_CATHODE_PROJECT_REFERENCE"]
+    },
+    "MIXED_NMC_UNSPECIFIED": {
+      "primary_reference_profile": "ANL19_GENERIC_HYD_CELL",
+      "source_id": "SRC043",
+      "role": "三元通用电芯再生参考模型（含模型内预处理与湿法）",
+      "legacy_profile": "LI20（SRC041）",
+      "legacy_profile_status": "basis_conflict_not_usable_as_plant_demand",
+      "note": "LI20 的 t 电池分母换算到 1 t LCE 会得 15 t 级硫酸，与本项目不相容，只保留诊断"
+    }
+  },
+  "reuse_energy_interface": {
+    "reuse_allocated_pack_t_a": 8500.0,
+    "reuse_allocated_LFP_t_a": 5100.0,
+    "reuse_allocated_MIXED_NMC_UNSPECIFIED_t_a": 3400.0,
+    "nameplate_specific_energy_Wh_per_kg_reference": {
+      "low": 118.0,
+      "mid": 125.0,
+      "high": 157.0,
+      "source_ids": ["DMFA-S002", "DMFA-S011"],
+      "note": "比能量是车型级参数，DMFA-06 中同车型三体系共用；与 622/811 元素拆分无关，故三元不必因未细分而 null"
+    },
+    "SOH": null,
+    "screen_pass_mass_fraction": null,
+    "repack_yield": null,
+    "sale_kwh_a": null,
+    "formula": "sale_kwh_a = sum(reuse_allocated_pack_t × nameplate_Wh_per_kg × screen_pass_mass_fraction × SOH × repack_yield)",
+    "note": "分配质量不是产品；额定容量不是合格出货容量；年出货容量不同于每年运行发电量；政策状态保留 UNKNOWN"
+  },
+  "energy_interface": {
+    "formal_electricity_per_line_kwh_a": null,
+    "formal_steam_energy_mj_a": null,
+    "formal_water_intake_m3_a": null,
+    "same_source_only": true,
+    "removed_conversion": {
+      "name": "ND_SEC 综合能耗 − LS 蒸汽 = 正式电耗",
+      "removed_on": "2026-11-03",
+      "reason": "跨项目、跨边界、跨单位拼接，且蒸汽焓为占位值；强配总量会制造假的分线电耗",
+      "replacement": "只保留诊断行；正式电/气/蒸汽各用同源活动量，未知电耗 null"
+    },
+    "steam_unit_rule": "t 蒸汽在压力/温度/返凝水/购热结算口径未核前不得转为 MJ",
+    "combined_electricity_rule": "组合电耗（LS 11,232,000 kWh/a、ND 444,988,200 kWh/a）保留原值，不除以粉量充当单线单耗",
+    "caustic_rule": "32% 液碱同时输出商品吨与有效吨；有效吨 = 商品吨 × 0.32"
+  },
+  "product_rule": {
+    "quantity_kinds": [
+      "capacity",
+      "input_allocation",
+      "inventory",
+      "recovered_intermediate",
+      "saleable_product",
+      "diagnostic",
+      "unresolved_null"
+    ],
+    "saleable_rule": "捕集率、干湿基、M10 分配、成品规格任一未定时，最终可售量一律 null",
+    "lce_denominator_rule": "C 的 3,000 t LCE 是财务变量，不是 A 的产量；A 的 LCE 只给'按 profile 情景的上限'，不反推为产量",
+    "fepo4_rule": "统一 FePO4·2H2O；按元素 Fe 与元素 P 的限制元素 min 计算；外加铁粉与 85% 磷酸须计入；水分与纯度另乘除",
+    "hydration_rule": "不得把无水 FePO4 与二水 FePO4 拼成同一区间；不得把磷酸铁渣记为 8 万 t/a 磷酸铁成品"
+  },
+  "reference_recovery_bounds": {
+    "li_recovery_lower_bound_literature": 0.90,
+    "li_leaching_fraction_JIANG24": 0.976,
+    "li_to_crude_derived_LS23": 0.8749782653694888,
+    "fe_p_recovery_lower_bound_literature": 0.85,
+    "anl19_whole_route_defaults": {
+      "Li": 0.90,
+      "Ni": 0.98,
+      "Co": 0.98,
+      "Mn": 0.98,
+      "Cu": 0.90,
+      "Al": 0.90,
+      "steel": 0.90,
+      "graphite": 0.90
+    },
+    "rule": "文献下界、报告表间推导值、中试浸出率三者分母不同，不得混成区间；ANL 恢复率是全路线口径，不得再乘黑粉损失"
+  },
+  "external_reference_constants": {
+    "role": "外部交付快照常数，仅用于交叉校验；本脚本不联网、不读取对方目录",
+    "C_snapshot_20261103": {
+      "case_id": "C_HYD_CONDITIONAL_20261103",
+      "lce_reference_t_a": 3000.0,
+      "feed_t_a": 68000.0,
+      "grid_power_kwh_a": 13657399.296636926,
+      "green_power_kwh_a": 13657399.296636926,
+      "process_steam_mj_a": 53708106.19221411,
+      "makeup_water_m3_a": 90000.0,
+      "acid98_t_commercial_a": 7653.0612244897975,
+      "peroxide27_5_t_commercial_a": 4363.636363636364,
+      "naoh99_t_commercial_a": 4545.454545454545,
+      "soda_t_commercial_a": 4800.0,
+      "lime90_t_commercial_a": 2666.666666666667,
+      "residue_t_a": 4500.0,
+      "capex_cny": 456000000.0,
+      "transport_inbound_km": 180.0,
+      "separate_inbound_freight_quantity_t_a": 68000.0,
+      "separate_inbound_freight_unit_price": 0.0,
+      "separate_inbound_freight_note": "USER_REVISED_FS:delivered_included —— C 的到厂价已含运费，单独运费项为 0"
+    },
+    "B_snapshot_20261103": {
+      "default_activities": {
+        "electricity_kwh": 8000.0,
+        "natural_gas": 12000.0,
+        "sulfuric_acid_H2SO4": 2500.0,
+        "hydrogen_peroxide_H2O2": 400.0,
+        "sodium_hydroxide_NaOH": 1500.0,
+        "sodium_carbonate_Na2CO3": 1600.0,
+        "lime_CaO": 800.0,
+        "diesel_truck": 2000.0,
+        "wastewater_treatment": 30.0,
+        "fluoride_wastewater_advanced": 10.0,
+        "hazardous_residue_disposal": 1.5
+      },
+      "candidate_override": {
+        "lmdi_recovery_mapping": "0.90 + 0.09 × pm",
+        "powder_per_t_lce_at_pm0": 6.0966,
+        "electricity_kwh_per_t_lce": 9104.9,
+        "steam_mj_per_t_lce": 17902.7,
+        "total_mj_per_t_lce": 50680.5,
+        "steam_enthalpy_placeholder_mj_per_t": 2500.0,
+        "note": "B 用 6.0969 t 粉料/t LCE 且假定全部 LCE 由 LFP 粉料产出；本工况三元也产 LCE，故单耗被高估"
+      }
+    }
+  },
+  "travel_distance_km": {
+    "value": 180.0,
+    "owner": "C",
+    "status": "conditional_C_transport_assumption",
+    "note": "距离是 C 的到厂距离假设；运输环境排放与经济到厂价分别核算一次即可，只有经济模型再加一段同段运费才算重复"
+  },
+  "gap_priority": [
+    "M02_ACTUAL：园区分体系黑粉实测捕集率（含分母与胶黏剂范围核定）",
+    "M03_COMPAT：JR 产粉与湿法入料同口径化验/含水率",
+    "M05_PRODUCTS：电池级 LCE/FePO4/NiCoMn 盐的质量、水合形态、纯度、合格率",
+    "M05_LI_PARTITIONS：各出厂/处置流股 Li 与连续工序分配",
+    "M08_ELECTRIC / M08_STEAM / M08_WATER：分线电耗、蒸汽状态与全厂水平衡",
+    "M01_REUSE_SALE：SOH、筛选合格率、重组损失与应用标准",
+    "M10_ALLOCATION：多产品分配/系统扩展与经济口径",
+    "M13_FACTORS：B 各试剂/能源/处置因子的版本与浓度边界",
+    "D-PARK-LINK：市域队列到园区的捕获率、外部来料与跨区域供给"
+  ],
+  "scenario_r1_registry": {
+    "scenario_id": "R1_PLANNING_20261104",
+    "snapshot_json": "data_cohort/a_group_r1_scenario_20261104.json",
+    "date": "2026-11-04",
+    "delivered_by": "Codex（相似规模文献检索 + 同源清单迁移 + 情景假设推算）",
+    "automatically_adopted": false,
+    "adoption_mode": "second_planning_scenario_parallel",
+    "adoption_mode_note": "R1 作为背景情景与 59,500 t/a 原情景并列：新增 q=0.90/y=0.97/SOH=0.80 弃用回流使再生入口由 59,500 变为 60,579.50 t/a，后续 LFP/三元/能耗/梯次/dMFA 未来量均随 R1 口径重算；原 59,500 情景与 131 行主表全部保留，不与 R1 混用",
+    "adopted_scope": [
+      "reuse_recycling_split：q/y/SOH 属情景假设，仅用于 R1 情景，不解除 M01_REUSE_SALE",
+      "LFP_native_process_LS23：LS23 同源清单按 R1 电芯/粉料量线性迁移",
+      "powder_assay_received_basis：按收到基解释，不扣水、不归一化",
+      "NMC_element_recovery_ANL19：ANL19 电芯组成 + 默认回收率，622/811 为技术端点情景",
+      "energy_water：α=0.50 分摊与各同源年度量，仅 R1 情景，不转正式 per-FU",
+      "reuse_test_capacity：JRC 测试电耗 + SOH=0.80 交付容量，仅 R1 情景",
+      "dmfa_future_2026_2040：首装 5%/a + 替换 + 车辆寿命 + c=0.80 探索情景"
+    ],
+    "not_adopted": [
+      "不激活任何候选工艺参数或补充路线",
+      "不解除正式 LCA/LCOR 闸门（formal_LCOR_ready=false 仍成立）",
+      "不用 0.50 粉产率当黑粉捕集率（M02_ACTUAL 仍缺失）",
+      "不把粗品/纯物质当量/元素量当作合格商品产量（GAP-LCE-SALE 仍缺失）",
+      "不把 622/811 当宜昌实际拆分（D06-NMC 仍缺失）",
+      "不把 c=0.80 供需量比当园区进料（D-PARK-LINK 仍缺失）"
+    ],
+    "discipline": "缺数保持 null 不补 0；湿产品与折干纯物质量是同一物流的不同表述不重复计；硫酸主/备选不平均；蒸汽热态未知不转 MJ；未来存量非宜昌实测库存"
+  }
+}

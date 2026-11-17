@@ -1,0 +1,32 @@
+[
+  {
+    "file": "A_给BC的补充数据.json",
+    "bytes": 87497,
+    "sha256": "8a7edbd0c3f09def26e868b3a2078f4cdd7d575676cfe6144505ef5706523cbf"
+  },
+  {
+    "file": "来源链接与引用格式.md",
+    "bytes": 4441,
+    "sha256": "96624a044ec87a1b81c4bd44ed0d2266e72f6955a75b46e33bf8df8b7ab0c1b1"
+  },
+  {
+    "file": "核查结论与补充数据说明.md",
+    "bytes": 7419,
+    "sha256": "61089e152cdb82db77f1f18f46172aeb8ed31443739163e6b4843ad2055692c4"
+  },
+  {
+    "file": "给A项目IDE的简短修改prompt.md",
+    "bytes": 1663,
+    "sha256": "2349c5ceb122cc0ab09e746ed2521d05407a83d5b0fc0809517c9ca8d3713c9b"
+  },
+  {
+    "file": "给BC项目IDE的接口修改prompt.md",
+    "bytes": 1285,
+    "sha256": "dbf11d5c3110a2b90aa8e019069ca6e38379aa4b489df7c77f44401bfe264f16"
+  },
+  {
+    "file": "补充数据校验.json",
+    "bytes": 3059,
+    "sha256": "f3a18c844822662e4db4b0210f31a360478f3c6b4c4ba247611990a4b0784abc"
+  }
+]

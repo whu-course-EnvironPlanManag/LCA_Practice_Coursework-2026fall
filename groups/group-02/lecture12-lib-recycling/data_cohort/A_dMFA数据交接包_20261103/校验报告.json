@@ -1,0 +1,178 @@
+{
+  "passed": true,
+  "check_count": 32,
+  "dataset_sha256": "8664ee30c3de14fc08d186ed49e35e044e0b55d9cca5589bdcfe2ff36771b758",
+  "predecessor_sha256": "720add518d60da9232e269ba6def7a0030c841669710c25d883790ae608a0b2b",
+  "counts": {
+    "sources": 57,
+    "assumptions": 19,
+    "observations": 6,
+    "history_years": 16,
+    "future_missing_years": 15,
+    "conditional_cases": 3,
+    "legacy_evidence": 224
+  },
+  "validation_scope": "保存后的JSON结构、引用、版本保真及输入重建一致性；非独立统计验证、非退役模型验证",
+  "checks": [
+    {
+      "check": "old_source_file_unchanged",
+      "passed": true,
+      "detail": "720add518d60da9232e269ba6def7a0030c841669710c25d883790ae608a0b2b"
+    },
+    {
+      "check": "embedded_old_payload_exact",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "old_evidence_224_preserved",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "old_sources_45_preserved",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "old_candidates_all_inactive",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "unique_source_ids",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "unique_assumption_ids",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "all_new_source_references_resolve",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "all_assumption_references_resolve",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "all_numbers_finite",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "years_2010_2025_complete",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "expected_vehicle_inflows_nonnegative",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "vehicle_share_sum_one",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "prototype_mass_unit_conversion",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "annual_vehicle_class_sums",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "annual_mass_class_sums",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "conditional_chemistry_mass_sums",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "conditional_fractions_in_range",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "stock_reconstruction_identity",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "selected_stock_anchor_fit_by_construction",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "V2_mass_values_match_preceding_answer",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "future_inputs_preserved_null",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "replacement_inflow_preserved_null",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "mixed_NMC_Li_missing",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Li_class_unit_conversions",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Li_profiles_chemistry_identity",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_pmf_tail_normalization",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_false_full_forecast_readiness",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "all_new_missing_values_null",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "gate_blockers_resolve",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "ready_gates_have_no_unknown_blockers",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "published_schema_keywords_validation",
+      "passed": true,
+      "detail": []
+    }
+  ]
+}
