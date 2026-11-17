@@ -1,0 +1,29 @@
+{
+  "f_green": 1.0,
+  "r_purge": 0.021571428571428568,
+  "eta_carbon_pct": 91.77874285714286,
+  "e_total_kwh": 11250.320564625565,
+  "gwp_net": -1085.1717205054526,
+  "base_lcom": 3945.8836542341373,
+  "lcom_policy_adjusted": 2362.5137336769835,
+  "mac_policy_adjusted": -37.30796737584838,
+  "compliance_status": "RED_III_RFNBO_Certified",
+  "anchor_a": {
+    "f_green": 1.0,
+    "r_purge": 0.007346938775510204,
+    "eta_carbon": 96.96783673469388,
+    "gwp_net": -1034.6046064438942,
+    "base_lcom": 3866.3514973677734,
+    "lcom_policy_adjusted": 2262.7702257736446,
+    "mac_policy_adjusted": -65.2697610644536
+  },
+  "anchor_c": {
+    "f_green": 1.0,
+    "r_purge": 0.03495918367346938,
+    "eta_carbon": 86.89488979591837,
+    "gwp_net": -1137.524989732767,
+    "base_lcom": 4056.101916700136,
+    "lcom_policy_adjusted": 2491.209849642892,
+    "mac_policy_adjusted": -2.351863969138679
+  }
+}

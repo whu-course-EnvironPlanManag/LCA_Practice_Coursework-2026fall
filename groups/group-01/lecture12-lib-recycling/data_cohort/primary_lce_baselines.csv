@@ -1,0 +1,3 @@
+﻿route,functional_unit,system_boundary,gwp_kg_per_t_lce,water_l_per_t_lce,cost_cny_per_t_lce,source,source_locator
+brine,t_LCE,cradle_to_gate,13300,200000,40000,清华大学张少君课题组2025：中国盐湖锂产能加权平均13.3 t CO2e/t Li2CO3；五矿证券2025：盐湖类成本约4万元/吨；水耗取文献保守值,清华碳中和研究院2025-07-11新闻；五矿证券A股锂矿2024年报及2025Q1梳理；水耗200 m3/t为研究设计
+spodumene,t_LCE,cradle_to_gate,13900,60000,66700,清华大学2025：锂辉石锂13.9 t CO2e/t Li2CO3；五矿证券2025：锂盐生产成本降至6.67万元/吨,清华碳中和研究院2025-07-11新闻；五矿证券A股锂矿2024年报及2025Q1梳理；水耗60 m3/t为研究设计
