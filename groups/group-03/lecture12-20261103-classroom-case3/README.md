@@ -5,7 +5,7 @@
 
 ## 目录结构
 ```
-lecture12-lib-recycling/
+lecture12-20261103-classroom-case3/
 ├── README.md
 ├── code_implementation/
 │   ├── 00_config.py              # 全局参数/路径
