@@ -1,0 +1,20 @@
+﻿indicator,reference,computed,relative_deviation_percent,status,explanation
+1961 fertilizer Mt P,4.9,4.7519459886840005,3.0215104350204043,independent calculation,"Value P2O5 × 0.4364, national sum with China overlap removed"
+2022 fertilizer Mt P,20.5,20.292881475160105,1.010334267511685,extrapolation,Last ten available years log-linear extrapolation to 2022; not 2022 observation
+2050 BAU fertilizer Mt P,26.9,27.716784618453584,3.036374046295857,teaching projection,"Historical population growth extrapolation, fixed per-capita structure"
+LBS PUE historical mean,0.23,,,not comparable,"Computed 2022 PUE covers selected products and eight stock classes, not a 62-year mean"
+1961-2022 mining Mt P,1153.0,,,not independently reproduced,Required full-sector/country scenario inputs absent; 3R coursework settings differ from SI S15
+S4.3 NPR change %,-22.15,,,not independently reproduced,Required full-sector/country scenario inputs absent; 3R coursework settings differ from SI S15
+S4.3 CFR change %,-76.9,,,not independently reproduced,Required full-sector/country scenario inputs absent; 3R coursework settings differ from SI S15
+S4.3 loss change %,-77.0,,,not independently reproduced,Required full-sector/country scenario inputs absent; 3R coursework settings differ from SI S15
+S2.3 industrial feed change %,-26.0,,,not independently reproduced,Required full-sector/country scenario inputs absent; 3R coursework settings differ from SI S15
+S2.3 feed grain change %,-35.0,,,not independently reproduced,Required full-sector/country scenario inputs absent; 3R coursework settings differ from SI S15
+S2.3 NPR change %,-17.0,,,not independently reproduced,Required full-sector/country scenario inputs absent; 3R coursework settings differ from SI S15
+S2.3 crop PUE gain %,18.0,,,not independently reproduced,Required full-sector/country scenario inputs absent; 3R coursework settings differ from SI S15
+S2.3 livestock PUE gain %,36.0,,,not independently reproduced,Required full-sector/country scenario inputs absent; 3R coursework settings differ from SI S15
+S5 NPR change %,-97.0,,,not independently reproduced,Required full-sector/country scenario inputs absent; 3R coursework settings differ from SI S15
+S5 loss change low %,-33.0,,,not independently reproduced,Required full-sector/country scenario inputs absent; 3R coursework settings differ from SI S15
+S5 loss change high %,-98.0,,,not independently reproduced,Required full-sector/country scenario inputs absent; 3R coursework settings differ from SI S15
+single policy countries at PUE70%,8.0,,,not independently reproduced,Required full-sector/country scenario inputs absent; 3R coursework settings differ from SI S15
+all policies countries at PUE70%,17.0,,,not independently reproduced,Required full-sector/country scenario inputs absent; 3R coursework settings differ from SI S15
+countries still below PUE70%,18.0,,,not independently reproduced,Required full-sector/country scenario inputs absent; 3R coursework settings differ from SI S15

@@ -1,0 +1,1312 @@
+
+=== PDF PAGE 1 ===
+PNAS  2026  Vol. 123  No. 13 e2512673123 https://doi.org/10.1073/pnas.2512673123 1 of 12 
+RESEARCH ARTICLE | SUSTAINABILITY SCIENCE 
+Future strategies for phosphorus sustainability amid worsening 
+global cycle imbalances 
+Wei Liua,b, Haijun Wangc , Zhiwen Lia, Tian Qina, Mingyang Lia, Wuhu Guoa, Yuejin Chena, Yanqi Liua, Evgeny Abakumovb , Wenjuan Wangb,  
+Wending Huanga, Xiaowen Jid, Yingming Zhoua, Xuejun Liua, Huoqing Xiaoa,e, Zugen Liue, Hannan Ahmad Anjuma , and Xianchuan Xiea,1 
+Affiliations are included on p. 12. 
+Edited by William H. Schlesinger, Cary Institute of Ecosystem Studies, Millbrook, NY; received May 21, 2025; accepted February 10, 2026 
+Author contributions: W.L. wrote the paper; H.W., Z. L., 
+T.Q., and M.L. contributed new reagents/analytic tools; 
+W.G., Y.C., Y.L., E.A., W.W., W.H., X.J., Y.Z., X.L., H.X., Z.L., 
+and H.A.A. analyzed data; W.L., H.W., and X.X. performed 
+research; W.L. and X.X. reviewed and edited the paper; 
+W.L. and X.X. performed visualization; W.L. and X.X. 
+performed formal analysis; and X.X. designed research. 
+The authors declare no competing interest. 
+This article is a PNAS Direct Submission. 
+Copyright © 2026 the Author(s). Published by PNAS. 
+This article is distributed 
+under Creative Commons 
+Attribution-NonCommercial-NoDerivatives License 4.0 
+(CC BY-NC-ND). 
+PNAS policy is to publish maps as provided by the 
+authors. 
+1To whom correspondence may be addressed. Email: 
+xchxie@ncu.edu.cn. 
+This article contains supporting information online at 
+https://www.pnas.org/lookup/suppl/doi:10.1073/pnas. 
+2512673123/-/DCSupplemental. 
+Published March 16, 2026. 
+Significance 
+Phosphorus (P) is intricately and 
+inseparably associated with both 
+food security and environmental 
+sustainability. The comprehensive 
+processes of the global 
+anthropogenic P cycle, along with 
+scientific objectives and 
+implementation strategies for 
+future P sustainability, were 
+integrated into a single 
+framework. This framework 
+elucidated the flow characteristics 
+and imbalance patterns along the 
+life-cycle processes of P , providing 
+a foundation for formulating and 
+assessing sustainable P strategies. 
+It also offers critical insights into 
+both established and emerging
+ 
+P-management technologies and 
+their synergies. By understanding 
+the characteristics and scales of P 
+use across systems at various
+ 
+geographical levels, differentiated 
+sustainability strategies can be 
+developed at the national scale, 
+thereby providing essential 
+support for the global transition 
+toward sustainable P use and 
+resource management. 
+Global anthropogenic phosphorus (P) cycle changes require active management with 
+differentiated sustainability strategies across countries. This study developed a universal 
+framework that integrates the comprehensive P flow process with sustainability scenarios 
+to assess global anthropogenic P flow patterns and explore future sustainability path -
+ways and potential. The results indicated that the global P flow imbalance intensified 
+from 1961 to 2022, with over 80% attr
+ibuted to croplands. Crucially, global trade 
+serves as a significant driving force, redistributing P resources and reinforcing the global 
+complexity of P-pollution footprints, driven by 35 key countries. Our model projects
+that by 2050, individual measures like reducing fer
+tilizer applications, improving feed 
+conversion efficiency, and recycling organic fertilizers could save 50% of P and reduce 
+P losses by 39%. Crop–livestock integration significantly improved P use efficiency, 
+potentially extending the global phosphate rock extraction period by 400 ± 87 y (mean 
+± SD). However, due to the low baseline P use efficiency in cropping systems, P recovery 
+from waste in developing countries remains limited, necessitating additional measures 
+alongside the above high-leverage measures. These findings underscore the indispensable 
+role of human consumption and the transformative potential of dietary shifts, which are 
+essential given that no country can achieve significant P sustainability gains solely by 
+reducing food waste or processing losses. Coordinated supply and demand-side measures 
+linking cropping, livestock, and consumption offer key strategies and benefits for system-
+atically and differentially advancing P sustainability at both global and national levels. 
+anthropogenic phosphorus cycle | global phosphorus flow | sustainability strategies | 
+global trade | phosphorus footprint 
+Human activities have significantly altered natural phosphorus (P) processes within geo-
+chemical cycles (1, 2). The decline in global exploitable P reserves, combined with rapidly 
+increasing population-driven food demand, makes the sustainable use of this essential 
+resource increasingly urgent (the urgency of P sustainability is discussed in SI A
+ppendix, 
+T ext S1) (3, 4). Changes in the P cycle require proactive management to address the urgent 
+challenges of excess P , which causes aquatic pollution ( 3), and scarcity, which affects 
+agricultural production and food security (5). These challenges fur
+ther underscore the 
+need to address P sustainability, particularly b
+y reevaluating how effective P management 
+strategies can be developed within the socioeconomic development processes ( 6). An 
+integrated framework that incorporates P sustainability objectives, informed b
+y an 
+enhanced understanding of P use characteristics and magnitude across systems and geo-
+graphic scales, can provide support for the global transition to sustainable P use and 
+management. 
+At the national level, the sustainable management of P faces several challenges. In 
+industrialized countries, excessive 
+fertilizer and manure application has led to low P-use 
+efficiency (PUE) (7, 8). Large surpluses of P accumulate in soils, increasing P saturation 
+and reducing its crops availability (2
+, 9, 10). Many developing countries have an imbal-
+anced agricultural P use and crop production. At an early stage, both P fertilizer application 
+rates and crop yields are low. In contrast, Brazil, the United Kingdom, China, and India 
+are currently experiencing substantial P surplus and low nutrient use efficiencies ( 7, 11, 
+12). The extensive P fertilizer applications combined with poor management of human 
+and animal waste thr
+eatens Sustainable Development Goals (SDG) 6 (Clean Water and 
+Sanitation) and SDG 14 (Life Below Water) (13). Inefficient P management disrupts the 
+natural P cycle, making P one of the major contributors to the transgression of planetary 
+boundaries (
+14). 
+Global socioeconomic systems face major P sustainability challenges because P flows 
+are dynamic, interconnected, and poorly understood. This makes it hard to track ho
+w 
+Downloaded from https://www.pnas.org by 64.120.94.85 on November 16, 2026 from IP address 64.120.94.85.
+
+=== PDF PAGE 2 ===
+2 of 12   https://doi.org/10.1073/pnas.2512673123 pnas.org 
+P moves. These issues present significant barriers to achieving SDG 
+2.3, which aims to double smallholder farm productivity. 
+According to estimates by Langhans et al. (15) achieving this target 
+will require a 39% increase in P fertilizer application (126 Tg) 
+across five world regions dominated by smallholder farming 
+between 2015 and 2030. While the environmental fate of applied 
+P is highly soil-dependent, P may remain largely in place when 
+added in small quantities in many farms in Sub -S
+aharan Africa 
+(16). However, given the extensive adverse effects of P fertilizers 
+on aquatic systems observed globally
+, hydrospheres can scarcely 
+accommodate any additional agricultural P loadings ( 3). 
+Sustainable P 
+management will play a pivotal role in advancing 
+SDG 2 (Zero Hunger), SDG 6, and SDG 14 ( 15). Frameworks 
+for P movement in agricultural r
+egions ( 6), analyses of global 
+agricultural trade (17, 18), and studies on P flows at the national 
+(19) and regional levels (20) have helped bridge the gap between 
+understanding human-driven P cycling and implementing more 
+sustainable management practices. However, the imbalance in the 
+global P cycle remains severe (21). Therefore, a generalized, inte-
+grated research framework that P flows across the life cycle is 
+essential for developing effective and sustainable P management 
+strategies (
+3, 22, 23). 
+Global calls for action on the future sustainability of P have 
+been made (3, 22, 24). Brownlie et al. identified interventions in 
+mineral resource management, agriculture, food consumption and 
+production, waste management, and water environment manage-
+ment as key intervention points aligned with the flow character-
+istics of P in both socioeconomic systems and natural ecosystems 
+(3). These measures offer valuable insight into the feasibility and 
+potential benefits of future strategies for sustainable P manage -
+ment in agriculture. N
+otably, the Lancet Commission identified 
+P as one of the six critical Earth system processes within the frame-
+work of planetary boundaries and recognized it as a safe operating 
+factor for sustainable global food production ( 23). This under -
+scores the urgent need for research on a systemic safe operating 
+space for P (3, 14, 22, 23). T o our knowledge, no study has sys-
+tematically examined sustainable strategies for managing the entire 
+anthropogenic P cycle at both global and national scales, particu-
+larly those that address future P demand and socioeconomic pro-
+duction structures. 
+Building on existing research about P flows and recognizing the 
+gap between global P sustainability goals and actual practices, we 
+developed a comprehensive framework for analyzing global P flow 
+processes and their sustainability. This framework facilitates the 
+study of the anthropogenic P cycle and developing the future 
+strategies for sustainable P management. Applying this framework, 
+we examined how global production, consumption, and trade 
+from 1961 to 2022 influenced P use, losses, and load redistribu-
+tion, while establishing a standardized analytical paradigm for the 
+anthropogenic P cycle. Using this framework, we specified the 
+integrated sustainability objectives for resource conservation, food 
+security, and water environment protection from a P perspective, 
+explored future P sustainability pathways at global and national 
+scales, and quantitatively assessed the individual and combined 
+potentials of various strategies. This provides both data and meth-
+odological support to advance global progress toward sustainable 
+P management. 
+1. Methods 
+In this study, we developed a framework to analyze global human -driven P 
+cycling across all stages, from mining rock to pollution in waterways (SI Appendix, 
+Figs. S1–S4 and Table S1). This study aimed to establish a generalized and stand-
+ardized research paradigm for anthropogenic P cycling and to further explore 
+pathways and potential strategies for P imbalance and sustainable management 
+at both global and national scales. Here, P imbalance refers to inefficient anthro-
+pogenic P flows and use structures, characterized by substantial P losses to soils 
+and water bodies during production and use, r
+ather than efficient utilization 
+and recycling within cropping, livestock, and consumption systems.SI Appendix, 
+Fig. S1 presents the workflow and structural overview of the integrated mod -
+eling framework. Phosphate r
+ock resource depletion model ( SI Appendix, Text 
+S6), analysis models of global P flow processes (SI Appendix, Texts S3–S5), P 
+flow networks of globally tr
+aded products ( SI  Appendix, Text S5), footprint of 
+global P flow processes (
+SI Appendix, Text S7), future strategy simulation glob-
+ally (including national-level) P sustainability (Text S8), and the dataset types, 
+structure, sources, and usage instructions (SI Appendix, Text S2 and Tables S2–S5) 
+are provided in SI Appendix. 
+2. Global P Cycle Imbalance Worsens 
+2.1. Global P Resource Depletion Is Accelerating. Over the past 
+62 y, the global reliance on phosphate rock has steadily increased 
+(SI Appendix, Fig. S5). We compiled data on global phosphate rock 
+reserves [1.7 × 10 5 million tons (Mt)], distribution, and grades 
+(0.25 to 41%) from 1900 to 2020 (SI Appendix, Fig. S5 A and B). 
+The global phosphate rock reserves have been highly concentrated 
+over time. Historically, since 1900, approximately 76% of 
+phosphate rock reserves have been controlled by five countries 
+(SI Appendix, Fig. S5B). As of 2023, this concentration intensified 
+further, with eight countries held >90% of the global phosphate 
+rock reserves: Morocco (68%), China (5%), Egypt (4%), T unisia 
+(3%), Russia (3%), Algeria (3%), Brazil (2%), and South Africa 
+(2%) (SI Appendix, Fig. S5D). From 1998 to 2021, a total of 4.3 
+× 103 Mt of phosphate rock was mined globally, yielding 978 
+Mt of P2O5 (equivalent to 427 Mt of elemental P) (SI Appendix, 
+Fig. S5C). Starting in 1998, phosphate mining and exports in 
+major phosphate producing countries, namely, China, M
+orocco, 
+and the United States, began to increase, with a significant surge 
+occurring from 2005 (1.7 × 103 Mt of phosphate rock), peaking 
+in 2016 (2.5 × 10 3 Mt of phosphate rock) before declining to 
+1.8 × 10 3 Mt of phosphate rock in 2021 ( SI Appendix, Fig. S5 
+E–G). The structural shift in global P dynamics is evident in the 
+diverging demand trends: while dev
+eloped nations experienced 
+a decline in phosphate rock and mineral phosphate fertilizer 
+demand post-1990, demand in developing countries and emerging 
+economies surged. The global center of P production and use is 
+shifting toward regions with fast-growing agricultural demand, 
+where infrastructur
+e is weaker. This shift creates new challenges 
+for sustainability (SI Appendix, Fig. S5E). 
+Although considerable uncertainty remains regarding the 
+precise timeline for global phosphate reserve depletion, numer -
+ous studies indicate that concerns over the adequacy of global 
+phosphate supplies have already emerged, and the system may 
+even face the challenge of resource scarcity in the next century 
+(25, 26). Considering the limitations and variability of these 
+historical estimates, and improvements in data availability since 
+earlier projections, we updated this estimation based on the 
+latest global phosphate rock reserves data. The most recent sta-
+tistics indicate that the remaining economically viable phos -
+phate rock reserves, defined as phosphate rock that can be 
+economically extracted using existing technology ( 26, 27), 
+available for mining amount to only 7.4 × 10 4   Mt of phosphate 
+rock (SI Appendix, Fig. S5D ). Under the current growth trend 
+in mineral phosphate fertilizer demand, nonr
+enewable, gener -
+ally available phosphate rock reserves will last for only 120 ± 
+26 y (mean ± SD) ( SI Appendix, Fig. S5H ). Considering the 
+constraints posed by phosphate rock grades on mining costs, 
+technological challenges, and envir
+onmental impacts, this esti -
+mate is likely low (25, 26). 
+Downloaded from https://www.pnas.org by 64.120.94.85 on November 16, 2026 from IP address 64.120.94.85.
+
+=== PDF PAGE 3 ===
+PNAS  2026  Vol. 123  No. 13 e2512673123 https://doi.org/10.1073/pnas.2512673123 3 of 12 
+The highly uneven global distribution of phosphate rock ren -
+ders many national food systems vulnerable to P supply risk. Over 
+the past half-century, countries such as South Africa, the United 
+States, and Australia have made significant contributions to the 
+global mineral phosphate fertilizer market with noticeable P deple-
+tion (SI Appendix, Figs. S5K, S6, and S10). Notably, the United 
+States and South Africa, which possess high-grade phosphate rock, 
+have experienced overexploitation. Marketable phosphate rock 
+production and reported usage in the United States have decreased 
+to their lowest levels since 1965 (SI Appendix, Fig. S5K). 
+Nevertheless, 
+the United States remains a major consumer and 
+importer of phosphate rock, accounting for approximately 37% 
+of global P 2O5 exports (SI Appendix, Fig. S5K). Concurrently, 
+China (30.7 Mt) emerged as the world’s largest phosphate rock 
+pr
+oducer, surpassing the United States (30.1 Mt) in 2006 
+(SI Appendix, Fig. S5 F and G), and consistently accounting for 
+over 20% of global output since 2004 (ov
+er 30 Mt), peaking at 
+59% (144.4 Mt) in 2016 before a recent decline; by 2021, China 
+alone represented half of global production (51%, 90 Mt of phos-
+phate rock). China and Morocco together dominated half of 
+global phosphate rock exports from 2010 to 2020 ( SI Appendix, 
+Fig. S5 F and G). However, China’s phosphate rock reserves are 
+limited (approximately 5%) and low-grade (<30%) (SI Appendix, 
+Fig. S5A). P-depletion models suggest that China’s phosphate rock 
+reserves are expected to be exhausted by around 2053 (±5 y), with 
+continued mining projected to remain between 22 and 39 y. This 
+timeline is significantly shorter than that of Morocco (180 ± 55 
+y), South Africa (170 ± 34 y), Egypt (129 ± 37 y), and T unisia 
+(147 ± 31 y), or even the United States (46 ± 18 y postrestriction) 
+(SI Appendix, Figs. S5 I–M and S6 and Table S6). This divergence 
+implies that a globally averaged depletion timeline masks severe, 
+localized resource bottlenecks and exacerbates national P supply 
+vulnerabilities, demanding geographically differentiated resource 
+management and circular economy strategies. 
+2.2. Global P Flows Intensify Amid Rising Agricultural Demands. 
+Fig. 1 illustrates the integrated global P flow from 1961 to 2022. 
+Over more than half a century
+, 1,153 Mt of P (8,809 Mt of 
+PR and 2,643 Mt of P 2O5) have entered social systems driven 
+by human activities across various production and consumption 
+sectors. P -containing production dynamics at the national 
+level refer to SI 
+Appendix, Fig. S7. A comprehensive analysis of 
+global P flows from 1961 to 2022 rev
+eals a structurally solidified 
+P-agriculture symbiosis as the primary driver of accelerating 
+Fig. 1. Global P has increased steadily over the past 62 y, especially in agriculture (Mt P). This figure shows the main flows, while more detailed calculations 
+and results are provided in SI Appendix, Fig. S8 and the submitted datasets. Values in parentheses indicate the ranges of P flows. The results of the structural 
+stability and sensitivity analyses of P flows are presented in SI Appendix, Text S10, Tables S11 and S12, and Figs. S19–S24. 
+Downloaded from https://www.pnas.org by 64.120.94.85 on November 16, 2026 from IP address 64.120.94.85.
+
+=== PDF PAGE 4 ===
+4 of 12   https://doi.org/10.1073/pnas.2512673123 pnas.org 
+P consumption. Overall, the total consumption of P increased 
+by 5.7 times, increasing from 4.9 Mt in 1961 to 28.3 Mt P 
+in 2021 ( SI  Appendix, Fig.  S8), with annual growth rates of 
+approximately 2%. I
+n terms of production and consumption, 
+the P-flow intensities of all subsystems were closely associated with 
+agriculture (Fig. 1 and SI Appendix, Fig. S8B). Specifically, over 
+80% (873 Mt) of P enters crop production as mineral phosphate 
+fer
+tilizers to replenish depleted soil P (SI Appendix, Fig. S8A). 
+This study identifies a major imbalance between agriculture and 
+P use, with cropping and livestock systems jointly driving persis-
+tent P losses while relying on external P inputs. A total of 227.3 
+Mt of P entered the livestock system via industrial feed, while an 
+additional 183.8 
+Mt of P entered through agricultural feed (30.2 
+Mt P) and soy/grains (153.6 Mt P), with 80.5 Mt of P exiting as 
+animal products consumed by humans ( Fig. 1). This indicates a 
+low PUE in the livestock system (appr
+oximately 23%). In the 
+cropping system, P fertilizer consumption increased from 4.9 Mt 
+P in 1961 to 20.5 Mt P in 2022 (SI Appendix, Fig. S8A). Organic 
+fertilizers have gradually been replaced by synthetic fertilizers, and 
+farmers exhibit a low willingness to recycle agricultural waste. The 
+fertilizer contributions to total P input increased from 40 to 64%. 
+Simultaneously, the cropping system, characterized by high 
+dependency on mineral fertilizers (over 80% of total P input) and 
+a low willingness to recycle agricultural waste, contributes to a 
+staggering 913 Mt of social P waste flow since 1961. The dual 
+inefficiency not only accelerates P resource depletion but also 
+reinforces dependence on external P inputs, fundamentally hin -
+dering the transition to P sustainability. 
+Changes in P flow within crop and livestock systems are driven 
+by rising global demand for food ( SI Appendix, Fig. S8). The 
+demand for animal-based food has outpaced the overall increase 
+in global P demand. For instance, the contribution of crop-
+based 
+food to the total P demand declined from appro
+ximately 74% in 
+1961 to 65% in 2022. Meat -based dietary trends are becoming 
+more pronounced, par
+ticularly in emerging economies, such as 
+China and India (SI Appendix, Figs. S8B and S9). These dietary 
+shifts directly drove a sharp escalation in P demand and thus acted 
+as an invisible accelerator of the global P footprint, as evidenced 
+by the 38% increase in per capita mineral phosphate fertilizer for 
+food production. Therefore, meat-centric dietary trends, mediated 
+by inefficient livestock systems, are identified as a core structural 
+factor driving P resource acceleration, presenting a pivotal, yet 
+often overlooked, leverage point for global P sustainability. 
+A core systemic challenge identified is the pervasive low PUE 
+and even low
+er recovery rates across all production and con -
+sumption sectors. Inadequate recycling in agriculture has inten -
+sified environmental burdens. The total P waste flow accounted 
+to 913 Mt of P (Fig. 1), representing a 71% increase from 10.8 
+Mt of P in 1961 to 18.4 Mt of P in 2021. This quantity accounts 
+for approximately 9% of the known total phosphate rock 
+reserves, and 83% of the total P mined. Per capita P waste rose 
+from 6.9 kg to 10.1 kg. The total P from cropping, livestock, 
+and consumption systems entering the waste treatment system 
+was 454.1, 263.4, and 125.4 Mt, respectively, with annual 
+growth rates of 0.82%, 0.91%, and 1.65%. Of the P flows gen -
+erated by global consumption processes, 711 Mt entered the 
+recycling system, primarily r
+eturning to croplands (660 Mt P) 
+and the livestock system (51 Mt P) ( Fig. 1). Nevertheless, only 
+approximately 30% of the 24.7 Mt of P applied annually is 
+consumed as food; the remainder accumulates as legacy P in the 
+soil and sediment. This persistent accumulation of legacy P con-
+stitutes a long-term environmental burden that extends beyond 
+current P flow management and necessitates strategies addressing 
+both future sustainability and historical P reuse. 
+2.3. Global Trade as a Driver Exacerbating P -Cycle Imbalance. 
+The role of global trade in redistributing P resources and pollution 
+has continued to intensify, primarily driven by 35 countries 
+worldwide (SI  Appendix, Figs.  S11 and S12 ), highlighting its 
+profound impact on national-
+level P cycling. Overall, the scale 
+of the P product trade network expanded continuously from 1990 
+to 2022, with total trade volumes of phosphate rock, fertilizers, 
+and agricultural products increasing by 23%, 54%, and 256%, 
+respectively (Fig.  2 and SI  Appendix, Fig.  S12). Pre -1990, 
+phosphate rock trade was dominated by the U
+nited States and 
+Morocco; post-1990, Russia emerged as a major exporter, Europe 
+maintained strong demand (Fig.  2 A and B and SI  Appendix, 
+Fig. S11), and the United States shifted from exporter to importer 
+amid declining phosphate rock quality and stricter environmental 
+regulations (Fig. 2 A and B and SI Appendix, Fig. S5K). Between 
+1990 and 2020 (Especially since 2008), countries incr
+easingly 
+favored trading fertilizers over direct phosphate rock transactions 
+(Fig. 2 C and D and SI Appendix, Fig. S10). Notably, beginning 
+in 2016, trade volumes for both phosphate rock and fer
+tilizers 
+began to decline, reflecting an oversupply and structural imbalance 
+within the phosphate chemical industry (SI Appendix, Fig. S10), 
+consequently prompting nations, such as China in 2017, to reduce 
+phosphate rock production and exports. 
+The global P flow driven by trade in agricultural products has 
+become a vital aspect of the global anthropogenic P cycle. The P 
+flo
+w through international agricultural trade has surged nearly 
+eightfold since 1961, accounting for 25% of global P fertilizer 
+inputs to croplands by 2022. This extensive and long -distance 
+transfer of P , concentrated in key commodities like cereals, so
+y-
+beans, and feed (including feed cakes) ( SI Appendix, Fig. S12), 
+generates profound spatial heterogeneity and str
+uctural imbal -
+ances, creating new P sinks (e.g., Asia and Europe) far removed 
+from resour
+ce extraction sites. This redefines the geographical 
+landscape of P cycling and intensifies interregional dependencies 
+beyond direct resource transfers. North America emerged as a key 
+P supplier through agricultural exports to Asian countries, whereas 
+South America made substantial contributions to P inflows into 
+Western Europe and Asia (Fig. 2 E–H). Asia and Europe became 
+major P sinks, accounting for 47% and 31% of global P inputs 
+(2022), respectively
+, with Asia relying on long-distance and glob-
+ally sourced agricultural imports, while Europe’s P flows were 
+largely confined within the region (Fig. 2 
+E–H). 
+The shift from phosphate rock trade to fertilizer and agricultural 
+P trade has redistributed P-related supply and environmental risks 
+across regions. This process systematically moves P from resource- 
+rich nations (net exporters like North and South America) to 
+consumption-heavy regions (net importers like Asia and Europe), 
+concentrating both P demand and subsequent environmental 
+burdens (e.g., P accumulation, water pollution) in importing 
+regions (Fig. 2). However, cropland P losses and surface water 
+pollution risks occur within agricultural producing regions. This 
+overlooked aspect of transferred pollution within agricultural trade 
+underscores a significant disconnect between national consump-
+tion patterns and localized environmental impacts, demanding a 
+reevaluation of national P accounting and sustainability policies. 
+D
+etailed information on country-level P import–export patterns 
+and the core commodities driving these flows is pr
+ovided in 
+SI Appendix, T ext S11. 
+Compared with phosphate rock and fertilizers, agricultural 
+trade networks exhibit the highest degr
+ee of imbalance (28). This 
+imbalance exacerbates soil and water pollution in the importing 
+nations and regions. Consequently
+, net P imports through agri -
+cultural trade may contribute to P accumulation and elevated 
+nutrient levels in surface waters, potentially disr
+upting global P 
+Downloaded from https://www.pnas.org by 64.120.94.85 on November 16, 2026 from IP address 64.120.94.85.
+
+=== PDF PAGE 5 ===
+Fig. 2. Global trade is now a dominant driver of P redistribution, with the Americas as major sources and Asia as a sink. P flows of phosphate rock (PR, A and 
+B), fertilizers (PF, C and D), and agricultural products (AP, E–H) among countries/regions worldwide (in Mt/year). Countries with bilateral trade relationships 
+are represented 
+by colored circles, with their centrality indicated by the circle’s size. The trade lines are computed as directed and weighted, with their width 
+representing the magnitude of the P flow. The color of the lines indicates P exchanges originating from a specific country or group of countries/regions 
+(exporters). Hotspot regions represent countries/regions or areas with intensive P interactions (e.g., Western Europe). Because of filtering out small and 
+insignificant flows in the diagram, some flows may not appear in the figure. The colors in the list represent the proportion of different countries or agricultural 
+product categories in the total P flow of trade for that year. The country names are abbreviated according to the ISO nomenclature, and the specific descriptions 
+of the symbols and abbreviations are available in SI Appendix, Tables S13 and S14. 
+PNAS  2026  Vol. 123  No. 13 e2512673123 https://doi.org/10.1073/pnas.2512673123 5 of 12 
+cycling and causing water quality degradation, an area that remains 
+unexplored in existing research. 
+2.4. Visualization of Global P Resources and Environmental 
+Footprint. Global trade P flow underscores the paradox of spatial 
+redistribution and ecological burden: while agricultural trade 
+redistributes P , it simultaneously yields complex P footprint 
+patterns. Over the past half -century, the global transfer of P 
+through food trade has r
+eached 127.4 Mt, accounting for 15% 
+of the total global fertilizer usage (873 Mt) (Fig. 3A). There are 35 
+countries in which P input through trade exceeds 1 Mt. Notably, 
+China is the only country that imports >10 Mt of P , primarily 
+because of its substantial grain imports. Grains are relatively low 
+in virtual P factors and have become a significant food category 
+contributing to the global P footprint ( SI Appendix, Figs. S21– 
+S23) (19). Consequently, China’s per capita P footprint from trade 
+reaches 9.4 kg/year, with 0.97 t/year per km 2, concentrated in 
+the eastern and central regions. This figure is significantly higher 
+Downloaded from https://www.pnas.org by 64.120.94.85 on November 16, 2026 from IP address 64.120.94.85.
+
+=== PDF PAGE 6 ===
+Fig. 3. Spatially explicit representation of the cumulative P footprint over 62 y in croplands and global populations (units: tons). Agricultural production, 
+consumption, and global trade have altered both the forms and the geographical locations of P resource and pollution. P footprints occurred at all stages 
+associated with P flow. In the figure, the P footprint at each key stage is presented separately and classified into P resource footprints, including agricultural 
+products consumed via trade imports (A), chemical fertilizers applied to cropland (B), livestock manure (C), human manure (D), and harvested crops (E), as well 
+as P pollution 
+footprints, including legacy P from cropland production (F) and P losses from cropland (G), food waste (H), nonfood waste (I), and human excretion 
+(J). AP, agricultural products; MPF, mineral phosphate fertilizer. 
+6 of 12   https://doi.org/10.1073/pnas.2512673123 pnas.org 
+than that of countries such as the Netherlands (0.38 t), Denmark 
+(0.22 t), Singapore (0.12 t), Japan (0.056 t), Germany (0.077 t), 
+and Spain (0.082 t), which are typical import-dependent nations 
+(Fig. 3A and SI Appendix, Fig. S14). 
+Regionally, Asia registered the largest P input through agri -
+cultural product trade at 51.7 Mt (approximately 41% of the 
+world’s total), with a per capita trade input P footprint of 0.8 t. 
+Eur
+ope and Africa followed, with trade P inputs of 31% (39.6 
+Mt) and 14% (17.7 Mt), respectively. Notably, Europe exhibited 
+a more substantial per capita trade input P footprint, reaching 
+2.2 t, compared with Africa’s 0.6 t. The total trade input and 
+per capita P footprint in Asia and Africa showed increasing 
+trends each year. The anthropogenic P pollution footprints from 
+local crop harvesting (Fig. 3F ), (non- )food waste, and human 
+excretion (F
+ig. 3 H–J) were all identified as hotspots in China, 
+India, and Brazil, attributed to high population density and 
+agricultural intensity ( SI Appendix, Fig. S14). These results indi-
+cate that trade changes how and where P pollution occurs, mak -
+ing P levels and nutrient cycling in local soils and waters highly 
+sensitive to trading partners. This finding highlights the need 
+for spatially differentiated sustainability interventions rather 
+than generalized approaches. 
+Downloaded from https://www.pnas.org by 64.120.94.85 on November 16, 2026 from IP address 64.120.94.85.
+
+=== PDF PAGE 7 ===
+PNAS  2026  Vol. 123  No. 13 e2512673123 https://doi.org/10.1073/pnas.2512673123 7 of 12 
+The P resource footprint hotspots for agricultural production 
+were significant. Net-exporting regions are characterized by high 
+per-capita P footprints from fertilizer inputs (e.g., New Zealand: 
+5.8 t/cap, Australia: 3.3 t/cap). Ther
+efore, exporting nations, 
+despite transferring significant amounts of P via trade, still face 
+the endogenous generation of P pollution hotspots. At the national 
+level, New Zealand (5.8 t/cap), Australia (3.3 t/cap), Ireland (2.2 
+t/cap), and Canada (1.4 t/cap) exhibit the highest per capita P 
+footprints from fertilizer inputs. Additionally, they also have the 
+highest per capita residual P footprints from production (Fig. 3B). 
+However, the total fertilizer input to cropland in countries such 
+as China (173.4 Mt), the United States (108.6 Mt), India (90.3 
+Mt), Brazil (60.1 Mt), France (29.8 Mt), and Australia (24 Mt) 
+far exceeds that of other nations. Despite this, their per capita P 
+footprints ranked 30th (0.4 t/cap), 11th (1 t/cap), 69th (0.2 t/ 
+cap), 14th (0.8 t/cap), 2nd (3.3 kg/cap), and 7th (1.3 t/cap), 
+respectively (Fig. 3 B–D and SI Appendix, Table S9). 
+The P resource footprint of organic fertilizers is closely corre-
+lated with national population size and agricultural intensity. 
+Notable hotspot regions 
+can be identified in East Asia (China: 
+livestock system 101.6 Mt, consumption system 13 Mt), South 
+Asia (India: livestock system 152.5 Mt, consumption system 10.7 
+Mt), North America (the United States: livestock system 39.4 Mt, 
+consumption system 2.3 Mt), South America (Brazil: livestock 
+system 45 Mt, consumption system 1.3 Mt), and Western Europe 
+(Fig. 3 C and D). The focus of concern regarding the P pollution 
+footprint is legacy P . During the study period, the total amount 
+of legacy P in global cr
+oplands was estimated at 1.0 × 10 3 Mt, 
+with an average concentration of 156 t/km 2, ranging from −8.4 
+to 15,626.8 t/km2. Utilizing the P substance flow analysis model, 
+we estimated that over the past 50 y, a total of 37.9 Mt of P has 
+flowed into water bodies from all sources (Fig. 1), representing a 
+146% increase since 1961. Additionally
+, we used the “surplus 
+approach” of the Grey Water Footprint Accounting Guidelines to 
+estimate P loads from diffuse sources to freshwater (29). It is esti-
+mated that the leaching and runoff P from diffuse pollution 
+sources, such as farmland erosion, r
+unoff, and leaching, amounts 
+to 28 Mt of P [Fig. 3E, global erosion-runoff-leaching fraction 
+(β) is shown in SI Appendix, Fig. S15]. This finding aligns with 
+the diffuse distribution of global anthropogenic P loads calculated 
+by Mekonnen and Hoekstra (30), which were approximately 0.56 
+Mt/year. The sources of legacy P include mineral phosphate fer -
+tilizers (Fig. 3B) and organic fertilizer returns such as animal 
+manure, human excreta, and straw (Fig. 3 F and G and SI Appendix, 
+Fig. S14). The increase in legacy P in cropland is primarily attrib-
+uted to an increase in the application of P in mineral fertilizers 
+(Sections 2.1 and 2.2). The r
+esults suggest that future P manage-
+ment strategies must extend beyond optimizing current P flows 
+to mitigating historical P accumulation through innovative reme-
+diation and recovery strategies, rather than solely focusing on 
+preventing new inputs.   
+3. Scenario Analysis for Future P Sustainability 
+3.1. Global Future P Demand and Potential for System -Wide 
+Regulation. In the past half -century, human activities have 
+significantly disrupted and altered the global P cy
+cle, resulting in 
+substantial structural changes in P reserves and flows. Owing to 
+the absence of a closed P cycle in agriculture, the next fertilizer 
+revolution must prioritize the recycling of nutrients back into the 
+agricultural systems (31). Consequently, a sustainable future for P 
+will necessitate a reduction in the dependence on phosphate rock 
+and the implementation of effective recycling measures across all 
+fields of P utilization. In this context, we developed a basic global 
+P flow pattern for the 2050 BAU (Business-As-Usual) scenario 
+and evaluated the P sustainability potential of 20 specific measures 
+(Fig. 4A and SI Appendix, Table S15). 
+Our analysis underscores the severe systematic impacts of the 
+P losses in agriculture, which drives an unsustainable r
+eliance on 
+finite mineral P resources and exacerbates environmental pollu -
+tion. In the BAU scenario, global demand for P fertilizers is esti-
+mated at 26.9 Mt of P , whereas the demand for phosphate rock 
+for fertilizer production is projected to be 205.1 Mt (a conservative 
+estimate, assuming phosphate rock grades <30% after 2030) (32). 
+A minimum of 16.2 Mt of food P is necessary to meet basic 
+human needs, and an estimated 69.9 Mt of P will be released into 
+the environment. Specifically, P loads in croplands, noncropland 
+areas, and surface waters are 36.3 Mt, 19.5 Mt, and 14.1 Mt, 
+respectively. The low PUE remains a pervasive and systemic con-
+straint. The PUE in the cropping system is 31%, in the livestock 
+system 16%, in the aquaculture system 10%, and 31% in the 
+consumption system. Cr
+ucially, the inefficiency of P use in the 
+production sector became even more pronounced when consid -
+ering P recovery rates: 17% for the cropping system, 50% for the 
+livestock system, and 9% for the consumption system. This indi-
+cates that the current P system operates far fr
+om its biophysical 
+potential, accumulating both resource depletion burden and envi-
+ronmental risks. This situation underscores the urgent need to 
+explore global P sustainability as there is significant potential for 
+improvement. 
+This study demonstrates the transformative potential of P syn-
+ergistic optimization. Implementing integrated measures (S5) can 
+dramatically reduce P input by 97% through phosphate rock and 
+chemical P production, while simultaneously achieving substantial 
+reductions in P loss (33 to 98%) across the entire social system 
+(Fig. 4A). The substitution of mineral P to meet consumption 
+needs is achieved through the application of organic fer
+tilizers in 
+the livestock system (35.4 Mt of P) and the consumption system 
+(4.6 Mt of P), resulting in significant P recovery effects, with P 
+recovery rate improving by 14 to 186%. Additionally, the PUE 
+in the four systems (cropping system at 45%, livestock system at 
+23%, aquaculture system at 21%, and consumption system at 
+47%) also showed substantial improvements, increasing by 49%, 
+42%, 101%, and 49%, respectively. If these measures are imple-
+mented globally, P entering croplands is projected to increase by 
+17%, whereas 
+P in noncroplands and surface waters is expected 
+to decrease by 47% and 30%, respectively. The reductions in P 
+loss are attributed to all social production subsystems, with the 
+detailed loss reduction benefits for each subsystem shown in 
+Fig. 4A. Consequently, a cross-sectional approach is essential for 
+improving P self-sufficiency and reducing environmental impacts, 
+rather than isolated interventions. 
+3.2. Future Strategies for Global P Sustainability from an Entire 
+Flow Perspective.  The potential to replace mineral phosphate 
+fertilizers with recycled P has been demonstrated worldwide, 
+with most countries exhibiting significant opportunities for 
+substitution (SI Appendix, Fig. S16). Global production systems 
+can significantly improve PUE by utilizing recycled P (Fig. 4A and 
+SI Appendix, Fig. S17). Scenarios S2.1 (Reduction of chemical 
+fertilizer pr
+oduction), S2.2 (Reduction of chemical fertilizer 
+application), and S2.3 (Increased feed conversion) propose 
+optimization measures for crop production, livestock farming, 
+and aquaculture, resulting in substantial improvements in PUE 
+(ranging from 16% to 81%) and a reduction in P resource depletion 
+and pollution footprints across all environmental media. Notably, 
+enhancing the feed conversion efficiency (S2.2) significantly 
+reduced P pressure throughout the entire system ( Fig. 4A). This 
+Downloaded from https://www.pnas.org by 64.120.94.85 on November 16, 2026 from IP address 64.120.94.85.
+
+=== PDF PAGE 8 ===
+8 of 12   https://doi.org/10.1073/pnas.2512673123 pnas.org 
+Fig. 4. Scenario analysis of P sustainability strategies shows substantial global potential, with improved P flows increasing P use efficiency, reducing phosphate 
+mining and P losses, and yielding 
+differentiated sustainability benefits at the national level. (A) Percentage change in P flow indicators relative to the 2050 BAU 
+baseline under 
+various single measures and scenarios. NPR, New P demand, representing P entering the social system from P mines; CFR, Chemical fertilizer 
+demand; IFD, Industrial feed demand; FD, Forage demand; FGD, Feed grain demand; AFD, Aquaculture feed demand; PMS, Phosphate mining system; CIS, 
+Chemical industry system; ACS, Agricultural cropping system; LBS, Livestock breeding system; AS, Aquaculture system; RCS, Resident consumption system; 
+WTS, Waste treatment system; CL, cultivated land; NCL, noncultivated land; SWS, Surface water system; PPS, Product processing system. (B) Benefits and 
+potentials of 
+P sustainability strategies in 35 leading countries by 2050. Columns 2 to 7 show potential improvements in key P sustainability indicators under 
+20 measurement combinations within the study boundary. P resources are represented by the required mineral phosphate fertilizer (new P) inputs, P use 
+efficiency by crop production, P recycling rate by livestock production, P retention by surface water systems, and P loss by the integrated loss from the eight 
+subsystems. Trade P reduction denotes the benefits of substituting recycled P with traded P, with negative values representing imports. The full country -level 
+indicator benefits 
+are shown in SI Appendix, Fig. S17. P_SI (P substitutability index) represents the mineral P fertilizer substitutability index for different countries, 
+with the 
+global results shown in SI  Appendix, Fig. S16 . ICLS&C (integrated crop -livestock systems and consumption) denotes the potential of livestock-crop 
+integrated P 
+recycling and additional gains from coupling with dietary shift strategies (hollow icons). Columns 9 to 13 illustrate the difficulty in achieving the set 
+targets under the 20-measure conditions. BAU represents achieving high targets with the baseline management measures used in this study, whereas other 
+colors indi
+cate the level of additional optimization required in different stage combinations to meet the targets. Owing to the national specificity in phosphate 
+mining and chemical production, S1* and S4.1** indicate rankings excluding the single-measure sustainable potential gains. Column 9, S1 PR, shows the benefits 
+of P
+-resource savings. The targets for crop P use efficiency are basic 50%, medium 60%, and high 70%. The meaning of “★” and “*” is provided in SI Appendix, 
+Table S10, with related calculations reported in SI Appendix, Text S8 and Dataset S1. 
+Downloaded from https://www.pnas.org by 64.120.94.85 on November 16, 2026 from IP address 64.120.94.85.
+
+=== PDF PAGE 9 ===
+PNAS  2026  Vol. 123  No. 13 e2512673123 https://doi.org/10.1073/pnas.2512673123 9 of 12 
+measure not only reduced the new P demand at the source by 
+17% but also decreased the demand for industrial feed and feed 
+grains by 26% and 35%, respectively. Additionally, it significantly 
+improved PUE (cropping, 18%; livestock, 36%) and recycling 
+rates (cropping, 27%; livestock, 31%) and reduced P losses to 
+the environment (cropping, 20%; livestock, 31%). Moreover, 
+when considering only the extension of global phosphate rock 
+extraction periods, a comprehensive management strategy (S2) 
+for the production sectors demonstrated substantial potential, 
+achieving a 29% increase. The combined P reduction benefits 
+across phosphate rock, phosphate fertilizers, and both industrial 
+and agricultural feed reached 32%, extending the global phosphate 
+rock extraction period by 57 ± 12 y. 
+Comprehensive management measures in the consumption 
+sector significantly reduced P losses in pr
+oduct processing system 
+by 93%, consumption system by 49%, and waste treatment system 
+by 31%. Although it is straightforward to understand that reduc-
+ing food waste and product processing losses can decrease P loss 
+across various systems (ranging from 12 to 80%), the considerable 
+benefits of adjusting dietary structures deserve special attention. 
+Over the past 62 y, the average annual consumption of mineral 
+phosphate fertilizer per person for global food production has 
+increased by 38%, primarily due to the rising consumption and 
+production of animal products (3). According to international 
+dietary guidelines (
+23), per capita meat consumption (including 
+poultry) should decr
+ease from the current 43 to 45 kg per person 
+per year to 14.3 kg per person per year (32). This reduction would 
+lead to decline in the P flow associated with livestock farming 
+activities, making demand-side measures essential. Our findings 
+indicate that adopting a more balanced dietar
+y structure could 
+yield significant benefits in P resource consumption and the reduc-
+tion of P waste discharges, with notable impacts on product pro-
+cessing system at 67%, consumption system at 30%. This strategy 
+also decreased the P entering the noncropland and waste treatment 
+system by 17% and 28%, respectively. Importantly, the proposed 
+dietary structure is based on health-oriented recommendations, 
+rather than solely focusing on reducing the P footprint (
+23, 33). 
+The results highlight the uneven influence of interventions 
+across the P cycle, where specific demand-side and production-side 
+measures result in significantly different system -wide benefits. 
+While waste recy
+cling and P recovery from various subsystems 
+offer considerable economic advantages (social costs 10-81% lower 
+than virgin phosphate rock), the most profound impacts arise 
+from adjusting dietary structures toward healthier, less 
+animal-product-intensive diets. This demand-side shift is crucial 
+not only for r
+educing P resource consumption and waste dis -
+charges but also for decreasing the per capita mineral phosphate 
+fertiliz
+er requirement (which has increased 38% in 62 y). 
+Concurrently, enhancing feed conversion efficiency (S2.2) pro-
+vides a powerful production-side leverage, declining P pressure 
+throughout the entir
+e system by reducing new P demand and 
+industrial feed/grain requirements. This dual lever approach sig-
+nals an imbalanced shift from solely supply-side management to 
+integrated demand and supply interv
+entions. 
+Effective waste management profoundly influence global P 
+utilization, recy
+cling, and discharges, significantly reducing 
+dependence on primary phosphate rock extraction. Our compre-
+hensive analysis elevates waste management from merely a circular 
+economy tool to a core strategy for establishing P resource sover-
+eignty, thereby promoting global P sustainability and reducing 
+reliance on phosphate r
+ock resources. The results of this study 
+indicate that P derived from waste could reduce primary phosphate 
+rock extraction by 89% through decreased demand and extend 
+the global phosphate rock extraction lifetime by 61 ± 13 y. 
+Measures such as animal manure recycling (S4.3), human excreta 
+return (S4.5), and food waste valorization (S4.8) collectively offer 
+substantial phosphate rock savings, with food waste recycling 
+alone accounting for a 16% reduction ( Fig. 4A). This reconcep-
+tualization of waste P as a “strategic resource” rather than a “dis-
+posal problem” fundamentally alters the global P supply and 
+demand equation, providing a pathway for nations to reduce their 
+vulnerability to external P supply shocks. These measures decreased 
+new P demand by 29% and the demand for P mining and ferti-
+lizers by 89%, while reducing the overall P loss by 64%. The 
+benefits of P reduction acr
+oss all systems ranged from 33% 
+to 98%. 
+The detailed quantification in this study reveals a pronounced 
+imbalance in effectiveness among waste r
+ecovery measures for P 
+cycle closure. While all measures contribute positively to P sus-
+tainability, their efficiency in achieving specific objectives such as 
+reducing phosphate rock production, minimizing discharges, and 
+enhancing P cycling varies substantially. For instance, recycling 
+animal manure (S4.3) exhibits the highest combined leverage, 
+effectively reducing phosphate rock production (77%), promoting 
+P cycling (67% in the livestock system), and minimizing P loss 
+(77%). In contrast, measures like straw as animal feed (S4.2) or 
+composting slaughter waste (S4.4) primarily impact industrial 
+feed demand (28%) and P recycling potential in waste treatment 
+system (30%), with no direct effect on mining levels ( Fig. 4A). 
+Subsequently
+, the return of human manure, solid waste compost-
+ing, and sludge recycling, which can save 16%, 11%, and 4% of 
+the P rock extraction, r
+espectively (Fig. 4A). This uneven perfor-
+mance requires a strategic prioritization of investment toward 
+measures with the highest integrated lev
+erage effect, those that 
+simultaneously optimize multiple P sustainability targets across 
+the entire P value chain rather than uniformly supporting all recy-
+cling initiatives. This underscores the significant issue of P waste 
+in global consumption systems and the urgent need for recycling 
+P . The optimal destination for recycled P is intensive agriculture, 
+which can directly mitigate overreliance on mineral P for food 
+production.  
+3.3. National Strategies and Potential for Achieving P 
+Sustainability by 2050. National P recycling potentials by 2050 
+and the challenges of achieving P sustainability vary significantly 
+(Fig. 4B). The effects of 20 individual or combined P management 
+measures on P sustainability across 35 countries range from 
+−162% to 109% (negative values indicate reductions in demand 
+or discharges) (Fig. 4B and SI Appendix, Fig. S17), with P savings 
+between 0.01 and 3.3 Mt, av
+eraging 0.5 Mt. Owing to their 
+large populations and increasing demand, India, China, Brazil, 
+the United States, Pakistan, and Indonesia exhibit significant 
+recycling potential, averaging 1.1 Mt P (range: 0.5 to 1.9 Mt 
+of P). Therefore, these countries are critical for achieving the 
+global sustainability goals related to P . Under the BAU scenario, 
+by 2050, net unused P discharges to systems outside agricultural 
+production (including soil sedimentation) in these countries will 
+reach 7.8, 5.0, 3.5, 2.9, 2.6, and 1.8 Mt P , respectively, accounting 
+for 67% of the global total, close to the projected 2050 global P 
+demand of 27 Mt P . Implementing nearly all optimal measures 
+could yield a total P recovery of 10.6 Mt P in these countries, 
+approaching the total loss under BAU from all other countries 
+(11.9 Mt P). Notably, recycling from livestock production alone 
+holds substantial potential in these countries, with a national 
+average recovery of 0.8 Mt of P (range: 0.3 to 1.4 Mt of P). 
+Compared with BAU scenarios, reducing chemical fertilizer 
+use, recy
+cling organic fertilizers, and improving feed conversion 
+efficiency are the most effective measures at the national levels. 
+Downloaded from https://www.pnas.org by 64.120.94.85 on November 16, 2026 from IP address 64.120.94.85.
+
+=== PDF PAGE 10 ===
+10 of 12   https://doi.org/10.1073/pnas.2512673123 pnas.org 
+Their combined implementation achieved an average P savings of 
+50% and discharge reduction of 39% across 35 countries (Fig. 4B). 
+The effectiveness of the other measures varied significantly among 
+countries. For instance, in stage S1, reducing phosphate rock min-
+ing and fertilizer production is more effective in countries with 
+abundant phosphate resources (Fig. 4B and SI Appendix, Fig. S17, 
+this study focused solely on domestic demand and sustainability, 
+excluding the impact of phosphate rock export). In stage S4, opti-
+mizing P waste management yields greater benefits in the United 
+States, Argentina, Brazil, Australia, Spain, and China (P utilization 
+rates above 60%). This is primarily because of large-scale intensive 
+livestock production in these agricultural economies, which gen-
+erates high volumes of recoverable animal manure, with recycling 
+rates increasing from 56% to 87%. F
+or example, in Brazil, pro -
+jected manure P recycling in 2050 (1.1 Mt) could meet or exceed 
+national demand (Fig. 4B and SI Appendix, Fig. S17 and 
+Table S10). Similarly, S4.5 human excreta return and S4.8 com-
+posting of solid waste provide greater sustainability benefits in 
+densely populated countries. How
+ever, densely populated devel-
+oping countries, such as India, South Africa, Bangladesh, Vietnam, 
+Pakistan, and Thailand, derive limited benefits from waste recy -
+cling initiatives. Notably, while P derived from waste could the-
+oretically be traded internationally, similar to phosphate rock, the 
+economic and infrastructure challenges associated with its pro -
+cessing, transportation, and market acceptance often limit its 
+global movement. O
+ur results indicated that national PUE is 
+influenced by multiple interacting P flows, particularly those 
+closely associated with cropping, livestock, and consumption sys-
+tems. In the aforementioned Southeast Asian countries, low base-
+line PUE in cropping (BAU, 24 to 34%; mean 30%) leads to 
+substantial P losses rather than P uptake by crops or soil retention. 
+Consequently, improving PUE in cropping and across the entire 
+system remains a challenge, even with high waste recovery targets 
+in livestock and household systems ( Fig. 4B). This suggests that 
+although crop–livestock integration can theor
+etically conserve 
+substantial amounts of nutrients, the role of human agency cannot 
+be overlooked, as human decisions directly govern the consump-
+tion and management processes associated with both systems. 
+Therefore, the magnitude and dir
+ection of the effect of 
+crop-livestock integration on P sustainability vary significantly 
+between countries and regions (
+Fig. 4B), mandating a thorough 
+consideration of regional specifications in policy design. 
+At all spatial scales, agricultural systems contribute most signif-
+icantly to the efficiency of anthropogenic P cycling. Nonpoint 
+source flows, such as soil P accumulation, livestock excreta, and 
+runoff losses, are particularly sensitive ( 34, 35). Most major 
+agricultural-producing countries demonstrate significant potential 
+for P recycling and discharge reduction at every stage. However, 
+Fig. 4B shows that only eight countries could achieve a high PUE 
+target of 70% in the cropping 
+system through combinations of 
+measures implemented in a single stage. These countries include 
+the United States, France, China, Argentina, Brazil, Australia, 
+Canada, and Germany, where priority should be given to improv-
+ing feed conversion rates and reducing the use of fertilizers. When 
+all measures were combined, the number of countries meeting the 
+target increased to 17. In other words, 18 countries would still 
+fail to meet the high PUE target in the cropping system under the 
+current measures, although most would have the potential for 
+further improvement through specific actions. This nonlinear 
+pathway to high PUE underscores that achieving P sustainability 
+is not merely about identifying effective measures but about over-
+coming complex interactions between P flows, human agency, and 
+socioeconomic structures. Only Russia, Tanzania, Italy, Türkiye, 
+the Netherlands, and the United Kingdom could achieve the 70% 
+target through further optimization. Italy and the Netherlands 
+face low implementation difficulty, while the others encounter 
+moderate-to-high difficulty. Therefore, a global P sustainability 
+strategy must be developed using different appr
+oaches tailored to 
+each country. Achieving P sustainability by 2050 remains particu-
+larly challenging for developing countries, especially those in Asia 
+and Africa (Fig. 4B). In these countries, no single measure can 
+significantly increase PUE; rather, a combination of strategies, 
+such as S2.2 r
+eduction of chemical fertilizer application, S2.3 
+improved feed conversion, and S4.3 enhanced livestock manure 
+recycling, must be implemented. Notably, results from India, 
+Pakistan, Morocco, South Korea, Iran, Mexico, and Vietnam indi-
+cate that even the optimal combination of management strategies 
+cannot achieve a high agricultural PUE (i.e., 70%). It is important 
+to emphasize that, in addition to evaluating the benefits of meas-
+ures based on P use patterns and recycling management, a coun-
+try’s reliance on imported agricultural products is also a key factor 
+in assessing its P sustainability (17, 18).  
+3.4. Cross -Sectional Coordination Priority Strategies for P 
+Sustainability. Substantial improvements in P recovery at any 
+stage require comprehensive management of both upstream 
+and downstream processes ( 34). The sustainability gains from 
+individual measures 
+are limited at the national level, and nearly 
+half of the countries analyzed cannot achieve high utilization rates 
+(baseline target: >50%) through measures applied at a single stage. 
+This finding underscores the need to improve the efficiency and 
+recovery at every stage of the P -supply chain, emphasizing that 
+prioritizing cross-
+sectoral coordination can uncover practical 
+pathways for enhanced P sustainability. 
+The nutrient benefits of integrated crop–liv
+estock systems 
+(ICLS) have been extensively documented ( 31
+, 33, 36, 37). For 
+example, in China, continuous optimization of ICLS can maintain 
+P levels within water quality safety thresholds across all subbasins 
+by 2050 (37). Our results confirm that the ICLS exhibits excellent 
+P sustainability potential at both the global and national scales 
+(Fig. 4). Calculations indicated that by considering the recycling 
+of livestock manure at the household lev
+el, the global annual 
+demand for phosphate rock could be reduced by approximately 
+7.9 Mt, thereby extending the global phosphate rock mining 
+period by 400 ± 87 y. This is primarily because the cropping and 
+livestock systems occupy central production nodes within the 
+system, contributing significantly to both P demand and dis -
+charges. However, countries with high population densities, 
+underdeveloped agricultural sectors, and heavy r
+eliance on agri-
+cultural imports have limited P sustainability benefits from waste 
+recov
+ery measures (SI Appendix, Fig. S18). This requires that pol-
+icy design for ICLS, instead of assuming universal benefits, explic-
+itly incorporates regional specifications and government 
+decision-making to harness its full, context-dependent potential 
+for closing the P cycle. 
+Our system perspectiv
+e offers key insights: the consumption 
+system, which occupies 
+a significant node in the P flow chain, is 
+closely associated with the other two subsystems. S3.1 dietary 
+shifts within the healthy diet framework proposed by the Lancet 
+Commission have substantial benefits. Importantly, no country 
+can achieve significant gains in P sustainability solely by reducing 
+food waste (S3.2) or processing loss (S3.3). S3.1 (Dietary shifts) 
+can be implemented before S3.2 (Reducing food waste), S3.3 
+(Reduction of processing losses), and S4 (waste management). In 
+other words, the most significant improvements in the consump-
+tion system stem not from waste management, but from better 
+integration of dietary patterns and food types with livestock and 
+crop production systems. This pathway offers significant potential 
+Downloaded from https://www.pnas.org by 64.120.94.85 on November 16, 2026 from IP address 64.120.94.85.
+
+=== PDF PAGE 11 ===
+PNAS  2026  Vol. 123  No. 13 e2512673123 https://doi.org/10.1073/pnas.2512673123 11 of 12 
+for P sustainability, enhances food security, and protects human 
+health and aligning with the Lancet Commission’s emphasis on 
+safe operating spaces for food systems and the planetary boundary 
+for P (23). Therefore, crop (S2.2: Reduction of chemical fertilizer 
+application), livestock (S4.3: Improved livestock manure recycle), 
+and consumption (S3.1: Dietary shift) systems provide a frame -
+work for the systematic implementation of sustainability measures 
+in P management. These three measures represented the key indi-
+vidual components of the combined S2, S3, and S4 interventions. 
+Overall, they yield significant P sustainability benefits for the 
+global P cycle: 48% P resource savings, 56% reduction in P losses 
+to the environment, 32% increase in P recovery, 35% improve -
+ment in P utilization efficiency, and 43% reduction in P inputs 
+to nonarable land and surface water. 
+On the other hand, the substitution of mineral P with waste P 
+necessitates a r
+eevaluation of the role and capacity of global agri-
+cultural trade in sustainable P management. The flo
+w of P trade 
+can be diminished by promoting P cycling at the national lev
+el 
+(38). T o maximize fertilizer recycling and reduce the dependence 
+on phosphate rock, phosphate fertilizers, and long-distance inter-
+national trade in agricultural products, it is essential to reconnect 
+crop and livestock production at the local level (39). This approach 
+ensures a national P balance and enhances resilience to P imbal-
+ances caused by agricultural trade (40). Consequently, reconnec-
+tion between large-scale farming and crop production is crucial 
+to achieve P nutrient recycling in the futur
+e (31, 33). Large-scale 
+intensive livestock farming pro
+vides a favorable foundation for 
+increasing the adoption of ICLS, in which the recycling of organic 
+waste on farms can enhance soil fertility and improve physico -
+chemical properties (31, 33). Although the closed P cycles between 
+the cropping and livestock systems may not significantly enhance 
+the PUE in each system, they can reduce dependence on external 
+P sources. Our results indicate that recycling animal organic 
+manure (S4.3) can reduce global new P demand by 22% and 
+decrease reliance on phosphate rock and fertilizers by 77%, with 
+a more pronounced effect in feed-importing and European coun-
+tries, a phenomenon closely linked to their highly intensified 
+livestock farming and structural reliance on external feed sources 
+(SI Appendix, Fig. S18). This study demonstrated that the P trade 
+gap, encompassing both exports and imports in 23 countries, can 
+be mitigated by recycling manure from livestock and poultry pro-
+duction. For example, in Brazil, the projected P recovery from 
+livestock manure by 2050 (1.1 Mt) will be sufficient to meet the 
+nation’s total P demand. When P recovery from all measures is 
+considered, only countries with a significant reliance on agricul -
+tural import–export trade, including Australia, South Africa, 
+Japan, South Kor
+ea, and the Netherlands, would be unable to 
+fully offset their P trade gap (exports and imports), whereas the 
+remaining 30 countries could achieve a balance. Notably, achiev-
+ing such decoupling requires technological advancements, eco -
+nomic incentives, and public policy support while also considering 
+environmental side effects and economic constraints (41). This 
+highlights that P cycling promotion at the national level, r
+econ-
+necting local crop and livestock production, and leveraging 
+advanced technologies are critical not only for reducing depend-
+ence 
+on phosphate rock and fertilizers but also for actively man-
+aging the P footprint transferred via international trade, thereby 
+building intrinsic P sustainability within national food systems. 
+This study underscores the critical importance of P sustainabil-
+ity for food security and environmental protection; however, 
+implementing effective P management strategies requires system-
+atic optimization integrating multiple sustainability objectives. 
+P cycle management cannot be pursued in isolation and must 
+explicitly account for potential synergies and trade-offs with other 
+critical environmental factors, such as greenhouse gas emissions. 
+For example, while ICLS have demonstrated significant potential 
+to enhance overall PUE and P sustainability, their net impact on 
+greenhouse gas emissions is strongly context -specific. The effec-
+tiveness of such measures varies substantially across regions, 
+depending on local agricultural practices, baseline conditions, and 
+broader land use dynamics. These results indicate that universally 
+applicable P strategies are rare; instead, tailored national-level 
+approaches are essential to balance P efficiency with other envi-
+r
+onmental benefits and mitigate unintended consequences. The 
+comprehensive framewor
+k developed in this study provides a 
+foundation for analyzing global and national P flow dynamics. 
+Future research and policy development must explicitly integrate 
+a broader range of environmental, social, and economic factors to 
+achieve sustainable resource management aligned with planetary 
+boundaries and the Sustainable Development Goals. 
+3.5. Limitations and Uncertainty Analysis. Our integrated 
+model has certain limitations that can be addressed and explored 
+further in future studies. We have provided detailed explanations 
+and solutions in SI Appendix, T ext S10; however, these aspects 
+warrant further attention and optimization in future resear
+ch. 
+The primary limitations include the comprehensiveness of activity 
+data (SI  Appendix, T ext S10.1) for quantifying P flows, trade - 
+level considerations (SI  Appendix, T ext S10.2), robustness and 
+structural stability of the P flow analysis model construction 
+(
+SI  Appendix, T exts S10.3 and S10.7 ), reliability of empirical 
+coefficients (SI  Appendix, T ext S10.4), uncertainty in scenario 
+analysis (SI  Appendix, T ext S10.5), and sensitivity analyses 
+(SI Appendix, T ext S10.6). Among these, uncertainties associated 
+with empirical coefficients and the spatial resolution of trade data 
+(limited to the national level, without subnational or regional 
+detail) are most pronounced. Uncertainty associated with scenario 
+analysis, although easily overlooked, is also critical. This study 
+primarily focuses on evaluating technical potential, and the 
+scenario analysis results represent the achievable potential under 
+the stated assumptions. Although it has limitations in capturing 
+complex socioeconomic dynamics, we emphasize that it provides 
+an essential benchmark for informing policy design and strategic 
+planning. The results are presented in SI Appendix, Figs. S19–S24 
+and Tables S11 and S12 and Dataset S1. 
+4. Conclusion and Perspectives 
+The finite and uncontrolled extraction of P resources, inefficient 
+utilization, and excessive losses result in structural imbalances within 
+the global P cycle. In this context, we developed a comprehensive 
+process and sustainability scenario analysis framework to examine 
+global anthropogenic P cycling and metabolism from the perspective 
+of the entire P flow chain. Overall, this framework enables a dynamic 
+assessment of the global anthropogenic P cycle and facilitates the 
+identification of key subsystems that drive social P flows and con-
+tribute significantly to P losses and environmental impacts. Successful 
+implementation of these sustainable strategies depends on global 
+cooperation, particularly in terms of technology transfer and knowl-
+edge sharing. Therefore, it is essential to developing policies for the 
+management of P resources on a global scale, particularly in the areas 
+of P resource extraction, trade, and recycling. By establishing a global 
+database of P resource flows and creating a platform for international 
+cooperation in P management, countries can enhance their under-
+standing of global P resources and achieve a coordinated supply of 
+P . The International Call for Action on P aims to establish or expand 
+an intergovernmental coordination mechanism similar to that devel-
+oped for nitrogen. This initiative will assist governments, existing 
+Downloaded from https://www.pnas.org by 64.120.94.85 on November 16, 2026 from IP address 64.120.94.85.
+
+=== PDF PAGE 12 ===
+12 of 12   https://doi.org/10.1073/pnas.2512673123 pnas.org 
+conventions, intergovernmental frameworks, and stakeholders to 
+promote integrated actions for P sustainability. It is crucial to apply 
+an international framework to consolidate the collective knowledge 
+of anthropogenic P cycles from the national to a global level, set 
+internationally agreed targets for time-bound improvements in P 
+management, and quantify the economic and social benefits of 
+enhanced P sustainability
+.    
+Data, Materials, and Software Availability. All fundamental activity data used 
+in this study were accompanied by metadata, and empirical coefficients were 
+obtained from publicly available literature or official reports (42). 
+ACKNOWLEDGMENTS. This work was supported by Jiangxi Province “Double 
+Thousand Plan” Innovation Leading Talent Long Term Project (S2021CQKJ0696/ 
+jxsq2023101022), Key R&D projects in Jiangxi Province (20223BBF61019), Key 
+Projects of Jiangxi Natural Science Foundation (20232ACB203009), National eco-
+logical environment Funding Project of China (SWRFZ-JX2025001), the Ministry 
+of Science and Higher Education of the Russian Federation “Agrotechnologies 
+for the Future” (075-15-2022-322), Special Funding Program for Graduate 
+Innovation of Jiangxi 
+Province (YC2024-B058), Graduate student project of 
+Jiangxi Science Education Society (2025KXJYS011), Special Program for Doctoral 
+Students in the Youth Talent Support Project by the China Association for Science 
+and Technology (STID: 156-O-610-0000309-3). 
+Author affiliations: aKey Laboratory of Poyang Lake Environment and Resource Utilization, 
+Engineering Research Center of Watershed Carbon Neutralization, Ministry of Education, 
+Key Laboratory of Ecological Hydrological Monitoring and Research in Poyang Lake Basin 
+of Jiangxi Province, School of Resource and Environment, Nanchang University, Nanchang 
+330031, China; bDepartment of Applied Ecology, Saint Petersburg State University, Saint 
+Petersburg 199178, Russian Federation; cYunnan Key Laboratory of Ecological Protection 
+and Resource Utilization of River-lake Networks, International Joint Laboratory for Yunnan 
+River and Lake 
+Ecosystem Restoration Green Technology, Institute for Ecological Research 
+and Pollution Control of Plateau Lakes, School of Ecology and Environmental Science, 
+Yunnan University, Kunming 650500, China; dEnvironmental Chemistry Laboratory, 
+Department of Toxic Substances Control, California Environmental Protection Agency, 
+Berkeley, CA 94710; and eJiangxi Provincial Key Laboratory of Environmental Pollution 
+Control, Jiangxi Academy of Eco-environmental Sciences and Planning, Nanchang, Jiangxi 
+330039, China 
+1. T. J. Battin et al., River ecosystem metabolism and carbon biogeochemistry in a changing world. 
+Nature 613, 449–459 (2023). 
+2. J. Peñuelas et al., Human-induced nitrogen–phosphorus imbalances alter natural and managed 
+ecosystems across the globe. Na
+t. Commun. 4, 2934 (2013). 
+3. W. J. Brownlie et al., Global actions for a sustainable phosphorus future. Nat. Food 2, 71–74 (2021). 
+4. W. Xie et al., Crop switching can enhance environmental sustainability and farmer incomes in China. 
+Nature 616, 300–305 (2023). 
+5. D. L. Childers, J. Corman, M. Edwards, J. J. Elser, Sustainability challenges of phosphorus and food: 
+Solutions from closing the human phosphorus cycle. BioScience 61
+, 117–124 (2011). 
+6. S. Li et al., Integrated agricultural practices and engineering technologies enhance synergies of 
+food-energy-water systems in corn belt watersheds. Environ. Sci. Technol. 57, 9194–9203 (2023). 
+7. A. F. Bouwman et al., Lessons from temporal and spatial patterns in global use of N and P fertilizer 
+on cropland. Sci. R
+ep. 7, 40366 (2017). 
+8. S. M. Powers et al., Long-term accumulation and transport of anthropogenic phosphorus in three 
+river basins. Nat. Geosci. 9, 353–356 (2016). 
+9. E. D. Roy et al., The phosphorus cost of agricultural intensification in the tropics. Nat. Plants 2, 16043 
+(2016). 
+10. S. Z. Sattari, A. F. Bouwman, K. E. Giller, M. K. van Ittersum, Residual soil phosphorus as the missing 
+piece in the global phosphorus crisis puzzle. Proc. Natl. Acad. Sci. U.S.A. 109, 6348–6353 (2012). 
+11. S. Rothwell et al., A new direction for tackling phosphorus inefficiency in the UK food system. J. 
+Environ. Manage. 
+314, 115021 (2022). 
+12. G. K. MacDonald, E. M. Bennett, P . A. Potter, N. Ramankutty, Agronomic phosphorus imbalances 
+across the world’
+s croplands. Proc. Natl. Acad. Sci. U.S.A. 108, 3086–3091 (2011). 
+13. H. Tiessen, “Phosphorus in the global environment” in The Ecophysiology of Plant-Phosphorus 
+Interactions,
+ P . J. White, J. P . Hammond, Eds. (Springer, Dordrecht, The Netherlands, 2008), pp. 1–7. 
+14. M. Li, T. Wiedmann, Towards meaningful consumption-based planetary boundary indicators: The 
+phosphorus exceedance footprint. Global Envir
+on. Change 54, 227–238 (2019). 
+15. C. Langhans, A. H. W. Beusen, J. M. Mogollón, A. F. Bouwman, Phosphorus for sustainable 
+development goal target of doubling smallholder pr
+oductivity. Nat. Sustain. 5, 57–63 (2022). 
+16. G. Nziguheba et al., Phosphorus in smallholder farming systems of sub-Saharan Africa: Implications 
+for agricultural intensification. Nutr. 
+Cycl. Agroecosyst. 104, 321–340 (2016). 
+17. Z. Bai et al., Agricultural trade impacts global phosphorus use and partial productivity. Nat. Food 4, 
+762–773 (2023). 
+18. K. Niu et al., Impacts of global trade on cropland soil-phosphorus depletion and food security. Nat. 
+Sustain. 7, 1128–1140 (2024). 
+19. A. Oita, F. Wirasenjaya, J. Liu, E. Webeck, K. Matsubae, Trends in the food nitrogen and phosphorus 
+footprints for Asia’
+s giants: China, India, and Japan. Resour. Conserv. Recycl. 157, 104752 (2020). 
+20. W. Liu et al., Analyzing the phosphorus flow characteristics in the largest freshwater lake (Poyang 
+Lake) watershed of China fr
+om 1950 to 2020 through a bottom-up approach of watershed-scale 
+phosphorus substance flow model. Water Res. 245, 120546 (2023). 
+21. Z. Yuan et al., Human perturbation of the global phosphorus cycle: Changes and consequences. 
+Environ. Sci. Technol. 52, 2438–2450 (2018). 
+22. D. Cordell, S. White, Life’s bottleneck: Sustaining the World’s phosphorus for a food secure future. 
+Annu. Rev. Environ. Resour. 39, 161–188 (2014). 
+23. W. Willett et al., Food in the anthropocene: The EAT 2013; Lancet Commission on healthy diets from 
+sustainable food systems. Lancet 393, 447–492 (2019). 
+24. P .  M. Haygarth, M. M. Mezeli, Opportunity to improve global phosphorus governance. Nat. Food 4, 
+837–838 (2023). 
+25. D. A. Vaccari, S. M. Powers, X. Liu, Demand-driven model for global phosphate rock suggests paths 
+for phosphorus sustainability. Environ. 
+Sci. Technol. 53, 10417–10425 (2019). 
+26. D. P . Van Vuuren, A. F. Bouwman, A. H. W. Beusen, Phosphorus demand for the 1970–2100 period: A 
+scenario analysis of resour
+ce depletion. Global Environ. Change 20, 428–439 (2010). 
+27. M. Chen, T. E. Graedel, A half-century of global phosphorus flows, stocks, production, consumption, 
+recycling, and envir
+onmental impacts. Global Environ. Change 36, 139–152 (2016). 
+28. R. Burkholz, F. Schweitzer, International crop trade networks: The impact of shocks and cascades. 
+Environ. Res. Lett. 14, 114013 (2019). 
+29. N. A. Franke, H. Boyacioglu, A. Y. Hoekstra, Grey Water Footprint Accounting: Tier 1 Supporting 
+Guidelines. Value of 
+Water Research Report Series No. 65 (UNESCO-IHE, Delft, The Netherlands, 
+2013). 
+30. M. M. Mekonnen, A. Y. Hoekstra, Global anthropogenic phosphorus loads to freshwater and 
+associated grey water footprints and water pollution levels: 
+A high-resolution global study. Water 
+Resour.
+ Res. 54, 345–358 (2018). 
+31. S. Jin et al., Decoupling livestock and crop production at the household level in China. Nat. Sustain. 
+4, 48–55 (2021). 
+32. D. Cordell, J.-O. Drangert, S. White. The story of phosphorus: global food security and food for 
+thought. Glob. Environ. Change 19, 292–305 (2009). 
+33. B. Tong et al., Lower pork consumption and technological change in feed production can reduce the 
+pork supply chain environmental footprint in China. Nat.
+ Food 4, 74–83 (2023). 
+34. D. Tonini, H. G. M. Saveyn, D. Huygens, Environmental and health co-benefits for advanced 
+phosphorus recovery. Na
+t. Sustain. 2, 1051–1061 (2019). 
+35. J. Demay, B. Ringeval, S. Pellerin, T. Nesme, Half of global agricultural soil phosphorus fertility 
+derived from anthropogenic sour
+ces. Nat. Geosci. 16, 69–74 (2023). 
+36. L. Bouwman et al., Exploring global changes in nitrogen and phosphorus cycles in agriculture 
+induced by livestock production over the 1900–2050 period. Pr
+oc. Natl. Acad. Sci. U.S.A. 110, 
+20882–20887 (2013). 
+37. L. Liu et al., An optimized crop–livestock system can achieve a safe and just planetary boundary for 
+phosphorus at the sub-basin level in China. Nat. Food 5, 499–512 (2024). 
+38. T. Nesme, G. S. Metson, E. M. Bennett, Global phosphorus flows through agricultural trade. Global 
+Environ. Change 
+50, 133–141 (2018). 
+39. R. Naylor et al., Losing the links between livestock and land. Science 310, 1621–1622 (2005). 
+40. B. Nowak, T. Nesme, C. David, S. Pellerin, Nutrient recycling in organic farming is related to diversity 
+in farm types at the local level. Agric., Ecosyst. Environ. 204, 17–26 (2015). 
+41. G. S. Metson, G. K. MacDonald, D. Haberman, T. Nesme, E. M. Bennett, Feeding the Corn Belt: 
+Opportunities for phosphorus recycling in U.S.
+ agriculture. Sci. Total Environ. 542, 1117–1126 
+(2016). 
+42. W. Liu, Data from “Global-scale raw data sets on production, trade and consumption of phosphorus- 
+containing products.” Dryad. https://datadryad.org/stash/share/CDxpyr5n3cH14UqqIK9VpN1ydw- 
+nuTeI9iegNR0aGPw. Deposited 12 December 2025. 
+Downloaded from https://www.pnas.org by 64.120.94.85 on November 16, 2026 from IP address 64.120.94.85.

@@ -1,0 +1,22 @@
+{
+  "artifact_checks_passed": true,
+  "all_balance_errors_below_1e_4": true,
+  "detects_deliberately_corrupted_transfer": true,
+  "report_Chinese_character_count": 2251,
+  "policy_grid_size": 343,
+  "html_self_contained": true,
+  "browser_visual_check": "See browser_qa.json if present; static checks alone do not prove rendering",
+  "source_limitations": {
+    "world_rows": 13,
+    "all_rows": 2808,
+    "coefficient_count_extracted": 488,
+    "production_valid_t_items": 208,
+    "production_matched_valid_items": 165,
+    "fertilizer_last_year": 2021,
+    "population_last_year": 2021,
+    "land_last_year": 2022,
+    "core_crop_count": 17,
+    "missing_revision_directory_files": 0
+  },
+  "strict_paper_replication_complete": false
+}

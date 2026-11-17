@@ -1,0 +1,10 @@
+﻿file,sha256
+Future-strategies-for-phosphorus-sustainability-amid-worsening-global-cycle-imbalances_sapp.pdf,568b18ff0223366f5f23ac5fd35262aa04e20a47fb53442dd6277931c987b904
+source_data\Origin data\2.Country-level raw data on agricultural production and P calculations\Agricultural products_P_result_national level（1961-2022）.xlsx,ecfeedd7d3556eadbe5ee170e10c025a5abaf2dfe86c1591cd407118c521fa7d
+source_data\Origin data\7.Global and national level CPF application and trade data\Nutrient phosphate P2O5 use data at the national level.csv,9234fa703f6a42f7e94af69f9e5bce88a48b00519cfb4696c9a6adef64a55c15
+source_data\Origin data\9.Other datasets\Global country-level population data.csv,6ad247bb1b31af5fc8674b0dd0fc024073a2df00bc2d833eb25919c087fd030a
+source_data\Origin data\8.Global land use data\Global level cropland area.csv,5f705f959181688e1361ebd08445bdb418607b76743a29bbea5fbc4ffd19fbb0
+source_data\Origin data\2.Country-level raw data on agricultural production and P calculations\Raw data on agricultural production（1961-2022）\2022.csv,0ce555f04a6c03963675d721d95995f23351c255535034beaf818230427f0ed6
+source_data\Origin data\3.Country-level origin data on agricultural trade and P calculations\Country-level data on agricultural exports\2022.csv,1b0865e6fed7459700f5bd33c8318e2c7c0ceb1f85f29015f1bcc3abea24eae1
+source_data\Origin data\3.Country-level origin data on agricultural trade and P calculations\Country-level data on agricultural imports\2022.csv,43af828dafc9e10e551ba88e1bc6244a56808029256f3cc34eaff16ffc4387d6
+code_implementation\run_analysis.py,84344f1c3cfffca84f4884aa63a27feddc28808691dbc5994fbace99853eeafb

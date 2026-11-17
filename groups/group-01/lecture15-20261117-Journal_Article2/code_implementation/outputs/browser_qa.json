@@ -1,0 +1,30 @@
+{
+  "results": [
+    {
+      "name": "sankey_2022",
+      "traceCount": 1,
+      "svgCount": 10,
+      "nodeCount": 18,
+      "linkCount": 21,
+      "label": "2022 five-sector teaching model (17 core crops; Mt P/year)",
+      "hoverWorks": "23.4Geological resourceincoming flow count: 0outgoing flow count: 1"
+    },
+    {
+      "name": "scenarios_2050",
+      "traceCount": 3,
+      "svgCount": 15,
+      "nodeCount": 0,
+      "linkCount": 0,
+      "label": "2050 population-scaled teaching scenarios"
+    },
+    {
+      "name": "history_1961_2022",
+      "traceCount": 13,
+      "svgCount": 13,
+      "nodeCount": 0,
+      "linkCount": 0,
+      "label": "World product-group P throughput (do not sum as crop harvest)"
+    }
+  ],
+  "errors": []
+}
