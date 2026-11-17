@@ -1,0 +1,37 @@
+﻿任务1：2022 年 ACS 各流向（Mt P）
+  Mineral_Fertilizer: 20.500000
+  Manure_to_Cropland: 7.400567
+  Struvite_to_Cropland: 1.200000
+  Atmospheric_Deposition: 0.500000
+  Seed_P: 0.200000
+  Residue_Return: 1.940952
+  Crop_Uptake: 19.409517
+  Crop_Harvest: 14.557138
+  Crop_Residue: 4.852379
+  Residue_Waste: 2.911428
+  Organic_Surplus_Loss: 0.000000
+  Water_Loss: 2.800000
+  Soil_Legacy_P: 9.532001
+  Total_Input: 31.741519
+  Total_Output: 22.209517
+  Stock_Change: 9.532001
+  矿肥占总输入比例: 64.58%
+任务2：PMS/CIS/ACS/LBS/RCS 及全系统质量守恒断言通过
+  2022 全系统相对误差: 1.815e-16
+  桑基图: C:\Users\31386\Documents\Trae-CN\default\LCA_Practice_Coursework-2026fall\starter_materials\lecture15-20261117-Journal_Article2\qiuziqiang_article2_reproduction\outputs\sankey_2022.html
+任务3：2050 年情景对比
+              Scenario  NPR_MtP  CFR_MtP  Environmental_Loss_MtP  ACS_PUE  NPR_change_vs_BAU  CFR_change_vs_BAU
+              2050_BAU  36.7415  26.9000                 51.3796   0.4586             0.0000             0.0000
+            Reduce_20%  30.7159  21.5200                 45.3540   0.5266            -0.1640            -0.2000
+    Replace_manure_75%  20.3080  12.2273                 34.9461   0.5710            -0.4473            -0.5455
+  Recycle_struvite_60%  20.4050  12.3138                 35.0431   0.5792            -0.4446            -0.5422
+             Course_3R  11.6286   4.4778                 26.2667   0.6042            -0.6835            -0.8335
+ Paper_S2.2_reduce_30%  27.7031  18.8300                 42.3412   0.5688            -0.2460            -0.3000
+Paper_S4.3_manure_100%   6.6135   0.0000                 21.2516   0.7176            -0.8200            -1.0000
+交叉敏感性标准化回归
+          变量1             变量2  R2  标准化系数_变量1       p值_变量1  标准化系数_变量2       p值_变量2  标准化交互系数        交互项p值 交互类型  样本量         固定条件
+       Reduce   ManureRecycle   1  -0.245021 4.42854e-175  -0.961238 3.33226e-182 0.126435 1.24253e-171 协同增强   16 struvite=0.6
+       Reduce StruviteRecycle   1  -0.423883 3.61623e-175  -0.897982 4.42588e-179 0.118115 1.65031e-168 协同增强   16  manure=0.75
+ManureRecycle StruviteRecycle   1  -0.854593 1.91816e-182  -0.461481 3.11996e-179 0.238131 8.75375e-176 协同增强   16   reduce=0.2
+人口因子=1.204823，BAU需求因子=1.312195，人口外强度因子=1.089118
+注意：本成果为数据驱动的简化复现，未声称复现原文完整国家尺度模型。
