@@ -5,7 +5,7 @@
 ## 运行方式
 
 ```bash
-cd groups/group-03/lecture15-20261117-p_sfa
+cd groups/group-03/lecture15-20261117-Journal_Article2
 python3 main.py   # 一键复现任务1/2/3与基准对照
 ```
 
