@@ -1,0 +1,22 @@
+{
+  "harvest": 14.12735693427,
+  "animal": 5.509755918,
+  "residue": 4.5358770211381,
+  "feed": 2.848971278815764,
+  "population": 8021407192.0,
+  "fertilizer": 20.5,
+  "livestock_pue": 0.23,
+  "manure_return": 0.67,
+  "straw_return": 0.4,
+  "straw_feed": 0.25,
+  "human_excretion": 0.47,
+  "p_in_p2o5": 0.4364,
+  "gypsum_per_p2o5": 4.8,
+  "p_in_gypsum": 0.004,
+  "mining_yield": 0.9,
+  "human_return": 0.31504,
+  "deposition": 0.62933802104,
+  "acs_water": 3.3669584125640006,
+  "feed_additive": 0.6406249999999998,
+  "other_chemical": 4.484374999999998
+}

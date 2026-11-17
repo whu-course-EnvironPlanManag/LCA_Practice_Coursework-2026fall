@@ -1,0 +1,30 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:               crop_PUE   R-squared:                       0.999
+Model:                            OLS   Adj. R-squared:                  0.999
+Method:                 Least Squares   F-statistic:                 1.838e+04
+Date:                Tue, 17 Nov 2026   Prob (F-statistic):          9.25e-173
+Time:                        11:32:32   Log-Likelihood:                 250.21
+No. Observations:                 125   AIC:                            -486.4
+Df Residuals:                     118   BIC:                            -466.6
+Df Model:                           6                                         
+Covariance Type:            nonrobust                                         
+===================================================================================
+                      coef    std err          t      P>|t|      [0.025      0.975]
+-----------------------------------------------------------------------------------
+const           -3.011e-15      0.003     -1e-12      1.000      -0.006       0.006
+Reduce              0.9967      0.003    331.182      0.000       0.991       1.003
+Replace            -0.0409      0.003    -13.603      0.000      -0.047      -0.035
+Recycle            -0.0430      0.003    -14.283      0.000      -0.049      -0.037
+Reduce*Replace     -0.0305      0.003    -10.150      0.000      -0.037      -0.025
+Reduce*Recycle     -0.0321      0.003    -10.657      0.000      -0.038      -0.026
+Replace*Recycle     0.0002      0.003      0.069      0.945      -0.006       0.006
+==============================================================================
+Omnibus:                     1499.814   Durbin-Watson:                   0.064
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               16.204
+Skew:                           0.259   Prob(JB):                     0.000303
+Kurtosis:                       1.314   Cond. No.                         1.00
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.

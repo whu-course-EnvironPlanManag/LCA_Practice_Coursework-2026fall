@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "csv_tables_compared": [
+    "country_fertilizer_2021.csv",
+    "country_population_2021_2050.csv",
+    "exports_1961_2022.csv",
+    "fertilizer_use.csv",
+    "imports_1961_2022.csv",
+    "population.csv",
+    "production_1961_2022.csv",
+    "production_coefficients.csv",
+    "published_regression_011.csv",
+    "published_regression_012.csv",
+    "published_regression_013.csv",
+    "published_regression_014.csv",
+    "typical_crops_2022.csv",
+    "world_cropland.csv",
+    "world_products_2022_joined.csv"
+  ],
+  "automatic_discovery": "PASS",
+  "explicit_source_data": "PASS",
+  "explicit_legacy_cache": "PASS",
+  "missing_directory": "PASS",
+  "cwd_independence": "PASS",
+  "note": "Original inputs hard-linked into course checkout layout; both extraction scripts executed; all generated CSVs equal existing inputs within 1e-10 relative tolerance."
+}

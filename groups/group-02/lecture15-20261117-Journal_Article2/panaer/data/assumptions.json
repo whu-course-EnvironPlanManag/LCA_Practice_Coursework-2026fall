@@ -1,0 +1,23 @@
+{
+  "fertilizer": 20.5,
+  "livestock_pue": 0.23,
+  "manure_return": 0.67,
+  "straw_return": 0.4,
+  "straw_feed": 0.25,
+  "human_excretion": 0.47,
+  "urban_share": 0.568,
+  "urban_human_return": 0.22,
+  "rural_human_return": 0.44,
+  "deposition_kg_ha": 0.4,
+  "runoff_kg_ha": 1.8,
+  "leaching_kg_ha": 0.34,
+  "p_in_p2o5": 0.4364,
+  "gypsum_per_p2o5": 4.8,
+  "p_in_gypsum": 0.004,
+  "mining_yield": 0.9,
+  "fertilizer_share_of_chemical": 0.8,
+  "food_feed_additive_share": 0.25,
+  "feed_share_of_additives": 0.5,
+  "uptake_kg_per_t": {"Rice": 4.1, "Wheat": 5.1, "Maize (corn)": 4.0},
+  "crop_feed_share": {"Rice": 0.32, "Wheat": 0.15, "Maize (corn)": 0.7}
+}

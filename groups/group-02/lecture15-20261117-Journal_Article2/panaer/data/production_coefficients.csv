@@ -1,0 +1,280 @@
+﻿Product,Category,Coefficient
+"Abaca, manila hemp, raw",A,0.00089
+"Agave fibres, raw, n.e.c.",A,0.00089
+"Almonds, in shell",B,0.00454
+"Anise, badian, coriander, cumin, caraway, fennel and juniper berries, raw",D,0.00051
+Apples,B,0.00011
+Apricots,B,0.00021
+Areca nuts,B,0.00409
+Artichokes,B,0.0013
+Asparagus,B,0.00045
+Avocados,B,0.00043
+"Balata, gutta-percha, guayule, chicle and similar natural gums in primary forms or in plates, sheets or strip",A,0.0002
+"Bambara beans, dry",F,0.00419
+Bananas,B,0.00023
+Barley,E,0.00342
+"Beans, dry",F,0.00419
+"Beer of barley, malted",J,0.00032
+Beeswax,C,0.0
+Blueberries,B,0.00013
+"Brazil nuts, in shell",B,0.00674
+"Broad beans and horse beans, dry",E,0.00426
+"Broad beans and horse beans, green",E,0.00037
+Buckwheat,E,0.00294
+"Buffalo fat, unrendered",C,0.0
+Butter and ghee of sheep milk,G,0.00021
+Butter of buffalo milk,G,0.00021
+Butter of cow milk,G,0.00021
+Butter of goat milk,G,0.00021
+"Buttermilk, dry",G,0.0009
+Cabbages,B,0.00036
+Canary seed,A,0.0085
+Cantaloupes and other melons,B,0.00024
+Carrots and turnips,B,0.00035
+"Cashew nuts, in shell",B,0.00373
+Cashewapple,B,0.00011
+Cassava leaves,A,0.0
+"Cassava, fresh",B,0.00038
+Castor oil seeds,C,0.0
+"Cattle fat, unrendered",G,0.0
+Cauliflowers and broccoli,B,0.00052
+Cereals n.e.c.,E,0.00175
+"Cheese from milk of buffalo, fresh or processed",G,0.00627
+"Cheese from milk of goats, fresh or processed",G,0.005
+"Cheese from milk of sheep, fresh or processed",G,0.005
+Cheese from skimmed cow milk,G,0.005
+Cheese from whole cow milk,G,0.005
+Cherries,B,0.00023
+"Chestnuts, in shell",B,0.00409
+"Chick peas, dry",B,0.00332
+Chicory roots,B,0.00023
+"Chillies and peppers, dry (Capsicum spp., Pimenta spp.), raw",D,0.00032
+"Chillies and peppers, green (Capsicum spp. and Pimenta spp.)",D,0.00019
+"Cinnamon and cinnamon-tree flowers, raw",D,0.00061
+"Cloves (whole stems), raw",D,0.00018
+Cocoa beans,F,0.00656
+Coconut oil,C,0.0
+"Coconuts, in shell",B,0.00094
+"Coffee, green",I,0.0016
+"Coir, raw",B,0.00094
+"Cotton lint, ginned",A,0.0064
+Cotton seed,H,0.00524
+Cottonseed oil,C,0.0
+"Cow peas, dry",F,0.00375
+Cranberries,B,0.0001
+"Cream, fresh",G,0.00085
+Cucumbers and gherkins,B,0.00017
+Currants,B,0.0011
+Dates,B,0.00057
+"Edible offal of buffalo, fresh, chilled or frozen",G,0.0016
+"Edible offal of cattle, fresh, chilled or frozen",G,0.0016
+"Edible offal of goat, fresh, chilled or frozen",G,0.0016
+"Edible offal of pigs, fresh, chilled or frozen",G,0.0016
+"Edible offal of sheep, fresh, chilled or frozen",G,0.0016
+"Edible offals of camels and other camelids, fresh, chilled or frozen",G,0.0016
+"Edible offals of horses and other equines, fresh, chilled or frozen",G,0.0016
+"Edible roots and tubers with high starch or inulin content, n.e.c., fresh",G,0.00038
+Eggplants (aubergines),B,0.00021
+"Eggs from other birds in shell, fresh, n.e.c.",G,0.00214
+Fat of camels,G,0.0
+Fat of pigs,G,0.0
+Figs,B,0.00032
+"Flax, raw or retted",A,0.00089
+Fonio,E,0.00341
+"Game meat, fresh, chilled or frozen",G,0.0021
+Ghee from buffalo milk,D,0.00021
+Ghee from cow milk,D,0.00021
+"Ginger, raw",D,0.0
+"Goat fat, unrendered",C,0.0
+Gooseberries,B,0.0003
+Grapes,B,0.00016
+Green corn (maize),K,0.00083
+Green garlic,B,0.00134
+"Green tea (not fermented), black tea (fermented) and partly fermented tea, in immediate packings of a content not exceeding 3 kg",C,0.00314
+Groundnut oil,C,0.0
+"Groundnuts, excluding shelled",B,0.00341
+"Hazelnuts, in shell",B,0.00333
+Hempseed,A,0.0085
+"Hen eggs in shell, fresh",G,0.00214
+Hop cones,J,0.015
+"Horse meat, fresh or chilled",G,0.00216
+Jojoba seeds,C,0.0
+"Jute, raw or retted",A,0.00089
+"Kapok fibre, raw",A,0.00089
+Kapok fruit,A,0.00524
+Kapokseed in shell,A,0.00524
+Karite nuts (sheanuts),B,0.00409
+"Kenaf, and other textile bast fibres, raw or retted",A,0.00089
+Kiwi fruit,B,0.00031
+Kola nuts,B,0.00076
+Leeks and other alliaceous vegetables,B,0.00048
+Lemons and limes,B,0.00016
+"Lentils, dry",F,0.00411
+Lettuce and chicory,B,0.00023
+Linseed,H,0.00662
+Locust beans (carobs),B,0.0048
+Lupins,B,0.0048
+Maize (corn),E,0.00213
+"Mangoes, guavas and mangosteens",B,0.00013
+Margarine and shortening,C,0.0
+Maté leaves,C,0.00314
+"Meat of asses, fresh or chilled",G,0.0019
+"Meat of buffalo, fresh or chilled",G,0.0019
+"Meat of camels, fresh or chilled",G,0.0019
+"Meat of cattle with the bone, fresh or chilled",G,0.0019
+"Meat of chickens, fresh or chilled",G,0.00165
+"Meat of ducks, fresh or chilled",G,0.00196
+"Meat of geese, fresh or chilled",G,0.00184
+"Meat of goat, fresh or chilled",G,0.0019
+"Meat of mules, fresh or chilled",G,0.0019
+"Meat of other domestic camelids, fresh or chilled",G,0.0019
+"Meat of other domestic rodents, fresh or chilled",G,0.0
+"Meat of pig with the bone, fresh or chilled",G,0.00192
+"Meat of pigeons and other birds n.e.c., fresh, chilled or frozen",G,0.0025
+"Meat of rabbits and hares, fresh or chilled",G,0.00216
+"Meat of sheep, fresh or chilled",G,0.00162
+"Meat of turkeys, fresh or chilled",G,0.00175
+Melonseed,B,0.00618
+Millet,E,0.00275
+Mixed grain,E,0.00341
+Molasses,C,0.0
+Mushrooms and truffles,B,0.00125
+Mustard seed,B,0.0085
+Natural honey,G,3e-05
+Natural rubber in primary forms,A,0.0002
+"Nutmeg, mace, cardamoms, raw",B,0.0
+Oats,E,0.00342
+Oil of linseed ,C,0.0
+Oil of maize,C,0.0
+Oil of palm kernel,C,0.0
+Oil of sesame seed,C,0.0
+Oil palm fruit,C,0.0
+Okra,B,0.00052
+Olive oil ,C,0.0
+Olives,B,0.00017
+"Onions and shallots, dry (excluding dehydrated)",B,0.00243
+"Onions and shallots, green",B,0.00033
+Oranges,B,0.0002
+"Other beans, green",B,0.00037
+Other berries and fruits of the genus vaccinium n.e.c.,B,0.00013
+Other birds,G,0.00214
+"Other citrus fruit, n.e.c. ",B,0.0002
+"Other fibre crops, raw, n.e.c. ",A,0.00089
+"Other fruits, n.e.c. ",B,0.00052
+"Other meat n.e.c. (excluding mammals), fresh, chilled or frozen",G,0.0019
+"Other nuts (excluding wild edible nuts and groundnuts), in shell, n.e.c.",B,0.00409
+"Other oil seeds, n.e.c.",C,0.0
+Other pome fruits,B,0.00016
+Other puises n.a.c,F,0.00419
+"Other stimulant, spice and aromatic crops, n.e.c. ",D,0.00194
+Other stone fruits,B,0.00052
+Other sugar crops n.e.c. ,C,0.00024
+"Other tropical fruits, n.e.c.",B,0.0002
+"Other vegetables, fresh n.e.c. ",B,0.00052
+Palm kernels,C,0.0
+Palm oil ,C,0.0
+Papayas ,B,0.00016
+Peaches and nectarines,B,0.00021
+Pears,B,0.00012
+"Peas, dry",F,0.00375
+"Peas, green",B,0.00113
+"Pepper (Piper spp.), raw ",D,0.00019
+"Peppermint, spearmint",B,0.0
+Persimmons ,B,0.00025
+"Pig fat, rendered",I,0.0
+"Pigeon peas, dry",B,0.00332
+Pineapples,B,9e-05
+"Pistachios, in shell",B,0.005
+Plantains and cooking bananas ,B,0.00023
+Plums and sloes,B,0.00017
+Pomelos and grapefruits ,B,0.00016
+Poppy seed ,A,0.00854
+Potatoes ,B,0.0005
+"Pumpkins, squash and gourds",B,0.00044
+"Pyrethrum, dried flowers ",I,0.0013
+Quinces,B,8e-05
+Quinoa ,E,0.00337
+"Ramie, raw or retted",A,0.00089
+Rape or colza seed,C,0.00546
+"Rapeseed or canola oil, crude ",C,0.0
+Raspberries,B,0.0001
+Raw cane or beet sugar (centrifugal only) ,C,0.00022
+Raw hides and skins of buffaloes,G,0.00042
+Raw hides and skins of cattle,G,0.00042
+Raw hides and skins of goats or kids,G,0.00042
+Raw hides and skins of sheep or lambs,G,0.00042
+Raw milk of buffalo,G,0.0009
+Raw milk of camel,G,0.0009
+Raw milk of cattle,G,0.00092
+Raw milk of goats,G,0.0009
+Raw milk of sheep,G,0.0009
+Raw silk (not thrown),G,0.00015
+Rice,E,0.00282
+Rye,E,0.00337
+Safflower seed,H,0.0085
+"Safflower-seed oil, crude",C,0.0
+"Seed cotton, unginned",H,0.00524
+Sesame seed,H,0.00409
+"Sheep fat, unrendered",C,0.0
+"Shorn wool, greasy, including fleece-washed shorn wool",G,0.00015
+Silk-worm cocoons suitable for reeling,G,0.00015
+"Sisal, raw",A,0.00089
+Skim milk and whey powder,G,0.0102
+Skim milk of cows,G,0.00097
+"Skim milk, condensed",G,0.00714
+"Skim milk, evaporated",G,0.00714
+"Snails, fresh, chilled, frozen, dried, salted or in brine, except sea snails",G,0.0
+Sorghum,E,0.0033
+Sour cherries,B,0.00019
+Soya bean oil,C,0.0
+Soya beans,F,0.0055
+Spinach,B,0.00046
+Strawberries,B,0.00026
+String beans,B,0.00037
+Sugar beet,C,0.00022
+Sugar cane,C,0.00024
+Sunflower seed,E,0.00618
+"Sunflower-seed oil, crude",C,0.0
+Sweet potatoes,B,0.00041
+Tallow,C,0.0
+Tallowtree seeds,C,0.0
+"Tangerines, mandarins, clementines",B,0.0002
+Taro,B,0.00041
+Tea leaves,C,0.00314
+Tomatoes,B,0.00022
+Triticale,E,0.0038
+"True hemp, raw or retted",A,0.00089
+Tung nuts,B,0.00409
+Unmanufactured tobacco,A,0.00109
+"Vanilla, raw",A,0.0011
+Vetches,K,0.00362
+"Walnuts, in shell",B,0.00409
+Watermelons,B,9e-05
+Wheat,E,0.00341
+"Whey, condensed",G,0.00043
+"Whey, dry",G,0.00576
+Whole milk powder,G,0.00714
+"Whole milk, condensed",G,0.00714
+"Whole milk, evaporated",G,0.00714
+Wine,J,0.00028
+Yams,B,0.00041
+Yautia,B,0.00041
+Yoghurt,G,0.00092
+Buffalo,M,0.00282
+Cattle,M,0.00282
+Chickens,M,0.013
+Ducks,M,0.013
+Geese,M,0.013
+Goats,M,0.00028
+Horses,M,0.0027
+Mules and hinnies,M,0.0027
+Rabbits and hares,M,0.013
+Sheep,M,0.00028
+Swine / pigs,M,0.00046
+Turkeys,M,0.013
+Asses,M,0.0
+Camels,M,0.0
+Other camelids,M,0.0
+"Other live animals, n.e.c.",M,0.0
+Other rodents,M,0.0
+"Other live animals non food, n.e.c.",M,0.0

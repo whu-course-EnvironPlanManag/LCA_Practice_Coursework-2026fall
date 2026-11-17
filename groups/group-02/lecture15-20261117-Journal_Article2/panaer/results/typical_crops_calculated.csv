@@ -1,0 +1,13 @@
+﻿Domain,Area,Element,Item,Year,Unit,Value,Flag,Flag Description,Product,Category,Coefficient,P_t,uptake_P_t,residue_P_t,feed_P_t
+Crops and livestock products,"China, mainland",Production,Maize (corn),2022,t,277203000,A,Official figure,Maize (corn),E,0.00213,590442.39,1108812,518369.61,413309.673
+Crops and livestock products,"China, mainland",Production,Rice,2022,t,208494800,A,Official figure,Rice,E,0.00282,587955.336,854828.68,266873.344,188145.70752
+Crops and livestock products,"China, mainland",Production,Wheat,2022,t,137720000,A,Official figure,Wheat,E,0.00341,469625.2,702372,232746.8,70443.78
+Crops and livestock products,India,Production,Maize (corn),2022,t,33729540,A,Official figure,Maize (corn),E,0.00213,71843.9202,134918.16,63074.2398,50290.74414
+Crops and livestock products,India,Production,Rice,2022,t,196245700,A,Official figure,Rice,E,0.00282,553412.874,804607.37,251194.496,177092.11968
+Crops and livestock products,India,Production,Wheat,2022,t,107742070,A,Official figure,Wheat,E,0.00341,367400.4587,549484.557,182084.0983,55110.068805
+Crops and livestock products,United States of America,Production,Maize (corn),2022,t,348750930,A,Official figure,Maize (corn),E,0.00213,742839.4809,1395003.72,652164.2391,519987.63663
+Crops and livestock products,United States of America,Production,Rice,2022,t,7274170,A,Official figure,Rice,E,0.00282,20513.1594,29824.097,9310.9376,6564.211008
+Crops and livestock products,United States of America,Production,Wheat,2022,t,44902320,A,Official figure,Wheat,E,0.00341,153116.9112,229001.832,75884.9208,22967.53668
+Crops and livestock products,World,Production,Maize (corn),2022,t,1163497383.13,E,Estimated value,Maize (corn),E,0.00213,2478249.42607,4653989.53252,2175740.10645,1734774.59825
+Crops and livestock products,World,Production,Rice,2022,t,776461456.61,A,Official figure,Rice,E,0.00282,2189621.30764,3183491.9721,993870.664461,700678.818445
+Crops and livestock products,World,Production,Wheat,2022,t,808441568.18,E,Estimated value,Wheat,E,0.00341,2756785.74749,4123051.99772,1366266.25022,413517.862124
