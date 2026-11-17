@@ -1,0 +1,23 @@
+level,item,parent,mass_frac,Li_pct,Ni_pct,Co_pct,Mn_pct,Fe_pct,P_pct,C_pct,Cu_pct,Al_pct,F_pct,source
+pack,LFP_pack,feedstock,0.6,,,,,,,,,,,规划设定(文献3正极结构趋势)
+pack,NMC811_pack,feedstock,0.4,,,,,,,,,,,规划设定(文献3正极结构趋势)
+component,cells,LFP_pack,0.65,,,,,,,,,,,EverBatt/GREET基准[4]
+component,pack_structure,LFP_pack,0.25,,,,,10.0,,,,20.0,,钢/塑/铝结构[4]
+component,electronics_wiring,LFP_pack,0.10,,,,,,,,30.0,,,BMS与线束[4]
+component,cells,NMC811_pack,0.65,,,,,,,,,,,EverBatt/GREET基准[4]
+component,pack_structure,NMC811_pack,0.25,,,,,10.0,,,,20.0,,钢/塑/铝结构[4]
+component,electronics_wiring,NMC811_pack,0.10,,,,,,,,30.0,,,BMS与线束[4]
+cell,LFP_cathode_active,LFP_cells,0.28,4.40,,,,35.40,19.63,,,,,LiFePO4分子量计算[4]
+cell,graphite_anode,LFP_cells,0.16,,,,,,,95.0,,,,[4]
+cell,Cu_foil,LFP_cells,0.09,,,,,,,,100.0,,,[4]
+cell,Al_foil,LFP_cells,0.07,,,,,,,,,100.0,,[4]
+cell,electrolyte,LFP_cells,0.13,0.57,,,,,,,,,9.38,12.5% LiPF6折算[4]
+cell,separator,LFP_cells,0.04,,,,,,,85.0,,,,聚烯烃[4]
+cell,cell_case,LFP_cells,0.23,,,,,10.0,,,,25.0,,钢铝壳[4]
+cell,NMC811_cathode_active,NMC811_cells,0.35,7.16,48.61,9.11,2.83,,,,,,,LiNi0.8Co0.15Mn0.05O2分子量计算[4]
+cell,graphite_anode,NMC811_cells,0.18,,,,,,,95.0,,,,[4]
+cell,Cu_foil,NMC811_cells,0.09,,,,,,,,100.0,,,[4]
+cell,Al_foil,NMC811_cells,0.06,,,,,,,,,100.0,,[4]
+cell,electrolyte,NMC811_cells,0.12,0.57,,,,,,,,,9.38,[4]
+cell,separator,NMC811_cells,0.04,,,,,,,85.0,,,,[4]
+cell,cell_case,NMC811_cells,0.16,,,,,10.0,,,,25.0,,[4]
