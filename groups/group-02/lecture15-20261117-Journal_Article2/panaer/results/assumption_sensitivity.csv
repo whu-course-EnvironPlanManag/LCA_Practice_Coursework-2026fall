@@ -1,0 +1,5 @@
+﻿case,parameter,value,new_P_change_pct,water_change_pct
+低开采产率,mining_yield,0.8,-25.6603702775,-26.3875069684
+高开采产率,mining_yield,0.95,-25.6603702775,-26.3875069684
+低养殖PUE,livestock_pue,0.16,-28.3001921442,-25.8903457433
+高养殖PUE,livestock_pue,0.3,-24.2524652819,-26.7988370165

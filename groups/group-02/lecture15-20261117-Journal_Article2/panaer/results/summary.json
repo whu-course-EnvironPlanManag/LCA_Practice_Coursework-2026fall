@@ -1,0 +1,23 @@
+{
+  "population_ratio": 1.2048233378101771,
+  "baseline_2022": {
+    "fertilizer_Mt": 20.5,
+    "new_mineral_P_Mt": 29.47436093288522,
+    "manure_recycled_Mt": 12.35862207867913,
+    "sewage_recovered_Mt": 0.0,
+    "water_loss_Mt": 12.03638217193754,
+    "other_soil_Mt": 18.45499808349779,
+    "legacy_P_Mt": 14.45983867743308,
+    "environmental_load_Mt": 44.951218932868414,
+    "crop_harvest_Mt": 14.12735693427,
+    "crop_uptake_Mt": 18.663233955408103,
+    "crop_PUE": 0.3871566159176758,
+    "livestock_PUE": 0.23,
+    "fertilizer_share": 0.5617972748362832,
+    "grass_closure_Mt": 19.331894978943186
+  },
+  "policy_r2": 0.9989312062607514,
+  "historical_EG_test_r2": 0.9991706138460311,
+  "historical_EG_beta_interaction": 0.014401064512539492,
+  "historical_EG_p_interaction": 0.031912094896455
+}

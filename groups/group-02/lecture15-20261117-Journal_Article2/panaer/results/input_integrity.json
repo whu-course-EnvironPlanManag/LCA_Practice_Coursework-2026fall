@@ -1,0 +1,97 @@
+[
+  {
+    "file": "data/assumptions.json",
+    "sha256": "e1bbdbb107602b4432e3b710a38ba892b15ab2ce95a2b3050fbf745acd1c2581",
+    "bytes": 656
+  },
+  {
+    "file": "data/country_fertilizer_2021.csv",
+    "sha256": "165d0504c0171675d5c957686ed69c5b8b5abce059b5985bbd8188ddf3b12a47",
+    "bytes": 622
+  },
+  {
+    "file": "data/country_population_2021_2050.csv",
+    "sha256": "5a7ccbd267860b28746f369f7b7a76c936d388a560111f16ca4adeecc283cfa1",
+    "bytes": 340
+  },
+  {
+    "file": "data/course_file_inventory.json",
+    "sha256": "788bc83d5e8f733b0cadab0ebfed02e565a653d2c973089f9f12afb6c9be0c44",
+    "bytes": 266144
+  },
+  {
+    "file": "data/exports_1961_2022.csv",
+    "sha256": "b2cad9603e59429a7541116dd6f19c759ea7b0d71d932d0ff10c2ac2b109aab3",
+    "bytes": 36842
+  },
+  {
+    "file": "data/fertilizer_use.csv",
+    "sha256": "ebce8e513e886df78f223cab407173626f5d2b3e690a48ca6987ab1466de1e21",
+    "bytes": 445851
+  },
+  {
+    "file": "data/imports_1961_2022.csv",
+    "sha256": "ce585e419f233d2f4509a17b6e07a2dac7cb46fa403b79ac8d1137b21c10a253",
+    "bytes": 35328
+  },
+  {
+    "file": "data/population.csv",
+    "sha256": "0699234ca5159915e39317782ee64283dca3d3f6fdd04e5281bc73c2a5946310",
+    "bytes": 559
+  },
+  {
+    "file": "data/production_1961_2022.csv",
+    "sha256": "6eaab5baecb2e21a7c24fbf97f61045900a5ba6d1b8c0f614a60b0ff8c1e84ff",
+    "bytes": 33427
+  },
+  {
+    "file": "data/production_2022_source.json",
+    "sha256": "5b78f893b552b2971a0771f35e92e6e26a037da189e1baf572a45243e35104f7",
+    "bytes": 548
+  },
+  {
+    "file": "data/production_coefficients.csv",
+    "sha256": "bfe2eb54df35e4ebfa0f14005bc4e2046063a7f0853597174e0b202337b45bd1",
+    "bytes": 9269
+  },
+  {
+    "file": "data/published_regression_011.csv",
+    "sha256": "1065e2a9db83c047fa1c2c71e652b8d58e779a95d9613ccbdd5570e27c4582bd",
+    "bytes": 1331
+  },
+  {
+    "file": "data/published_regression_012.csv",
+    "sha256": "9ca87521c9d9cf7a4cd20fadded2b70ce0521f75c2d7a81dfb8087225feed015",
+    "bytes": 1333
+  },
+  {
+    "file": "data/published_regression_013.csv",
+    "sha256": "c0b3162dfcc61549c2705819def41c3fe1b9c612d0714d048891b67fdbfaaf48",
+    "bytes": 1419
+  },
+  {
+    "file": "data/published_regression_014.csv",
+    "sha256": "b81e69d743d4a34639c0326c76725174063f38406ef25b56ede9850b25e48c62",
+    "bytes": 1494
+  },
+  {
+    "file": "data/source_index.json",
+    "sha256": "2f7801d15fca23886ce646d9072526d0f01de54f62748c5bd792a380656d71bc",
+    "bytes": 7524
+  },
+  {
+    "file": "data/typical_crops_2022.csv",
+    "sha256": "404a86c9d12722ede0f1b6f55d4294ae6e53e03b8684ce1a1801deaca3c46239",
+    "bytes": 1677
+  },
+  {
+    "file": "data/world_cropland.csv",
+    "sha256": "c527b42d2e14ac66bca2eadf087cb7bb3943fb559d71f672378df1b865b9b16a",
+    "bytes": 1685
+  },
+  {
+    "file": "data/world_products_2022_joined.csv",
+    "sha256": "65c5fe451f2109fd818c3ddd8fad1aaa7322f2eb93758eee57de51b2c8901470",
+    "bytes": 36482
+  }
+]

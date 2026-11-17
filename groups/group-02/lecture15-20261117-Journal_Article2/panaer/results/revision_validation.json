@@ -1,0 +1,12 @@
+{
+  "report_chinese_characters": 2688,
+  "local_links": "PASS",
+  "python_syntax": "PASS",
+  "balances": "PASS",
+  "policy_target": "crop_PUE",
+  "policy_design_rows": 125,
+  "country_screening_rows": 45,
+  "country_year": 2021,
+  "PR_submitted": false,
+  "precision_limit": "Not all original-paper benchmarks reproduced"
+}
