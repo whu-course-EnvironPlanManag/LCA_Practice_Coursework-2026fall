@@ -1,0 +1,405 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><title>第十五讲完整作业审阅版</title><style>body{margin:0;background:#eef2f5;color:#24323e;font:16px/1.85 "Microsoft YaHei",sans-serif}main{max-width:1000px;margin:32px auto;padding:48px 60px;background:white}h1{font-size:28px;line-height:1.5;color:#142a3b}h2{font-size:21px;margin:36px 0 14px;color:#142a3b}p{margin:14px 0}a{color:#146b94}table{border-collapse:collapse;width:100%;font-size:14px;line-height:1.6;margin:16px 0}td,th{border:1px solid #d6dee5;padding:9px 12px;text-align:left}th{background:#e6eff5}tr:nth-child(even){background:#f8fafb}.tablewrap{overflow:auto}img{max-width:100%}figure{margin:24px 0}figcaption{font-size:13px;color:#64717e}iframe{width:100%;height:900px;border:1px solid #d6dee5}code{background:#f1f4f6;font-size:13px}pre{overflow:auto;background:#f1f4f6;padding:18px;line-height:1.5;font-size:12px}summary{cursor:pointer;font-size:19px;font-weight:bold;padding:16px;background:#e6eff5}nav{background:#f3f6f8;padding:12px 20px}.notice{font-size:14px;color:#526675}@media(max-width:700px){main{padding:24px;margin:0}h1{font-size:23px}}@media print{body{background:white}main{margin:0;padding:0;max-width:none}iframe,nav,.codeblock{display:none}h2{break-after:avoid}table,figure{break-inside:avoid}a{color:inherit}}</style></head><body><main>
+<p class="notice">修订审阅版 v2 · 课程提交版本 · 2026年11月17日</p><nav><a href="#report">报告正文</a>　<a href="#sankey">交互桑基图</a>　<a href="#rubric">量规对照</a>　<a href="#audit">方法与数据核查</a>　<a href="#code">完整计算代码</a>　<a href="README.md">运行说明</a></nav>
+<article id="report"><h1>全球人为磷循环典型案例复算与3R管理情景分析</h1>
+<p>《环境规划与管理》第十五讲实训作业</p>
+<h2>一 研究目的与计算范围</h2>
+<p>磷既是农业生产必需养分，也是水体富营养化的重要驱动因素。Liu等构建了从磷矿开采到生产、消费和废弃物处理的全过程物质流框架，指出单独增加资源供应不能解决低利用效率和废弃物流失问题[1]。本作业依据课程任务书，完成历史序列整理、面向对象预算、守恒检查、桑基图以及2050年3R情景与交互回归。</p>
+<p>考虑教师允许仅计算典型案例，历史分析选择全球及中国大陆、美国、印度，原始产量换算选择水稻、小麦、玉米。三种作物2022年全球收获物磷合计7.425 Mt P，占源表谷物类别磷产出的84.0%，能够覆盖谷物磷流的主要部分。政策比较保留BAU、减施、粪肥替代、污水回收及3R组合，不穷举35国和论文全部情景。</p>
+<p>本次五子系统模型属于简化年度预算。它利用实际产出数据和文献系数，补充少量明确列示的分配假设与残差项；其数值不能替代论文完整模型的精确复现。国家案例补充采用2021年同年数据进行2050年农田PUE乐观上界筛查，不冒充完整国家模型。</p>
+<h2>二 数据整理与纯磷换算</h2>
+<p>生产及贸易历史表使用1961—2022年列，地区分别筛选，全球仅取World行，避免与洲际或国家汇总重复相加。源表已采用吨纯磷，不能再次乘含磷率。另将2022年三种作物的Production记录与含磷率字典按产品名称连接，按“产量×磷质量分数”得到纯磷吨数，再除以10⁶转为Mt P。</p>
+<p>实际字典中的小麦、水稻、玉米系数分别为0.00341、0.00282、0.00213 t P/t，等价于3.41、2.82、2.13 g P/kg[2]。因此，全球小麦8.0844亿吨乘0.00341得到2.7568 Mt P，不能再除以1000。印度1961、1962年进口类别存在缺报，保留NA，未以零值替代。表1列示独立连接换算结果，图1展示完整历史变化。</p>
+<p>表1 典型作物2022年收获物磷含量（Mt P）</p>
+<div class="tablewrap"><table><tr><th>地区</th><th>玉米</th><th>水稻</th><th>小麦</th></tr><tr><td>全球</td><td>2.4782</td><td>2.1896</td><td>2.7568</td></tr><tr><td>中国大陆</td><td>0.5904</td><td>0.5880</td><td>0.4696</td></tr><tr><td>美国</td><td>0.7428</td><td>0.0205</td><td>0.1531</td></tr><tr><td>印度</td><td>0.0718</td><td>0.5534</td><td>0.3674</td></tr></table></div>
+<p><figure><img src="figures/history.png" alt="图1 历史趋势"><figcaption>图1 历史趋势</figcaption></figure></p>
+<p>表2 典型国家2022年产品磷与贸易特征（Mt P）</p>
+<div class="tablewrap"><table><tr><th>地区</th><th>谷物磷</th><th>动物产品磷</th><th>净进口磷</th></tr><tr><td>中国大陆</td><td>1.7057</td><td>1.7074</td><td>0.7962</td></tr><tr><td>印度</td><td>1.0508</td><td>0.4898</td><td>-0.1659</td></tr><tr><td>美国</td><td>0.9578</td><td>0.4315</td><td>-0.6046</td></tr></table></div>
+<p>表2净进口为产品贸易磷的进口减出口，不能直接解释为污染排放。中国大陆应关注输入饲料和养殖排泄物的区域衔接；美国应关注谷物生产端养分输出及面源损失；印度应同时检验养分供给和利用效率，不能把全球统一减肥比例直接推广到所有农田。</p>
+<h2>三 五子系统预算与守恒</h2>
+<p>模型包括磷矿开采PMS、磷化工CIS、农田种植ACS、畜禽养殖LBS和居民消费RCS。食品加工并入消费端，水产和林业未单独展开。所有流量统一为Mt P/年；土壤净积累单列，不与水体损失混淆。</p>
+<p>ACS接收化肥、粪肥、人源回收磷、沉降与秸秆还田，输出收获物、未还田秸秆和水体流失，差额记为土壤净积累。2022年输入36.490，初级植物收获物14.127，含典型秸秆的吸收量18.663，水体流失3.367，土壤净积累14.460。秸秆回流在子系统两侧同时出现，在外边界求和时消去。</p>
+<p>守恒按“绝对输入输出差额扣除库存变化，再除以输入加10⁻⁶”计算，阈值严格小于10⁻⁴。表3同时列示各子系统与外边界结果。共享内部流另作一致性检查，向测试节点注入10%不平衡后能够触发报错。由于部分流量采用残差闭合，零误差仅表示预算自洽，不能证明绝对流量已经获得独立观测验证。</p>
+<p>表3 2022年物质平衡（Mt P/年）</p>
+<div class="tablewrap"><table><tr><th>系统</th><th>输入</th><th>输出</th><th>库存变化</th><th>相对误差</th></tr><tr><td>PMS</td><td>29.4744</td><td>29.4744</td><td>0.0000</td><td>0.00e+00</td></tr><tr><td>CIS</td><td>26.5269</td><td>26.5269</td><td>0.0000</td><td>0.00e+00</td></tr><tr><td>ACS</td><td>36.4900</td><td>22.0302</td><td>14.4598</td><td>0.00e+00</td></tr><tr><td>LBS</td><td>23.9555</td><td>23.9555</td><td>0.0000</td><td>0.00e+00</td></tr><tr><td>RCS</td><td>16.7881</td><td>16.7881</td><td>0.0000</td><td>0.00e+00</td></tr><tr><td>External_boundary</td><td>49.4356</td><td>34.9758</td><td>14.4598</td><td>2.16e-16</td></tr></table></div>
+<p><a href="figures/sankey_2022.html">打开2022年交互桑基图</a>。图中保留粪肥、人源磷和秸秆回流，矿业残余、土壤积累及水体压力分别显示。</p>
+<h2>四 2050年典型3R情景</h2>
+<p>配套人口表实际为联合国WPP 2024，而非SSP数据。全球7月1日人口由2022年80.214亿增至2050年96.644亿，倍率为1.2048。按人均消费结构不变外推需求，耕地面积和单位面积流失系数保持不变。BAU化肥量为24.699 Mt P，比论文26.9 Mt P低8.18%；差异与人口版本、需求外推路径及边界简化有关。</p>
+<p>Reduce设为化肥减施20%；Replace将粪便还田率从67%提高至75%；Recycle从尚未直接还田的人源排泄磷中回收60%，视为鸟粪石等再生磷的技术替代潜力。组合情景先扣除新增回收替代，再对剩余化肥减施，以避免重复计入节约量；作物和动物产品需求保持不变。</p>
+<p>表4 2050年情景结果（Mt P/年；均为简化模型估计）</p>
+<div class="tablewrap"><table><tr><th>情景</th><th>化肥磷</th><th>矿物磷需求</th><th>水体压力</th><th>土壤净积累</th></tr><tr><td>BAU</td><td>24.6989</td><td>35.5114</td><td>13.8121</td><td>17.9823</td></tr><tr><td>Reduce</td><td>19.7591</td><td>29.7813</td><td>13.8121</td><td>13.0425</td></tr><tr><td>Replace</td><td>22.9210</td><td>33.4490</td><td>12.0342</td><td>17.9823</td></tr><tr><td>Recycle</td><td>22.8321</td><td>33.3460</td><td>11.9453</td><td>17.9823</td></tr><tr><td>3R组合</td><td>16.8434</td><td>26.3990</td><td>10.1674</td><td>13.7714</td></tr></table></div>
+<p><figure><img src="figures/scenarios.png" alt="图2 情景比较"><figcaption>图2 情景比较</figcaption></figure></p>
+<p>3R组合相对BAU减少化肥31.81%、矿物磷需求25.66%和模型水体压力26.39%。单独减施并未改变水体压力，因为本模型农田水损失由固定面积系数确定，其主要效果表现为减少土壤积累和上游矿业负荷。该结果是模型结构所致，不能解释为现实减肥对水质无效。</p>
+<h2>五 交互回归与论文基准对照</h2>
+<p>采用三变量各5个水平、共125点的小规模设计，因变量改为农田PUE（收获物磷/农田总磷输入），不再将土壤库存并入总磷流失。变量先均值中心化，再构造乘积项并Z-score标准化，按显著性和交互系数方向解释。表5中节肥与粪肥、节肥与污水回收均为负交互，表明两项措施共享化肥替代空间，联合节约小于单措施效果简单相加。正的总减排效果与负交互项可以同时成立。</p>
+<p>表5 政策响应面的标准化回归</p>
+<div class="tablewrap"><table><tr><th>变量</th><th>标准化系数</th><th>p值</th><th>解释</th></tr><tr><td>Reduce</td><td>0.9967</td><td>&lt;1e-12</td><td>主效应</td></tr><tr><td>Replace</td><td>-0.0409</td><td>&lt;1e-12</td><td>主效应</td></tr><tr><td>Recycle</td><td>-0.0430</td><td>&lt;1e-12</td><td>主效应</td></tr><tr><td>Reduce*Replace</td><td>-0.0305</td><td>&lt;1e-12</td><td>拮抗削弱</td></tr><tr><td>Reduce*Recycle</td><td>-0.0321</td><td>&lt;1e-12</td><td>拮抗削弱</td></tr><tr><td>Replace*Recycle</td><td>0.0002</td><td>0.9454</td><td>无显著交互</td></tr></table></div>
+<p><figure><img src="figures/interaction.png" alt="图3 联合响应"><figcaption>图3 联合响应</figcaption></figure></p>
+<p>政策回归R²=0.99893，表示125个确定性情景的二阶近似拟合，p值不能作为现实政策因果证据。节肥与粪肥替代交互系数为-0.03055，p=8.83e-18，属于拮抗。单独回收等量替代化肥时总投入不变，所以PUE不变；组合中回收先减少可减施化肥，导致PUE增益小于单独减施。这不否定回收的资源与水体收益。历史产品类别回归另存输出，未将其当作政策效应。</p>
+<p>表6 独立核算与基准偏差（流量单位Mt P；化肥占比单位%）</p>
+<div class="tablewrap"><table><tr><th>指标</th><th>本次计算</th><th>参照值</th><th>相对偏差%</th></tr><tr><td>2022全球谷物磷</td><td>8.8115</td><td>8.8390</td><td>-0.3113</td></tr><tr><td>2022全球动物产品磷</td><td>5.4943</td><td>5.5098</td><td>-0.2806</td></tr><tr><td>1961全球矿物磷肥</td><td>4.8165</td><td>4.9000</td><td>-1.7034</td></tr><tr><td>2022 ACS化肥占比</td><td>56.1797</td><td>64.0000</td><td>-12.2192</td></tr><tr><td>2050 BAU化肥</td><td>24.6989</td><td>26.9000</td><td>-8.1826</td></tr></table></div>
+<p>谷物和动物产品分别由2022年原始产量乘字典系数重建，对照课程汇总表；这属于同源处理链核验。1961年化肥由国家P₂O₅记录汇总乘0.4364，对照论文约数4.9。三项偏差均小于3%，但不能代表所有指标达标。ACS化肥占比与BAU化肥仍偏低，保留误差，不以调参消除；64%为下限参照。全部任务书基准及未复算项列于量规附件。</p>
+<p>表7 典型国家2050年PUE乐观上界（%，养殖PUE假设23%）</p>
+<div class="tablewrap"><table><tr><th>地区</th><th>BAU</th><th>Reduce</th><th>Replace</th><th>Recycle</th><th>3R</th></tr><tr><td>中国大陆</td><td>29.9100</td><td>33.3872</td><td>29.9100</td><td>29.9100</td><td>32.7524</td></tr><tr><td>印度</td><td>35.4599</td><td>41.3917</td><td>35.4599</td><td>35.4599</td><td>40.5780</td></tr><tr><td>美国</td><td>63.1590</td><td>71.6222</td><td>63.1590</td><td>63.1590</td><td>70.5121</td></tr></table></div>
+<p><figure><img src="figures/country_pue.png" alt="图4 国家达标筛查"><figcaption>图4 国家达标筛查</figcaption></figure></p>
+<p>国家基期统一为2021年，避免将末年化肥冒充2022年；按各国2021—2050年人口倍率放大产出和投入。已知投入计化肥、估算粪肥和人源回收，未计种子、沉降及秸秆，故所得是PUE上界。中国与印度在该假设下未达70%；美国3R上界70.51%，但只容许另外0.0213 Mt P投入，不能确认真实达标。养殖PUE取16%、23%、30%的45组筛查已输出，国家结论受此假设影响。论文中国达标而此处未达，主要涉及完整措施、国家养殖参数与边界差异，不能以全球平均23%替代国家校准。</p>
+<p>论文图4A核实S4.3的NPR约−22.1%、CFR约−76.9%；补充文字存在归属不一致，以明确图格及正文交叉核对。课堂75%回用与论文100%不同。论文S5、35国8/17达标等仅作阅读基准，没有伪称完成全部复现。</p>
+<h2>六 环境规划建议与研究限制</h2>
+<p>第一，建立化肥与再生磷联合预算。按本模型2050年新增粪肥替代约1.778 Mt P、污水回收约1.867 Mt P的量级，分别核查可消纳土地与处理设施；回收量必须同步计入施肥总量，防止回收增加而化肥不减。</p>
+<p>第二，将国家筛查用于确定核查重点：美国优先核对遗漏投入是否超过0.0213 Mt P，中国与印度优先校准国家养殖效率及养分收支。将土壤检测作为减施前提。优先在磷盈余区域开展减施与种养衔接，在磷不足地区保障作物养分需求；不能仅以全球平均20%作为统一行政指标。实施考核分别记录化肥投入、作物移除、土壤盈余及实际入水负荷。</p>
+<p>第三，对污水回收开展分区技术经济评估。本次60%是可回收磷的情景比例，未核算镁盐、能耗、污染物限值、运输成本和季节供需。应优先选择高浓度、稳定运行且邻近消纳农田的设施，再验证等量替代假设。</p>
+<p>本作业的可靠结论是典型产品换算、预算守恒和既定假设下的相对变化，而非真实世界的精确预测。养殖效率、采矿收得率、饲草和消费残余均需进一步校准；所有论文原值、输入参数和本次输出已分别标识，未用论文百分比硬编码结果。</p>
+<h2>参考文献与数据</h2>
+<p>[1] Liu W, et al. Future strategies for phosphorus sustainability amid worsening global cycle imbalances. PNAS, 2026, 123(13): e2512673123. <a href="https://doi.org/10.1073/pnas.2512673123">论文及补充材料</a>。</p>
+<p>[2] Liu W. Global-scale raw data sets on production, trade and consumption of phosphorus-containing products. <a href="https://doi.org/10.5061/dryad.bzkh189n2">Dryad数据</a>，本次使用课程随附版本。</p>
+<p>[3] United Nations, DESA, Population Division. World Population Prospects 2024. 使用课程随附人口工作簿的Estimates与Medium variant。</p>
+<p>[4] 《环境规划与管理》第十五讲实训任务书及配套资料。<a href="https://github.com/whu-course-EnvironPlanManag/LCA_Practice_Coursework-2026fall/tree/main/starter_materials/lecture15-20261117-Journal_Article2">课程目录</a>。</p>
+<p>详细计算口径、参数出处、材料覆盖和复现限制见<a href="方法与数据核查.md">方法与数据核查</a>。数表由<a href="model.py">模型代码</a>及<a href="enhancements.py">补充核验代码</a>生成。考核证据及剩余限制见<a href="量规逐项对照.md">量规逐项对照</a>。</p></article><h2 id="sankey">2022 年交互桑基图</h2><p>可悬停读取流量，也可<a href="figures/sankey_2022.html">单独打开大图</a>。</p><iframe src="figures/sankey_2022.html" title="2022年磷流桑基图"></iframe>
+<section id="rubric"><h1>第七部分考核量规逐项对照（v2）</h1>
+<p>本表提供可核查证据，不自行承诺教师评分。老师允许典型案例减量，未明确豁免精度标准；因此未完成的原模型指标仍标记为未复算。</p>
+<div class="tablewrap"><table><tr><th>维度与权重</th><th>已补齐证据</th><th>仍存在的限制</th><th>当前判断</th></tr><tr><td>数据工程与守恒20%</td><td>相对路径；原始数据自动连接；单位检查；节点、共享边、外边界误差&lt;1e-4；故意注入错误能拒绝</td><td>部分流量以残差闭合；原始资料需同级sources目录，清洗输入已随包</td><td>技术条件满足；不是实测精度证明</td></tr><tr><td>精度与基准25%</td><td>2022谷物−0.3113%、动物产品−0.2806%、1961化肥−1.7034%；完整状态对照如下</td><td>ACS占比与2050BAU仍超8%；其他文献情景不是独立复现</td><td>三项典型核验&lt;3%；不能声称本维度全面优秀</td></tr><tr><td>算法与回归20%</td><td>20/75/60课堂情景；PUE响应；125点中心化及标准化；系数、p值及交互类型输出</td><td>确定性情景，不是政策因果试验；未得到任务书预期的正向协同</td><td>算法流程已补齐，保留负交互而不造数</td></tr><tr><td>可视化15%</td><td>离线Plotly反馈回路桑基图、情景图、国家上界图；单位与基期标注</td><td>五系统是聚合模型，原文全链条和国家达标图不能逐项视为已复刻</td><td>展示条件满足；保真范围已披露</td></tr><tr><td>报告与建议20%</td><td>2000—3000汉字正文目标；量化替代规模；三国上界和0.0213Mt P核查阈值；45组参数筛查</td><td>国家仅为乐观上界筛查，不能确认美国真实达标</td><td>已增加量化达标讨论；不能冒充图4B完整复现</td></tr></table></div>
+<h2>全部论文基准的处理状态</h2>
+<p>相对偏差=(计算−基准)/绝对基准×100%。对未计算、输入参数或不同情景，不填写0%偏差。</p>
+<div class="tablewrap"><table><tr><th>任务书基准</th><th>本次结果/处理</th><th>精度判断</th></tr><tr><td>1961—2022矿物磷累计1153Mt</td><td>未重新构建62年矿业序列</td><td>未复算；不把引用当计算</td></tr><tr><td>1961化肥4.9Mt</td><td>4.816533Mt；原始国家P₂O₅汇总换算</td><td>−1.7034%，在3%内；基准是约数</td></tr><tr><td>2022化肥20.5Mt</td><td>作为文献输入</td><td>非独立核验，偏差不适用</td></tr><tr><td>ACS化肥占比≥64%</td><td>56.1797%</td><td>对64%下限偏低12.2192%，未达精度要求</td></tr><tr><td>LBS历史平均PUE23%</td><td>作为参数，另测16%、30%</td><td>非独立复现</td></tr><tr><td>Legacy P、SWS为环境汇</td><td>独立列示土壤净积累与水体压力</td><td>结构对应，绝对量未作原模型验证</td></tr><tr><td>S4.3：NPR−22.15%、CFR约−76.9%、环境损失约−77%</td><td>论文图4A读图及正文核查；课堂75%与论文100%分开</td><td>未完成原模型同口径复算</td></tr><tr><td>S2.3：IFD−26%、FGD−35%、NPR−17%、种植/养殖PUE+18%/+36%</td><td>文献核对，课堂三措施没有覆盖饲料转化优化</td><td>未复算</td></tr><tr><td>S5：NPR−97%、损失降低33%—98%</td><td>文献引用；课堂3R不等于全链条S5</td><td>未复算</td></tr><tr><td>35国8/17达70%</td><td>引用正文；新增中、美、印2021基期上界筛查</td><td>范围减量，国家上界不能替代原图分档</td></tr><tr><td>回归R²&gt;0.85</td><td>PUE政策响应面R²=0.998931</td><td>达数值阈值，非实测外推准确度</td></tr><tr><td>节肥×粪肥显著正协同</td><td>β=−0.030548，p=8.83e−18，为拮抗</td><td>算法检验完成，但不符合预期方向；已解释模型结构</td></tr><tr><td>补充：谷物与动物产品基年汇总</td><td>原始值8.811467/5.494297Mt，对照8.838987/5.509756Mt</td><td>偏差−0.3113%/−0.2806%，同源处理链核验</td></tr></table></div>
+<h2>关键偏差解释与证据位置</h2>
+<p>养殖历史平均23%被移用于当年和各国，可能高估某些国家饲料及粪肥，从而压低ACS化肥占比与PUE；未用“64%”反解参数。人口WPP2024与论文版本不同，基准消费外推也不相同，2050化肥24.699Mt偏离26.9Mt不宜归咎于舍入误差。补充材料9.5把22.15%/76.94%归于饮食结构，但正文图4A明确在S4.3行给出约22.1%/76.9%；本作业依据图4与正文交叉核对，不将该文字矛盾当作取消考核的理由。</p>
+<p>国家筛查：美国3R上界70.5121%，额外非负投入必须不超过0.021298Mt P才可能保持70%；种子、沉降和秸秆还田尚未计全，故未确认达标。中国/印度结果仅在给定养殖效率及全球回用系数成立时有效；各国参数变化结果见45组输出。不能简单将模型筛查与原图的全措施达标名单判作同一结论。</p>
+<p>证据：<a href="results/benchmark_comparison.csv">基准对照</a>、<a href="results/policy_regression.csv">政策回归</a>、<a href="results/policy_regression_summary.txt">政策统计表</a>、<a href="results/country_PUE_screening.csv">国家筛查</a>、<a href="results/mass_balance_2022.csv">2022守恒</a>、<a href="results/scenario_mass_balance.csv">情景守恒</a>。</p>
+<h2>尚不能承诺的事项</h2>
+<p>v2补齐了PUE响应、独立基准检查和国家达标筛查，但未消除全过程精度差异。若老师要求所有所列原论文情景严格同口径、关键指标均小于3%，当前版本仍不满足，不应承诺90分以上。全文将计算、文献输入和引用结果分开；PR仍未提交。</p></section><section id="audit"><h1>方法与数据核查</h1>
+<h2>1 材料覆盖和缩减范围</h2>
+<p>课程源目录为 <code>starter_materials/lecture15-20261117-Journal_Article2</code>。完整远程文件索引保存在 <a href="data/course_file_inventory.json">course_file_inventory.json</a>，本地已下载核心材料对应关系保存在 <a href="data/source_index.json">source_index.json</a>。短文件名仅用于绕开 Windows 长路径限制，原文件名称、路径和 Git blob SHA 均保留。</p>
+<p>本次查阅论文正文 12 页及补充材料中的系统边界、计算公式、参数表、情景设置、回归方法、结果图和局限性章节，读取课程任务书、数据说明、ACS 参考代码、两份回归代码、生产与贸易汇总表、两套含磷率字典、敏感性结果表和人口表。对大体量原始逐年统计文件建立了全目录索引，实际展开核算采用 2022 年生产原始表和已计算的历史汇总表；<strong>没有声称逐行重新处理全部原始文件</strong>。</p>
+<div class="tablewrap"><table><tr><th>材料组</th><th>内容及本次用途</th></tr><tr><td>论文正文</td><td>方法、历史累计、未来情景、国家差异和局限性；不将累计量画成 2022 年年流量</td></tr><tr><td>补充材料 Text S3—S5、S8、S10</td><td>系统边界、计算方法、情景设置、数据与回归不确定性</td></tr><tr><td>补充表 S2—S4、S15</td><td>产品含磷率、吸收与流失系数、回收系数及原文情景强度</td></tr><tr><td>补充图 S3、S8、S17—S24</td><td>拓扑、历史结构、国家差异及敏感性结果的对照</td></tr><tr><td>原始资料组 1</td><td>磷矿储量、生产和贸易；识别资源端边界，本次不重算全部矿山历史</td></tr><tr><td>原始资料组 2—3</td><td>生产和贸易；历史使用汇总表，2022 年三种谷物连接原始产量</td></tr><tr><td>原始资料组 4—6</td><td>水产、活畜、林产品；按教师减量要求不单独展开，不把这些系统算成已完整复现</td></tr><tr><td>原始资料组 7—9</td><td>化肥、土地、人口与食物；检查化肥年份、提取全球耕地和人口</td></tr><tr><td>原始资料组 10及首轮修订代码</td><td>理解含磷换算与 ACS 面向对象结构；重新编写可运行脚本</td></tr><tr><td>首轮修订数据</td><td>生产/贸易汇总、含磷率、敏感性表和人口预测</td></tr><tr><td>二轮修订数据</td><td>原回归算法针对产品类别的磷流量，不能直接当作 3R 政策的统计证据</td></tr></table></div>
+<h2>2 实际文件与任务书描述的差异</h2>
+<p>1. 生产系数字典实际有 279 条产品记录。数值为质量分数，如小麦 <code>0.00341 t P/t</code>，相当于 <code>3.41 g P/kg</code>；任务书“460 类、g/kg”的概括不能直接套用到该文件。贸易字典产品覆盖范围与生产字典不同。</p>
+<p>2. <code>product_P_result (tons)</code> 已经是纯磷，且 Product 为类别代码；不能把类别代码与具体作物系数直接连接，不能再乘一次含磷率。三种作物的换算使用另一个原始生产文件。</p>
+<p>3. 生产/贸易表同时有 World、洲、国家及历史国家记录。全球使用 World 行，典型国家分别选取，不把地区总计相加。</p>
+<p>4. 化肥 CSV 到 2021 年，没有 2022 年数据。因此 2022 年全球化肥 20.5 Mt P 直接取论文正文第 4 页，标为文献输入，不标为独立复现。</p>
+<p>5. 人口工作簿内部标题为 WPP 2024；Estimates 提供 2022 年，Medium variant 提供 2050 年，单位为千人。本次转换为人，使用 7 月 1 日人口。论文补充材料注明 WPP 2019 中方案，任务书又概称 SSP，三者不能混用。</p>
+<p>6. 印度进口表 1961、1962 年共 26 个类别单元格为空。保留 NA，贸易合计要求所选 12 类全部非缺失；相应年份净进口结果也为 NA。它们不进入全球五子系统校准和全球历史回归。</p>
+<p>7. 论文表 S15 的 S2.2 是减施 30%，S4.3 是粪肥 100% 回用；课堂指定为减施 20%、粪肥 75%、污水磷回收 60%。本次课堂情景不能与原文 S4.3 或 S5 的效果百分比直接作精度考核。</p>
+<p>8. 参考 ACS 脚本的秸秆饲料函数文字与公式存在不一致：说明是作物残余物，示例代码却乘收获物。本次按表 S3 的“作物残余物用于饲料比例”采用残余物乘 25%，并在代码显式区分。</p>
+<h2>3 输入与参数来源</h2>
+<p>全部可修改参数在 <a href="data/assumptions.json">assumptions.json</a>。所有质量采用 Mt P/年；原始吨数除以 10⁶，公顷乘 kg P/ha 后除以 10⁹。</p>
+<div class="tablewrap"><table><tr><th>参数</th><th>取值</th><th>来源与性质</th></tr><tr><td>全球化肥投入</td><td>20.5 Mt P</td><td>论文正文第 4 页，文献输入</td></tr><tr><td>养殖 PUE</td><td>0.23</td><td>论文历史平均值移用到基年，为简化假设，非 2022 年实测</td></tr><tr><td>粪便还田比例</td><td>0.67</td><td>补充表 S3，平均系数</td></tr><tr><td>秸秆还田/饲用比例</td><td>0.40 / 0.25</td><td>补充表 S3，仅对三种典型谷物计秸秆</td></tr><tr><td>年人均排泄磷</td><td>0.47 kg P</td><td>补充表 S3，系数法估计</td></tr><tr><td>城镇比例</td><td>0.568</td><td>补充表 S4 φ1，移用为全局固定参数，非 WPP 2024 实测城市化率</td></tr><tr><td>城镇/乡村排泄物还田</td><td>0.22 / 0.44</td><td>补充表 S3；按比例处理，原表部分单位标识存在不一致</td></tr><tr><td>大气沉降</td><td>0.4 kg P/ha</td><td>补充表 S3 λ1</td></tr><tr><td>农田径流/淋溶</td><td>1.8 / 0.34 kg P/ha</td><td>补充表 S3 λ3、λ5；与表 S4 的另一组系数不混用</td></tr><tr><td>三作物吸收系数</td><td>水稻4.1、小麦5.1、玉米4.0 kg P/t</td><td>补充表 S3；收获物含磷量采用生产字典，因此残余物是两组系数下的差值估计</td></tr><tr><td>三作物饲用比例</td><td>水稻32%、小麦15%、玉米70%</td><td>补充表 S4；移用作典型全球分配参数</td></tr><tr><td>P/P₂O₅</td><td>0.4364</td><td>补充表 S3 化学换算</td></tr><tr><td>磷石膏产率及含磷率</td><td>4.8 t/t P₂O₅、0.4% P</td><td>补充表 S3；简化施用于化肥对应磷化工产量</td></tr><tr><td>开采纯磷收得率</td><td>0.90</td><td>本次演示假设，无原文同口径直接值；增加 0.80、0.95 敏感性核验</td></tr><tr><td>化肥占化工产品比例</td><td>0.80</td><td>参考原文农业主导结构设置的固定分配假设，并非由化工分项数据重建</td></tr><tr><td>非肥料中食物/饲料添加剂占比</td><td>0.25</td><td>补充表 S3 α19</td></tr><tr><td>添加剂分配给饲料的比例</td><td>0.50</td><td>参考表 S3 β4；该表“0.5”与百分号并列有歧义，本次明确选为 50% 的分配假设</td></tr><tr><td>有机磷等量替代系数</td><td>1</td><td>本次技术潜力假设，未考虑作物可利用率、施用季节、运输及污染物限制</td></tr></table></div>
+<p>生产端初级植物类别选择 A、B、C、D、E、F、I、K；排除 G 动物产品、H 加工饼粕、J 加工饮料、M 活畜，避免将加工副产物与原料重复充当收获物。类别 I 和 K 仍为粗粒度近似，本口径不等于论文全部作物的精细核算。</p>
+<h2>4 五子系统闭合方法</h2>
+<p>PMS 为磷矿开采，CIS 为磷化工，ACS 为农田种植，LBS 为畜禽养殖，RCS 为居民消费。食品加工并入消费端，水产和林业未显式展开。模型为年度稳态预算，不能解释长期土壤有效磷衰减或未来作物产量响应。</p>
+<p>ACS 吸收量为初级植物收获物磷加三种谷物残余物磷；输入含化肥、粪肥、人源回收磷、沉降和秸秆还田。秸秆内部回流在 ACS 两侧同时列示，在全系统外边界消去。土壤净积累按输入减去其他输出得到；这是残差定义，不能用其得到零误差来宣称实测模型精度。</p>
+<p>LBS 总饲料磷按动物产品磷除以 23% 计算，扣除产品得到排泄物磷；残余饲草边界输入等于总饲料需求减去已计作物饲料、秸秆饲料和工业添加剂。这是闭合估计，不应称为统计数据库中的实测草地摄入。</p>
+<p>RCS 人源排泄磷按人口乘 0.47 kg P/人·年计算，扣除直接还田后形成可回收污水磷。消费及加工残余为产品进入量减人源排泄磷的闭合项，包含本简化模型未展开的食品加工损失等，不是直接统计的家庭食物浪费。</p>
+<p>本模型将未回收粪便和人源污水磷划入水体压力项，沿用补充材料 S5 的简化排放路径。这是潜在排放预算，没有水文输移、污水去除和底泥再释放模块，不能作为实际河湖入水负荷预测。矿业残余、磷石膏、未利用秸秆、消费加工残余和农田净积累另列，不能全部称为水污染量。</p>
+<p>校验分三层：每个节点收支误差；共享内部边两端一致；外边界输入减输出减库存变化。另向独立测试节点注入 10% 不平衡，验证断言确实会报错。输入到输出的预算平衡与外部观测验证是不同问题。</p>
+<h2>5 情景和回归的数学定义</h2>
+<p>人口倍率 k = N2050/N2022。除耕地面积、单位面积沉降与流失量固定外，食物、饲料、化肥基准、人源排泄量均按 k 放大。保持人均消费结构、产量需求和养殖效率不变，不声称预测粮食市场或土地扩张。</p>
+<p>设 F₀ 为 2050 BAU 化肥量，M 为畜禽排泄磷，H 为基准直接还田后的人源污水磷；r 为减施比例，m 为粪便回用率，c 为污水回收率：</p>
+<p><code>F = max(0, [F₀ − (m − 0.67)M − cH] × (1 − r))</code></p>
+<p>单措施分别为 r=0.20、m=0.75、c=0.60；组合同时采用三者。先减去新增回收替代，再对剩余化肥减施，因此不会重复扣减同一份化肥。磷石膏与上游开采需求随化肥量联动。这里的 Recycle 是对“尚未直接还田的排泄物磷”的 60% 技术回收潜力，假设以鸟粪石等回收产物等磷替代；未建立沉淀化学、镁投加、能耗或设施成本模型。</p>
+<p>回归采用每个政策变量 5 个水平，共 125 个组合。原变量先中心化，再构造两两乘积项，之后分别 Z-score 标准化；修订后因变量为农田PUE，即收获物磷除以含回流的总农田输入。库存不再并入回归响应。</p>
+<p><code>z(Y) = β₀ + β₁z(r) + β₂z(m) + β₃z(c) + β₁₂z(r_c m_c) + β₁₃z(r_c c_c) + β₂₃z(m_c c_c)</code></p>
+<p>仅对显著且非数值零的交互项解释正负。响应面来自确定性预算的PUE比值，因此二阶近似R²约0.99893，p值反映响应面拟合误差，不能理解为真实世界中有 125 个独立政策试验。额外复算历史 E、G 产品类别回归，目标为 A—K 合计，不含活畜 M。随机种子 42，43 年训练、19 年测试，与参考代码相同拆分规则；这也不是政策因果检验，时间趋势、类别合计的机械相关和训练前全样本标准化均限制解释。</p>
+<h2>6 论文基准对照的诚实边界</h2>
+<div class="tablewrap"><table><tr><th>指标</th><th>本次处理</th><th>能否宣称独立高精度复现</th></tr><tr><td>1961—2022 年矿石累计 1153 Mt P</td><td>阅读引用，未重建完整矿业历史</td><td>否</td></tr><tr><td>2022 年化肥 20.5 Mt P</td><td>直接作为文献输入</td><td>否</td></tr><tr><td>LBS 历史平均 PUE 23%</td><td>移用为模型参数</td><td>否</td></tr><tr><td>原文 ACS 化肥占比约64%</td><td>简化模型约56.18%，与原文边界不同</td><td>否，须报告偏差</td></tr><tr><td>2050 BAU 化肥26.9 Mt P</td><td>本次仅人口外推得到24.70 Mt P，约低8.18%</td><td>否，人口版本和需求路径不同</td></tr><tr><td>原文 S4.3 新磷需求下降22.15%</td><td>本次75%回收情景与原文100%回收不可比</td><td>不作相同情景复现声明</td></tr><tr><td>原文 S2.3 与 S5</td><td>未运行全链条原模型</td><td>仅作为讨论背景</td></tr><tr><td>35国达标8国/17国</td><td>引用论文，本次不重算</td><td>不将三个典型国家外推为35国结论</td></tr><tr><td>产品类别 E+G 原回归</td><td>原表与本次结果并列，显著性不完全一致</td><td>输入目标口径及未提供原始回归矩阵使精确复现受限</td></tr></table></div>
+<p>因此，本作业不宣称“所有关键指标偏差小于3%”。典型案例减量可以减少范围，但不能消除参数口径、数据版本和模型边界差异。本次补充原始产量×含磷系数复算谷物与动物产品，以及1961年化肥核验，三项偏差均小于3%；仍不能将此推广为全模型高精度。</p>
+<h2>7 数据文件与来源映射</h2>
+<div class="tablewrap"><table><tr><th>随包文件</th><th>源文件编号与筛选</th></tr><tr><td>production_1961_2022.csv</td><td>015.xlsx，首工作表，World/China mainland/India/USA，全部13类别</td></tr><tr><td>exports_1961_2022.csv</td><td>016.xlsx，首工作表，相同地区</td></tr><tr><td>imports_1961_2022.csv</td><td>017.xlsx，首工作表，相同地区，保留缺失</td></tr><tr><td>production_coefficients.csv</td><td>018.xlsx，Product/Category/Coefficient 三列</td></tr><tr><td>typical_crops_2022.csv</td><td>production_2022.csv 的 Production、三种作物、四地区，与018连接</td></tr><tr><td>population.csv</td><td>022.xlsx，Estimates及Medium variant，表头第17行，2022/2050，7月1日人口</td></tr><tr><td>world_cropland.csv</td><td>005.csv，Area=World，Element=Area，单位1000 ha</td></tr><tr><td>fertilizer_use.csv</td><td>004.csv，Element=Agricultural Use，保留原始单位与纯磷列，年份只到2021</td></tr><tr><td>published_regression_011—014.csv</td><td>二轮修订结果表，Sorted by R²，E+G/B+E/A+J典型组合</td></tr></table></div>
+<p>源文件编号的完整名称、远程路径和哈希见 <a href="data/source_index.json">source_index.json</a>。原始年表另见 <a href="data/production_2022_source.json">production_2022_source.json</a>。抽取脚本 <a href="build_inputs.py">build_inputs.py</a> 可检查和重建上述输入。</p>
+<h2>8 修订版国家筛查与新基准</h2>
+<p>原始生产记录连接字典后的全球2022年数据保存在 <a href="data/world_products_2022_joined.csv">world_products_2022_joined.csv</a>，谷物E与动物产品G的重算相对汇总表偏差分别约−0.3113%和−0.2806%。未用汇总值替换独立乘积。国家记录汇总的1961年化肥P₂O₅乘0.4364得到4.8165 Mt P，相对约数4.9偏差−1.7034%；旧国家只计实际当年记录，不作跨年加总。该约数不能提供比其有效位数更高的验证精度。</p>
+<p>国家筛查的基期是2021年，人口为WPP2024的2021和2050年7月1日人口，化肥与产品均使用2021年。2050年作物收获H和动物产品A按本国人口倍率k放大；M=A×k×(1/PUE_livestock−1)。已知投入I=化肥+粪肥还田+人源直接还田+污水回收。每项额外回收同时扣化肥和加有机输入，避免遗漏分母。PUE上界=H×k/I；达到70%所允许的遗漏投入=H×k/0.7−I。</p>
+<p>因为种子、沉降、其他秸秆等非负投入缺少完整国家数据，真实总投入≥I，所以真实PUE≤所列上界。在所假设养殖PUE成立时，上界小于70%可排除达标，上界大于70%不能确认达标。人源参数沿用全球假设，养殖PUE取0.16、0.23、0.30作敏感性筛查，共三国×五情景×三效率=45组。此结果不声称复现图4B，也不将国家筛查当作新增全系统守恒模型。</p>
+<p>独立基准表、国家结果和图4由 <a href="enhancements.py">enhancements.py</a> 生成。文件规模缩减不等于省略精度披露，完整考核状态以 <a href="量规逐项对照.md">量规逐项对照</a> 为准。</p></section><details open id="code" class="codeblock"><summary>完整计算代码</summary><p><a href="enhancements.py">补充核验与国家筛查代码</a> · <a href="model.py">下载 model.py</a> · <a href="data/assumptions.json">参数文件</a> · <a href="requirements.txt">运行依赖</a></p><pre>&quot;&quot;&quot;Lecture 15: transparent reduced five-system P budget, Mt elemental P/year.
+
+Run: python model.py . All paths are relative to this file. No network access.
+Observed data, literature parameters and closure assumptions are kept distinct.
+&quot;&quot;&quot;
+from pathlib import Path
+from dataclasses import dataclass
+import json
+import itertools
+import numpy as np
+import pandas as pd
+import statsmodels.api as sm
+import matplotlib
+matplotlib.use(&#x27;Agg&#x27;)
+import matplotlib.pyplot as plt
+import plotly.graph_objects as go
+
+ROOT=Path(__file__).resolve().parent
+DATA=ROOT/&#x27;data&#x27;
+OUT=ROOT/&#x27;results&#x27;
+FIG=ROOT/&#x27;figures&#x27;
+for p in [OUT,FIG]: p.mkdir(exist_ok=True)
+plt.rcParams.update({&#x27;font.family&#x27;:&#x27;Microsoft YaHei&#x27;,&#x27;axes.unicode_minus&#x27;:False,&#x27;figure.dpi&#x27;:150})
+
+def save(df,name):
+    df.to_csv(OUT/name,index=False,encoding=&#x27;utf-8-sig&#x27;,float_format=&#x27;%.12g&#x27;)
+
+def read_history(name):
+    d=pd.read_csv(DATA/f&#x27;{name}_1961_2022.csv&#x27;)
+    assert not d.duplicated([&#x27;Country&#x27;,&#x27;Product&#x27;]).any()
+    ys=[str(y) for y in range(1961,2023)]
+    missing=d.melt(id_vars=[&#x27;Country&#x27;,&#x27;Product&#x27;],value_vars=ys,var_name=&#x27;year&#x27;,value_name=&#x27;P_t&#x27;)
+    missing=missing[missing.P_t.isna()]
+    if len(missing):
+        save(missing,f&#x27;missing_{name}.csv&#x27;)
+        assert name!=&#x27;production&#x27;, &#x27;Missing production requires investigation&#x27;
+        print(f&#x27;NOTICE: {name} has {len(missing)} missing cells; retained as NA, never zero.&#x27;)
+    assert ((d[ys]&gt;=0)|d[ys].isna()).all().all()
+    return d
+
+@dataclass
+class Subsystem:
+    name: str
+    inputs: dict
+    outputs: dict
+    stock: float=0.0
+    def verify(self):
+        ti=sum(self.inputs.values()); to=sum(self.outputs.values())
+        e=abs(ti-to-self.stock)/(ti+1e-6)
+        assert all(v&gt;=-1e-10 for v in [*self.inputs.values(),*self.outputs.values()])
+        assert e&lt;1e-4, f&#x27;{self.name} balance error {e}&#x27;
+        return dict(system=self.name,input_Mt=ti,output_Mt=to,stock_Mt=self.stock,relative_error=e)
+
+class ACSPModel(Subsystem):
+    &quot;&quot;&quot;Harvest and losses are separate from the residual soil stock budget.&quot;&quot;&quot;
+    def __init__(self,inputs,harvest,residue,water,feed,res_feed,straw_return):
+        self.harvest=harvest
+        self.uptake=harvest+residue
+        outputs={&#x27;LBS_crop&#x27;:feed,&#x27;LBS_straw&#x27;:res_feed,&#x27;RCS&#x27;:harvest-feed,
+                 &#x27;straw_return&#x27;:straw_return,&#x27;Water&#x27;:water,
+                 &#x27;Other_soil&#x27;:residue-res_feed-straw_return}
+        super().__init__(&#x27;ACS&#x27;,inputs,outputs,sum(inputs.values())-sum(outputs.values()))
+
+class PMSModel(Subsystem): pass
+class CISModel(Subsystem): pass
+class LBSModel(Subsystem): pass
+class RCSModel(Subsystem): pass
+
+class PNetwork:
+    &quot;&quot;&quot;Global food-chain reduced budget; not the full published eight-sector model.
+
+    Closure estimates (grass input, resident residual, legacy P) are exposed.
+    All scenario coefficients are computed from this base, not paper effect sizes.
+    &quot;&quot;&quot;
+    def __init__(self,base,scale=1.0,reduce=0.0,manure=0.67,recycle=0.0):
+        b=base; self.scale=scale
+        assert 0&lt;=reduce&lt;=1 and b[&#x27;manure_return&#x27;]&lt;=manure&lt;=1 and 0&lt;=recycle&lt;=1
+        H=b[&#x27;harvest&#x27;]*scale; A=b[&#x27;animal&#x27;]*scale
+        residue=b[&#x27;residue&#x27;]*scale; feed=b[&#x27;feed&#x27;]*scale
+        sr=residue*b[&#x27;straw_return&#x27;]; sf=residue*b[&#x27;straw_feed&#x27;]
+        totalfeed=A/b[&#x27;livestock_pue&#x27;]
+        excretion=totalfeed-A
+        manure_P=manure*excretion
+        human_excr=b[&#x27;population&#x27;]*scale*b[&#x27;human_excretion&#x27;]/1e9
+        human_direct=human_excr*b[&#x27;human_return&#x27;]
+        eligible=human_excr-human_direct
+        sewage_recovered=eligible*recycle
+        extra_manure=(manure-b[&#x27;manure_return&#x27;])*excretion
+        # Replacement is credited once, before a proportional efficiency measure.
+        fertilizer=max(0,(b[&#x27;fertilizer&#x27;]*scale-extra_manure-sewage_recovered)*(1-reduce))
+        # Baseline industrial feed/nonfertilizer demand held fixed across 3R runs.
+        additive=b[&#x27;feed_additive&#x27;]*scale
+        other_chemical=b[&#x27;other_chemical&#x27;]*scale
+        gypsum=fertilizer/b[&#x27;p_in_p2o5&#x27;]*b[&#x27;gypsum_per_p2o5&#x27;]*b[&#x27;p_in_gypsum&#x27;]
+        concentrate=fertilizer+additive+other_chemical+gypsum
+        ore=concentrate/b[&#x27;mining_yield&#x27;]; mine_waste=ore-concentrate
+        grass=totalfeed-feed-sf-additive
+        assert grass&gt;=0
+        deposition=b[&#x27;deposition&#x27;] # fixed cropland area
+        water_acs=b[&#x27;acs_water&#x27;]  # fixed area emission coefficients
+        acs=ACSPModel({&#x27;CIS&#x27;:fertilizer,&#x27;LBS&#x27;:manure_P,&#x27;RCS_direct&#x27;:human_direct,
+                      &#x27;RCS_recovered&#x27;:sewage_recovered,&#x27;Deposition&#x27;:deposition,&#x27;straw_return&#x27;:sr},
+                     H,residue,water_acs,feed,sf,sr)
+        lbs=LBSModel(&#x27;LBS&#x27;,{&#x27;ACS_crop&#x27;:feed,&#x27;ACS_straw&#x27;:sf,&#x27;CIS&#x27;:additive,&#x27;Grass&#x27;:grass},
+                     {&#x27;RCS&#x27;:A,&#x27;ACS&#x27;:manure_P,&#x27;Water&#x27;:excretion-manure_P})
+        rcs_in=H-feed+A
+        rcs_residual=rcs_in-human_excr
+        assert rcs_residual&gt;=0
+        rcs=RCSModel(&#x27;RCS&#x27;,{&#x27;ACS&#x27;:H-feed,&#x27;LBS&#x27;:A},
+                     {&#x27;ACS_direct&#x27;:human_direct,&#x27;ACS_recovered&#x27;:sewage_recovered,
+                      &#x27;Water&#x27;:eligible-sewage_recovered,&#x27;Other_soil&#x27;:rcs_residual})
+        cis=CISModel(&#x27;CIS&#x27;,{&#x27;PMS&#x27;:concentrate},{&#x27;ACS&#x27;:fertilizer,&#x27;LBS&#x27;:additive,
+                     &#x27;Other_products&#x27;:other_chemical,&#x27;Gypsum&#x27;:gypsum})
+        pms=PMSModel(&#x27;PMS&#x27;,{&#x27;Ore&#x27;:ore},{&#x27;CIS&#x27;:concentrate,&#x27;Mine_waste&#x27;:mine_waste})
+        self.systems=[pms,cis,acs,lbs,rcs]
+        self.balance=[s.verify() for s in self.systems]
+        # Shared internal edges must agree, independent of local residual closure.
+        pairs=[(pms.outputs[&#x27;CIS&#x27;],cis.inputs[&#x27;PMS&#x27;]), (cis.outputs[&#x27;ACS&#x27;],acs.inputs[&#x27;CIS&#x27;]),
+               (cis.outputs[&#x27;LBS&#x27;],lbs.inputs[&#x27;CIS&#x27;]), (acs.outputs[&#x27;LBS_crop&#x27;],lbs.inputs[&#x27;ACS_crop&#x27;]),
+               (acs.outputs[&#x27;LBS_straw&#x27;],lbs.inputs[&#x27;ACS_straw&#x27;]), (acs.outputs[&#x27;RCS&#x27;],rcs.inputs[&#x27;ACS&#x27;]),
+               (lbs.outputs[&#x27;ACS&#x27;],acs.inputs[&#x27;LBS&#x27;]), (lbs.outputs[&#x27;RCS&#x27;],rcs.inputs[&#x27;LBS&#x27;]),
+               (rcs.outputs[&#x27;ACS_direct&#x27;],acs.inputs[&#x27;RCS_direct&#x27;]),
+               (rcs.outputs[&#x27;ACS_recovered&#x27;],acs.inputs[&#x27;RCS_recovered&#x27;])]
+        assert all(abs(x-y)&lt;1e-10 for x,y in pairs)
+        water=water_acs+lbs.outputs[&#x27;Water&#x27;]+rcs.outputs[&#x27;Water&#x27;]
+        other_soil=acs.outputs[&#x27;Other_soil&#x27;]+rcs_residual+mine_waste+gypsum
+        external_in=ore+grass+deposition
+        external_out=water+other_soil+other_chemical
+        err=abs(external_in-external_out-acs.stock)/(external_in+1e-6)
+        assert err&lt;1e-4
+        self.balance.append(dict(system=&#x27;External_boundary&#x27;,input_Mt=external_in,
+            output_Mt=external_out,stock_Mt=acs.stock,relative_error=err))
+        self.metrics=dict(fertilizer_Mt=fertilizer,new_mineral_P_Mt=ore,
+            manure_recycled_Mt=manure_P,sewage_recovered_Mt=sewage_recovered,
+            water_loss_Mt=water,other_soil_Mt=other_soil,legacy_P_Mt=acs.stock,
+            environmental_load_Mt=water+other_soil+acs.stock,
+            crop_harvest_Mt=H,crop_uptake_Mt=acs.uptake,
+            crop_PUE=H/sum(acs.inputs.values()),livestock_PUE=A/totalfeed,
+            fertilizer_share=fertilizer/sum(acs.inputs.values()),grass_closure_Mt=grass)
+        self.edges=[(&#x27;矿石边界输入&#x27;,&#x27;PMS&#x27;,ore),(&#x27;PMS&#x27;,&#x27;CIS&#x27;,concentrate),(&#x27;PMS&#x27;,&#x27;矿业残余&#x27;,mine_waste),
+            (&#x27;CIS&#x27;,&#x27;ACS&#x27;,fertilizer),(&#x27;CIS&#x27;,&#x27;LBS&#x27;,additive),(&#x27;CIS&#x27;,&#x27;其他化工产品&#x27;,other_chemical),
+            (&#x27;CIS&#x27;,&#x27;磷石膏残余&#x27;,gypsum),(&#x27;其他饲草边界输入&#x27;,&#x27;LBS&#x27;,grass),(&#x27;大气沉降&#x27;,&#x27;ACS&#x27;,deposition),
+            (&#x27;ACS&#x27;,&#x27;LBS&#x27;,feed+sf),(&#x27;ACS&#x27;,&#x27;RCS&#x27;,H-feed),(&#x27;LBS&#x27;,&#x27;RCS&#x27;,A),
+            (&#x27;LBS&#x27;,&#x27;回收粪肥&#x27;,manure_P),(&#x27;回收粪肥&#x27;,&#x27;ACS&#x27;,manure_P),
+            (&#x27;RCS&#x27;,&#x27;回收人源磷&#x27;,human_direct+sewage_recovered),(&#x27;回收人源磷&#x27;,&#x27;ACS&#x27;,human_direct+sewage_recovered),
+            (&#x27;ACS&#x27;,&#x27;还田秸秆&#x27;,sr),(&#x27;还田秸秆&#x27;,&#x27;ACS&#x27;,sr),
+            (&#x27;ACS&#x27;,&#x27;水体损失&#x27;,water_acs),(&#x27;LBS&#x27;,&#x27;水体损失&#x27;,lbs.outputs[&#x27;Water&#x27;]),
+            (&#x27;RCS&#x27;,&#x27;水体损失&#x27;,rcs.outputs[&#x27;Water&#x27;]),(&#x27;ACS&#x27;,&#x27;非耕地残余&#x27;,acs.outputs[&#x27;Other_soil&#x27;]),
+            (&#x27;RCS&#x27;,&#x27;消费及加工残余&#x27;,rcs_residual)]
+        if acs.stock&gt;=0: self.edges.append((&#x27;ACS&#x27;,&#x27;土壤净积累&#x27;,acs.stock))
+        else: self.edges.append((&#x27;土壤库存释放&#x27;,&#x27;ACS&#x27;,-acs.stock))
+
+def main():
+    prod=read_history(&#x27;production&#x27;); imp=read_history(&#x27;imports&#x27;); exp=read_history(&#x27;exports&#x27;)
+    plant=list(&#x27;ABCDEFIK&#x27;) # exclude G animal, H cakes, J processed drinks, M live animals
+    history=[]
+    for country in prod.Country.unique():
+        p=prod[prod.Country.eq(country)].set_index(&#x27;Product&#x27;)
+        im=imp[imp.Country.eq(country)].set_index(&#x27;Product&#x27;)
+        ex=exp[exp.Country.eq(country)].set_index(&#x27;Product&#x27;)
+        for year in range(1961,2023):
+            y=str(year)
+            history.append(dict(country=country,year=year,crop_primary_P_Mt=p.loc[plant,y].sum()/1e6,
+                cereals_P_Mt=p.loc[&#x27;E&#x27;,y]/1e6,animal_products_P_Mt=p.loc[&#x27;G&#x27;,y]/1e6,
+                import_P_Mt=im.loc[list(&#x27;ABCDEFGHIJKM&#x27;),y].sum(min_count=12)/1e6,
+                export_P_Mt=ex.loc[list(&#x27;ABCDEFGHIJKM&#x27;),y].sum(min_count=12)/1e6))
+    hist=pd.DataFrame(history);hist[&#x27;net_import_Mt&#x27;]=hist.import_P_Mt-hist.export_P_Mt
+    save(hist,&#x27;historical_series.csv&#x27;)
+    crops=pd.read_csv(DATA/&#x27;typical_crops_2022.csv&#x27;)
+    assumptions=json.loads((DATA/&#x27;assumptions.json&#x27;).read_text(encoding=&#x27;utf8&#x27;))
+    uptake=assumptions[&#x27;uptake_kg_per_t&#x27;]
+    feedshare=assumptions[&#x27;crop_feed_share&#x27;]
+    crops[&#x27;uptake_P_t&#x27;]=crops.Value*crops.Item.map(uptake)/1000
+    crops[&#x27;residue_P_t&#x27;]=crops.uptake_P_t-crops.P_t
+    crops[&#x27;feed_P_t&#x27;]=crops.P_t*crops.Item.map(feedshare)
+    assert (crops.residue_P_t&gt;=0).all()
+    assert np.allclose(crops.P_t,crops.Value*crops.Coefficient)
+    save(crops,&#x27;typical_crops_calculated.csv&#x27;)
+    pop=pd.read_csv(DATA/&#x27;population.csv&#x27;);gpop=pop[pop.region.eq(&#x27;World&#x27;)].set_index(&#x27;year&#x27;).population
+    scale=float(gpop[2050]/gpop[2022])
+    land=pd.read_csv(DATA/&#x27;world_cropland.csv&#x27;).set_index(&#x27;Year&#x27;)
+    hectares=float(land.loc[2022,&#x27;Value&#x27;])*1000
+    p=hist[(hist.country==&#x27;World&#x27;)&amp;(hist.year==2022)].iloc[0]
+    w=crops[crops.Area.eq(&#x27;World&#x27;)]
+    b=dict(harvest=float(p.crop_primary_P_Mt),animal=float(p.animal_products_P_Mt),
+           residue=float(w.residue_P_t.sum()/1e6),feed=float(w.feed_P_t.sum()/1e6),
+           population=float(gpop[2022]))
+    for key in [&#x27;fertilizer&#x27;,&#x27;livestock_pue&#x27;,&#x27;manure_return&#x27;,&#x27;straw_return&#x27;,&#x27;straw_feed&#x27;,
+                &#x27;human_excretion&#x27;,&#x27;p_in_p2o5&#x27;,&#x27;gypsum_per_p2o5&#x27;,&#x27;p_in_gypsum&#x27;,&#x27;mining_yield&#x27;]:
+        b[key]=assumptions[key]
+    b[&#x27;human_return&#x27;]=assumptions[&#x27;urban_share&#x27;]*assumptions[&#x27;urban_human_return&#x27;]+(1-assumptions[&#x27;urban_share&#x27;])*assumptions[&#x27;rural_human_return&#x27;]
+    b[&#x27;deposition&#x27;]=hectares*assumptions[&#x27;deposition_kg_ha&#x27;]/1e9
+    b[&#x27;acs_water&#x27;]=hectares*(assumptions[&#x27;runoff_kg_ha&#x27;]+assumptions[&#x27;leaching_kg_ha&#x27;])/1e9
+    nonfert=b[&#x27;fertilizer&#x27;]*(1-assumptions[&#x27;fertilizer_share_of_chemical&#x27;])/assumptions[&#x27;fertilizer_share_of_chemical&#x27;]
+    b[&#x27;feed_additive&#x27;]=nonfert*assumptions[&#x27;food_feed_additive_share&#x27;]*assumptions[&#x27;feed_share_of_additives&#x27;]
+    b[&#x27;other_chemical&#x27;]=nonfert-b[&#x27;feed_additive&#x27;]
+    (OUT/&#x27;base_inputs.json&#x27;).write_text(json.dumps(b,ensure_ascii=False,indent=2),encoding=&#x27;utf8&#x27;)
+    baseline=PNetwork(b)
+    save(pd.DataFrame(baseline.balance),&#x27;mass_balance_2022.csv&#x27;)
+    save(pd.DataFrame(baseline.edges,columns=[&#x27;source&#x27;,&#x27;target&#x27;,&#x27;P_Mt&#x27;]),&#x27;flows_2022.csv&#x27;)
+    print(&#x27;2022 flows and budgets (Mt P/year)&#x27;)
+    for s in baseline.systems:
+        print(s.name,s.inputs,s.outputs,&#x27;stock=&#x27;,s.stock)
+    print(&#x27;PASS: all nodes, shared flows, external boundary &lt; 1e-4&#x27;)
+    names=[&#x27;BAU&#x27;,&#x27;Reduce&#x27;,&#x27;Replace&#x27;,&#x27;Recycle&#x27;,&#x27;3R&#x27;]
+    pars=[(0,.67,0),(.2,.67,0),(0,.75,0),(0,.67,.60),(.2,.75,.60)]
+    runs=[PNetwork(b,scale,*v) for v in pars]
+    rows=[]
+    for n,m in zip(names,runs):
+        row={&#x27;scenario&#x27;:n,**m.metrics}
+        for k in [&#x27;fertilizer_Mt&#x27;,&#x27;new_mineral_P_Mt&#x27;,&#x27;water_loss_Mt&#x27;,&#x27;environmental_load_Mt&#x27;]:
+            row[k+&#x27;_change_pct&#x27;]=100*(m.metrics[k]/runs[0].metrics[k]-1)
+        rows.append(row)
+    scen=pd.DataFrame(rows);save(scen,&#x27;scenarios_2050.csv&#x27;)
+    save(pd.DataFrame([dict(scenario=n,**r) for n,m in zip(names,runs) for r in m.balance]),&#x27;scenario_mass_balance.csv&#x27;)
+    print(scen[[&#x27;scenario&#x27;,&#x27;fertilizer_Mt&#x27;,&#x27;new_mineral_P_Mt&#x27;,&#x27;water_loss_Mt&#x27;,&#x27;legacy_P_Mt&#x27;,&#x27;crop_PUE&#x27;]].to_string(index=False))
+    # 5 x 5 x 5 factorial runs: 3 actual policy variables, no artificial noise.
+    grid=[]
+    for r,m,c in itertools.product(np.linspace(0,.2,5),np.linspace(.67,.75,5),np.linspace(0,.6,5)):
+        model=PNetwork(b,scale,float(r),float(m),float(c))
+        grid.append(dict(Reduce=r,Replace=m,Recycle=c,
+                    crop_PUE=model.metrics[&#x27;crop_PUE&#x27;]))
+    design=pd.DataFrame(grid);save(design,&#x27;policy_design_125.csv&#x27;)
+    x=design[[&#x27;Reduce&#x27;,&#x27;Replace&#x27;,&#x27;Recycle&#x27;]].copy();x=x-x.mean()
+    for a,c in itertools.combinations([&#x27;Reduce&#x27;,&#x27;Replace&#x27;,&#x27;Recycle&#x27;],2):x[a+&#x27;*&#x27;+c]=x[a]*x[c]
+    x=(x-x.mean())/x.std(ddof=0)
+    y=(design.crop_PUE-design.crop_PUE.mean())/design.crop_PUE.std(ddof=0)
+    model=sm.OLS(y,sm.add_constant(x)).fit()
+    reg=pd.DataFrame({&#x27;term&#x27;:model.params.index,&#x27;standardized_beta&#x27;:model.params.values,&#x27;p_value&#x27;:model.pvalues.values})
+    reg[&#x27;interpretation&#x27;]=[(&#x27;主效应&#x27; if &#x27;*&#x27; not in t else &#x27;无实质交互（数值零）&#x27; if abs(beta)&lt;1e-10 else
+                          &#x27;无显著交互&#x27; if pv&gt;=.05 else &#x27;协同增强&#x27; if beta&gt;0 else &#x27;拮抗削弱&#x27;)
+                          for t,beta,pv in zip(reg.term,reg.standardized_beta,reg.p_value)]
+    save(reg,&#x27;policy_regression.csv&#x27;)
+    (OUT/&#x27;policy_regression_summary.txt&#x27;).write_text(model.summary().as_text(),encoding=&#x27;utf8&#x27;)
+    print(reg.to_string(index=False));print(&#x27;Policy emulator R2&#x27;,model.rsquared)
+    checks=[]
+    for label,key,value in [(&#x27;低开采产率&#x27;,&#x27;mining_yield&#x27;,.8),(&#x27;高开采产率&#x27;,&#x27;mining_yield&#x27;,.95),
+                            (&#x27;低养殖PUE&#x27;,&#x27;livestock_pue&#x27;,.16),(&#x27;高养殖PUE&#x27;,&#x27;livestock_pue&#x27;,.30)]:
+        bb={**b,key:value}
+        ba=PNetwork(bb,scale);rr=PNetwork(bb,scale,.2,.75,.60)
+        checks.append(dict(case=label,parameter=key,value=value,
+            new_P_change_pct=(rr.metrics[&#x27;new_mineral_P_Mt&#x27;]/ba.metrics[&#x27;new_mineral_P_Mt&#x27;]-1)*100,
+            water_change_pct=(rr.metrics[&#x27;water_loss_Mt&#x27;]/ba.metrics[&#x27;water_loss_Mt&#x27;]-1)*100))
+    save(pd.DataFrame(checks),&#x27;assumption_sensitivity.csv&#x27;)
+    # Independent historical E+G regression, same random split and scaling as source.
+    pp=prod[prod.Country.eq(&#x27;World&#x27;)].set_index(&#x27;Product&#x27;)[[str(y) for y in range(1961,2023)]].T
+    pp=pp[list(&#x27;ABCDEFGHIJK&#x27;)].astype(float)
+    xx=pp[[&#x27;E&#x27;,&#x27;G&#x27;]].copy();xx[&#x27;E*G&#x27;]=(xx.E-xx.E.mean())*(xx.G-xx.G.mean())
+    yy=pp.sum(axis=1)
+    xx=(xx-xx.mean())/xx.std(ddof=0);yy=(yy-yy.mean())/yy.std(ddof=0)
+    order=np.random.RandomState(42).permutation(len(xx));test=order[:19];train=order[19:]
+    hm=sm.OLS(yy.iloc[train],sm.add_constant(xx).iloc[train]).fit()
+    predicted=hm.predict(sm.add_constant(xx).iloc[test])
+    r2=1-((yy.iloc[test]-predicted)**2).sum()/((yy.iloc[test]-yy.iloc[test].mean())**2).sum()
+    hr=pd.DataFrame({&#x27;term&#x27;:hm.params.index,&#x27;beta&#x27;:hm.params.values,&#x27;p_value&#x27;:hm.pvalues.values})
+    save(hr,&#x27;historical_EG_regression.csv&#x27;)
+    (OUT/&#x27;historical_EG_summary.txt&#x27;).write_text(hm.summary().as_text(),encoding=&#x27;utf8&#x27;)
+    # Broken-flow test proves balance checks do not automatically reclose perturbations.
+    testnode=Subsystem(&#x27;intentional_fault&#x27;,{&#x27;in&#x27;:10},{&#x27;out&#x27;:9},0)
+    try: testnode.verify()
+    except AssertionError: print(&#x27;PASS: injected 10% imbalance rejected&#x27;)
+    else: raise AssertionError(&#x27;Balance validator failed to catch fault&#x27;)
+    assert len(design)==125 and model.rsquared&gt;.85
+    assert runs[-1].metrics[&#x27;crop_harvest_Mt&#x27;]==runs[0].metrics[&#x27;crop_harvest_Mt&#x27;]
+    summary={&#x27;population_ratio&#x27;:scale,&#x27;baseline_2022&#x27;:baseline.metrics,&#x27;policy_r2&#x27;:model.rsquared,
+             &#x27;historical_EG_test_r2&#x27;:r2,&#x27;historical_EG_beta_interaction&#x27;:float(hm.params[&#x27;E*G&#x27;]),
+             &#x27;historical_EG_p_interaction&#x27;:float(hm.pvalues[&#x27;E*G&#x27;])}
+    (OUT/&#x27;summary.json&#x27;).write_text(json.dumps(summary,ensure_ascii=False,indent=2),encoding=&#x27;utf8&#x27;)
+    # Standalone offline Plotly HTML. Feedback loops are deliberately retained.
+    nodes=list(dict.fromkeys(n for a,c,v in baseline.edges for n in [a,c]))
+    ids={n:i for i,n in enumerate(nodes)}
+    fig=go.Figure(go.Sankey(arrangement=&#x27;snap&#x27;,node=dict(label=nodes,pad=22,thickness=18),
+        link=dict(source=[ids[a] for a,c,v in baseline.edges],target=[ids[c] for a,c,v in baseline.edges],
+                  value=[v for a,c,v in baseline.edges],hovertemplate=&#x27;%{source.label} → %{target.label}&lt;br&gt;%{value:.4f} Mt P/年&lt;extra&gt;&lt;/extra&gt;&#x27;)))
+    fig.update_layout(title=&#x27;2022 年全球五子系统简化磷预算（含文献参数与残差估计）&#x27;,font=dict(family=&#x27;Microsoft YaHei&#x27;,size=13),height=850)
+    fig.write_html(FIG/&#x27;sankey_2022.html&#x27;,include_plotlyjs=True)
+    labels={&#x27;World&#x27;:&#x27;全球&#x27;,&#x27;China, mainland&#x27;:&#x27;中国大陆&#x27;,&#x27;India&#x27;:&#x27;印度&#x27;,&#x27;United States of America&#x27;:&#x27;美国&#x27;}
+    fig,ax=plt.subplots(figsize=(9,4.4))
+    for c in labels:
+        h=hist[hist.country.eq(c)];ax.plot(h.year,h.cereals_P_Mt,label=labels[c],lw=2)
+    ax.set(xlabel=&#x27;年份&#x27;,ylabel=&#x27;谷物产品磷 / Mt P&#x27;,title=&#x27;图 1  全球与三个典型国家的谷物磷产出&#x27;);ax.legend();ax.grid(alpha=.18)
+    fig.tight_layout();fig.savefig(FIG/&#x27;history.png&#x27;,dpi=300);plt.close(fig)
+    fig,axs=plt.subplots(1,2,figsize=(10,4.1))
+    cn=[&#x27;BAU&#x27;,&#x27;减施20%&#x27;,&#x27;粪肥75%&#x27;,&#x27;污水60%&#x27;,&#x27;3R组合&#x27;]
+    for ax,col,title in zip(axs,[&#x27;new_mineral_P_Mt&#x27;,&#x27;water_loss_Mt&#x27;],[&#x27;原生矿物磷需求&#x27;,&#x27;模型水体压力&#x27;]):
+        ax.bar(cn,scen[col],color=[&#x27;#7894a8&#x27;,&#x27;#387ca3&#x27;,&#x27;#35937c&#x27;,&#x27;#9b85ad&#x27;,&#x27;#d38645&#x27;]);ax.set(title=title,ylabel=&#x27;Mt P/年&#x27;);ax.tick_params(axis=&#x27;x&#x27;,rotation=20)
+    fig.suptitle(&#x27;图 2  2050 年典型情景（简化模型估计）&#x27;);fig.tight_layout();fig.savefig(FIG/&#x27;scenarios.png&#x27;,dpi=300);plt.close(fig)
+    z=np.array([[PNetwork(b,scale,r,m,0).metrics[&#x27;new_mineral_P_Mt&#x27;] for r in np.linspace(0,.2,21)] for m in np.linspace(.67,.75,21)])
+    fig,ax=plt.subplots(figsize=(7,4.3));im=ax.imshow(z,origin=&#x27;lower&#x27;,aspect=&#x27;auto&#x27;,extent=[0,20,67,75],cmap=&#x27;viridis_r&#x27;)
+    ax.set(xlabel=&#x27;化肥减施率 / %&#x27;,ylabel=&#x27;粪便还田率 / %&#x27;,title=&#x27;图 3  减施与粪肥替代的联合响应&#x27;);fig.colorbar(im,ax=ax,label=&#x27;原生矿物磷需求 / Mt P/年&#x27;)
+    fig.tight_layout();fig.savefig(FIG/&#x27;interaction.png&#x27;,dpi=300);plt.close(fig)
+    print(&#x27;Finished; offline HTML and 300 DPI figures saved.&#x27;)
+
+if __name__==&#x27;__main__&#x27;: main()
+</pre></details></main></body></html>
