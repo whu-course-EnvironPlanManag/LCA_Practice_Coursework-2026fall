@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="660" viewBox="0 0 1200 660">
+<defs><marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+<path d="M0,0 L10,4 L0,8 Z" fill="#37474f"/></marker></defs>
+<rect width="100%" height="100%" fill="white"/>
+<style>
+text{font-family:Arial,sans-serif;fill:#18313b}.box{fill:#e8f1f5;stroke:#35616f;stroke-width:2}
+.unit{font-size:16px;font-weight:bold}.flow{fill:none;stroke:#37474f;stroke-width:2.5;marker-end:url(#arrow)}
+.recycle{fill:none;stroke:#1565c0;stroke-width:3;marker-end:url(#arrow)}
+.purge{fill:none;stroke:#c62828;stroke-width:2.5;marker-end:url(#arrow)}
+.label{font-size:14px}.title{font-size:23px;font-weight:bold}
+</style>
+<text x="600" y="36" text-anchor="middle" class="title">Power-to-Methanol process and recycle loop (per tonne product)</text>
+<rect class="box" x="55" y="150" width="190" height="100" rx="8"/>
+<text x="150" y="185" text-anchor="middle" class="unit">Fresh feed</text>
+<text x="150" y="211" text-anchor="middle" class="label">CO2 1,423 kg + H2 198 kg</text>
+<rect class="box" x="340" y="150" width="190" height="100" rx="8"/>
+<text x="435" y="185" text-anchor="middle" class="unit">Mixer / heater</text>
+<text x="435" y="211" text-anchor="middle" class="label">Reactor inlet 6,261 kg</text>
+<rect class="box" x="625" y="150" width="190" height="100" rx="8"/>
+<text x="720" y="185" text-anchor="middle" class="unit">Reactor</text>
+<text x="720" y="211" text-anchor="middle" class="label">Single-pass conversion 25%</text>
+<rect class="box" x="905" y="150" width="220" height="100" rx="8"/>
+<text x="1015" y="185" text-anchor="middle" class="unit">Cooler / separator</text>
+<text x="1015" y="211" text-anchor="middle" class="label">Off-gas 4,686 kg</text>
+<path class="flow" d="M245 200 H340"/><path class="flow" d="M530 200 H625"/>
+<path class="flow" d="M815 200 H905"/>
+<path class="flow" d="M1015 250 V360 H905"/>
+<rect class="box" x="700" y="320" width="205" height="90" rx="8"/>
+<text x="802" y="353" text-anchor="middle" class="unit">Distillation</text>
+<text x="802" y="380" text-anchor="middle" class="label">Crude liquid 1,575 kg</text>
+<path class="flow" d="M905 365 H700"/>
+<path class="flow" d="M700 390 H560 V485"/>
+<rect class="box" x="420" y="485" width="280" height="90" rx="8"/>
+<text x="560" y="520" text-anchor="middle" class="unit">Products / coproducts</text>
+<text x="560" y="547" text-anchor="middle" class="label">Methanol 1,000 kg; water 575 kg recycled</text>
+<rect class="box" x="305" y="320" width="180" height="90" rx="8"/>
+<text x="395" y="353" text-anchor="middle" class="unit">Gas splitter</text>
+<text x="395" y="380" text-anchor="middle" class="label">99% recycle / 1% purge*</text>
+<path class="flow" d="M1015 250 V290 H395 V320"/>
+<path class="recycle" d="M305 365 H270 V90 H435 V150"/>
+<text x="350" y="78" text-anchor="middle" class="label" fill="#1565c0">Recycle gas 4,640 kg</text>
+<path class="purge" d="M395 410 V485"/>
+<text x="305" y="458" text-anchor="middle" class="label" fill="#c62828">Purge 46 kg</text>
+<text x="58" y="625" class="label">* CSV flow values imply 46 / 4,686 = 0.98% purge. The source documentation's 3.8:1 recycle ratio is not consistent with these stream totals.</text>
+</svg>
