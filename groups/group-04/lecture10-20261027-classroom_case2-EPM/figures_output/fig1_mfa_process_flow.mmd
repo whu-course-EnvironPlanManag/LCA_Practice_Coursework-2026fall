@@ -1,0 +1,71 @@
+---
+config:
+  layout: elk
+  flowchart:
+    defaultRenderer: elk
+    curve: linear
+    diagramPadding: 64
+    nodeSpacing: 90
+    rankSpacing: 120
+  theme: base
+  themeVariables:
+    fontFamily: "Microsoft YaHei, Noto Sans CJK SC, sans-serif"
+    primaryColor: "#f4f7f8"
+    primaryTextColor: "#19313a"
+    primaryBorderColor: "#45616b"
+    lineColor: "#536a73"
+    clusterBkg: "#ffffff"
+    clusterBorder: "#b8c8ce"
+---
+flowchart LR
+    subgraph main["工业园区 10 万吨/年 CCU-PtM 主工艺流程<br/>锚点 B：绿电 100.00% | 驰放比 2.16% | 碳利用率 93.92% | 全厂电耗 10.926 亿 kWh/a"]
+        direction LR
+        capture["CO₂ 捕集与压缩<br/>MEA 吸收；出口 5.0 MPa<br/>电耗 0.262 亿 kWh/a"]
+        preheat["进料混合预热器<br/>新鲜进料 + 循环气<br/>230 ℃；5.0 MPa"]
+        reactor["甲醇合成反应器<br/>Cu/ZnO/Al₂O₃ 固定床<br/>单程转化率 25%"]
+        separator["冷凝与气液分离<br/>质量循环比 2.76:1<br/>驰放比 2.16%<br/>循环压缩电耗 0.094 亿 kWh/a"]
+        distill["双塔精馏系统<br/>常压脱轻 + 加压脱水<br/>产品纯度 ≥99.85 wt%<br/>电耗 0.120 亿 kWh/a"]
+        product["聚合级精甲醇<br/>10.00 万吨/a"]
+        capture -->|"捕集 CO₂ 14.62 万吨/a"| preheat
+        preheat -->|"反应器入口 62.49 万吨/a"| reactor
+        reactor -->|"反应器出口 62.49 万吨/a"| separator
+        separator -->|"粗甲醇液相 15.62 万吨/a"| distill
+        distill -->|"10.00 万吨/a；纯度 ≥99.85%"| product
+    end
+
+    subgraph hydrogen["PEM 电解水制氢分支"]
+        direction TB
+        freshwater["新鲜脱盐水<br/>13.85 万吨/a (71.1%)"]
+        pem["PEM 电解槽<br/>电解绿氢 2.01 万吨/a<br/>总进水 19.47 万吨/a<br/>电耗 10.450 亿 kWh/a"]
+        oxygen["阳极副产纯氧（外售）<br/>15.84 万吨/a"]
+        freshwater -->|"补水"| pem
+        pem -->|"副产氧"| oxygen
+    end
+
+    fluegas["工业点源烟气<br/>CO₂ 原料"] --> capture
+    pem -->|"电解绿氢 2.01 万吨/a"| preheat
+    separator -.->|"循环气回流 97.84%<br/>45.86 万吨/a"| preheat
+    separator -->|"驰放尾气 2.16%<br/>1.011 万吨/a；送末端处置"| purge["驰放气处理"]
+    distill -.->|"精馏产水回用<br/>28.9%<br/>5.62 万吨/a"| pem
+
+    classDef co2 fill:#fff3e8,stroke:#d97706,color:#713f12,stroke-width:1.5px
+    classDef hydrogen fill:#eaf7ef,stroke:#25834b,color:#174b2d,stroke-width:1.5px
+    classDef water fill:#eaf4fb,stroke:#2879a5,color:#174d69,stroke-width:1.5px
+    classDef process fill:#f3f6f7,stroke:#45616b,color:#19313a,stroke-width:1.5px
+    classDef product fill:#f6eff8,stroke:#8a4c9e,color:#542b64,stroke-width:1.5px
+    classDef purge fill:#fff0ef,stroke:#c43d3d,color:#742626,stroke-width:1.5px
+    class capture co2
+    class freshwater water
+    class pem,oxygen hydrogen
+    class preheat,reactor,separator,fluegas process
+    class distill,product product
+    class purge purge
+    linkStyle 0 stroke:#d97706,stroke-width:2px
+    linkStyle 1,2,3 stroke:#536a73,stroke-width:2px
+    linkStyle 4 stroke:#8a4c9e,stroke-width:2px
+    linkStyle 5 stroke:#2879a5,stroke-width:2px
+    linkStyle 6,8 stroke:#25834b,stroke-width:2px
+    linkStyle 7 stroke:#d97706,stroke-width:2px
+    linkStyle 9 stroke:#148a78,stroke-width:2px,stroke-dasharray:6 4
+    linkStyle 10 stroke:#c43d3d,stroke-width:2px
+    linkStyle 11 stroke:#2879a5,stroke-width:2px,stroke-dasharray:6 4

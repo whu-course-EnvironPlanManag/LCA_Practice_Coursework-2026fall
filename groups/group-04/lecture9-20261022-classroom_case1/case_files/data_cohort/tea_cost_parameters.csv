@@ -1,0 +1,25 @@
+Parameter_Category,Parameter_Name,Value,Unit,Description_and_Basis
+Scale,Plant_Annual_Capacity,16000,t rPET / year,Operating 7200 h/year at 2.22 t/h
+Scale,Feedstock_Annual_Demand,20000,t bales / year,Based on 80% mass conversion yield
+CAPEX,Total_Capital_Investment,28000000,RMB,Turnkey recycling line and utilities
+CAPEX,Equipment_Debaling_Washing,9000000,RMB,Shredder debaler and hot friction washers
+CAPEX,Equipment_Optical_Sorter,4000000,RMB,2-stage NIR/color sensor systems
+CAPEX,Equipment_SSP_Extrusion,8500000,RMB,Twin screw degassing and vacuum SSP reactor
+CAPEX,Auxiliary_and_Civil_Works,6500000,RMB,Wastewater plant grid connection and piping
+Financial,Depreciation_Period,10,years,Straight line method
+Financial,Salvage_Value_Rate,5,%,Residual asset recovery
+Financial,Discount_Rate_WACC,8,%,Hurdle rate for industrial investments
+Variable_OPEX,Feedstock_Baled_PET,4200,RMB / t,Market price sorted bale (1.25 t consumed)
+Variable_OPEX,Electricity_Industrial,0.65,RMB / kWh,Large industrial electricity tariff
+Variable_OPEX,Steam_Natural_Gas,85.0,RMB / GJ,Standard low pressure saturated steam
+Variable_OPEX,NaOH_Caustic_Soda,3200,RMB / t,Flake caustic soda delivered
+Variable_OPEX,Fresh_Water,4.5,RMB / m3,Industrial tap water and pipeline fee
+Variable_OPEX,Solid_Waste_Disposal,250,RMB / t,Permitted municipal solid waste incineration
+Byproduct,HDPE_Flake_Selling_Price,4500,RMB / t,Secondary HDPE flake for extrusion
+Fixed_OPEX,Labor_Headcount,35,persons,100000 RMB per capita annual salary
+Fixed_OPEX,Maintenance_Rate,3.0,%,Annual share of Total CAPEX
+Market,rPET_Pellet_Selling_Price,7600,RMB / t,Food grade certified rPET market benchmark
+Market,Virgin_PET_Selling_Price,6800,RMB / t,Petrochemical virgin PET resin benchmark
+Calculated,Unit_LCOP,6153.4,RMB / t,Levelized Cost of Production per ton rPET
+Calculated,Annual_Gross_Profit,23145600,RMB / year,Before tax operating profit
+Calculated,Dynamic_Payback_Period,2.6,years,Discounted payback at 8% WACC
