@@ -1,0 +1,51 @@
+{
+  "checked_as_of": "2026-11-03",
+  "note": "公开文件观察，非现场验收、实际吞吐或可签约剩余产能。不同期次和不同进料口径不能相加后作为整包能力。"
+  ,"observations": [
+    {
+      "evidence_id": "LF01", "facility_id": "GZ_YOUMEI", "name": "广州优美再生技术有限公司", "district": "白云区", "address": "钟落潭镇良田北路888号",
+      "evidence_type": "环境影响报告书批复", "source_id": "GZ_YOUMEI_EIA2024", "source_date": "2024-08-07",
+      "phase1_feed_tpa": 27500, "phase1_feed_scope": "动力锂电池废料，含电池、电芯、正负极片，非纯整包进料",
+      "phase2_battery_scrap_tpa": 21200, "phase2_black_mass_tpa": 7903.784,
+      "total_investment_CNY": 383650000, "environment_investment_CNY": 65000000,
+      "phase1_LCE_product_tpa": 1700, "phase2_LCE_product_tpa": 3300,
+      "status": "环评批复，不能仅据此认定当前实际剩余能力",
+      "source_url": "https://sthjj.gz.gov.cn/gkmlpt/content/9/9802/post_9802113.html", "locator": "穗环管影〔2024〕8号，第一条项目构成与投资段"
+    },
+    {
+      "evidence_id": "LF02", "facility_id": "GZ_YOUMEI", "name": "广州优美再生技术有限公司", "district": "白云区", "address": "钟落潭镇良田北路888号",
+      "evidence_type": "节能报告审查意见", "source_id": "GZ_YOUMEI_ENERGY2024", "source_date": "2024-09-02",
+      "feed_tpa": 25300, "feed_scope": "审查意见建设规模，和环评期次口径不直接统一",
+      "annual_energy_tce": 9986.85, "unit_energy_tce_tfeed": 0.395,
+      "annual_electricity_kWh": 17423200, "annual_steam_t": 36000, "annual_gas_Nm3": 3322100,
+      "status": "节能审查，数据为达产设计值，非实测运营；与单位LCE能耗分母不同",
+      "source_url": "https://fgw.gz.gov.cn/tzgg/xmgg/content/post_9843213.html", "locator": "第二、三、七条；成文2024-08-29，网页2024-09-02"
+    },
+    {
+      "evidence_id": "LF03", "facility_id": "GZ_YOUMEI", "name": "广州优美再生技术有限公司", "district": "白云区", "address": "厂址以环评及规划资料定位；不采用网页页脚天河办公地址作工厂地址",
+      "evidence_type": "投资方投产公告", "source_id": "GZ_YOUMEI_OPERATION2026", "source_date": "2026-03-25",
+      "status": "投资方公开报道投产，未取得本轮现场验收、排污许可全文、有效能力及第三方工艺数据",
+      "source_url": "https://www.u-power.com.cn/detail/222.html", "locator": "投产仪式及主体说明；宣传性效率不直接作模型实测参数"
+    },
+    {
+      "evidence_id": "LF04", "facility_id": "GZ_YOUMEI", "name": "广州报废动力电池材料再生利用项目", "district": "白云区", "address": "钟落潭镇良田北路888号",
+      "evidence_type": "建设工程规划条件核实合格证核发公示", "source_id": "GZ_YOUMEI_PLANNING2026", "source_date": "2026-05-10",
+      "status": "规划条件核实公示；建设单位名称为广州市环境保护技术有限公司，关联同址项目，不当作另一家独立再生厂",
+      "source_url": "https://ghzyj.gz.gov.cn/ywpd/cxgh/ghxkgsgb/phgbnew/gbt/2025/content/post_10802947.html", "locator": "项目名称、建设单位、建设位置与公示日期字段"
+    },
+    {
+      "evidence_id": "LF05", "facility_id": "GZ_HUADU_ZHONGHENG", "name": "广东省新能源循环经济零碳智慧产业园广州总部项目", "district": "花都区", "address": "赤坭镇赤坭工业园纬六路以北、长寿路以西T3地块",
+      "evidence_type": "花都区发展改革局重大项目说明", "source_id": "GZ_HUADU_PLAN2025", "source_date": "2025-04-14",
+      "battery_comprehensive_dismantling_tpa": 60000, "scrapped_vehicles_pa": 50000, "project_investment_CNY": 1220000000,
+      "status": "规划综合利用及拆解能力，含储能制造和报废汽车等多类建设，非确认湿法精炼能力；工期2025—2026不代表已投产",
+      "source_url": "https://www.huadu.gov.cn/xxgk/zdxm/content/post_10213799.html", "locator": "第一至五部分"
+    },
+    {
+      "evidence_id": "LF06", "facility_id": "GZ_HUADU_ZHONGHENG", "name": "退役动力电池及废锂电池综合利用项目", "district": "花都区", "address": "赤坭镇长寿路以西、赤坭大道以北",
+      "evidence_type": "环境影响报告书受理公告", "source_id": "GZ_HUADU_EIA_ACCEPT2025", "source_date": "2025-12-22",
+      "operator": "中恒智联（广州）能源发展有限公司",
+      "status": "受理公告不是环评批复、竣工验收或投产证明；与LF05可能为同园区不同建设边界，未核一致前不合并规模",
+      "source_url": "https://sthjj.gz.gov.cn/hjgl/jsxm/hpslgg/content/post_10604965.html", "locator": "受理日期、建设单位、建设地点表格"
+    }
+  ]
+}

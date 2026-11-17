@@ -1,0 +1,760 @@
+                                    Article                                                                                                    https://doi.org/10.1038/s41467-024-54634-y
+
+
+                                    Carbon footprint distributions of lithium-ion
+                                    batteries and their materials
+
+                                    Received: 7 May 2024                                 Leopold Peiseler 1,2,3 , Vanessa Schenker4, Karin Schatzmann1,3,
+                                                                                         Stephan Pﬁster 3,4, Vanessa Wood 2,3 & Tobias Schmidt 1,3
+                                    Accepted: 15 November 2024
+
+
+                                                                                         Lithium-ion batteries are pivotal in climate change mitigation. While their own
+                                        Check for updates                                carbon footprint raises concerns, existing studies are scattered, hard to
+                                                                                         compare and largely overlook the relevance of battery materials. Here, we go
+
+
+1234567890():,;   1234567890():,;
+                                                                                         beyond traditional carbon footprint analysis and develop a cost-based
+                                                                                         approach, estimating emission curves for battery materials lithium, nickel and
+                                                                                         cobalt, based on mining cost data. Combining the emission curves with
+                                                                                         regionalised battery production announcements, we present carbon footprint
+                                                                                         distributions (5th, 50th, and 95th percentiles) for lithium-ion batteries with
+                                                                                         nickel-manganese-cobalt (NMC811, 8-1-1 ratio; 59, 74 and 115 kgCO2 kWh−1) and
+                                                                                         lithium-iron-phosphate (LFP; 54, 62, 69 kgCO2 kWh−1) cathodes. Our ﬁndings
+                                                                                         reveal the dominating impact of material sourcing over production location,
+                                                                                         with nickel and lithium identiﬁed as major contributors to the carbon footprint
+                                                                                         and its variance. This research moves the ﬁeld forward by offering a nuanced
+                                                                                         understanding of battery carbon footprints, aiding in the design of dec-
+                                                                                         arbonisation policies and strategies.
+
+
+
+                                    Lithium-ion batteries (LIBs) are a key climate change mitigation               detailed understanding of the drivers and uncertainties of the CF of
+                                    technology, given their role in electrifying the transport sector and          LIBs is warranted.
+                                    enabling the deep integration of renewables1. The climate beneﬁts of                 There are a multitude of LIB life-cycle assessment (LCA) studies
+                                    LIB-enabled products are evident2,3, but the production of battery             focusing on CF19–21, but they are known to be sensitive to modelling
+                                    materials4–7 and the subsequent LIB cell manufacturing8–10 contribute          assumptions and system boundary choices19,22,23. Thus, the compar-
+                                    considerably to greenhouse gas (GHG) emissions—a problem                       ability of LCA studies is still markedly restricted, and interpreting them
+                                    recognised by stakeholders across the battery ecosystem11–14. Con-             typically requires domain knowledge. In addition, there are three
+                                    sequently, policymakers have begun to implement measures to                    major knowledge gaps that limit our current ability to comprehend
+                                    reduce the carbon footprint (CF) of LIBs14. These policies are often           (unintended) consequences and inform the speciﬁc design of pio-
+                                    connected to “green” industrial policy targets of localising battery           neering policies, such as the EU Battery Regulation, let alone evaluate
+                                    materials sourcing and cell manufacturing15,16. For instance, in 2023,         and benchmark forthcoming decarbonisation initiatives within the
+                                    the hallmark European Union (EU) Battery Regulation came into                  battery sector.
+                                    force, coupling market access for EU and non-EU battery producers                    First, while the CF impact on energy consumption during battery
+                                    to battery CFs starting in 202811. Accordingly, leading battery pro-           cell manufacturing is relatively well-researched, only a small number of
+                                    ducers recently announced sharp CF reduction targets12,17. Further-            studies have evaluated the CF of individual battery materials. Fur-
+                                    more, the US Inﬂation Reduction Act (IRA) incentivises the                     thermore, most of these studies have either analysed individual mining
+                                    localisation of battery material and cell manufacturing16,18, which in         sites or presented commodity-aggregated CF estimates, thus failing to
+                                    turn affects batteries’ CF. Given these policy developments, a                 provide a detailed commodity-level picture that includes variance
+
+
+                                    1
+                                     Energy and Technology Policy Group, ETH Zurich; Clausiusstrasse 37, CH-8092 Zurich, Switzerland. 2Materials and Device Engineering Group, ETH Zurich;
+                                    Gloriastrasse 35, CH-8092 Zurich, Switzerland. 3Institute of Science, Technology and Policy, ETH Zurich; Universitätstrasse 41, CH-8092 Zurich, Switzerland.
+                                    4
+                                     Chair of Ecological Systems Design, ETH Zurich; Laura-Hezner-Weg 7, CH-8093 Zurich, Switzerland.         e-mail: pleopold@ethz.ch
+
+
+                                    Nature Communications | (2024)15:10301                                                                                                                    1
+Article                                                                                                https://doi.org/10.1038/s41467-024-54634-y
+
+
+among mining sites (see Supplementary Note 4 for an extensive lit-            share at the lower CF levels. For a detailed examination of this ﬁrst
+erature review). Second, battery material CF distributions are not            plateau, focusing solely on sulﬁde mines, refer to Supplemen-
+systematically integrated into battery CF analyses. While initial             tary Fig. 4.
+research has begun to aggregate the CF data points of individual bat-              As data for nickel laterite ore mining were not available from S&P
+tery materials into a battery-level analysis6,24, the materials’ impact and   Global, it was imputed (dotted in Fig. 1d, f) based on literature, recent
+induced variance on battery CF have not yet been quantiﬁed. Third,            reports, and the USGS28 and BGS29 datasets. Importantly, for imputed
+while some studies have analysed the impact of individual battery cell        data, individual bars corresponded to country and not to mine levels;
+production locations, there is no representative global CF distribution       see the Methods section for more information. The centre and right-
+for LIB with nickel-based cathodes (NMC) and iron-based cathodes              most plateaus corresponded to two different laterite ore types: limo-
+(LFP). In general, the strong literature focus on NMC is problematic,         nite and saprolite. They comprised around 54% and 6%, respectively, of
+considering LFP market share projections of over 35% by 203025,26.            the covered supply chain (Fig. 1d’s x axis). The CF levels of the second
+      In this work, to close these knowledge gaps, we develop an              and third plateaus were, respectively, 2 and 7 times the average of the
+approach to quantify material CFs based on cost data. Applying this           left plateau, although a small number of sulﬁde deposit mines exhib-
+approach yields emission curves for key battery materials, i.e., mine-        ited higher CF than limonite deposit mines (bars between the centre
+level CF estimations and production volumes for lithium, nickel, and          and rightmost plateaus). The two observed plateaus corresponded to
+cobalt, which we also contrast with ﬁndings from a comprehensive              different deposit types, which, in turn, entailed fundamentally differ-
+literature review. Our insights offer seminal coverage and go beyond          ent process ﬂowsheets. Similar to lithium, these three plateaus are
+existing mine-speciﬁc or averaged material CF studies. Furthermore,           manifested as a tri-modal probability distribution in Supplemen-
+we use these emission curves and combine them with globally                   tary Fig. 2.
+announced battery production locations until 2030 to derive—based                  The existing literature and database values were generally in line
+on Monte Carlo simulations—the most representative CF distributions           with the modelled CF of sulﬁde nickel mining (cf. Supplementary
+for NMC811 (nickel-manganese-cobalt at an 8-1-1 ratio) and LFP LIBs           Fig. 4). However, the academic literature and databases do not sufﬁ-
+available to date. Lastly, informed by 17 expert interviews, we trian-        ciently cover nickel from laterite sources and thus underestimate the
+gulate and discuss our ﬁndings before deriving implications for pol-          average CF of nickel sulfate. This gap is likely due to the recent
+icymakers and the battery ecosystem.                                          exponential growth in LIB demand, which has resulted in the sourcing
+                                                                              of mined laterite for LIBs—an ore deposit that used to be mined pre-
+Results                                                                       dominantly for the steel industry31,32. By 2022, Indonesia (home to
+CF of lithium, cobalt and nickel battery materials                            laterite ore deposits) established itself as the largest nickel mining
+The emission curves presented in Fig. 1a, d, g were based on mine-level       country, followed by Russia, Canada and Chile (all home to sulﬁde ore
+cost data from S&P Global27, where our approach translates costs into         deposits).
+emissions. Speciﬁcally, depending on the mine location and proces-                 The emission curve for cobalt shown in Fig. 1g follows a step-like
+sing steps, we derived unique conversion factors, called dollar emis-         function, where the four largest mines are all located in the Democratic
+sion intensities, that we used to approximate emissions for different         Republic of the Congo (DRC) and comprise 90% of the covered supply
+cost categories. Unless dotted, every bar in Fig. 1a, d, g represents one     chain. Sites in the DRC mine copper in exclusively stratiform sediment-
+mine. Figure 1b, e, h contrast these curves with values from a struc-         hosted (SSH) deposits and produce cobalt as a sellable by-product33.
+tured review of the literature and databases. Figure 1c, f, i present         Cobalt from SSH deposits accounts for the overwhelming majority of
+global mining production for 2022, categorised by production coun-            the supply chain (Fig. 1i) while by-product cobalt from laterite and
+try, deposit type and data availability and are based on data from the        sulﬁde nickel ore deposits plays a minor role.
+U.S. Geological Survey (USGS)28, British Geological Survey (BGS)29, and            Similar to nickel laterite, S&P Global data were not available for
+Deutsche Rohstoffagentur (DERA)30. See the Methods section for                graphite. Acknowledging Graphite’s relevance34, we used CF ranges
+detailed information.                                                         from the academic literature and production volumes from USGS28
+      The emission curve for lithium carbonate depicted in Fig. 1a            and DERA30. Panel types a–c are shown for graphite in Supplementary
+reveals two primary plateaus: the ﬁrst, characterised by low CF levels,       Fig. 3. Graphite’s supply chain is dominated by China, where synthetic
+is predominantly sourced from South American brine operations, and            graphite production accounts for around two-thirds, with slightly
+the second, approximately three times higher in CF, is mainly com-            higher CF and higher CF ranges than natural graphite. Similar to all
+posed of Australian hard rock (spodumene) deposits. Moreover, our             previous cases, median database values were lower than median lit-
+analysis showed that while the CFs for brine sites exhibit a wide range,      erature values.
+spanning from the lowest to the highest values, all spodumene sites—
+identiﬁable by grey bar segments in Fig. 1a—fall within the higher CF         Monte Carlo simulations for LIB with NMC and LFP cathodes
+plateau.                                                                      In this section, we present the global representative CF distributions
+      A large share of the covered supply chain (x axis in Fig. 1a) com-      for LIB with NMC and LFP cathodes. Given the opacity of the supply
+prises only a handful of mines with high output volumes. Because              chain, we assumed no regional material preferences among battery
+many values in the literature and databases refer to South American           producers. For example, we assumed that Chinese and German battery
+brine operations, the median literature and database CF is skewed             producers were equally likely to source Chilean lithium carbonate.
+accordingly towards those mines, as shown by the horizontal lines in          Next, we combined the four emission curves with regionalised
+Fig. 1b. However, looking at the global production locations in 2022, it      announced LIB production capacities until 2030 to obtain CF dis-
+becomes evident that the actual median CF at around 350 kt of lithium         tributions for LIB cells using Monte Carlo simulations.
+carbonate is about three times higher.                                             For NMC811 cells, whose cathode metal shares comprise 80%
+      Nickel’s emission curve, as depicted in Fig. 1d, can be segmented       nickel, 10% manganese and 10% cobalt, the global CF distribution was
+into three plateaus. The leftmost plateau, accounting for approxi-            bi-modal and characterised by a wide 90% conﬁdence interval, with
+mately 40% of the covered supply chain, was analysed using the same           global CF values ranging from 59 to 115 kgCO2e kWh−1 (Fig. 2a). The left
+methodology applied to lithium in Fig. 1a. All mines within this plateau      mode was composed of all emission curves, while the second mode
+were extracting sulﬁde ore and corresponded to the non-hatched                was driven by the rightmost nickel sulfate plateau (Fig. 1d). The median
+waterfall segments in Fig. 1f. The CFs in this segment exhibited a            CF values ranged from 69 to 77 kgCO2e kWh−1 for Europe and China,
+hockey-stick curve pattern, with Russia holding the largest market            respectively (Supplementary Table 3). Importantly, however, the
+
+
+Nature Communications | (2024)15:10301                                                                                                               2
+Article                                                                                                              https://doi.org/10.1038/s41467-024-54634-y
+
+
+
+
+Fig. 1 | Emission curves, literature and database carbon footprint values and           underlying review work. c, f, i Doughnut charts of global 2022 battery-speciﬁc
+2022 supply chain for lithium carbonate, nickel sulfate and cobalt sulfate              supply curves, i.e., encompassing all intermediate products that could be reﬁned to
+equivalent. a, d, g Emission curves for lithium, nickel, and cobalt. Coloured bar       battery-grade chemicals. Inner rings refer to country mining shares, while outer
+segments correspond to modelled data sources, solid grey to literature-based data       rings indicate deposit types and data coverage. Dotted bar segments refer to
+sources, and dotted grey to imputation-based data sources. Production volumes on        imputed data, and chequered segments indicate no data availability. Country
+the x axis are indicated in chemical equivalents, i.e., encompassing all intermediate   acronyms: AR Argentina, AU Australia, BR Brazil, CA Canada, CL Chile, CN China,
+products that could be reﬁned to battery-grade chemicals. All sulfate products are      DRC Democratic Republic of the Congo, ID Indonesia, NC New Caledonia (sui
+in their anhydrous form. Whiskers indicate the minimum and maximum values.              generis collectivity of France), PH Philippines, RU Russia, US United States of
+b, e, h Literature, report and database (ecoinvent 3.9.1 and GREET 2021) values.        America, ZA South Africa, ZW Zimbabwe. Other acronyms: SSH Stratiform
+Horizontal lines indicate respective medians. See Supplementary Note 4 for the          sediment-hosted Cu-Co deposits. Source data are provided as a Source Data ﬁle.
+
+
+
+
+Nature Communications | (2024)15:10301                                                                                                                                   3
+Article                                                                                                             https://doi.org/10.1038/s41467-024-54634-y
+
+
+
+
+Fig. 2 | Carbon footprint proﬁle of battery cells with NMC811 cathodes. a Top:         US: United States, EU: Europe, KRJP: Korea + Japan. b Relative CF contributions
+probability density functions for global (black) and regionalised (coloured) pro-      averaged for 100 data points around the global median CF. See Supplementary
+duction regions. Bottom: Jitter plot with boxplots (90% conﬁdence interval, 5th,       Table 5 for the tabulated values. c Relative variance contributions of sampled
+25th, 50th, 75th and 95th percentiles). One dot in the jitter plot represents a con-   parameters for the global Monte Carlo dataset. See Supplementary Table 6 for the
+ceptual 1 GWh manufacturing plant with a unique combination of production              tabulated values. a–c without nickel laterite mining are available in Supplementary
+location and CFs of lithium carbonate, nickel sulfate, cobalt sulfate and graphite.    Fig. 7. a is also available in a per-kg unit in Supplementary Fig. 5. Source data are
+See Supplementary Table 3 for the tabulated values. Region acronyms: CN: China,        provided as a Source Data ﬁle.
+
+
+
+
+density functions and dot distributions in Fig. 1a were similar across                 69 kgCO2e kWh−1 (Fig. 3a) and, given the nickel-free cathode, was
+regions and revealed the subordinate role of battery production                        smaller and more symmetrical than in Fig. 2a. The median CF ranges, at
+location for GHG emissions vis-à-vis material procurement choices.                     58–62 kgCO2e kWh−1 for Europe and China, respectively (Supplemen-
+This ﬁnding still held if nickel laterite mining was excluded (Supple-                 tary Table 3), were ~16% lower than for NMC cells, including laterite
+mentary Fig. 7). Moreover, contrary to the widespread perception of                    mining. Differences with respect to production locations were even
+high CFs of Chinese LIBs, NMC811 cells produced in China spanned the                   less pronounced compared to cells with NMC cathodes, because less
+entire CF spectrum due to announced production in provinces with                       electricity is required for material synthesis and cell production.
+low-carbon electricity grids.                                                               Concerning CF distribution, lithium carbonate and graphite were
+     When we dissected the CF determinants around the global med-                      the largest contributors; non-battery-speciﬁc materials gained relative
+ian (Fig. 2b), it became apparent that nickel sulfate played a dominant                shares compared to LIBs with NMC cathodes. The contribution of
+role. Collectively, active materials made up over 50% of the CF, while                 electricity and, thus, production location noticeably depended on the
+contributions from electricity consumption during cell production                      production method of the active material. Based on expert interviews,
+accounted for around 15% (see Supplementary Table 4 for a detailed                     we show results for a ratio of 9:1 (solid-state vs. hydrothermal LFP
+breakdown). Adding the contributions of non-active metals, such as                     active material synthesis) in Fig. 3 but also provide separate panels a–c
+copper (7%) or aluminium (5%), highlighted the role of materials even                  for the two isolated synthesis methods in Supplementary Figs. 8 and 9,
+more. To understand CF uncertainty drivers, the global Monte Carlo                     respectively. Finally, regardless of the synthesis route, lithium carbo-
+simulation results were broken down into variance contributions.                       nate contributed the most, by far, to the observed variance (Fig. 3c).
+Figure 2c shows that the CF variance was predominantly driven by
+nickel sulfate, whose tri-modal probability density function (Supple-                  Discussion
+mentary Fig. 2c) is characterised by the three plateaus in its emission                In this section, we ﬁrst summarise this work’s contribution and con-
+curve (Fig. 1d). Results from the analysis without laterite mining                     textualise our ﬁndings. We continue with an in-depth discussion of the
+(Supplementary Fig. 7) identiﬁed production location, nickel sulfate                   implications for environmental and industrial policy before conclud-
+and lithium carbonate as the main drivers, whereas cobalt sulfate and                  ing with an outlook.
+graphite played negligible roles.                                                           This study developed bottom-up modelled emission curves for
+     For LFP cells, whose cathodes mainly comprised lithium, iron and                  the battery materials lithium carbonate, nickel sulfate and cobalt sul-
+phosphate, the global CF distribution closely traced the Chinese dis-                  fate. Due to the different characteristics of each battery material, the
+tribution, as almost all LFP cell production is announced in China                     shapes (Fig. 1a, d, g) and data coverage (Fig. 1c, f, i) of their emission
+(Fig. 3a). The global 90% conﬁdence interval for LFP spanned 54 to                     curves vary noticeably, making broad generalisations inappropriate.
+
+
+Nature Communications | (2024)15:10301                                                                                                                                    4
+Article                                                                                                             https://doi.org/10.1038/s41467-024-54634-y
+
+
+
+
+Fig. 3 | Carbon footprint proﬁle of battery cells with LFP cathodes. a Top:            KRJP: Korea + Japan. b Relative CF contributions averaged for 100 data points
+Probability density functions for global (black) and regionalised (coloured) pro-      around the global median CF. See Supplementary Table 5 for the tabulated values.
+duction regions. Bottom: Jitter plot with boxplots (90% conﬁdence interval, 5th,       c Relative variance contributions of sampled parameters for the global Monte Carlo
+25th, 50th, 75th and 95th percentiles). One dot in the jitter plot represents a con-   dataset. See Supplementary Table 6 for the tabulated values. a–c are also displayed
+ceptual 1 GWh manufacturing plant with a unique combination of production              for individual solid-state (Supplementary Fig. 8) and hydrothermal (Supplementary
+location and CFs of lithium carbonate and graphite. See Supplementary Table 3 for      Fig. 9) LFP synthesis routes. a is also available in a per-kg unit in Supplementary
+the tabulated values. Region acronyms: CN: China, US: United States, EU: Europe,       Fig. 6. Source data are provided as a Source Data ﬁle.
+
+
+
+
+By incorporating these curves into battery cell-level CF analyses and                        In France, a country with low-carbon electricity, the break-even
+mapping projected battery production capacities, our research pro-                     mileages of EVs with built-in 5th and 95th percentile LIBs are around
+vides the most representative CF distributions for NMC811 and LFP                      50,000 km and 80,000 km, respectively (NMC, including laterite
+LIBs available to date. Our ﬁndings highlight the elevated inﬂuence of                 mining). Thus, replacing 5th percentile libs with libs from the 95th
+battery materials vis-à-vis cell production locations on CF contribu-                  percentile delays break-even mileage by ~25,000 km. Conversely, in
+tions and variance in distributions. In particular, nickel and lithium                 less favourable scenarios, such as in Poland, the break-even mileage is
+emerged as the materials with the largest impacts.                                     delayed by over 70,000 km, arguably stalling the climate effectiveness
+     The ﬁndings indicate that LIBs with NMC cathodes exhibit higher                   of EVs for several years. As this study presumed ﬁxed chemical com-
+CF characteristics than their LFP counterparts, particularly when nickel               positions and manufacturing processes, it captured only a fraction of
+laterite mining is considered. However, this direct comparison should                  the real-world variance. Consequently, the true range of CFs and their
+be approached with caution, as calculations were ﬁrst made on a mass                   inﬂuence on GHG reduction effectiveness might be even more pro-
+basis before being converted to a capacity basis, as shown in                          nounced. Notably, this simpliﬁed calculation underscores the impor-
+Figs. 2 and 3. Although this study also provides CFs on a per-kilogram                 tance of the battery’s CF but does not account for the multitude of
+basis in Supplementary Figs. 5 and 6 and employs up-to-date cell                       other parameters36–38 that inﬂuence the real-world lifetime CO2 emis-
+energy densities for conversion35, the varying rates and directions of                 sions of thermal and EVs.
+innovation at the cell, module and pack levels for NMC and LFP tech-                         The battery and mining industry is approaching a pivotal phase39,
+nologies will affect future CF comparisons.                                            whereby the majority of cell production and mining capacity will be
+     To put the reported CF distributions into a practical perspective,                built by 203525,40. While materials from battery recycling are expected
+we built on Sacchi et al.3 to calculate break-even mileages, i.e., an EV’s             to reduce environmental damage, raw material extraction will need to
+total kilometres driven at which its lifetime GHG emissions equal                      provide the lion’s share of battery materials in the foreseeable
+those of a comparable combustion engine vehicle. For illustrative                      future41–47. As the task ahead involves not merely scaling up mining,
+purposes, we selected mid-sized SUV electric vehicles (EVs) with                       reﬁning, and cell production but also ensuring that emission trajec-
+built-in NMC batteries from the global 5th and 95th percentiles,                       tories are directed downwards, a distinct window of opportunity for
+respectively. Figure 4a represents the CFs of vehicles when leaving                    policy intervention has opened. However, it is crucial that policy-
+the factory, while Fig. 4b shows lifetime emissions throughout                         makers apply good governance44 and thoughtfully align environ-
+operation. The slopes of the lines correspond to the grid CO2                          mental and industrial policy to achieve this goal15.
+intensities of the countries in which EVs are operated and the ﬁxed                          From an environmental policy perspective, the similarities of
+vehicle energy/fuel efﬁciencies.                                                       regional CF proﬁles (coloured lines in Figs. 2a and 3a) suggest that
+
+
+Nature Communications | (2024)15:10301                                                                                                                                  5
+Article                                                                                                              https://doi.org/10.1038/s41467-024-54634-y
+
+
+
+
+Fig. 4 | Break-even mileages (total kilometres driven) for electric and conven-         just the regions for which battery plant announcements were registered; Europe:
+tional vehicles, regional grid CO2 intensities, and cost vs. emission scatters for      ecoinvent region of Europe without Switzerland; Korean & Japan (KRJP): average of
+lithium, nickel, and cobalt. a Production CO2 emissions of a petrol vehicle and         two countries. All values are taken from ecoinvent 3.9.1. d Relationship between
+two electric vehicles (EVs) with built-in batteries from the 5th and 95th CF per-       modelled emissions and all-in costs. In addition to on-site mine costs, which are the
+centiles of the global CF distribution from Fig. 2a. b Life-cycle (production + use     basis for the CF calculation, all-in costs also include treatment and reﬁnement
+phase) CO2 emissions shown for operation in France (pink) and Poland (blue).            charges, royalties, depreciation, and sustaining costs. Trendlines are weighted by
+Break-even mileages are indicated by the dashed vertical lines. For more details,       mine output volumes, which are indicated by square areas. All-in-cost cost data are
+refer to Sacchi et al.3 and the Methods section. c Comparison of grid CO2 intensities   only available for lithium from brines, nickel from sulphidic ore, and cobalt from
+of countries and regions for which battery announcements were registered. US            stratiform sediment-hosted Cu-Co deposits (SSH). The index tmetal refers to the
+states and Chinese provinces were aggregated into regions consistent with ecoin-        payable metal content in any reﬁned output product. Source data are provided as a
+vent’s classiﬁcation. Averages (triangles) refer to: US/China: entire country and not   Source Data ﬁle.
+
+
+
+
+Nature Communications | (2024)15:10301                                                                                                                                     6
+Article                                                                                                https://doi.org/10.1038/s41467-024-54634-y
+
+
+merely moving manufacturing sites to regions with low-carbon elec-           of their LIBs, it must be determined whether batteries with lower CFs
+tricity has a limited impact on decarbonisation, as materials constitute     are more cost-effective than those with higher CFs. If low-CF batteries
+the dominant role. Furthermore, product CF policies are scrutinised          indeed turned out to be cheaper, they would automatically be
+from a number of angles, including the opacity of supply chains,             favoured by the market, converting green premiums into company
+compliance costs and data conﬁdentiality. This raises an important           proﬁts and rendering any low-CF policy support debatable. Concern-
+policy design question: How granular should material emissions data          ing LIB materials, Fig. 4d shows that low-carbon lithium carbonate
+for battery CF calculations be? On the one hand, CFs could be calcu-         from brine is more costly than its high-emission counterpart, building
+lated using generic, ﬁxed default values, diluting the metric’s sig-         a case for policy intervention. While the data are less robust for nickel,
+niﬁcance and missing the opportunity for low-carbon supply chain             the opposite trend is observable for cobalt and nickel, underpinning
+innovation. On the other hand, requiring detailed, supplier-speciﬁc CF       the complexity of the policy challenge and its (unintended)
+data for materials could challenge industry acceptance of policy             consequences.
+intervention, straddling the line between precision and practicality.             While this work proposes a cost-based methodology and
+      The proposed EU Battery Regulation11,48 strikes a balance by           contributes to the breadth and depth of CF analyses of LIBs and
+providing default values that battery producers can replace with             their materials, there remains a pressing need for further
+their own calculations, provided they meet speciﬁc quality stan-             research. As this methodology does not rely on time-consuming
+dards. The setting of these default values fundamentally inﬂu-               data collection from mining and reﬁning company reports, it can
+ences the greening effect on the supply chain. If defaults are set           be more easily scaled to additional commodities and panel
+at actual median values, half of the material suppliers (i.e., those         datasets. Critically, other environmental impacts such as water
+with higher CFs) will use defaults instead of disclosing their               usage and biodiversity loss of mining through land use change
+higher CF. To promote transparency and low-carbon innovation,                should be quantiﬁed with similar granularity44,51–53. Applying the
+default values should be set at the higher ends of the emission              proposed cost-based methodology to impacts such as biodi-
+curves. This approach may compromise technical accuracy, but as              versity is less straightforward than for global warming and thus
+argued in previous studies14, there are already existing limitations         warrants future work. Additionally, data availability and access
+to the meaningfulness of the CF metric that may justify a focus on           continue to pose critical challenges22,23,54. Thus, policymakers
+promoting low-carbon innovation over strict accuracy. Based on               should ensure that battery CF data, once available, are accessible
+CF contributions and variances, Figs. 2b, c and 3b, c suggest that           to researchers in an anonymised but detailed form. For long-term
+priorities for addressing knowledge gaps should initially lie in             policy planning, it is crucial to consider the multifaceted impli-
+nickel sulfate and lithium carbonate.                                        cations of recycling, ranging from environmental impacts over
+      From an industrial policy standpoint, Figs. 2a and 3a show that        proﬁtability and technological innovation to supply chain security
+regional differences in the CF proﬁle are not particularly important.        and geopolitics, requiring future work. Only through continued
+With the caveat that battery producers have no regional material             research can we enhance the understanding of the battery supply
+preferences, the CF proﬁles of Chinese-made LIBs largely coincide with       chain and its broader environmental effects, setting a precedent
+those manufactured in the US or Europe. This insight can be explained        for managing the impacts of products beyond global warming.
+by the materials’ CF (variance) inﬂuence and the spatially explicit grid
+of CO2 intensities beyond national averages. The proposed CF                 Methods
+threshold can be visualised as a vertical line in Figs. 2b and 3b, dis-      In this study, the term CF was used as a shorthand notation for the 100-
+qualifying all the manufacturing plants (represented as dots) that fall      year global warming potential (GWP) of a product or process, based on
+to the right of this line. Unless Western battery manufacturers procure      the Intergovernmental Panel on Climate Change (IPCC) 2021 assess-
+strictly low-carbon materials in large quantities, policy measures such      ment, excluding long-term warming effects55.
+as the proposed CF threshold are unlikely to impact battery industry
+localisation. Understanding the regional distribution of CFs is essential    Material emission curve and supply chain modelling
+for assessing the impact of policies both domestically and inter-            The battery material selection was based on CF contribution and LIB
+nationally to avoid unintended consequences, such as cost hikes or           speciﬁcity. Copper, aluminium, phosphate, manganese and iron (sul-
+damage to the local industry.                                                fate) are not LIB-speciﬁc and are used in much larger quantities in
+      The protectionist impact of such policies hinges on the extent to      other sectors. The production routes for nickel chemicals used in LIBs
+which they mandate the regionalisation of electricity sourcing. If cal-      differ fundamentally from those in the steel industry, the largest nickel
+culations for battery CF are based on national averages (represented         consumer32. Furthermore, manganese and iron (sulfate) have negli-
+by triangles in Fig. 4c) rather than on more localised or sub-regional       gible CF contributions, as shown in Fig. 3b. Therefore, these ﬁve
+electricity grid CO2 intensities, manufacturers in Chinese provinces         materials were excluded from the detailed modelling. Consequently,
+with low-carbon grids (shown on the left in Fig. 4c) are placed at a         the materials of interest were lithium, nickel, cobalt and graphite. For
+disadvantage relative to many European producers. In the context of          the ﬁrst three materials, bottom-up emission curves were developed,
+increasingly politically motivated export embargoes on battery               while for graphite and nickel laterite, top-down estimates based on the
+materials49,50, more overt protectionist measures, such as the US            literature were presented. For methodological considerations regard-
+Inﬂation Reduction Act, offer subsidies for batteries and battery che-       ing the top-down approach, see the “Emission estimations for graphite
+micals produced locally or in countries with free-trade agreements. No       and nickel laterite” subsection below.
+obvious trade-offs between CF and subsidy eligibility emerge when                  The bottom-up emission curves were based on the 2022 cost data
+comparing current free-trade agreement countries with the supply             for lithium, nickel and cobalt from the S&P Global Mine Economics
+chains illustrated in Figs. 1c, f, i. Furthermore, the modest battery        Database27. The costs were provided on an asset-level in USD per tonne
+production forecasts for Korea and Japan suggest that “friendshoring”        paid metal, converted to USD per tonne metal extracted and broken
+may not considerably mitigate the risks associated with battery              down into value creation stages (e.g., mine, mill, treatment charges
+production.                                                                  and reﬁning charges (TC/RC), shipment and royalty) and, where
+      Considering the global nature of the battery sector, it is necessary   applicable, into cost categories (e.g., labour, energy, reagent and
+to evaluate the global impact of measures such as maximum CF                 other). Because the mining of nickel and cobalt typically produces
+thresholds; the mere reordering of supply chains does not equate with        other economically relevant products, an economic cost allocation
+actual decarbonisation progress. As companies start disclosing the CFs       (“co-product”) was selected. This means that asset costs for common
+
+
+Nature Communications | (2024)15:10301                                                                                                               7
+Article                                                                                                                                     https://doi.org/10.1038/s41467-024-54634-y
+
+
+processes were distributed among the mined metals relative to the                                      calculated as Eq. (2):
+metals’ ﬁnal economic revenues.                                                                                                                                                       
+     For all assets (i.e., mine sites), the relevant ﬁelds, including                                                             kgCO2                      USD                     kgCO2
+                                                                                                               emelec, a                    = Costelec, a              DEIelec, a
+geology, output product and processing steps, were manually                                                                       kgmetal                   kgmetal                   USD
+                                                                                                                                                                                h       i         ð2Þ
+checked and harmonised by consulting S&P Global’s modelling                                                                                                                     kgCO2
+                                                                                                                                                                       CFgrid, a kWh
+                                                                                                                                                       USD
+comments, online resources and expert interviews. Consequently,                                                                       = Costelec, a                                   USD
+for each commodity, assets were grouped together based on their                                                                                       kgmetal     nat:elec:pricea kWh
+output product, i.e., the physical product leaving the asset modelled
+by S&P Global (e.g., concentrated ore or hydroxide). This grouping                                          As we used national ﬁgures for prices and electricity CF, note that
+was necessary to account for different metal contents in the mod-                                      DEIs for electricity costs were typically only country-speciﬁc and not
+elled products and thus the varying steps needed to reﬁne them to                                      technology-speciﬁc. The only exceptions to this were assets that were
+battery-grade purity. See the Supplementary Methods for detailed                                       not connected to the national grid but produced electricity on-site. See
+information about the cost modelling methodology of S&P Global                                         the Supplementary Methods for modelling details.
+and property selection.
+                                                                                                       Emissions from transportation costs
+Modelling emissions for output products                                                                For both on- and off-site transportation, all costs were translated into
+The fundamental modelling approach of this part of the work was to                                     diesel procurement because this cost category did not include vehicle/
+convert monetary costs into GHG emissions, leveraging asset-speciﬁc                                    infrastructure capital expenditure (CAPEX). Based on Annex 1 of
+information, such as location or processing technologies. Because S&P                                  IPCC59, the CF of diesel combustion was calculated at a global level, as
+Global cost data covers all steps from extraction to battery-grade                                     regional differences were negligible for the purpose of this work (see
+chemicals in some cases, but only the extraction steps to intermediate                                 Supplementary Methods). Average national diesel prices (USD l−1) were
+product in other cases, the modelling scope detailed in this section                                   taken from the same BNEF database as national electricity prices.
+varies accordingly. In cases where cost data did not include steps from                                Analogous to electricity emissions, transportation emissions for asset
+intermediate product to battery-grade chemical, our method to                                          a were calculated as Eq. (3):
+account for reﬁning emissions is outlined in the subsequent step (see                                                                                                                     
+the “Aggregating S&P Global output products to battery-grade che-                                                          kgCO2                          USD                           kgCO2
+                                                                                                         emtransport, a              = Costtransport, a             DEItransport, a
+micals” subsection).                                                                                                       kgmetal                       kgmetal                         USD
+     Practically, the cost categories pertinent to GHG emissions                                                                                                                   kgCO2
+                                                                                                                                                           USD          CF  diesel ½       
+were electricity, on-site transportation, reagents and off-site                                                                       = Costtransport, a                              l
+                                                                                                                                                            l       nat:diesel pricea ½USD   l
+                                                                                                                                                                                               
+transportation, while others were less relevant (e.g., labour or
+royalties). The Supplementary Methods section explains the                                                                                                                                        ð3Þ
+selected cost categories in greater detail. These cost categories,
+where applicable, were aggregated over value creation steps (i.e.,
+mining, milling and processing). Deriving conversion factors that                                      Emissions from reagent costs
+we called dollar emission intensity (DEI), the emissions Ema of                                        While the fundamental principle remained unchanged, determining
+asset a was calculated as Eq. (1):                                                                     DEIs for reagents was more complicated than for electricity or trans-
+                                                                                                       portation. Reagents are chemicals used to process intermediate mining
+                    X             XC                                                             products into battery-grade chemicals. Here, DEIs were determined
+            kgCO2       C                                USD                          kgCO2
+  Ema                =    em c, a =    Cost     c, a                    DEI  c, a                     based on speciﬁc reagents used for processing, as well as their prices
+            kgmetal     c            c                  kgmetal                        USD
+                                       |ﬄﬄﬄﬄﬄﬄﬄﬄﬄﬄﬄﬄﬄ {zﬄﬄﬄﬄﬄﬄﬄﬄﬄﬄﬄﬄﬄ } |ﬄﬄﬄﬄﬄﬄﬄﬄﬄﬄﬄ{zﬄﬄﬄﬄﬄﬄﬄﬄﬄﬄﬄ}     and CFs. Common reagents were sulfuric acid, calcium oxide (quick-
+                                                      f romS&PGlobal              modelled             lime), or sodium carbonate (soda ash). Typically, processing comprised
+                                                                                                 ð1Þ   a ﬂowsheet with multiple steps, each requiring different reagents.
+                                                                                                            Because S&P Global’s reagent costs were not broken down into
+where emc,a refers to the emissions arising from cost category c. All                                  individual processing steps but were aggregated over all processes, the
+cost categories c were contained in C and included electricity, on-site                                DEIs also had to capture reagent quantities from all processing steps in
+transportation, reagents and off-site transportation costs. Note that                                  a single metric. All assets with the same ﬂowsheet (i.e., processing
+DEIc,a was generally asset-speciﬁc; that is, it was a function of an asset’s                           steps) were assigned a scalar DEI. It was assumed that for assets with
+locations and processing technologies.                                                                 the same ﬂowsheet, higher reagent costs did not imply other reagent
+      The Excel ﬁles in the repository56 for this paper uniquely iden-                                 compositions but larger reagent quantities. Similar to the above,
+tiﬁed all mines analysed through S&P Global IDs, providing readers                                     emissions from reagent costs for asset a were calculated as Eq. (4):
+access to the S&P Global database to use these modelling ﬁles for                                                                                                                        
+reproduction or further analysis. Although this analysis primarily                                                            kgCO2                         USD                         kgCO2
+                                                                                                          emreagents, a                 = Costreagents, a             DEIreagents, a
+utilised proprietary data for electricity, diesel and reagent prices, as                                                      kgmetal                      kgmetal                       USD
+well as grid CO2 intensities, the accompanying repository also con-                                                                                                                               ð4Þ
+tained open-access estimates for these data categories. It is impor-
+tant to note, however, that these open-access estimates were                                               The DEI in Eq. (4), in turn, is asset-speciﬁc and was derived from
+available at a lower spatial resolution and were sourced from various                                  from Eq. (5):
+data providers.
+                                                                                                                                                                                 hkg i
+                                                                                                                                                              X
+                                                                                                                                                                R
+                                                                                                                                                                                    CO
+                                                                                                                                                                              ERr kg 2
+                                                                                                                                                kgCO2
+Emissions from electricity costs                                                                                          DEIreagents, a                    =       CSr ½1     h  ore
+                                                                                                                                                                                        i         ð5Þ
+                                                                                                                                                USD                                USD
+We used national average industrial electricity prices (USD MWh−1)                                                                                              r             CRr kg
+                                                                                                                                                                                     ore
+provided from Bloomberg New Energy Finance’s (BNEF) “Prices,
+Tariffs & Auctions” interactive datasets for 202257. The CF of 1 kWh                                   where CSr referred to the cost share, ERr to the emission ratio and CRr
+electricity from the national grid was taken on a national level from                                  to the cost ratio of reagent r. Reagent r was an element of set R that
+ecoinvent 3.9.158. Consequently, electricity emissions of asset a were                                 comprised all reagents involved in the ﬂowsheet of asset a. The cost
+
+
+Nature Communications | (2024)15:10301                                                                                                                                                             8
+Article                                                                                                 https://doi.org/10.1038/s41467-024-54634-y
+
+
+share CSr of reagent r effectively weighted the term ERr/CRr by how           connectedpapers.com. Furthermore, the output of the initial search
+much of the reagent costs of one unit dollar overall was spent on             was expanded through forward and backward references based on all
+reagent r. This was calculated as Eq. (6):                                    previously identiﬁed sources. See Supplementary Note 4 for the
+                                   h          i     h          i              detailed methodology and results of the literature review.
+                                     kg                                             Having identiﬁed all pertinent work related to battery material
+                                mr kgreagent  pr kgUSD
+                     CSr ½1 = P      h ore i         h reagent i       ð6Þ   emissions, in the next step, we disaggregated the reported CF esti-
+                                 R      kgreagent
+                                 i mi kg           pi kgUSD                  mates into different value creation steps wherever the original study
+                                             ore          reagent
+
+                                                                              allowed for this. The emission categories used were Mining and Ben-
+where mr referred to the quantity of reagent r needed for processing          eﬁciation, Transport, Reﬁning and Other. For each commodity and
+one kg of ore and pr referred to the unit price of reagent r. For every       output product, a separate Excel spreadsheet listed the disaggregated
+processing step in a ﬂowsheet, mr was determined by consulting                emissions for all eligible publications. Ultimately, this step yielded an
+metallurgic literature and books; where necessary, it was corroborated        emission range that could be used to quantify additional emissions
+by lab protocols and expert assessments. The price pr of reagent r was        needed to reﬁne the output product to battery-grade chemicals.
+estimated by internet research, with a preference for 2022 bulk volume              As shown by the grey bars in Fig. 1, reﬁning emissions constituted
+ﬁgures. Both parameters were treated as global, but regional and              a large share of material emissions. Since the ﬁndings from the litera-
+temporal variations were considered in the Material Monte Carlo               ture review were not asset-speciﬁc but rather commodity-speciﬁc, we
+simulation (see the “Uncertainty quantiﬁcation—material Monte Carlo           leveraged TC/RC to improve our best estimate for asset-speciﬁc
+simulation” subsection).                                                      reﬁning emissions. TC/RC were provided for all assets by S&P Global
+     The emission ratio ERr was determined by Eq. (7):                        and can be understood as the asset-speciﬁc cost of turning the output
+                                                  "           #               product into a high-purity product (e.g., reﬁned metal). Typically, the
+                                       
+                  kgCO2         kgreagent            kgCO2                    higher the concentration of undesirable elements, the higher the
+              ERr         = mr               CFr                       ð7Þ   required process engineering and energy efforts and thus the higher
+                  kgore          kgore              kgreagent
+                                                                              the TC/RC. See the Supplementary Methods for further information
+where CFr refers to the CF of reagent r (i.e., the GWP per unit mass of       on TC/RC.
+reagent r). To determine this ﬁgure, we matched reagent r with the                  The reﬁning emission range was determined by the minimum and
+ecoinvent 3.9.1. database and, where necessary, determined chemi-             maximum values of the disaggregated literature emission spreadsheet
+cally similar proxies. As usual, the IPCC 100-year GWP impact category        and was identical for all assets of the same product group and com-
+was used to determine the reagents’ CFs from ecoinvent.                       modity. Since TC/RC have some explanatory power about reﬁning
+     Analogous to Formula (7), the cost ration CRr for reagent r was          energy and thus emissions, we based an asset’s most likely reﬁning
+calculated as Eq. (8):                                                        emissions on its relative TC/RC cost. Speciﬁcally, we coupled assets’
+                                                        "           #         TC/RC range (minimum and maximum) with the reﬁning emission
+                                              
+                         USD           kgreagent           USD                range in a linear fashion and estimated an individual asset’s most likely
+               CRr               = mr               pr                 ð8Þ   reﬁning emission based on its TC/RC position on the TC/RC range. This
+                         kgore          kgore             kgreagent
+                                                                              meant that the asset with the lowest TC/RC was assigned the lowest
+     This entire section was operationalised in Microsoft Excel, where        most likely emissions from the emission range, vice versa and every-
+emissions for one commodity (lithium, nickel and cobalt) were mod-            thing in between. Given that TC/RC was not a perfect proxy for emis-
+elled in separate ﬁles. See the Supplementary Methods for details on          sions, the reserved lower (upper) error for reﬁning emissions of all
+this step of the emission modelling.                                          assets was the difference between the most likely emission estimate
+                                                                              and the lowest (highest) value of the emission range. Consequently, all
+Uncertainty quantiﬁcation—material Monte Carlo simulation                     assets had the same minimum and maximum reﬁning emissions and
+To quantify the modelling uncertainty of the above CF calculations, we        only the most likely value was determined by their TC/RC. By design,
+used the Excel plugin @risk. This tool allows input parameters to be          this methodology led to asymmetric margins of error, which can be
+represented by distributions instead of scalars and propagates the            seen in Fig. 1. The resulting reﬁning emissions and reﬁning margins of
+statistical variation through Excel formulas to the result cells. For all     error were added to the output product emissions and margins of
+input parameters, we deﬁned uncertainty distributions based on                error. For lithium, S&P Global did not provide TC/RC, which is why—for
+expert interviews, our own simulations or multiple data sources.              all assets—the minimum and maximum literature values were used for
+Where only single data points were available, we assumed triangular           the margin of error and the literature average for the most likely value.
+distributions with ±5% (diesel prices) and ±10% (reagent prices). See               As the ecoinvent battery cell inventory built on Dai et al.60, who, in
+Supplementary Table 1 for a breakdown of the input distribution               turn, reported inventory data for anhydrous sulfate forms, in this work,
+assumptions and for further details. Finally, for n = 5000, the tool          we also reported the quantities and CFs of sulfate compounds with
+simulated the output products’ emission distributions for all mining          respect to their anhydrous form. Literature values that reported sulfate
+assets.                                                                       compounds in hexa- or heptahydrate forms were stoichiometrically
+     The 5th, 50th and 95th emission percentiles of the MC simulation         converted to anhydrous sulfate compounds.
+were propagated to the Python environment that was used for further
+analyses. For every asset, the difference between the 95th and the 5th        Estimating emissions and production volumes for graphite and
+percentile deﬁned the margin of error regarding the modelled output           nickel laterite
+product, while the 50th percentile was used as the most likely value.         S&P Global does not provide data for graphite and no usable asset-
+                                                                              level data for nickel laterite mining. However, as both materials are
+Aggregating S&P Global output products to battery-grade                       known to drive the CF of batteries5,24,34, it was decided to include their
+chemicals                                                                     emission ranges in the battery CF Monte Carlo simulation based on
+The emissions of all output products that were not yet battery-grade          country-speciﬁc secondary literature. For graphite, we utilised three
+chemicals had to be complemented to allow for a fair comparison               publications reporting CFs of both natural and synthetic graphite
+between assets. To this end, an extensive structured literature review        (Supplementary Note 4). Nickel laterite, on the other hand, was further
+of lithium, nickel, cobalt and graphite was conducted. The backbone of        divided into limonite and saprolite mining, whose CF estimation built—
+the review was built on Scopus, the Google search engine and                  given the lack of peer-reviewed work—on one database value (GREET)
+
+
+Nature Communications | (2024)15:10301                                                                                                                  9
+Article                                                                                                   https://doi.org/10.1038/s41467-024-54634-y
+
+
+and two consulting reports that were both carried out by LCA con-               most likely asset emission as the mode and the asymmetrical margins
+sultancy Minviro using their proprietary inventory (Supplementary               of error as minimum/maximum. The Supplementary Methods contains
+Note 4). It should be noted that peer reviews for one of the reports61          the PDFs for the four commodities, including nickel with and without
+were conducted by industry experts and are accessible at the end of             laterite production.
+the document. Analogous to Fig. 1, the emission curves, including lit-
+erature values, and the supply chain mapping for graphite and nickel,           Collating regional announced battery production capacity
+including laterite, are shown in Supplementary Figs. 3 and 4, respec-           We built our battery production database using an interactive BNEF
+tively. National production volumes were taken from the battery-                dataset57 and including operational LIB production sites and those
+speciﬁc value chain mapping described in the method section “Con-               announced to be operational by 2030. The raw data were classiﬁed by
+structing and mapping global battery supply chains” and in the Sup-             nameplate capacity, produced battery chemistry and country. In the
+plementary Methods section.                                                     ﬁrst step, the data were ﬁltered for NMC, LFP or unknown battery
+                                                                                chemistries. Since BNEF discloses production sites only at the country-
+Comparing modelled emissions to literature and                                  level, we turned to the Supplementary Information of Kallitsis et al.6,
+database values                                                                 who mapped the announced LIB production at the provincial (China)
+An extensive structured literature review formed the basis for Fig. 1b, e,      and state (US) levels through 2035. From there, the provincial/state
+h. If one study reported multiple material CFs based on, for example,           shares were taken and applied to the total announced production
+multiple production locations or processing routes, all estimates               capacity of China/US provided by BNEF. In the next step, CN provinces
+aligned with the selection criteria were transferred into our database.         and US states were grouped and harmonised with ecoinvent 3.9.1
+We labelled studies that were pertinent but, for example, lacked                electricity grid regions. For Europe and KR/JP, no regional dis-
+transparency or represented poor current or near-future battery                 aggregation was possible, as these countries occupy the smallest
+material production as “peripheral” and excluded them from our                  available spatial unit in ecoinvent. In the last step, we imputed the
+analysis. Next to a detailed description of the literature review meth-         information on regional chemistry prevalence with an expert interview
+odology, Supplementary Note 4 provides the database with qualiﬁed               that generally fell in line with the regional NMC:LFP shares derived
+and peripheral studies alongside case-by-case exclusion criteria.               from BNEF. We ultimately arrived at a provincial- (CN), state- (US) and
+Beyond peer-reviewed and other academic documents, database                     country-level (Europe, JP and KR) understanding of the announced LIB
+values were collated from GREET 202262 and ecoinvent 3.9.158 for all            production capacity of NMC and LFP through 2030. The regional
+available pathways.                                                             terms European Union and Europe were used interchangeably
+                                                                                throughout this document. The United Kingdom and Serbia were the
+Constructing and mapping global battery supply chains                           only non-EU countries that were counted towards the announced
+The bottom-up modelling efforts described above and shown in Fig. 1a,           European battery capacity.
+d, g are contrasted with top-down national mining production shown
+in Fig. 1c, f, i to better understand the coverage and limitations of S&P       Setting up battery Monte Carlo simulations
+Global data. To this end, reported production data were retrieved from          The Python library Brightway263 is at the heart of the battery Monte
+USGS28 for 2022 and supplemented by BGS29 and DERA30 where                      Carlo simulation of this work. Please refer to the Supplementary
+necessary. To build a global battery-speciﬁc commodity supply chain,            Methods for a detailed description of how the environment was set up
+we considered all mining (intermediate) products that could poten-              and operationalised. Conceptually, we use the Ecoinvent 3.9.1 bill of
+tially be used in batteries. In other words, the x-axis in Fig. 1a, d, g does   material (BOM) for NMC811 and LFP LIB cells and build our own
+not represent the actual volume of battery chemicals but rather the             foreground database incorporating all activities from LIB cell pro-
+volume from which battery chemicals could be produced and supplied              duction to the point of battery chemistry intake (lithium carbonate,
+to battery manufacturers. This is denoted by the equivalent in Fig. 1’s         nickel- and cobalt sulfate, and battery-grade graphite). Consequently,
+x-axis labels. This differentiation is relevant for nickel, as for some         in our modelling, the active material synthesis occurs in the same
+fractions of mined nickel, there is a commercial pathway for producing          electricity grid region as the battery cell production. The ﬁnal Bright-
+nickel sulfate. See the Supplementary Methods for further information           way2 database ﬁle is available in the accompanying repository. The CF
+and calculations.                                                               of the battery-grade chemicals is deﬁned as parameters and coupled to
+                                                                                the probability density functions derived earlier. Further, we also
+Battery CF distribution                                                         deﬁne the location of electricity exchanges as a parameter and couple
+The selection of cathode chemistries for this work (NMC811 and LFP)             it to the announced battery capacity database. Lastly, a custom Monte
+was motivated by market forecasts that attribute high-nickel and iron-          Carlo function was developed that can selectively vary battery che-
+based cathodes to the most dominant market shares25. Close relatives            mical and location parameters. Note that there are two important
+to the selected cathodes, e.g., NMC955 (90% nickel and 5% each of               assumptions here: Firstly, we assume a global commodity market
+manganese and cobalt) or lithium manganese iron phosphate, were                 where, e.g., Chinese battery producers are equally likely to source
+not explicitly modelled, as small changes in the bill of materials would        lithium carbonate from Chilean mines compared to Australian-mined
+only slightly change this work’s ﬁndings.                                       and Chinese-processed lithium carbonate. Secondly, for our entire
+                                                                                work, a constant BOM is used, i.e., all material and energy require-
+Converting emission curves to probability distributions                         ments are kept constant and only the CF of four materials and the
+In preparation for the battery Monte Carlo simulation, the emission             electricity is varied. The functional unit of simulation output is kg,
+curves from Fig. 1 were converted to probability density functions              which is turned into kWh in the last step. The energy densities for
+(PDF), which, in turn, were used for parameter sampling during the              conversion are taken as scalars from recent work35 and are in line with
+Monte Carlo simulation. Conceptually, this step assigned the CF of              the original work22 from 2021 that, in turn, builds the basis for the
+every asset in the emission curve a likelihood based on the asset’s             current Ecoinvent inventory (NMC: 0.25 kWh kg−1 and LFP: 0.16 kWh
+production volume. Practically, for every commodity, random (but                kg−1). In Supplementary Note 3, the results of Figs. 2 and 3 are displayed
+weighted by the assets’ production volumes) samples (n = 10,000)                in kg units.
+were drawn from the emission curve and used for non-parametric                        Throughout our analysis, the sample size was set to n = 11,308,
+Gaussian kernel density estimation. Incorporating the uncertainty in            aligning with the announced overall nameplate battery production
+the emission curves, a triangular distribution was selected with the            capacity by 2030 in GWh. Lines in Fig. 2a and Fig. 3a are probability
+
+
+Nature Communications | (2024)15:10301                                                                                                                 10
+Article                                                                                                   https://doi.org/10.1038/s41467-024-54634-y
+
+
+density functions using the same approach described above. If                Open-access data alternatives for BNEF and coinvent are provided in
+necessary, additional region-speciﬁc MC runs were executed to ensure         the repository. The data generated in this study are provided in the
+a sample size of at least n = 1000 for each regional probability density     repository and in the Source Data ﬁle. Source data are provided in
+function. The number of dots in the jitter plots (Fig. 2b and Fig. 3b)       this paper.
+corresponds to the chemistry’s respective announced production
+2030 capacity (5797 GWh for NMC and 5,510 GWh for LFP), whereas              Code availability
+the boxplot statistics refer to the entire sample size (11,308). To keep     A repository encompassing the computer code, Excel ﬁles, and non-
+computational requirements manageable, the four probability density          proprietary data used in this study is available at Zenodo under https://
+functions were linearised with a step size of n = 100 and used for all       doi.org/10.5281/zenodo.1393683256.
+Monte Carlo runs presented in this work. Deviations between the
+computationally intensive and less intensive, linearised-PDF sampling        References
+remain at sufﬁciently low levels at <2%.                                     1.    IPCC. Synthesis report of the ipcc sixth assessment report (AR6).
+     The CF disaggregation shown in Figs. 2c and 3c was based on 100               https://www.ipcc.ch/report/ar6/syr/downloads/report/IPCC_AR6_
+data points around the median. Speciﬁcally, for the subset of these MC             SYR_SPM.pdf (2023).
+runs, the commodity parameters were ﬁrst averaged and then com-              2.    Arciniegas, L. M. & Hittinger, E. Tradeoffs between revenue and
+bined with the minimum and maximum CF grid locations, respectively.                emissions in energy storage operation. Energy 143, 1–11 (2018).
+The breakdown was done once for the minimum and maximum CF                   3.    Sacchi, R., Bauer, C., Cox, B. & Mutel, C. When, where and how can
+grid locations (both using the same averaged commodity parameters)                 the electriﬁcation of passenger cars reduce greenhouse gas emis-
+and then linearly combined to yield the median CF.                                 sions? Renew. Sustain. Energy Rev. 162, 112475 (2022).
+     The variance quantiﬁcation and disaggregation shown in Figs. 2c         4.    Schenker, V., Oberschelp, C. & Pﬁster, S. Regionalized life cycle
+and 3c were based on the assumption that each parameter is sto-                    assessment of present and future lithium production for Li-ion
+chastically independent, i.e., the procurement choice of one com-                  batteries. Resour. Conserv. Recycl. 187, 106611 (2022).
+modity has no impact on the choice of another commodity. Using this          5.    Dai, Q., Kelly, J. C., Gaines, L. & Wang, M. Life cycle analysis of lithium-
+property, the sum of individual variances of the Monte Carlo simula-               ion batteries for automotive applications. Batter 5, 48 (2019).
+tions with only singular parameter variations was equal to the total         6.    Kallitsis, E. et al. Think global act local: the dependency of global
+variance of the Monte Carlo simulation, where all parameters are                   lithium-ion battery emissions on production location and material
+sampled simultaneously. This additivity property was used in other                 sources. J. Clean. Prod. 449, 141725 (2024).
+work64 and mathematically backed in the Supplementary Methods.               7.    Azadi, M., Northey, S. A., Ali, S. H. & Edraki, M. Transparency on
+                                                                                   greenhouse gas emissions from mining to enable climate change
+GHG break-even point based on CF distribution and EV opera-                        mitigation. Nat. Geosci. 13, 100–104 (2020).
+tion locations                                                               8.    Degen, F. & Schütte, M. Life cycle assessment of the energy con-
+We used the Excel tool available from Sacchi et al.3 to calculate mileage          sumption and GHG emissions of state-of-the-art automotive battery
+break-even points for EVs and internal combustion vehicles. Conse-                 cell production. J. Clean. Prod. 330, 129798 (2022).
+quently, see the original publication for assumptions, system bound-         9.    Gutsch, M. & Leker, J. Costs, carbon footprint, and environmental
+aries and further methodological details. In their Excel tool, we modiﬁed          impacts of lithium-ion batteries—from cathode active material
+the CF of the battery cells according to the 5th and 95th percentiles of           synthesis to cell manufacturing and recycling. Appl. Energy 353,
+the global distribution shown in Fig. 2a. For calculation details, see the         122132 (2024).
+Excel ﬁle “Breakeven_calculation_BEV_ICE.xlsx” in the repository.            10.   Lai, X. et al. Critical review of life cycle assessment of lithium-ion
+                                                                                   batteries for electric vehicles: a lifespan perspective. eTransporta-
+Expert interviews                                                                  tion 12, 100169 (2022).
+Over the course of this work, 17 expert interviews were conducted to         11.   EU. REGULATION (EU) 2023/1542 of the european parliament and of
+iteratively develop and reﬁne the research design, triangulate                     the council of 12 july 2023 concerning batteries and waste bat-
+assumptions, and corroborate the ﬁndings and implications of this                  teries. (2023).
+work. Eligible experts from academia, industry, and policy were iden-        12.   CATL. CATL unveiled its carbon neutrality plan. https://www.catl.
+tiﬁed through publication authorship, conference attendance, social                com/en/news/6014.html (2023).
+media, and snowballing. Interviews were generally conducted online.          13.   Pell, R. et al. Towards sustainable extraction of technology materi-
+They lasted between 30 and 60 minutes and were semi-structured (i.e.,              als through integrated approaches. Nat. Rev. Earth Environ. 2,
+a set of guiding questions was used). Interviewees were typically sent             665–679 (2021).
+the set of questions and preliminary research ﬁndings beforehand.            14.   Peiseler, L., Bauer, C., Beuse, M., Wood, V. & Schmidt, T. S. Toward a
+Where participants agreed, the interviews were recorded and tran-                  European carbon footprint rule for batteries. Science 377,
+scribed for further analysis. See the Supplementary Methods for an                 1386–1388 (2022).
+anonymised list of the interviews. Since the purpose of the interview        15.   Beuse, M., Schmidt, T. & Wood, V. A. technology-smart” battery
+process was to elicit feedback on the research design and results, it did          policy strategy for Europe. Science 361, 1075–1077 (2018).
+not involve personal data. It was conﬁrmed by the Secretary General of       16.   Yarmuth, J. H.R.5376 - Inﬂation Reduction Act of 2022. (2022).
+the ETH Zurich Ethics Commission that such interviews do not repre-          17.   Northvolt. Enabling the Future of Energy - Sustainability and Annual
+sent research involving the data of human participants.                            Report 2022. https://www.datocms-assets.com/38709/
+                                                                                   1684304946-northvolt_sustainability_and_annual_report_2022.
+Reporting summary                                                                  pdf (2023).
+Further information on research design is available in the Nature            18.   Cheng, A. L., Fuchs, E. R. H. & Michalek, J. J. US industrial policy may
+Portfolio Reporting Summary linked to this article.                                reduce electric vehicle battery supply chain vulnerabilities and
+                                                                                   inﬂuence technology choice. Nat. Energy 1–10 (2024) https://doi.
+Data availability                                                                  org/10.1038/s41560-024-01649-w.
+The raw data from S&P Global, BNEF, and ecoinvent are protected for          19.   Peters, J. F., Baumann, M., Zimmermann, B., Braun, J. & Weil, M. The
+proprietary reasons but can be obtained by contacting the corre-                   environmental impact of Li-Ion batteries and the role of key para-
+sponding author and with permission of the respective data provider.               meters—a review. Renew. Sustain. Energy Rev. 67, 491–506 (2017).
+
+
+Nature Communications | (2024)15:10301                                                                                                                      11
+Article                                                                                                   https://doi.org/10.1038/s41467-024-54634-y
+
+
+20. Temporelli, A., Carvalho, M. L. & Girardi, P. Life cycle assessment of      42. Mohr, M., Peters, J. F., Baumann, M. & Weil, M. Toward a cell‐
+    electric vehicle batteries: an overview of recent literature. Energies          chemistry speciﬁc life cycle assessment of lithium‐ion battery
+    13, 2864 (2020).                                                                recycling processes. J. Ind. Ecol. 24, 1310–1322 (2020).
+21. Arshad, F. et al. Life cycle assessment of lithium-ion batteries: a         43. Huang, J., Dong, X., Chen, J. & Zeng, A. The slow-release effect of
+    critical review. Resour. Conserv. Recycl. 180, 106164 (2022).                   recycling on rapid demand growth of critical metals from EV bat-
+22. Crenna, E., Gauch, M., Widmer, R., Wäger, P. & Hischier, R.                     teries up to 2050: evidence from China. Resour. Polic. 82, 103504
+    Towards more ﬂexibility and transparency in life cycle inven-                   (2023).
+    tories for ithium-ion batteries. Resour. Conserv. Recycl. 170,              44. Ali, S. H. et al. Mineral supply for sustainable development requires
+    105619 (2021).                                                                  resource governance. Nature 543, 367–372 (2017).
+23. Peters, J. F. Best practices for life cycle assessment of batteries. Nat.   45. Watari, T. et al. Total material requirement for the global energy
+    Sustain. 1–3 (2023) https://doi.org/10.1038/s41893-023-01067-y.                 transition to 2050: a focus on transport and electricity. Resour.
+24. Llamas-Orozco, J. A. et al. Estimating the environmental impacts                Conserv. Recycl. 148, 91–103 (2019).
+    of global lithium-ion battery supply chain: a temporal, geo-                46. Baars, J., Domenech, T., Bleischwitz, R., Melin, H. E. & Heidrich, O.
+    graphical, and technological perspective. PNAS Nexus 2,                         Circular economy strategies for electric vehicle batteries reduce
+    pgad361 (2023).                                                                 reliance on raw materials. Nat. Sustain. 4, 71–79 (2021).
+25. BloombergNEF. Electric Vehicle Outlook 2022. (2022).                        47. Chen, Q. et al. Investigating carbon footprint and carbon reduction
+26. Fastmarkets. Growing LFP adoption drives need for more trans-                   potential using a cradle-to-cradle LCA approach on lithium-ion
+    parency across chemistry’s supply chain. https://www.fastmarkets.               batteries for electric vehicles in China. J. Clean. Prod. 369,
+    com/insights/growing-lfp-adoption-drives-need-for-more-                         133342 (2022).
+    transparency-across-chemistrys-supply-chain/ (2023).                        48. JRC. JRC study in support of developing Carbon Footprint rules of
+27. S&P Global. S&P Capital IQ Pro: Mine Economics Cost Curve.                      batteries. https://eplca.jrc.ec.europa.eu/EU_BatteryRegulation_
+    (2024).                                                                         Art7.html (2023).
+28. USGS. Commodity Statistics and Information. https://www.usgs.               49. Davidson, M. R., Karplus, V. J., Lewis, J. I., Nahm, J. & Wang, A. Risks
+    gov/centers/national-minerals-information-center/commodity-                     of decoupling from China on low-carbon technologies. Science
+    statistics-and-information (2024).                                              377, 1266–1269 (2022).
+29. BGS. World Mineral Statistics Data. https://www2.bgs.ac.uk/                 50. Financial Times. China imposes export curbs on graphite. https://
+    mineralsuk/statistics/wms.cfc?method=searchWMS (2024).                          www.ft.com/content/8af8c05c-8e54-40e9-9051-5a0b2b036c32
+30. DERA. DERA Rohstofﬁnformationen: Rohstoffrisikobewertung—                       (2023).
+    Graphit. https://www.deutsche-rohstoffagentur.de/DE/                        51. Crenna, E., Marques, A., Notte, A. L. & Sala, S. Biodiversity assess-
+    Gemeinsames/Produkte/Downloads/DERA_                                            ment of value chains: state of the art and emerging challenges.
+    Rohstofﬁnformationen/rohstofﬁnformationen-51.pdf?__blob=                        Environ. Sci. Technol. 54, 9715–9728 (2020).
+    publicationFile&v=4 (2021).                                                 52. Sovacool, B. K. et al. Sustainable minerals and metals for a low-
+31. S&P Capital IQ Pro. Nickel Downside Risks Grow on Supply Boosts                 carbon future. SSRN Electron. J. 367, 30–33 (2020).
+    from Indonesia, China. (2023).                                              53. Cabernard, L. & Pﬁster, S. Hotspots of mining-related biodiversity
+32. McKinsey & Company. How clean can the nickel industry become?                   loss in global supply chains and the potential for reduction through
+    https://www.mckinsey.com/industries/metals-and-mining/our-                      renewable electricity. Environ. Sci. Technol. 56, 16357–16368 (2022).
+    insights/how-clean-can-the-nickel-industry-become (2020).                   54. Bauer, C. et al. Charging sustainable batteries. Nat. Sustain. 5,
+33. Dehaine, Q., Tijsseling, L. T., Glass, H. J., Törmänen, T. & Butcher, A.        176–178 (2022).
+    R. Geometallurgy of cobalt ores: a review. Miner. Eng. 160,                 55. Forster, P. et al. The Earth’s energy budget, climate feedbacks, and
+    106656 (2021).                                                                  climate sensitivity. 923–1054 (2021) https://doi.org/10.1017/
+34. Engels, P. et al. Life cycle assessment of natural graphite produc-             9781009157896.009.
+    tion for lithium-ion battery anodes based on industrial primary data.       56. Peiseler, L. Repository for publication “Carbon Footprint Distribu-
+    J. Clean. Prod. 336, 130474 (2022).                                             tions of Lithium-Ion Batteries and Their Materials.” (2024) https://
+35. Schöberl, J., Ank, M., Schreiber, M., Wassiliadis, N. & Lienkamp, M.            doi.org/10.5281/zenodo.13936832.
+    Thermal runaway propagation in automotive lithium-ion batteries             57. BloombergNEF. Prices, tariffs & auctions interactive dataset. (2024).
+    with NMC-811 and LFP cathodes: safety requirements and impact on            58. Ecoinvent. Ecoinvent database 3.9.1. https://ecoinvent.org/
+    system integration. eTransportation 19, 100305 (2024).                          database/ (2022).
+36. Desreveaux, A. et al. Accurate energy consumption for comparison            59. IPCC. Aggregate information on greenhouse gas emissions by
+    of climate change impact of thermal and electric vehicles. Energy               sources and removals by sinks for parties included in Annex I to the
+    268, 126637 (2023).                                                             convention. https://unfccc.int/sites/default/ﬁles/resource/AGI_
+37. Desai, R. R., Chen, R. B., Hittinger, E. & Williams, E. Heterogeneity in        2022_Final.pdf (2022).
+    economic and carbon beneﬁts of electric technology vehicles in              60. Dai, Q., Kelly, J. C., Dunn, J. & Benavides, P. T. Update of bill-of-
+    the US. Environ. Sci. Technol. 54, 1136–1146 (2020).                            materials and cathode materials production for lithium-ion batteries
+38. Gschwendtner, C., Knoeri, C. & Stephan, A. The impact of plug-in                in the GREET model. https://greet.anl.gov/ﬁles/update_bom_
+    behavior on the spatial–temporal ﬂexibility of electric vehicle                 cm (2018).
+    charging load. Sustain. Cities Soc. 88, 104263 (2023).                      61. VDA. Product carbon footprint of nickel sulfate hexahydrate pro-
+39. Watari, T., Nansai, K., Nakajima, K. & Giurco, D. Sustainable energy            duction. https://www.vda.de/dam/jcr:e508b237-ecfc-49ed-b9f5-
+    transitions require enhanced resource governance. J. Clean. Prod.               c52e2a9fa658/VDA_Nickel_Sulfate_Hexahydrate_LCA_Report_
+    312, 127698 (2021).                                                             2023.pdf (2023).
+40. IEA. Global EV outlook 2024. https://www.iea.org/reports/global-            62. Wang, M. et al. Greenhouse gases, regulated emissions, and energy
+    ev-outlook-2024 (2024).                                                         use in technologies model ® (2022.Net). (United States, 2022).
+41. Dunn, J., Kendall, A. & Slattery, M. Electric vehicle lithium-ion bat-      63. Mutel, C. Brightway: an open source framework for life cycle
+    tery recycled content standards for the US—targets, costs, and                  assessment. J. Open Source Softw. 2, 236 (2017).
+    environmental impacts. Resour. Conserv. Recycl. 185, 106488                 64. Hsiang, S. et al. Estimating economic damage from climate change
+    (2022).                                                                         in the United States. Science 356, 1362–1369 (2017).
+
+
+Nature Communications | (2024)15:10301                                                                                                                   12
+Article                                                                                              https://doi.org/10.1038/s41467-024-54634-y
+
+
+Acknowledgements                                                            Correspondence and requests for materials should be addressed to
+This article was written as part of the SWISSCHAINS project of the          Leopold Peiseler.
+Institute of Science, Technology, and Policy at ETH Zurich. This work was
+done within the project “e-Bike City”. Funding by the Civil, Geomatics,     Peer review information Nature Communications thanks Zhi Sun, Elza
+and Environmental Engineering Department of ETH Zürich is gratefully        Bontempi and the other, anonymous, reviewer(s) for their contribution to
+acknowledged. The authors would like to thank all the interviewees for      the peer review of this work. A peer review ﬁle is available.
+their valuable time and contributions to this study. They also express
+their gratitude to Julian Rieder for research assistance, Dr. Aleksandra    Reprints and permissions information is available at
+Kim for Brightway2 support, Dr. Romain Sacchi for help regarding life-      http://www.nature.com/reprints
+cycle vehicle emissions and Ketan Vaidya and Achim Teuber for their
+ongoing feedback. The authors also thank Paul Waidelich, Dr Bessie Noll     Publisher’s note Springer Nature remains neutral with regard to jur-
+and other members of the Energy and Technology Policy Group at ETH          isdictional claims in published maps and institutional afﬁliations.
+for very helpful feedback on earlier drafts of the paper. ChatGPT was
+utilised for assistance with language and Python coding.                    Open Access This article is licensed under a Creative Commons
+                                                                            Attribution 4.0 International License, which permits use, sharing,
+Author contributions                                                        adaptation, distribution and reproduction in any medium or format, as
+L.P., V.S., S.P., and T.S. conceptualised the work and developed the        long as you give appropriate credit to the original author(s) and the
+methodology. K.S. curated the data. L.P. conducted the formal analysis.     source, provide a link to the Creative Commons licence, and indicate if
+V.W., S.P. and T.S. supervised the work. V.W., S.P. and T.S. acquired       changes were made. The images or other third party material in this
+funding. L.P. wrote the original draft.                                     article are included in the article’s Creative Commons licence, unless
+                                                                            indicated otherwise in a credit line to the material. If material is not
+Funding                                                                     included in the article’s Creative Commons licence and your intended
+Open access funding provided by Swiss Federal Institute of Technology       use is not permitted by statutory regulation or exceeds the permitted
+Zurich.                                                                     use, you will need to obtain permission directly from the copyright
+                                                                            holder. To view a copy of this licence, visit http://creativecommons.org/
+Competing interests                                                         licenses/by/4.0/.
+The authors declare no competing interests.
+                                                                            © The Author(s) 2024
+Additional information
+Supplementary information The online version contains
+supplementary material available at
+https://doi.org/10.1038/s41467-024-54634-y.
+
+
+
+
+Nature Communications | (2024)15:10301                                                                                                             13
+

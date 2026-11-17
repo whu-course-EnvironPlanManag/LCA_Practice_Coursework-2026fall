@@ -1,0 +1,22 @@
+{
+  "downloaded_sources": 17,
+  "failed_sources": 1,
+  "observations": 35,
+  "annual_stock_years": 7,
+  "registration_years": 5,
+  "raw_outlet_records": 301,
+  "candidate_outlets": 235,
+  "candidate_location_status": {
+    "广州区名匹配": 210,
+    "广州地址待分区": 19,
+    "明确外市地址": 2,
+    "地址城市待核验": 4
+  },
+  "population_records": 240,
+  "facility_leads": 1,
+  "gaps": 13,
+  "checks": {
+    "PASS": 39,
+    "REVIEW": 3
+  }
+}

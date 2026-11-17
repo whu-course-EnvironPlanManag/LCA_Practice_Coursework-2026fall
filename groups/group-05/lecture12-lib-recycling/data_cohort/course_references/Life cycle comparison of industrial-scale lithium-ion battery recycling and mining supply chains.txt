@@ -1,0 +1,767 @@
+                                    Article                                                                                                   https://doi.org/10.1038/s41467-025-56063-x
+
+
+                                    Life cycle comparison of industrial-scale
+                                    lithium-ion battery recycling and mining
+                                    supply chains
+                                    Received: 29 September 2023                         Michael L. Machala1,2,6, Xi Chen 3,4,6,7 , Samantha P. Bunke 3,6,
+                                                                                        Gregory Forbes1, Akarys Yegizbay5, Jacques A. de Chalendar 1,
+                                    Accepted: 8 January 2025
+                                                                                        Inês L. Azevedo 1,2, Sally Benson1,2 & William A. Tarpeh 2,3,7
+
+
+                                        Check for updates                               Recycling lithium-ion batteries (LIBs) can supplement critical materials and
+
+1234567890():,;   1234567890():,;
+                                                                                        improve the environmental sustainability of LIB supply chains. In this work,
+                                                                                        environmental impacts (greenhouse gas emissions, water consumption,
+                                                                                        energy consumption) of industrial-scale production of battery-grade cathode
+                                                                                        materials from end-of-life LIBs are compared to those of conventional mining
+                                                                                        supply chains. Converting mixed-stream LIBs into battery-grade materials
+                                                                                        reduces environmental impacts by at least 58%. Recycling batteries to mixed
+                                                                                        metal products instead of discrete salts further reduces environmental
+                                                                                        impacts. Electricity consumption is identiﬁed as the principal contributor to all
+                                                                                        LIB recycling environmental impacts, and different electricity sources can
+                                                                                        change greenhouse gas emissions up to ﬁve times. Supply chain steps that
+                                                                                        precede reﬁnement (material extraction and transport) contribute marginally
+                                                                                        to the environmental impacts of circular LIB supply chains (<4%), but are more
+                                                                                        signiﬁcant in conventional supply chains (30%). This analysis provides insights
+                                                                                        for advancing sustainable LIB supply chains, and informs optimization of
+                                                                                        industrial-scale environmental impacts for emerging battery recycling efforts.
+
+
+                                    The rise of intermittent renewable energy generation and vehicle               ecosystems, cause occupational hazards during handling, and result
+                                    electriﬁcation has created exponential growth in lithium-ion battery           in monetary losses4.
+                                    (LIB) production beyond consumer electronics. By 2030, the electric                 Recycling critical materials in end-of-life LIBs can help alleviate
+                                    vehicle (EV) sector is projected to dominate LIB growth, accounting            growing environmental concerns and is essential for the long-term
+                                    for 82% of an estimated 2.4 TWh yr−1 of total global LIB production            sustainability of electriﬁed transportation. While recycled materials
+                                    (Supplementary Fig. 1). However, the limited supply of critical                may not contribute substantially to global LIB demand for decades, the
+                                    materials (e.g., Li, Ni, Co, and Cu1) needed for prominent LIB che-            establishment of domestic circular supply chains is iterative, requiring
+                                    mistries has exacerbated environmental, economic, national secur-              multiple learning curves as the dominant supply of end-of-life LIB
+                                    ity, and human rights concerns2,3. Critical LIB materials are projected        chemistries and form factors evolve and as supply grows. Factors
+                                    to reach major global supply–demand balance deﬁcits before 2030                central to the success of recycling include the cost of collecting pro-
+                                    (Supplementary Fig. 1) without additional investment to improve                ducts, the cost of recycling processes, and the economic value of
+                                    supply chains. Further, both mining of LIB materials and improper              recovered materials. Considering LIB prices between 2018 and 2021, Li,
+                                    disposal of end-of-life LIBs can damage natural and human                      Ni, and Co comprise the highest embodied economic value (Fig. 1a)5–12,
+
+
+                                    1
+                                    Department of Energy Science & Engineering, Stanford University, Stanford, CA, USA. 2Precourt Institute for Energy, Stanford University, Stanford, CA, USA.
+                                    3
+                                     Department of Chemical Engineering, Stanford University, Stanford, CA, USA. 4School of Energy and Environment, City University of Hong Kong, Hong Kong
+                                    SAR, China. 5Department of Physics, Kenyon College, Gambier, OH, USA. 6These authors contributed equally: Michael L. Machala, Xi Chen, Samantha P.
+                                    Bunke. 7These authors jointly supervised this work: Xi Chen, William A. Tarpeh.  e-mail: xche26@cityu.edu.hk; wtarpeh@stanford.edu
+
+
+                                    Nature Communications | (2025)16:988                                                                                                                     1
+Article                                                                                                           https://doi.org/10.1038/s41467-025-56063-x
+
+
+and Al and Cu account for a signiﬁcant weight percentage of EV battery               hydrometallurgy (Hy)18,19. Speciﬁcally, Me physically dismantles LIBs
+packs (~25%)13. While 99% of lead-acid batteries are recycled in the USA,            into constituent components, Py leverages elevated temperature to
+LIBs exhibit 2–10 times higher economic values but are only recycled                 facilitate material transformations, and Hy separates materials in the
+2%–47% globally14. The environmental beneﬁts of circularity also                     aqueous phase via leaching, precipitation, and solvent extraction
+strongly motivate LIB recycling given the vast LIB production and                    processes. Previous efforts have worked toward calculating environ-
+emission-intensive mining reﬁnement for key constituent metals.                      mental impacts (e.g., energy consumption, greenhouse gas emission,
+There is a critical need to evaluate the environmental opportunity                   and water consumption) of LIB reﬁnement pathways and all cradle-to-
+across several application scales, from numerous small-scale con-                    gate supply chain steps. However, gate-to-gate analyses of circular
+sumer electronic LIBs (e.g., 10–100 Wh) to fewer large-scale trans-                  reﬁnement processes reported environmental impacts differing by
+portation and stationary storage LIB packs (e.g., 10–100 kWh)15. In                  over 30%18–21 due to inconsistent methodologies. In addition, advan-
+addition, the preferred chemistries by automakers have evolved to                    cing decision-making capabilities to scale sustainable LIB supply
+hedge potential critical mineral shortages and react to market shifts                chains requires LCA with more granular data at each step. Incorpor-
+(e.g., increasing emphasis on lithium iron phosphate and sodium-ion                  ating industrial-scale reﬁnement operational data can uniquely inform
+batteries), such as the near tripling of lithium carbonate prices in early           rational design of reﬁnement technologies. The future development of
+2022. Existing LIB variation and supply chain complexity highlight the               LIB manufacturing and drivers for a circular battery economy have
+need for a methodical and comparative life cycle assessment (LCA)                    been projected by academic and industrial researchers16,22, but
+between circular (i.e., recycling end-of-life batteries) and conventional            industrial-level understanding of the environmental inﬂuences of dif-
+supply chains, which is needed for incumbent LIBs today and for                      ferent feedstocks and reﬁnement products is still lacking.
+prospective recycling strategies with various battery chemistries in the                   In this study, we quantify the cradle-to-gate environmental
+future.                                                                              impacts of battery-grade cathode material salts manufactured in
+      Despite signiﬁcant progress, current understanding of the envir-               conventional and circular supply chains across three major steps:
+onmental impacts of recycling LIBs is still incomplete. The most sig-                material extraction, transport, and reﬁnement (Fig. 1b), focusing on
+niﬁcant environmental differences between LIB production from                        the reﬁnement step. First, we quantify the reﬁnement of mined con-
+circular and conventionally mined cathode materials have not been                    centrate from natural deposits into battery-grade materials in con-
+uniformly attributed to speciﬁc supply chain steps which we refer to as              ventional supply chains and compare with production of these
+extraction, transport, and reﬁnement steps (together referred to as                  materials by Redwood Materials (a recycling company in Nevada, USA)
+“cradle-to-gate,” Fig. 1b). The gate-to-gate reﬁnement processes uti-                in 2021. Two LIB feedstocks are explored: non-energized LIB produc-
+lized at established and emerging circular reﬁnement facilities include              tion scrap from manufacturing facilities and energized end-of-life LIBs
+mechanical separation (Me), pyrometallurgy (Py)16,17, and                            collected from consumers. This study contributes insights to inform
+
+
+
+
+Fig. 1 | Economic drivers of lithium-ion battery (LIB) recycling and supply chain    Supplementary Fig. 1). c Cradle-to-gate steps of manufacturing battery-grade LIB
+options for producing battery-grade materials. a Commodity values of repre-          materials (i.e., salts) from conventional (gray) and circular (green) supply chains,
+sentative LIBs, and b relative contributions of embodied metal elements to the LIB   both of which include three steps: extraction, transport, and reﬁnement. Conven-
+values. Representative LIBs are from consumer electronics using lithium cobalt       tional extraction refers to natural mining, and the circular counterpart is battery
+oxide (LCO), and electric vehicle battery packs including lithium nickel manganese   collection. Transport in the conventional and circular supply chains move ore
+cobalt oxide (NMC111 and NMC811), lithium nickel cobalt aluminum oxide (NCA),        concentrate and batteries, respectively. Conventional mining reﬁneries and circular
+lithium manganese oxide (LMO), and lithium iron phosphate (LFP). Data are based      recycling reﬁneries receive ore concentrates and batteries, respectively, and
+on market values in 2021 dollars adjusted for inﬂation between January 2018 and      employ different reﬁning technologies. Extraction and transport are considered
+December 20215–12, and the uncertainty denotes a 90% conﬁdence interval, which       “upstream steps” relative to gate-to-gate reﬁnement, indicated by the area between
+may overlap with the data point in some instances, obscuring their view. The blue    “input” and “output” gates. Cradle-to-gate analysis considers the reﬁnement and
+shaded area in (a) represents the average commodity values of commonly recycled      upstream processes together.
+products: glass, paper, plastic, and metal cans (more details are provided in
+
+
+
+
+Nature Communications | (2025)16:988                                                                                                                                   2
+Article                                                                                                           https://doi.org/10.1038/s41467-025-56063-x
+
+
+
+
+Fig. 2 | Schematic summarizing feedstocks, pathways, and products in reﬁne-          produce identical Li2SO4 and Al2O3, Ni and Co products exist in the form of discrete
+ment analyses. Schematic showing the feedstock, pathway, and products as a           salts, NiSO4 and CoSO4 (1 and 3), mixed hydroxide (Ni,Co)(OH)2 (2), or mixed metal
+legend for the reﬁnement methods. Five speciﬁc reﬁnement analyses in this study:     sulfate (Ni,Co)SO4 (4 and 5). Red, gray, and blue colors denote reductive calcination
+conventional reﬁning (1 and 2) receives mined ore and brines, and circular reﬁning   pyrometallurgical, mechanical, and hydrometallurgical processes.
+methods (3–5) recycle from end-of-life batteries or scrap. While all scenarios
+
+
+
+
+circular battery manufacturing by addressing three critical gaps in the              compared in this study (Fig. 2). Conventional reﬁnement starts with
+literature. First, industrial-scale operational data provided by Redwood             mined ores/brines (Scenarios (1) and (2) in Fig. 2). Battery scrap gen-
+Materials are analyzed from a more granular level than previous                      erated from manufacturing and assembly is considered a primary
+reports and compared to conventional LIB supply chain values based                   recycling source today, and is projected to account for approximately
+on Argonne National Laboratory’s Greenhouse Gases, Regulated                         half of the recycling source material in the next decade as battery
+Emissions, and Energy use in Technologies (GREET 2021) model23. This                 production outpaces the generation of end-of-life energized
+use of industrial-scale recycling quantitatively identiﬁes the dominant              batteries16,22. Therefore, circular reﬁnement was analyzed starting with
+role of input grid electricity in circular reﬁnement at the balancing area           either end-of-life batteries ((3) and (4)) or battery scrap (5). Ni and Co
+level on environmental impact metrics based on industrial-scale LIB                  in reﬁnement products for subsequent manufacturing can be discrete
+recycling data. Second, the inﬂuences of the product formats in the                  salts ((1) and (3)) or mixed compounds ((2), (4), and (5)). Target pro-
+circular reﬁnement pathways on environmental impacts are examined                    ducts of the conventional and circular pathways were based on the
+by varying the industrial-scale reﬁnement pathways. For both con-                    GREET model and practical recycling operations, respectively. In the
+ventional and circular reﬁnement, impacts of producing mixed Ni–Co                   following sections, the overall reﬁning environmental impacts were
+compounds and discrete salts are analyzed, showing that lower-impact                 ﬁrst analyzed, followed by inﬂuences of product formats on the
+mixed products are worth further investigation. Third, the environ-                  reﬁnement step and key contributors to the reﬁning environmental
+mental impacts of upstream processes before gate-to-gate reﬁne-                      impacts. Lastly, upstream environmental impacts were analyzed and
+ment are modeled. The upstream assessment includes the extraction                    compared to the reﬁnement step. Unless speciﬁcally noted, all major
+of LIB material from conventional (i.e., mined ore) or circular (i.e.,               analyses were based on 2021 data (data reference years are summar-
+collected batteries) sources and the transport of extracted material to              ized in Supplementary Table 2).
+relevant reﬁnement facilities for the production of battery-grade
+cathode materials as Li, Co, and Ni sulfate or carbonate salts. This                 Reﬁning lithium-ion batteries lowered environmental impacts
+upstream modeling shows that reﬁnement is the major contributor to                   Environmental impacts of reﬁnement pathways in conventional and
+environmental impacts in the circular case, which highlights oppor-                  circular LIB supply chains were analyzed in Fig. 3. The upstream steps
+tunities to further improve reﬁnement-associated energy and emis-                    of material extraction and transport, which did not have the same
+sions. This study provides LCA insights with primary industrial-scale                granular primary data as reﬁnement, were considered in later sections.
+circular reﬁnement data that includes stepwise, cradle-to-gate com-                  Energy consumption, greenhouse gas emissions (CO2-equivalents,
+parison of conventional and circular LIB supply chains. With the                     CO2-eq; additional criteria air pollutants are detailed in Supplementary
+methodologies and results reported in this study, researchers can                    Table 3), and water consumption were chosen as key metrics to ana-
+prioritize major opportunities to improve process efﬁciencies, practi-               lyze the environmental impacts of LIB supply chains in this study19,24,25.
+tioners can benchmark their environmental impacts, and policymakers                  One kg of lithium–nickel–cobalt–aluminum–oxide cathode-equivalent
+can incentivize better environmental practices in LIB supply chain                   material (NCA-eq) was employed as a functional unit throughout this
+management. Granular insights provided by this study based on                        study for supply chain comparison, accounting for the elemental
+industrial operation data can also help recyclers optimize the envir-                requirements to produce stoichiometric LiNi0.80Co0.15Al0.05O2. NCA
+onmental impacts of their reﬁnement processes, and spark more                        chemistry was selected because it accounted for the second-largest
+academic-industrial collaborations to further advance the ﬁeld.                      category of EV battery chemistries following NMC batteries in 202115,26,
+                                                                                     and is projected to utilize less Co compared to NMC14. Excluding the
+Results                                                                              environmental impacts of material extraction and transport steps, the
+Reﬁnement pathways                                                                   gate-to-gate production of 1 kg NCA-eq battery-grade material from
+In this study, analyses of environmental impacts were presented with a               state-of-the-art conventional mined natural materials consumed
+focus on the reﬁnement step, followed by analysis of the upstream                    193.9 MJ and 77.3 L H2O while emitting 14.5 kg CO2-eq (Fig. 3). Reﬁne-
+material extraction and transport steps. In LIB supply chains, the                   ment of mined material concentrate into battery-grade Ni material
+reﬁnement step converts the collected feedstocks into battery-grade                  dominated NCA environmental impacts, representing >57% of total
+salts for further manufacturing (Fig. 2). In both conventional and cir-              values. Note that the results were based on GREET 2021 to match the
+cular supply chains, the reﬁnement pathways vary signiﬁcantly                        period when circular reﬁnement data were collected at Redwood;
+depending on multiple factors. Five reﬁnement pathways were                          more recent environmental impacts of the conventional supply chain
+
+
+Nature Communications | (2025)16:988                                                                                                                                    3
+Article                                                                                                                https://doi.org/10.1038/s41467-025-56063-x
+
+
+
+
+Fig. 3 | Environmental impacts of conventional and circular reﬁning technol-             for non-energized recycled scrap. Open bars in the panels “Representative Circular”
+ogies. a Energy consumption, b CO2-eq emissions, and c water consumption of              denote the environmental impacts of recycling NCA batteries with representative
+gate-to-gate reﬁnement by different pathways for lithium nickel cobalt aluminum          existing pyrometallurgical (Py*), hydrometallurgical (Hy*), and direct recycling
+oxide (NCA) battery-grade salts. Numbers in parentheses labeled on the top of            (Direct*) methods as comparison, with data obtained from the literature19. Litera-
+stacked bars denote the reﬁnement methods summarized in Fig. 2. The conven-              ture data were normalized by the same functional unit in this study, and uncer-
+tional mined pathway (Conv. Mined) reﬁnes natural deposits and produces discrete         tainties were determined by combining two different battery form factors: pouch
+salts (Method (1) in Fig. 2); note that Al is presented on the top of each stacked bar   and cylindrical. The vertical dashed line in each graph demarcates different data
+but its contributions are too small to be seen; speciﬁc environmental impacts of         types, where the model-based conventional and representative existing pathways
+each element contributor were detailed in Supplementary Table 3. Circular supply         were summarized in the left panel, operational data from Redwood Materials were
+chains reﬁne from either mixed energized end-of-life lithium-ion batteries collected     presented in the middle panel (“industrial circular”), and literature data in the right
+from consumers (Recycled Battery, Method (4) in Fig. 2) or non-energized battery         panel (“representative circular”). Note that water consumption has generally not
+scrap from a production facility (Recycled Scrap, Method (5) in Fig. 2), producing       been quantiﬁed in previous studies, leading to no literature data panel for (b).
+mixed metal sulfates. Multi-step circular reﬁnement pathways include mechanical          Environmental impacts of material extraction and transport in the supply chains
+processing (Me, gray), reductive calcination (RC, red), and hydrometallurgy (Hy,         were not included.
+blue). RC is an additional processing step for energized batteries and was not used
+
+
+
+based on the 2023 model were 17.0%–18.3% higher than that of 2021,                       life LIBs collected from consumers (recycled battery). Using a limiting-
+and are presented in Supplementary Data. The greenhouse gas emis-                        reagent approach of output products to produce 1 kg NCA-eq material,
+sions values were comparable with previous studies based on GREET                        energy requirements for processing recycled scrap and recycled bat-
+datasets23,27 (comparison of environmental impacts with data in lit-                     tery streams were 22.0 MJ and 44.4 MJ per kg NCA-eq materials, sig-
+erature is detailed in Supplementary Fig. 2d).                                           niﬁcantly lower than conventional reﬁnement by 88.7% and 77.1%,
+     The environmental impacts of two circular reﬁnement pathways                        respectively (Fig. 3a). Relatedly, 2.8 and 6.1 kg CO2-eq per kg NCA-eq
+were presented in each graph in Fig. 3 for mixed-stream LIB feedstocks                   materials were generated from scrap and battery streams, respec-
+processed at Redwood Materials: non-energized production scrap                           tively, a substantial reduction in CO2-eq emissions by 80.9% and 57.7%
+from LIB production facilities (recycled scrap) and energized, end-of-                   (Fig. 3b). Water consumption was also lower by 87.7% for scrap and
+
+
+Nature Communications | (2025)16:988                                                                                                                                          4
+Article                                                                                                               https://doi.org/10.1038/s41467-025-56063-x
+
+
+
+
+Fig. 4 | Inﬂuences of reﬁning products on environmental impacts in circular             salts. Note that Al is presented on the top of the stacked bars of conventional supply
+reﬁning. a Energy consumption, b CO2-eq emissions, and c water consumption.             chains but its contributions are too small to be seen (detailed values in Supple-
+Left and right panels denote conventional (Conv. Mined) and industrial circular         mentary Table 3). Numbers in parentheses labeled on the top of stacked bars
+pathways that reﬁne end-of-life batteries to discrete Ni and Co salts, or mixed Ni–Co   denote the reﬁnement methods summarized in Fig. 2.
+
+
+72.2% for battery streams relative to the conventional scenario,                        hydrometallurgy often requires discharging energized batteries in a
+resulting from the consumption of 9.5 and 21.5 L H2O per kg NCA-eq                      salt bath or removing electrolyte for safe mechanical processing. While
+materials, respectively (Fig. 3c). Note that while the elemental stoi-                  this analysis was focused on Redwood Materials reﬁnement pathways,
+chiometry was identical, the output battery-grade materials varied                      the methodology can be used to evaluate additional reﬁnement
+slightly between conventional (Li2CO3, NiSO4, CoSO4) and circular                       pathways (e.g., analysis of a representative hydrometallurgy
+(Li2SO4, (Ni,Co)SO4) reﬁnement in the “Methods” section. Metal sul-                     pathway for energized end-of-life batteries detailed in Supplementary
+fates are commonly produced and traded in the battery recycling                         Fig. 2d), or others that use different material feedstocks, reﬁnement
+market28–31. Converting the ﬁnal lithium product to Li2CO3 did not                      processes, and energy supplies.
+substantially change the environmental impacts of the circular supply                         Among the few studies that directly compare the environmental
+chains (Supplementary Note 3, Supplementary Fig. 2), and impacts of                     impacts of circular and conventional NCA reﬁnement using industrial-
+producing discrete or mixed products are examined in the following                      scale operational data, 35% lower greenhouse gas emissions (Supple-
+section.                                                                                mentary Fig. 2) were reported for Me + Hy circular reﬁnement com-
+      To produce battery-grade cathode materials, Redwood Materials                     pared with the current study19,27. However, direct comparison can be
+used a combination of reductive calcination (RC) pyrometallurgical,                     inexact due to varying underlying assumptions and data sources. For
+mechanical (Me), and hydrometallurgical (Hy) LIB reﬁnement pro-                         example, Argonne National Laboratory’s GREET and EverBatt models
+cesses (pathways detailed in Supplementary Fig. 5). RC is an industrial-                leveraged a combination of technology descriptions from patent
+scale exothermic pyrometallurgical process that reduces the cathode                     applications, literature data on process ﬂow consumptions, industry
+metal oxide compounds under oxygen-free conditions for subsequent                       site visits and surveys, expert advice solicitation, and stated assump-
+reﬁnement. Unlike dominant industrial pyrometallurgical processes                       tions to form complete pathways. Further, Ciez and Whitacre quanti-
+(e.g., direct roasting or smelting) that require high temperature                       ﬁed environmental impacts using output products represented as
+>1400 °C17,32, the RC process optimizes the working conditions,                         “metal offsets” for pyrometallurgy or with metals in solution for
+favoring carbothermal reduction without using graphitic carbon, thus                    hydrometallurgy19 (Supplementary Note 3), rather than cathode salts
+avoiding direct fossil fuel inputs, graphite combustion, and substantial                in this study. In addition, the previous studies included a portion of
+Li loss. Because RC is not required for non-energized LIB production                    recycled metal materials in conventional supply chain analysis,
+scrap materials, the two feedstock streams (recycled scrap and recy-                    whereas this work referenced only mined natural deposits in conven-
+cled batteries) were analyzed separately. Energy consumption and                        tional supply chains to fully deconvolute the environmental impacts27.
+CO2-eq emissions of representative existing recycling pathways from                     The different conclusions highlight divergent LCA approaches, pro-
+the literature, including pyrometallurgy (Py*), hydrometallurgy (Hy*),                  cessing conditions, and the utility of primary industrial data access in
+and direct recycling (Direct*), are also presented in Fig. 3 for com-                   addition to modeling processes from literature sources21.
+parison. Note that a mechanical processing step is often included in
+the Hy* reﬁnement. In general, the RC + Me + Hy pathway exhibited                       Formats of reﬁnement products inﬂuenced environmental
+comparable energy consumption and CO2-eq emissions with Hy* and                         impacts
+Direct* literature values19, and substantially lower environmental                      Product format is an important factor in understanding and properly
+impacts than Py*. Similar to RC, emerging oxygen-free pyr-                              comparing LIB reﬁnement pathways (Fig. 2). Ni and Co are key ele-
+ometallurgical processes rely on carbothermic and thermite reduction                    ments for battery manufacturing, and can be traded in the format of
+for recycling cathode metal compounds at moderate temperatures                          mixed metal salts or discrete salt products between battery reﬁners
+(600–1000 °C)33–35. While most carbothermic and thermite reduction                      and battery manufacturers36,37. To examine the inﬂuences of the
+processes have been investigated at the lab scale33–35, our results                     reﬁnement product formats, environmental impacts were compared
+showed that the RC step accounted for 5.5%–7.5% of the total envir-                     for reﬁnement to mixed salt (e.g., mixed NiSO4 and CoSO4) and
+onmental impacts of the circular reﬁnement step (Fig. 3), demon-                        reﬁnement to discrete sulfate salts, NiSO4 and CoSO4 (Fig. 4). Both
+strating the environmental feasibility of industrial-scale carbothermal                 conventional and circular reﬁnement pathways were analyzed.
+reduction-based pyrometallurgy. Note that RC pyrometallurgy can                              The GREET model was employed to analyze different conven-
+process energized batteries of varying states of charge, health, and                    tional mining pathways generating different product formats (detailed
+formats     with     minimal     modiﬁcation,    whereas      traditional               in the “Methods” section). In conventional mining, reﬁning to mixed
+
+
+Nature Communications | (2025)16:988                                                                                                                                        5
+Article                                                                                                https://doi.org/10.1038/s41467-025-56063-x
+
+
+hydroxide precipitate, (Ni,Co)(OH)2 (Scenario (2) in Fig. 2), increased      balancing areas including Bonneville Power Administration Transmis-
+energy consumption and CO2-eq emissions by 77.% and 89.4%,                   sion (BPAT), California Independent System Operator (CISO), Western
+respectively, over the discrete salts-based pathway (Fig. 4a, b, “Conv.      Area Power Administration of Colorado-Missouri (WACM), and a 100%
+Mined”). The discrete products NiSO4 and CoSO4 are separately pro-           Renewable Energy Tariff in Nevada (NV*), yielded a signiﬁcant reduc-
+duced from Ni-rich and Co-rich ores. In contrast, generating mixed           tion in CO2-eq emissions of up to 93.3% (recycled scrap) and 87.4%
+hydroxide salt starts from the Ni laterite ore, which has a low con-         (recycled battery) relative to conventional reﬁnement (Fig. 5b). Con-
+centration of Co (0.01-0.15%) relative to Ni (0.66-2.4%)38. This low Co      versely, employing low-carbon electricity grids can increase water
+concentration limits the NCA stoichiometry and increases the total           consumption compared with NEVP-based operation, following the
+energy cost to generate 1 kg NCA-equivalent materials. On the other          order of NV* > BPAT > WACM > CISO > NEVP (Fig. 5b). Note that NV*-
+hand, water consumption of reﬁning mixed hydroxides was slightly             and BPAT-based circular reﬁnement processes exceeded the water
+lower (−6.6%) than that of producing discrete salts. In general, the         consumption level of conventional reﬁnement due to signiﬁcant con-
+discrete salts-based pathway is favorable for conventional reﬁnement         tributions from hydro- and geothermal power. Further investigation
+to reduce environmental impacts.                                             into the grid electricity sources of balancing areas revealed a tradeoff
+     Circular pathways reﬁning batteries to different products were          between CO2-eq emissions and water consumption based on elec-
+analyzed using the industrial RC + Me + Hy data and the modeling of a        tricity generation type (Fig. 5c); most electricity sources with relatively
+representative battery recycling method combining mechanical and             low CO2-eq emissions (e.g., those based on bio-, hydro-, or geothermal
+hydrometallurgy (Me + Hy, analogous to the Hy* in Fig. 3) reﬁnement          energy) exhibited high water consumption, and vice versa. This tra-
+(Scenario (3) in Fig. 2). The RC + Me + Hy pathway reﬁnes recycled           deoff also explained the different inﬂuences of electricity sources on
+batteries to mixed metal sulfate, (Ni,Co)SO4, whereas the representa-        environmental impacts of the Redwood Materials reﬁnement step and
+tive Me + Hy produces discrete NiSO4 and CoSO4. Reﬁning into mixed           other pathways (detailed in Supplementary Fig. 2d). However, the
+metal sulfate exhibited lower energy consumption (−72.3%), CO2-eq            electricity sources for each balancing area will affect both CO2-eq
+emissions (−41.4%), and water consumption (−8.0%) than the Me + Hy           emissions and water consumption. For example, because NEVP-based
+pathway (Fig. 4), because it avoids additional treatment separating          electricity includes a relatively large proportion (70%) from CO2-eq
+(Ni,Co)SO4 to discrete salts. Overall, our results indicated that reﬁning    emissions-intensive natural gas with low water consumption, a switch
+batteries to mixed metal salts instead of discrete salts can substantially   to hydro-intensive (73%) BPAT electricity would decrease CO2-eq
+save environmental impacts while still satisfying the needs of circular      emissions while increasing water consumption.
+LIB supply chains. Our ﬁndings also provide important insights to
+optimizing plant-scale battery reﬁning operations. In the following          Upstream environmental impacts were lower in circular
+sections, mixed salt-based pathways were analyzed for reﬁnement.             supply chains
+                                                                             Before the reﬁnement step, LIBs undergo the upstream steps of
+Electricity consumption dominated circular reﬁnement                         material extraction and transport to reﬁnement facilities (Fig. 1b).
+To further understand the performance limiting factors in the reﬁne-         Environmental impacts of these upstream steps were analyzed for two
+ment step, the relative environmental impacts of input consumables           representative LIB chemistries and battery use cases: NCA in EV battery
+(e.g., energy, water, commodity chemicals) in the gate-to-gate reﬁne-        packs, and lithium cobalt oxide (LiCoO2 or LCO) in smartphones.
+ment processes were disaggregated in Fig. 5 (additional criteria air         California was chosen to assess circular extraction because it has the
+pollutants in Supplementary Tables 10, 11 and Supplementary Figs. 3,         largest population and EV market share in the USA44,45. Smartphones
+6). Note that the embodied environmental impacts of electricity con-         were considered extracted when collected, aggregated, and trans-
+sumption in Fig. 3 were based on the Nevada Power Company (NEVP)             ported from all California residents (analyzed per census block) to the
+at the Redwood Materials location. Electricity consumption was found         nearest existing collection facility (CF)46. A shortest-path route for
+to be a principal factor dominating the environmental impacts. For           collection was determined by minimizing the distances from block
+both LIB feedstock pathways (Scenarios (4) and (5) in Fig. 2), electricity   group to CF for the whole state (Fig. 6a; the model is summarized in the
+accounted for 70.3%–91.0% of the total energy consumption,                   “Methods” section and detailed in Supplementary Note 4)44. To
+70.5%–83.4% of the total CO2-eq emissions, and 56.9%–66.1% of water          quantify conventional material extraction environmental impacts from
+consumption (Fig. 5a). For both feedstocks, Hy processes comprised           mining, global supply chain data were adapted from GREET23 (Sup-
+the majority of environmental impacts, contributing more than 87.3%          plementary Fig. 4, Supplementary Tables 14, 15). Smartphone extrac-
+to energy consumption, 85.9% to CO2-eq emission, and 88.6% to water          tion in the circular supply chain emitted only 0.0186 kg CO2-eq per kg
+consumption. Notably, the additional RC step required for processing         LCO-eq, signiﬁcantly lower than conventional mining (1.96 kg CO2-eq
+energized batteries only marginally contributed to CO2-eq emissions          per kg LCO-eq) by 99.0%. Energy and water consumption were simi-
+(7.5% of total). Unlike conventional pyrometallurgical processes that        larly lower in the circular supply chain (Supplementary Table 15).
+require external energy sources19,32, RC pyrometallurgy is primarily              After extraction, LIB material concentrates transported along
+autothermic because it leverages process heat released from exo-             domestic and international routes by truck, train rail, and maritime
+thermic reactions of the LIB materials39,40. In addition to electricity      cargo ship to reﬁnery locations (a portion of the network model is
+consumption, chemical reagents used in circular reﬁnement processes          presented in Supplementary Fig. 4, and data summarized in Supple-
+also contributed to embodied environmental impacts. Alkali reagents          mentary Tables 4–9, 15, and 16)23,47–57. The environmental impacts of
+used to precipitate metals contributed between 7.6% and 19.9% of             transport were quantiﬁed by calculating the shortest distance along
+environmental impacts (largest relative contribution to water con-           major transport routes among the participating countries weighted
+sumption). H2O2 was used to reduce high oxidation state metal com-           by the relative contributions of the countries to the market for each
+pounds for hydrometallurgical leaching of scrap material, and                element (the case of cobalt is presented as an example in Fig. 6b).
+accounted for 10.7%–20.1% of environmental impacts (largest relative         Details of the modeling method can be found in Supplementary
+contribution to energy consumption).                                         Note 5. Conventional mine-to-reﬁnery environmental impacts were
+      Because electricity dominated the environmental impacts of LIB         calculated for 1 kg of embodied Li, Ni, Co, and Al metal (Supple-
+recycling processes, we compared several electricity grid balancing          mentary Table 14). While transport emissions for Li, Ni, and Co ran-
+areas that emit a range of CO2-eq emissions per MWh (averaged for            ged from 5.4–6.4 kg CO2-eq per kg embodied metal, Al was three
+2021)41–43 in Fig. 5b (additional criteria air pollutants detailed in Sup-   times lower. For the circular case applied to California, smartphones
+plementary Table 12). Substituting NEVP electricity with other               and EV battery packs collected at CFs were transported to a
+
+
+Nature Communications | (2025)16:988                                                                                                                  6
+Article                                                                                                           https://doi.org/10.1038/s41467-025-56063-x
+
+
+
+
+Fig. 5 | Breakdown of environmental impacts of lithium-ion battery (LIB)            (BPAT), California Independent System Operator (CISO), Nevada Power Company
+recycling using different input electricity sources. a Contributions to the         (NEVP), and Western Area Power Administration: Colorado-Missouri (WACM). The
+environmental impacts of recycling processes using electricity from the Nevada      red dashed lines denote the environmental impacts of the analogous conventional
+Power Company, including energy consumption, CO2-eq emission, and water             reﬁning process. Note that inﬂuences of energy sources on environmental impacts
+consumption by different input consumables used in circular processes for LIB       are only presented for the circular supply chains, but not for conventional supply
+feedstocks from production scrap (recycled scrap) and used end-of-life energized    chains. Speciﬁc environmental impacts presented in the ﬁgures are detailed in
+batteries (recycled battery) used by Redwood Materials. b Environmental impacts     Supplementary Table 12. c Tradeoff relationship between embodied water con-
+of input electricity sources on CO2-eq emissions and water consumption in the LIB   sumption and CO2-eq emission by different power sources, including electricity
+recycling operations employed by Redwood Materials methods for production           grids in different locations (circles), purely power sources (squares), and Nevada
+scrap and energized batteries. CO2-eq emissions and water consumption were          Renewable Energy Tariff (NV*, triangles). The red dashed line denotes the lower
+based on the resources consumed by electricity generated from several electricity   bound of the water-CO2 performance, i.e., the existing electricity grids that have the
+sources: Nevada Renewable Energy Tariff (NV*), Bonneville Power Administration      lowest water consumption and CO2-eq emission simultaneously.
+
+
+
+
+Nature Communications | (2025)16:988                                                                                                                                    7
+Article                                                                                                               https://doi.org/10.1038/s41467-025-56063-x
+
+
+
+
+Fig. 6 | Cradle-to-gate environmental impacts of different supply chains.                using a shortest distance path to major reﬁnery locations, with insets showing the
+a Modeled circular extraction of lithium cobalt oxide (LCO)-based smartphones            degree of detail considered. Similar analyses were performed for Li, Ni, Co, and Al.
+from every census-block group based on population to the closest existing private        Inserts present more detailed transit routes in DRC and Canada. d Energy con-
+or municipal collection facility (CF) using a shortest-route algorithm. Inset details    sumption (left), e CO2-eq emissions (middle), and f water consumption (right) of
+modeled circular transport of smartphones aggregated at CFs and then trans-              conventional (conv.) and circular (cir.) supply chains by supply chain step (material
+ported to a central recycling facility at the center (gravity point) of the California   extraction, transport, reﬁnement). NCA-eq cathode used in electric vehicles (EV-
+population by the shortest route (red lines). Colors of block groups indicate the        NCA, left panels) and LCO-eq cathode material used in smartphones (Phone-LCO,
+catchment area of a speciﬁc CF, where CF size shows the relative number of               right panels) were provided. Environmental impacts of reﬁnement were analyzed
+smartphones collected in 2021. b A weighted distribution estimate of international       based on electricity generated from balancing grid authority CISO, and upstream
+transport logistics for conventional supply chains between mining and reﬁning            supply chain steps (extraction and transport) were based on data from GREET and
+countries based on cobalt productivity in the top Sankey diagram. c An example of        transport models developed in the preceding section and depicted in (a–c). Spe-
+transport logistics for cobalt mined and aggregated in the Democratic Republic of        ciﬁc environmental impacts of each step were detailed in Supplementary
+the Congo (DRC) and then shipped via primary road, train rail, and maritime routes       Tables 13–15.
+
+
+hypothetical central LIB circular reﬁnement facility at the                              phones) to a circular reﬁnement facility were 0.073 kg CO2-eq per kg
+population-weighted center (i.e., gravity point) of California (near                     NCA-eq and 0.47 kg CO2-eq per kg LCO-eq, 98.2% and 89.1% lower
+Bakersﬁeld)44. In conventional supply chains, transporting mined                         than transport of mined concentrate, respectively. The reduction in
+material concentrates accounted for 3.68 kg CO2-eq per kg NCA-eq                         CO2-eq emissions was attributed to differences in elemental con-
+and 4.32 kg CO2-eq per kg LCO-eq. By comparison, emissions for the                       centrations of transported materials and aggregate transport dis-
+transport of aggregated end-of-life NCA EV battery packs (i.e., not                      tance (e.g., a weighted average of 224 km for circular NCA-eq
+disassembled) and LCO smartphone batteries (not separated from                           materials, and 57,600 km for conventional NCA-eq materials).
+
+
+
+Nature Communications | (2025)16:988                                                                                                                                        8
+Article                                                                                               https://doi.org/10.1038/s41467-025-56063-x
+
+
+Reﬁnement-dominated circular and conventional supply chains                  but can require costly pretreatment, suffer from limited scalability,
+Combining material extraction, transport, and reﬁnement steps yielded        and generate secondary waste liquids59,60. Our analysis identiﬁed che-
+a cradle-to-gate comparison of the differentiated steps of conventional      mical consumables such as H2O2 as important contributors to hydro-
+and circular LIB supply chains for producing battery-grade cathode           metallurgy, indicating that environmental impacts of Hy processes can
+materials (Fig. 6d–f). Here the environmental impacts of the LIB             be reduced through more sustainable production methods for che-
+reﬁnement step in California were analyzed for a hypothetical scenario       mical inputs (e.g., electrochemical generation of H2O2)61. The alter-
+employing the same circular multi-step reﬁnement technologies as the         native direct recycling technology is reported to exhibit comparable
+RC + Me + Hy pathway in Nevada, but using California (CISO) electricity      environmental impacts to circular reﬁning methods in this study20, but
+to produce battery-grade cathode materials. A circular supply chain in       warrants further assessment after industrial-scale implementation. We
+California for NCA EV and LCO smartphone batteries lowered energy            note the inconsistencies among existing studies on assessing con-
+and greenhouse gas emissions by at least 47.3% and water consumption         ventional LIB reﬁnement due to different product compositions, which
+by over 42.2%. In the case of recycling NCA EV batteries in California,      underscores the need to standardize the functional unit in reporting
+the entire cradle-to-gate greenhouse gas emissions of the circular           environmental analyses for future studies in the ﬁeld. The deviations
+supply chain were lower than the transport emissions of mined con-           between our results of circular reﬁnement and model-based literature
+centrate in conventional supply chains (Fig. 6d–f and Supplementary          data highlighted the importance of reconciling models with industrial-
+Table 15). Circular production of LCO-grade materials led to higher          scale operating data.
+environmental impacts than that of NCA-grade materials based on the                Our ﬁndings provide important guidance for material sources
+mixed-stream feedstock composition analyzed in this study. Note that         and output products in future reﬁnement. Battery scrap is currently
+LCO has relatively lower packing densities of active materials compared      the primary recycling source with more gigafactories coming online,
+with NCA (detailed in Supplementary Table 5, thus elevating the              but will decrease in the future with quality control advances in
+environmental impacts of transporting LCO). Overall, upstream steps          manufacturing11. While reﬁning end-of-life batteries is more envir-
+(extraction and transport) contributed marginally to the total envir-        onmentally intensive than reﬁning LIB scrap (Fig. 3), it is critical to
+onmental impacts of both circular supply chains, accounting for ≤4.1%        improve the technologies for recycling energized batteries when
+CO2-eq emission, ≤8.2% energy consumption, and ≤0.36% water con-             a larger volume of end-of-life batteries becomes available from EVs.
+sumption. Accordingly, the reﬁnement process dominated the envir-            Our ﬁndings also demonstrated the environmental beneﬁts of mixed
+onmental impacts of the circular supply chain. In contrast, upstream         metal sulfate reﬁnement products over single salts in the circular
+steps in the conventional supply chain played a larger role (still smaller   supply chain, indicating that the further separations between Ni and
+than reﬁnement) in cradle-to-gate environmental impacts, contributing        Co salts can be avoided.
+between 7.8% and 30.4% to the environmental metrics considered                     Electricity greatly inﬂuenced environmental impacts in LIB cir-
+(Supplementary Table 15).                                                    cular reﬁnement, and the variability among grid electricity sources
+                                                                             elucidated a tradeoff between CO2-eq emissions and water consump-
+Discussion                                                                   tion (Fig. 5). Therefore, considering water consumption and CO2-eq
+This study uses a quantitative cradle-to-gate LCA of disaggregated           emissions is necessary for selecting recycling facility locations, parti-
+conventional and circular LIB supply chains and includes primary data        cularly in water-sensitive or emissions-sensitive scenarios. Further
+from an industrial-scale recycling facility. Various important aspects of    examination suggested that the tradeoff is primarily driven by water-
+the environmental impacts in the reﬁnement step were focused on and          intensive hydroelectric and geothermal electricity in certain locations
+analyzed using unit process and operations data from an LIB recycling        versus CO2-intensive coal and natural gas in others, implying that
+company, and modeling was employed to examine the environmental              increasing the proportion of electricity from nuclear, wind, and solar
+impacts of upstream material extraction and transport steps. The             energy sources simultaneously reduces CO2-eq emissions and water
+analysis revealed that reﬁning end-of-life LIBs into battery-grade           consumption relative to existing balancing areas (Fig. 5).
+cathode materials exhibited lower environmental impacts than con-                  Analyses of upstream environmental impacts informed more
+ventional reﬁnement of mined materials, mixed salts products were            efﬁcient operations for future resource-saving extraction and trans-
+more beneﬁcial for circular reﬁnement, and the source of input elec-         port steps. Conventional mining and processing of ore or brine was
+tricity is the principal factor governing circular reﬁnement environ-        resource-intensive due to the low natural concentrations of critical
+mental impacts. Upstream circular supply chain steps contribute              materials (0.01%–1%), while critical material concentrations for trans-
+marginally to overall environmental impacts, and the reﬁnement step          port rose to 3%–15% after beneﬁciation. Further concentrating mate-
+comprises the largest source of cradle-to-gate environmental impacts.        rials near mine sites or building reﬁneries closer to mine sources can
+      Disaggregated analysis of LIB reﬁnement pathways using indus-          efﬁciently reduce environmental impacts of the conventional mined
+trial data provided important insights into the performance and              materials. In contrast, smartphones contain 5% LCO material by mass,
+potential of different reﬁnement processes. Pyrometallurgical tech-          with the batteries themselves at approximately 24% LCO53. Circular
+nologies are advantageous in scalability and operating safety17,18,58, but   material extraction via LIB collection decreases environmental impacts
+are widely considered environmentally intensive due to the high              by 99% versus conventional. A “shortest-route” approach was used in
+reaction temperature. Oxygen-free carbothermic reduction and ther-           this study to quantify the environmental impacts of battery extraction
+mite reduction have been recently investigated at lab scale for energy-      and transport supply chain steps. Practical battery collection opera-
+efﬁcient LIB cathode pyrolysis33–35. Our analysis showed that industrial-    tions will likely vary based on route selection and preprocessing
+scale carbothermal reduction-based pyrometallurgy (RC) exhibited             strategy further inﬂuencing environmental impacts62. Further investi-
+much lower environmental impacts than prevailing direct roasting and         gating the environmental impacts of the disassembly of collected
+smelting pyrometallurgical and hydrometallurgical pathways (Sup-             batteries from devices prior to transport can help balance between
+plementary Fig. 2). Our ﬁndings showed the promise of carbothermal           extraction energy usage and transport emissions (Supplementary
+reduction-based pyrometallurgy for pretreatment of end-of-life LIBs          Table 5). Trucks are used as the primary vehicle for transport analysis
+for recycling; however, we note that additional work is warranted in         given regulatory concerns that consider LIBs hazardous material in
+controlling process conditions to achieve optimal environmental              many transportation scenarios63. However, alternative transport like
+impacts and product formats without elevating the costs. Existing            railway can further lower environmental impacts by approximately
+hydrometallurgy-dominated reﬁnement exhibits advantages over                 four times versus trucking (Supplementary Table 6), and can be
+pyrometallurgy in terms of energy efﬁciency and reﬁnement precision,         explored for use as aggregation points for long transport combined
+
+
+Nature Communications | (2025)16:988                                                                                                                9
+Article                                                                                                 https://doi.org/10.1038/s41467-025-56063-x
+
+
+with trucking. Upstream process optimization of environmental                 cathode materials. This analysis complied with the International
+impacts warrants further investigation, such as the active research area      Organization for Standardization (ISO) 14040 standards but omitted
+of high-throughput automation of LIB extraction from non-                     conversion to environmental impact indicators and external review67.
+standardized devices and EV battery packs or rapid assessment of              Data for conventional material extraction (e.g., mining) and reﬁning
+LIBs for second life uses. While the current study modeled localized          were adapted from the Argonne National Laboratory’s Greenhouse
+collection and transport inside the state of California, extending the        Gases, Regulated Emissions, and Energy Use in Transportation
+scale to larger regions is critical to further assess the upstream envir-     (GREET®) 2021 model. GREET and the ecoinvent 3.3 database68 were
+onmental impacts.                                                             employed for life cycle inventory (LCI) data of chemical consumables
+     As the prevalence of LIBs grows in the mobility sector and beyond,       for the conventional and circular supply chains.
+strategic placement of domestic LIB collection, reﬁnement, and man-                To assess circular LIB reﬁnement, primary operational data
+ufacturing facilities can further minimize future environmental               detailing energy, water, on-site emissions, and consumables usage
+impacts by considering heterogenous LIB growth by location, collec-           were provided by Redwood Materials and normalized to mass ﬂows of
+tion approach, transportation distance, and electricity source for            the different elements of interest in input feedstocks and output
+reﬁnement processes. As LIB production scales, policies informed by           products. A representative prevailing circular reﬁnement, Method (2)
+consumer surveys, focus groups, pilot testing, and diverse stakeholder        in Fig. 2, was modeled with the software HSC Sim69, based on the
+engagement will be needed to research and scale battery collection64.         technical procedures available in the literature58,70–72 and the practical
+Business models for collection of all LIB types and sizes will likely vary    feedstock amount received by Redwood.
+from manufacturer-led to municipal or private collection programs,                 Conventional reﬁnement was modeled by aggregating the envir-
+and can be inﬂuenced by the safety costs while collecting end-of-life         onmental impacts of the individual reﬁning pathways for each LIB
+batteries as hazardous wastes. In addition to collection costs, the           cathode element (Supplementary Table 3), normalizing by the mass of
+varied scale of collection requires further investigation, particularly for   the individual element of interest within the output product (e.g., Li in
+localized environmental impacts. Notably, analogous economic and              Li2CO3) and then normalizing again by the mass of that element in the
+environmental impacts to local ecosystems of conventional mining are          functional unit for this LCA (deﬁned in the next section). For elements
+not considered in this analysis, and warrant future studies65. Addi-          where more than one pathway of production exists in the GREET
+tionally, designing and manufacturing LIBs for recycling in a circular        model (i.e., Ni and Li), the overall environmental impacts were calcu-
+economy can reduce resource usage identiﬁed in this study66.                  lated by averaging pathways weighted by their respective share of
+Employing reusable battery packs can reduce reﬁnement energy and              global production (45% Li production from brine and 55% from ore,
+chemical inputs, and designing battery cells and modules favorable for        and 60% Ni production from mixed hydroxide precipitate and 40%
+extraction and integration will lower the environmental impacts of the        from Class 1 Ni). Both discrete and mixed output products were con-
+upstream steps. Future efforts should also focus on optimizing                sidered. Discrete salts from conventional reﬁnement were Li2CO3,
+reﬁnement processes for subsequent steps of the circular supply chain         NiSO4, CoSO4, and Al2O3; alternatively, (Ni,Co)(OH)2 was considered as
+in LIB manufacturing, product performance, and economic cost.                 the mixed product. Lithium outputs produced by Redwood Materials
+                                                                              were Li2SO4 (environmental impacts for converting to Li2CO3 are
+Methods                                                                       detailed in Supplementary Note 3), and other outputs existed as mixed
+Goal and scope                                                                metal sulfates of (Ni,Co)SO4 or as Al2O3 and Al(OH)3. With additional
+The goal of this study was to compare stepwise cradle-to-gate envir-          treatment further transforming the mixed metal sulfate into separate
+onmental impacts (energy consumption, CO2-eq emission, and water              Ni and Co compounds, discrete salts as NiSO4 and CoSO4 were ana-
+consumption) for two supply chains: a conventional, linear supply             lyzed based on modeling of a prevailing Hy + Me reﬁnement pathway.
+chain fed by natural mined material for reﬁnement into battery                In the cradle-to-gate analysis, material transportation between stages
+materials, and a circular supply chain fed by LIBs. Both supply chains        was not included because it was not consistently available in the GREET
+produced battery-grade cathode materials. A comprehensive cradle-             model. Electricity sources vary between elements, as well as between
+to-gate analysis of both supply chains considered steps of material           pathway stages. For example, crude production of Co(OH)2 used a
+extraction, transport, and reﬁnement, and gate-to-gate analysis               distributed electricity source in the Democratic Republic of the Congo,
+investigated the reﬁnement step, the focus of this study. A gate-to-gate      and the reﬁnement of these materials into CoSO4 and CoCl2 used a
+scope was broadly deﬁned as the boundary surrounding processing               distributed electricity source in China. See Supplementary Data for the
+facility operations. In this analysis, gate-to-gate reﬁnement only con-       breakdown of the conventional reﬁning data workﬂow.
+sidered direct processing (e.g., alteration, concentration, precipita-
+tion) of the feedstock material once it was extracted from its original       Deﬁning functional units
+state and transported to the reﬁnement location (shown in Fig. 1b). For       Functional units standardize comparisons of the resource consump-
+Redwood Materials, this scope included mechanical processing,                 tion and emissions in LCAs. In this study, two functional units were
+reductive calcination, and hydrometallurgy (Supplementary Fig. 5).            considered to normalize environmental impacts between conven-
+The system boundary did not include other operations outside of the           tional and circular supply chains: the battery-grade material required
+direct reﬁnement processes as discussed in study limitations below.           to make 1 kg of stoichiometric lithium nickel cobalt aluminum oxide
+      Two LIB feedstock streams were evaluated: (1) battery production        (LiNi0.80Co0.15Al0.05O2, NCA-eq) and lithium cobalt oxide (LiCoO2,
+scrap and (2) mixed, spent LIBs from consumers (Supplementary                 LCO-eq) cathode material. Mass was selected as the primary normal-
+Fig. 5). Upstream of the gate-to-gate supply chain included both              izing factor because any energy-based functional unit (e.g., per kWh)
+material extraction and transport steps. For conventional extraction,         could vary based on battery manufacturing and cycling characteristics.
+GREET was used to quantify the environmental impacts of mining.               NCA chemistry was selected because future cathodes were projected
+Transport between the supply chain steps and the circular extraction          to utilize less Co compared to NMC batteries in EVs15, and NCA com-
+step was quantiﬁed using a logistics transportation model developed           prised the second-largest category of EV battery chemistries in 2016,
+in this study, where limitations were summarized below.                       following NMC batteries. LCO was a representative chemistry used in
+                                                                              handheld rechargeable devices (e.g., cellphones and laptops) which
+Methodology                                                                   are currently available to recycle in larger quantities than EV LIBs.
+An attributional LCA was conducted to quantify and compare con-               Environmental impacts of other LIB-relevant materials (Cu and Mn) in
+ventional and circular LIB supply chains for the production of battery        conventional supply chains can be found in Supplementary Table 14.
+
+
+Nature Communications | (2025)16:988                                                                                                                 10
+Article                                                                                             https://doi.org/10.1038/s41467-025-56063-x
+
+
+      In both conventional and circular supply chains, the extraction,     of transport (including road, rail, and maritime). Details of the
+transport, and reﬁnement steps were converted into environmental           modeling method are described in Supplementary Note 5. A major
+impacts for the production of battery-grade materials and normalized       mine cluster or reﬁnery location was selected to represent country-
+by NCA and LCO functional units. A limiting-reagent approach was           level transport values (Supplementary Tables 7 and 8) based on
+used to quantify the environmental impacts of a functional unit in         production volumes, and distances were quantiﬁed between inter-
+circular reﬁnement pathways. According to current multi-step path-         national destinations. These distances were used to calculate the
+ways using mixed-stream LIB feedstocks (either recycled scrap or           energy consumption, CO2-eq emissions, and water consumption
+recycled battery), the Li output was the limiting element for creating     associated with the transportation of critical materials as mined
+1 kg of NCA-eq materials from recycled scrap, where other reﬁned           concentrate. Mined concentrate referred to ore or brine that was
+elemental products were produced in excess. Relatedly, Ni was the          concentrated locally beyond natural concentration values to reduce
+limiting output element from recycled batteries. For multi-step            weight for transport to a reﬁnery. By considering the total elemental
+reﬁnement processes, the recovery rate of Ni and Co was 95% and            mass and elemental weight percentage of the mined concentrate
+for Li was 92%. Additionally, a sensitivity analysis of environmental      transported along a route (Supplementary Tables 7 and 8), the
+impacts from circular reﬁnement was conducted based on facility            environmental impacts on a per-element basis were calculated as a
+location in different grid balancing areas and their associated elec-      global weighted average (Supplementary Table 4) with additional
+tricity sources.                                                           process details in Supplementary Notes 4 and 5.
+                                                                                For the circular case applied to California, end-of-life EV NCA LIBs
+Life cycle inventory and assessment                                        were aggregated at one CF per county closest to its centroid, where
+The LCI data for conventional mining pathways were normalized by           county-level data were the most granular data available. All smart-
+each critical metal element: Li, Ni, Co, Al, Cu, and Mn (Supplementary     phones were aggregated at their nearest CFs. Aggregated smartphone
+Table 14). The LCI data for consumables in the Redwood process were        and EV batteries were assumed transported via truck to a single recy-
+adapted from the GREET 2021 model and ecoinvent 3.3 (Supplemen-            cling facility located at the gravity point of California’s population
+tary Table 10)23,68. The LCI for the Redwood processes also listed water   based on census block-level data (detailed in Supplementary Note 4).
+consumption and criteria emissions for different electricity sources by    The mass-distances traveled were converted to energy consumption,
+grid balancing areas in the Western USA (Supplementary Table 12).          CO2-eq emission, and water consumption (Supplementary
+Three categories of environmental impacts were detailed in this study:     Tables 4 and 15).
+energy consumption, air pollutant emissions, and water consumption.
+Energy consumption included the input electricity for different            Summary of study limitations
+applications and the energy required to produce required consum-           Limitations based on key assumptions of supply chain steps (extrac-
+ables. Criteria air pollutant emissions included the embodied emis-        tion, transport, reﬁnement) in each supply chain (conventional and
+sions generated by the production of input electricity and the             circular) are brieﬂy discussed in this section.
+consumed reagents. CO2, CH4, CO, NOx, N2O, SOx, PM10, and PM2.5                  Mining data in conventional supply chains in GREET often only
+were the air pollutants provided in the GREET model and considered         refer to one mining country per material, indicating that the global
+here. Greenhouse gas emissions were reported as CO2 equivalents            supply chain was difﬁcult to capture. Transport required between
+(CO2-eq) summing CO2, CH4, and N2O weighed by the corresponding            mining unit processes (e.g., crushing, ﬂotation, and concentration)
+100-year global warming potential (GWP). Water consumption con-            prior to reﬁnement was excluded from the current analysis due to
+sidered withdrawn water not returned to the original source, and both      limited information in GREET. In collection of end-of-life batteries in
+the input city water usage and the embodied water consumption in           smartphones, inefﬁcient transport to a CF (e.g., driving each smart-
+electricity generation and the manufacturing of consumable materials       phone individually or taking longer transport routes to a CF) was not
+were included.                                                             considered. In addition, all end-of-life EV battery packs were assumed
+                                                                           to be driven to each CF in their original vehicles, which was attributed
+Estimating environmental impacts of material extraction                    to the “product use” stage instead of extraction in LCA; therefore, zero
+For conventionally mined ore and brine, energy consumption, CO2-eq         CO2-eq emissions were assumed for the extraction step of EV batteries.
+emission, and water consumption values were separated for the              Batteries may be collected as hazardous wastes, but the potential
+material extraction processes found in the GREET model. For the cir-       inﬂuences of the safety costs were not considered.
+cular extraction case, LCO-based smartphones were assumed to be                  An inter-country LIB material transportation assessment was
+collected and transported to existing private and municipal collection     performed as a weighted distribution between all major mining and
+facilities (CFs) from each census-block group in CA, assuming every        reﬁning countries. Results were sensitive to the weight percentage of
+person owned a cell phone and purchased a new phone every 3 years. A       critical material in transported concentrate presented in Supplemen-
+shortest-route method was developed for modeling LCO collection at         tary Tables 7 and 8. Transport between a domestic mine and reﬁnery
+the closest municipal collection facility. Census blocks centered by       was not considered, resulting in net zero use of resources in such
+their CFs were ﬁrst determined for the state of California by k-means      cases. The resources required to separate an embedded battery from
+clustering method, and the pathways of transporting LCOs to CFs were       its device prior to a reﬁnement facility were not considered in circular
+identiﬁed through minimizing the possible travel distance, realized by     supply chains. Similarly, the effect of transporting only LIBs separated
+Dijkstra’s algorithm73. Details of the methods are described in Sup-       from the devices was not considered. Incorporating the domestic
+plementary Note 4.                                                         transport and battery separation operations can increase environ-
+                                                                           mental impacts.
+Estimating environmental impacts of material transport                           Reﬁnement data in conventional supply chains were limited to the
+In the conventional supply chain, a network model of primary               country scenarios reported in GREET, and transport between reﬁne-
+transport routes was established that connects mines to reﬁnery            ment unit processes was not included. Ancillary processes (e.g.,
+locations for Li, Co, Ni, and Al on a country-level basis (Supplemen-      transport between unit processes) beyond direct reﬁnement unit
+tary Tables 4–9, 15, and 16) because the amount of mined material          processes and embodied resources of the capital equipment used for
+transported from each mine to each reﬁnery was not known. The              material reﬁnement were not considered for the circular supply chain.
+distances of the shortest-path routes were calculated between mines        The chemical formats of output products differ between the conven-
+and reﬁneries by country, predicated on the closest available modes        tional and circular supply chains, but converting them to the same
+
+
+Nature Communications | (2025)16:988                                                                                                             11
+Article                                                                                                    https://doi.org/10.1038/s41467-025-56063-x
+
+
+products would not substantially change the results due to the simi-            19. Ciez, R. E. & Whitacre, J. F. Examining different recycling processes
+larity between the cathode salts of the two supply chains (Supple-                  for lithium-ion batteries. Nat. Sustain. 2, 148–156 (2019).
+mentary Note 3). Battery-grade cathode metal sulfates were chosen as            20. Gaines, L., Dai, Q., Vaughey, J. T. & Gillard, S. Direct recycling R&D at
+the reﬁnement products for the major comparison, differing from the                 the ReCell center. Recycling 6, 31 (2021).
+ready-to-use materials for manufacturing, but not substantially inﬂu-           21. Van Hoof, G., Robertz, B. & Verrecht, B. Towards sustainable battery
+encing the fairness of the comparison.                                              recycling: a carbon footprint comparison between pyr-
+                                                                                    ometallurgical and hydrometallurgical battery recycling ﬂow-
+Data availability                                                                   sheets. Metals 13, 1915 (2023).
+All data plotted in main and Supplementary Figs. are provided in the            22. Gaines, L. & Wang, Y. How to maximize the value recovered from Li-
+Source Data ﬁle (.xlsx). Life cycle inventory source data for Figs. 3–5             ion batteries: hydrometallurgical or direct recycling? Electrochem.
+and all source data for Fig. 6 are provided in the Source Data ﬁle, and             Soc. Interface 30, 51 (2021).
+listed in Supplementary Tables. The mass input and output data of the           23. Wang, M. The Greenhouse Gases, Regulated Emissions, and Energy
+industrial lithium-ion battery reﬁnement for Figs. 3–5 can be obtained              Use in Transportation (GREET) 2021 (Center for Transportation
+upon request. Data used in building the model for Fig. 6 have been                  Research, Argonne National Laboratory, 2021).
+deposited in the OSF database: https://osf.io/zvame/?view_only=                 24. UN. The Sustainable Development Goals Report 2017 (United
+8fd188cde196485bbe625b217819242a. Source data are provided with                     Nations, 2017).
+this paper.                                                                     25. Schenck, R. & White, P. Environmental Life Cycle Assessment:
+                                                                                    Measuring the Environmental Performance of Products (American
+References                                                                          Center for Life Cycle Assessment Vashon, Washington, 2014).
+1.    Gielen, D. et al. World Energy Transitions Outlook: 1.5 °C Pathway        26. Steward, D., Mayyas, A. & Mann, M. Economics and challenges of Li-
+      (International Renewable Energy Agency, 2021).                                ion battery recycling from end-of-life vehicles. Procedia Manuf. 33,
+2.    FCAB. National Blueprint for Lithium Batteries 2021–2030 (Federal             272–279 (2019).
+      Consortium for Advanced Batteries, 2021).                                 27. Crenna, E., Gauch, M., Widmer, R., Wäger, P. & Hischier, R. Towards
+3.    IEA. Global Supply Chains of EV Batteries (International Energy               more ﬂexibility and transparency in life cycle inventories for
+      Agency, 2022).                                                                Lithium-ion batteries. Resour. Conserv. Recycl. 170, 105619 (2021).
+4.    Winslow, K. M., Laux, S. J. & Townsend, T. G. A review on the             28. Vega, S. Huayou Cobalt Commits to Battery Recycling Efforts (The
+      growing concern and potential management strategies of waste                  Assay, 2023).
+      lithium-ion batteries. Resour. Conserv. Recycl. 129, 263–277 (2018).      29. Bittle, J. The Race to Close the EV Battery Recycling Loop (Popular
+5.    Xu, C. et al. Future material demand for automotive lithium-based             Science, 2022).
+      batteries. Commun. Mater. 1, 99 (2020).                                   30. Mcnees, M. LG Chem, Kemco form Battery Recycling JV (Recycling
+6.    Liu, B. et al. The impacts of critical metal shortage on China’s              Today, 2022).
+      electric vehicle industry development and countermeasure poli-            31. Reaugh, L. RecycLiCo Battery Materials Produces 99.99% Pure
+      cies. Energy 248, 123646 (2022).                                              Lithium Sulfate from the RecycLiCo Process (RecycLiCo Battery
+7.    Alves Dias, P., Blagoeva, D., Pavel, C. & Arvanitidis, N. Cobalt:             Materials, 2021).
+      Demand-Supply Balances in the Transition to Electric Mobility 97710       32. Makuza, B., Tian, Q., Guo, X., Chattopadhyay, K. & Yu, D. Pyr-
+      (Publications Ofﬁce of the European Union, 2018).                             ometallurgical options for recycling spent lithium-ion batteries: a
+8.    Valenta, R. K., Kemp, D., Owen, J. R., Corder, G. D. & Lèbre, É. Re-          comprehensive review. J. Power Sources 491, 229622 (2021).
+      thinking complex orebodies: consequences for the future world             33. Ma, Y. et al. A promising selective recovery process of valuable
+      supply of copper. J. Clean. Prod. 220, 816–826 (2019).                        metals from spent lithium ion batteries via reduction roasting and
+9.    Underwood, R. et al. Abundant material consumption based on a                 ammonia leaching. J. Hazard. Mater. 402, 123491 (2021).
+      learning curve for photovoltaic toward net–zero emissions by 2050.        34. Li, J., Wang, G. & Xu, Z. Environmentally-friendly oxygen-free
+      Solar RRL 7, 2200705 (2023).                                                  roasting/wet magnetic separation technology for in situ recycling
+10.   Fraser, J. et al. Study on Future Demand and Supply Security of               cobalt, lithium carbonate and graphite from spent LiCoO2/graphite
+      Nickel for Electric Vehicle Batteries. Report No. 9276291393 (Pub-            lithium batteries. J. Hazard. Mater. 302, 97–104 (2016).
+      lications Ofﬁce of the European Union, 2021).                             35. Xiao, J., Li, J. & Xu, Z. Novel approach for in situ recovery of lithium
+11.   Lombrana, L. M. & Farchy, J. A Million Tons of Copper is on the Way: It       carbonate from spent lithium ion batteries using vacuum metal-
+      May not be Enough (Bloomberg, 2019).                                          lurgy. Environ. Sci. Technol. 51, 11960–11966 (2017).
+12.   Wood Mackenzie. Global Copper Long-term Outlook Q2 2019                   36. Kartini, E., Fakhrudin, M., Astuti, W., Sumardi, S. & Mubarok, M. Z.
+      (Wood Mackenzie, 2019).                                                       The study of (Ni,Mn,Co)SO4 as raw material for NMC precursor in
+13.   Staub, C. MRF Operator: Lithium-Ion Batteries are ‘Ticking Time               lithium ion battery. AIP Conf. Proc. 2708, 070001 (2022).
+      Bombs’ (Resource Recycling, Inc., 2022).                                  37. Yang, Y., Xu, S. & He, Y. Lithium recycling and cathode material
+14.   Mayyas, A., Moawad, K., Chadly, A. & Alhseinat, E. Can circular               regeneration from acid leach liquor of spent lithium-ion battery via
+      economy and cathode chemistry evolution stabilize the supply                  facile co-extraction and co-precipitation processes. Waste Manag.
+      chain of Li-ion batteries? Extr. Ind. Soc. 14, 101253 (2023).                 64, 219–227 (2017).
+15.   Jacoby, M. It’s time to get serious about recycling lithium-ion bat-      38. Marsh, E. E., Anderson, E. D. & Gray, F. Nickel-cobalt laterites: a
+      teries. Chem. Eng. News 97, 29–32 (2019).                                     deposit model. https://pubs.usgs.gov/publication/sir20105070H
+16.   Yu, L., Bai, Y., Polzin, B. & Belharouak, I. Unlocking the value of           (U.S. Geological Survey, 2013).
+      recycling scrap from Li-ion battery manufacturing: challenges and         39. Balachandran, S. et al. Comparative study for selective lithium
+      outlook. J. Power Sources 593, 233955 (2024).                                 recovery via chemical transformations during incineration and
+17.   Zhou, M., Li, B., Li, J. & Xu, Z. Pyrometallurgical technology in the         dynamic pyrolysis of EV Li-ion batteries. Metals 11, 1240 (2021).
+      recycling of a spent lithium ion battery: evolution and the chal-         40. Kim, S. et al. A comprehensive review on the pretreatment process
+      lenge. ACS EST Eng. 1, 1369–1382 (2021).                                      in lithium-ion battery recycling. J. Clean. Prod. 294, 126329 (2021).
+18.   Baum, Z. J., Bird, R. E., Yu, X. & Ma, J. Lithium-ion battery recy-       41. de Chalendar, J. A., Taggart, J. & Benson, S. M. Tracking emissions in
+      cling─overview of techniques and trends. ACS Energy Lett. 7,                  the US electricity system. Proc. Natl. Acad. Sci. USA 116,
+      712–719 (2022).                                                               25497–25502 (2019).
+
+
+Nature Communications | (2025)16:988                                                                                                                      12
+Article                                                                                                   https://doi.org/10.1038/s41467-025-56063-x
+
+
+42. de Chalendar, J. A. & Benson, S. M. A physics-informed data                66. Berger, K., Schöggl, J.-P. & Baumgartner, R. J. Digital battery pass-
+    reconciliation framework for real-time electricity and emissions               ports to enable circular and sustainable value chains: con-
+    tracking. Appl. Energy 304, 117761 (2021).                                     ceptualization and use cases. J. Clean. Prod. 353, 131492 (2022).
+43. Grubert, E. & Sanders, K. T. Water use in the United States energy         67. Technical Committee ISO/TC, E. M. Environmental Management—
+    system: a national assessment and unit process inventory of water              Life Cycle Assessment—Principles and Framework (International
+    consumption and withdrawals. Environ. Sci. Technol. 52,                        Organization for Standardization, 2006).
+    6695–6703 (2018).                                                          68. Wernet, G. et al. The ecoinvent database version 3 (part I): overview
+44. DOE. Electric Vehicle Registrations by State (U.S. Department of               and methodology. Int. J. Life Cycle Assess. 21, 1218–1230 (2016).
+    Energy, 2022).                                                             69. Korolev, I. et al. HSC Sim® simulation model of the Assarel copper
+45. USCB. United States Census Bureau Database (U.S. Census                        ﬂotation circuit based on process mineralogy and metallurgical
+    Bureau, 2020).                                                                 testing. HSC Sim® simulation model of the Assarel copper ﬂotation
+46. CalRecycle. Where to Recycle: Map of Public Recycling Locations                circuit based on process mineralogy and metallurgical test-
+    (CalRecycle, 2022).                                                            ing (2019).
+47. Gonçalves, M. C. A. et al. Chemical recycling of cell phone Li-ion         70. Bae, H. & Kim, Y. Technologies of lithium recycling from waste
+    batteries: application in environmental remediation. Waste Manag.              lithium ion batteries: a review. Mater. Adv. 2, 3234–3250 (2021).
+    40, 144–150 (2015).                                                        71. Syensqo. Battery Recycling Through Extraction of Metals from Spent
+48. Center for International Earth Science Information Network. Global             Lithium-Ion Batteries (Syensqo, 2023).
+    Roads Open Access Data Set (gROADS), v1 (1980–2010) (NASA                  72. Li-Cycle. Creating a Circular and Sustainable Battery Supply Chain
+    Socioeconomic Data and Applications Center, 2010).                             (Li-Cycle, 2023).
+49. The Humanitarian Data Exchange. Global Railways (WFP SDI-T -               73. Broumi, S., Bakal, A., Talea, M., Smarandache, F. & Vladareanu, L.
+    Logistics Database) (The Humanitarian Data Exchange, 2017).                    Applying Dijkstra algorithm for solving neutrosophic shortest path
+50. USCB. TIGER/Line Shapeﬁle. (U.S. Census Bureau, 2021).                         problem. 2016 International Conference on Advanced Mechatronic
+51. Aquaplot. Aquaplot. (Aquaplot, 2021).                                          Systems 412–416 (2016).
+52. Lopez III, C. E. Optimizing Energy Power Consumption of Freight
+    Railroad Bearings Using Experimental Data. The University of Texas         Acknowledgements
+    Rio Grande Valley (2020).                                                  This work was ﬁnancially supported in part by StorageX Initiative and
+53. Roithner, C., Cencic, O. & Rechberger, H. Product design and               Stanford Precourt Institute for Energy.
+    recyclability: how statistical entropy can form a bridge between
+    these concepts—a case study of a smartphone. J. Clean. Prod. 331,          Author contributions
+    129971 (2022).                                                             M.L.M., X.C., S.P.B., and W.A.T. conceptualized and designed the work.
+54. U.S.G. Survey. Mineral Commodity Summaries 2021 (Government                M.L.M., X.C., and S.P.B. contributed equally. X.C., S.P.B., J.A.d.C., and
+    Printing Ofﬁce, 2021).                                                     M.L.M. conducted the analysis of the reﬁnement technologies and inﬂu-
+55. Davis, S. C. & Boundy, R. G. Transportation Energy Data Book:              ences of electricity. M.L.M., G.F., and A.Y. developed the modeling of the
+    Edition 39 (Oak Ridge National Lab (ORNL), Oak Ridge, TN,                  upstream steps. X.C., M.L.M., and S.P.B. carried out the interpretation of
+    USA, 2021).                                                                the data and co-drafted the work. M.L.M., X.C., S.P.B., J.A.d.C., I.L.A., S.B.,
+56. Baumel, P., Hurburgh, C. R. & Lee, T. Estimates of Total Fuel Con-         and W.A.T. discussed the results and commented on the manuscript. X.C.
+    sumption in Transporting Grain from Iowa to Major Grain Countries          and W.A.T. conducted substantial revisions of the manuscript. W.A.T.
+    by Alternatives Modes and Routes (Iowa Grain Quality Initiative,           supervised the work and secured funding along with S.B. and I.L.A. The
+    Iowa, 2015).                                                               submitted and modiﬁed version of the manuscript has been approved by
+57. Yacobucci, B. D. & Bamberger, R. Corporate Average Fuel Economy            M.L.M., X.C., S.P.B., G.F., A.Y., J.A.d.C., I.L.A., S.B., and W.A.T.
+    (CAFE): A Comparison of Selected Legislation in the 110th Congress
+    (The Congressional Research Service, 2007).                                Competing interests
+58. Brückner, L., Frank, J. & Elwert, T. Industrial recycling of lithium-ion   This study was supported by the Stanford StorageX Initiative within the
+    batteries—a critical review of metallurgical process routes. Metals        Precourt Institute for Energy. Redwood Materials was consulted for
+    10, 1107 (2020).                                                           primary industrial data but results were analyzed and interpreted by the
+59. Boyden, A., Soo, V. K. & Doolan, M. The environmental impacts of           listed authors.
+    recycling portable lithium-ion batteries. Procedia Cirp 48,
+    188–193 (2016).                                                            Additional information
+60. Larouche, F. et al. Progress and status of hydrometallurgical and          Supplementary information The online version contains
+    direct recycling of Li-ion batteries and beyond. Materials 13,             supplementary material available at
+    801 (2020).                                                                https://doi.org/10.1038/s41467-025-56063-x.
+61. Xia, C., Xia, Y., Zhu, P., Fan, L. & Wang, H. Direct electrosynthesis of
+    pure aqueous H2O2 solutions up to 20% by weight using a solid              Correspondence and requests for materials should be addressed to
+    electrolyte. Science 366, 226–231 (2019).                                  Xi Chen or William A. Tarpeh.
+62. Harper, G. et al. Recycling lithium-ion batteries from electric vehi-
+    cles. Nature 575, 75–86 (2019).                                            Peer review information Nature Communications thanks the anon-
+63. DOT. Hazardous Materials: Transportation of Lithium Batteries              ymous, reviewer(s) for their contribution to the peer review of this work.
+    (Pipeline and Hazardous Materials Safety Administration, 2014).            A peer review ﬁle is available.
+64. Sun, M., Yang, X., Huisingh, D., Wang, R. & Wang, Y. Consumer
+    behavior and perspectives concerning spent household battery               Reprints and permissions information is available at
+    collection and recycling in China: a case study. J. Clean. Prod. 107,      http://www.nature.com/reprints
+    775–785 (2015).
+65. Daily, G. C. & Ruckelshaus, M. 25 years of valuing ecosystems in           Publisher’s note Springer Nature remains neutral with regard to jur-
+    decision-making. Nature 606, 465–466 (2022).                               isdictional claims in published maps and institutional afﬁliations.
+
+
+
+Nature Communications | (2025)16:988                                                                                                                       13
+Article                                                                     https://doi.org/10.1038/s41467-025-56063-x
+
+
+Open Access This article is licensed under a Creative Commons
+Attribution 4.0 International License, which permits use, sharing,
+adaptation, distribution and reproduction in any medium or format, as
+long as you give appropriate credit to the original author(s) and the
+source, provide a link to the Creative Commons licence, and indicate if
+changes were made. The images or other third party material in this
+article are included in the article’s Creative Commons licence, unless
+indicated otherwise in a credit line to the material. If material is not
+included in the article’s Creative Commons licence and your intended
+use is not permitted by statutory regulation or exceeds the permitted
+use, you will need to obtain permission directly from the copyright
+holder. To view a copy of this licence, visit http://creativecommons.org/
+licenses/by/4.0/.
+
+© The Author(s) 2025
+
+
+
+
+Nature Communications | (2025)16:988                                                                               14
+

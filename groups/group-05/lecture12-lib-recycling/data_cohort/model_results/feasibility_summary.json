@@ -1,0 +1,13 @@
+{
+  "local_mixed_feed_CAPEX_CNY_tpa": 6777.8154195486295,
+  "design_CAPEX_CNY_tpa": 8000,
+  "local_design_energy_kgce_tfeed": 395.0,
+  "model_site_energy_kgce_tpack": 109.41274618187775,
+  "land_screen_m2": 187500.0,
+  "storage_t": 2916.666666666667,
+  "treatment_design_m3_day": 333.3333333333336,
+  "max_first_leg_km": 49.85620576399026,
+  "design_electric_MW": 7.4164496527777795,
+  "design_heat_MW": 8.047598379629632,
+  "independent_land_and_permit_gate": true
+}

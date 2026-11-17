@@ -1,0 +1,246 @@
+{
+  "passed": 60,
+  "failed": 0,
+  "checks": [
+    {
+      "check": "fig01_dmfa_dpi",
+      "status": "PASS"
+    },
+    {
+      "check": "fig01_dmfa_reference",
+      "status": "PASS"
+    },
+    {
+      "check": "fig01_dmfa_vector",
+      "status": "PASS"
+    },
+    {
+      "check": "fig02_lithium_dpi",
+      "status": "PASS"
+    },
+    {
+      "check": "fig02_lithium_reference",
+      "status": "PASS"
+    },
+    {
+      "check": "fig02_lithium_vector",
+      "status": "PASS"
+    },
+    {
+      "check": "fig03_network_dpi",
+      "status": "PASS"
+    },
+    {
+      "check": "fig03_network_reference",
+      "status": "PASS"
+    },
+    {
+      "check": "fig03_network_vector",
+      "status": "PASS"
+    },
+    {
+      "check": "fig07_pareto_dpi",
+      "status": "PASS"
+    },
+    {
+      "check": "fig07_pareto_reference",
+      "status": "PASS"
+    },
+    {
+      "check": "fig07_pareto_vector",
+      "status": "PASS"
+    },
+    {
+      "check": "fig04_carbon_dpi",
+      "status": "PASS"
+    },
+    {
+      "check": "fig04_carbon_reference",
+      "status": "PASS"
+    },
+    {
+      "check": "fig04_carbon_vector",
+      "status": "PASS"
+    },
+    {
+      "check": "fig05_water_energy_dpi",
+      "status": "PASS"
+    },
+    {
+      "check": "fig05_water_energy_reference",
+      "status": "PASS"
+    },
+    {
+      "check": "fig05_water_energy_vector",
+      "status": "PASS"
+    },
+    {
+      "check": "fig06_finance_dpi",
+      "status": "PASS"
+    },
+    {
+      "check": "fig06_finance_reference",
+      "status": "PASS"
+    },
+    {
+      "check": "fig06_finance_vector",
+      "status": "PASS"
+    },
+    {
+      "check": "fig08_sensitivity_dpi",
+      "status": "PASS"
+    },
+    {
+      "check": "fig08_sensitivity_reference",
+      "status": "PASS"
+    },
+    {
+      "check": "fig08_sensitivity_vector",
+      "status": "PASS"
+    },
+    {
+      "check": "fig09_capacity_dpi",
+      "status": "PASS"
+    },
+    {
+      "check": "fig09_capacity_reference",
+      "status": "PASS"
+    },
+    {
+      "check": "fig09_capacity_vector",
+      "status": "PASS"
+    },
+    {
+      "check": "fig10_pathways_dpi",
+      "status": "PASS"
+    },
+    {
+      "check": "fig10_pathways_reference",
+      "status": "PASS"
+    },
+    {
+      "check": "fig10_pathways_vector",
+      "status": "PASS"
+    },
+    {
+      "check": "fig11_environment_dpi",
+      "status": "PASS"
+    },
+    {
+      "check": "fig11_environment_reference",
+      "status": "PASS"
+    },
+    {
+      "check": "fig11_environment_vector",
+      "status": "PASS"
+    },
+    {
+      "check": "chapter_模块0",
+      "status": "PASS"
+    },
+    {
+      "check": "chapter_第1章",
+      "status": "PASS"
+    },
+    {
+      "check": "chapter_第2章",
+      "status": "PASS"
+    },
+    {
+      "check": "chapter_第3章",
+      "status": "PASS"
+    },
+    {
+      "check": "chapter_第4章",
+      "status": "PASS"
+    },
+    {
+      "check": "chapter_第5章",
+      "status": "PASS"
+    },
+    {
+      "check": "chapter_第6章",
+      "status": "PASS"
+    },
+    {
+      "check": "chapter_第7章",
+      "status": "PASS"
+    },
+    {
+      "check": "link_../figures_output/fig01_dmfa.png",
+      "status": "PASS"
+    },
+    {
+      "check": "link_../figures_output/fig02_lithium.png",
+      "status": "PASS"
+    },
+    {
+      "check": "link_../figures_output/fig03_network.png",
+      "status": "PASS"
+    },
+    {
+      "check": "link_../figures_output/fig04_carbon.png",
+      "status": "PASS"
+    },
+    {
+      "check": "link_../figures_output/fig05_water_energy.png",
+      "status": "PASS"
+    },
+    {
+      "check": "link_../figures_output/fig06_finance.png",
+      "status": "PASS"
+    },
+    {
+      "check": "link_../figures_output/fig07_pareto.png",
+      "status": "PASS"
+    },
+    {
+      "check": "link_../figures_output/fig08_sensitivity.png",
+      "status": "PASS"
+    },
+    {
+      "check": "link_../figures_output/fig09_capacity.png",
+      "status": "PASS"
+    },
+    {
+      "check": "link_../figures_output/fig10_pathways.png",
+      "status": "PASS"
+    },
+    {
+      "check": "link_../figures_output/fig11_environment.png",
+      "status": "PASS"
+    },
+    {
+      "check": "科学语气禁词",
+      "status": "PASS"
+    },
+    {
+      "check": "无学号字段值",
+      "status": "PASS"
+    },
+    {
+      "check": "成员分工表已列明",
+      "status": "PASS"
+    },
+    {
+      "check": "守恒误差",
+      "status": "PASS"
+    },
+    {
+      "check": "工况数量",
+      "status": "PASS"
+    },
+    {
+      "check": "工程账目",
+      "status": "PASS"
+    },
+    {
+      "check": "测试通过",
+      "status": "PASS"
+    },
+    {
+      "check": "摘要汉字数",
+      "status": "PASS"
+    }
+  ]
+}
