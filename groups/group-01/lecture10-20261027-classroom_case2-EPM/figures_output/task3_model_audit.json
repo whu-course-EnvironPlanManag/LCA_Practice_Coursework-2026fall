@@ -1,0 +1,50 @@
+{
+  "grid_size": 3000,
+  "grid_dimensions": [
+    60,
+    50
+  ],
+  "status_counts": {
+    "MFA_Infeasible": 2400,
+    "Redline_Vetoed": 320,
+    "Domestic_Compliant": 160,
+    "RED_III_RFNBO_Certified": 120
+  },
+  "frontier_count": 1,
+  "anchors_coincident": true,
+  "notes": [
+    "使用手册光伏/自备煤电场景：价格0.20/0.32，排放因子0.04/0.75。",
+    "任务1纯组分模型；原始CSV组成不自洽，不能认证真实全组成工况。",
+    "固定新鲜进料、甲醇产量和25%单程转化率；无非负稳态解的驰放比被排除。",
+    "电耗与非电成本保持资料定额，缺少变负荷压缩、电力波动和储能成本曲线。",
+    "氧气与电解净补水采用CSV工程定额，不声称完成电解槽全物流闭合。",
+    "所选场景绿电同时更便宜、更低碳；允许帕累托前沿退化及A/B/C重合。",
+    "结果为3000组离散网格中的非支配解，不等同连续全局最优。"
+  ],
+  "crf": 0.10185220882315059,
+  "capital_annuity_rmb_per_t_included_in_non_electric": 835.1881123498349,
+  "non_electric_total_rmb_per_t": 1238.37,
+  "sources_sha256": {
+    "task_docs/background_engineering_docs.md": "1b7d61fe1fa5ecf252807dc808b118703f567e0724c9c2a0e553f280fb934a6f",
+    "task_docs/lecture10_task_manual.md": "a3ba9874fe33806f0b0bee86289f74c070bf2e5903cf01a1112e442765c5e7ce",
+    "data_cohort/mfa_reaction_recycle_balance.csv": "ad57eb706b19492823f8f8009537323163851c41a4e774a1ea4771fdb385de32",
+    "data_cohort/lca_grid_scenarios_lci.csv": "252035fcadca8a225a75314fc0d925e609650a2f1f8f75bd9a0b6429a22dce30",
+    "data_cohort/tea_lcom_sensitivity_data.csv": "2bc2ee414f1f56dd02fc26389063272c7c221f96d22ba90f6a04795ea3d9e4b3",
+    "data_cohort/policy_clauses_pack.md": "6071bea260730b93e65672a4af27fc02b5b42519551fdcc82912c9828ee679fd",
+    "code_implementation/task1_mfa_recycle_solver.py": "cc8d732a5cfb5f4a400096d3705b20c85d7982b7d79fdade71e628b5d5b655ee",
+    "code_implementation/task2_policy_vibe_engine.py": "46e1bec8ad55c3183b6b027bc779852e09dea7a359934fe22fad233078532ae1",
+    "code_implementation/task3_pareto_frontier_decision.py": "ecf56bea5e895444e8230330ab402f0d0401ab72b096e1d181bce7f833dc4893"
+  },
+  "figure_contract": {
+    "claim": "Sourced quotas can yield a degenerate, not an interior, Pareto solution.",
+    "archetype": "quantitative grid",
+    "panel_a": "objectives and policy rejection",
+    "panel_b": "full decision grid and physical infeasibility",
+    "size_inches": [
+      12.8,
+      6.2
+    ],
+    "png_dpi": 300,
+    "uncertainty": "deterministic grid; no empirical confidence intervals"
+  }
+}

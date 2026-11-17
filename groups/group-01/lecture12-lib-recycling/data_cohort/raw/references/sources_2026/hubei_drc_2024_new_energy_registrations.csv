@@ -1,0 +1,7 @@
+indicator,value,unit,period,source,source_locator
+new_registered_nev,34.4,万辆,2024-01至2024-11,湖北省发展和改革委员会转载湖北日报2024-12-25,http://fgw.hubei.gov.cn/gzjj/dtyw/fgyw/202412/t20241225_5474178.shtml 正文第5段
+nev_stock,96.7,万辆,2024-11末,湖北省发展和改革委员会转载湖北日报2024-12-25,http://fgw.hubei.gov.cn/gzjj/dtyw/fgyw/202412/t20241225_5474178.shtml 正文第5段
+nev_stock_yoy,0.5948,fraction,2024-11末,湖北省发展和改革委员会转载湖北日报2024-12-25,http://fgw.hubei.gov.cn/gzjj/dtyw/fgyw/202412/t20241225_5474178.shtml 正文第5段
+monthly_avg_new_2023,2,万辆/月,2023,湖北省发展和改革委员会转载湖北日报2024-12-25,http://fgw.hubei.gov.cn/gzjj/dtyw/fgyw/202412/t20241225_5474178.shtml 正文第5段
+monthly_avg_new_2024,3,万辆/月,2024-01至2024-11,湖北省发展和改革委员会转载湖北日报2024-12-25,http://fgw.hubei.gov.cn/gzjj/dtyw/fgyw/202412/t20241225_5474178.shtml 正文第5段
+annual_new_nev_research_design,36,万辆,2024全年,本研究设计：1-11月34.4万辆按3万辆/月补齐12月,基于同页1-11月数据与月均新增量外推；不是逐车上牌统计

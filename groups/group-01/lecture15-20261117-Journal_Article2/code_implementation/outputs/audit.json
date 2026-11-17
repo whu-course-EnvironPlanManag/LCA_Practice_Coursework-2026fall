@@ -1,0 +1,53 @@
+{
+  "data": {
+    "world_rows": 13,
+    "all_rows": 2808,
+    "coefficient_count_extracted": 488,
+    "production_valid_t_items": 208,
+    "production_matched_valid_items": 165,
+    "fertilizer_last_year": 2021,
+    "population_last_year": 2021,
+    "land_last_year": 2022,
+    "core_crop_count": 17,
+    "missing_revision_directory_files": 0
+  },
+  "population_method": "2012-2021 historical log-linear extrapolation; NOT UN2019/SSP projection",
+  "population_2022": 8021664175.013335,
+  "population_2050": 10956292160.507757,
+  "population_ratio": 1.3658378014172532,
+  "fertilizer_2022_Mt": 20.292881475160105,
+  "fertilizer_log_growth": 0.007024475184571622,
+  "model_2022": {
+    "fertilizer_Mt": 20.292881475160105,
+    "new_P_Mt": 23.383448709302268,
+    "environmental_loss_Mt": 24.336155281404835,
+    "water_loss_Mt": 3.3669584125640006,
+    "soil_stock_delta_Mt": 15.518345231218307,
+    "harvest_Mt": 12.016813419162,
+    "ACS_PUE": 0.3404265431391598,
+    "LBS_PUE": 0.09330929520346275,
+    "recovered_manure_Mt": 12.618198066944,
+    "recovered_sewage_Mt": 0.0,
+    "food_P_Mt": 10.3133005630015,
+    "reduce": 0.0,
+    "replace": 0.67,
+    "recycle": 0.0
+  },
+  "regression": {
+    "R_squared": 1.0,
+    "n": 343,
+    "response": "avoided environmental loss (positive = benefit)",
+    "inference": "deterministic model grid, HC3; not observational or causal evidence"
+  },
+  "assumptions": {
+    "crop_feed_fraction": 0.25,
+    "food_waste_fraction": 0.2,
+    "feed_additive_fraction": 0.05,
+    "mining_loss_per_concentrate": 0.05,
+    "baseline_sewage_recovery": 0,
+    "extra_recycled_P_substitution_efficiency": 1.0,
+    "constant_food_output_under_reduce": true
+  },
+  "max_2022_balance_error": 5.032274197776505e-17,
+  "benchmark_independently_reproduced_within_3pct": 0
+}

@@ -1,0 +1,30 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:           avoided_loss   R-squared:                       1.000
+Model:                            OLS   Adj. R-squared:                  1.000
+Method:                 Least Squares   F-statistic:                 5.329e+31
+Date:                Tue, 17 Nov 2026   Prob (F-statistic):               0.00
+Time:                        10:59:06   Log-Likelihood:                 11314.
+No. Observations:                 343   AIC:                        -2.261e+04
+Df Residuals:                     336   BIC:                        -2.259e+04
+Df Model:                           6                                         
+Covariance Type:                  HC3                                         
+===================================================================================
+                      coef    std err          t      P>|t|      [0.025      0.975]
+-----------------------------------------------------------------------------------
+const            6.418e-17   6.35e-17      1.011      0.313   -6.07e-17    1.89e-16
+Reduce              0.1165   7.12e-17   1.64e+15      0.000       0.117       0.117
+Replace             0.2892    7.3e-17   3.96e+15      0.000       0.289       0.289
+Recycle             0.9501    6.5e-17   1.46e+16      0.000       0.950       0.950
+Reduce*Replace     -0.0034   8.56e-17  -4.01e+13      0.000      -0.003      -0.003
+Reduce*Recycle     -0.0113   7.25e-17  -1.55e+14      0.000      -0.011      -0.011
+Replace*Recycle  6.939e-17   7.47e-17      0.929      0.354   -7.75e-17    2.16e-16
+==============================================================================
+Omnibus:                       19.876   Durbin-Watson:                   0.544
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               21.650
+Skew:                          -0.595   Prob(JB):                     1.99e-05
+Kurtosis:                       3.313   Cond. No.                         1.00
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity robust (HC3)

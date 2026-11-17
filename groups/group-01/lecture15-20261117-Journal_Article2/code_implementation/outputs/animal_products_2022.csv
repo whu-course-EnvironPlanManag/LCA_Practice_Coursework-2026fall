@@ -1,0 +1,27 @@
+﻿Domain,Area,Element,Item,Year,Unit,Value,Flag,Flag Description,key,P_kg_per_t,P_Mt
+Crops and livestock products,World,Production,"Eggs from other birds in shell, fresh, n.e.c.",2022,t,6171896.31,E,Estimated value,eggsfromotherbirdsinshellfreshnec,2.04,0.012590668472399999
+Crops and livestock products,World,Production,"Game meat, fresh, chilled or frozen",2022,t,2032707.36,E,Estimated value,gamemeatfreshchilledorfrozen,2.14,0.0043499937504
+Crops and livestock products,World,Production,"Hen eggs in shell, fresh",2022,t,86999551.14,E,Estimated value,heneggsinshellfresh,2.04,0.1774790843256
+Crops and livestock products,World,Production,"Horse meat, fresh or chilled",2022,t,775543.24,E,Estimated value,horsemeatfreshorchilled,2.14,0.0016596625336
+Crops and livestock products,World,Production,"Meat of asses, fresh or chilled",2022,t,104304.69,E,Estimated value,meatofassesfreshorchilled,2.14,0.00022321203660000003
+Crops and livestock products,World,Production,"Meat of buffalo, fresh or chilled",2022,t,6903483.83,E,Estimated value,meatofbuffalofreshorchilled,1.65,0.011390748319499999
+Crops and livestock products,World,Production,"Meat of camels, fresh or chilled",2022,t,604530.26,E,Estimated value,meatofcamelsfreshorchilled,2.14,0.0012936947564
+Crops and livestock products,World,Production,"Meat of cattle with the bone, fresh or chilled",2022,t,69346116.17,E,Estimated value,meatofcattlewiththebonefreshorchilled,1.65,0.1144210916805
+Crops and livestock products,World,Production,"Meat of chickens, fresh or chilled",2022,t,123631334.72,E,Estimated value,meatofchickensfreshorchilled,2.03,0.25097160948159997
+Crops and livestock products,World,Production,"Meat of ducks, fresh or chilled",2022,t,6068757.07,E,Estimated value,meatofducksfreshorchilled,2.03,0.0123195768521
+Crops and livestock products,World,Production,"Meat of geese, fresh or chilled",2022,t,4418971.74,E,Estimated value,meatofgeesefreshorchilled,2.03,0.008970512632199999
+Crops and livestock products,World,Production,"Meat of goat, fresh or chilled",2022,t,6367497.2,E,Estimated value,meatofgoatfreshorchilled,3.37,0.021458465564000002
+Crops and livestock products,World,Production,"Meat of mules, fresh or chilled",2022,t,13839.46,E,Estimated value,meatofmulesfreshorchilled,2.14,2.96164444e-05
+Crops and livestock products,World,Production,"Meat of other domestic camelids, fresh or chilled",2022,t,33135.0,A,Official figure,meatofotherdomesticcamelidsfreshorchilled,2.14,7.090890000000001e-05
+Crops and livestock products,World,Production,"Meat of other domestic rodents, fresh or chilled",2022,t,18700.82,E,Estimated value,meatofotherdomesticrodentsfreshorchilled,2.14,4.00197548e-05
+Crops and livestock products,World,Production,"Meat of pig with the bone, fresh or chilled",2022,t,122585397.38,E,Estimated value,meatofpigwiththebonefreshorchilled,2.02,0.2476225027076
+Crops and livestock products,World,Production,"Meat of pigeons and other birds n.e.c., fresh, chilled or frozen",2022,t,18669.43,E,Estimated value,meatofpigeonsandotherbirdsnecfreshchilledorfrozen,2.14,3.99525802e-05
+Crops and livestock products,World,Production,"Meat of rabbits and hares, fresh or chilled",2022,t,756476.01,E,Estimated value,meatofrabbitsandharesfreshorchilled,2.14,0.0016188586614
+Crops and livestock products,World,Production,"Meat of sheep, fresh or chilled",2022,t,10272315.46,E,Estimated value,meatofsheepfreshorchilled,3.37,0.03461770310020001
+Crops and livestock products,World,Production,"Meat of turkeys, fresh or chilled",2022,t,5081497.88,E,Estimated value,meatofturkeysfreshorchilled,2.03,0.010315440696399997
+Crops and livestock products,World,Production,"Other meat n.e.c. (excluding mammals), fresh, chilled or frozen",2022,t,1563629.79,E,Estimated value,othermeatnecexcludingmammalsfreshchilledorfrozen,2.14,0.0033461677506000003
+Crops and livestock products,World,Production,Raw milk of buffalo,2022,t,143573178.18,A,Official figure,rawmilkofbuffalo,1.1,0.15793049599800002
+Crops and livestock products,World,Production,Raw milk of camel,2022,t,4116669.03,E,Estimated value,rawmilkofcamel,1.1,0.004528335933
+Crops and livestock products,World,Production,Raw milk of cattle,2022,t,753320577.84,E,Estimated value,rawmilkofcattle,1.1,0.828652635624
+Crops and livestock products,World,Production,Raw milk of goats,2022,t,19191572.8,E,Estimated value,rawmilkofgoats,1.1,0.02111073008
+Crops and livestock products,World,Production,Raw milk of sheep,2022,t,10093015.52,E,Estimated value,rawmilkofsheep,1.1,0.011102317072
