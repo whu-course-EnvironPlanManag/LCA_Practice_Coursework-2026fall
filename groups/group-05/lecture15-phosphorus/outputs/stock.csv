@@ -1,0 +1,9 @@
+﻿species,source_file,year,raw_stock,raw_unit,heads,coefficient_kg_P_head_year,manure_Mt_P,coefficient_source
+Horses,10.Horses.csv,2022,60581289.0,An,60581289.0,6.8,0.4119527652,SI printed p121 kDC; annual stocks used as head-year proxy
+Sheep,16.Sheep.csv,2022,1321535792.0,An,1321535792.0,0.1,0.1321535792,SI printed p121 kDC; annual stocks used as head-year proxy
+Swine / pigs,17.Swine  pigs.csv,2022,978971942.0,An,978971942.0,2.4,2.3495326607999996,SI printed p121 kDC; annual stocks used as head-year proxy
+Buffalo,3.Buffalo.csv,2022,205141830.0,An,205141830.0,15.2,3.118155816,SI printed p121 kDC; annual stocks used as head-year proxy
+Cattle,5.Cattle.csv,2022,1551515624.0,An,1551515624.0,5.6,8.6884874944,SI printed p121 kDC; annual stocks used as head-year proxy
+Chickens,6.Chickens.csv,2022,26561634.0,1000 An,26561634000.0,0.135,3.58582059,SI printed p121 kDC; annual stocks used as head-year proxy
+Ducks,7.Ducks.csv,2022,1126276.0,1000 An,1126276000.0,0.384,0.432489984,SI printed p121 kDC; annual stocks used as head-year proxy
+Goats,9.Goats.csv,2022,1145385536.0,An,1145385536.0,0.1,0.11453855360000001,SI printed p121 kDC; annual stocks used as head-year proxy

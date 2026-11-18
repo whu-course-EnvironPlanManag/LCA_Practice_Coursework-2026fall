@@ -1,0 +1,1463 @@
+﻿stream,year,item,category,unit,quantity,t_P_per_t,P_t,status
+production,2022,"Abaca, manila hemp, raw",A,t,107494.92,0.00089,95.6704788,已换算
+production,2022,"Agave fibres, raw, n.e.c.",A,t,40639.24,0.00089,36.1689236,已换算
+production,2022,"Almonds, in shell",B,t,3630427.66,0.00454,16482.1415764,已换算
+production,2022,"Anise, badian, coriander, cumin, caraway, fennel and juniper berries, raw",D,t,2751010.4,0.00051,1403.015304,已换算
+production,2022,Apples,B,t,95835964.97,0.00011,10541.9561467,已换算
+production,2022,Apricots,B,t,3863179.61,0.00021,811.2677181,已换算
+production,2022,Areca nuts,B,t,2542072.1,0.00409,10397.074889,已换算
+production,2022,Artichokes,B,t,1584513.73,0.0013,2059.8678489999998,已换算
+production,2022,Asparagus,B,t,8824150.02,0.00045,3970.8675089999997,已换算
+production,2022,Asses,M,,,0,,单位非吨或缺失
+production,2022,Avocados,B,t,8978275.2,0.00043,3860.6583359999995,已换算
+production,2022,"Balata, gutta-percha, guayule, chicle and similar natural gums in primary forms or in plates, sheets or strip",A,,,0.0002,,单位非吨或缺失
+production,2022,"Bambara beans, dry",F,t,246511.3,0.00419,1032.882347,已换算
+production,2022,Bananas,B,t,135112326.37,0.00023,31075.835065100004,已换算
+production,2022,Barley,E,t,154877139.86,0.00342,529679.8183212,已换算
+production,2022,"Beans, dry",F,t,28346198.86,0.00419,118770.5732234,已换算
+production,2022,"Beer of barley, malted",J,,,0.00032,,单位非吨或缺失
+production,2022,Bees,,,,,,单位非吨或缺失
+production,2022,Beeswax,C,t,65063.47,0,0.0,已换算
+production,2022,Blueberries,B,t,1228595.98,0.00013,159.71747739999998,已换算
+production,2022,"Brazil nuts, in shell",B,t,79277.79,0.00674,534.3323045999999,已换算
+production,2022,"Broad beans and horse beans, dry",E,t,6144394.66,0.00426,26175.1212516,已换算
+production,2022,"Broad beans and horse beans, green",E,t,1642153.15,0.00037,607.5966655,已换算
+production,2022,Buckwheat,E,t,2235193.31,0.00294,6571.4683314,已换算
+production,2022,Buffalo,M,,,0.00282,,单位非吨或缺失
+production,2022,"Buffalo fat, unrendered",C,t,416812.2,0,0.0,已换算
+production,2022,Butter and ghee of sheep milk,G,,,0.00021,,单位非吨或缺失
+production,2022,Butter of buffalo milk,G,,,0.00021,,单位非吨或缺失
+production,2022,Butter of cow milk,G,,,0.00021,,单位非吨或缺失
+production,2022,Butter of goat milk,G,,,0.00021,,单位非吨或缺失
+production,2022,"Buttermilk, dry",G,,,0.0009,,单位非吨或缺失
+production,2022,Cabbages,B,t,72603754.67,0.00036,26137.3516812,已换算
+production,2022,Camels,M,,,0,,单位非吨或缺失
+production,2022,Canary seed,A,t,245568.03,0.0085,2087.3282550000004,已换算
+production,2022,Cantaloupes and other melons,B,t,28558068.57,0.00024,6853.9364568,已换算
+production,2022,Carrots and turnips,B,t,42233349.85,0.00035,14781.672447500001,已换算
+production,2022,"Cashew nuts, in shell",B,t,3852868.11,0.00373,14371.1980503,已换算
+production,2022,Cashewapple,B,t,1329862.29,0.00011,146.2848519,已换算
+production,2022,Cassava leaves,A,,,0,,单位非吨或缺失
+production,2022,"Cassava, fresh",B,t,330408753.77,0.00038,125555.3264326,已换算
+production,2022,Castor oil seeds,C,t,1829521.75,0,0.0,已换算
+production,2022,Cattle,M,,,0.00282,,单位非吨或缺失
+production,2022,"Cattle fat, unrendered",G,t,3392342.85,0,0.0,已换算
+production,2022,Cauliflowers and broccoli,B,t,26058228.25,0.00052,13550.27869,已换算
+production,2022,Cereals n.e.c.,E,t,8713290.37,0.00175,15248.258147499999,已换算
+production,2022,"Cheese from milk of buffalo, fresh or processed",G,,,0.00627,,单位非吨或缺失
+production,2022,"Cheese from milk of goats, fresh or processed",G,,,0.005,,单位非吨或缺失
+production,2022,"Cheese from milk of sheep, fresh or processed",G,,,0.005,,单位非吨或缺失
+production,2022,Cheese from skimmed cow milk,G,,,0.005,,单位非吨或缺失
+production,2022,Cheese from whole cow milk,G,,,0.005,,单位非吨或缺失
+production,2022,Cherries,B,t,2765827.38,0.00023,636.1402974,已换算
+production,2022,"Chestnuts, in shell",B,t,2131240.64,0.00409,8716.774217600001,已换算
+production,2022,"Chick peas, dry",B,t,18095248.28,0.00332,60076.2242896,已换算
+production,2022,Chickens,M,,,0.013,,单位非吨或缺失
+production,2022,Chicory roots,B,t,32662.22,0.00023,7.5123106,已换算
+production,2022,"Chillies and peppers, dry (Capsicum spp., Pimenta spp.), raw",D,t,4909320.76,0.00032,1570.9826432,已换算
+production,2022,"Chillies and peppers, green (Capsicum spp. and Pimenta spp.)",D,t,36972494.42,0.00019,7024.7739398,已换算
+production,2022,"Cinnamon and cinnamon-tree flowers, raw",D,t,222523.87,0.00061,135.7395607,已换算
+production,2022,"Cloves (whole stems), raw",D,t,183452.31,0.00018,33.0214158,已换算
+production,2022,Cocoa beans,F,t,5874581.94,0.00656,38537.257526400004,已换算
+production,2022,Coconut oil,C,,,0,,单位非吨或缺失
+production,2022,"Coconuts, in shell",B,t,62409431.22,0.00094,58664.8653468,已换算
+production,2022,"Coffee, green",I,t,10782333.89,0.0016,17251.734224000003,已换算
+production,2022,"Coir, raw",B,t,1939429.8,0.00094,1823.064012,已换算
+production,2022,"Cotton lint, ginned",A,,,0.0064,,单位非吨或缺失
+production,2022,Cotton seed,H,,,0.00524,,单位非吨或缺失
+production,2022,Cottonseed oil,C,,,0,,单位非吨或缺失
+production,2022,"Cow peas, dry",F,t,9774865.72,0.00375,36655.74645,已换算
+production,2022,Cranberries,B,t,582923.64,0.0001,58.292364000000006,已换算
+production,2022,"Cream, fresh",G,,,0.00085,,单位非吨或缺失
+production,2022,Cucumbers and gherkins,B,t,94718396.55,0.00017,16102.1274135,已换算
+production,2022,Currants,B,t,764498.98,0.0011,840.948878,已换算
+production,2022,Dates,B,t,9747570.04,0.00057,5556.1149227999995,已换算
+production,2022,Ducks,M,,,0.013,,单位非吨或缺失
+production,2022,"Edible offal of buffalo, fresh, chilled or frozen",G,t,1173340.36,0.0016,1877.3445760000002,已换算
+production,2022,"Edible offal of cattle, fresh, chilled or frozen",G,t,9570873.57,0.0016,15313.397712000002,已换算
+production,2022,"Edible offal of goat, fresh, chilled or frozen",G,t,1260496.26,0.0016,2016.794016,已换算
+production,2022,"Edible offal of pigs, fresh, chilled or frozen",G,t,8013905.39,0.0016,12822.248624,已换算
+production,2022,"Edible offal of sheep, fresh, chilled or frozen",G,t,1823000.38,0.0016,2916.800608,已换算
+production,2022,"Edible offals of camels and other camelids, fresh, chilled or frozen",G,t,88365.03,0.0016,141.384048,已换算
+production,2022,"Edible offals of horses and other equines,  fresh, chilled or frozen",,t,99084.52,,,未匹配系数
+production,2022,"Edible roots and tubers with high starch or inulin content, n.e.c., fresh",G,t,8877780.12,0.00038,3373.5564455999997,已换算
+production,2022,Eggplants (aubergines),B,t,59312599.76,0.00021,12455.6459496,已换算
+production,2022,"Eggs from other birds in shell, fresh, n.e.c.",G,t,6171896.31,0.00214,13207.858103399998,已换算
+production,2022,"Eggs from other birds in shell, fresh, n.e.c.",G,1000 No,97341452,0.00214,,单位非吨或缺失
+production,2022,Fat of camels,G,t,27654.96,0,0.0,已换算
+production,2022,Fat of pigs,G,t,11125680.86,0,0.0,已换算
+production,2022,Figs,B,t,1242449.04,0.00032,397.58369280000005,已换算
+production,2022,"Flax, raw or retted",A,t,875994.92,0.00089,779.6354788,已换算
+production,2022,Fonio,E,t,658707.96,0.00341,2246.1941435999997,已换算
+production,2022,"Game meat, fresh, chilled or frozen",G,t,2032707.36,0.0021,4268.685456,已换算
+production,2022,Geese,M,,,0.013,,单位非吨或缺失
+production,2022,Ghee from buffalo milk,D,,,0.00021,,单位非吨或缺失
+production,2022,Ghee from cow milk,D,,,0.00021,,单位非吨或缺失
+production,2022,"Ginger, raw",D,t,4874216.17,0,0.0,已换算
+production,2022,"Goat fat, unrendered",C,t,256756.06,0,0.0,已换算
+production,2022,Goats,M,,,0.00028,,单位非吨或缺失
+production,2022,Gooseberries,B,t,95425.32,0.0003,28.627596,已换算
+production,2022,Grapes,B,t,74942572.95,0.00016,11990.811672000002,已换算
+production,2022,Green corn (maize),K,t,9868461.38,0.00083,8190.822945400001,已换算
+production,2022,Green garlic,B,t,29149437.66,0.00134,39060.2464644,已换算
+production,2022,"Green tea (not fermented), black tea (fermented) and partly fermented tea, in immediate packings of a content not exceeding 3 kg",C,,,0.00314,,单位非吨或缺失
+production,2022,Groundnut oil,C,,,0,,单位非吨或缺失
+production,2022,"Groundnuts, excluding shelled",B,t,54238560.13,0.00341,184953.4900433,已换算
+production,2022,"Hazelnuts, in shell",B,t,1195732.16,0.00333,3981.7880928,已换算
+production,2022,Hempseed,A,t,42266.75,0.0085,359.267375,已换算
+production,2022,"Hen eggs in shell, fresh",G,t,86999551.14,0.00214,186179.0394396,已换算
+production,2022,"Hen eggs in shell, fresh",G,1000 No,1652287528,0.00214,,单位非吨或缺失
+production,2022,Hop cones,J,t,158545.32,0.015,2378.1798,已换算
+production,2022,"Horse meat, fresh or chilled",G,t,775543.24,0.00216,1675.1733984,已换算
+production,2022,Horses,M,,,0.0027,,单位非吨或缺失
+production,2022,Jojoba seeds,C,t,146.58,0,0.0,已换算
+production,2022,"Jute, raw or retted",A,t,3503448.24,0.00089,3118.0689336,已换算
+production,2022,"Kapok fibre, raw",A,,,0.00089,,单位非吨或缺失
+production,2022,Kapok fruit,A,t,283287.08,0.00524,1484.4242992,已换算
+production,2022,Kapokseed in shell,A,,,0.00524,,单位非吨或缺失
+production,2022,Karite nuts (sheanuts),B,t,815825.1,0.00409,3336.724659,已换算
+production,2022,"Kenaf, and other textile bast fibres, raw or retted",A,t,224926.49,0.00089,200.1845761,已换算
+production,2022,Kiwi fruit,B,t,4539471.22,0.00031,1407.2360781999998,已换算
+production,2022,Kola nuts,B,t,315024.47,0.00076,239.4185972,已换算
+production,2022,Leeks and other alliaceous vegetables,B,t,2109066.16,0.00048,1012.3517568000001,已换算
+production,2022,Lemons and limes,B,t,21529604.13,0.00016,3444.7366608,已换算
+production,2022,"Lentils, dry",F,t,6655827.78,0.00411,27355.4521758,已换算
+production,2022,Lettuce and chicory,B,t,27149446.41,0.00023,6244.372674300001,已换算
+production,2022,Linseed,H,t,3973931.78,0.00662,26307.4283836,已换算
+production,2022,Locust beans (carobs),B,t,56423.36,0.0048,270.83212799999995,已换算
+production,2022,Lupins,B,t,1644690.67,0.0048,7894.515215999999,已换算
+production,2022,Maize (corn),E,t,1163497383.13,0.00213,2478249.4260669,已换算
+production,2022,"Mangoes, guavas and mangosteens",B,t,59151822.83,0.00013,7689.736967899999,已换算
+production,2022,Margarine and shortening,C,,,0,,单位非吨或缺失
+production,2022,Maté leaves,C,t,1653166.8,0.00314,5190.943752,已换算
+production,2022,"Meat of asses, fresh or chilled",G,t,104304.69,0.0019,198.178911,已换算
+production,2022,"Meat of buffalo, fresh or chilled",G,t,6903483.83,0.0019,13116.619277,已换算
+production,2022,"Meat of camels, fresh or chilled",G,t,604530.26,0.0019,1148.607494,已换算
+production,2022,"Meat of cattle with the bone, fresh or chilled",G,t,69346116.17,0.0019,131757.620723,已换算
+production,2022,"Meat of chickens, fresh or chilled",G,t,123631334.72,0.00165,203991.702288,已换算
+production,2022,"Meat of ducks, fresh or chilled",G,t,6068757.07,0.00196,11894.7638572,已换算
+production,2022,"Meat of geese, fresh or chilled",G,t,4418971.74,0.00184,8130.908001600001,已换算
+production,2022,"Meat of goat, fresh or chilled",G,t,6367497.2,0.0019,12098.24468,已换算
+production,2022,"Meat of mules, fresh or chilled",G,t,13839.46,0.0019,26.294974,已换算
+production,2022,"Meat of other domestic camelids, fresh or chilled",G,t,33135,0.0019,62.9565,已换算
+production,2022,"Meat of other domestic rodents, fresh or chilled",G,t,18700.82,0,0.0,已换算
+production,2022,"Meat of pig with the bone, fresh or chilled",G,t,122585397.38,0.00192,235363.9629696,已换算
+production,2022,"Meat of pigeons and other birds n.e.c., fresh, chilled or frozen",G,t,18669.43,0.0025,46.673575,已换算
+production,2022,"Meat of rabbits and hares, fresh or chilled",G,t,756476.01,0.00216,1633.9881816,已换算
+production,2022,"Meat of sheep, fresh or chilled",G,t,10272315.46,0.00162,16641.1510452,已换算
+production,2022,"Meat of turkeys, fresh or chilled",G,t,5081497.88,0.00175,8892.62129,已换算
+production,2022,Melonseed,B,t,968692.23,0.00618,5986.517981399999,已换算
+production,2022,Millet,E,t,30859664.24,0.00275,84864.07665999999,已换算
+production,2022,Mixed grain,E,t,2223144.27,0.00341,7580.9219606999995,已换算
+production,2022,Molasses,C,,,0,,单位非吨或缺失
+production,2022,Mules and hinnies,M,,,0.0027,,单位非吨或缺失
+production,2022,Mushrooms and truffles,B,t,48335996.08,0.00125,60419.9951,已换算
+production,2022,Mustard seed,B,t,852807.53,0.0085,7248.864005,已换算
+production,2022,Natural honey,G,t,1830767.92,3e-05,54.9230376,已换算
+production,2022,Natural rubber in primary forms,A,t,15125392.71,0.0002,3025.078542,已换算
+production,2022,"Nutmeg, mace, cardamoms, raw",B,t,138887.87,0,0.0,已换算
+production,2022,Oats,E,t,26385330.04,0.00342,90237.82873679999,已换算
+production,2022,Oil of linseed,C,,,0,,单位非吨或缺失
+production,2022,Oil of maize,C,,,0,,单位非吨或缺失
+production,2022,Oil of palm kernel,C,,,0,,单位非吨或缺失
+production,2022,Oil of sesame seed,C,,,0,,单位非吨或缺失
+production,2022,Oil palm fruit,C,t,424587459.57,0,0.0,已换算
+production,2022,Okra,B,t,11232656.48,0.00052,5840.9813696,已换算
+production,2022,Olive oil,C,,,0,,单位非吨或缺失
+production,2022,Olives,B,t,21449867.5,0.00017,3646.477475,已换算
+production,2022,"Onions and shallots, dry (excluding dehydrated)",B,t,110616269.81,0.00243,268797.5356383,已换算
+production,2022,"Onions and shallots, green",B,t,4970614.74,0.00033,1640.3028642000002,已换算
+production,2022,Oranges,B,t,76410037.46,0.0002,15282.007491999999,已换算
+production,2022,"Other beans, green",B,t,23340915.7,0.00037,8636.138809,已换算
+production,2022,Other berries and fruits of the genus vaccinium n.e.c.,B,t,1021643.25,0.00013,132.81362249999998,已换算
+production,2022,Other birds,G,,,0.00214,,单位非吨或缺失
+production,2022,Other camelids,M,,,0,,单位非吨或缺失
+production,2022,"Other citrus fruit, n.e.c.",B,t,14422194.03,0.0002,2884.438806,已换算
+production,2022,"Other fibre crops, raw, n.e.c.",A,t,554146.12,0.00089,493.19004679999995,已换算
+production,2022,"Other fruits, n.e.c.",B,t,38200105.99,0.00052,19864.055114799998,已换算
+production,2022,"Other meat n.e.c. (excluding mammals), fresh, chilled or frozen",G,t,1563629.79,0.0019,2970.896601,已换算
+production,2022,"Other nuts (excluding wild edible nuts and groundnuts), in shell, n.e.c.",B,t,1051017.39,0.00409,4298.6611250999995,已换算
+production,2022,"Other oil seeds, n.e.c.",C,t,2527518.38,0,0.0,已换算
+production,2022,Other pome fruits,B,t,129481.01,0.00016,20.7169616,已换算
+production,2022,Other pulses n.e.c.,,t,4904918.25,,,未匹配系数
+production,2022,Other rodents,M,,,0,,单位非吨或缺失
+production,2022,"Other stimulant, spice and aromatic crops, n.e.c.",D,t,3172094.78,0.00194,6153.8638732,已换算
+production,2022,Other stone fruits,B,t,615694.71,0.00052,320.16124919999993,已换算
+production,2022,Other sugar crops n.e.c.,C,t,872416,0.00024,209.37984,已换算
+production,2022,"Other tropical fruits, n.e.c.",B,t,28359402.21,0.0002,5671.880442000001,已换算
+production,2022,"Other vegetables, fresh n.e.c.",B,t,297995824.96,0.00052,154957.82897919999,已换算
+production,2022,Palm kernels,C,,,0,,单位非吨或缺失
+production,2022,Palm oil,C,,,0,,单位非吨或缺失
+production,2022,Papayas,B,t,13822327.59,0.00016,2211.5724144,已换算
+production,2022,Peaches and nectarines,B,t,26354497.05,0.00021,5534.4443805,已换算
+production,2022,Pears,B,t,26324873.5,0.00012,3158.98482,已换算
+production,2022,"Peas, dry",F,t,14166029.75,0.00375,53122.611562499995,已换算
+production,2022,"Peas, green",B,t,20945188.58,0.00113,23668.063095399997,已换算
+production,2022,"Pepper (Piper spp.), raw",D,t,812673.57,0.00019,154.4079783,已换算
+production,2022,"Peppermint, spearmint",B,t,51081.46,0,0.0,已换算
+production,2022,Persimmons,B,t,4436474.68,0.00025,1109.1186699999998,已换算
+production,2022,"Pig fat, rendered",I,,,0,,单位非吨或缺失
+production,2022,"Pigeon peas, dry",B,t,5326932.03,0.00332,17685.4143396,已换算
+production,2022,Pineapples,B,t,29361138.34,9e-05,2642.5024506,已换算
+production,2022,"Pistachios, in shell",B,t,1026802.86,0.005,5134.0143,已换算
+production,2022,Plantains and cooking bananas,B,t,44150813.38,0.00023,10154.687077400002,已换算
+production,2022,Plums and sloes,B,t,12391467.17,0.00017,2106.5494189,已换算
+production,2022,Pomelos and grapefruits,B,t,9761754.88,0.00016,1561.8807808000004,已换算
+production,2022,Poppy seed,A,t,14857.07,0.00854,126.87937780000001,已换算
+production,2022,Potatoes,B,t,374777763.43,0.0005,187388.881715,已换算
+production,2022,"Pumpkins, squash and gourds",B,t,22806320.54,0.00044,10034.7810376,已换算
+production,2022,"Pyrethrum, dried flowers",I,t,5049.45,0.0013,6.564284999999999,已换算
+production,2022,Quinces,B,t,702015.15,8e-05,56.161212000000006,已换算
+production,2022,Quinoa,E,t,158985.17,0.00337,535.7800229000001,已换算
+production,2022,Rabbits and hares,M,,,0.013,,单位非吨或缺失
+production,2022,"Ramie, raw or retted",A,t,7625.16,0.00089,6.7863923999999995,已换算
+production,2022,Rape or colza seed,C,t,87221220.62,0.00546,476227.8645852,已换算
+production,2022,"Rapeseed or canola oil, crude",C,,,0,,单位非吨或缺失
+production,2022,Raspberries,B,t,947852.03,0.0001,94.78520300000001,已换算
+production,2022,Raw cane or beet sugar (centrifugal only),C,,,0.00022,,单位非吨或缺失
+production,2022,Raw hides and skins of buffaloes,G,t,1409454.73,0.00042,591.9709866000001,已换算
+production,2022,Raw hides and skins of cattle,G,t,8698960.19,0.00042,3653.5632798,已换算
+production,2022,Raw hides and skins of goats or kids,G,t,1267833.86,0.00042,532.4902212000001,已换算
+production,2022,Raw hides and skins of sheep or lambs,G,t,1981012.57,0.00042,832.0252794,已换算
+production,2022,Raw milk of buffalo,G,t,143573178.18,0.0009,129215.860362,已换算
+production,2022,Raw milk of camel,G,t,4116669.03,0.0009,3705.0021269999997,已换算
+production,2022,Raw milk of cattle,G,t,753320577.84,0.00092,693054.9316128001,已换算
+production,2022,Raw milk of goats,G,t,19191572.8,0.0009,17272.41552,已换算
+production,2022,Raw milk of sheep,G,t,10093015.52,0.0009,9083.713968,已换算
+production,2022,Raw silk (not thrown),G,,,0.00015,,单位非吨或缺失
+production,2022,Rice,E,t,776461456.61,0.00282,2189621.3076402,已换算
+production,2022,Rye,E,t,13143054.91,0.00337,44292.0950467,已换算
+production,2022,Safflower seed,H,t,995507.6,0.0085,8461.8146,已换算
+production,2022,"Safflower-seed oil, crude",C,,,0,,单位非吨或缺失
+production,2022,"Seed cotton, unginned",H,t,69668142.85,0.00524,365061.06853399996,已换算
+production,2022,Sesame seed,H,t,6741479.41,0.00409,27572.6507869,已换算
+production,2022,Sheep,M,,,0.00028,,单位非吨或缺失
+production,2022,"Sheep fat, unrendered",C,t,576408.85,0,0.0,已换算
+production,2022,"Shorn wool, greasy, including fleece-washed shorn wool",G,t,1759760.1,0.00015,263.964015,已换算
+production,2022,Silk-worm cocoons suitable for reeling,G,t,414788.45,0.00015,62.218267499999996,已换算
+production,2022,"Sisal, raw",A,t,213304.53,0.00089,189.8410317,已换算
+production,2022,Skim milk and whey powder,G,,,0.0102,,单位非吨或缺失
+production,2022,Skim milk of cows,G,,,0.00097,,单位非吨或缺失
+production,2022,"Skim milk, condensed",G,,,0.00714,,单位非吨或缺失
+production,2022,"Skim milk, evaporated",G,,,0.00714,,单位非吨或缺失
+production,2022,"Snails, fresh, chilled, frozen, dried, salted or in brine, except sea snails",G,t,20799.43,0,0.0,已换算
+production,2022,Sorghum,E,t,57581942.77,0.0033,190020.41114100002,已换算
+production,2022,Sour cherries,B,t,1593024.7,0.00019,302.674693,已换算
+production,2022,Soya bean oil,C,,,0,,单位非吨或缺失
+production,2022,Soya beans,F,t,348856427.48,0.0055,1918710.35114,已换算
+production,2022,Spinach,B,t,33116288.11,0.00046,15233.4925306,已换算
+production,2022,Strawberries,B,t,9569864.9,0.00026,2488.164874,已换算
+production,2022,String beans,B,t,1375583.93,0.00037,508.96605409999995,已换算
+production,2022,Sugar beet,C,t,260998613.64,0.00022,57419.6950008,已换算
+production,2022,Sugar cane,C,t,1922059850.8,0.00024,461294.364192,已换算
+production,2022,Sunflower seed,E,t,54285948.66,0.00618,335487.16271879995,已换算
+production,2022,"Sunflower-seed oil, crude",C,,,0,,单位非吨或缺失
+production,2022,Sweet potatoes,B,t,86410354.75,0.00041,35428.2454475,已换算
+production,2022,Swine / pigs,M,,,0.00046,,单位非吨或缺失
+production,2022,Tallow,C,,,0,,单位非吨或缺失
+production,2022,Tallowtree seeds,C,t,1038670.93,0,0.0,已换算
+production,2022,"Tangerines, mandarins, clementines",B,t,44179830.73,0.0002,8835.966146,已换算
+production,2022,Taro,B,t,17718128.9,0.00041,7264.432848999999,已换算
+production,2022,Tea leaves,C,t,29760667.52,0.00314,93448.4960128,已换算
+production,2022,Tomatoes,B,t,186107972.48,0.00022,40943.7539456,已换算
+production,2022,Triticale,E,t,14157880.72,0.0038,53799.946736000005,已换算
+production,2022,"True hemp, raw or retted",A,t,247064.39,0.00089,219.8873071,已换算
+production,2022,Tung nuts,B,t,453685.31,0.00409,1855.5729179,已换算
+production,2022,Turkeys,M,,,0.013,,单位非吨或缺失
+production,2022,Unmanufactured tobacco,A,t,5780939.51,0.00109,6301.2240659,已换算
+production,2022,"Vanilla, raw",A,t,7704.03,0.0011,8.474433,已换算
+production,2022,Vetches,K,t,684263.78,0.00362,2477.0348836000003,已换算
+production,2022,"Walnuts, in shell",B,t,3874024.7,0.00409,15844.761023000001,已换算
+production,2022,Watermelons,B,t,99957595.15,9e-05,8996.1835635,已换算
+production,2022,Wheat,E,t,808441568.18,0.00341,2756785.7474938,已换算
+production,2022,"Whey, condensed",G,,,0.00043,,单位非吨或缺失
+production,2022,"Whey, dry",G,,,0.00576,,单位非吨或缺失
+production,2022,Whole milk powder,G,,,0.00714,,单位非吨或缺失
+production,2022,"Whole milk, condensed",G,,,0.00714,,单位非吨或缺失
+production,2022,"Whole milk, evaporated",G,,,0.00714,,单位非吨或缺失
+production,2022,Wine,J,,,0.00028,,单位非吨或缺失
+production,2022,Yams,B,t,88257159.31,0.00041,36185.4353171,已换算
+production,2022,Yautia,B,t,396406.96,0.00041,162.5268536,已换算
+production,2022,Yoghurt,G,,,0.00092,,单位非吨或缺失
+imports,2022,"Abaca, manila hemp, raw",A,t,23931.12,0.00089,21.2986968,已换算
+imports,2022,"Agave fibres, raw, n.e.c.",A,,,0.00089,,单位非吨或缺失
+imports,2022,"Almonds, in shell",B,t,430284.34,0.00454,1953.4909036,已换算
+imports,2022,"Almonds, shelled",B,t,963562.51,0.00454,4374.5737954,已换算
+imports,2022,Animal oils and fats n.e.c.,C,t,582954.07,0,0.0,已换算
+imports,2022,"Animal or vegetable fats and oils and their fractions, chemically modified, except those hydrogenated, inter-esterified, re-esterified or elaidinized; inedible mixtures or preparations of animal or vegetable fats or oils",C,t,8460046.43,0,0.0,已换算
+imports,2022,"Anise, badian, coriander, cumin, caraway, fennel and juniper berries, raw",D,t,580327.25,0.00051,295.9668975,已换算
+imports,2022,Apple juice,B,t,1181297.56,0.00016,189.00760960000002,已换算
+imports,2022,"Apple juice, concentrated",B,t,3005373.46,0.00016,480.85975360000003,已换算
+imports,2022,Apples,B,t,7855458.16,0.00011,864.1003976000001,已换算
+imports,2022,Apricots,B,t,353456.91,0.00021,74.2259511,已换算
+imports,2022,"Apricots, dried",B,t,141042.37,0.00114,160.7883018,已换算
+imports,2022,Areca nuts,B,t,452220.74,0.00409,1849.5828265999999,已换算
+imports,2022,Artichokes,B,t,51894.36,0.0013,67.462668,已换算
+imports,2022,Asparagus,B,t,417791.44,0.00045,188.006148,已换算
+imports,2022,Asses,M,An,34872,0,,单位非吨或缺失
+imports,2022,Asses,M,,,0,,单位非吨或缺失
+imports,2022,Avocados,B,t,3100008.15,0.00043,1333.0035045,已换算
+imports,2022,Bagasse,L,t,436063,0,0.0,已换算
+imports,2022,"Balata, gutta-percha, guayule, chicle and similar natural gums in primary forms or in plates, sheets or strip",A,t,6325,0.0002,1.2650000000000001,已换算
+imports,2022,"Bambara beans, dry",F,t,1647.48,0.00419,6.9029412,已换算
+imports,2022,Bananas,B,t,22575518.52,0.00023,5192.3692596,已换算
+imports,2022,Barley,E,t,33484300.1,0.00342,114516.306342,已换算
+imports,2022,Barley flour and grits,E,t,36281.57,0.00175,63.4927475,已换算
+imports,2022,"Barley, pearled",E,t,46602.91,0.00205,95.53596550000002,已换算
+imports,2022,"Beans, dry",F,t,4551976.19,0.00419,19072.780236100003,已换算
+imports,2022,beef and veal preparations nes,G,t,445368.06,0.0015,668.05209,已换算
+imports,2022,"Beer of barley, malted",J,t,17142053,0.00032,5485.45696,已换算
+imports,2022,"Beer of sorghum, malted",J,,,0.00032,,单位非吨或缺失
+imports,2022,Bees,L,No,3736297,0,,单位非吨或缺失
+imports,2022,Bees,L,,,0,,单位非吨或缺失
+imports,2022,Beeswax,C,t,30176.8,0,0.0,已换算
+imports,2022,Beet pulp,C,t,3575584,0.00045,1609.0128,已换算
+imports,2022,Beets for fodder,L,t,22386,0,0.0,已换算
+imports,2022,Blueberries,B,t,538477.39,0.00013,70.0020607,已换算
+imports,2022,"Bovine meat, salted, dried or smoked",G,t,39774.17,0.0015,59.661255,已换算
+imports,2022,Bran of barley,E,t,10631.61,0.00342,36.3601062,已换算
+imports,2022,Bran of buckwheat,E,,,0.01143,,单位非吨或缺失
+imports,2022,Bran of cereals n.e.c.,E,t,1407513.13,0.00059,830.4327466999999,已换算
+imports,2022,Bran of fonio,E,,,0.01143,,单位非吨或缺失
+imports,2022,Bran of maize,E,t,1697701.21,0.01143,19404.724830299998,已换算
+imports,2022,Bran of millet,E,t,0.04,0.01143,0.0004572,已换算
+imports,2022,Bran of mixed grain,E,t,39809.89,0.00175,69.6673075,已换算
+imports,2022,Bran of oats,E,,,0.00342,,单位非吨或缺失
+imports,2022,Bran of pulses,E,t,719807.94,0.0055,3958.9436699999997,已换算
+imports,2022,Bran of rice,E,t,1284.12,0.01143,14.677491599999998,已换算
+imports,2022,Bran of rye,E,t,549.57,0.00337,1.8520509000000003,已换算
+imports,2022,Bran of sorghum,E,t,14.95,0.01143,0.1708785,已换算
+imports,2022,Bran of wheat,E,t,8292748.5,0.01143,94786.11535499999,已换算
+imports,2022,"Brazil nuts, in shell",B,t,9012.56,0.00674,60.7446544,已换算
+imports,2022,"Brazil nuts, shelled",B,t,38808.57,0.00674,261.56976180000004,已换算
+imports,2022,Bread,E,t,589415.26,0.00087,512.7912762,已换算
+imports,2022,Breakfast cereals,E,t,2960139.59,0.00059,1746.4823581,已换算
+imports,2022,Brewing or distilling dregs and waste,A,t,12208301,0.00017,2075.4111700000003,已换算
+imports,2022,"Broad beans and horse beans, dry",E,t,1212635.74,0.00426,5165.8282524,已换算
+imports,2022,"Broad beans and horse beans, green",E,t,57559.82,0.00037,21.2971334,已换算
+imports,2022,Buckwheat,E,t,203868.18,0.00294,599.3724492,已换算
+imports,2022,Buffalo,M,An,111008,0.00282,,单位非吨或缺失
+imports,2022,Buffalo,M,,,0.00282,,单位非吨或缺失
+imports,2022,Bulgur,E,t,51576.54,0.00341,175.8760014,已换算
+imports,2022,Butter and ghee of sheep milk,G,,,0.00021,,单位非吨或缺失
+imports,2022,Butter of cow milk,G,t,1649836.52,0.00021,346.46566920000004,已换算
+imports,2022,Butter of karite nuts,C,,,0,,单位非吨或缺失
+imports,2022,"Buttermilk, curdled and acidified milk",G,t,1370588.99,0.0009,1233.5300909999999,已换算
+imports,2022,"Buttermilk, dry",G,t,52212.42,0.0009,46.991178,已换算
+imports,2022,Cabbages,B,t,3026086.14,0.00036,1089.3910104000001,已换算
+imports,2022,Cake of  linseed,H,t,172802,0.00662,1143.94924,已换算
+imports,2022,Cake of  soya beans,H,t,72093908,0.0071,511866.7468,已换算
+imports,2022,Cake of copra,H,t,746588,0.0085,6345.9980000000005,已换算
+imports,2022,Cake of cottonseed,H,t,342433,0.0085,2910.6805000000004,已换算
+imports,2022,Cake of groundnuts,H,t,220275,0.0085,1872.3375,已换算
+imports,2022,Cake of hempseed,H,,,0.0085,,单位非吨或缺失
+imports,2022,Cake of kapok,H,,,0.0085,,单位非吨或缺失
+imports,2022,Cake of maize,H,t,5638,0.0091,51.305800000000005,已换算
+imports,2022,Cake of mustard seed,H,t,13390,0.0129,172.731,已换算
+imports,2022,Cake of palm kernel,H,t,10556988,0.0085,89734.398,已换算
+imports,2022,Cake of rapeseed,H,t,11756415,0.0129,151657.7535,已换算
+imports,2022,Cake of rice bran,H,t,3401,0.01143,38.87343,已换算
+imports,2022,Cake of safflowerseed,H,t,0,0.0085,0.0,已换算
+imports,2022,Cake of sesame seed,H,t,212,0.0085,1.802,已换算
+imports,2022,Cake of sunflower seed,H,t,10123754,0.0113,114398.4202,已换算
+imports,2022,"Cake, oilseeds nes",H,t,1752826,0.0085,14899.021,已换算
+imports,2022,Camels,M,An,301969,0,,单位非吨或缺失
+imports,2022,Camels,M,,,0,,单位非吨或缺失
+imports,2022,Canary seed,A,t,160737.99,0.0085,1366.272915,已换算
+imports,2022,"Cane sugar, non-centrifugal",C,t,1297.93,0,0.0,已换算
+imports,2022,Cane tops,C,,,0.00089,,单位非吨或缺失
+imports,2022,Canned mushrooms,B,t,624882.9,0.00069,431.169201,已换算
+imports,2022,Cantaloupes and other melons,B,t,2150145.8,0.00024,516.034992,已换算
+imports,2022,Carrots and turnips,B,t,2753162.86,0.00035,963.607001,已换算
+imports,2022,"Cashew nuts, in shell",B,t,3201677.59,0.00373,11942.257410699998,已换算
+imports,2022,"Cashew nuts, shelled",B,t,638281.71,0.00373,2380.7907782999996,已换算
+imports,2022,Cashewapple,B,t,134.87,0.00011,0.0148357,已换算
+imports,2022,"Cassava, dry",B,t,12831230.41,0.00038,4875.8675558,已换算
+imports,2022,"Cassava, fresh",B,t,3221.78,0.00038,1.2242764000000002,已换算
+imports,2022,Castor oil seeds,C,t,19810.16,0,0.0,已换算
+imports,2022,Cattle,M,An,9611405,0.00282,,单位非吨或缺失
+imports,2022,Cattle,M,,,0.00282,,单位非吨或缺失
+imports,2022,"Cattle fat, unrendered",G,t,728494.5,0,0.0,已换算
+imports,2022,"Cattle, butcher fat",G,t,2759.2,0,0.0,已换算
+imports,2022,Cauliflowers and broccoli,B,t,1314092.03,0.00052,683.3278555999999,已换算
+imports,2022,Cereal preparations,E,t,2568851.43,0.00059,1515.6223437,已换算
+imports,2022,"Cereal straw, husks, unprepared, ground, pressed, or in the form of pellets",E,t,3024751,0.001,3024.751,已换算
+imports,2022,Cereals n.e.c.,E,t,150794.46,0.00175,263.890305,已换算
+imports,2022,"Cheese from milk of goats, fresh or processed",G,,,0.005,,单位非吨或缺失
+imports,2022,"Cheese from milk of sheep, fresh or processed",G,t,15666.76,0.005,78.3338,已换算
+imports,2022,Cheese from skimmed cow milk,G,t,385.72,0.005,1.9286,已换算
+imports,2022,Cheese from whole cow milk,G,t,6865246.23,0.005,34326.23115,已换算
+imports,2022,Cherries,B,t,946589.74,0.00023,217.7156402,已换算
+imports,2022,"Chestnuts, in shell",B,t,110386.95,0.00409,451.4826255,已换算
+imports,2022,"Chick peas, dry",B,t,1881268.97,0.00332,6245.8129804,已换算
+imports,2022,Chickens,M,,,0.013,,单位非吨或缺失
+imports,2022,Chickens,M,1000 An,1615979,0.013,,单位非吨或缺失
+imports,2022,Chickens,M,,,0.013,,单位非吨或缺失
+imports,2022,Chicory roots,B,t,11577.55,0.00023,2.6628365,已换算
+imports,2022,"Chillies and peppers, dry (Capsicum spp., Pimenta spp.), raw",D,t,1010491.81,0.00032,323.3573792,已换算
+imports,2022,"Chillies and peppers, green (Capsicum spp. and Pimenta spp.)",D,t,3882946.22,0.00019,737.7597818,已换算
+imports,2022,Chocolate products nes,C,t,6948440.8,0.00287,19942.025096,已换算
+imports,2022,Cider and other fermented beverages,J,t,1109298.89,0,0.0,已换算
+imports,2022,Cigarettes,I,t,1076885,0.00109,1173.80465,已换算
+imports,2022,Cigars and cheroots,I,t,72550,0.00109,79.0795,已换算
+imports,2022,"Cinnamon and cinnamon-tree flowers, raw",D,t,208162.32,0.00061,126.97901519999999,已换算
+imports,2022,"Citrus juice, concentrated n.e.c.",J,t,210877.32,0.00016,33.740371200000006,已换算
+imports,2022,"Clover, for forage",K,,,0.00362,,单位非吨或缺失
+imports,2022,"Cloves (whole stems), raw",D,t,95004.99,0.00018,17.100898200000003,已换算
+imports,2022,Coarse goat hair,G,t,0.05,0.0001,5e-06,已换算
+imports,2022,Cocoa beans,F,t,3752685.44,0.00656,24617.6164864,已换算
+imports,2022,"Cocoa butter, fat and oil",C,t,1123035.17,0,0.0,已换算
+imports,2022,Cocoa husks and shells,I,t,85440.53,0.00192,164.0458176,已换算
+imports,2022,Cocoa paste not defatted,D,t,817980.09,0.00656,5365.9493904,已换算
+imports,2022,Cocoa powder and cake,D,t,2056232.99,0.00656,13488.8884144,已换算
+imports,2022,Coconut oil,C,t,2584758.5,0,0.0,已换算
+imports,2022,"Coconuts, desiccated",B,t,455865.25,0.00094,428.513335,已换算
+imports,2022,"Coconuts, in shell",B,t,1796241.66,0.00094,1688.4671603999998,已换算
+imports,2022,Coffee extracts,I,t,1330550.34,0.00192,2554.6566528000003,已换算
+imports,2022,Coffee husks and skins,I,t,6558,0.00192,12.59136,已换算
+imports,2022,Coffee substitutes,I,t,102781.8,0.00192,197.341056,已换算
+imports,2022,"Coffee, decaffeinated or roasted",I,t,1414175.69,0.00192,2715.2173248,已换算
+imports,2022,"Coffee, green",I,t,7906051.83,0.0016,12649.682928,已换算
+imports,2022,"Coir, raw",B,t,27171.94,0.00094,25.541623599999998,已换算
+imports,2022,"Communion wafers, empty cachets of a kind suitable for pharmaceutical use, sealing wafers, rice paper and similar products.",I,t,1975053.07,0.00122,2409.5647454,已换算
+imports,2022,Compound feed n.e.c.,F,t,2414937,0.0055,13282.153499999999,已换算
+imports,2022,Copra,C,t,126360.82,0.00089,112.4611298,已换算
+imports,2022,"Cotton lint, ginned",A,t,8611160,0.0064,55111.424,已换算
+imports,2022,Cotton linters,A,t,135576,0.00014,18.980639999999998,已换算
+imports,2022,Cotton seed,H,t,1398946.45,0.00524,7330.4793979999995,已换算
+imports,2022,Cotton waste,A,t,400506,0.0064,2563.2384,已换算
+imports,2022,"Cotton, carded or combed",A,t,104367,0.00014,14.611379999999999,已换算
+imports,2022,Cottonseed oil,C,t,153894.89,0,0.0,已换算
+imports,2022,"Cow peas, dry",F,t,134011.77,0.00375,502.5441374999999,已换算
+imports,2022,Cranberries,B,t,326356.47,0.0001,32.635647,已换算
+imports,2022,"Cream, fresh",G,t,1561821.02,0.00085,1327.547867,已换算
+imports,2022,Crude organic material n.e.c.,I,,,0.00341,,单位非吨或缺失
+imports,2022,Cucumbers and gherkins,B,t,3091317.7,0.00017,525.5240090000001,已换算
+imports,2022,Currants,B,t,17029.09,0.0011,18.731999000000002,已换算
+imports,2022,Dairy products n.e.c.,G,t,683881.44,0.00092,629.1709248,已换算
+imports,2022,Dates,B,t,1718994.55,0.00057,979.8268935,已换算
+imports,2022,Degras,C,t,27152.96,0,0.0,已换算
+imports,2022,"Dog or cat food, put up for retail sale",I,t,10602493,0.0019,20144.7367,已换算
+imports,2022,Dried mushrooms,B,t,89320.69,0.00125,111.6508625,已换算
+imports,2022,Ducks,M,,,0.013,,单位非吨或缺失
+imports,2022,Ducks,M,1000 An,24125,0.013,,单位非吨或缺失
+imports,2022,Ducks,M,,,0.013,,单位非吨或缺失
+imports,2022,"Edible offal of cattle, fresh, chilled or frozen",G,t,1300462.67,0.0016,2080.740272,已换算
+imports,2022,"Edible offal of goat, fresh, chilled or frozen",G,t,3.1,0.0016,0.00496,已换算
+imports,2022,"Edible offal of pigs, fresh, chilled or frozen",G,t,2864487.29,0.0016,4583.179664,已换算
+imports,2022,"Edible offal of sheep, fresh, chilled or frozen",G,t,55415.73,0.0016,88.66516800000001,已换算
+imports,2022,"Edible offals and liver of chickens and guinea fowl, fresh, chilled or frozen",G,t,816967.44,0.0024,1960.7218559999997,已换算
+imports,2022,"Edible offals and liver of ducks, fresh, chilled or frozen",G,t,8127.83,0.0024,19.506791999999997,已换算
+imports,2022,"Edible offals and liver of geese, fresh, chilled or frozen",G,t,2071.11,0.0024,4.970664,已换算
+imports,2022,"Edible offals of horses and other equines,  fresh, chilled or frozen",G,t,4156.35,0.0016,6.6501600000000005,已换算
+imports,2022,"Edible roots and tubers with high starch or inulin content, n.e.c., dry",B,t,6571.95,0.00038,2.497341,已换算
+imports,2022,"Edible roots and tubers with high starch or inulin content, n.e.c., fresh",G,t,104029.47,0.00038,39.5311986,已换算
+imports,2022,Eggplants (aubergines),G,t,579542.03,0.00021,121.70382630000002,已换算
+imports,2022,"Eggs from other birds in shell, fresh, n.e.c.",G,t,88348.89,0.00214,189.06662459999998,已换算
+imports,2022,"Eggs, dried",G,t,78226.7,0.00757,592.176119,已换算
+imports,2022,"Eggs, liquid",G,t,391745.33,0.00214,838.3350062000001,已换算
+imports,2022,Essential oils n.e.c.,C,t,279038,0,0.0,已换算
+imports,2022,"Extracts and juices of meat, fish, crustaceans, molluscs or other aquatic invertebrates",L,t,36345.34,0,0.0,已换算
+imports,2022,"Extracts, essences and concentrates of tea or mate, and preparations with a basis thereof or with a basis of tea or maté",C,t,227449.19,0.00314,714.1904566000001,已换算
+imports,2022,Fat of camels,G,,,0,,单位非吨或缺失
+imports,2022,Fat of pigs,G,t,602039.25,0,0.0,已换算
+imports,2022,Fat of poultry,L,t,30073.08,0,0.0,已换算
+imports,2022,Fat preparations n.e.c.,L,t,3455329.96,0,0.0,已换算
+imports,2022,Fatty liver preparations,L,t,3831.82,0,0.0,已换算
+imports,2022,Feed additives,H,,,0.0071,,单位非吨或缺失
+imports,2022,Feed minerals,K,,,0,,单位非吨或缺失
+imports,2022,Feed supplements,H,t,210970,0.0071,1497.8870000000002,已换算
+imports,2022,"Feed, compound, cattle",F,t,369773,0.0055,2033.7514999999999,已换算
+imports,2022,"Feed, compound, pigs",F,t,143236,0.0055,787.798,已换算
+imports,2022,"Feed, compound, poultry",B,t,75589,0.00052,39.306279999999994,已换算
+imports,2022,"Feed, food waste preparations",I,t,296987,0.00087,258.37869,已换算
+imports,2022,"Feed, other concentrates nes",L,t,108378,0,0.0,已换算
+imports,2022,Figs,B,t,85249.49,0.00032,27.279836800000005,已换算
+imports,2022,"Figs, dried",B,t,107718.17,0.00108,116.3356236,已换算
+imports,2022,"Fine animal hair, n.e.c.",G,t,13755.82,0.0001,1.375582,已换算
+imports,2022,"Flax, processed but not spun",A,t,288702.29,0.00089,256.9450381,已换算
+imports,2022,"Flax, raw or retted",A,t,36504.94,0.00089,32.4893966,已换算
+imports,2022,"Flax, tow and waste",A,t,220610,0.00089,196.3429,已换算
+imports,2022,Flour of buckwheat,E,t,773.29,0.00294,2.2734726,已换算
+imports,2022,Flour of cassava,E,t,40100.49,0.00038,15.2381862,已换算
+imports,2022,Flour of cereals n.e.c.,E,t,902824.26,0.00175,1579.942455,已换算
+imports,2022,Flour of fonio,E,,,0.0055,,单位非吨或缺失
+imports,2022,Flour of fruits,L,t,114642.62,0,0.0,已换算
+imports,2022,Flour of maize,E,t,2515696.38,0,0.0,已换算
+imports,2022,Flour of millet,E,t,26.59,0.00275,0.07312249999999999,已换算
+imports,2022,Flour of mixed grain,E,t,67023.26,0.00175,117.29070499999999,已换算
+imports,2022,Flour of mustard seed,E,t,199209.42,0.00175,348.616485,已换算
+imports,2022,Flour of pulses,F,t,121574.11,0.0055,668.657605,已换算
+imports,2022,Flour of rice,E,t,194314.42,0.00114,221.5184388,已换算
+imports,2022,Flour of roots and tubers n.e.c.,I,t,97857.35,0.0005,48.928675000000005,已换算
+imports,2022,Flour of rye,E,t,64974.34,0.00337,218.96352579999999,已换算
+imports,2022,Flour of sorghum,E,t,95548.22,0.0033,315.309126,已换算
+imports,2022,"Flour, meal, powder, flakes, granules and pellets of potatoes",B,t,690538.5,0.0005,345.26925,已换算
+imports,2022,"Flours and meals of oil seeds or oleaginous fruits, except those of mustard",D,t,1758990.1,0.00175,3078.232675,已换算
+imports,2022,Fonio,E,t,373.01,0.00341,1.2719641,已换算
+imports,2022,Food preparations n.e.c.,D,t,23885666.45,0.00168,40127.919636,已换算
+imports,2022,"Food preparations of flour, meal or malt extract",D,t,3243382.15,0.00017,551.3749655,已换算
+imports,2022,Food wastes,I,t,15975067,0.00087,13898.30829,已换算
+imports,2022,"Forage and silage, alfalfa",K,t,72296,0.0031,224.11759999999998,已换算
+imports,2022,"Forage and silage, maize",K,t,625,0.0031,1.9375,已换算
+imports,2022,Fruit prepared n.e.c.,B,t,9449162.56,7e-05,661.4413792,已换算
+imports,2022,"Fruit, nuts, peel, sugar preserved",B,t,178169.12,0.00409,728.7117008,已换算
+imports,2022,"Game meat, fresh, chilled or frozen",G,t,59391.4,0.0021,124.72193999999999,已换算
+imports,2022,Geese,M,,,0.013,,单位非吨或缺失
+imports,2022,Geese,M,1000 An,643,0.013,,单位非吨或缺失
+imports,2022,Geese,M,,,0.013,,单位非吨或缺失
+imports,2022,Germ of maize,E,t,417962.94,0.00213,890.2610622,已换算
+imports,2022,Germ of wheat,E,t,11986.5,0.00341,40.873965,已换算
+imports,2022,Ghee from buffalo milk,D,,,0.00021,,单位非吨或缺失
+imports,2022,Ghee from cow milk,D,t,194703.93,0.00021,40.8878253,已换算
+imports,2022,"Ginger, raw",D,t,959028.73,0,0.0,已换算
+imports,2022,Glucose and dextrose,C,t,5840142.57,0,0.0,已换算
+imports,2022,Gluten feed and meal,K,t,4799230.44,0.0019,9118.537836000001,已换算
+imports,2022,Goats,M,An,1361559,0.00028,,单位非吨或缺失
+imports,2022,Goats,M,,,0.00028,,单位非吨或缺失
+imports,2022,Gooseberries,B,t,1973.11,0.0003,0.5919329999999999,已换算
+imports,2022,Grape juice,J,t,729860.88,0.00014,102.1805232,已换算
+imports,2022,Grapefruit juice,J,t,123364.32,0.00014,17.2710048,已换算
+imports,2022,"Grapefruit juice, concentrated",J,t,74788.17,0.0009,67.309353,已换算
+imports,2022,Grapes,B,t,5144412.58,0.00016,823.1060128,已换算
+imports,2022,"Grapes, marc",B,t,31538,0.00016,5.046080000000001,已换算
+imports,2022,Green corn (maize),K,t,267668.48,0.00083,222.16483839999998,已换算
+imports,2022,Green garlic,B,t,2347956.29,0.00134,3146.2614286000003,已换算
+imports,2022,Groundnut oil,C,t,377533.39,0,0.0,已换算
+imports,2022,"Groundnuts, excluding shelled",B,t,308180.29,0.00341,1050.8947888999999,已换算
+imports,2022,"Groundnuts, shelled",B,t,3057620.36,0.00341,10426.485427599999,已换算
+imports,2022,"Hair, carded/combed",G,t,26823,0.0001,2.6823,已换算
+imports,2022,"Hair, coarse nes",G,t,10843.17,0.0001,1.084317,已换算
+imports,2022,"Hair, goat, fine",G,t,4858.55,0.0001,0.48585500000000004,已换算
+imports,2022,"Hair, horse",G,t,0.48,0.0001,4.8e-05,已换算
+imports,2022,"Hay for forage, from legumes",K,,,0.00362,,单位非吨或缺失
+imports,2022,"Hay for forage, from other crops n.e.c.",K,t,44442,0.0031,137.7702,已换算
+imports,2022,"Hay, non-leguminous",K,t,121544,0.0031,376.7864,已换算
+imports,2022,"Hazelnuts, in shell",B,t,46757.75,0.00333,155.7033075,已换算
+imports,2022,"Hazelnuts, shelled",B,t,283324.92,0.00333,943.4719835999999,已换算
+imports,2022,Hempseed,A,t,22253.63,0.0085,189.15585500000003,已换算
+imports,2022,"Hen eggs in shell, fresh",G,t,2217779.36,0.00214,4746.0478304,已换算
+imports,2022,"Hides nes, dry salted",G,t,3736,0.00042,1.56912,已换算
+imports,2022,"Hides of camels, n.e.c.",G,,,0.00042,,单位非吨或缺失
+imports,2022,"Hides, cattle nes",G,t,3104,0.00042,1.30368,已换算
+imports,2022,"Hides, cattle, dry salted",G,t,272897,0.00042,114.61674000000001,已换算
+imports,2022,"Hides, dry-salted of buffalo",G,,,0.00042,,单位非吨或缺失
+imports,2022,"Hides, dry-salted of horses",G,,,0.00042,,单位非吨或缺失
+imports,2022,"Hides, horse nes",G,t,0,0.00042,0.0,已换算
+imports,2022,"Hides, horse, wet salted",G,t,3215,0.00042,1.3503,已换算
+imports,2022,"Hides, wet salted nes",G,t,13792,0.00042,5.7926400000000005,已换算
+imports,2022,"Hides, wet-salted of buffalo",G,,,0.00042,,单位非吨或缺失
+imports,2022,"Hides, wet-salted of camels",G,,,0.00042,,单位非吨或缺失
+imports,2022,"Hides, wet-salted of cattle",G,t,2120208,0.00042,890.4873600000001,已换算
+imports,2022,"Homogenized cooked fruit, prepared",B,t,172880.74,0.00011,19.0168814,已换算
+imports,2022,Homogenized meat preparations,G,t,52776.07,0.00143,75.46978010000001,已换算
+imports,2022,Homogenized vegetable preparations,B,t,35851.83,0.00052,18.6429516,已换算
+imports,2022,Hop cones,J,t,61492.71,0.015,922.3906499999999,已换算
+imports,2022,"Horse meat, fresh or chilled",G,t,80825.73,0.00216,174.5835768,已换算
+imports,2022,Horses,M,An,508735,0.0027,,单位非吨或缺失
+imports,2022,Horses,M,,,0.0027,,单位非吨或缺失
+imports,2022,Husked rice,E,t,3425916.66,0.00114,3905.5449924,已换算
+imports,2022,hydrogenated oils and fats,C,t,2786381.48,0,0.0,已换算
+imports,2022,Ice and snow,I,t,28757287,0,0.0,已换算
+imports,2022,Ice cream and other edible ice,G,t,1661980.26,0.00117,1944.5169042,已换算
+imports,2022,Industrial monocarboxylic fatty acids; acid oils from refining,C,t,9711665.61,0,0.0,已换算
+imports,2022,Infant food,I,t,1364918.21,0.00109,1487.7608489,已换算
+imports,2022,Isoglucose,L,t,14224.18,0,0.0,已换算
+imports,2022,Jojoba oil,C,t,51775.7,0,0.0,已换算
+imports,2022,Juice of citrus fruit n.e.c.,J,t,315240.82,0.00016,50.43853120000001,已换算
+imports,2022,Juice of fruits n.e.c.,J,t,2900888.25,0.00016,464.14212000000003,已换算
+imports,2022,Juice of lemon,J,t,123625.71,0.0009,111.26313900000001,已换算
+imports,2022,Juice of mango,J,t,231.23,0.0009,0.208107,已换算
+imports,2022,"Juice of pineapples, concentrated",J,t,391164.51,0.0003,117.349353,已换算
+imports,2022,Juice of plum,J,,,0.0009,,单位非吨或缺失
+imports,2022,"Juice of plum, concentrated",J,,,0.0009,,单位非吨或缺失
+imports,2022,Juice of tangerine,J,t,1096.2,0.00016,0.17539200000000002,已换算
+imports,2022,"Jute, raw or retted",A,t,268880.4,0.00089,239.30355600000001,已换算
+imports,2022,"Kapok fibre, raw",A,,,0.00089,,单位非吨或缺失
+imports,2022,Kapokseed in shell,A,,,0.00524,,单位非吨或缺失
+imports,2022,"Kapokseed, shelled",A,,,0.00524,,单位非吨或缺失
+imports,2022,Karite nuts (sheanuts),B,t,79378.7,0.00409,324.658883,已换算
+imports,2022,"Kenaf, and other textile bast fibres, raw or retted",A,t,0.01,0.00089,8.9e-06,已换算
+imports,2022,Kiwi fruit,B,t,1663052.1,0.00031,515.546151,已换算
+imports,2022,Kola nuts,B,t,29773.55,0.00076,22.627898000000002,已换算
+imports,2022,Lactose,G,t,1175892.89,0.00189,2222.4375621,已换算
+imports,2022,Lard stearine and lard oil,L,t,60767.42,0,0.0,已换算
+imports,2022,Leather used & waste,L,t,16020,0,0.0,已换算
+imports,2022,Leeks and other alliaceous vegetables,B,t,332106.02,0.00048,159.41088960000002,已换算
+imports,2022,"Lemon juice, concentrated",J,t,221333.57,0.0009,199.200213,已换算
+imports,2022,Lemons and limes,B,t,3972655.47,0.00016,635.6248752000001,已换算
+imports,2022,"Lentils, dry",F,t,4268845.92,0.00411,17544.9567312,已换算
+imports,2022,Lettuce and chicory,B,t,2390351.34,0.00023,549.7808082,已换算
+imports,2022,Linseed,H,t,1920049.47,0.00662,12710.727491399999,已换算
+imports,2022,Liquid margarine,C,t,124666.8,0,0.0,已换算
+imports,2022,Liver preparations,G,t,37525.32,0,0.0,已换算
+imports,2022,Locust beans (carobs),B,t,33446.11,0.0048,160.541328,已换算
+imports,2022,Lucerne (alfalfa) meal and pellets,K,t,1887669,0.00362,6833.36178,已换算
+imports,2022,Lupins,B,t,1928.62,0.0048,9.257375999999999,已换算
+imports,2022,Maize (corn),E,t,201777175.28,0.00213,429785.3833464,已换算
+imports,2022,Malt extract,D,t,383960.78,0.00017,65.2733326,已换算
+imports,2022,"Malt, whether or not roasted",E,t,8291069.1,0.00017,1409.481747,已换算
+imports,2022,Mango pulp,B,t,3452.81,0.00013,0.44886529999999997,已换算
+imports,2022,"Mangoes, guavas and mangosteens",B,t,1951705.3,0.00013,253.721689,已换算
+imports,2022,Margarine and shortening,C,t,1291200.35,0,0.0,已换算
+imports,2022,Maté leaves,C,t,102099.47,0.00314,320.5923358,已换算
+imports,2022,Meat meal,G,t,4350260,0.0019,8265.494,已换算
+imports,2022,"Meat of asses, fresh or chilled",G,,,0.0019,,单位非吨或缺失
+imports,2022,"Meat of buffalo, fresh or chilled",G,t,423850.91,0.0019,805.3167289999999,已换算
+imports,2022,"Meat of camels, fresh or chilled",G,t,1206.39,0.0019,2.292141,已换算
+imports,2022,"Meat of cattle boneless, fresh or chilled",G,t,7890132.22,0.0019,14991.251218,已换算
+imports,2022,"Meat of cattle with the bone, fresh or chilled",G,t,2099795.23,0.0019,3989.610937,已换算
+imports,2022,"Meat of chickens, fresh or chilled",G,t,14333898.17,0.00165,23650.9319805,已换算
+imports,2022,"Meat of ducks, fresh or chilled",G,t,162182.82,0.00196,317.8783272,已换算
+imports,2022,"Meat of geese, fresh or chilled",G,t,40052.09,0.00184,73.6958456,已换算
+imports,2022,"Meat of goat, fresh or chilled",G,t,73842.67,0.0019,140.301073,已换算
+imports,2022,"Meat of pig boneless, fresh or chilled",G,t,6022759.86,0.00136,8190.953409600001,已换算
+imports,2022,"Meat of pig with the bone, fresh or chilled",G,t,6690131.63,0.00192,12845.0527296,已换算
+imports,2022,"Meat of pigeons and other birds n.e.c., fresh, chilled or frozen",G,t,1603.69,0.0025,4.009225,已换算
+imports,2022,"Meat of rabbits and hares, fresh or chilled",G,t,22043.53,0.00216,47.614024799999996,已换算
+imports,2022,"Meat of sheep, fresh or chilled",G,t,1217087.31,0.00162,1971.6814422,已换算
+imports,2022,"Meat of turkeys, fresh or chilled",G,t,797774.5,0.00175,1396.105375,已换算
+imports,2022,Meat prepared n.e.c.,G,t,134092.98,0.00136,182.36645280000002,已换算
+imports,2022,Melonseed,B,t,175372.68,0.00618,1083.8031624,已换算
+imports,2022,Millet,E,t,480005.13,0.00275,1320.0141075,已换算
+imports,2022,Mixed grain,E,t,46958.14,0.00341,160.1272574,已换算
+imports,2022,Mixes and doughs for the preparation of bakers' wares,E,t,2020332.28,0.00341,6889.3330748,已换算
+imports,2022,Molasses,C,t,6472839.12,0,0.0,已换算
+imports,2022,Mules and hinnies,M,An,14838,0.0027,,单位非吨或缺失
+imports,2022,Mules and hinnies,M,,,0.0027,,单位非吨或缺失
+imports,2022,Mushrooms and truffles,B,t,707627.54,0.00125,884.534425,已换算
+imports,2022,Must of grape,B,t,74341.9,0.00014,10.407865999999999,已换算
+imports,2022,Mustard seed,B,t,323190.49,0.0085,2747.119165,已换算
+imports,2022,"Mustard seed oil, crude",C,t,38121.72,0,0.0,已换算
+imports,2022,Natural honey,G,t,769135.21,3e-05,23.0740563,已换算
+imports,2022,Natural rubber in other forms,A,t,9219047,0.0002,1843.8094,已换算
+imports,2022,Natural rubber in primary forms,A,t,1472054.45,0.0002,294.41089,已换算
+imports,2022,"Nutmeg, mace, cardamoms, raw",B,t,135629.1,0,0.0,已换算
+imports,2022,Oats,E,t,3453696.72,0.00342,11811.6427824,已换算
+imports,2022,"Oats, rolled",E,t,1305150.19,0.00415,5416.3732885,已换算
+imports,2022,"Offals n.e.c. (excluding mammals), fresh, chilled or frozen",G,t,23357.36,0.0019,44.378984,已换算
+imports,2022,Oil of castor beans,C,t,663852.69,0,0.0,已换算
+imports,2022,Oil of citronella,C,t,1769,0,0.0,已换算
+imports,2022,Oil of kapok,C,,,0,,单位非吨或缺失
+imports,2022,Oil of linseed,C,t,204862.07,0,0.0,已换算
+imports,2022,Oil of maize,C,t,616825.19,0,0.0,已换算
+imports,2022,Oil of olive residues,C,t,234117.81,0,0.0,已换算
+imports,2022,Oil of palm kernel,C,t,2755767.96,0,0.0,已换算
+imports,2022,Oil of poppy seed,C,,,0,,单位非吨或缺失
+imports,2022,Oil of rice bran,C,t,69655.47,0,0.0,已换算
+imports,2022,Oil of sesame seed,C,t,79756.01,0,0.0,已换算
+imports,2022,Oil of tung nuts,C,t,9.12,0,0.0,已换算
+imports,2022,Okra,B,t,58906.31,0.00052,30.631281199999997,已换算
+imports,2022,Olive oil,C,t,2459884.4,0,0.0,已换算
+imports,2022,Olive residues,B,t,274392,0.00017,46.646640000000005,已换算
+imports,2022,Olives,B,t,94019.23,0.00017,15.983269100000001,已换算
+imports,2022,Olives preserved,B,t,1377801.01,0.00017,234.2261717,已换算
+imports,2022,"Onions and shallots, dry (excluding dehydrated)",B,t,8931205.81,0.00243,21702.8301183,已换算
+imports,2022,"Onions and shallots, green",B,t,610537.5,0.00033,201.477375,已换算
+imports,2022,Orange juice,J,t,3762835.03,0.00016,602.0536048,已换算
+imports,2022,"Orange juice, concentrated",J,t,1813964.18,0.0009,1632.567762,已换算
+imports,2022,Oranges,B,t,7029937.16,0.0002,1405.9874320000001,已换算
+imports,2022,"Other beans, green",B,t,643272.23,0.00037,238.0107251,已换算
+imports,2022,Other berries and fruits of the genus vaccinium n.e.c.,B,t,151967.16,0.00013,19.7557308,已换算
+imports,2022,Other camelids,M,An,1002,0,,单位非吨或缺失
+imports,2022,Other camelids,M,,,0,,单位非吨或缺失
+imports,2022,"Other citrus fruit, n.e.c.",B,t,77899.63,0.0002,15.579926000000002,已换算
+imports,2022,"Other fibre crops, raw, n.e.c.",A,t,1088878.88,0.00089,969.1022031999998,已换算
+imports,2022,"Other forage products, n.e.c.",K,t,8466924,0.0031,26247.4644,已换算
+imports,2022,Other fructose and syrup,C,t,1489590.37,0,0.0,已换算
+imports,2022,"Other fruit n.e.c., dried",B,t,613285.86,0.00114,699.1458804,已换算
+imports,2022,"Other fruits, n.e.c.",B,t,3458485.18,0.00052,1798.4122935999999,已换算
+imports,2022,"Other grasses, for forage",K,,,0.0031,,单位非吨或缺失
+imports,2022,"Other legumes, for forage",K,,,0.00915,,单位非吨或缺失
+imports,2022,"Other live animals, n.e.c.",M,,,0,,单位非吨或缺失
+imports,2022,"Other live animals, n.e.c.",M,,,0,,单位非吨或缺失
+imports,2022,"Other manufactured tobacco and manufactured tobacco substitutes; homogenized"" or ""reconstituted"" tobacco; tobacco extracts and essences""",A,t,647591,0.00109,705.87419,已换算
+imports,2022,"Other meat and edible meat offal, salted, in brine, dried or smoked; edible flours and meals of meat or meat offal",G,t,333035.18,0.0016,532.8562880000001,已换算
+imports,2022,"Other meat n.e.c. (excluding mammals), fresh, chilled or frozen",G,t,24196.5,0.0019,45.973349999999996,已换算
+imports,2022,Other non-alcoholic caloric beverages,J,t,26660997,0.00016,4265.7595200000005,已换算
+imports,2022,"Other nuts (excluding wild edible nuts and groundnuts), in shell, n.e.c.",B,t,207844.26,0.00409,850.0830234,已换算
+imports,2022,"Other oil of vegetable origin, crude n.e.c.",C,t,999982.5,0,0.0,已换算
+imports,2022,"Other oil seeds, n.e.c.",C,t,460946.49,0,0.0,已换算
+imports,2022,Other pulses n.e.c.,E,t,417998.53,0.0055,2298.991915,已换算
+imports,2022,"Other raw skins of other animals, fresh",G,,,0.00042,,单位非吨或缺失
+imports,2022,"Other raw skins of other animals, preserved",G,t,30585,0.00042,12.8457,已换算
+imports,2022,Other rodents,M,,,0,,单位非吨或缺失
+imports,2022,Other rodents,M,,,0,,单位非吨或缺失
+imports,2022,"Other stimulant, spice and aromatic crops, n.e.c.",D,t,647514.52,0.00194,1256.1781688,已换算
+imports,2022,Other stone fruits,B,t,49434.61,0.00052,25.7059972,已换算
+imports,2022,Other sugar crops n.e.c.,C,t,524.68,0.00024,0.12592319999999999,已换算
+imports,2022,"Other tropical fruit, dried",B,t,95396.89,0.0002,19.079378000000002,已换算
+imports,2022,"Other tropical fruits, n.e.c.",B,t,1593385.51,0.0002,318.677102,已换算
+imports,2022,Other vegetable juices,J,t,613837.31,0.00016,98.21396960000001,已换算
+imports,2022,"Other vegetables and pulses, preserved other than by vinegar, acetic acid or sugar, n.e.c.",B,,,0.0003,,单位非吨或缺失
+imports,2022,Other vegetables provisionally preserved,B,t,472417.08,0.00052,245.6568816,已换算
+imports,2022,"Other vegetables, fresh n.e.c.",B,t,2996527.37,0.00052,1558.1942324,已换算
+imports,2022,Palm kernels,C,t,136304.2,0,0.0,已换算
+imports,2022,Palm oil,C,t,45127979.23,0,0.0,已换算
+imports,2022,Papayas,B,t,387396.19,0.00016,61.983390400000005,已换算
+imports,2022,Paste of tomatoes,B,t,3581519.25,0.00034,1217.716545,已换算
+imports,2022,Pastry,E,t,12777038.76,0.00153,19548.869302799998,已换算
+imports,2022,Peaches and nectarines,B,t,1676172.82,0.00021,351.9962922,已换算
+imports,2022,Peanut butter,D,t,130886.76,0.00393,514.3849668,已换算
+imports,2022,Pears,B,t,2481825.87,0.00012,297.8191044,已换算
+imports,2022,"Peas, dry",F,t,5727310.34,0.00375,21477.413774999997,已换算
+imports,2022,"Peas, green",B,t,263656.61,0.00113,297.9319693,已换算
+imports,2022,"Pepper (Piper spp.), raw",D,t,466350.34,0.00019,88.60656460000001,已换算
+imports,2022,"Peppermint, spearmint",B,t,4113.38,0,0.0,已换算
+imports,2022,Persimmons,B,t,429338.89,0.00025,107.33472250000001,已换算
+imports,2022,"Pig fat, rendered",I,t,360296.08,0,0.0,已换算
+imports,2022,Pig meat preparations,G,t,890682.7,0.00136,1211.328472,已换算
+imports,2022,"Pig meat, cuts, salted, dried or smoked (bacon and ham)",G,t,599838.01,0.00155,929.7489155,已换算
+imports,2022,"Pig, butcher fat",C,,,0,,单位非吨或缺失
+imports,2022,"Pigeon peas, dry",B,t,935142.18,0.00332,3104.6720376000003,已换算
+imports,2022,Pineapple juice,B,t,399670.63,5e-05,19.9835315,已换算
+imports,2022,Pineapples,B,t,3481943.65,9e-05,313.3749285,已换算
+imports,2022,"Pineapples, otherwise prepared or preserved",B,t,991567.42,6e-05,59.4940452,已换算
+imports,2022,"Pistachios, in shell",B,t,368164.23,0.005,1840.82115,已换算
+imports,2022,Plantains and cooking bananas,B,t,1527056.13,0.00023,351.2229099,已换算
+imports,2022,Plums and sloes,B,t,846258.53,0.00017,143.8639501,已换算
+imports,2022,"Plums, dried",B,t,190367.7,0.00073,138.968421,已换算
+imports,2022,Pomelos and grapefruits,B,t,978011.05,0.00016,156.48176800000002,已换算
+imports,2022,Poppy seed,A,t,96291.69,0.00854,822.3310326000001,已换算
+imports,2022,Pot barley,E,t,27243.99,0.00342,93.1744458,已换算
+imports,2022,Potato offals,B,t,11771,0.0005,5.8855,已换算
+imports,2022,Potatoes,B,t,16478717.85,0.0005,8239.358925,已换算
+imports,2022,"Potatoes, frozen",B,t,9416729.18,0.0005,4708.36459,已换算
+imports,2022,"Poultry fat, rendered",C,t,216994.73,0,0.0,已换算
+imports,2022,Poultry meat preparations,G,t,2433579.93,0.00136,3309.6687048000003,已换算
+imports,2022,Prepared groundnuts,B,t,561976.01,0.00341,1916.3381941,已换算
+imports,2022,Prepared nuts,B,t,1034172.84,0.00409,4229.7669156,已换算
+imports,2022,Processed cheese,G,t,663985.3,0.00627,4163.187831,已换算
+imports,2022,"Pulp, waste of fruit for feed",B,t,198843,0.0011,218.7273,已换算
+imports,2022,"Pumpkins, squash and gourds",B,t,1668735.31,0.00044,734.2435364,已换算
+imports,2022,Pyrethrum extract,I,t,103,0,0.0,已换算
+imports,2022,"Pyrethrum, dried flowers",I,t,9812.22,0.0013,12.755885999999999,已换算
+imports,2022,Quinces,B,t,34151.35,8e-05,2.732108,已换算
+imports,2022,Quinoa,E,t,97323.07,0.00341,331.8716687,已换算
+imports,2022,Rabbits and hares,M,1000 An,3942,0.013,,单位非吨或缺失
+imports,2022,Rabbits and hares,M,,,0.013,,单位非吨或缺失
+imports,2022,Raisins,B,t,835351.91,0.00019,158.71686290000002,已换算
+imports,2022,"Ramie, raw or retted",A,,,0.00089,,单位非吨或缺失
+imports,2022,Rape or colza seed,C,t,22655260.33,0.00546,123697.72140179998,已换算
+imports,2022,"Rapeseed or canola oil, crude",C,t,8290779.9,0,0.0,已换算
+imports,2022,Raspberries,B,t,752356.57,0.0001,75.235657,已换算
+imports,2022,Raw cane or beet sugar (centrifugal only),C,t,41361426.63,0.00089,36811.669700700004,已换算
+imports,2022,Raw hides and skins of buffaloes,,,,,,单位非吨或缺失
+imports,2022,Raw hides and skins of cattle,G,t,0,0.00042,0.0,已换算
+imports,2022,Raw hides and skins of goats or kids,G,,,0.00042,,单位非吨或缺失
+imports,2022,Raw hides and skins of sheep or lambs,G,,,0.00042,,单位非吨或缺失
+imports,2022,"Raw hides and skins of sheep or lambs, with wool",G,t,345419.53,0.00042,145.07620260000002,已换算
+imports,2022,Raw milk of cattle,G,t,10025223.13,0.00092,9223.2052796,已换算
+imports,2022,Raw milk of sheep,G,,,0.0009,,单位非吨或缺失
+imports,2022,Raw silk (not thrown),G,t,8777,0.00015,1.3165499999999999,已换算
+imports,2022,Reconstituted milk,G,,,0.0009,,单位非吨或缺失
+imports,2022,"Refined cane or beet sugar, in solid form, containing added flavouring or colouring matter; maple sugar and maple syrup",C,t,89904.62,0,0.0,已换算
+imports,2022,Refined sugar,C,t,24988558.03,3e-06,74.96567409000001,已换算
+imports,2022,Residues of fatty substances,C,t,704990.55,0,0.0,已换算
+imports,2022,Rice,E,t,3188153.43,0.00282,8990.5926726,已换算
+imports,2022,"Rice, broken",E,t,10575555.66,0.00282,29823.066961200002,已换算
+imports,2022,"Rice, milled",E,t,39053710.64,0.00114,44521.2301296,已换算
+imports,2022,"Rice, milled (husked)",,t,1097659.48,,,未匹配系数
+imports,2022,"Rice, paddy (rice milled equivalent)",E,t,55882551,0.00282,157588.79382,已换算
+imports,2022,Rice-fermented beverages,E,t,29881.1,0.00032,9.561952,已换算
+imports,2022,Rye,E,t,1524982.97,0.00337,5139.1926089,已换算
+imports,2022,Safflower seed,H,t,206319.7,0.0085,1753.7174500000003,已换算
+imports,2022,"Safflower-seed oil, crude",C,t,314134.71,0,0.0,已换算
+imports,2022,"Sausages and similar products of meat, offal or blood of beef and veal",G,t,106191.22,0.00155,164.59639099999998,已换算
+imports,2022,"Sausages and similar products of meat, offal or blood of pig",G,t,1398013.24,0.00155,2166.920522,已换算
+imports,2022,Sesame seed,H,t,2256983.7,0.00409,9231.063333,已换算
+imports,2022,Sheep,M,An,12473165,0.00028,,单位非吨或缺失
+imports,2022,Sheep,M,,,0.00028,,单位非吨或缺失
+imports,2022,"Sheep fat, unrendered",C,t,1129.06,0,0.0,已换算
+imports,2022,"Shorn wool, greasy, including fleece-washed shorn wool",G,t,403051.65,0.00015,60.457747499999996,已换算
+imports,2022,Silk waste,G,t,7709.32,0.00015,1.1563979999999998,已换算
+imports,2022,Silk-worm cocoons suitable for reeling,G,t,727.11,0.00015,0.1090665,已换算
+imports,2022,"Sisal, raw",A,t,21115.25,0.00089,18.7925725,已换算
+imports,2022,Skim milk and whey powder,G,t,3192734.13,0.0102,32565.888126,已换算
+imports,2022,Skim milk of cows,G,t,1422386.39,0.00097,1379.7147983,已换算
+imports,2022,"Skim milk, condensed",G,t,58950.79,0.00714,420.9086406,已换算
+imports,2022,"Skim milk, evaporated",G,t,879.57,0.00714,6.2801298,已换算
+imports,2022,"Skins, calve nes",G,,,0.00042,,单位非吨或缺失
+imports,2022,"Skins, calve, dry salted",G,t,251,0.00042,0.10542,已换算
+imports,2022,"Skins, dry-salted of sheep",G,t,28531,0.00042,11.98302,已换算
+imports,2022,"Skins, furs",G,t,19033.56,0.00042,7.994095200000001,已换算
+imports,2022,"Skins, goat nes",G,,,0.00042,,单位非吨或缺失
+imports,2022,"Skins, goat, dry salted",G,,,0.00042,,单位非吨或缺失
+imports,2022,"Skins, karakul",G,t,88.69,0.00042,0.0372498,已换算
+imports,2022,"Skins, pig nes",G,t,3070,0.00042,1.2894,已换算
+imports,2022,"Skins, pig, dry salted",G,,,0.00042,,单位非吨或缺失
+imports,2022,"Skins, pig, wet salted",G,t,82372,0.00042,34.59624,已换算
+imports,2022,"Skins, rabbit",G,t,99.9,0.00042,0.041958,已换算
+imports,2022,"Skins, sheep nes",G,t,1856,0.00015,0.2784,已换算
+imports,2022,"Skins, wet-salted of calves",G,t,59806,0.00042,25.11852,已换算
+imports,2022,"Skins, wet-salted of goats",G,,,0.00042,,单位非吨或缺失
+imports,2022,"Skins, wet-salted of sheep",G,t,2468,0.00042,1.0365600000000001,已换算
+imports,2022,Sorghum,E,t,12008650.19,0.0033,39628.545627,已换算
+imports,2022,Sour cherries,B,t,40774.31,0.00019,7.7471189,已换算
+imports,2022,Soya bean oil,C,t,12319528.95,0,0.0,已换算
+imports,2022,Soya beans,F,t,153414198.24,0.0055,843778.09032,已换算
+imports,2022,Soya curd,L,,,0,,单位非吨或缺失
+imports,2022,Soya paste,F,t,16490.65,0.00097,15.995930500000002,已换算
+imports,2022,Soya sauce,D,t,542811.04,0.0055,2985.46072,已换算
+imports,2022,Spermaceti,C,t,1058,0,0.0,已换算
+imports,2022,Spinach,B,t,219143.92,0.00046,100.80620320000001,已换算
+imports,2022,Starch of cassava,B,t,6003671.84,0.00012,720.4406208,已换算
+imports,2022,Strawberries,B,t,1058862.36,0.00026,275.3042136,已换算
+imports,2022,String beans,B,t,0.02,0.00037,7.4e-06,已换算
+imports,2022,Sugar and syrups n.e.c.,C,t,2903560.56,0,0.0,已换算
+imports,2022,Sugar beet,C,t,1041246.77,0.00022,229.07428940000003,已换算
+imports,2022,Sugar cane,C,t,283296.77,0.00024,67.99122480000001,已换算
+imports,2022,Sugar confectionery,C,t,4326190.24,0,0.0,已换算
+imports,2022,Sunflower seed,E,t,8133032.25,0.00618,50262.139305,已换算
+imports,2022,"Sunflower-seed oil, crude",C,t,13887639.35,0,0.0,已换算
+imports,2022,Swedes for fodder,K,t,69,0.00546,0.37673999999999996,已换算
+imports,2022,"Sweet corn, frozen",B,t,425943.45,0.00083,353.5330635,已换算
+imports,2022,"Sweet corn, prepared or preserved",B,t,815573.43,0.00083,676.9259469000001,已换算
+imports,2022,Sweet potatoes,B,t,987807.3,0.00041,405.000993,已换算
+imports,2022,Swine / pigs,M,An,38846851,0.00046,,单位非吨或缺失
+imports,2022,Swine / pigs,M,,,0.00046,,单位非吨或缺失
+imports,2022,Tallow,C,t,1275505.89,0,0.0,已换算
+imports,2022,"Tangerines, mandarins, clementines",B,t,5390523.91,0.0002,1078.1047820000001,已换算
+imports,2022,Tapioca of cassava,B,t,96974.63,0.00038,36.8503594,已换算
+imports,2022,Tapioca of potatoes,B,t,60753.22,0.0005,30.37661,已换算
+imports,2022,Taro,B,t,154243.77,0.00041,63.23994569999999,已换算
+imports,2022,Tea leaves,C,t,1976446.11,0.00314,6206.0407854000005,已换算
+imports,2022,Tomato juice,J,t,68608.28,0.00016,10.9773248,已换算
+imports,2022,Tomatoes,B,t,7912089.77,0.00022,1740.6597494,已换算
+imports,2022,"Tomatoes, peeled (o/t vinegar)",B,t,1777628.1,0.00011,195.539091,已换算
+imports,2022,Triticale,E,t,852268.31,0.0038,3238.6195780000003,已换算
+imports,2022,"True hemp, raw or retted",A,t,27728.88,0.00089,24.6787032,已换算
+imports,2022,Tung nuts,B,,,0.00409,,单位非吨或缺失
+imports,2022,Turkeys,M,,,0.013,,单位非吨或缺失
+imports,2022,Turkeys,M,1000 An,76934,0.013,,单位非吨或缺失
+imports,2022,Turkeys,M,,,0.013,,单位非吨或缺失
+imports,2022,"Turnips, for forage",K,,,0.00546,,单位非吨或缺失
+imports,2022,"Uncooked pasta, not stuffed or otherwise prepared",L,t,4967997.42,0,0.0,已换算
+imports,2022,"Undenatured ethyl alcohol of an alcoholic strength by volume of less than 80% vol; spirits, liqueurs and other spirituous beverages",J,t,5763987.7,0,0.0,已换算
+imports,2022,Unmanufactured tobacco,A,t,2258563.1,0.00109,2461.833779,已换算
+imports,2022,"Vanilla, raw",A,t,7401.53,0.0011,8.141683,已换算
+imports,2022,Vegetable products for feed n.e.c.,B,t,3702598,0.00052,1925.3509599999998,已换算
+imports,2022,"Vegetable products, fresh or dry n.e.c.",B,t,295064.44,0.00052,153.4335088,已换算
+imports,2022,Vegetable tallow,B,,,0,,单位非吨或缺失
+imports,2022,"Vegetable waxes (other than triglycerides), whether or not refined or coloured",B,t,40815,0.00052,21.223799999999997,已换算
+imports,2022,Vegetables and roots fodder,K,t,24,0.00546,0.13104,已换算
+imports,2022,Vegetables frozen,B,t,5467947.58,0.00052,2843.3327415999997,已换算
+imports,2022,Vegetables preserved (frozen),B,t,801757.82,0.00052,416.9140663999999,已换算
+imports,2022,Vegetables preserved nes (o/t vinegar),B,t,4786228.53,0.00052,2488.8388356,已换算
+imports,2022,"Vegetables, dehydrated",B,t,852976.47,0.0019,1620.655293,已换算
+imports,2022,"Vegetables, pulses and potatoes, preserved by vinegar or acetic acid",B,t,1835007.63,0.0003,550.5022889999999,已换算
+imports,2022,Vermouth and other wine of fresh grapes flavoured with plats or aromatic substances,J,t,315269.12,0,0.0,已换算
+imports,2022,Vetches,K,,,0.00362,,单位非吨或缺失
+imports,2022,Vitamins,I,,,0,,单位非吨或缺失
+imports,2022,"Walnuts, in shell",B,t,425181.82,0.00409,1738.9936438,已换算
+imports,2022,"Walnuts, shelled",B,t,324267.85,0.00409,1326.2555065,已换算
+imports,2022,Watermelons,B,t,4496388.06,9e-05,404.6749254,已换算
+imports,2022,Wheat,E,t,184798169.78,0.00341,630161.7589497999,已换算
+imports,2022,Wheat and meslin flour,E,t,13895160.03,0.00175,24316.5300525,已换算
+imports,2022,Whey cheese,G,t,44682.95,0.00627,280.1620965,已换算
+imports,2022,"Whey, condensed",G,t,790122.46,0.00043,339.75265779999995,已换算
+imports,2022,"Whey, dry",G,t,2322632.26,0.00576,13378.3618176,已换算
+imports,2022,"Whey, fresh",G,t,811100.34,0.00043,348.7731462,已换算
+imports,2022,Whole milk powder,G,t,3021058.08,0.00714,21570.3546912,已换算
+imports,2022,"Whole milk, condensed",G,t,496535.52,0.00714,3545.2636128,已换算
+imports,2022,"Whole milk, evaporated",G,t,1364342.01,0.00714,9741.4019514,已换算
+imports,2022,Wine,J,t,10944102.77,0.00028,3064.3487755999995,已换算
+imports,2022,Wool grease and lanolin,G,t,33293.36,0.00015,4.994003999999999,已换算
+imports,2022,"Wool, degreased or carbonized, not carded or combed",G,t,191053,0.00015,28.657949999999996,已换算
+imports,2022,"Wool, hair waste",G,t,17962,0.00012,2.15544,已换算
+imports,2022,"Wool, shoddy",G,t,950,0.00015,0.1425,已换算
+imports,2022,Yams,B,t,185013.69,0.00041,75.8556129,已换算
+imports,2022,Yautia,B,t,15424.24,0.00041,6.323938399999999,已换算
+imports,2022,Yoghurt,G,t,138456.92,0.00092,127.38036640000001,已换算
+imports,2022,"Yoghurt, with additives",G,t,1528470.59,0.00092,1406.1929428,已换算
+exports,2022,"Abaca, manila hemp, raw",A,t,123445.98,0.00089,109.86692219999999,已换算
+exports,2022,"Agave fibres, raw, n.e.c.",A,,,0.00089,,单位非吨或缺失
+exports,2022,"Almonds, in shell",B,t,434598.52,0.00454,1973.0772808,已换算
+exports,2022,"Almonds, shelled",B,t,1042243.62,0.00454,4731.7860347999995,已换算
+exports,2022,Animal oils and fats n.e.c.,C,t,400261.19,0,0.0,已换算
+exports,2022,"Animal or vegetable fats and oils and their fractions, chemically modified, except those hydrogenated, inter-esterified, re-esterified or elaidinized; inedible mixtures or preparations of animal or vegetable fats or oils",C,t,7340112.99,0,0.0,已换算
+exports,2022,"Anise, badian, coriander, cumin, caraway, fennel and juniper berries, raw",D,t,578496.05,0.00051,295.03298550000005,已换算
+exports,2022,Apple juice,B,t,1504166.2,0.00016,240.666592,已换算
+exports,2022,"Apple juice, concentrated",B,t,1154186.36,0.00016,184.66981760000004,已换算
+exports,2022,Apples,B,t,7734468.28,0.00011,850.7915108000001,已换算
+exports,2022,Apricots,B,t,361985.01,0.00021,76.01685210000001,已换算
+exports,2022,"Apricots, dried",B,t,134252.96,0.00114,153.04837439999997,已换算
+exports,2022,Areca nuts,B,t,464627.06,0.00409,1900.3246754,已换算
+exports,2022,Artichokes,B,t,41172.12,0.0013,53.523756,已换算
+exports,2022,Asparagus,B,t,398090.27,0.00045,179.1406215,已换算
+exports,2022,Asses,M,An,815,0,,单位非吨或缺失
+exports,2022,Asses,M,,,0,,单位非吨或缺失
+exports,2022,Avocados,B,t,3062960.16,0.00043,1317.0728688,已换算
+exports,2022,Bagasse,L,t,482273,0,0.0,已换算
+exports,2022,"Balata, gutta-percha, guayule, chicle and similar natural gums in primary forms or in plates, sheets or strip",A,t,2926,0.0002,0.5852,已换算
+exports,2022,"Bambara beans, dry",F,t,2988.59,0.00419,12.522192100000002,已换算
+exports,2022,Bananas,B,t,24343045.51,0.00023,5598.900467300001,已换算
+exports,2022,Barley,E,t,33033656.26,0.00342,112975.1044092,已换算
+exports,2022,Barley flour and grits,E,t,21501.13,0.00175,37.6269775,已换算
+exports,2022,"Barley, pearled",E,t,32349.18,0.00205,66.315819,已换算
+exports,2022,"Beans, dry",F,t,4616979.49,0.00419,19345.1440631,已换算
+exports,2022,beef and veal preparations nes,G,t,504380.45,0.0015,756.570675,已换算
+exports,2022,"Beer of barley, malted",J,t,16548693.6,0.00032,5295.5819520000005,已换算
+exports,2022,"Beer of sorghum, malted",J,,,0.00032,,单位非吨或缺失
+exports,2022,Bees,L,,,0,,单位非吨或缺失
+exports,2022,Bees,L,No,27975198,0,,单位非吨或缺失
+exports,2022,Beeswax,C,t,21424.87,0,0.0,已换算
+exports,2022,Beet pulp,C,t,3627341,0.00045,1632.3034499999999,已换算
+exports,2022,Beets for fodder,L,t,17019,0,0.0,已换算
+exports,2022,Blueberries,B,t,261106.37,0.00013,33.9438281,已换算
+exports,2022,"Bovine meat, salted, dried or smoked",G,t,31621.2,0.0015,47.4318,已换算
+exports,2022,Bran of barley,E,t,23587.35,0.00342,80.668737,已换算
+exports,2022,Bran of buckwheat,E,,,0.01143,,单位非吨或缺失
+exports,2022,Bran of cereals n.e.c.,E,t,1438721.24,0.00059,848.8455316000001,已换算
+exports,2022,Bran of fonio,E,,,0.01143,,单位非吨或缺失
+exports,2022,Bran of maize,E,t,1899116.59,0.01143,21706.9026237,已换算
+exports,2022,Bran of millet,E,,,0.01143,,单位非吨或缺失
+exports,2022,Bran of mixed grain,E,t,34827.02,0.00175,60.947284999999994,已换算
+exports,2022,Bran of oats,E,,,0.00342,,单位非吨或缺失
+exports,2022,Bran of pulses,E,t,534389.51,0.0055,2939.142305,已换算
+exports,2022,Bran of rice,E,t,360.93,0.01143,4.125429899999999,已换算
+exports,2022,Bran of rye,E,t,1485.76,0.00337,5.0070112,已换算
+exports,2022,Bran of sorghum,E,t,14.32,0.01143,0.16367759999999998,已换算
+exports,2022,Bran of wheat,E,t,8075195.81,0.01143,92299.4881083,已换算
+exports,2022,"Brazil nuts, in shell",B,t,11542.52,0.00674,77.7965848,已换算
+exports,2022,"Brazil nuts, shelled",B,t,42357.85,0.00674,285.491909,已换算
+exports,2022,Bread,E,t,568239.8,0.00087,494.36862600000006,已换算
+exports,2022,Breakfast cereals,E,t,3036375.74,0.00059,1791.4616866000001,已换算
+exports,2022,Brewing or distilling dregs and waste,A,t,14064500,0.00017,2390.965,已换算
+exports,2022,"Broad beans and horse beans, dry",E,t,1489162.22,0.00426,6343.8310572,已换算
+exports,2022,"Broad beans and horse beans, green",E,t,135191.57,0.00037,50.0208809,已换算
+exports,2022,Buckwheat,E,t,183149.24,0.00294,538.4587656,已换算
+exports,2022,Buffalo,M,An,128253,0.00282,,单位非吨或缺失
+exports,2022,Buffalo,M,,,0.00282,,单位非吨或缺失
+exports,2022,Bulgur,E,t,19847.63,0.00341,67.6804183,已换算
+exports,2022,Butter and ghee of sheep milk,G,,,0.00021,,单位非吨或缺失
+exports,2022,Butter of cow milk,G,t,1819409.06,0.00021,382.0759026,已换算
+exports,2022,Butter of karite nuts,C,,,0,,单位非吨或缺失
+exports,2022,"Buttermilk, curdled and acidified milk",G,t,1426366.91,0.0009,1283.7302189999998,已换算
+exports,2022,"Buttermilk, dry",G,t,85887.58,0.0009,77.298822,已换算
+exports,2022,Cabbages,B,t,2775231.46,0.00036,999.0833256000001,已换算
+exports,2022,Cake of  linseed,H,t,208900,0.00662,1382.918,已换算
+exports,2022,Cake of  soya beans,H,t,69790950,0.0071,495515.74500000005,已换算
+exports,2022,Cake of copra,H,t,741313,0.0085,6301.160500000001,已换算
+exports,2022,Cake of cottonseed,H,t,588521,0.0085,5002.4285,已换算
+exports,2022,Cake of groundnuts,H,t,217871,0.0085,1851.9035000000001,已换算
+exports,2022,Cake of hempseed,H,,,0.0085,,单位非吨或缺失
+exports,2022,Cake of kapok,H,,,0.0085,,单位非吨或缺失
+exports,2022,Cake of maize,H,t,9127,0.0091,83.0557,已换算
+exports,2022,Cake of mustard seed,H,t,17138,0.0129,221.0802,已换算
+exports,2022,Cake of palm kernel,H,t,8554574,0.0085,72713.879,已换算
+exports,2022,Cake of rapeseed,H,t,12436513,0.0129,160431.0177,已换算
+exports,2022,Cake of rice bran,H,t,510,0.01143,5.8293,已换算
+exports,2022,Cake of safflowerseed,H,,,0.0085,,单位非吨或缺失
+exports,2022,Cake of sesame seed,H,t,114,0.0085,0.9690000000000001,已换算
+exports,2022,Cake of sunflower seed,H,t,9311761,0.0113,105222.89929999999,已换算
+exports,2022,"Cake, oilseeds nes",H,t,3046904,0.0085,25898.684,已换算
+exports,2022,Camels,M,An,278820,0,,单位非吨或缺失
+exports,2022,Camels,M,,,0,,单位非吨或缺失
+exports,2022,Canary seed,A,t,191104.93,0.0085,1624.391905,已换算
+exports,2022,"Cane sugar, non-centrifugal",C,t,1.85,0,0.0,已换算
+exports,2022,Cane tops,C,,,0.00089,,单位非吨或缺失
+exports,2022,Canned mushrooms,B,t,616515.03,0.00069,425.3953707,已换算
+exports,2022,Cantaloupes and other melons,B,t,2024744.31,0.00024,485.9386344,已换算
+exports,2022,Carrots and turnips,B,t,3004191.33,0.00035,1051.4669655,已换算
+exports,2022,"Cashew nuts, in shell",B,t,1927659.04,0.00373,7190.1682192,已换算
+exports,2022,"Cashew nuts, shelled",B,t,663751.99,0.00373,2475.7949227,已换算
+exports,2022,Cashewapple,B,t,55.1,0.00011,0.006061,已换算
+exports,2022,"Cassava, dry",B,t,8866796.28,0.00038,3369.3825864,已换算
+exports,2022,"Cassava, fresh",B,t,1972311.97,0.00038,749.4785486000001,已换算
+exports,2022,Castor oil seeds,C,t,16598.67,0,0.0,已换算
+exports,2022,Cattle,M,An,10140866,0.00282,,单位非吨或缺失
+exports,2022,Cattle,M,,,0.00282,,单位非吨或缺失
+exports,2022,"Cattle fat, unrendered",G,t,339152.65,0,0.0,已换算
+exports,2022,"Cattle, butcher fat",G,t,380.2,0,0.0,已换算
+exports,2022,Cauliflowers and broccoli,B,t,1944918.08,0.00052,1011.3574016,已换算
+exports,2022,Cereal preparations,E,t,2143399.39,0.00059,1264.6056401,已换算
+exports,2022,"Cereal straw, husks, unprepared, ground, pressed, or in the form of pellets",E,t,2887161,0.001,2887.161,已换算
+exports,2022,Cereals n.e.c.,E,t,303506.54,0.00175,531.136445,已换算
+exports,2022,"Cheese from milk of goats, fresh or processed",G,,,0.005,,单位非吨或缺失
+exports,2022,"Cheese from milk of sheep, fresh or processed",G,t,2847.53,0.005,14.237650000000002,已换算
+exports,2022,Cheese from skimmed cow milk,G,t,18.17,0.005,0.09085000000000001,已换算
+exports,2022,Cheese from whole cow milk,G,t,7042484.2,0.005,35212.421,已换算
+exports,2022,Cherries,B,t,938120.79,0.00023,215.76778170000003,已换算
+exports,2022,"Chestnuts, in shell",B,t,106456.61,0.00409,435.4075349,已换算
+exports,2022,"Chick peas, dry",B,t,2097418.39,0.00332,6963.429054800001,已换算
+exports,2022,Chickens,M,,,0.013,,单位非吨或缺失
+exports,2022,Chickens,M,1000 An,1726090,0.013,,单位非吨或缺失
+exports,2022,Chickens,M,,,0.013,,单位非吨或缺失
+exports,2022,Chicory roots,B,t,14370.12,0.00023,3.3051276000000005,已换算
+exports,2022,"Chillies and peppers, dry (Capsicum spp., Pimenta spp.), raw",D,t,977854.69,0.00032,312.9135008,已换算
+exports,2022,"Chillies and peppers, green (Capsicum spp. and Pimenta spp.)",D,t,3872446.06,0.00019,735.7647514,已换算
+exports,2022,Chocolate products nes,C,t,6887929.61,0.00287,19768.357980700002,已换算
+exports,2022,Cider and other fermented beverages,J,t,1233472.51,0,0.0,已换算
+exports,2022,Cigarettes,I,t,1231654,0.00109,1342.50286,已换算
+exports,2022,Cigars and cheroots,I,t,96796,0.00109,105.50764000000001,已换算
+exports,2022,"Cinnamon and cinnamon-tree flowers, raw",D,t,217906.56,0.00061,132.9230016,已换算
+exports,2022,"Citrus juice, concentrated n.e.c.",J,t,155691.9,0.00016,24.910704000000003,已换算
+exports,2022,"Clover, for forage",K,,,0.00362,,单位非吨或缺失
+exports,2022,"Cloves (whole stems), raw",D,t,94718.53,0.00018,17.0493354,已换算
+exports,2022,Coarse goat hair,G,t,7.25,0.0001,0.0007250000000000001,已换算
+exports,2022,Cocoa beans,F,t,3891026.73,0.00656,25525.1353488,已换算
+exports,2022,"Cocoa butter, fat and oil",C,t,1128036.53,0,0.0,已换算
+exports,2022,Cocoa husks and shells,I,t,254997.96,0.00192,489.5960832,已换算
+exports,2022,Cocoa paste not defatted,D,t,878741.75,0.00656,5764.54588,已换算
+exports,2022,Cocoa powder and cake,D,t,1283495.91,0.00656,8419.7331696,已换算
+exports,2022,Coconut oil,C,t,3041260.83,0,0.0,已换算
+exports,2022,"Coconuts, desiccated",B,t,521058.36,0.00094,489.79485839999995,已换算
+exports,2022,"Coconuts, in shell",B,t,1595158.26,0.00094,1499.4487644,已换算
+exports,2022,Coffee extracts,I,t,1290572.8,0.00192,2477.899776,已换算
+exports,2022,Coffee husks and skins,I,t,15486,0.00192,29.73312,已换算
+exports,2022,Coffee substitutes,I,t,17794.28,0.00192,34.1650176,已换算
+exports,2022,"Coffee, decaffeinated or roasted",I,t,1377259.33,0.00192,2644.3379136000003,已换算
+exports,2022,"Coffee, green",I,t,7776421.41,0.0016,12442.274256,已换算
+exports,2022,"Coir, raw",B,t,1067259.93,0.00094,1003.2243341999999,已换算
+exports,2022,"Communion wafers, empty cachets of a kind suitable for pharmaceutical use, sealing wafers, rice paper and similar products.",I,t,1960498.29,0.00122,2391.8079138,已换算
+exports,2022,Compound feed n.e.c.,F,t,2768087,0.0055,15224.4785,已换算
+exports,2022,Copra,C,t,128583.93,0.00089,114.43969769999998,已换算
+exports,2022,"Cotton lint, ginned",A,t,9100399,0.0064,58242.5536,已换算
+exports,2022,Cotton linters,A,t,132977,0.00014,18.61678,已换算
+exports,2022,Cotton seed,H,t,1427973.96,0.00524,7482.5835504,已换算
+exports,2022,Cotton waste,A,t,449622,0.0064,2877.5808,已换算
+exports,2022,"Cotton, carded or combed",A,t,349985,0.00014,48.997899999999994,已换算
+exports,2022,Cottonseed oil,C,t,150843.45,0,0.0,已换算
+exports,2022,"Cow peas, dry",F,t,134098.52,0.00375,502.8694499999999,已换算
+exports,2022,Cranberries,B,t,281733.44,0.0001,28.173344,已换算
+exports,2022,"Cream, fresh",G,t,1575708.44,0.00085,1339.3521739999999,已换算
+exports,2022,Crude organic material n.e.c.,I,,,0.00341,,单位非吨或缺失
+exports,2022,Cucumbers and gherkins,B,t,3066858.82,0.00017,521.3659994,已换算
+exports,2022,Currants,B,t,13131.88,0.0011,14.445068,已换算
+exports,2022,Dairy products n.e.c.,G,t,648963.01,0.00092,597.0459692000001,已换算
+exports,2022,Dates,B,t,1715699.27,0.00057,977.9485839,已换算
+exports,2022,Degras,C,t,54187.44,0,0.0,已换算
+exports,2022,"Dog or cat food, put up for retail sale",I,t,10403288,0.0019,19766.2472,已换算
+exports,2022,Dried mushrooms,B,t,81054.38,0.00125,101.317975,已换算
+exports,2022,Ducks,M,,,0.013,,单位非吨或缺失
+exports,2022,Ducks,M,1000 An,39772,0.013,,单位非吨或缺失
+exports,2022,Ducks,M,,,0.013,,单位非吨或缺失
+exports,2022,"Edible offal of cattle, fresh, chilled or frozen",G,t,1579789.15,0.0016,2527.66264,已换算
+exports,2022,"Edible offal of goat, fresh, chilled or frozen",G,,,0.0016,,单位非吨或缺失
+exports,2022,"Edible offal of pigs, fresh, chilled or frozen",G,t,3062326.35,0.0016,4899.72216,已换算
+exports,2022,"Edible offal of sheep, fresh, chilled or frozen",G,t,72006.3,0.0016,115.21008,已换算
+exports,2022,"Edible offals and liver of chickens and guinea fowl, fresh, chilled or frozen",G,t,814472.96,0.0024,1954.7351039999996,已换算
+exports,2022,"Edible offals and liver of ducks, fresh, chilled or frozen",G,t,8863.13,0.0024,21.271511999999998,已换算
+exports,2022,"Edible offals and liver of geese, fresh, chilled or frozen",G,t,1188.43,0.0024,2.852232,已换算
+exports,2022,"Edible offals of horses and other equines,  fresh, chilled or frozen",G,t,12730.11,0.0016,20.368176000000002,已换算
+exports,2022,"Edible roots and tubers with high starch or inulin content, n.e.c., dry",B,t,5627.55,0.00038,2.138469,已换算
+exports,2022,"Edible roots and tubers with high starch or inulin content, n.e.c., fresh",G,t,134270.93,0.00038,51.0229534,已换算
+exports,2022,Eggplants (aubergines),G,t,489722.88,0.00021,102.8418048,已换算
+exports,2022,"Eggs from other birds in shell, fresh, n.e.c.",G,t,247945.88,0.00214,530.6041832,已换算
+exports,2022,"Eggs, dried",G,t,80309.93,0.00757,607.9461701,已换算
+exports,2022,"Eggs, liquid",G,t,409425.85,0.00214,876.1713189999999,已换算
+exports,2022,Essential oils n.e.c.,C,t,275337,0,0.0,已换算
+exports,2022,"Extracts and juices of meat, fish, crustaceans, molluscs or other aquatic invertebrates",L,t,60937.55,0,0.0,已换算
+exports,2022,"Extracts, essences and concentrates of tea or mate, and preparations with a basis thereof or with a basis of tea or maté",C,t,322128.66,0.00314,1011.4839923999999,已换算
+exports,2022,Fat of camels,G,t,0.01,0,0.0,已换算
+exports,2022,Fat of pigs,G,t,622259.13,0,0.0,已换算
+exports,2022,Fat of poultry,L,t,19994.18,0,0.0,已换算
+exports,2022,Fat preparations n.e.c.,L,t,3882717.24,0,0.0,已换算
+exports,2022,Fatty liver preparations,L,t,6419.72,0,0.0,已换算
+exports,2022,Feed additives,H,,,0.0071,,单位非吨或缺失
+exports,2022,Feed minerals,K,,,0,,单位非吨或缺失
+exports,2022,Feed supplements,H,t,203496,0.0071,1444.8216,已换算
+exports,2022,"Feed, compound, cattle",F,t,100220,0.0055,551.2099999999999,已换算
+exports,2022,"Feed, compound, pigs",F,t,102928,0.0055,566.1039999999999,已换算
+exports,2022,"Feed, compound, poultry",B,t,252506,0.00052,131.30311999999998,已换算
+exports,2022,"Feed, food waste preparations",I,t,87020,0.00087,75.7074,已换算
+exports,2022,"Feed, other concentrates nes",L,t,243769,0,0.0,已换算
+exports,2022,Figs,B,t,56429.94,0.00032,18.057580800000004,已换算
+exports,2022,"Figs, dried",B,t,144473.18,0.00108,156.03103439999998,已换算
+exports,2022,"Fine animal hair, n.e.c.",G,t,14575.93,0.0001,1.4575930000000001,已换算
+exports,2022,"Flax, processed but not spun",A,t,372648.31,0.00089,331.65699589999997,已换算
+exports,2022,"Flax, raw or retted",A,t,26145.92,0.00089,23.269868799999998,已换算
+exports,2022,"Flax, tow and waste",A,t,134427,0.00089,119.64003,已换算
+exports,2022,Flour of buckwheat,E,t,1.2,0.00294,0.003528,已换算
+exports,2022,Flour of cassava,E,t,163515.87,0.00038,62.136030600000005,已换算
+exports,2022,Flour of cereals n.e.c.,E,t,771899.25,0.00175,1350.8236875,已换算
+exports,2022,Flour of fonio,E,,,0.0055,,单位非吨或缺失
+exports,2022,Flour of fruits,L,t,143379.3,0,0.0,已换算
+exports,2022,Flour of maize,E,t,2542177.98,0,0.0,已换算
+exports,2022,Flour of millet,E,t,129.43,0.00275,0.3559325,已换算
+exports,2022,Flour of mixed grain,E,t,114841.84,0.00175,200.97322,已换算
+exports,2022,Flour of mustard seed,E,t,208472.21,0.00175,364.8263675,已换算
+exports,2022,Flour of pulses,F,t,304355.11,0.0055,1673.9531049999998,已换算
+exports,2022,Flour of rice,E,t,198425.47,0.00114,226.2050358,已换算
+exports,2022,Flour of roots and tubers n.e.c.,I,t,143636.37,0.0005,71.818185,已换算
+exports,2022,Flour of rye,E,t,117712.68,0.00337,396.69173159999997,已换算
+exports,2022,Flour of sorghum,E,t,1789.12,0.0033,5.904096,已换算
+exports,2022,"Flour, meal, powder, flakes, granules and pellets of potatoes",B,t,686313.94,0.0005,343.15697,已换算
+exports,2022,"Flours and meals of oil seeds or oleaginous fruits, except those of mustard",D,t,2697854.56,0.00175,4721.2454800000005,已换算
+exports,2022,Fonio,E,t,348.85,0.00341,1.1895785,已换算
+exports,2022,Food preparations n.e.c.,D,t,24254196.61,0.00168,40747.0503048,已换算
+exports,2022,"Food preparations of flour, meal or malt extract",D,t,3749094.53,0.00017,637.3460701,已换算
+exports,2022,Food wastes,I,t,17066222,0.00087,14847.61314,已换算
+exports,2022,"Forage and silage, alfalfa",K,t,1623043,0.0031,5031.4333,已换算
+exports,2022,"Forage and silage, maize",K,t,0,0.0031,0.0,已换算
+exports,2022,Fruit prepared n.e.c.,B,t,9377075.01,7e-05,656.3952506999999,已换算
+exports,2022,"Fruit, nuts, peel, sugar preserved",B,t,252730.38,0.00409,1033.6672542,已换算
+exports,2022,"Game meat, fresh, chilled or frozen",G,t,54212.76,0.0021,113.846796,已换算
+exports,2022,Geese,M,,,0.013,,单位非吨或缺失
+exports,2022,Geese,M,1000 An,871,0.013,,单位非吨或缺失
+exports,2022,Geese,M,,,0.013,,单位非吨或缺失
+exports,2022,Germ of maize,E,t,392465.05,0.00213,835.9505565,已换算
+exports,2022,Germ of wheat,E,t,28850.07,0.00341,98.3787387,已换算
+exports,2022,Ghee from buffalo milk,D,,,0.00021,,单位非吨或缺失
+exports,2022,Ghee from cow milk,D,t,181433.23,0.00021,38.1009783,已换算
+exports,2022,"Ginger, raw",D,t,914729.25,0,0.0,已换算
+exports,2022,Glucose and dextrose,C,t,5033030.99,0,0.0,已换算
+exports,2022,Gluten feed and meal,K,t,6149526.94,0.0019,11684.101186,已换算
+exports,2022,Goats,M,An,1343892,0.00028,,单位非吨或缺失
+exports,2022,Goats,M,,,0.00028,,单位非吨或缺失
+exports,2022,Gooseberries,B,t,1190.97,0.0003,0.35729099999999997,已换算
+exports,2022,Grape juice,J,t,671287.56,0.00014,93.9802584,已换算
+exports,2022,Grapefruit juice,J,t,94422.4,0.00014,13.219135999999999,已换算
+exports,2022,"Grapefruit juice, concentrated",J,t,70769.09,0.0009,63.692181,已换算
+exports,2022,Grapes,B,t,5133333.69,0.00016,821.3333904000001,已换算
+exports,2022,"Grapes, marc",B,t,11695,0.00016,1.8712000000000002,已换算
+exports,2022,Green corn (maize),K,t,203073.22,0.00083,168.55077260000002,已换算
+exports,2022,Green garlic,B,t,2629676.49,0.00134,3523.7664966,已换算
+exports,2022,Groundnut oil,C,t,362170.01,0,0.0,已换算
+exports,2022,"Groundnuts, excluding shelled",B,t,300423.16,0.00341,1024.4429756,已换算
+exports,2022,"Groundnuts, shelled",B,t,3064143.26,0.00341,10448.728516599998,已换算
+exports,2022,"Hair, carded/combed",G,t,41552,0.0001,4.1552,已换算
+exports,2022,"Hair, coarse nes",G,t,5874.02,0.0001,0.5874020000000001,已换算
+exports,2022,"Hair, goat, fine",G,t,928.63,0.0001,0.092863,已换算
+exports,2022,"Hair, horse",G,,,0.0001,,单位非吨或缺失
+exports,2022,"Hay for forage, from legumes",K,,,0.00362,,单位非吨或缺失
+exports,2022,"Hay for forage, from other crops n.e.c.",K,t,45564,0.0031,141.2484,已换算
+exports,2022,"Hay, non-leguminous",K,t,690341,0.0031,2140.0571,已换算
+exports,2022,"Hazelnuts, in shell",B,t,40499.96,0.00333,134.8648668,已换算
+exports,2022,"Hazelnuts, shelled",B,t,287754.12,0.00333,958.2212196,已换算
+exports,2022,Hempseed,A,t,46791.25,0.0085,397.72562500000004,已换算
+exports,2022,"Hen eggs in shell, fresh",G,t,1849352.67,0.00214,3957.6147137999997,已换算
+exports,2022,"Hides nes, dry salted",G,t,4189,0.00042,1.7593800000000002,已换算
+exports,2022,"Hides of camels, n.e.c.",G,,,0.00042,,单位非吨或缺失
+exports,2022,"Hides, cattle nes",G,t,733,0.00042,0.30786,已换算
+exports,2022,"Hides, cattle, dry salted",G,t,313698,0.00042,131.75316,已换算
+exports,2022,"Hides, dry-salted of buffalo",G,,,0.00042,,单位非吨或缺失
+exports,2022,"Hides, dry-salted of horses",G,,,0.00042,,单位非吨或缺失
+exports,2022,"Hides, horse nes",G,,,0.00042,,单位非吨或缺失
+exports,2022,"Hides, horse, wet salted",G,t,30107,0.00042,12.64494,已换算
+exports,2022,"Hides, wet salted nes",G,t,8837,0.00042,3.7115400000000003,已换算
+exports,2022,"Hides, wet-salted of buffalo",G,,,0.00042,,单位非吨或缺失
+exports,2022,"Hides, wet-salted of camels",G,,,0.00042,,单位非吨或缺失
+exports,2022,"Hides, wet-salted of cattle",G,t,1817931,0.00042,763.53102,已换算
+exports,2022,"Homogenized cooked fruit, prepared",B,t,233094.34,0.00011,25.640377400000002,已换算
+exports,2022,Homogenized meat preparations,G,t,37877.11,0.00143,54.164267300000006,已换算
+exports,2022,Homogenized vegetable preparations,B,t,48039.78,0.00052,24.980685599999997,已换算
+exports,2022,Hop cones,J,t,68808.86,0.015,1032.1329,已换算
+exports,2022,"Horse meat, fresh or chilled",G,t,82092.07,0.00216,177.31887120000002,已换算
+exports,2022,Horses,M,An,564311,0.0027,,单位非吨或缺失
+exports,2022,Horses,M,,,0.0027,,单位非吨或缺失
+exports,2022,Husked rice,E,t,3366229.07,0.00114,3837.5011397999997,已换算
+exports,2022,hydrogenated oils and fats,C,t,3388672.35,0,0.0,已换算
+exports,2022,Ice and snow,I,t,28802907,0,0.0,已换算
+exports,2022,Ice cream and other edible ice,G,t,1617716.86,0.00117,1892.7287262000002,已换算
+exports,2022,Industrial monocarboxylic fatty acids; acid oils from refining,C,t,8727114.51,0,0.0,已换算
+exports,2022,Infant food,I,t,1314788.3,0.00109,1433.119247,已换算
+exports,2022,Isoglucose,L,t,2027.1,0,0.0,已换算
+exports,2022,Jojoba oil,C,t,10308.91,0,0.0,已换算
+exports,2022,Juice of citrus fruit n.e.c.,J,t,344471.05,0.00016,55.115368000000004,已换算
+exports,2022,Juice of fruits n.e.c.,J,t,3663097.95,0.00016,586.095672,已换算
+exports,2022,Juice of lemon,J,t,41291.21,0.0009,37.162089,已换算
+exports,2022,Juice of mango,J,t,847.62,0.0009,0.762858,已换算
+exports,2022,"Juice of pineapples, concentrated",J,t,519835.46,0.0003,155.950638,已换算
+exports,2022,Juice of plum,J,,,0.0009,,单位非吨或缺失
+exports,2022,"Juice of plum, concentrated",J,,,0.0009,,单位非吨或缺失
+exports,2022,Juice of tangerine,J,t,950.37,0.00016,0.1520592,已换算
+exports,2022,"Jute, raw or retted",A,t,285276.84,0.00089,253.8963876,已换算
+exports,2022,"Kapok fibre, raw",A,,,0.00089,,单位非吨或缺失
+exports,2022,Kapokseed in shell,A,,,0.00524,,单位非吨或缺失
+exports,2022,"Kapokseed, shelled",A,,,0.00524,,单位非吨或缺失
+exports,2022,Karite nuts (sheanuts),B,t,160954.58,0.00409,658.3042321999999,已换算
+exports,2022,"Kenaf, and other textile bast fibres, raw or retted",A,,,0.00089,,单位非吨或缺失
+exports,2022,Kiwi fruit,B,t,1649777.7,0.00031,511.431087,已换算
+exports,2022,Kola nuts,B,t,32613.11,0.00076,24.785963600000002,已换算
+exports,2022,Lactose,G,t,1080764.67,0.00189,2042.6452262999999,已换算
+exports,2022,Lard stearine and lard oil,L,t,54077.51,0,0.0,已换算
+exports,2022,Leather used & waste,L,t,28735,0,0.0,已换算
+exports,2022,Leeks and other alliaceous vegetables,B,t,282868.52,0.00048,135.7768896,已换算
+exports,2022,"Lemon juice, concentrated",J,t,123032.54,0.0009,110.72928599999999,已换算
+exports,2022,Lemons and limes,B,t,4141920.41,0.00016,662.7072656,已换算
+exports,2022,"Lentils, dry",F,t,4312871.93,0.00411,17725.9036323,已换算
+exports,2022,Lettuce and chicory,B,t,2581434.19,0.00023,593.7298637,已换算
+exports,2022,Linseed,H,t,1897593.55,0.00662,12562.069301,已换算
+exports,2022,Liquid margarine,C,t,150763.68,0,0.0,已换算
+exports,2022,Liver preparations,G,t,34612.41,0,0.0,已换算
+exports,2022,Locust beans (carobs),B,t,39502.44,0.0048,189.61171199999998,已换算
+exports,2022,Lucerne (alfalfa) meal and pellets,K,t,1568059,0.00362,5676.3735799999995,已换算
+exports,2022,Lupins,B,t,11811.48,0.0048,56.69510399999999,已换算
+exports,2022,Maize (corn),E,t,209464027.53,0.00213,446158.3786389,已换算
+exports,2022,Malt extract,D,t,230122.19,0.00017,39.120772300000006,已换算
+exports,2022,"Malt, whether or not roasted",E,t,8396766,0.00017,1427.4502200000002,已换算
+exports,2022,Mango pulp,B,t,1369.55,0.00013,0.1780415,已换算
+exports,2022,"Mangoes, guavas and mangosteens",B,t,2240336.32,0.00013,291.24372159999996,已换算
+exports,2022,Margarine and shortening,C,t,1331674.49,0,0.0,已换算
+exports,2022,Maté leaves,C,t,102460.97,0.00314,321.7274458,已换算
+exports,2022,Meat meal,G,t,4821454,0.0019,9160.7626,已换算
+exports,2022,"Meat of asses, fresh or chilled",G,,,0.0019,,单位非吨或缺失
+exports,2022,"Meat of buffalo, fresh or chilled",G,t,1111231.14,0.0019,2111.3391659999998,已换算
+exports,2022,"Meat of camels, fresh or chilled",G,t,1554.84,0.0019,2.954196,已换算
+exports,2022,"Meat of cattle boneless, fresh or chilled",G,t,7750923.48,0.0019,14726.754612,已换算
+exports,2022,"Meat of cattle with the bone, fresh or chilled",G,t,2067490.51,0.0019,3928.231969,已换算
+exports,2022,"Meat of chickens, fresh or chilled",G,t,15374016.07,0.00165,25367.1265155,已换算
+exports,2022,"Meat of ducks, fresh or chilled",G,t,156629.68,0.00196,306.9941728,已换算
+exports,2022,"Meat of geese, fresh or chilled",G,t,38890.56,0.00184,71.5586304,已换算
+exports,2022,"Meat of goat, fresh or chilled",G,t,61368.53,0.0019,116.600207,已换算
+exports,2022,"Meat of pig boneless, fresh or chilled",G,t,6389675.14,0.00136,8689.9581904,已换算
+exports,2022,"Meat of pig with the bone, fresh or chilled",G,t,6248550.15,0.00192,11997.216288000001,已换算
+exports,2022,"Meat of pigeons and other birds n.e.c., fresh, chilled or frozen",G,t,800,0.0025,2.0,已换算
+exports,2022,"Meat of rabbits and hares, fresh or chilled",G,t,27011.68,0.00216,58.3452288,已换算
+exports,2022,"Meat of sheep, fresh or chilled",G,t,1226264.47,0.00162,1986.5484413999998,已换算
+exports,2022,"Meat of turkeys, fresh or chilled",G,t,778251.65,0.00175,1361.9403875,已换算
+exports,2022,Meat prepared n.e.c.,G,t,126154.34,0.00136,171.56990240000002,已换算
+exports,2022,Melonseed,B,t,150298.96,0.00618,928.8475727999999,已换算
+exports,2022,Millet,E,t,441838.26,0.00275,1215.0552149999999,已换算
+exports,2022,Mixed grain,E,t,30123.88,0.00341,102.7224308,已换算
+exports,2022,Mixes and doughs for the preparation of bakers' wares,E,t,2090878.79,0.00341,7129.8966739,已换算
+exports,2022,Molasses,C,t,6698361.87,0,0.0,已换算
+exports,2022,Mules and hinnies,M,An,25027,0.0027,,单位非吨或缺失
+exports,2022,Mules and hinnies,M,,,0.0027,,单位非吨或缺失
+exports,2022,Mushrooms and truffles,B,t,789148.69,0.00125,986.4358625,已换算
+exports,2022,Must of grape,B,t,67662.17,0.00014,9.4727038,已换算
+exports,2022,Mustard seed,B,t,327567.44,0.0085,2784.32324,已换算
+exports,2022,"Mustard seed oil, crude",C,t,85094.9,0,0.0,已换算
+exports,2022,Natural honey,G,t,770562.54,3e-05,23.1168762,已换算
+exports,2022,Natural rubber in other forms,A,t,8215338,0.0002,1643.0676,已换算
+exports,2022,Natural rubber in primary forms,A,t,2033388.93,0.0002,406.677786,已换算
+exports,2022,"Nutmeg, mace, cardamoms, raw",B,t,146358.86,0,0.0,已换算
+exports,2022,Oats,E,t,3522274.01,0.00342,12046.177114199998,已换算
+exports,2022,"Oats, rolled",E,t,1406701.78,0.00415,5837.812387,已换算
+exports,2022,"Offals n.e.c. (excluding mammals), fresh, chilled or frozen",G,t,13919.17,0.0019,26.446423,已换算
+exports,2022,Oil of castor beans,C,t,671432.29,0,0.0,已换算
+exports,2022,Oil of citronella,C,t,774,0,0.0,已换算
+exports,2022,Oil of kapok,C,,,0,,单位非吨或缺失
+exports,2022,Oil of linseed,C,t,202646.51,0,0.0,已换算
+exports,2022,Oil of maize,C,t,541813.72,0,0.0,已换算
+exports,2022,Oil of olive residues,C,t,265803.71,0,0.0,已换算
+exports,2022,Oil of palm kernel,C,t,2671474,0,0.0,已换算
+exports,2022,Oil of poppy seed,C,,,0,,单位非吨或缺失
+exports,2022,Oil of rice bran,C,t,2619.01,0,0.0,已换算
+exports,2022,Oil of sesame seed,C,t,62682.52,0,0.0,已换算
+exports,2022,Oil of tung nuts,C,,,0,,单位非吨或缺失
+exports,2022,Okra,B,t,17836.34,0.00052,9.274896799999999,已换算
+exports,2022,Olive oil,C,t,2346107.13,0,0.0,已换算
+exports,2022,Olive residues,B,t,76958,0.00017,13.08286,已换算
+exports,2022,Olives,B,t,80136.4,0.00017,13.623188,已换算
+exports,2022,Olives preserved,B,t,1349505.74,0.00017,229.4159758,已换算
+exports,2022,"Onions and shallots, dry (excluding dehydrated)",B,t,9555259.04,0.00243,23219.279467199998,已换算
+exports,2022,"Onions and shallots, green",B,t,383895.84,0.00033,126.68562720000001,已换算
+exports,2022,Orange juice,J,t,3972319.56,0.00016,635.5711296000001,已换算
+exports,2022,"Orange juice, concentrated",J,t,1338541.77,0.0009,1204.6875929999999,已换算
+exports,2022,Oranges,B,t,7415295.82,0.0002,1483.0591640000002,已换算
+exports,2022,"Other beans, green",B,t,686115.13,0.00037,253.86259809999999,已换算
+exports,2022,Other berries and fruits of the genus vaccinium n.e.c.,B,t,559754.09,0.00013,72.7680317,已换算
+exports,2022,Other camelids,M,An,4562,0,,单位非吨或缺失
+exports,2022,Other camelids,M,,,0,,单位非吨或缺失
+exports,2022,"Other citrus fruit, n.e.c.",B,t,72005.02,0.0002,14.401004000000002,已换算
+exports,2022,"Other fibre crops, raw, n.e.c.",A,t,660889.49,0.00089,588.1916461,已换算
+exports,2022,"Other forage products, n.e.c.",K,t,7714144,0.0031,23913.8464,已换算
+exports,2022,Other fructose and syrup,C,t,1745776.52,0,0.0,已换算
+exports,2022,"Other fruit n.e.c., dried",B,t,652462.35,0.00114,743.8070789999999,已换算
+exports,2022,"Other fruits, n.e.c.",B,t,3302194.39,0.00052,1717.1410827999998,已换算
+exports,2022,"Other grasses, for forage",K,,,0.0031,,单位非吨或缺失
+exports,2022,"Other legumes, for forage",K,,,0.00915,,单位非吨或缺失
+exports,2022,"Other live animals, n.e.c.",M,,,0,,单位非吨或缺失
+exports,2022,"Other live animals, n.e.c.",M,,,0,,单位非吨或缺失
+exports,2022,"Other manufactured tobacco and manufactured tobacco substitutes; homogenized"" or ""reconstituted"" tobacco; tobacco extracts and essences""",A,t,666677,0.00109,726.6779300000001,已换算
+exports,2022,"Other meat and edible meat offal, salted, in brine, dried or smoked; edible flours and meals of meat or meat offal",G,t,395846.89,0.0016,633.3550240000001,已换算
+exports,2022,"Other meat n.e.c. (excluding mammals), fresh, chilled or frozen",G,t,29939.92,0.0019,56.885847999999996,已换算
+exports,2022,Other non-alcoholic caloric beverages,J,t,29539662,0.00016,4726.345920000001,已换算
+exports,2022,"Other nuts (excluding wild edible nuts and groundnuts), in shell, n.e.c.",B,t,201836.24,0.00409,825.5102215999999,已换算
+exports,2022,"Other oil of vegetable origin, crude n.e.c.",C,t,837105.66,0,0.0,已换算
+exports,2022,"Other oil seeds, n.e.c.",C,t,336257.17,0,0.0,已换算
+exports,2022,Other pulses n.e.c.,E,t,886003.1,0.0055,4873.0170499999995,已换算
+exports,2022,"Other raw skins of other animals, fresh",G,,,0.00042,,单位非吨或缺失
+exports,2022,"Other raw skins of other animals, preserved",G,t,45613,0.00042,19.15746,已换算
+exports,2022,Other rodents,M,,,0,,单位非吨或缺失
+exports,2022,Other rodents,M,,,0,,单位非吨或缺失
+exports,2022,"Other stimulant, spice and aromatic crops, n.e.c.",D,t,672208.86,0.00194,1304.0851884,已换算
+exports,2022,Other stone fruits,B,t,80670.51,0.00052,41.94866519999999,已换算
+exports,2022,Other sugar crops n.e.c.,C,t,8014.98,0.00024,1.9235951999999998,已换算
+exports,2022,"Other tropical fruit, dried",B,t,6609.37,0.0002,1.321874,已换算
+exports,2022,"Other tropical fruits, n.e.c.",B,t,1371977.15,0.0002,274.39543,已换算
+exports,2022,Other vegetable juices,J,t,158078.35,0.00016,25.292536000000002,已换算
+exports,2022,"Other vegetables and pulses, preserved other than by vinegar, acetic acid or sugar, n.e.c.",B,,,0.0003,,单位非吨或缺失
+exports,2022,Other vegetables provisionally preserved,B,t,463563.84,0.00052,241.0531968,已换算
+exports,2022,"Other vegetables, fresh n.e.c.",B,t,3229578.84,0.00052,1679.3809967999998,已换算
+exports,2022,Palm kernels,C,t,91897.68,0,0.0,已换算
+exports,2022,Palm oil,C,t,45600081.24,0,0.0,已换算
+exports,2022,Papayas,B,t,402143.02,0.00016,64.3428832,已换算
+exports,2022,Paste of tomatoes,B,t,3780678.31,0.00034,1285.4306254,已换算
+exports,2022,Pastry,E,t,12666988.17,0.00153,19380.491900099998,已换算
+exports,2022,Peaches and nectarines,B,t,1725607.61,0.00021,362.37759810000006,已换算
+exports,2022,Peanut butter,D,t,163557.83,0.00393,642.7822719,已换算
+exports,2022,Pears,B,t,2658211.43,0.00012,318.9853716,已换算
+exports,2022,"Peas, dry",F,t,5792259.28,0.00375,21720.9723,已换算
+exports,2022,"Peas, green",B,t,267055.35,0.00113,301.7725455,已换算
+exports,2022,"Pepper (Piper spp.), raw",D,t,471714.58,0.00019,89.6257702,已换算
+exports,2022,"Peppermint, spearmint",B,t,34260.94,0,0.0,已换算
+exports,2022,Persimmons,B,t,518325.6,0.00025,129.5814,已换算
+exports,2022,"Pig fat, rendered",I,t,511556.07,0,0.0,已换算
+exports,2022,Pig meat preparations,G,t,896847.4,0.00136,1219.7124640000002,已换算
+exports,2022,"Pig meat, cuts, salted, dried or smoked (bacon and ham)",G,t,568522.83,0.00155,881.2103864999999,已换算
+exports,2022,"Pig, butcher fat",C,,,0,,单位非吨或缺失
+exports,2022,"Pigeon peas, dry",B,t,503905.32,0.00332,1672.9656624,已换算
+exports,2022,Pineapple juice,B,t,341213.53,5e-05,17.060676500000003,已换算
+exports,2022,Pineapples,B,t,3509859.74,9e-05,315.88737660000004,已换算
+exports,2022,"Pineapples, otherwise prepared or preserved",B,t,999723.36,6e-05,59.9834016,已换算
+exports,2022,"Pistachios, in shell",B,t,396188.77,0.005,1980.94385,已换算
+exports,2022,Plantains and cooking bananas,B,t,1796677.18,0.00023,413.23575139999997,已换算
+exports,2022,Plums and sloes,B,t,838569.88,0.00017,142.5568796,已换算
+exports,2022,"Plums, dried",B,t,198409.98,0.00073,144.8392854,已换算
+exports,2022,Pomelos and grapefruits,B,t,957291.37,0.00016,153.1666192,已换算
+exports,2022,Poppy seed,A,t,97453.41,0.00854,832.2521214000001,已换算
+exports,2022,Pot barley,E,t,28485.9,0.00342,97.421778,已换算
+exports,2022,Potato offals,B,t,1228,0.0005,0.614,已换算
+exports,2022,Potatoes,B,t,15825122.61,0.0005,7912.561305,已换算
+exports,2022,"Potatoes, frozen",B,t,9543068.32,0.0005,4771.53416,已换算
+exports,2022,"Poultry fat, rendered",C,t,243069.93,0,0.0,已换算
+exports,2022,Poultry meat preparations,G,t,2678496.53,0.00136,3642.7552808,已换算
+exports,2022,Prepared groundnuts,B,t,658983.67,0.00341,2247.1343147000002,已换算
+exports,2022,Prepared nuts,B,t,1141975.26,0.00409,4670.6788134,已换算
+exports,2022,Processed cheese,G,t,704270.88,0.00627,4415.7784176000005,已换算
+exports,2022,"Pulp, waste of fruit for feed",B,t,223068,0.0011,245.37480000000002,已换算
+exports,2022,"Pumpkins, squash and gourds",B,t,1669695.06,0.00044,734.6658264,已换算
+exports,2022,Pyrethrum extract,I,t,48,0,0.0,已换算
+exports,2022,"Pyrethrum, dried flowers",I,t,5750.07,0.0013,7.475090999999999,已换算
+exports,2022,Quinces,B,t,39878.21,8e-05,3.1902568000000002,已换算
+exports,2022,Quinoa,E,t,95853.32,0.00341,326.8598212,已换算
+exports,2022,Rabbits and hares,M,1000 An,6586,0.013,,单位非吨或缺失
+exports,2022,Rabbits and hares,M,,,0.013,,单位非吨或缺失
+exports,2022,Raisins,B,t,839743.64,0.00019,159.5512916,已换算
+exports,2022,"Ramie, raw or retted",A,,,0.00089,,单位非吨或缺失
+exports,2022,Rape or colza seed,C,t,22591711.39,0.00546,123350.7441894,已换算
+exports,2022,"Rapeseed or canola oil, crude",C,t,8247479.97,0,0.0,已换算
+exports,2022,Raspberries,B,t,254529.27,0.0001,25.452927,已换算
+exports,2022,Raw cane or beet sugar (centrifugal only),C,t,42749024.18,0.00089,38046.6315202,已换算
+exports,2022,Raw hides and skins of buffaloes,,,,,,单位非吨或缺失
+exports,2022,Raw hides and skins of cattle,G,t,0,0.00042,0.0,已换算
+exports,2022,Raw hides and skins of goats or kids,G,,,0.00042,,单位非吨或缺失
+exports,2022,Raw hides and skins of sheep or lambs,G,,,0.00042,,单位非吨或缺失
+exports,2022,"Raw hides and skins of sheep or lambs, with wool",G,t,242403.02,0.00042,101.8092684,已换算
+exports,2022,Raw milk of cattle,G,t,9820196.25,0.00092,9034.58055,已换算
+exports,2022,Raw milk of sheep,G,,,0.0009,,单位非吨或缺失
+exports,2022,Raw silk (not thrown),G,t,8425,0.00015,1.26375,已换算
+exports,2022,Reconstituted milk,G,,,0.0009,,单位非吨或缺失
+exports,2022,"Refined cane or beet sugar, in solid form, containing added flavouring or colouring matter; maple sugar and maple syrup",C,t,93438.19,0,0.0,已换算
+exports,2022,Refined sugar,C,t,26396030.26,3e-06,79.18809078000001,已换算
+exports,2022,Residues of fatty substances,C,t,473405.09,0,0.0,已换算
+exports,2022,Rice,E,t,3051193.57,0.00282,8604.3658674,已换算
+exports,2022,"Rice, broken",E,t,8833482.43,0.00282,24910.4204526,已换算
+exports,2022,"Rice, milled",E,t,41231478.75,0.00114,47003.885774999995,已换算
+exports,2022,"Rice, milled (husked)",,t,533946.94,,,未匹配系数
+exports,2022,"Rice, paddy (rice milled equivalent)",E,t,55611790,0.00282,156825.2478,已换算
+exports,2022,Rice-fermented beverages,E,t,48730.02,0.00032,15.5936064,已换算
+exports,2022,Rye,E,t,1511756.98,0.00337,5094.6210226,已换算
+exports,2022,Safflower seed,H,t,198735.34,0.0085,1689.2503900000002,已换算
+exports,2022,"Safflower-seed oil, crude",C,t,128082.34,0,0.0,已换算
+exports,2022,"Sausages and similar products of meat, offal or blood of beef and veal",G,t,167195.45,0.00155,259.1529475,已换算
+exports,2022,"Sausages and similar products of meat, offal or blood of pig",G,t,1409233.56,0.00155,2184.312018,已换算
+exports,2022,Sesame seed,H,t,1962293.05,0.00409,8025.7785745,已换算
+exports,2022,Sheep,M,An,11994195,0.00028,,单位非吨或缺失
+exports,2022,Sheep,M,,,0.00028,,单位非吨或缺失
+exports,2022,"Sheep fat, unrendered",C,t,1046.21,0,0.0,已换算
+exports,2022,"Shorn wool, greasy, including fleece-washed shorn wool",G,t,512489.53,0.00015,76.8734295,已换算
+exports,2022,Silk waste,G,t,7523.05,0.00015,1.1284575,已换算
+exports,2022,Silk-worm cocoons suitable for reeling,G,t,717.04,0.00015,0.10755599999999998,已换算
+exports,2022,"Sisal, raw",A,t,31957.34,0.00089,28.442032599999997,已换算
+exports,2022,Skim milk and whey powder,G,t,3196787.4,0.0102,32607.231480000002,已换算
+exports,2022,Skim milk of cows,G,t,1373676.73,0.00097,1332.4664281,已换算
+exports,2022,"Skim milk, condensed",G,t,75685.2,0.00714,540.3923279999999,已换算
+exports,2022,"Skim milk, evaporated",G,t,54.25,0.00714,0.387345,已换算
+exports,2022,"Skins, calve nes",G,t,0,0.00042,0.0,已换算
+exports,2022,"Skins, calve, dry salted",G,t,485,0.00042,0.20370000000000002,已换算
+exports,2022,"Skins, dry-salted of sheep",G,t,28260,0.00042,11.869200000000001,已换算
+exports,2022,"Skins, furs",G,t,11650.58,0.00042,4.8932436,已换算
+exports,2022,"Skins, goat nes",G,,,0.00042,,单位非吨或缺失
+exports,2022,"Skins, goat, dry salted",G,,,0.00042,,单位非吨或缺失
+exports,2022,"Skins, karakul",G,t,79.05,0.00042,0.033201,已换算
+exports,2022,"Skins, pig nes",G,t,457,0.00042,0.19194,已换算
+exports,2022,"Skins, pig, dry salted",G,,,0.00042,,单位非吨或缺失
+exports,2022,"Skins, pig, wet salted",G,t,100183,0.00042,42.07686,已换算
+exports,2022,"Skins, rabbit",G,t,0.05,0.00042,2.1000000000000002e-05,已换算
+exports,2022,"Skins, sheep nes",G,t,2968,0.00015,0.4452,已换算
+exports,2022,"Skins, wet-salted of calves",G,t,39364,0.00042,16.532880000000002,已换算
+exports,2022,"Skins, wet-salted of goats",G,,,0.00042,,单位非吨或缺失
+exports,2022,"Skins, wet-salted of sheep",G,t,1601,0.00042,0.67242,已换算
+exports,2022,Sorghum,E,t,10684598.07,0.0033,35259.173631,已换算
+exports,2022,Sour cherries,B,t,41930.28,0.00019,7.9667532,已换算
+exports,2022,Soya bean oil,C,t,12383020.69,0,0.0,已换算
+exports,2022,Soya beans,F,t,157644000.74,0.0055,867042.00407,已换算
+exports,2022,Soya curd,L,,,0,,单位非吨或缺失
+exports,2022,Soya paste,F,t,24002.67,0.00097,23.282589899999998,已换算
+exports,2022,Soya sauce,D,t,567446.68,0.0055,3120.95674,已换算
+exports,2022,Spermaceti,C,t,1467,0,0.0,已换算
+exports,2022,Spinach,B,t,434155.01,0.00046,199.7113046,已换算
+exports,2022,Starch of cassava,B,t,5756859.04,0.00012,690.8230848000001,已换算
+exports,2022,Strawberries,B,t,1028106.48,0.00026,267.30768479999995,已换算
+exports,2022,String beans,B,t,22.51,0.00037,0.0083287,已换算
+exports,2022,Sugar and syrups n.e.c.,C,t,3045343.89,0,0.0,已换算
+exports,2022,Sugar beet,C,t,919275.74,0.00022,202.2406628,已换算
+exports,2022,Sugar cane,C,t,403627.57,0.00024,96.87061680000001,已换算
+exports,2022,Sugar confectionery,C,t,4643794.67,0,0.0,已换算
+exports,2022,Sunflower seed,E,t,8305976.19,0.00618,51330.9328542,已换算
+exports,2022,"Sunflower-seed oil, crude",C,t,13463146.19,0,0.0,已换算
+exports,2022,Swedes for fodder,K,t,3,0.00546,0.01638,已换算
+exports,2022,"Sweet corn, frozen",B,t,463606.79,0.00083,384.7936357,已换算
+exports,2022,"Sweet corn, prepared or preserved",B,t,818934.73,0.00083,679.7158259,已换算
+exports,2022,Sweet potatoes,B,t,870896.09,0.00041,357.0673969,已换算
+exports,2022,Swine / pigs,M,An,44916989,0.00046,,单位非吨或缺失
+exports,2022,Swine / pigs,M,,,0.00046,,单位非吨或缺失
+exports,2022,Tallow,C,t,1879757.79,0,0.0,已换算
+exports,2022,"Tangerines, mandarins, clementines",B,t,5561179.59,0.0002,1112.235918,已换算
+exports,2022,Tapioca of cassava,B,t,86554.7,0.00038,32.890786,已换算
+exports,2022,Tapioca of potatoes,B,t,22596.02,0.0005,11.29801,已换算
+exports,2022,Taro,B,t,119087.94,0.00041,48.8260554,已换算
+exports,2022,Tea leaves,C,t,2054465.28,0.00314,6451.0209792000005,已换算
+exports,2022,Tomato juice,J,t,89699.01,0.00016,14.3518416,已换算
+exports,2022,Tomatoes,B,t,7966023.75,0.00022,1752.525225,已换算
+exports,2022,"Tomatoes, peeled (o/t vinegar)",B,t,1992091.99,0.00011,219.1301189,已换算
+exports,2022,Triticale,E,t,1020871.06,0.0038,3879.3100280000003,已换算
+exports,2022,"True hemp, raw or retted",A,t,38358,0.00089,34.138619999999996,已换算
+exports,2022,Tung nuts,B,t,0.5,0.00409,0.002045,已换算
+exports,2022,Turkeys,M,,,0.013,,单位非吨或缺失
+exports,2022,Turkeys,M,1000 An,67188,0.013,,单位非吨或缺失
+exports,2022,Turkeys,M,,,0.013,,单位非吨或缺失
+exports,2022,"Turnips, for forage",K,,,0.00546,,单位非吨或缺失
+exports,2022,"Uncooked pasta, not stuffed or otherwise prepared",L,t,5263824.84,0,0.0,已换算
+exports,2022,"Undenatured ethyl alcohol of an alcoholic strength by volume of less than 80% vol; spirits, liqueurs and other spirituous beverages",J,t,6197727.8,0,0.0,已换算
+exports,2022,Unmanufactured tobacco,A,t,2535456.39,0.00109,2763.6474651000003,已换算
+exports,2022,"Vanilla, raw",A,t,7054.35,0.0011,7.759785000000001,已换算
+exports,2022,Vegetable products for feed n.e.c.,B,t,4354054,0.00052,2264.10808,已换算
+exports,2022,"Vegetable products, fresh or dry n.e.c.",B,t,380248.27,0.00052,197.7291004,已换算
+exports,2022,Vegetable tallow,B,,,0,,单位非吨或缺失
+exports,2022,"Vegetable waxes (other than triglycerides), whether or not refined or coloured",B,t,39812,0.00052,20.70224,已换算
+exports,2022,Vegetables and roots fodder,K,,,0.00546,,单位非吨或缺失
+exports,2022,Vegetables frozen,B,t,5744552.65,0.00052,2987.167378,已换算
+exports,2022,Vegetables preserved (frozen),B,t,793467.46,0.00052,412.60307919999997,已换算
+exports,2022,Vegetables preserved nes (o/t vinegar),B,t,5275304.41,0.00052,2743.1582931999997,已换算
+exports,2022,"Vegetables, dehydrated",B,t,927139.62,0.0019,1761.565278,已换算
+exports,2022,"Vegetables, pulses and potatoes, preserved by vinegar or acetic acid",B,t,1736786.65,0.0003,521.035995,已换算
+exports,2022,Vermouth and other wine of fresh grapes flavoured with plats or aromatic substances,J,t,310346.28,0,0.0,已换算
+exports,2022,Vetches,K,,,0.00362,,单位非吨或缺失
+exports,2022,Vitamins,I,,,0,,单位非吨或缺失
+exports,2022,"Walnuts, in shell",B,t,443756.07,0.00409,1814.9623263,已换算
+exports,2022,"Walnuts, shelled",B,t,376079.05,0.00409,1538.1633144999998,已换算
+exports,2022,Watermelons,B,t,4360873.54,9e-05,392.4786186,已换算
+exports,2022,Wheat,E,t,186679886.81,0.00341,636578.4140220999,已换算
+exports,2022,Wheat and meslin flour,E,t,14455410.28,0.00175,25296.96799,已换算
+exports,2022,Whey cheese,G,t,12222.97,0.00627,76.6380219,已换算
+exports,2022,"Whey, condensed",G,t,554914.72,0.00043,238.6133296,已换算
+exports,2022,"Whey, dry",G,t,2581980.07,0.00576,14872.2052032,已换算
+exports,2022,"Whey, fresh",G,t,304982.88,0.00043,131.1426384,已换算
+exports,2022,Whole milk powder,G,t,2663706.54,0.00714,19018.864695599998,已换算
+exports,2022,"Whole milk, condensed",G,t,480668.7,0.00714,3431.974518,已换算
+exports,2022,"Whole milk, evaporated",G,t,1279923.39,0.00714,9138.653004599999,已换算
+exports,2022,Wine,J,t,10726056.59,0.00028,3003.2958452,已换算
+exports,2022,Wool grease and lanolin,G,t,33163.68,0.00015,4.974551999999999,已换算
+exports,2022,"Wool, degreased or carbonized, not carded or combed",G,t,185163,0.00015,27.774449999999998,已换算
+exports,2022,"Wool, hair waste",G,t,16310,0.00012,1.9572,已换算
+exports,2022,"Wool, shoddy",G,t,2403,0.00015,0.36045,已换算
+exports,2022,Yams,B,t,193241.98,0.00041,79.2292118,已换算
+exports,2022,Yautia,B,t,41847.86,0.00041,17.1576226,已换算
+exports,2022,Yoghurt,G,t,149607.7,0.00092,137.63908400000003,已换算
+exports,2022,"Yoghurt, with additives",G,t,1463074.65,0.00092,1346.028678,已换算
