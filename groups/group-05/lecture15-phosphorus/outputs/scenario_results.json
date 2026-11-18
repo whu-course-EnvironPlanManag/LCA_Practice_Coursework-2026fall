@@ -1,0 +1,126 @@
+{
+  "population_2022": 8021407192.0,
+  "population_2050": 9664378587.0,
+  "scale": 1.2048233378101771,
+  "scenarios": [
+    {
+      "scenario": "BAU",
+      "system_supply_efficiency": 0.0898574022957889,
+      "cropland_surplus_Mt": 23.61146947308489,
+      "loss_fraction_beta": 0.1718059131185202,
+      "reduce": 0,
+      "manure_rate": 0.67,
+      "recovery": 0,
+      "equivalence": 1,
+      "mining_Mt": 31.97987871965285,
+      "fertilizer_Mt": 24.69887842510863,
+      "water_Mt": 6.259423442054301,
+      "waste_disposal_Mt": 23.23588456287778,
+      "soil_stock_change_Mt": 20.31312053531174,
+      "max_balance_error": 0.0,
+      "mining_change_pct": 0.0
+    },
+    {
+      "scenario": "Reduce",
+      "system_supply_efficiency": 0.10218541874374021,
+      "cropland_surplus_Mt": 18.671693788063163,
+      "loss_fraction_beta": 0.1718059131185202,
+      "reduce": 0.2,
+      "manure_rate": 0.67,
+      "recovery": 0,
+      "equivalence": 1,
+      "mining_Mt": 25.881390219626024,
+      "fertilizer_Mt": 19.759102740086906,
+      "water_Mt": 5.410740769888479,
+      "waste_disposal_Mt": 22.07717174787268,
+      "soil_stock_change_Mt": 16.22202752245584,
+      "max_balance_error": 7.992402278816007e-17,
+      "mining_change_pct": -19.069767441860474
+    },
+    {
+      "scenario": "Replace",
+      "system_supply_efficiency": 0.09402590880249537,
+      "cropland_surplus_Mt": 23.61146947308489,
+      "loss_fraction_beta": 0.1718059131185202,
+      "reduce": 0,
+      "manure_rate": 0.75,
+      "recovery": 0,
+      "equivalence": 1,
+      "mining_Mt": 29.738832172807015,
+      "fertilizer_Mt": 22.88363072216351,
+      "water_Mt": 6.259423442054301,
+      "waste_disposal_Mt": 20.994838016031945,
+      "soil_stock_change_Mt": 20.31312053531174,
+      "max_balance_error": 7.354208637294391e-17,
+      "mining_change_pct": -7.007676816074426
+    },
+    {
+      "scenario": "Recycle",
+      "system_supply_efficiency": 0.09333369478772065,
+      "cropland_surplus_Mt": 23.61146947308489,
+      "loss_fraction_beta": 0.1718059131185202,
+      "reduce": 0,
+      "manure_rate": 0.67,
+      "recovery": 0.6,
+      "equivalence": 1,
+      "mining_Mt": 30.097115156267478,
+      "fertilizer_Mt": 23.17383993876648,
+      "water_Mt": 5.95441574478587,
+      "waste_disposal_Mt": 21.658128696760837,
+      "soil_stock_change_Mt": 20.31312053531174,
+      "max_balance_error": 0.0,
+      "mining_change_pct": -5.887338034926137
+    },
+    {
+      "scenario": "3R",
+      "system_supply_efficiency": 0.11263474199166272,
+      "cropland_surplus_Mt": 18.67169378806317,
+      "loss_fraction_beta": 0.1718059131185202,
+      "reduce": 0.2,
+      "manure_rate": 0.75,
+      "recovery": 0.6,
+      "equivalence": 1,
+      "mining_Mt": 21.757580109394826,
+      "fertilizer_Mt": 16.418816550799633,
+      "water_Mt": 5.105733072620049,
+      "waste_disposal_Mt": 18.25836933490991,
+      "soil_stock_change_Mt": 16.22202752245584,
+      "max_balance_error": 8.809692983248962e-17,
+      "mining_change_pct": -31.964782292861017
+    }
+  ],
+  "regression": [
+    {
+      "response": "water_reduction_Mt",
+      "n": 125,
+      "rank": 7,
+      "R2": 1.0,
+      "residual_sum_squares": 4.952583211115182e-28,
+      "p_value_status": "确定性精确拟合：无法估计残差方差，不报告虚假显著性"
+    },
+    {
+      "response": "mining_reduction_Mt",
+      "n": 125,
+      "rank": 7,
+      "R2": 1.0,
+      "residual_sum_squares": 3.255318653756622e-28,
+      "p_value_status": "确定性精确拟合：无法估计残差方差，不报告虚假显著性"
+    },
+    {
+      "response": "efficiency_gain",
+      "n": 125,
+      "rank": 7,
+      "R2": 0.9986712882356924,
+      "residual_sum_squares": 0.16608897053844562,
+      "p_value_status": "仅为模型响应面拟合，不代表观测政策因果效应"
+    }
+  ],
+  "limitations": [
+    "人均产品需求与所有基础通量按人口同比放大；未单独模拟耕地扩张或单产变化。",
+    "新增回收磷按有效替代系数抵扣化肥，主情景假设系数1；并检验0.5和0.75。",
+    "先按BAU化肥减施20%，再扣新增回收替代量；非负下限为0。",
+    "农田水体流失=正磷盈余×beta，借用论文Text S7.3足迹方法；beta由2022面积法基线校准，未复现空间土壤/降雨权重。",
+    "使用125个主情景组合；绝对削减量为加和关系。系统供给效率是居民实际摄入P（用排泄近似）/系统外部输入P；它的比值非线性可产生交互，不能解释为新增生物物理协同，也不与论文ACS/LBS PUE直接比较。",
+    "尚未完成论文3%复现精度核验，土壤余额变化不能单独证明长期产量不受影响。"
+  ]
+}
