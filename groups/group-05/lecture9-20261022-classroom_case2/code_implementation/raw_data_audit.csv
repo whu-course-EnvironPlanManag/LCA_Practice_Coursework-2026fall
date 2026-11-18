@@ -1,0 +1,24 @@
+﻿check,value,reference,difference,unit
+Mixer: fresh + recycle vs inlet,6261.0,6261.0,0.0,kg
+Separator: inlet vs liquid + gas,6261.0,6261.0,0.0,kg
+Splitter: offgas vs recycle + purge,4686.0,4686.0,0.0,kg
+Synthesis overall: fresh vs MeOH + water + purge,1621.0,1621.0,0.0,kg
+Electrolyzer: total water vs H2 + O2,1960.0,1782.0,178.0,kg
+Whole plant external: CO2 + net water vs MeOH + O2 + purge,2808.0,2630.0,178.0,kg
+Recycle / fresh mass ratio,2.8624305983960516,3.8,-0.9375694016039482,kg/kg
+Actual recycle fraction,99.01835253947931,99,0.01835253947930937,%
+Ideal 25% conversion + 99% recycle overall conversion,97.08737864077668,96,1.0873786407766772,%
+CSV known-species product carbon / fresh CO2 carbon,96.61664022573669,96,0.6166402257366883,%
+S01 composition sum,100.0,100,0.0,%
+S02 composition sum,100.0,100,0.0,%
+S03 composition sum,100.0,100,0.0,%
+S04 composition sum,100.0,100,0.0,%
+S05 composition sum,100.0,100,0.0,%
+S06 composition sum,100.0,100,0.0,%
+S07 composition sum,100.0,100,0.0,%
+S08 composition sum,102.4,100,2.4000000000000057,%
+S09 composition sum,100.31,100,0.3100000000000023,%
+S10 composition sum,100.0,100,0.0,%
+S11 composition sum,100.0,100,0.0,%
+S12 composition sum,100.0,100,0.0,%
+S13 composition sum,100.0,100,0.0,%

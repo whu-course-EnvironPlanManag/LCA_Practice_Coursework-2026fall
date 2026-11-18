@@ -1,0 +1,16 @@
+{
+ "values": {"fertilizer_Mt":20.5,"feed_shares":{"B":0.1,"C":0.15,"D":0,"E":0.4,"F":0.4,"J":0},"seed_share":0.02,"animal_edible_share":0.65,"livestock_product_pue":0.23,"feed_additive_Mt":0.5,"manure_return_rate":0.67,"plant_processing_loss":0.12,"excretion_kg_per_person":0.47,"direct_human_return":0.2,"household_chemical_Mt":0.5,"sewage_collection":0.6,"recovery_rate":0.0,"treated_residual_water_share":0.2,"chemical_yield":0.9,"mining_yield":0.9,"deposition_kg_ha":0.4,"runoff_kg_ha":2.14},
+ "provenance": {
+ "fertilizer_Mt":"任务书约20.5 Mt；用于2022基线输入，不能作为独立验证成果。",
+ "feed_shares":"教学假设，类别平均用途比例；不是论文逐产品比例。",
+ "seed_share":"教学假设2%；种子作内部流，不作新增边界输入。",
+ "animal_edible_share":"教学假设65%；G包含非食用动物产品，不能直接全部视为食品。",
+ "livestock_product_pue":"任务书历史平均23%，借作2022参数；非2022实测值。",
+ "manure_return_rate":"论文参数表代表值67%，用于教学基线。",
+ "plant_processing_loss":"论文交叉验证表12%，在简化模型中解释为植物食物磷损失比例，属口径假设。",
+ "excretion_kg_per_person":"论文参数表0.47 kg P/人/年。",
+ "deposition_kg_ha":"论文代表系数0.4 kg P/ha/年。",
+ "runoff_kg_ha":"论文主计算代表径流1.8+淋溶0.34 kg P/ha/年。",
+ "remaining":"未逐项列来源的数值均为教学占位假设，含收率、污水收集、直接还田、工业产品量和尾水比例；须开展敏感性分析，不能宣称原论文值。"
+ }
+}
