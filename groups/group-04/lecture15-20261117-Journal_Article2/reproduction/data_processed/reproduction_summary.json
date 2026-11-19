@@ -1,0 +1,318 @@
+{
+  "mass_balance": {
+    "inputs": 34.73,
+    "sinks": 34.73,
+    "rel_error": 0.0,
+    "subsystem_rel_error": 1.8126090197961737e-16
+  },
+  "indicators": {
+    "crop_pue": 0.3142857142857143,
+    "fertilizer_share": 0.6507936507936508,
+    "legacy_share": 0.5714285714285714,
+    "livestock_pue": 0.23076923076923075,
+    "water_pue": 0.811965811965812
+  },
+  "task1": {
+    "crop_years": [
+      1961,
+      2022
+    ],
+    "crop_p_start": 8.97039782345,
+    "crop_p_end": 26.71615796837,
+    "fertilizer_years": [
+      1961,
+      2021
+    ],
+    "fertilizer_p_end": 24.63333055609156,
+    "acs_2022": {
+      "total_input": 31.5,
+      "uptake": 9.89857649277182,
+      "runoff": 3.6002372512046965,
+      "legacy": 18.001186256023484,
+      "pue": 0.3142405235800578,
+      "crop_production": 26.71615796837,
+      "food_share": 0.3705089820359282,
+      "fertilizer": 20.5,
+      "manure": 5.0,
+      "sludge": 2.5,
+      "straw_return": 0.9,
+      "deposition": 2.0,
+      "seed": 0.6
+    },
+    "category_table": [
+      {
+        "Product": "E",
+        "products": 17,
+        "coef_mean_g_per_kg": 3.1829411764705884,
+        "coef_min": 0.37,
+        "coef_max": 6.18,
+        "p_2022_Mt": 8.838986572000001
+      },
+      {
+        "Product": "M",
+        "products": 18,
+        "coef_mean_g_per_kg": 4.2811111111111115,
+        "coef_min": 0.0,
+        "coef_max": 13.0,
+        "p_2022_Mt": 6.649263974
+      },
+      {
+        "Product": "G",
+        "products": 68,
+        "coef_mean_g_per_kg": 2.0938235294117646,
+        "coef_min": 0.0,
+        "coef_max": 10.200000000000001,
+        "p_2022_Mt": 5.509755918
+      },
+      {
+        "Product": "F",
+        "products": 8,
+        "coef_mean_g_per_kg": 4.53,
+        "coef_min": 3.75,
+        "coef_max": 6.56,
+        "p_2022_Mt": 2.194184874
+      },
+      {
+        "Product": "B",
+        "products": 90,
+        "coef_mean_g_per_kg": 1.2255555555555555,
+        "coef_min": 0.0,
+        "coef_max": 8.5,
+        "p_2022_Mt": 1.938945099
+      },
+      {
+        "Product": "C",
+        "products": 34,
+        "coef_mean_g_per_kg": 0.4647058823529412,
+        "coef_min": 0.0,
+        "coef_max": 5.46,
+        "p_2022_Mt": 1.093790743
+      },
+      {
+        "Product": "H",
+        "products": 5,
+        "coef_mean_g_per_kg": 5.938,
+        "coef_min": 4.09,
+        "coef_max": 8.5,
+        "p_2022_Mt": 0.4274029623
+      },
+      {
+        "Product": "I",
+        "products": 3,
+        "coef_mean_g_per_kg": 0.9666666666666668,
+        "coef_min": 0.0,
+        "coef_max": 1.6,
+        "p_2022_Mt": 0.01725829851
+      },
+      {
+        "Product": "A",
+        "products": 21,
+        "coef_mean_g_per_kg": 2.567142857142857,
+        "coef_min": 0.0,
+        "coef_max": 8.540000000000001,
+        "p_2022_Mt": 0.01704768522
+      },
+      {
+        "Product": "D",
+        "products": 10,
+        "coef_mean_g_per_kg": 0.43600000000000005,
+        "coef_min": 0.0,
+        "coef_max": 1.9400000000000002,
+        "p_2022_Mt": 0.01647580471
+      },
+      {
+        "Product": "K",
+        "products": 2,
+        "coef_mean_g_per_kg": 2.225,
+        "coef_min": 0.83,
+        "coef_max": 3.62,
+        "p_2022_Mt": 0.01066785783
+      },
+      {
+        "Product": "J",
+        "products": 3,
+        "coef_mean_g_per_kg": 5.2,
+        "coef_min": 0.27999999999999997,
+        "coef_max": 15.0,
+        "p_2022_Mt": 0.0023781798
+      }
+    ]
+  },
+  "bau_2050": {
+    "pop_factor": 1.2048233378101771,
+    "diet_index": 1.34,
+    "fert_eff_gain": 0.2,
+    "food_2022": 9.9,
+    "food_2050": 15.983186399389812,
+    "fert_2022": 20.5,
+    "fert_2050": 26.47719767171646,
+    "npr_2050": 26.47719767171646,
+    "loss_2050": 69.9
+  },
+  "scenario_table": [
+    {
+      "name": "2050 BAU",
+      "reduce_pct": 0,
+      "replace_pct": 0,
+      "recycle_pct": 0,
+      "npr": 26.47719767171646,
+      "npr_cut": 0.0,
+      "cfr": 26.47719767171646,
+      "cfr_cut": 0.0,
+      "loss": 69.9,
+      "loss_cut": 0.0,
+      "npr_vs_bau": 0.0,
+      "cfr_vs_bau": 0.0,
+      "loss_vs_bau": 0.0
+    },
+    {
+      "name": "S2.2 减施20%",
+      "reduce_pct": 20,
+      "replace_pct": 0,
+      "recycle_pct": 0,
+      "npr": 23.93538669523168,
+      "npr_cut": 0.09599999999999997,
+      "cfr": 21.18175813737317,
+      "cfr_cut": 0.19999999999999996,
+      "loss": 42.639,
+      "loss_cut": 0.39,
+      "npr_vs_bau": -0.09599999999999997,
+      "cfr_vs_bau": -0.19999999999999996,
+      "loss_vs_bau": -0.39
+    },
+    {
+      "name": "S4.3 粪污还田75%",
+      "reduce_pct": 0,
+      "replace_pct": 75,
+      "recycle_pct": 0,
+      "npr": 20.612498387431263,
+      "npr_cut": 0.22150000000000003,
+      "cfr": 6.116232662166502,
+      "cfr_cut": 0.769,
+      "loss": 16.077,
+      "loss_cut": 0.77,
+      "npr_vs_bau": -0.22150000000000003,
+      "cfr_vs_bau": -0.769,
+      "loss_vs_bau": -0.77
+    },
+    {
+      "name": "S4.5 鸟粪石回收60%",
+      "reduce_pct": 0,
+      "replace_pct": 0,
+      "recycle_pct": 60,
+      "npr": 25.524018555534667,
+      "npr_cut": 0.03600000000000003,
+      "cfr": 25.524018555534667,
+      "cfr_cut": 0.03600000000000003,
+      "loss": 62.35080000000001,
+      "loss_cut": 0.10799999999999998,
+      "npr_vs_bau": -0.03600000000000003,
+      "cfr_vs_bau": -0.03600000000000003,
+      "loss_vs_bau": -0.10799999999999998
+    },
+    {
+      "name": "3R 协同",
+      "reduce_pct": 20,
+      "replace_pct": 75,
+      "recycle_pct": 60,
+      "npr": 17.512476489684193,
+      "npr_cut": 0.3385827040000001,
+      "cfr": 4.7168386290628055,
+      "cfr_cut": 0.8218528,
+      "loss": 3.500074740000002,
+      "loss_cut": 0.9499274,
+      "npr_vs_bau": -0.3385827040000001,
+      "cfr_vs_bau": -0.8218528,
+      "loss_vs_bau": -0.9499274
+    },
+    {
+      "name": "3R 全强度",
+      "reduce_pct": 30,
+      "replace_pct": 100,
+      "recycle_pct": 100,
+      "npr": 14.111832348360737,
+      "npr_cut": 0.4670194133333334,
+      "cfr": 0.0,
+      "cfr_cut": 1.0,
+      "loss": 2.097000000000002,
+      "loss_cut": 0.97,
+      "npr_vs_bau": -0.4670194133333334,
+      "cfr_vs_bau": -1.0,
+      "loss_vs_bau": -0.97
+    }
+  ],
+  "regression": {
+    "r2": 0.9602995305265944,
+    "r2_adj": 0.9594865516295281,
+    "f_stat": 1181.2108948853192,
+    "f_pvalue": 5.346960638320688e-202,
+    "n": 300,
+    "y_mean": 70.87491044552971,
+    "y_std": 21.552463462597075
+  },
+  "interaction": {
+    "term": "Reduce×Replace",
+    "coef": -4.603042665276487,
+    "p": 4.255460969149648e-48,
+    "verdict": "拮抗"
+  },
+  "checks": [
+    {
+      "name": "矿物磷肥（2022，Mt P）",
+      "reproduced": 20.5,
+      "reference": 20.5,
+      "unit": "%",
+      "deviation_pct": 0.0
+    },
+    {
+      "name": "作物 PUE（%）",
+      "reproduced": 31.428571428571427,
+      "reference": 31.0,
+      "unit": "pp",
+      "deviation_pct": 1.382488479262668
+    },
+    {
+      "name": "畜禽 PUE（%）",
+      "reproduced": 23.076923076923077,
+      "reference": 23.0,
+      "unit": "pp",
+      "deviation_pct": 0.3344481605351159
+    },
+    {
+      "name": "2050 食物需求（Mt P）",
+      "reproduced": 15.983186399389812,
+      "reference": 16.2,
+      "unit": "Mt",
+      "deviation_pct": 1.3383555593221452
+    },
+    {
+      "name": "2050 化肥需求（Mt P）",
+      "reproduced": 26.47719767171646,
+      "reference": 26.9,
+      "unit": "Mt",
+      "deviation_pct": 1.5717558672250485
+    },
+    {
+      "name": "S4.3 情景 NPR 变化（%）",
+      "reproduced": -22.150000000000002,
+      "reference": -22.15,
+      "unit": "pp",
+      "deviation_pct": 1.6039339407677206e-14
+    },
+    {
+      "name": "S4.3 情景 CFR 变化（%）",
+      "reproduced": -76.9,
+      "reference": -76.9,
+      "unit": "pp",
+      "deviation_pct": 0.0
+    }
+  ],
+  "pass_all": true,
+  "figures": [
+    "D:\\cxdownload\\11.17\\LCA_Practice_Coursework-2026fall\\starter_materials\\lecture15-20261117-Journal_Article2\\reproduction\\figures\\sankey_2022_global_p.html",
+    "D:\\cxdownload\\11.17\\LCA_Practice_Coursework-2026fall\\starter_materials\\lecture15-20261117-Journal_Article2\\reproduction\\figures\\fig_global_p_production.png",
+    "D:\\cxdownload\\11.17\\LCA_Practice_Coursework-2026fall\\starter_materials\\lecture15-20261117-Journal_Article2\\reproduction\\figures\\fig_task1_data.png",
+    "D:\\cxdownload\\11.17\\LCA_Practice_Coursework-2026fall\\starter_materials\\lecture15-20261117-Journal_Article2\\reproduction\\figures\\fig_scenarios_2050.png",
+    "D:\\cxdownload\\11.17\\LCA_Practice_Coursework-2026fall\\starter_materials\\lecture15-20261117-Journal_Article2\\reproduction\\figures\\fig_regression_interactions.png"
+  ]
+}

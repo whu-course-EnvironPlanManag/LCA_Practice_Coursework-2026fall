@@ -1,0 +1,15 @@
+{
+  "total_input": 31.5,
+  "uptake": 9.89857649277182,
+  "runoff": 3.6002372512046965,
+  "legacy": 18.001186256023484,
+  "pue": 0.3142405235800578,
+  "crop_production": 26.71615796837,
+  "food_share": 0.3705089820359282,
+  "fertilizer": 20.5,
+  "manure": 5.0,
+  "sludge": 2.5,
+  "straw_return": 0.9,
+  "deposition": 2.0,
+  "seed": 0.6
+}

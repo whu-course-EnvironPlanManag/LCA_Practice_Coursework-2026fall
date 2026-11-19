@@ -1,0 +1,125 @@
+{
+  "functional_unit": "1 t refined methanol",
+  "mfa": {
+    "node_all_passed": true,
+    "recycle_ratio_mass": 3.8624,
+    "recycle_ratio_molar": 3.797,
+    "backflow_ratio_mass": 2.8624,
+    "carbon_utilization": 0.965357,
+    "carbon_utilization_doc": 0.96,
+    "purge_carbon_kg": 13.452,
+    "loop": {
+      "fresh_co2_kmol": 32.33,
+      "reactor_inlet_co2_kmol": 125.5534,
+      "reacted_co2_kmol": 31.3883,
+      "recycle_co2_kmol": 93.2234,
+      "purge_co2_kmol": 0.9417,
+      "meoh_kmol": 31.3883,
+      "meoh_kg": 1005.6827,
+      "carbon_utilization": 0.9709
+    },
+    "elements": [
+      {
+        "element": "C",
+        "input_kg": 388.316,
+        "product_kg": 374.863,
+        "water_kg": 0.0,
+        "purge_by_difference_kg": 13.452,
+        "purge_from_csv_kg": 9.5,
+        "csv_minus_closure_kg": -3.952,
+        "closure_error_pct": 0.0
+      },
+      {
+        "element": "H",
+        "input_kg": 197.991,
+        "product_kg": 125.839,
+        "water_kg": 64.351,
+        "purge_by_difference_kg": 7.802,
+        "purge_from_csv_kg": 10.055,
+        "csv_minus_closure_kg": 2.253,
+        "closure_error_pct": 0.0
+      },
+      {
+        "element": "O",
+        "input_kg": 1034.495,
+        "product_kg": 499.329,
+        "water_kg": 510.688,
+        "purge_by_difference_kg": 24.478,
+        "purge_from_csv_kg": 25.386,
+        "csv_minus_closure_kg": 0.907,
+        "closure_error_pct": 0.0
+      }
+    ],
+    "node_balance": [
+      {
+        "node": "混合器：CO2+H2+循环气 = 反应器进料",
+        "in_kg": 6261.0,
+        "out_kg": 6261.0,
+        "residual_kg": 0.0,
+        "residual_pct": 0.0,
+        "passed": true
+      },
+      {
+        "node": "反应器：进料 = 出料（质量守恒）",
+        "in_kg": 6261.0,
+        "out_kg": 6261.0,
+        "residual_kg": 0.0,
+        "residual_pct": 0.0,
+        "passed": true
+      },
+      {
+        "node": "冷凝分离：出料 = 粗甲醇 + 气相",
+        "in_kg": 6261.0,
+        "out_kg": 6261.0,
+        "residual_kg": 0.0,
+        "residual_pct": 0.0,
+        "passed": true
+      },
+      {
+        "node": "循环分流：气相 = 循环气 + 驰放气",
+        "in_kg": 4686.0,
+        "out_kg": 4686.0,
+        "residual_kg": 0.0,
+        "residual_pct": 0.0,
+        "passed": true
+      },
+      {
+        "node": "精馏：粗甲醇 = 产品 + 生成水",
+        "in_kg": 1575.0,
+        "out_kg": 1575.0,
+        "residual_kg": 0.0,
+        "residual_pct": 0.0,
+        "passed": true
+      },
+      {
+        "node": "电解槽进水：总进水 = 净补水 + 精馏回流水",
+        "in_kg": 1960.0,
+        "out_kg": 1960.0,
+        "residual_kg": 0.0,
+        "residual_pct": 0.0,
+        "passed": true
+      }
+    ]
+  },
+  "lca": {
+    "gwp_a_kgco2e_per_t": -1044.12,
+    "gwp_b_kgco2e_per_t": 4531.26,
+    "reduction_vs_coal_a_pct": 140.16,
+    "reduction_vs_coal_b_pct": -74.28,
+    "delta_ghg_t_per_t": 3.64412
+  },
+  "tea": {
+    "lcom_015": 2862.27,
+    "lcom_035": 5027.47,
+    "lcom_grid_055": 7192.67,
+    "mac_015": 99.41,
+    "mac_035": 693.57,
+    "breakeven_price_with_carbon_100": 0.1502,
+    "breakeven_price_plain": 0.1165
+  },
+  "classroom_mix": {
+    "x_min_pct": 53.3,
+    "gwp_at_x_min": 2600.0,
+    "pv_capacity_factor_pct": 15.0
+  }
+}
