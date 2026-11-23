@@ -1,0 +1,13 @@
+{
+  "smelting_Li_recovery_rate": 92.0,
+  "smelting_threshold_pct": 90,
+  "smelting_compliant": true,
+  "Ni_recovery_rate": 95.0,
+  "Co_recovery_rate": 95.0,
+  "black_mass_recovery_rate": 98.0,
+  "Cu_Al_recovery_rate": 98.0,
+  "material_repair_rate_S5": 99.0,
+  "overall_Li_recovery_rate": 71.58,
+  "Li2CO3_output_t_per_a": 701.8,
+  "note": "冶炼段锂回收率为工信部>=90%判定口径; 材料修复率>=99%为S5直接再生产线判定口径"
+}
