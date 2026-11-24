@@ -40,30 +40,98 @@ report=report.replace('## 六、','三项政策参数保持课堂设定，改变
 f=rows('flows_2022.csv');f=[x for x in f if x['source']!=x['target']]
 f.append(dict(source='ACS',target='土壤存量增加',value=json.loads((o/'results.json').read_text())['soil_stock_change']))
 names=list(dict.fromkeys(k for x in f for k in (x['source'],x['target'])))
+colors = {'地质资源':'#53677D','PMS':'#A05A2C','CIS':'#2866AC','ACS':'#248350','LBS':'#8F4C9A','RCS':'#B8424E','大气沉降':'#509CB1','边界外草料':'#AB851D'}
+neutral = '#596670'
+# Left/right duplicates unroll internal cycles. Band widths use one common scale.
+sources=list(dict.fromkeys(x['source'] for x in f));targets=list(dict.fromkeys(x['target'] for x in f))
+pos={};cursor={};svg=[]
+for field,labels,x in [('source',sources,190),('target',targets,760)]:
+    y=34
+    for n in labels:
+        h=sum(float(row['value']) for row in f if row[field]==n)*4
+        pos[field,n]=cursor[field,n]=y
+        svg.append(f'<rect x="{x}" y="{y}" width="8" height="{max(h,1)}" fill="{colors.get(n, neutral)}"/><text x="{x-5 if field=="source" else x+13}" text-anchor="{"end" if field=="source" else "start"}" y="{y+max(12,h/2)}">{n}</text>')
+        y+=max(h,14)+12
+bands=[]
+for row in f:
+    l,r,v=row['source'],row['target'],float(row['value']);h=v*4;y=cursor['source',l]+h/2;z=cursor['target',r]+h/2
+    bands.append(f'<path d="M198 {y} C470 {y} 490 {z} 760 {z}" stroke="{colors[l]}" stroke-opacity=".62" stroke-width="{h}" tabindex="0"><title>{l} → {r}：{v:.3f} Mt P/年</title></path>');cursor['source',l]+=h;cursor['target',r]+=h
+fig='<svg xmlns="http://www.w3.org/2000/svg" class="offline-flow" viewBox="0 0 950 900" font-family="sans-serif"><title>2022年全球磷流，颜色对应左侧来源，宽度表示年流量</title><g fill="none" stroke="#559eaa">'+''.join(bands)+'</g>'+''.join(svg)+'</svg>'
+(o/'sankey_2022.svg').write_text(fig)
+source_colors = [colors[row['source']] for row in f]
+link_colors = ['rgba(%d,%d,%d,0.62)' % tuple(bytes.fromhex(color[1:])) for color in source_colors]
+node_colors = [colors.get(name, neutral) for name in names]
+trace = dict(type='sankey', node=dict(label=names,color=node_colors,pad=18),
+             link=dict(source=[names.index(row['source']) for row in f],
+                       target=[names.index(row['target']) for row in f],
+                       value=[float(row['value']) for row in f],color=link_colors))
 try:
     import plotly.graph_objects as go
 except ImportError:
-    # Left/right duplicates unroll internal cycles. Band widths use one common scale.
-    sources=list(dict.fromkeys(x['source'] for x in f));targets=list(dict.fromkeys(x['target'] for x in f))
-    pos={};cursor={};svg=[]
-    for field,labels,x in [('source',sources,190),('target',targets,760)]:
-        y=34
-        for n in labels:
-            h=sum(float(row['value']) for row in f if row[field]==n)*4
-            pos[field,n]=cursor[field,n]=y
-            svg.append(f'<rect x="{x}" y="{y}" width="8" height="{max(h,1)}" fill="#18685f"/><text x="{x-5 if field=="source" else x+13}" text-anchor="{"end" if field=="source" else "start"}" y="{y+max(12,h/2)}">{n}</text>')
-            y+=max(h,14)+12
-    bands=[]
-    for row in f:
-        l,r,v=row['source'],row['target'],float(row['value']);h=v*4;y=cursor['source',l]+h/2;z=cursor['target',r]+h/2
-        bands.append(f'<path d="M198 {y} C470 {y} 490 {z} 760 {z}" stroke-width="{h}" tabindex="0"><title>{l} → {r}：{v:.3f} Mt P/年</title></path>');cursor['source',l]+=h;cursor['target',r]+=h
-    fig='<svg class="offline-flow" viewBox="0 0 950 900"><g fill="none" stroke="#559eaa">'+''.join(bands)+'</g>'+''.join(svg)+'</svg>'
-    # Preserve existing Plotly chart as network enhancement, offline SVG is standalone.
-    path=o/'sankey_2022.html';page=path.read_text().replace('<div id="chart"', '<details open><summary>离线桑基图 · 左列为来源，右列为去向；悬停查看流量</summary><style>.offline-flow path:hover,.offline-flow path:focus{stroke:#c96c2d}.offline-flow{width:100%;max-width:1050px}</style>'+fig+'</details><div id="chart"');path.write_text(page)
+    chart = '<div id="chart" style="height:800px"></div><script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script><script>if(window.Plotly) Plotly.newPlot("chart",'+json.dumps([trace],ensure_ascii=False)+',{margin:{l:80,r:150,t:30,b:30}},{responsive:true})</script>'
 else:
-    go.Figure(go.Sankey(node=dict(label=names),link=dict(source=[names.index(x['source']) for x in f],target=[names.index(x['target']) for x in f],value=[float(x['value']) for x in f]))).update_layout(title='2022年五系统磷流（Mt P/年）',height=800).write_html(o/'sankey_2022.html',include_plotlyjs=True)
-summary=html.escape(report)
-(o/'index.html').write_text('<meta charset="utf-8"><title>全球磷循环课程作业</title><style>body{max-width:900px;margin:40px auto;font:17px/1.8 sans-serif}article{white-space:pre-wrap}</style><h1>全球磷循环课程作业</h1><p><a href="sankey_2022.html">2022年桑基图</a>　<a href="scenario_offline.html">2050年情景图</a>　<a href="benchmark_comparison.csv">基准核验表</a></p><article>'+summary+'</article>')
+    chart = go.Figure(trace).update_layout(height=800).to_html(full_html=False,include_plotlyjs=True)
+flow_rows = ''.join('<tr>'+''.join('<td>'+html.escape(str(row[key]))+'</td>' for key in ('source','target','value','basis'))+'</tr>' for row in flows)
+style = '<style>body{max-width:960px;margin:2rem auto;padding:0 1rem;font:17px/1.65 sans-serif;color:#183342}img,.offline-flow{max-width:100%;height:auto}table{border-collapse:collapse}td,th{padding:.4rem .7rem;border-bottom:1px solid #ccc}.offline-flow path:hover,.offline-flow path:focus{stroke-opacity:1}</style>'
+(o/'sankey_2022.html').write_text('<!doctype html><meta charset="utf-8"><title>2022年全球磷流</title>'+style+'<h1>2022年全球磷流</h1><p>流带颜色对应左侧来源，宽度表示年流量（Mt P/年）。悬停可读数。田内种子循环仅列入明细。</p>'+fig+'<h2>交互视图</h2>'+chart+'<h2>流量明细</h2><table><tr><th>来源</th><th>去向</th><th>Mt P/年</th><th>依据</th></tr>'+flow_rows+'</table>')
+import re
+labels={'BAU':'常规基准','Reduce':'化肥减施','Replace':'粪便利用','Recycle':'污水回收','3R':'三项组合'}
+scenario_rows=rows('scenarios_2050.csv')
+comparison=['情景 | 化肥需求 | 原生磷开采 | 水体流失','---|---:|---:|---:']
+for row in scenario_rows:
+    comparison.append(labels[row['scenario']]+' | '+' | '.join(format(float(row[key]),'.3f') for key in ('fertilizer_Mt','mining_Mt','water_Mt')))
+figures=['![图1 2022年全球磷流](sankey_2022.svg)','图1　2022年全球磷流。左列为来源，右列为去向；流带同色表示同一来源，宽度按 Mt P/年绘制。土壤存量增加单列，田内种子循环省略。','表1　2050年五种情景的磷需求与流失（Mt P/年）','\n'.join(comparison)]
+for number,svg in enumerate(re.findall(r'<svg .*?</svg>',(o/'scenario_offline.html').read_text(),re.S),2):
+    caption=re.search('aria-label="([^"]+)"',svg).group(1)
+    for key,label in labels.items():
+        svg=svg.replace('>'+key+'<','>'+label+'<')
+    name=f'scenario_{number}.svg'
+    (o/name).write_text(svg.replace('<svg ', '<svg xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" ',1))
+    figures.extend([f'![{caption}]({name})',f'图{number}　2050年{caption}（Mt P/年）。各图按各自基准绘制，条末标注绝对量。'])
+report=report.replace('2050年BAU化肥需求', '\n\n'.join(figures)+'\n\n2050年BAU化肥需求',1)
+report=report.replace('三项政策参数保持课堂设定，改变有效替代系数和污水收集率所得结果如下。','表2　三项措施组合在不同有效替代系数和污水收集率下的结果')
+policy_url='https://nyncw.cq.gov.cn/xxgk_161/zfxxgkzl/fdzdgknr/ghjh/202201/t20220106_10280790.html'
+policy='重庆市农业农村委员会《重庆市农业生态环境保护与农业废弃物资源化利用“十四五”规划（2021—2025年）》列出两项2025年地方目标：主要农作物化肥利用率达到43%（2020年为40.3%），畜禽粪污综合利用率稳定在80%以上。前者考核养分利用效率，后者涵盖多种粪污利用途径。全球课堂模型分别控制矿物磷投入量和粪便磷还田比例，两地理尺度、指标分母和目标年份均有差异。[政策原文]('+policy_url+')'
+policy=policy.replace('两地理尺度','两者的地理尺度')
+law_url = 'https://legalinfo.moj.gov.cn/pub/sfbzhfx/zt/2026zt0106/xxxcsthjfd20260817/sthjfd20260817/202608/t20260818_538611.html'
+values = {row['scenario']: row for row in scenario_rows}
+def flow_value(scenario, source, target):
+    records = rows(f'flows_2050_{scenario}.csv')
+    return sum(float(row['value']) for row in records if row['source'] == source and row['target'] == target)
+
+def difference(scenario, metric):
+    return float(values['BAU'][metric]) - float(values[scenario][metric])
+
+legal_section = [
+    '《中华人民共和国生态环境法典》对农业面源污染防治和污泥管理规定了具体职责。下列数值取自2050年全球模型，各单项情景均与同年常规基准比较。20%、75%和60%为课堂情景参数。当地实施效果需用田块、养殖场和污水厂数据核算。[法典原文]('+law_url+')',
+    f"农田施肥。第三百零八条要求地方农业农村等部门推广测土配方施肥技术，控制化肥过量使用。模型将化肥磷投入削减20%，年用量减少{difference('Reduce','fertilizer_Mt'):.3f} Mt P，入水磷减少{difference('Reduce','water_Mt'):.3f} Mt P。田块减施幅度应结合土壤有效磷和作物需磷量确定，并逐季核对单位面积施磷量和产量。",
+    f"养殖场粪污。第三百零九条规定国家支持建设粪污利用或无害化处理设施，养殖场须保障设施运行和粪污达标排放。利用率由67%升至75%时，粪便还田磷由{flow_value('BAU','LBS','ACS'):.3f}增至{flow_value('Replace','LBS','ACS'):.3f} Mt P/年。在等磷替代假设下，原生磷开采每年减少{difference('Replace','mining_Mt'):.3f} Mt P。落实到养殖场，可用转运量、含磷率和农田签收记录核实还田磷量，再以排放监测核验达标情况。",
+    f"城镇污水与污泥。第三百零四条要求相关单位无害化处理处置污泥，跟踪、记录并报告污泥流向、用途和用量。模型取污水收集率60%、设施磷回收率60%，进入污泥处置环节的磷由{flow_value('BAU','RCS','污泥处置'):.3f}降至{flow_value('Recycle','RCS','污泥处置'):.3f} Mt P/年，居民系统入水磷减少{difference('Recycle','water_Mt'):.3f} Mt P/年。设施台账可在法定去向记录基础上补记污泥干重和含磷率，据此区分剩余污泥携磷量与回收产品携磷量。"
+]
+report = report.replace('当前结果支持', '\n\n'.join([*legal_section, policy, '当前结果支持']), 1)
+(o/'课程报告.md').write_text(report)
+blocks=[]
+for para in report.strip().split('\n\n'):
+    if ' | ' in para and '\n---' in para:
+        lines=para.splitlines()
+        cells=[]
+        for i,line in enumerate(lines):
+            if i==1: continue
+            tag='td' if i else 'th'
+            cells.append('<tr>'+''.join(f'<{tag}>{html.escape(cell.strip())}</{tag}>' for cell in line.split('|'))+'</tr>')
+        blocks.append('<table>'+''.join(cells)+'</table>')
+        continue
+    for line in para.splitlines():
+        image=re.fullmatch(r'!\[(.*?)\]\((.*?)\)',line)
+        if image:
+            blocks.append(f'<img src="{image[2]}" alt="{image[1]}">')
+        else:
+            tag='h2' if line.startswith('## ') else 'h1' if line.startswith('# ') else 'p'
+            content=html.escape(line.lstrip('# '))
+            content=content.replace('[政策原文]('+policy_url+')', '<a href="'+policy_url+'">政策原文</a>')
+            content=content.replace('[法典原文]('+law_url+')', '<a href="'+law_url+'">法典原文</a>')
+            blocks.append(f'<{tag}>{content}</{tag}>')
+(o/'index.html').write_text('<!doctype html><meta charset="utf-8"><title>全球磷循环课程报告</title>'+style+'<nav><a href="sankey_2022.html">交互桑基图</a> · <a href="scenario_offline.html">情景对照</a> · <a href="benchmark_comparison.csv">基准核验表</a></nav>'+''.join(blocks))
 page=o/'scenario_offline.html'
 page.write_text(page.read_text().split('<h2>评分项检查')[0]+'<p><a href="benchmark_comparison.csv">文献基准核验</a>　<a href="index.html">返回报告</a></p></html>')
 (o/'验收清单.md').write_text(f'2022与2050情景守恒检查通过。1961年施肥量偏差 {abs(value/4.9-1):.2%}。2022年ACS化肥占比 {b[3]["result"]}%。全部基准见benchmark_comparison.csv。')
