@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="442.8pt" height="376.380152pt" viewBox="0 0 442.8 376.380152" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-22T11:58:01.819957</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 376.380152 
+L 442.8 376.380152 
+L 442.8 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="line2d_1">
+    <path d="M 173.945455 42.002182 
+L 173.945455 28.093091 
+L 268.854545 28.093091 
+L 268.854545 55.911273 
+L 173.945455 55.911273 
+L 173.945455 42.002182 
+" clip-path="url(#pfd2ead7261)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_2">
+    <path d="M 173.945455 99.274909 
+L 173.945455 85.365818 
+L 268.854545 85.365818 
+L 268.854545 113.184 
+L 173.945455 113.184 
+L 173.945455 99.274909 
+" clip-path="url(#pfd2ead7261)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_3">
+    <path d="M 173.945455 156.547636 
+L 173.945455 142.638545 
+L 268.854545 142.638545 
+L 268.854545 170.456727 
+L 173.945455 170.456727 
+L 173.945455 156.547636 
+" clip-path="url(#pfd2ead7261)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_4">
+    <path d="M 173.945455 213.820364 
+L 173.945455 199.911273 
+L 268.854545 199.911273 
+L 268.854545 227.729455 
+L 173.945455 227.729455 
+L 173.945455 213.820364 
+" clip-path="url(#pfd2ead7261)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_5">
+    <path d="M 173.945455 271.093091 
+L 173.945455 257.184 
+L 268.854545 257.184 
+L 268.854545 285.002182 
+L 173.945455 285.002182 
+L 173.945455 271.093091 
+" clip-path="url(#pfd2ead7261)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_6">
+    <path d="M 173.945455 328.365818 
+L 173.945455 314.456727 
+L 268.854545 314.456727 
+L 268.854545 342.274909 
+L 173.945455 342.274909 
+L 173.945455 328.365818 
+" clip-path="url(#pfd2ead7261)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_7">
+    <path d="M 26.672727 99.274909 
+L 26.672727 85.365818 
+L 121.581818 85.365818 
+L 121.581818 113.184 
+L 26.672727 113.184 
+L 26.672727 99.274909 
+" clip-path="url(#pfd2ead7261)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_8">
+    <path d="M 26.672727 42.002182 
+L 26.672727 28.093091 
+L 121.581818 28.093091 
+L 121.581818 55.911273 
+L 26.672727 55.911273 
+L 26.672727 42.002182 
+" clip-path="url(#pfd2ead7261)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_9">
+    <path d="M 26.672727 213.820364 
+L 26.672727 199.911273 
+L 121.581818 199.911273 
+L 121.581818 227.729455 
+L 26.672727 227.729455 
+L 26.672727 213.820364 
+" clip-path="url(#pfd2ead7261)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_10">
+    <path d="M 26.672727 328.365818 
+L 26.672727 314.456727 
+L 121.581818 314.456727 
+L 121.581818 342.274909 
+L 26.672727 342.274909 
+L 26.672727 328.365818 
+" clip-path="url(#pfd2ead7261)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_11">
+    <path d="M 321.218182 213.820364 
+L 321.218182 199.911273 
+L 416.127273 199.911273 
+L 416.127273 227.729455 
+L 321.218182 227.729455 
+L 321.218182 213.820364 
+" clip-path="url(#pfd2ead7261)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_12">
+    <path d="M 321.218182 99.274909 
+L 321.218182 85.365818 
+L 416.127273 85.365818 
+L 416.127273 113.184 
+L 321.218182 113.184 
+L 321.218182 99.274909 
+" clip-path="url(#pfd2ead7261)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_13">
+    <path d="M 321.218182 328.365818 
+L 321.218182 314.456727 
+L 416.127273 314.456727 
+L 416.127273 342.274909 
+L 321.218182 342.274909 
+L 321.218182 328.365818 
+" clip-path="url(#pfd2ead7261)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_14">
+    <path d="M 221.4 55.911273 
+L 221.4 70.638545 
+L 221.4 81.274909 
+" clip-path="url(#pfd2ead7261)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round"/>
+   </g>
+   <g id="patch_2">
+    <path d="M 222.627273 81.274909 
+L 221.4 85.365818 
+L 220.172727 81.274909 
+z
+" clip-path="url(#pfd2ead7261)"/>
+   </g>
+   <g id="line2d_15">
+    <path d="M 221.4 113.184 
+L 221.4 127.911273 
+L 221.4 138.547636 
+" clip-path="url(#pfd2ead7261)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 222.627273 138.547636 
+L 221.4 142.638545 
+L 220.172727 138.547636 
+z
+" clip-path="url(#pfd2ead7261)"/>
+   </g>
+   <g id="line2d_16">
+    <path d="M 221.4 170.456727 
+L 221.4 185.184 
+L 221.4 195.820364 
+" clip-path="url(#pfd2ead7261)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 222.627273 195.820364 
+L 221.4 199.911273 
+L 220.172727 195.820364 
+z
+" clip-path="url(#pfd2ead7261)"/>
+   </g>
+   <g id="line2d_17">
+    <path d="M 221.4 227.729455 
+L 221.4 242.456727 
+L 221.4 253.093091 
+" clip-path="url(#pfd2ead7261)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 222.627273 253.093091 
+L 221.4 257.184 
+L 220.172727 253.093091 
+z
+" clip-path="url(#pfd2ead7261)"/>
+   </g>
+   <g id="line2d_18">
+    <path d="M 221.4 285.002182 
+L 221.4 299.729455 
+L 221.4 310.365818 
+" clip-path="url(#pfd2ead7261)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 222.627273 310.365818 
+L 221.4 314.456727 
+L 220.172727 310.365818 
+z
+" clip-path="url(#pfd2ead7261)"/>
+   </g>
+   <g id="line2d_19">
+    <path d="M 121.581818 99.274909 
+L 147.763636 99.274909 
+L 169.854545 99.274909 
+" clip-path="url(#pfd2ead7261)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 169.854545 98.047636 
+L 173.945455 99.274909 
+L 169.854545 100.502182 
+z
+" clip-path="url(#pfd2ead7261)"/>
+   </g>
+   <g id="line2d_20">
+    <path d="M 74.127273 85.365818 
+L 74.127273 70.638545 
+L 74.127273 60.002182 
+" clip-path="url(#pfd2ead7261)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 72.9 60.002182 
+L 74.127273 55.911273 
+L 75.354545 60.002182 
+z
+" clip-path="url(#pfd2ead7261)"/>
+   </g>
+   <g id="line2d_21">
+    <path d="M 74.127273 199.911273 
+L 74.127273 156.547636 
+L 74.127273 117.274909 
+" clip-path="url(#pfd2ead7261)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 72.9 117.274909 
+L 74.127273 113.184 
+L 75.354545 117.274909 
+z
+" clip-path="url(#pfd2ead7261)"/>
+   </g>
+   <g id="line2d_22">
+    <path d="M 74.127273 314.456727 
+L 74.127273 271.093091 
+L 74.127273 231.820364 
+" clip-path="url(#pfd2ead7261)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 72.9 231.820364 
+L 74.127273 227.729455 
+L 75.354545 231.820364 
+z
+" clip-path="url(#pfd2ead7261)"/>
+   </g>
+   <g id="line2d_23">
+    <path d="M 268.854545 213.820364 
+L 295.036364 213.820364 
+L 317.127273 213.820364 
+" clip-path="url(#pfd2ead7261)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 317.127273 212.593091 
+L 321.218182 213.820364 
+L 317.127273 215.047636 
+z
+" clip-path="url(#pfd2ead7261)"/>
+   </g>
+   <g id="line2d_24">
+    <path d="M 368.672727 199.911273 
+L 368.672727 156.547636 
+L 368.672727 117.274909 
+" clip-path="url(#pfd2ead7261)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 367.445455 117.274909 
+L 368.672727 113.184 
+L 369.9 117.274909 
+z
+" clip-path="url(#pfd2ead7261)"/>
+   </g>
+   <g id="line2d_25">
+    <path d="M 321.218182 99.274909 
+L 295.036364 99.274909 
+L 272.945455 99.274909 
+" clip-path="url(#pfd2ead7261)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 272.945455 100.502182 
+L 268.854545 99.274909 
+L 272.945455 98.047636 
+z
+" clip-path="url(#pfd2ead7261)"/>
+   </g>
+   <g id="line2d_26">
+    <path d="M 368.672727 227.729455 
+L 368.672727 271.093091 
+L 368.672727 310.365818 
+" clip-path="url(#pfd2ead7261)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round"/>
+   </g>
+   <g id="patch_14">
+    <path d="M 369.9 310.365818 
+L 368.672727 314.456727 
+L 367.445455 310.365818 
+z
+" clip-path="url(#pfd2ead7261)"/>
+   </g>
+   <g id="line2d_27">
+    <path d="M 173.945455 271.093091 
+L 151.036364 271.093091 
+L 128.127273 271.093091 
+" clip-path="url(#pfd2ead7261)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_28">
+    <path d="M 128.127273 271.093091 
+L 128.127273 242.456727 
+L 128.127273 213.820364 
+" clip-path="url(#pfd2ead7261)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_29">
+    <path d="M 128.127273 213.820364 
+L 124.854545 213.820364 
+L 125.672727 213.820364 
+" clip-path="url(#pfd2ead7261)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round"/>
+   </g>
+   <g id="patch_15">
+    <path d="M 125.672727 215.047636 
+L 121.581818 213.820364 
+L 125.672727 212.593091 
+z
+" clip-path="url(#pfd2ead7261)"/>
+   </g>
+   <g id="text_1">
+    <text style="font-size: 9px; font-family: 'Microsoft YaHei'" transform="translate(201.815859 40.397826)">新鲜 CO2</text>
+    <text style="font-size: 9px; font-family: 'Microsoft YaHei'" transform="translate(197.919844 49.249115)">1414.68 kg</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 9px; font-family: 'Microsoft YaHei'; text-anchor: middle" x="221.4" y="102.408034" transform="rotate(-0 221.4 102.408034)">气体混合与预热</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 9px; font-family: 'Microsoft YaHei'" transform="translate(189.9 154.917265)">甲醇合成反应器</text>
+    <text style="font-size: 9px; font-family: 'Microsoft YaHei'" transform="translate(188.287031 164.515273)">单程转化率 25%</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 9px; font-family: 'Microsoft YaHei'" transform="translate(198.9 212.115461)">冷却冷凝与</text>
+    <text style="font-size: 9px; font-family: 'Microsoft YaHei'" transform="translate(194.4 221.796438)">高压气液分离</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 9px; font-family: 'Microsoft YaHei'; text-anchor: middle" x="221.4" y="274.248716" transform="rotate(-0 221.4 274.248716)">精馏提纯</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 9px; font-family: 'Microsoft YaHei'" transform="translate(194.4 326.735447)">精甲醇主产品</text>
+    <text style="font-size: 9px; font-family: 'Microsoft YaHei'" transform="translate(196.836328 335.612752)">1,000.00 kg</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 9px; font-family: 'Microsoft YaHei'" transform="translate(40.671179 97.662116)">PEM 电解水制氢</text>
+    <text style="font-size: 9px; font-family: 'Microsoft YaHei'" transform="translate(45.834929 106.521843)">H2 194.41 kg</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 9px; font-family: 'Microsoft YaHei'" transform="translate(47.127273 40.384467)">副产氧气外售</text>
+    <text style="font-size: 9px; font-family: 'Microsoft YaHei'" transform="translate(50.647116 49.249115)">1542.88 kg</text>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 9px; font-family: 'Microsoft YaHei'" transform="translate(47.127273 212.194211)">电解槽总进水</text>
+    <text style="font-size: 9px; font-family: 'Microsoft YaHei'" transform="translate(50.647116 221.067297)">1737.29 kg</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 9px; font-family: 'Microsoft YaHei'" transform="translate(51.627273 326.731228)">外购净补水</text>
+    <text style="font-size: 9px; font-family: 'Microsoft YaHei'" transform="translate(50.647116 335.612752)">1175.06 kg</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 9px; font-family: 'Microsoft YaHei'" transform="translate(337.172727 212.22093)">未反应气分流器</text>
+    <text style="font-size: 9px; font-family: 'Microsoft YaHei'" transform="translate(327.499837 221.752844)">99% 循环 / 1% 驰放</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 9px; font-family: 'Microsoft YaHei'" transform="translate(346.172727 97.631179)">循环压缩机</text>
+    <text style="font-size: 9px; font-family: 'Microsoft YaHei'" transform="translate(345.192571 106.521843)">4639.83 kg</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 9px; font-family: 'Microsoft YaHei'" transform="translate(330.00929 326.709431)">驰放气 → 厂内处理</text>
+    <text style="font-size: 9px; font-family: 'Microsoft YaHei'" transform="translate(350.470227 335.612752)">46.87 kg</text>
+   </g>
+   <g id="text_14">
+    <g id="patch_16">
+     <path d="M 225.319091 133.809788 
+L 306.089872 133.809788 
+L 306.089872 122.012757 
+L 225.319091 122.012757 
+z
+" style="fill: #ffffff"/>
+    </g>
+    <text style="font-size: 9px; font-family: 'Microsoft YaHei'; text-anchor: start" x="226.309091" y="130.530413" transform="rotate(-0 226.309091 130.530413)">混合气 6,248.92 kg</text>
+   </g>
+   <g id="text_15">
+    <g id="patch_17">
+     <path d="M 225.319091 191.100094 
+L 315.089872 191.100094 
+L 315.089872 179.267906 
+L 225.319091 179.267906 
+z
+" style="fill: #ffffff"/>
+    </g>
+    <text style="font-size: 9px; font-family: 'Microsoft YaHei'; text-anchor: start" x="226.309091" y="187.820719" transform="rotate(-0 226.309091 187.820719)">反应出口 6,248.92 kg</text>
+   </g>
+   <g id="text_16">
+    <g id="patch_18">
+     <path d="M 225.319091 248.341884 
+L 297.089872 248.341884 
+L 297.089872 236.571571 
+L 225.319091 236.571571 
+z
+" style="fill: #ffffff"/>
+    </g>
+    <text style="font-size: 9px; font-family: 'Microsoft YaHei'; text-anchor: start" x="226.309091" y="245.062509" transform="rotate(-0 226.309091 245.062509)">粗液 1,562.23 kg</text>
+   </g>
+   <g id="text_17">
+    <g id="patch_19">
+     <path d="M 269.482692 210.643773 
+L 320.590036 210.643773 
+L 320.590036 189.178773 
+L 269.482692 189.178773 
+z
+" style="fill: #ffffff"/>
+    </g>
+    <text style="font-size: 9px; font-family: 'Microsoft YaHei'" transform="translate(286.036364 197.716204)">气相</text>
+    <text style="font-size: 9px; font-family: 'Microsoft YaHei'" transform="translate(270.472692 207.344622)">4,686.69 kg</text>
+   </g>
+   <g id="text_18">
+    <g id="patch_20">
+     <path d="M 130.841399 260.544426 
+L 174.504055 260.544426 
+L 174.504055 239.096301 
+L 130.841399 239.096301 
+z
+" style="fill: #ffffff"/>
+    </g>
+    <text style="font-size: 9px; font-family: 'Microsoft YaHei'" transform="translate(139.172727 247.616858)">回收水</text>
+    <text style="font-size: 9px; font-family: 'Microsoft YaHei'" transform="translate(131.831399 257.245276)">562.23 kg</text>
+   </g>
+   <g id="text_19">
+    <g id="patch_21">
+     <path d="M 78.046364 156.688557 
+L 98.026364 156.688557 
+L 98.026364 144.95217 
+L 78.046364 144.95217 
+z
+" style="fill: #ffffff"/>
+    </g>
+    <text style="font-size: 9px; font-family: 'Microsoft YaHei'; text-anchor: start" x="79.036364" y="153.417795" transform="rotate(-0 79.036364 153.417795)">供水</text>
+   </g>
+  </g>
+  <g id="text_20">
+   <text style="font-size: 17px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="221.4" y="21.602188" transform="rotate(-0 221.4 21.602188)">CO2 加氢制甲醇：反应—分离—循环工艺物质流</text>
+  </g>
+  <g id="text_21">
+   <text style="font-size: 10px; font-family: 'Microsoft YaHei'" transform="translate(35.810937 355.594117)">理想守恒模型；基准 1 t 纯甲醇；流量单位 kg/t 产品；单程 25%，气相循环 99%。</text>
+   <text style="font-size: 10px; font-family: 'Microsoft YaHei'" transform="translate(11.065625 366.624)">纯 CO2/H2，完全气液分离；循环比 2.8835，总碳利用率 97.0874%；与原始 CSV 审计分开。</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pfd2ead7261">
+   <rect x="7.2" y="12.384" width="428.4" height="345.6"/>
+  </clipPath>
+ </defs>
+</svg>

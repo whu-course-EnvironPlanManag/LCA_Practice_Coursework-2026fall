@@ -1,0 +1,1 @@
+打开 outputs/index.html 查看报告、图表与核验结果。使用课程提供的 source_data 目录作为输入。在安装 requirements.txt 的 Python 环境中执行 python run_all.py，可用 --data 指定数据目录。安装 Plotly 后生成自包含的 Plotly 网页；缺少该库时，页面同时提供离线流量带图和联网 Plotly 视图。各 CSV 中磷流单位为 Mt P/年。物种覆盖与原始数据见 stock.csv、animal_products.csv 和 excluded.csv。报告采用随附的报告模板与本版参数，若自行改变参数需同步审阅正文。
