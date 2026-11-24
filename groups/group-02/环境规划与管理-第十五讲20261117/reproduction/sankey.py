@@ -7,6 +7,7 @@ import numpy as np
 import plotly.graph_objects as go
 
 from mfa_model import GlobalPModel
+from png_export import export_png
 
 _OUT_DIR = os.path.dirname(os.path.abspath(__file__))
 
@@ -54,10 +55,10 @@ def export_sankey(model: GlobalPModel, out_path=None, png_path=None):
     out_path = out_path or os.path.join(_OUT_DIR, "sankey_2022.html")
     png_path = png_path or os.path.splitext(out_path)[0] + ".png"
     fig.write_html(out_path, include_plotlyjs=True, full_html=True)
-    try:
-        fig.write_image(png_path, format="png", width=1400, height=800, scale=2)
-    except Exception as exc:  # kaleido/Chrome 不可用时退化为仅 HTML，不阻断主流程
-        print(f"[提示] 静态 PNG 导出失败（{exc}），已保留交互式 HTML。")
+    if export_png(out_path, png_path, 1400, 920):
+        print(f"[OK] 静态 PNG 已导出：{png_path}")
+    else:
+        print("[提示] 静态 PNG 导出失败，已保留交互式 HTML。")
     return out_path
 
 

@@ -136,8 +136,9 @@ def load_population_projection(variant="Medium variant"):
     """
     读取 UN WPP 人口预测数据（长表格式，含 Year 列）。
 
-    使用 openpyxl 只读模式流式提取（避开 pandas.read_excel 读取 24MB 大表
-    时偶发的段错误），仅保留 World 行。
+    使用 zipfile + ElementTree.iterparse 直接流式解析 xlsx（纯 Python），
+    避开 openpyxl/lxml 在 24MB 大表上偶发的段错误（0xC0000005），仅保留
+    World 行。
 
     参数
     ----
@@ -147,34 +148,98 @@ def load_population_projection(variant="Medium variant"):
     ----
     DataFrame: 含列 [Location, Year, Population_thousands]。
     """
-    import openpyxl
+    import io
+    import zipfile
+    import xml.etree.ElementTree as ET
+
     path = os.path.join(FIRST_REV,
                         "7.Global population projection data for P sustainability scenario analysis.xlsx")
-    wb = openpyxl.load_workbook(path, read_only=True, data_only=True)
-    ws = wb[variant]
+    ns = "{http://schemas.openxmlformats.org/spreadsheetml/2006/main}"
+    rel_ns = "{http://schemas.openxmlformats.org/officeDocument/2006/relationships}"
+    tag_row, tag_c, tag_v, tag_is, tag_t = (f"{ns}{s}"
+                                            for s in ("row", "c", "v", "is", "t"))
 
-    header = None
-    loc_idx = year_idx = pop_idx = None
-    rows = []
-    for row in ws.iter_rows(values_only=True):
-        if header is None:
-            # 定位表头行（含 'Variant' 与 'country or area'）
-            if row and any("Variant" in str(c) for c in row) \
-                    and any("country or area" in str(c) for c in row):
-                header = row
-                loc_idx = next(i for i, c in enumerate(header)
-                               if "country or area" in str(c))
-                year_idx = next(i for i, c in enumerate(header) if str(c).strip() == "Year")
-                pop_idx = next(i for i, c in enumerate(header)
-                               if "1 July" in str(c) and "Total Population" in str(c))
-            continue
-        if row and loc_idx is not None and str(row[loc_idx]) == "World":
-            year = row[year_idx]
-            pop = row[pop_idx]
-            if isinstance(year, (int, float)) and pop is not None:
-                rows.append({"Location": "World", "Year": int(year),
-                             "Population_thousands": float(pop)})
-    wb.close()
+    def _col_index(ref):
+        n = 0
+        for ch in ref:
+            if "A" <= ch <= "Z":
+                n = n * 26 + (ord(ch) - 64)
+            elif "a" <= ch <= "z":
+                n = n * 26 + (ord(ch) - 96)
+        return n - 1
+
+    def _cell_value(c, shared):
+        t = c.get("t")
+        v = c.find(tag_v)
+        if v is not None and v.text is not None:
+            if t == "s":
+                return shared[int(v.text)]
+            if t == "b":
+                return v.text == "1"
+            return v.text
+        is_el = c.find(tag_is)
+        if is_el is not None:
+            return "".join(x.text or "" for x in is_el.iter(tag_t))
+        return None
+
+    with zipfile.ZipFile(path) as z:
+        shared = []
+        if "xl/sharedStrings.xml" in z.namelist():
+            for si in ET.fromstring(z.read("xl/sharedStrings.xml")).findall(f"{ns}si"):
+                shared.append("".join(t.text or "" for t in si.iter(tag_t)))
+
+        # 工作表名 -> sheet 文件（经 workbook.xml 与 rels 解析）
+        wb = ET.fromstring(z.read("xl/workbook.xml"))
+        sheet_rid = None
+        for sh in wb.findall(f".//{ns}sheets/{ns}sheet"):
+            if sh.get("name") == variant:
+                sheet_rid = sh.get(f"{rel_ns}id")
+                break
+        if sheet_rid is None:
+            raise ValueError(f"未找到工作表 {variant}")
+        rels = ET.fromstring(z.read("xl/_rels/workbook.xml.rels"))
+        target = None
+        for rel in rels:
+            if rel.get("Id") == sheet_rid:
+                target = rel.get("Target")
+                break
+        if target is None:
+            raise ValueError("未找到工作表关系")
+        if not target.startswith("xl/"):
+            target = "xl/" + target.lstrip("/")
+
+        loc_col = year_col = pop_col = None
+        rows = []
+        for _, elem in ET.iterparse(io.BytesIO(z.read(target)), events=("end",)):
+            if elem.tag != tag_row:
+                continue
+            col_vals = {}
+            for c in elem.findall(tag_c):
+                col_vals[_col_index(c.get("r"))] = _cell_value(c, shared)
+            if loc_col is None:
+                # 定位表头行（含 'Variant' 与 'country or area'）
+                if any(v == "Variant" for v in col_vals.values()) and \
+                        any("country or area" in str(v) for v in col_vals.values()):
+                    for ci, val in col_vals.items():
+                        s = str(val)
+                        if "country or area" in s:
+                            loc_col = ci
+                        elif s.strip() == "Year":
+                            year_col = ci
+                        elif "1 July" in s and "Total Population" in s:
+                            pop_col = ci
+                elem.clear()
+                continue
+            if str(col_vals.get(loc_col)) == "World":
+                year = col_vals.get(year_col)
+                pop = col_vals.get(pop_col)
+                if year is not None and pop is not None:
+                    try:
+                        rows.append({"Location": "World", "Year": int(float(year)),
+                                     "Population_thousands": float(pop)})
+                    except (ValueError, TypeError):
+                        pass
+            elem.clear()
     return pd.DataFrame(rows)
 
 

@@ -9,6 +9,7 @@ import plotly.graph_objects as go
 
 import data_loader as dl
 from mfa_model import GlobalPModel
+from png_export import export_png
 
 DEFAULT_REDUCE = 0.20
 DEFAULT_REPLACE = 0.75
@@ -143,10 +144,10 @@ def export_scenario_figure(table, out_path=None, png_path=None):
     )
     fig.update_yaxes(rangemode="tozero")
     fig.write_html(out_path, include_plotlyjs=True, full_html=True)
-    try:
-        fig.write_image(png_path, format="png", width=1100, height=650, scale=2)
-    except Exception as exc:  # kaleido/Chrome 不可用时退化为仅 HTML
-        print(f"[提示] 静态 PNG 导出失败（{exc}），已保留交互式 HTML。")
+    if export_png(out_path, png_path, 1100, 780):
+        print(f"[OK] 静态 PNG 已导出：{png_path}")
+    else:
+        print("[提示] 静态 PNG 导出失败，已保留交互式 HTML。")
     return out_path
 
 
