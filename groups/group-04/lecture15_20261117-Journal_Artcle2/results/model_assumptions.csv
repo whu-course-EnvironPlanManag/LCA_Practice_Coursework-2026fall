@@ -1,0 +1,18 @@
+﻿Parameter,Value,Basis
+Unit,Mt P unless noted,Conversion from tons to million metric tons
+P2O5 conversion,0.4364,Mass fraction P in P2O5; applied to fertilizer and mining records
+Fertilizer observation year,2021,Latest country-level FAOSTAT Agricultural Use year
+Mining observation year,2021,Latest year with at least 10 reported countries; incomplete trailing column excluded
+2022 fertilizer estimate,20.36207341000234,2021 per-capita use scaled by 2022 world population
+2022 mining estimate,11.318206838988278,Latest complete per-capita mining scaled by 2022 world population
+2050 population path,Medium variant,United Nations World Population Prospects 2024
+Crop allocation: food,0.52,Assumption; source data does not provide complete food/feed allocation
+Crop allocation: feed,0.3,Assumption; source data does not provide complete food/feed allocation
+Crop harvest index,0.8,Assumption used to estimate crop uptake and internally returned residue
+Livestock PUE,0.23,Assignment reference value (23%)
+Baseline manure use,0.3,Assumption; assignment only specifies the 75% target
+Baseline struvite recovery,0.05,Assumption; assignment only specifies the 60% target
+Wastewater share,0.8,Assumption for resident P routed to wastewater
+Field-loss rate,0.1,Illustrative base coefficient; no measured global coefficient in provided inputs
+Cross-benefit coefficients,"0.15, 0.08, 0.12",Illustrative reduce/manure effects on field-loss rate; sensitivity is model-based
+Material balance,0.0001,Relative error threshold

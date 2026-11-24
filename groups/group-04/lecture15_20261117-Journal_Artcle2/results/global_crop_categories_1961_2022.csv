@@ -1,0 +1,807 @@
+﻿Product,Year,Crop harvest P (tons),Product category
+A,1961,72373.13102,Non-food agricultural products
+B,1961,489328.21,Fruits and vegetables
+C,1961,213900.3964,"Raw materials for oils, fats and sugars"
+D,1961,2440.92572,Kitchen condiments
+E,1961,2655792.489,Cereals
+F,1961,237130.4718,Pulses
+G,1961,1274752.824,Animal products
+H,1961,263913.0309,Cakes
+I,1961,7262.2192,Other
+J,1961,21037.78524,Alcohol and beverages
+K,1961,10169.08517,Forage
+L,1961,0.0,L
+M,1961,3722297.255,Live animals
+A,1962,77529.00709,Non-food agricultural products
+B,1962,485772.1631,Fruits and vegetables
+C,1962,207165.9873,"Raw materials for oils, fats and sugars"
+D,1962,2306.383744,Kitchen condiments
+E,1962,2851148.725,Cereals
+F,1962,256446.5724,Pulses
+G,1962,1304976.903,Animal products
+H,1962,286232.2706,Cakes
+I,1962,7355.2437,Other
+J,1962,23492.9366,Alcohol and beverages
+K,1962,11614.98018,Forage
+L,1962,0.0,L
+M,1962,3777361.183,Live animals
+A,1963,84552.4543,Non-food agricultural products
+B,1963,499238.5871,Fruits and vegetables
+C,1963,211166.3245,"Raw materials for oils, fats and sugars"
+D,1963,2478.342678,Kitchen condiments
+E,1963,2865796.165,Cereals
+F,1963,263989.9591,Pulses
+G,1963,1319933.926,Animal products
+H,1963,312438.0525,Cakes
+I,1963,6662.3143,Other
+J,1963,23332.08005,Alcohol and beverages
+K,1963,9128.98503,Forage
+L,1963,0.0,L
+M,1963,3826423.943,Live animals
+A,1964,88058.20982,Non-food agricultural products
+B,1964,509466.5328,Fruits and vegetables
+C,1964,243841.6974,"Raw materials for oils, fats and sugars"
+D,1964,2358.020343,Kitchen condiments
+E,1964,3050531.733,Cereals
+F,1964,278584.6647,Pulses
+G,1964,1362570.821,Animal products
+H,1964,321555.7296,Cakes
+I,1964,6046.7212,Other
+J,1964,25265.63368,Alcohol and beverages
+K,1964,11654.69645,Forage
+L,1964,0.0,L
+M,1964,3892697.148,Live animals
+A,1965,92448.74396,Non-food agricultural products
+B,1965,514757.6308,Fruits and vegetables
+C,1965,260511.4444,"Raw materials for oils, fats and sugars"
+D,1965,2214.006742,Kitchen condiments
+E,1965,3031780.777,Cereals
+F,1965,279124.4234,Pulses
+G,1965,1416723.822,Animal products
+H,1965,343160.3497,Cakes
+I,1965,7988.1566,Other
+J,1965,25869.05835,Alcohol and beverages
+K,1965,10208.08462,Forage
+L,1965,0.0,L
+M,1965,3981156.819,Live animals
+A,1966,87805.47657,Non-food agricultural products
+B,1966,527462.9109,Fruits and vegetables
+C,1966,261101.2987,"Raw materials for oils, fats and sugars"
+D,1966,2278.906083,Kitchen condiments
+E,1966,3274311.608,Cereals
+F,1966,300980.7669,Pulses
+G,1966,1453703.329,Animal products
+H,1966,322575.3647,Cakes
+I,1966,6507.5156,Other
+J,1966,26339.38272,Alcohol and beverages
+K,1966,11041.55319,Forage
+L,1966,0.0,L
+M,1966,4059664.798,Live animals
+A,1967,86009.40315,Non-food agricultural products
+B,1967,542441.8628,Fruits and vegetables
+C,1967,267545.7525,"Raw materials for oils, fats and sugars"
+D,1967,2350.457929,Kitchen condiments
+E,1967,3388370.023,Cereals
+F,1967,309852.9887,Pulses
+G,1967,1511883.261,Animal products
+H,1967,312588.7731,Cakes
+I,1967,6961.6683,Other
+J,1967,27396.49056,Alcohol and beverages
+K,1967,11972.01928,Forage
+L,1967,0.0,L
+M,1967,4155651.581,Live animals
+A,1968,90951.24445,Non-food agricultural products
+B,1968,559056.4767,Fruits and vegetables
+C,1968,268883.3195,"Raw materials for oils, fats and sugars"
+D,1968,2360.196331,Kitchen condiments
+E,1968,3530110.109,Cereals
+F,1968,326486.5487,Pulses
+G,1968,1553600.685,Animal products
+H,1968,338160.6191,Cakes
+I,1968,6327.3322,Other
+J,1968,27951.28906,Alcohol and beverages
+K,1968,11799.6378,Forage
+L,1968,0.0,L
+M,1968,4218792.504,Live animals
+A,1969,89381.79253,Non-food agricultural products
+B,1969,549497.3703,Fruits and vegetables
+C,1969,267838.4355,"Raw materials for oils, fats and sugars"
+D,1969,2458.845005,Kitchen condiments
+E,1969,3539968.311,Cereals
+F,1969,334022.8217,Pulses
+G,1969,1587150.523,Animal products
+H,1969,329314.9916,Cakes
+I,1969,6856.1821,Other
+J,1969,28896.18445,Alcohol and beverages
+K,1969,12339.15606,Forage
+L,1969,0.0,L
+M,1969,4238655.356,Live animals
+A,1970,90986.33505,Non-food agricultural products
+B,1970,578071.0592,Fruits and vegetables
+C,1970,301592.1784,"Raw materials for oils, fats and sugars"
+D,1970,2507.678854,Kitchen condiments
+E,1970,3605620.606,Cereals
+F,1970,346976.4629,Pulses
+G,1970,1630229.957,Animal products
+H,1970,346284.1762,Cakes
+I,1970,6174.6256,Other
+J,1970,30938.45271,Alcohol and beverages
+K,1970,12250.26398,Forage
+L,1970,0.0,L
+M,1970,4281409.866,Live animals
+A,1971,94750.34033,Non-food agricultural products
+B,1971,572412.1884,Fruits and vegetables
+C,1971,305334.3461,"Raw materials for oils, fats and sugars"
+D,1971,2599.051101,Kitchen condiments
+E,1971,3910632.824,Cereals
+F,1971,357197.5814,Pulses
+G,1971,1671232.555,Animal products
+H,1971,355736.9918,Cakes
+I,1971,7481.6513,Other
+J,1971,31271.71848,Alcohol and beverages
+K,1971,10944.6295,Forage
+L,1971,0.0,L
+M,1971,4366743.361,Live animals
+A,1972,99348.80409,Non-food agricultural products
+B,1972,557567.1737,Fruits and vegetables
+C,1972,297208.8806,"Raw materials for oils, fats and sugars"
+D,1972,2532.635909,Kitchen condiments
+E,1972,3786168.163,Cereals
+F,1972,361904.1174,Pulses
+G,1972,1723932.457,Animal products
+H,1972,362966.9036,Cakes
+I,1972,7341.4104,Other
+J,1972,31771.8288,Alcohol and beverages
+K,1972,10580.02598,Forage
+L,1972,0.0,L
+M,1972,4451535.953,Live animals
+A,1973,103547.5275,Non-food agricultural products
+B,1973,601303.484,Fruits and vegetables
+C,1973,312579.7172,"Raw materials for oils, fats and sugars"
+D,1973,2720.934821,Kitchen condiments
+E,1973,4100532.497,Cereals
+F,1973,432791.8976,Pulses
+G,1973,1748198.995,Animal products
+H,1973,377235.8763,Cakes
+I,1973,6720.4531,Other
+J,1973,35652.64068,Alcohol and beverages
+K,1973,10987.282,Forage
+L,1973,0.0,L
+M,1973,4514387.652,Live animals
+A,1974,103251.5271,Non-food agricultural products
+B,1974,593284.2677,Fruits and vegetables
+C,1974,320746.2902,"Raw materials for oils, fats and sugars"
+D,1974,2768.607318,Kitchen condiments
+E,1974,4011511.204,Cereals
+F,1974,401794.7845,Pulses
+G,1974,1791638.34,Animal products
+H,1974,381509.6773,Cakes
+I,1974,7657.9272,Other
+J,1974,35954.09129,Alcohol and beverages
+K,1974,10891.11798,Forage
+L,1974,0.0,L
+M,1974,4610532.666,Live animals
+A,1975,93176.21776,Non-food agricultural products
+B,1975,596421.0178,Fruits and vegetables
+C,1975,337316.9262,"Raw materials for oils, fats and sugars"
+D,1975,2795.855931,Kitchen condiments
+E,1975,4056734.298,Cereals
+F,1975,459307.2651,Pulses
+G,1975,1835588.454,Animal products
+H,1975,341676.2059,Cakes
+I,1975,7394.842,Other
+J,1975,35644.58449,Alcohol and beverages
+K,1975,9180.48112,Forage
+L,1975,0.0,L
+M,1975,4680765.529,Live animals
+A,1976,91204.51139,Non-food agricultural products
+B,1976,600944.724,Fruits and vegetables
+C,1976,352009.8124,"Raw materials for oils, fats and sugars"
+D,1976,2775.663781,Kitchen condiments
+E,1976,4407587.981,Cereals
+F,1976,425948.3464,Pulses
+G,1976,1874943.761,Animal products
+H,1976,327340.9333,Cakes
+I,1976,5662.7343,Other
+J,1976,36538.25562,Alcohol and beverages
+K,1976,10032.51338,Forage
+L,1976,0.0,L
+M,1976,4718355.827,Live animals
+A,1977,103952.9191,Non-food agricultural products
+B,1977,617350.7422,Fruits and vegetables
+C,1977,369532.2117,"Raw materials for oils, fats and sugars"
+D,1977,3273.927616,Kitchen condiments
+E,1977,4353573.955,Cereals
+F,1977,513949.2056,Pulses
+G,1977,1948679.884,Animal products
+H,1977,383582.3943,Cakes
+I,1977,7061.526,Other
+J,1977,36674.72236,Alcohol and beverages
+K,1977,10067.5601,Forage
+L,1977,0.0,L
+M,1977,4747175.103,Live animals
+A,1978,100392.8328,Non-food agricultural products
+B,1978,644317.6675,Fruits and vegetables
+C,1978,393107.6326,"Raw materials for oils, fats and sugars"
+D,1978,3247.087608,Kitchen condiments
+E,1978,4751148.249,Cereals
+F,1978,529448.8223,Pulses
+G,1978,2013916.089,Animal products
+H,1978,368056.1424,Cakes
+I,1978,7577.312,Other
+J,1978,37436.31196,Alcohol and beverages
+K,1978,8145.13639,Forage
+L,1978,0.0,L
+M,1978,4780482.62,Live animals
+A,1979,103101.4247,Non-food agricultural products
+B,1979,644214.5073,Fruits and vegetables
+C,1979,386312.0195,"Raw materials for oils, fats and sugars"
+D,1979,3298.649641,Kitchen condiments
+E,1979,4588913.415,Cereals
+F,1979,590053.9034,Pulses
+G,1979,2060186.568,Animal products
+H,1979,395139.0105,Cakes
+I,1979,7972.219,Other
+J,1979,41046.06398,Alcohol and beverages
+K,1979,7480.40794,Forage
+L,1979,0.0,L
+M,1979,4828399.397,Live animals
+A,1980,103016.4682,Non-food agricultural products
+B,1980,606633.2689,Fruits and vegetables
+C,1980,377108.9144,"Raw materials for oils, fats and sugars"
+D,1980,3320.327383,Kitchen condiments
+E,1980,4634597.184,Cereals
+F,1980,558980.9545,Pulses
+G,1980,2108961.762,Animal products
+H,1980,383203.4129,Cakes
+I,1980,7763.6193,Other
+J,1980,40804.76057,Alcohol and beverages
+K,1980,8230.67851,Forage
+L,1980,0.0,L
+M,1980,4879903.958,Live animals
+A,1981,112771.7318,Non-food agricultural products
+B,1981,644760.3453,Fruits and vegetables
+C,1981,413988.4818,"Raw materials for oils, fats and sugars"
+D,1981,3314.490089,Kitchen condiments
+E,1981,4843872.552,Cereals
+F,1981,602032.1422,Pulses
+G,1981,2144028.011,Animal products
+H,1981,419417.145,Cakes
+I,1981,9763.4999,Other
+J,1981,40484.35596,Alcohol and beverages
+K,1981,7765.83988,Forage
+L,1981,0.0,L
+M,1981,4923974.227,Live animals
+A,1982,111121.2979,Non-food agricultural products
+B,1982,654985.3869,Fruits and vegetables
+C,1982,464274.8367,"Raw materials for oils, fats and sugars"
+D,1982,3383.449018,Kitchen condiments
+E,1982,5055671.878,Cereals
+F,1982,629936.0368,Pulses
+G,1982,2197927.133,Animal products
+H,1982,412420.997,Cakes
+I,1982,7939.5529,Other
+J,1982,42767.3022,Alcohol and beverages
+K,1982,9101.34224,Forage
+L,1982,0.0,L
+M,1982,4978546.923,Live animals
+A,1983,106354.3046,Non-food agricultural products
+B,1983,665744.3878,Fruits and vegetables
+C,1983,449589.4986,"Raw materials for oils, fats and sugars"
+D,1983,3620.091426,Kitchen condiments
+E,1983,4939331.385,Cereals
+F,1983,563083.0673,Pulses
+G,1983,2262706.391,Animal products
+H,1983,399951.172,Cakes
+I,1983,8973.6378,Other
+J,1983,42405.50979,Alcohol and beverages
+K,1983,10399.94352,Forage
+L,1983,0.0,L
+M,1983,5015104.257,Live animals
+A,1984,131446.0507,Non-food agricultural products
+B,1984,701045.8091,Fruits and vegetables
+C,1984,477142.0565,"Raw materials for oils, fats and sugars"
+D,1984,3758.962067,Kitchen condiments
+E,1984,5352256.855,Cereals
+F,1984,631802.7295,Pulses
+G,1984,2337016.146,Animal products
+H,1984,502370.6306,Cakes
+I,1984,8389.8535,Other
+J,1984,41290.93999,Alcohol and beverages
+K,1984,10433.48152,Forage
+L,1984,0.0,L
+M,1984,5049845.264,Live animals
+A,1985,130034.1287,Non-food agricultural products
+B,1985,707850.3879,Fruits and vegetables
+C,1985,488103.4104,"Raw materials for oils, fats and sugars"
+D,1985,4150.550912,Kitchen condiments
+E,1985,5434929.664,Cereals
+F,1985,693770.6453,Pulses
+G,1985,2430288.676,Animal products
+H,1985,469123.3647,Cakes
+I,1985,9344.299,Other
+J,1985,41239.96628,Alcohol and beverages
+K,1985,11448.84663,Forage
+L,1985,0.0,L
+M,1985,5082202.798,Live animals
+A,1986,114583.3905,Non-food agricultural products
+B,1986,736374.2796,Fruits and vegetables
+C,1986,494835.2542,"Raw materials for oils, fats and sugars"
+D,1986,4186.707525,Kitchen condiments
+E,1986,5503049.807,Cereals
+F,1986,657873.5564,Pulses
+G,1986,2504717.668,Animal products
+H,1986,415293.0896,Cakes
+I,1986,8391.3182,Other
+J,1986,42339.90459,Alcohol and beverages
+K,1986,11128.64775,Forage
+L,1986,0.0,L
+M,1986,5146048.422,Live animals
+A,1987,122687.0374,Non-food agricultural products
+B,1987,742793.2768,Fruits and vegetables
+C,1987,527621.9724,"Raw materials for oils, fats and sugars"
+D,1987,4484.148865,Kitchen condiments
+E,1987,5326748.635,Cereals
+F,1987,699943.1046,Pulses
+G,1987,2542754.075,Animal products
+H,1987,451486.0204,Cakes
+I,1987,10228.8466,Other
+J,1987,43793.87359,Alcohol and beverages
+K,1987,11233.31379,Forage
+L,1987,0.0,L
+M,1987,5170540.993,Live animals
+A,1988,133578.8044,Non-food agricultural products
+B,1988,755631.8707,Fruits and vegetables
+C,1988,524786.6584,"Raw materials for oils, fats and sugars"
+D,1988,4489.554628,Kitchen condiments
+E,1988,5225158.441,Cereals
+F,1988,675541.7549,Pulses
+G,1988,2622499.288,Animal products
+H,1988,489395.701,Cakes
+I,1988,9046.5318,Other
+J,1988,43617.47368,Alcohol and beverages
+K,1988,10918.78945,Forage
+L,1988,0.0,L
+M,1988,5206750.701,Live animals
+A,1989,126015.5524,Non-food agricultural products
+B,1989,774499.4685,Fruits and vegetables
+C,1989,541452.8391,"Raw materials for oils, fats and sugars"
+D,1989,4703.765761,Kitchen condiments
+E,1989,5608806.318,Cereals
+F,1989,746284.7287,Pulses
+G,1989,2648984.59,Animal products
+H,1989,458810.6538,Cakes
+I,1989,9468.8166,Other
+J,1989,44721.71849,Alcohol and beverages
+K,1989,11708.86279,Forage
+L,1989,0.0,L
+M,1989,5291428.396,Live animals
+A,1990,136294.0772,Non-food agricultural products
+B,1990,784000.9959,Fruits and vegetables
+C,1990,562860.742,"Raw materials for oils, fats and sugars"
+D,1990,4757.528233,Kitchen condiments
+E,1990,5882471.765,Cereals
+F,1990,767972.4218,Pulses
+G,1990,2722171.337,Animal products
+H,1990,497860.017,Cakes
+I,1990,9718.7597,Other
+J,1990,45291.90023,Alcohol and beverages
+K,1990,11847.67752,Forage
+L,1990,0.0,L
+M,1990,5338008.061,Live animals
+A,1991,150190.793,Non-food agricultural products
+B,1991,798209.3637,Fruits and vegetables
+C,1991,611214.052,"Raw materials for oils, fats and sugars"
+D,1991,4631.570423,Kitchen condiments
+E,1991,5672169.908,Cereals
+F,1991,723621.955,Pulses
+G,1991,2563248.696,Animal products
+H,1991,547127.4916,Cakes
+I,1991,9723.150711,Other
+J,1991,45477.81892,Alcohol and beverages
+K,1991,11017.41695,Forage
+L,1991,0.0,L
+M,1991,5355401.091,Live animals
+A,1992,134538.9675,Non-food agricultural products
+B,1992,831519.6855,Fruits and vegetables
+C,1992,611993.1757,"Raw materials for oils, fats and sugars"
+D,1992,5001.97778,Kitchen condiments
+E,1992,5852624.312,Cereals
+F,1992,786694.7866,Pulses
+G,1992,2750757.272,Animal products
+H,1992,477819.8851,Cakes
+I,1992,9764.260832,Other
+J,1992,46276.32543,Alcohol and beverages
+K,1992,10592.70205,Forage
+L,1992,0.0,L
+M,1992,5389083.746,Live animals
+A,1993,124147.4812,Non-food agricultural products
+B,1993,878691.2765,Fruits and vegetables
+C,1993,583126.6535,"Raw materials for oils, fats and sugars"
+D,1993,5818.520072,Kitchen condiments
+E,1993,5692055.134,Cereals
+F,1993,796369.343,Pulses
+G,1993,2838693.082,Animal products
+H,1993,437411.3355,Cakes
+I,1993,8913.318657,Other
+J,1993,46084.33798,Alcohol and beverages
+K,1993,9919.864539,Forage
+L,1993,0.0,L
+M,1993,5390358.518,Live animals
+A,1994,134949.5294,Non-food agricultural products
+B,1994,888316.4335,Fruits and vegetables
+C,1994,611798.409,"Raw materials for oils, fats and sugars"
+D,1994,5728.438521,Kitchen condiments
+E,1994,5803771.747,Cereals
+F,1994,916246.0493,Pulses
+G,1994,2999533.176,Animal products
+H,1994,485087.5831,Cakes
+I,1994,9179.28936,Other
+J,1994,46980.22508,Alcohol and beverages
+K,1994,11027.0421,Forage
+L,1994,0.0,L
+M,1994,5444291.847,Live animals
+A,1995,142117.9088,Non-food agricultural products
+B,1995,931251.4048,Fruits and vegetables
+C,1995,664791.0209,"Raw materials for oils, fats and sugars"
+D,1995,5703.492413,Kitchen condiments
+E,1995,5626580.028,Cereals
+F,1995,856912.6594,Pulses
+G,1995,3108626.222,Animal products
+H,1995,517987.5602,Cakes
+I,1995,8865.148741,Other
+J,1995,47978.82006,Alcohol and beverages
+K,1995,10621.40346,Forage
+L,1995,0.0,L
+M,1995,5486872.877,Live animals
+A,1996,142589.1653,Non-food agricultural products
+B,1996,971220.2856,Fruits and vegetables
+C,1996,666593.6403,"Raw materials for oils, fats and sugars"
+D,1996,6548.577248,Kitchen condiments
+E,1996,6074214.575,Cereals
+F,1996,871852.3176,Pulses
+G,1996,3232442.049,Animal products
+H,1996,505889.3957,Cakes
+I,1996,9931.079609,Other
+J,1996,48889.50245,Alcohol and beverages
+K,1996,11654.68004,Forage
+L,1996,0.0,L
+M,1996,5513906.57,Live animals
+A,1997,141412.6189,Non-food agricultural products
+B,1997,970483.733,Fruits and vegetables
+C,1997,700589.1354,"Raw materials for oils, fats and sugars"
+D,1997,6719.297121,Kitchen condiments
+E,1997,6224842.565,Cereals
+F,1997,950183.532,Pulses
+G,1997,3267575.43,Animal products
+H,1997,498094.901,Cakes
+I,1997,9727.707632,Other
+J,1997,50011.36279,Alcohol and beverages
+K,1997,12031.37839,Forage
+L,1997,0.0,L
+M,1997,5411715.702,Live animals
+A,1998,134211.2345,Non-food agricultural products
+B,1998,1008135.51,Fruits and vegetables
+C,1998,710062.9216,"Raw materials for oils, fats and sugars"
+D,1998,7270.481475,Kitchen condiments
+E,1998,6137223.038,Cereals
+F,1998,1043492.528,Pulses
+G,1998,3361425.093,Animal products
+H,1998,478037.3482,Cakes
+I,1998,10625.84917,Other
+J,1998,50350.22537,Alcohol and beverages
+K,1998,10849.92497,Forage
+L,1998,0.0,L
+M,1998,5431071.639,Live animals
+A,1999,134087.6486,Non-food agricultural products
+B,1999,1053809.259,Fruits and vegetables
+C,1999,760186.1068,"Raw materials for oils, fats and sugars"
+D,1999,7556.523187,Kitchen condiments
+E,1999,6144843.265,Cereals
+F,1999,1029121.27,Pulses
+G,1999,3483172.692,Animal products
+H,1999,488294.9493,Cakes
+I,1999,10883.19717,Other
+J,1999,51838.55602,Alcohol and beverages
+K,1999,10716.24009,Forage
+L,1999,0.0,L
+M,1999,5469771.693,Live animals
+A,2000,135797.2099,Non-food agricultural products
+B,2000,1111700.816,Fruits and vegetables
+C,2000,735926.6908,"Raw materials for oils, fats and sugars"
+D,2000,8009.623694,Kitchen condiments
+E,2000,6084525.058,Cereals
+F,2000,1049768.014,Pulses
+G,2000,3572388.24,Animal products
+H,2000,482238.8252,Cakes
+I,2000,12013.61654,Other
+J,2000,53541.25545,Alcohol and beverages
+K,2000,11793.49326,Forage
+L,2000,0.0,L
+M,2000,5505594.318,Live animals
+A,2001,151434.1802,Non-food agricultural products
+B,2001,1125742.751,Fruits and vegetables
+C,2001,712988.7716,"Raw materials for oils, fats and sugars"
+D,2001,8095.76652,Kitchen condiments
+E,2001,6175949.762,Cereals
+F,2001,1138368.447,Pulses
+G,2001,3642491.405,Animal products
+H,2001,542240.0535,Cakes
+I,2001,11823.54963,Other
+J,2001,54276.18671,Alcohol and beverages
+K,2001,12433.53068,Forage
+L,2001,0.0,L
+M,2001,5511633.273,Live animals
+A,2002,138618.1793,Non-food agricultural products
+B,2002,1142104.137,Fruits and vegetables
+C,2002,744668.7607,"Raw materials for oils, fats and sugars"
+D,2002,8145.388763,Kitchen condiments
+E,2002,6064389.335,Cereals
+F,2002,1164699.222,Pulses
+G,2002,3746642.641,Animal products
+H,2002,486996.5903,Cakes
+I,2002,12702.16624,Other
+J,2002,54123.49802,Alcohol and beverages
+K,2002,12516.15415,Forage
+L,2002,0.0,L
+M,2002,5572889.833,Live animals
+A,2003,143071.6726,Non-food agricultural products
+B,2003,1189529.506,Fruits and vegetables
+C,2003,755748.2957,"Raw materials for oils, fats and sugars"
+D,2003,9084.798075,Kitchen condiments
+E,2003,6079840.409,Cereals
+F,2003,1227436.189,Pulses
+G,2003,3806707.018,Animal products
+H,2003,506673.297,Cakes
+I,2003,11277.40975,Other
+J,2003,54939.50853,Alcohol and beverages
+K,2003,13335.69324,Forage
+L,2003,0.0,L
+M,2003,5629772.425,Live animals
+A,2004,176342.729,Non-food agricultural products
+B,2004,1237285.014,Fruits and vegetables
+C,2004,807344.013,"Raw materials for oils, fats and sugars"
+D,2004,9291.707099,Kitchen condiments
+E,2004,6674602.926,Cereals
+F,2004,1309343.985,Pulses
+G,2004,3888543.511,Animal products
+H,2004,634350.5817,Cakes
+I,2004,12595.11356,Other
+J,2004,58821.60993,Alcohol and beverages
+K,2004,13392.92633,Forage
+L,2004,0.0,L
+M,2004,5698624.993,Live animals
+A,2005,175787.9937,Non-food agricultural products
+B,2005,1277250.017,Fruits and vegetables
+C,2005,819125.3432,"Raw materials for oils, fats and sugars"
+D,2005,9802.408356,Kitchen condiments
+E,2005,6639141.358,Cereals
+F,2005,1364136.73,Pulses
+G,2005,3980200.522,Animal products
+H,2005,630279.1266,Cakes
+I,2005,11842.21372,Other
+J,2005,59589.41011,Alcohol and beverages
+K,2005,12708.40951,Forage
+L,2005,0.0,L
+M,2005,5778994.508,Live animals
+A,2006,174891.8254,Non-food agricultural products
+B,2006,1285856.951,Fruits and vegetables
+C,2006,848789.4773,"Raw materials for oils, fats and sugars"
+D,2006,10095.01597,Kitchen condiments
+E,2006,6610561.71,Cereals
+F,2006,1405113.638,Pulses
+G,2006,4063437.068,Animal products
+H,2006,643905.4188,Cakes
+I,2006,13053.76484,Other
+J,2006,62268.6129,Alcohol and beverages
+K,2006,13295.51649,Forage
+L,2006,0.0,L
+M,2006,5852928.718,Live animals
+A,2007,177667.5583,Non-food agricultural products
+B,2007,1339532.488,Fruits and vegetables
+C,2007,917679.1563,"Raw materials for oils, fats and sugars"
+D,2007,10923.96635,Kitchen condiments
+E,2007,6769177.482,Cereals
+F,2007,1393518.401,Pulses
+G,2007,4170802.466,Animal products
+H,2007,658889.948,Cakes
+I,2007,13021.68806,Other
+J,2007,64635.68019,Alcohol and beverages
+K,2007,12445.40212,Forage
+L,2007,0.0,L
+M,2007,5910759.001,Live animals
+A,2008,161973.5191,Non-food agricultural products
+B,2008,1387728.085,Fruits and vegetables
+C,2008,973092.2327,"Raw materials for oils, fats and sugars"
+D,2008,11040.97087,Kitchen condiments
+E,2008,7358040.186,Cereals
+F,2008,1463440.417,Pulses
+G,2008,4309887.333,Animal products
+H,2008,601117.1253,Cakes
+I,2008,13590.57405,Other
+J,2008,66323.48451,Alcohol and beverages
+K,2008,12725.4062,Forage
+L,2008,0.0,L
+M,2008,5970967.085,Live animals
+A,2009,152372.7575,Non-food agricultural products
+B,2009,1399644.915,Fruits and vegetables
+C,2009,981365.7494,"Raw materials for oils, fats and sugars"
+D,2009,11560.02154,Kitchen condiments
+E,2009,7248319.677,Cereals
+F,2009,1422169.149,Pulses
+G,2009,4389563.995,Animal products
+H,2009,562153.9807,Cakes
+I,2009,12450.09887,Other
+J,2009,65453.73586,Alcohol and beverages
+K,2009,12292.45441,Forage
+L,2009,0.0,L
+M,2009,6001248.028,Live animals
+A,2010,170143.9642,Non-food agricultural products
+B,2010,1489808.354,Fruits and vegetables
+C,2010,993380.3722,"Raw materials for oils, fats and sugars"
+D,2010,12763.0034,Kitchen condiments
+E,2010,7097801.971,Cereals
+F,2010,1676420.02,Pulses
+G,2010,4485197.423,Animal products
+H,2010,624472.9978,Cakes
+I,2010,13544.02056,Other
+J,2010,66329.09741,Alcohol and beverages
+K,2010,11458.7255,Forage
+L,2010,0.0,L
+M,2010,6011199.921,Live animals
+A,2011,188663.4091,Non-food agricultural products
+B,2011,1557849.297,Fruits and vegetables
+C,2011,1066020.91,"Raw materials for oils, fats and sugars"
+D,2011,13551.10193,Kitchen condiments
+E,2011,7512919.505,Cereals
+F,2011,1645798.994,Pulses
+G,2011,4572369.252,Animal products
+H,2011,712484.7586,Cakes
+I,2011,13401.27526,Other
+J,2011,68573.08429,Alcohol and beverages
+K,2011,12346.40525,Forage
+L,2011,0.0,L
+M,2011,6031761.852,Live animals
+A,2012,189287.2174,Non-food agricultural products
+B,2012,1573134.02,Fruits and vegetables
+C,2012,1083663.013,"Raw materials for oils, fats and sugars"
+D,2012,13467.0376,Kitchen condiments
+E,2012,7407796.822,Cereals
+F,2012,1551930.655,Pulses
+G,2012,4684716.258,Animal products
+H,2012,713868.7299,Cakes
+I,2012,14088.77757,Other
+J,2012,68466.17866,Alcohol and beverages
+K,2012,12441.56529,Forage
+L,2012,0.0,L
+M,2012,6085765.476,Live animals
+A,2013,176683.6903,Non-food agricultural products
+B,2013,1630425.251,Fruits and vegetables
+C,2013,1159660.913,"Raw materials for oils, fats and sugars"
+D,2013,13976.581,Kitchen condiments
+E,2013,7970414.495,Cereals
+F,2013,1758483.977,Pulses
+G,2013,4781912.161,Animal products
+H,2013,658474.6972,Cakes
+I,2013,14154.31266,Other
+J,2013,69824.7604,Alcohol and beverages
+K,2013,12453.65158,Forage
+L,2013,0.0,L
+M,2013,6114976.865,Live animals
+A,2014,184701.3898,Non-food agricultural products
+B,2014,1668929.253,Fruits and vegetables
+C,2014,1173264.843,"Raw materials for oils, fats and sugars"
+D,2014,14306.18876,Kitchen condiments
+E,2014,8106427.114,Cereals
+F,2014,1908346.709,Pulses
+G,2014,4823019.97,Animal products
+H,2014,691274.3032,Cakes
+I,2014,13986.89361,Other
+J,2014,70449.31625,Alcohol and beverages
+K,2014,12400.6074,Forage
+L,2014,0.0,L
+M,2014,6151072.348,Live animals
+A,2015,161675.3141,Non-food agricultural products
+B,2015,1685100.362,Fruits and vegetables
+C,2015,1138922.153,"Raw materials for oils, fats and sugars"
+D,2015,14176.40475,Kitchen condiments
+E,2015,8169350.895,Cereals
+F,2015,2010892.901,Pulses
+G,2015,4916317.215,Animal products
+H,2015,605853.2618,Cakes
+I,2015,14145.95822,Other
+J,2015,70566.68881,Alcohol and beverages
+K,2015,13236.47823,Forage
+L,2015,0.0,L
+M,2015,6214967.878,Live animals
+A,2016,167343.8775,Non-food agricultural products
+B,2016,1697255.339,Fruits and vegetables
+C,2016,1144335.264,"Raw materials for oils, fats and sugars"
+D,2016,14775.57956,Kitchen condiments
+E,2016,8371582.526,Cereals
+F,2016,2107032.18,Pulses
+G,2016,4987111.766,Animal products
+H,2016,623178.0426,Cakes
+I,2016,14947.28106,Other
+J,2016,70884.90435,Alcohol and beverages
+K,2016,12967.64135,Forage
+L,2016,0.0,L
+M,2016,6289725.199,Live animals
+A,2017,180383.4143,Non-food agricultural products
+B,2017,1786039.912,Fruits and vegetables
+C,2017,1189786.327,"Raw materials for oils, fats and sugars"
+D,2017,15917.72947,Kitchen condiments
+E,2017,8531041.69,Cereals
+F,2017,2255983.05,Pulses
+G,2017,5405893.102,Animal products
+H,2017,666513.2838,Cakes
+I,2017,14898.34508,Other
+J,2017,70017.17657,Alcohol and beverages
+K,2017,12889.58984,Forage
+L,2017,0.0,L
+M,2017,6339454.903,Live animals
+A,2018,181539.1852,Non-food agricultural products
+B,2018,1820351.133,Fruits and vegetables
+C,2018,1206709.148,"Raw materials for oils, fats and sugars"
+D,2018,15940.95023,Kitchen condiments
+E,2018,8383183.652,Cereals
+F,2018,2158605.053,Pulses
+G,2018,5503036.242,Animal products
+H,2018,648474.879,Cakes
+I,2018,16902.80789,Other
+J,2018,70628.91603,Alcohol and beverages
+K,2018,11013.09308,Forage
+L,2018,0.0,L
+M,2018,6363544.151,Live animals
+A,2019,175953.8593,Non-food agricultural products
+B,2019,1825323.274,Fruits and vegetables
+C,2019,1193125.843,"Raw materials for oils, fats and sugars"
+D,2019,16169.00539,Kitchen condiments
+E,2019,8565550.993,Cereals
+F,2019,2101239.697,Pulses
+G,2019,5667238.328,Animal products
+H,2019,721484.3763,Cakes
+I,2019,16574.3587,Other
+J,2019,70427.27718,Alcohol and beverages
+K,2019,10856.24206,Forage
+L,2019,0.0,L
+M,2019,6385984.034,Live animals
+A,2020,175893.268,Non-food agricultural products
+B,2020,1874170.829,Fruits and vegetables
+C,2020,1170207.516,"Raw materials for oils, fats and sugars"
+D,2020,17022.00929,Kitchen condiments
+E,2020,8632310.667,Cereals
+F,2020,2226107.111,Pulses
+G,2020,5860708.417,Animal products
+H,2020,645912.9369,Cakes
+I,2020,17998.45938,Other
+J,2020,67211.87453,Alcohol and beverages
+K,2020,11191.03911,Forage
+L,2020,0.0,L
+M,2020,6499914.327,Live animals
+A,2021,180604.1406,Non-food agricultural products
+B,2021,1905664.516,Fruits and vegetables
+C,2021,1177826.458,"Raw materials for oils, fats and sugars"
+D,2021,17345.4946,Kitchen condiments
+E,2021,8837739.731,Cereals
+F,2021,2310464.715,Pulses
+G,2021,5900936.779,Animal products
+H,2021,662082.7796,Cakes
+I,2021,16803.70793,Other
+J,2021,69528.3398,Alcohol and beverages
+K,2021,10354.41679,Forage
+L,2021,0.0,L
+M,2021,6567983.618,Live animals
+A,2022,17047.68522,Non-food agricultural products
+B,2022,1938945.099,Fruits and vegetables
+C,2022,1093790.743,"Raw materials for oils, fats and sugars"
+D,2022,16475.80471,Kitchen condiments
+E,2022,8838986.572,Cereals
+F,2022,2194184.874,Pulses
+G,2022,5509755.918,Animal products
+H,2022,427402.9623,Cakes
+I,2022,17258.29851,Other
+J,2022,2378.1798,Alcohol and beverages
+K,2022,10667.85783,Forage
+L,2022,0.0,L
+M,2022,6649263.974,Live animals

@@ -1,0 +1,18 @@
+﻿Source,Target,Flow,Value (Mt P)
+Primary phosphate mining,Chemical industry,Primary supply,11.31820683898828
+Other supply (trade/stock estimate),Chemical industry,Estimated supply gap,9.043866571014059
+Chemical industry,Cropland,Mineral fertilizer,20.36207341000234
+Manure pool,Cropland,Recycled manure,1.8514297472080408
+Wastewater,Cropland,Recovered struvite,0.6294326817347973
+Soil legacy,Cropland,Soil legacy release,5.909429470425055
+Cropland,Crop harvest,Crop harvest,26.71615796837
+Cropland,Environmental losses,Field loss,2.036207341000234
+Crop harvest,Residents,Plant food,13.892402143552399
+Crop harvest,Livestock,Feed,8.014847390511
+Crop harvest,Other crop uses,Other crop uses,4.808908434306599
+Livestock,Residents,Animal products,1.84341489981753
+Livestock,Manure pool,Manure generated,6.171432490693469
+Manure pool,Environmental losses,Unrecovered manure,4.3200027434854285
+Residents,Human retention,Human retention,3.1471634086739844
+Residents,Wastewater,Wastewater generation,12.588653634695945
+Wastewater,Environmental losses,Unrecovered wastewater P,11.959220952961147
