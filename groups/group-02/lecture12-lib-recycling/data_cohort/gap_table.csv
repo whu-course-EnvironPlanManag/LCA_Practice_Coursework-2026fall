@@ -1,0 +1,15 @@
+﻿input_id,missing,what_is_now_available,blocking_scope,owner,next_action,severity,status
+M02_ACTUAL,园区分体系黑粉捕集率,已有EV I实验代理/LS原生推导，实际厂测仍缺；核分母和胶黏剂范围,recycling_flow_mfa;full_plant_li_mfa;wet_process_activities;engineering_equipment_sizing;complete_lca_inventory;lca_tea_results,A（园区分选实测）,取园区分体系黑粉实测捕集率（含分母定义与胶黏剂范围）；当前 EV I 0.9328 只是文献迁移情景,high,unresolved_null
+M03_COMPAT,JR产粉与选定湿法入料的同口径化验/含水率,LS有含水2.15%，不自动证明JR粉含水或元素干/湿基,recycling_flow_mfa;full_plant_li_mfa;wet_process_activities;engineering_equipment_sizing;complete_lca_inventory;lca_tea_results,A + 湿法设计方,对 JR 产粉与选定湿法入料做同口径化验（含水率、干/湿基、C/F 与胶黏剂）,high,unresolved_null
+M05_PRODUCTS,最终电池级Li2CO3/FePO4、Ni/Co/Mn盐的质量/水合形态/纯度/合格率,LS仅粗品中间物；ANL恢复率是全路线默认；不得把浸出97.6%当总收率,full_plant_li_mfa;complete_lca_inventory;lca_tea_results,A + 工艺设计方,取电池级 LCE/FePO4/NiCoMn 盐的质量标准、水合形态、纯度与合格率,high,unresolved_null
+M05_LI_PARTITIONS,各实际出厂/处置流股Li及连续工序分配,JR平衡略、LS粉线保密，残渣水电解液Li仍未闭合,full_plant_li_mfa;complete_lca_inventory;lca_tea_results,A,取各出厂/处置流股 Li 化验与连续工序分配表（当前 §4.2.3 保密）,medium,unresolved_null
+M08_ELECTRIC,同工艺分线电耗与公辅分摊,LS组合电耗可保留；未辨设备负荷不能拆成已核湿法电耗,complete_lca_inventory;lca_tea_results,A + 园区电气,安装分线电表或取设备负荷清单，拆分预处理/湿法/公辅,high,unresolved_null
+M08_STEAM,蒸汽压力/温度及返凝水或购热结算口径,LS仅有质量，可先按t计价；禁止无依据填2500MJ/t,complete_lca_inventory;lca_tea_results,A + 园区热工,取蒸汽压力/温度、返凝水量与购热结算口径（t 或 GJ）,medium,unresolved_null
+M08_WATER,全厂取水/纯水/循环/耗水/外排及处理层级,分线LS数据已补，但非本厂整套水系统,complete_lca_inventory;lca_tea_results,A + 园区水务,取全厂取水/纯水制备/循环/耗水/外排与处理层级,medium,unresolved_null
+M01_REUSE_SALE,再使用产品SOH、筛选合格率、重组损失和应用标准证据,8500t是分配输入；可售kWh=分配t×额定Wh/kg×筛选率×SOH×重组率（如另定义可用窗口再乘，不重复SOH）,recycling_feed_allocation;recycling_flow_mfa;full_plant_li_mfa;wet_process_activities;engineering_equipment_sizing;complete_lca_inventory;lca_tea_results,A + 梯次运营方,取 SOH、筛选合格率、重组损失与应用标准；可售 kWh 按四因子公式,high,unresolved_null
+M10_ALLOCATION,LCA的多产品分配/系统扩展与经济口径,物理年耗不因分配方法改变；LCOR须定义总成本/共产品回款/功能产物分母,complete_lca_inventory;lca_tea_results,A + B（LCA 方法）,与 B 约定多产品分配/系统扩展口径并锁定功能产物分母,medium,unresolved_null
+M13_FACTORS,B各试剂、能源、处置因子的版本与浓度边界,非全部因子已核；数据补齐不自动得到正式LCA,complete_lca_inventory;lca_tea_results,B,锁定 B 各试剂/能源/处置因子版本与浓度边界,medium,unresolved_null
+D-PARK-LINK,市域队列到园区的捕获率、外部来料与跨区域供给,当前首装队列只是区域需求分析一部分，不等于全市所有未来退役,未在闸门表中直接登记,A + C（区域供给）,取市域→园区捕获率、外部来料与跨区域供给证据,medium,unresolved_null
+M06_ROUTE,湿法体系选定（LFP 走 LS 还是其他、三元走 ANL 还是 LI20）,LS23 / ANL19 / JIANG24 三套参考 profile，已按 profile_id 隔离,wet_process_activities,A + 工艺设计方,选定体系并声明边界；不得把多套 profile 拼成同一座工厂,high,unresolved_null
+M07_ACID,98% 硫酸单耗版本（0.5630527 与 0.4902）,两版本并列，未平均；各自可换算示例规模年量,wet_process_activities,A + 工艺设计方,取原辅料表与酸雾核算的口径说明；未解前两版本并列、不取均值,medium,unresolved_null
+GAP-LCE-SALE,"A 侧可售 LCE 产量（口径与 C 的 3,000 t 财务变量分开）","JR 情景上限 3,142.6 t/a（100% 回收假设）；LS 情景干纯粗碳酸锂 1,059.736 t/a（中间品）",full_plant_li_mfa;lca_tea_results,A,"先解 M02/M03/M05，再给可售量；不得用 C 的 3,000 t 反推 A 的产量",high,unresolved_null

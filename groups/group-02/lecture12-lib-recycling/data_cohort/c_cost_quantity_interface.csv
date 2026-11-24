@@ -1,0 +1,36 @@
+﻿item_id,pricing_item,quantity_per_year,unit,quantity_kind,wet_or_dry,commercial_or_active,service_grade,basis,assumption,status,source_ids,note
+CR-01,来料整包（处理费计费基数）,68000.0,t_pack/a,input_allocation,-,-,混合来料,"实际进料 68,000 t/a",组内工况；含 LFP/三元,conditional_group_assumption,SRC031,"C 的处理费/负价收入应以本量为基数；不等于园区设计能力 80,000"
+CR-02,梯次分配整包（尚未形成收入）,8500.0,t_pack/a,input_allocation,-,-,分流输入,梯次能力 × 负荷,可售 kWh 与整包当量均 null,null_unresolved,SRC031,SOH/筛选率/重组率未取得，不得按梯次单价计收入
+CR-03,可售品：电池级碳酸锂,,t_product/a,saleable_product,-,-,电池级碳酸锂,M05_PRODUCTS 未解,成品规格/纯度/合格率未取得,null_unresolved,NEW-STD-LCE;NEW-STD-FEP;SRC040;SRC043,价格可先由 C 挂接，但数量必须等 A 的可售量解锁
+CR-04,可售品：电池级磷酸铁,,t_product/a,saleable_product,-,-,电池级磷酸铁,M05_PRODUCTS 未解,成品规格/纯度/合格率未取得,null_unresolved,NEW-STD-LCE;NEW-STD-FEP;SRC040;SRC043,价格可先由 C 挂接，但数量必须等 A 的可售量解锁
+CR-05,可售品：电池级镍/钴/锰盐,,t_product/a,saleable_product,-,-,电池级镍/钴/锰盐,M05_PRODUCTS 未解,成品规格/纯度/合格率未取得,null_unresolved,NEW-STD-LCE;NEW-STD-FEP;SRC040;SRC043,价格可先由 C 挂接，但数量必须等 A 的可售量解锁
+CR-06,可售品：铜箔产品,,t_product/a,saleable_product,-,-,铜箔产品,M05_PRODUCTS 未解,成品规格/纯度/合格率未取得,null_unresolved,NEW-STD-LCE;NEW-STD-FEP;SRC040;SRC043,价格可先由 C 挂接，但数量必须等 A 的可售量解锁
+CR-07,可售品：铝箔产品,,t_product/a,saleable_product,-,-,铝箔产品,M05_PRODUCTS 未解,成品规格/纯度/合格率未取得,null_unresolved,NEW-STD-LCE;NEW-STD-FEP;SRC040;SRC043,价格可先由 C 挂接，但数量必须等 A 的可售量解锁
+CR-08,可售品：硫酸钠,,t_product/a,saleable_product,-,-,硫酸钠,M05_PRODUCTS 未解,成品规格/纯度/合格率未取得,null_unresolved,NEW-STD-LCE;NEW-STD-FEP;SRC040;SRC043,价格可先由 C 挂接，但数量必须等 A 的可售量解锁
+CR-09,可售品：磷酸铝,,t_product/a,saleable_product,-,-,磷酸铝,M05_PRODUCTS 未解,成品规格/纯度/合格率未取得,null_unresolved,NEW-STD-LCE;NEW-STD-FEP;SRC040;SRC043,价格可先由 C 挂接，但数量必须等 A 的可售量解锁
+CR-10,可售品：其他外售品,,t_product/a,saleable_product,-,-,其他外售品,M05_PRODUCTS 未解,成品规格/纯度/合格率未取得,null_unresolved,NEW-STD-LCE;NEW-STD-FEP;SRC040;SRC043,价格可先由 C 挂接，但数量必须等 A 的可售量解锁
+CR-11,粗碳酸锂（中间品）,1338.0510913947232,t_product/a,recovered_intermediate,湿,-,中间品/副产,LS 同源路线示例规模,JR 粉料与 LS 组成的等价性未证实,recovered_intermediate_not_saleable,SRC040,"含水 0.20、干纯度 0.99；内部进入铁锂线；干纯 1,059.736 t/a"
+CR-12,磷酸铁渣（中间品）,7060.243171761647,t_product/a,recovered_intermediate,湿,-,中间品/副产,LS 同源路线示例规模,JR 粉料与 LS 组成的等价性未证实,recovered_intermediate_not_saleable,SRC040,"含水 0.40、干纯度 0.99；不是电池级磷酸铁；干纯 4,193.784 t/a"
+CR-13,磷酸铝（副产）,1270.4952921007618,t_product/a,recovered_intermediate,湿,-,中间品/副产,LS 同源路线示例规模,JR 粉料与 LS 组成的等价性未证实,recovered_intermediate_not_saleable,SRC040,含水 0.40；规格未定；干纯 754.674 t/a
+CR-14,硫酸钠（副产）,8168.389418896945,t_product/a,recovered_intermediate,未明,-,副产,LS 同源路线,水合形态/水分未明,recovered_intermediate_not_saleable,SRC040,水合形态未定时不能按无水硫酸钠计价
+CR-15,海绵铜（Cu-40）,372.7983012736309,t_product/a,recovered_intermediate,干,-,Cu 40%,LS 同源路线,纯度指 Cu 质量分数,recovered_intermediate_not_saleable,SRC040,含铜 149.119 t/a
+CR-16-1,铜箔（磷酸铁锂，100% 分选上限）,3879.9759599999993,t_Cu/a,reference_material_ceiling,干,-,上限,JR 电芯组成 × 再生入口,假设 100% 分选,reference_material_ceiling_not_product,SRC039,上限不是产量；未扣附着粉
+CR-17-1,铝箔（磷酸铁锂，100% 分选上限）,1353.259908,t_Al/a,reference_material_ceiling,干,-,上限,JR 电芯组成 × 再生入口,假设 100% 分选,reference_material_ceiling_not_product,SRC039,上限不是产量
+CR-16-2,铜箔（未细分三元，100% 分选上限）,2033.1206167999999,t_Cu/a,reference_material_ceiling,干,-,上限,JR 电芯组成 × 再生入口,假设 100% 分选,reference_material_ceiling_not_product,SRC039,上限不是产量；未扣附着粉
+CR-17-2,铝箔（未细分三元，100% 分选上限）,1728.0014752000002,t_Al/a,reference_material_ceiling,干,-,上限,JR 电芯组成 × 再生入口,假设 100% 分选,reference_material_ceiling_not_product,SRC039,上限不是产量
+CR-18,98% 硫酸,5303.3120284874,t_commercial/a,diagnostic,-,商品,工业级,LS 同源路线示例规模,跨体系代理到 JR 粉料,reference_profile_screening,SRC040,"主版本 0.5630527 t/t 粉料；并列第二版本 4,617.123 t/a；规格 0.98"
+CR-19,32% 液碱,13788.61202757568,t_commercial/a,diagnostic,-,商品,工业级,LS 同源路线示例规模,跨体系代理到 JR 粉料,reference_profile_screening,SRC040,商品吨；有效吨见 CR-20；规格 0.32
+CR-20,32% 液碱（有效吨）,4412.355848824218,t_NaOH/a,diagnostic,-,有效,工业级,LS 同源路线示例规模,跨体系代理到 JR 粉料,reference_profile_screening,SRC040,有效吨 = 商品吨 × 0.32；规格 0.32
+CR-21,92% 氧化钙,276.91435213352065,t_commercial/a,diagnostic,-,商品,工业级,LS 同源路线示例规模,跨体系代理到 JR 粉料,reference_profile_screening,SRC040,商品吨；有效吨另列；规格 0.92
+CR-22,85% 磷酸,925.298946913093,t_commercial/a,diagnostic,-,商品,工业级,LS 同源路线示例规模,跨体系代理到 JR 粉料,reference_profile_screening,SRC040,商品吨；有效吨另列；规格 0.85
+CR-23,99% 铁粉,123.7637614637572,t_commercial/a,diagnostic,-,商品,工业级,LS 同源路线示例规模,跨体系代理到 JR 粉料,reference_profile_screening,SRC040,商品吨；有效吨另列；规格 0.99
+CR-24,液 CO2,1045.4929621367617,t_commercial/a,diagnostic,-,商品,工业级,LS 同源路线示例规模,跨体系代理到 JR 粉料,reference_profile_screening,SRC040,商品吨；规格 0.9990000000000001
+CR-25,液氧,113.02626617694722,t_commercial/a,diagnostic,-,商品,工业级,LS 同源路线示例规模,跨体系代理到 JR 粉料,reference_profile_screening,SRC040,商品吨；规格 0.9990000000000001
+CR-26,电力（正式分线）,,kWh/a,unresolved_null,-,-,-,M08_ELECTRIC 未解,"组合电耗 11,232,000 kWh/a 不可拆",null_unresolved,SRC040,"C 的 27,314,798 kWh 电网+绿电各半与 B 的 9,104.9 kWh/t 均来自 B 占位×3,000 t，不是本厂测量"
+CR-27,蒸汽（质量）,11065.04069676302,t_steam/a,diagnostic,蒸汽,-,工业蒸汽,LS 同源路线,压力/温度未核；按 t 计价可行,diagnostic_only,SRC040,state 未核前不得按 MJ 计价；NO.22 ND 两股蒸汽为整项目参考
+CR-28,天然气（体积）,681361.632,Nm3/a,diagnostic,-,-,燃料/保护气,LS 预处理单耗 × LFP 电芯量,跨规模代理,diagnostic_only,SRC040,折 MJ 需热值与计量口径
+CR-29,新水/取水,,m3/a,unresolved_null,-,-,-,M08_WATER 未解,LS 分线水数据不是全厂水系统,null_unresolved,SRC040,"循环水与耗水必须分开；C 的 90,000 m3/a 无独立物料证据"
+CR-30,一般固废处置量,5519.939112127689,t/a,diagnostic,-,-,一般固废,LS 同源固渣（不含预处理湿式除尘渣）,未逐项核定固废属性,reference_profile_screening,SRC040,"另加预处理湿式除尘渣 816.378 t/a；C 的 4,500 t/a 待对齐"
+CR-31,危险废物处置量,,t/a,unresolved_null,-,-,危废,M13_FACTORS 未解,固废属性未核定,null_unresolved,SRC040,不得把一般固废记危废
+CR-32,入厂运输量,12240000.0,t·km/a,diagnostic,-,-,运输服务,"68,000 t/a × 180 km（C 假设）",距离为 C 假设,conditional_transport,SRC031,经济模型只应计一次同段运费；到厂价 delivered_included，单独运费项为 0
+CR-33,残渣外运量,,t/a,unresolved_null,-,-,-,M05_LI_PARTITIONS 未解,残渣/水处理污泥量未闭合,null_unresolved,SRC040,"C 的 4,500 t/a 为财务假设，缺独立物料证据"

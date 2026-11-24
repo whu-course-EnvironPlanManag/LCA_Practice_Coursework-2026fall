@@ -1,0 +1,60 @@
+{
+  "case_id": "PARK_ANNUAL_20261103",
+  "profile_id": "PARK_ANNUAL_NOT_COMPOSITE_REFERENCE",
+  "boundary_id": "PARK_ANNUAL_NOT_COMPOSITE_REFERENCE",
+  "status": "NOT_READY",
+  "missing_fields": [
+    "cost_items.whole_plant_freshwater.quantity_per_year",
+    "cost_items.whole_plant_green_electricity.quantity_per_year",
+    "cost_items.whole_plant_grid_electricity.quantity_per_year",
+    "cost_items.whole_plant_reagents.quantity_per_year",
+    "cost_items.whole_plant_reagents.unit_price",
+    "cost_items.whole_plant_steam.quantity_per_year",
+    "cost_items.whole_plant_waste_treatment.quantity_per_year",
+    "cost_items.whole_plant_waste_treatment.unit_price",
+    "fu_per_year",
+    "profile_compatibility_confirmed",
+    "revenue_items.LCE_product.quantity_per_year",
+    "revenue_items.LCE_product.saleability_unconfirmed",
+    "revenue_items.aluminium.quantity_per_year",
+    "revenue_items.aluminium.saleability_unconfirmed",
+    "revenue_items.copper.quantity_per_year",
+    "revenue_items.copper.saleability_unconfirmed",
+    "revenue_items.iron_phosphate.quantity_per_year",
+    "revenue_items.iron_phosphate.saleability_unconfirmed",
+    "revenue_items.nmc_salts.quantity_per_year",
+    "revenue_items.nmc_salts.saleability_unconfirmed",
+    "revenue_items.reuse_modules.quantity_per_year",
+    "revenue_items.reuse_modules.saleability_unconfirmed",
+    "saleable_product_quantities_complete",
+    "whole_boundary_activities_complete"
+  ],
+  "known_priced_opex_subtotal_CNY_a": 479840000.0,
+  "priced_cost_items": {
+    "feed_delivered": 451520000.0,
+    "inbound_transport_additional": 0.0,
+    "staff_budget": 10200000.0,
+    "maintenance_budget": 9120000.0,
+    "rd_budget": 5000000.0,
+    "other_services_budget": 3000000.0,
+    "other_fees_budget": 1000000.0
+  },
+  "known_confirmed_revenue_subtotal_CNY_a": 0,
+  "priced_revenue_items": {},
+  "annualized_capex_CNY_a": 43043174.138924584,
+  "total_opex_CNY_a": null,
+  "annual_revenue_CNY_a": null,
+  "annual_net_cost_CNY_a": null,
+  "lcor_CNY_per_t_LCE": null,
+  "annual_net_profit_CNY": null,
+  "formal_result_eligible": false,
+  "MAC_CNY_tCO2": null,
+  "warning": "已定价部分小计不是完整OPEX/利润；未定价项不为零。不同profile结果不得相加。"
+}
+
+PARK_ANNUAL_2026_coursework UNKNOWN
+PARK_ANNUAL_2026_verified_current UNKNOWN
+PARK_ANNUAL_2030_coursework UNKNOWN
+PARK_ANNUAL_2030_verified_current UNKNOWN
+PARK_ANNUAL_2035_coursework UNKNOWN
+PARK_ANNUAL_2035_verified_current UNKNOWN

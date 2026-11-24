@@ -1,0 +1,89 @@
+{
+  "case_id": "YCH_2026_FULL_LOAD_PENDING",
+  "data_status": "pending_real_data",
+  "currency": "CNY",
+  "price_year": null,
+  "functional_unit": "t_battery_grade_LCE_product",
+  "feed_t_per_year": 80000,
+  "fu_per_year": null,
+  "discount_rate": null,
+  "operating_years": null,
+  "capex": null,
+  "cost_items": [
+    {
+      "name": "feed_purchase",
+      "category": "feedstock",
+      "quantity_per_year": 80000,
+      "unit_price": null,
+      "unit": "t_feed",
+      "source_id": "USER_PLAN_20261103"
+    },
+    {
+      "name": "transport",
+      "category": "transport",
+      "quantity_per_year": null,
+      "unit_price": null,
+      "unit": "t_feed",
+      "source_id": "待填"
+    },
+    {
+      "name": "electricity",
+      "category": "utilities",
+      "quantity_per_year": null,
+      "unit_price": null,
+      "unit": "kWh",
+      "source_id": "待填"
+    },
+    {
+      "name": "reagents",
+      "category": "reagents",
+      "quantity_per_year": null,
+      "unit_price": null,
+      "unit": "t_reagent",
+      "source_id": "待填"
+    },
+    {
+      "name": "labor",
+      "category": "labor",
+      "quantity_per_year": null,
+      "unit_price": null,
+      "unit": "annual_budget",
+      "source_id": "待填"
+    },
+    {
+      "name": "maintenance",
+      "category": "maintenance",
+      "quantity_per_year": null,
+      "unit_price": null,
+      "unit": "annual_budget",
+      "source_id": "待填"
+    },
+    {
+      "name": "pollution_control",
+      "category": "pollution_control",
+      "quantity_per_year": null,
+      "unit_price": null,
+      "unit": "annual_budget",
+      "source_id": "待填"
+    },
+    {
+      "name": "taxes_fees",
+      "category": "taxes_fees",
+      "quantity_per_year": null,
+      "unit_price": null,
+      "unit": "annual_budget",
+      "source_id": "待填"
+    }
+  ],
+  "revenue_items": [
+    {
+      "name": "LCE_product",
+      "quantity_per_year": null,
+      "unit_price": null,
+      "unit": "t_battery_grade_LCE",
+      "source_id": "待填"
+    }
+  ],
+  "scenario_adjustments": [],
+  "input_note": "Full-load planning template. LCE yield, route, prices and currency/base-year confirmation pending."
+}

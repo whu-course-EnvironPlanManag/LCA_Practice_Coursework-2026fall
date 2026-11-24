@@ -1,0 +1,18 @@
+﻿check_id,item,status,detail
+V01,顶层字段完整性,PASS,16 个顶层字段齐全
+V02,schema_version,PASS,schema_version=1.0.0
+V03,coding_ready,PASS,coding_ready=True
+V04,full_process_model_ready 必须为 false,PASS,交接包声明全流程模型未就绪，禁止产出全厂流量
+V05,原始快照未被改写,PASS,source_documents_modified=False；本脚本只读
+V06,来料体系质量份额合计为 1,PASS,合计=1.000000000000；数据性质=group_planning_assumption_not_observed_market_share
+V07,选用的前段组成代理存在且可用于来料组分核算,PASS,选用 4 个；缺失 []；不可用 []
+V08,"组分分数均位于 [0,1]",PASS,全部合规
+V09,完整分配的组成合计为 1,PASS,全部合规
+V10,部分组成不得归一化,PASS,未归一化；仅记录原始合计：JR23_NMC_POWDER=0.829710；JR23_LFP_POWDER=0.964320；LS23_LFP_POWDER=0.772665
+V11,候选工艺参数不得默认启用,PASS,共 20 个候选，启用 0 个
+V12,未解决输入必须保持空值（缺数≠0）,PASS,共 14 项，全部为 null
+V13,未擅自激活湿法模块,PASS,activated_hydrometallurgical_profile_id=None；启用参数 0 个
+V14,闸门阻断项均指向已登记未解决输入,PASS,全部可追溯
+V15,闸门阻断项等于依赖闭包,PASS,11 个模块全部一致
+V16,ready 模块不得残留阻断项,PASS,全部一致
+V17,Li 守恒容差与零输入约定,PASS,严格小于 0.0005；零输入=undefined_not_pass

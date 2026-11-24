@@ -1,0 +1,242 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Yichang dMFA integrated handoff 2.0.0",
+  "type": "object",
+  "required": [
+    "dataset",
+    "conventions",
+    "study_boundaries",
+    "sources",
+    "assumptions",
+    "observations",
+    "dmfa_inputs",
+    "chemistry_scenarios",
+    "analysis_modes",
+    "conditional_case_definitions",
+    "execution_contract",
+    "module_gates",
+    "unresolved_inputs",
+    "legacy_park_handoff"
+  ],
+  "properties": {
+    "dataset": {
+      "type": "object",
+      "required": [
+        "dataset_id",
+        "schema_version",
+        "full_city_forecast_ready"
+      ],
+      "properties": {
+        "schema_version": {
+          "const": "2.0.0"
+        },
+        "full_city_forecast_ready": {
+          "const": false
+        }
+      }
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 56,
+      "items": {
+        "type": "object",
+        "required": [
+          "source_id",
+          "title",
+          "url",
+          "citation"
+        ],
+        "properties": {
+          "source_id": {
+            "type": "string"
+          },
+          "url": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "assumptions": {
+      "type": "array",
+      "minItems": 19,
+      "items": {
+        "type": "object",
+        "required": [
+          "assumption_id",
+          "statement",
+          "source_ids"
+        ]
+      }
+    },
+    "observations": {
+      "type": "array",
+      "minItems": 6,
+      "items": {
+        "type": "object",
+        "required": [
+          "observation_id",
+          "value",
+          "unit",
+          "source_ids"
+        ]
+      }
+    },
+    "dmfa_inputs": {
+      "type": "object",
+      "required": [
+        "DMFA-01",
+        "DMFA-02",
+        "DMFA-03",
+        "DMFA-04",
+        "DMFA-05",
+        "DMFA-06",
+        "DMFA-07"
+      ],
+      "properties": {
+        "DMFA-01": {
+          "type": "object",
+          "required": [
+            "annual_records",
+            "national_shape_records",
+            "vehicle_class_prototypes",
+            "future_first_install_series"
+          ],
+          "properties": {
+            "annual_records": {
+              "type": "array",
+              "minItems": 16,
+              "maxItems": 16,
+              "items": {
+                "type": "object",
+                "required": [
+                  "year",
+                  "new_vehicle_expected_count",
+                  "first_install_pack_mass_t",
+                  "replacement_pack_inflow_t",
+                  "classes"
+                ],
+                "properties": {
+                  "year": {
+                    "type": "integer",
+                    "minimum": 2010,
+                    "maximum": 2025
+                  },
+                  "new_vehicle_expected_count": {
+                    "type": "number",
+                    "minimum": 0
+                  },
+                  "first_install_pack_mass_t": {
+                    "type": "number",
+                    "minimum": 0
+                  },
+                  "replacement_pack_inflow_t": {
+                    "type": "null"
+                  },
+                  "classes": {
+                    "type": "array",
+                    "minItems": 4,
+                    "maxItems": 4
+                  }
+                }
+              }
+            },
+            "future_first_install_series": {
+              "type": "array",
+              "minItems": 15,
+              "maxItems": 15,
+              "items": {
+                "type": "object",
+                "required": [
+                  "year",
+                  "value"
+                ],
+                "properties": {
+                  "value": {
+                    "type": "null"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "DMFA-05": {
+          "type": "object",
+          "required": [
+            "value",
+            "unit",
+            "first_install_cohort_stock_method"
+          ],
+          "properties": {
+            "value": {
+              "type": "null"
+            },
+            "unit": {
+              "const": "t_pack"
+            }
+          }
+        },
+        "DMFA-06": {
+          "type": "object",
+          "required": [
+            "intensity_kg_Li_per_kWh",
+            "profiles"
+          ],
+          "properties": {
+            "intensity_kg_Li_per_kWh": {
+              "type": "object",
+              "properties": {
+                "MIXED_NMC_UNSPECIFIED": {
+                  "type": "null"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "module_gates": {
+      "type": "array",
+      "minItems": 12,
+      "items": {
+        "type": "object",
+        "required": [
+          "module",
+          "ready",
+          "blocking_input_ids"
+        ],
+        "properties": {
+          "ready": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "unresolved_inputs": {
+      "type": "array",
+      "minItems": 11,
+      "items": {
+        "type": "object",
+        "required": [
+          "input_id",
+          "value",
+          "description"
+        ],
+        "properties": {
+          "value": {
+            "type": "null"
+          }
+        }
+      }
+    },
+    "legacy_park_handoff": {
+      "type": "object",
+      "required": [
+        "original_sha256",
+        "payload"
+      ]
+    }
+  }
+}

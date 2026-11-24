@@ -1,0 +1,178 @@
+{
+  "dataset": {
+    "document_id": "B_parameter_override_v1",
+    "title": "成员 B · 试用成员 A 未选定候选参数的决策/参数覆盖文件",
+    "schema_version": "1.0",
+    "status": "provisional_draft",
+    "prepared_by": "成员 B（LCA 环境维度）",
+    "base_handoff": "groups/group-02/lecture12-20261103-classroom-case3/A前期数据_IDE交接包_20261103/a_phase1_ide_handoff.json",
+    "consumed_by": [
+      "code_implementation/a_candidate_override.py",
+      "code_implementation/scenario_analysis.py（USE_A_CANDIDATES=1）",
+      "code_implementation/lca_model.py（process_steam 因子映射）"
+    ],
+    "adoption_rule": "依据 A 引导规则：候选参数 active=false 时，选用须另写本组决策/参数覆盖文件，保留来源与选择理由，不修改 A 交接快照。"
+  },
+
+  "adopted": [
+    {
+      "parameter_id": "ND_SEC",
+      "parameter_name": "综合能耗",
+      "adopted_value": 1729.26,
+      "unit": "kgce / t_Li2CO3_product",
+      "source_ids": ["candidate_process_parameters"],
+      "locator": "a_phase1_ide_handoff.json L2377; feed_or_product_basis=ND22_LFP_cathode_sheet_route",
+      "applied_to": "B 功能单位（1 t 电池级 Li2CO3）能量锚点；直接落在本功能单位上，无需进料换算",
+      "rationale": "唯一直接以 t_Li2CO3_product 为分母的候选能量项，与 B 功能单位一致；量级与 B 占位总能耗（约 1987 kgce）在同一数量级，可交叉校验",
+      "status": "provisional"
+    },
+    {
+      "parameter_id": "LS_STEAM",
+      "parameter_name": "中低压蒸汽",
+      "adopted_value": 1.1747755,
+      "unit": "t_steam / t_powder_feed",
+      "source_ids": ["SRC040"],
+      "locator": "a_phase1_ide_handoff.json L2025; 朗赛湿法模块 表3.5-1（p71–72）",
+      "applied_to": "热耗（替代 B 原天然气直燃口径），经黑粉锂品位换算到 1 t Li2CO3 口径",
+      "rationale": "还原焙烧/蒸发结晶热源按 A 候选为蒸汽而非天然气直燃；使 HEAT-02 process_steam 因子（0.210 kgCO2e/MJ）真正生效",
+      "status": "provisional"
+    }
+  ],
+
+  "not_adopted": {
+    "parameter_ids": ["LS_ACID", "LS_FE", "LS_NAOH", "LS_CAO", "LS_PACID", "LS_CO2", "LS_O2"],
+    "raw_values_per_t_powder_feed": {
+      "LS_ACID": 0.5630527,
+      "LS_FE": 0.01314,
+      "LS_NAOH": 1.4639371,
+      "LS_CAO": 0.0294,
+      "LS_PACID": 0.0982389,
+      "LS_CO2": 0.111,
+      "LS_O2": 0.012
+    },
+    "reason": [
+      "LS_NAOH=1.4639 t/t粉料 为 32% 液碱商品量，折纯 NaOH 约 2.856 t/t Li2CO3（浓度 0.32），量级合理——不再以「物理不合理」为由排除（2026-11-03 核查修正）。",
+      "仍不接入的真实原因：朗赛(Langsai)湿法模块以磷酸铁为主要共生产品，与 B 现有『Li2CO3 承担 100% 负荷』分配口径（M10）冲突，会放大失真。",
+      "LS_ACID(0.5631) 与 LS_ACID_ALT(0.4902) 属同一报告不同核算段冲突，conflict_group_id=LS23_ACID_ANNUAL_DEMAND，A 未取平均。",
+      "待 A 的 M06（湿法进料体系辨识）、M07（朗赛酸版本选择）与 M10（多产品分配口径）厘清后再接入。"
+    ],
+    "status": "deferred"
+  },
+
+  "conversion_assumptions": [
+    {
+      "key": "powder_li_mass_lfp",
+      "value": 0.03425,
+      "unit": "kg_Li / kg_powder",
+      "source": "JR23_LFP_POWDER:Li（mass_fraction），SRC039 表3.4-7",
+      "note": "reference_assay_not_active（A 参考组分，未活化）；未归一化、未核干湿基"
+    },
+    {
+      "key": "powder_li_mass_nmc",
+      "value": 0.0434,
+      "unit": "kg_Li / kg_powder",
+      "source": "JR23_NMC_POWDER:Li，SRC039 表3.4-7",
+      "note": "本次能量换算按 LFP 路线（60% 主流来料）取 LFP 值；NMC 值留存备查，不混用"
+    },
+    {
+      "key": "li_element_mass_in_li2co3",
+      "value": 0.1879,
+      "unit": "kg_Li / kg_Li2CO3",
+      "source": "摩尔量 2×6.94 / 73.89",
+      "note": "标准化学量"
+    },
+    {
+      "key": "li_recovery_mapping",
+      "formula": "0.90 + 0.09 * pm",
+      "unit": "fraction",
+      "note": "B 侧占位线性式（直接再生占比 pm 越高、回收率越高）；待 A 实测收率（M02/M05）校准"
+    },
+    {
+      "key": "steam_enthalpy",
+      "value": 2500.0,
+      "unit": "MJ / t_steam",
+      "note": "中低压饱和蒸汽量级占位值；待 A M08 核蒸汽压力/温度后精确化"
+    },
+    {
+      "key": "energy_split_rule",
+      "formula": "电耗(kWh) = (ND_SEC×29.3076 − 蒸汽MJ) / 3.6",
+      "note": "以 ND_SEC 综合能耗为总能量上限；按 GB/T 2589 综合能耗已含蒸汽，蒸汽单独折算后电耗取差值"
+    }
+  ],
+
+  "provisional_branch_metrics": {
+    "enabled_by": "USE_PROVISIONAL_BRANCH_METRICS=1",
+    "purpose": "把缺失的分支级政策指标用 A/C 的规范阈值/任务书口径补齐，用于验证优化代码路径（方法校验），非实测、非最终",
+    "caveat": "填充值即达标阈值本身，导致「恰好达标 => 全 PASS」的同义反复（试算 PASS=3267）；最终须以 A 的 M02/M05/M06 实测分支指标替换",
+    "values": {
+      "li_smelting_recovery": 0.90,
+      "ni_smelting_recovery": 0.98,
+      "co_smelting_recovery": 0.98,
+      "mn_smelting_recovery": 0.98,
+      "cu_recovery": 0.98,
+      "al_recovery": 0.98,
+      "electrode_powder_recovery": 0.98,
+      "powder_al_impurity": 0.01,
+      "powder_cu_impurity": 0.01,
+      "fluorine_fixation": 0.995,
+      "process_wastewater_reuse": 0.90,
+      "repair_material_recovery": 0.99,
+      "rd_revenue_fraction": 0.03
+    },
+    "source": "A reference_policies(R09/R10/R11) + C policy_parameters.json 的 TASK_CN2024 项"
+  },
+
+  "provisional_lcor": {
+    "enabled_by": "USE_PROVISIONAL_LCOR=1",
+    "purpose": "当成员 C 真实 TEA 未就绪时，用显式合成 LCOR 占位，验证帕累托寻优与 B-4 制图代码路径",
+    "formula": "20000 + 4.5*GWP + 0.15*water - 0.35*lithium_price_usd（元/t）",
+    "caveat": "合成值无经济意义且与 GWP/水耗线性共线，导致多目标前沿退化（锚点 A/B 重合）；真实 LCOR 引入后才有非共线 tradeoff",
+    "trial_range_rmb_per_t": [29183, 111870],
+    "tea_status_tag": "PROVISIONAL_SYNTHETIC_LCOR"
+  },
+
+  "c_conditional_lcor": {
+    "enabled_by": "always（无开关，随 scenario_analysis.py 自动并入）",
+    "purpose": "成员 C 2026-11-03 交接的条件演示部分 LCOR：替代 provisional_lcor 合成占位，作为经济侧演示而非正式 LCOR",
+    "interface_pack": "C发给B_LCOR接口包_20261103/C_to_B_conditional_by_B_case_id.json",
+    "join_rule": "按 case_id(str) + 五参数（process_mix/green_ratio/grid_ef/lithium_price_usd/energy_efficiency，float 容差 1e-6）校验关联，非行号拼接",
+    "output_column": "partial_lcor_conditional_CNY_t_LCE（独立新列，不覆盖 lcor_rmb_per_t 正式列）",
+    "coverage": "仅纯湿法（process_mix=0）297 工况有值",
+    "trial_range_rmb_per_t_lce": [-164580, 127999],
+    "negative_value_note": "锂价 50000 USD（×7.2）下锂盐回款超成本导致负 LCOR，属压力情景演示，非经营结论",
+    "status_tag": "CONDITIONAL_PARTIAL_LCOR_NOT_FINAL",
+    "caveat": "正式 LCOR 仍待成员 C 逐工况 evaluate_tea 重生成（需完整 TEA 数量/LCE 产量）"
+  },
+
+  "a_audit_20261103": {
+    "source_pack": "A_BC核查与数据补充_20261103",
+    "code_fixes_applied": {
+      "B01_formal_result_eligibility": "scenario_analysis.py 新增 lcor_source/policy_source/formal_result_eligible；optimization.py 帕累托仅认 formal_result_eligible=True，排除合成LCOR与阈值试填结果；run_all.py 汇总按 formal 判定",
+      "B03_naoh_concentration": "a_candidate_override.py 按「商品吨×浓度」折算有效成分（硫酸98%/液碱32%/氧化钙92%），NaOH 纯量 ~2.856 t/t，不再判物理不合理",
+      "B04_no_silent_zero": "lca_model.py LCAResult 增加 unmapped_activities/missing_activities，区分缺失/None/明确为零"
+    },
+    "existing_result_audit_conclusion": "3267 行旧结果（合成LCOR+阈值试填政策PASS）标记为演示，旧 B-4 图改名 *_SYNTHETIC_PREVIEW_*；正式 feasible=0、正式 LCOR 未就绪，故不生成正式帕累托",
+    "new_a_data_noted": [
+      "operating_case 68000 t/a（复用分流12.5%，LFP:NMC=60:40）",
+      "M02 捕集率 EV_I 0.9328 / EV_II 0.8353",
+      "LS23 水分/产品/分线用水",
+      "ANL EverBatt 三元活动量（参考）"
+    ],
+    "still_pending_from_a": ["M02/M05/M06/M07/M08/M11 正式实测值", "M10 多产品分配口径（B/C 联合）"],
+    "still_pending_from_c": ["正式 TEA 数量与逐工况 evaluate_tea", "M14 政策规则", "M12 价格"]
+  },
+
+  "cross_reference_to_a_unresolved_inputs": {
+    "M08_process_energy_water_and_steam_state": "owner=A活动量/B因子；本文件暂以 ND_SEC+LS_STEAM 覆盖能量侧，蒸汽压力/温度、水量、能流边界仍待 A",
+    "M10_coproduct_allocation_or_system_expansion": "owner=B/C；试剂未接入的直接原因，需 B/C 就先确认分配口径",
+    "M13_selected_lca_background_factors": "owner=B；能量因子对应 B 的 environmental_factors.csv（electricity/heat）"
+  },
+
+  "trial_results_reference": {
+    "run": "USE_A_CANDIDATES=1 python code_implementation/run_all.py",
+    "gwp_kgco2e_per_t": [5043, 18016],
+    "water_l_per_t": [26586, 95332],
+    "policy_fail_count": 0,
+    "note": "GWP 上限 18016 已超硬岩锂辉石原生基准 9000，高碳电网+低能效下再生未必低碳，须写入报告；feasible 仍为 0（分支指标缺失），B-4 未生成"
+  }
+}

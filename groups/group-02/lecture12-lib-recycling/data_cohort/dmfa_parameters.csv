@@ -1,0 +1,15 @@
+﻿parameter_id,value,unit,status,source,note
+DMFA-01,2010—2025 条件重建,t_pack/a,resolved_conditional_reconstruction,DMFA-S011 / YC_DMFA01_RECON_V2,逐年新增车辆×车型原型×化学情景；非宜昌实测注册序列
+DMFA-02/03,k=3.1; scale=5.5 a,1 / a,resolved_literature_proxy,DMFA-S001（p.7，Table S1，Developing）,LFP；派生平均寿命=4.9187 a；尾部不重归一化、k/scale 不随车型变化（A14）
+DMFA-02/03,k=2.1; scale=7.3 a,1 / a,resolved_literature_proxy,DMFA-S001（p.7，Table S1，Developing）,MIXED_NMC_UNSPECIFIED；派生平均寿命=6.4656 a；尾部不重归一化、k/scale 不随车型变化（A14）
+DMFA-04,0.65,kg_formally_collected/kg_first_service_retired,resolved_literature_scenario_not_local_observation,DMFA-S002（pp.8、23）,C065；正规收集≠进入再生；本地观测缺失（D04-OBS）
+DMFA-04,0.85,kg_formally_collected/kg_first_service_retired,resolved_literature_scenario_not_local_observation,DMFA-S002（pp.8、23）,C085；正规收集≠进入再生；本地观测缺失（D04-OBS）
+DMFA-04,1.0,kg_formally_collected/kg_first_service_retired,resolved_literature_scenario_not_local_observation,DMFA-S002（pp.8、23）,C100；正规收集≠进入再生；本地观测缺失（D04-OBS）
+DMFA-05,0.0,t_pack,assumption_cohort_initial_state,A01,2009-12-31 建模首装队列为 0（A01）；不是宜昌真实存量 0；城市实际存量 D05-FLEET 仍未解
+DMFA-06,10.266,kg Li/t pack,resolved_class_matched_proxy,DMFA-S002;DMFA-S011,BEV×LFP；由 0.087 kg Li/kWh × 118.0 Wh/kg 换算；未细分三元不平均
+DMFA-06,10.266,kg Li/t pack,resolved_class_matched_proxy,DMFA-S002;DMFA-S011,PHEV×LFP；由 0.087 kg Li/kWh × 118.0 Wh/kg 换算；未细分三元不平均
+DMFA-06,10.875,kg Li/t pack,resolved_class_matched_proxy,DMFA-S002;DMFA-S011,BUS_PROXY×LFP；由 0.087 kg Li/kWh × 125.0 Wh/kg 换算；未细分三元不平均
+DMFA-06,13.659,kg Li/t pack,resolved_class_matched_proxy,DMFA-S002;DMFA-S011,MEDIUM_TRUCK_PROXY×LFP；由 0.087 kg Li/kWh × 157.0 Wh/kg 换算；未细分三元不平均
+DMFA-07,,—,unresolved_optional_spatial_extension,D07-SPATIAL,持证回收企业数量与运输半径未解；本脚本不做空间优化
+M01,,kg_reuse/kg_retired,unresolved_legacy_park_boundary,旧园区交接包 M01,梯次分流未解，故本脚本只出 collected_after_first_service，不出进入再生/进入园区量
+D-PARK-LINK,,kg_park_feed/kg_collected,unresolved_city_to_park_link,city_to_park_feed 闸门,市域正规收集不能直接当 8 万 t/a 园区来料；两者口径与边界不同

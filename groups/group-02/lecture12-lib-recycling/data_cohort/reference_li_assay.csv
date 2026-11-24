@@ -1,0 +1,4 @@
+﻿profile_id,chemistry,li_mass_fraction_of_powder,li_kg_per_t_powder_reference,reported_basis_note,eligible_for_full_li_mfa,usage_note
+JR23_NMC_POWDER,MIXED_NMC_UNSPECIFIED,0.0434,43.4,原文黑粉组成；未核干湿基,False,参考量级，不参与全厂 Li 平衡；未确认是否为干基/元素基
+JR23_LFP_POWDER,LFP,0.034249999999999996,34.24999999999999,原文黑粉组成；未核干湿基,False,参考量级，不参与全厂 Li 平衡；未确认是否为干基/元素基
+LS23_LFP_POWDER,LFP,0.024155000000000003,24.155,原文粉料主要成分；H2O列2.15%，总体干湿基/外购范围待核,False,参考量级，不参与全厂 Li 平衡；未确认是否为干基/元素基

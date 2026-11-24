@@ -1,0 +1,208 @@
+{
+  "scenario_id": "R1_PLANNING_20261104",
+  "schema_version": "1.0.0",
+  "date": "2026-11-04",
+  "delivered_by": "Codex（相似规模文献检索 + 同源清单迁移 + 情景假设推算）",
+  "automatically_adopted": false,
+  "role": "背景情景 R1：与 59,500 t/a 原情景并列，不覆盖、不取平均；本情景用文献迁移与情景假设把原本 null 的项填成一套可复现的第二情景，不代表已获本地实测验证",
+  "data_attribute_map": {
+    "组内设定": "设计 80,000 t/a、负荷 0.85、LFP 份额 0.60 / 三元 0.40、梯次能力 10,000 t/a",
+    "文献原值": "LS23 / ANL19 / JR23 等原文明确给出的比例、产率、组成、回收率、能耗系数",
+    "文献迁移": "按参考项目清单与本情景处理量线性缩放得到的年化量",
+    "情景假设": "q=0.90、y=0.97、SOH=0.80、α=0.50、首装增长率 0.05、收集率 c=0.80、车辆寿命独立、立即替换等本研究新增且未本地验证的假设",
+    "无": "不能可靠推断，保持缺失，不补 0"
+  },
+
+  "reuse_recycling_split": {
+    "screen_pass_mass_fraction_q": 0.90,
+    "repack_yield_y": 0.97,
+    "retained_soh": 0.80,
+    "reuse_candidate_pack_t_a": 8500.0,
+    "reuse_retained_pack_equiv_t_a": 7420.5,
+    "screen_reject_to_recycling_t_a": 850.0,
+    "repack_reject_to_recycling_t_a": 229.5,
+    "recycling_pack_equiv_t_a": 60579.5,
+    "recycling_LFP_t_a": 36347.7,
+    "recycling_NMC_t_a": 24231.8,
+    "attribute": "情景假设",
+    "note": "q 与 y 无匹配本园区口径的文献实测；7,420.50 t/a 是保留旧电池整包当量，不是加壳重组后的成品质量；筛出与重组弃用全部返回再生线并保持 0.60/0.40 组成",
+    "formula": "Q_梯次保留 = 8500*q*y；Q_再生 = 68000 - Q_梯次保留"
+  },
+
+  "LFP_native_process_LS23": {
+    "pack_to_cell_fraction": 0.6627,
+    "cell_t_a": 24087.62079,
+    "powder_yield_t_powder_per_t_cell": 0.5,
+    "powder_t_a": 12043.810395,
+    "powder_yield_note": "0.50 是 t 总粉 / t 电芯的产率，不是可回收黑粉捕集效率",
+    "scaling_rule": "前处理按 24,087.62 t 电芯/a 缩放；湿法按 12,043.81 t 粉料/a 缩放；假设新粉料与朗赛自产/外购混合粉性质相近",
+    "products": {
+      "crude_Li2CO3_wet_t_a": 1710.95,
+      "crude_Li2CO3_dry_pure_t_a": 1355.08,
+      "crude_Li2CO3_moisture": 0.20,
+      "crude_Li2CO3_dry_purity": 0.99,
+      "fepo4_slag_wet_t_a": 9027.87,
+      "fepo4_slag_dry_pure_t_a": 5362.56,
+      "fepo4_slag_moisture": 0.40,
+      "fepo4_slag_dry_purity": 0.99,
+      "cu_foil_t_a": 3341.24,
+      "cu_mass_fraction": 0.97,
+      "al_foil_t_a": 1431.96,
+      "al_mass_fraction": 0.97,
+      "attribute": "文献迁移（中间品/箔材），粗碳酸锂、磷酸铁渣暂不命名合格电池级成品"
+    },
+    "reagents": {
+      "h2so4_98_main_t_commercial_a": 6781.30,
+      "h2so4_98_main_kg_per_t_powder": 0.5630527,
+      "h2so4_98_alt_t_commercial_a": 5903.88,
+      "h2so4_98_alt_kg_per_t_powder": 0.4902,
+      "naoh_32_t_commercial_a": 19317.51,
+      "cao_92_t_commercial_a": 727.45,
+      "h3po4_85_t_commercial_a": 1183.17,
+      "fe_powder_99_t_commercial_a": 158.26,
+      "acid_rule": "硫酸主情景 0.5630527 与备选 0.4902 并列不平均；仅适用于该 LFP 粉料路线",
+      "attribute": "文献迁移"
+    },
+    "source": "LS23 表3.4-1（印刷页65）、表3.5-1（印刷页71—72）"
+  },
+
+  "powder_assay_received_basis": {
+    "moisture": 0.0215,
+    "C_mass_fraction": 0.455370,
+    "Li_mass_fraction": 0.024155,
+    "F_mass_fraction": 0.0023452,
+    "binder_residual_after_wet": null,
+    "interpretation": "本情景按收到基解释元素含量，不再扣一次水、不归一化",
+    "note": "F 来源为 LS23 表4.2-3 及印刷页132 氟平衡的元素推导，不能与 Li/C/水分合称同份化验；电芯入口胶黏剂含量不能代替粉中残留"
+  },
+
+  "LFP_Li_balance": {
+    "powder_Li_input_t_a": 290.91824,
+    "crude_Li2CO3_Li_t_a": 254.54714,
+    "loss_Li_t_a": 36.37110,
+    "loss_split_fraction_of_loss": {
+      "leaching_residue": 0.40,
+      "wastewater": 0.32,
+      "carbon_residue": 0.20,
+      "other_unlocated": 0.08
+    },
+    "note": "Li 输入 → 粗碳酸锂（产品）+ 浸出渣 + 洗涤废水 + 碳渣 + 其他损耗，自洽闭合；四个损耗比例是本研究为闭合 Li 元素守恒而显式标注的占位拆分（情景假设，非实测损耗分布，比例之和=1）；浸出渣≈磷铁富渣夹带，碳渣≈负极碳/滤渣夹带，其他≈尾气/粉尘/检测等未定位；该表仅覆盖湿法粉料参考块，不代表整包全链条 Li 平衡",
+    "attribute": "文献迁移 + 情景假设（损耗拆分占位）"
+  },
+
+  "NMC_element_recovery_ANL19": {
+    "pack_to_cell_fraction": 0.63466,
+    "cell_t_a": 15378.954188,
+    "recovery_defaults": {"Li": 0.90, "Ni": 0.98, "Co": 0.98, "Mn": 0.98, "Cu": 0.90, "Al": 0.90},
+    "recovery_defaults_note": "正极 Li 0.90 不含电解液盐 Li；元素量与理论当量不等于合格商品盐产量",
+    "NMC622": {
+      "pure_Li2CO3_equiv_t_a": 1709.26,
+      "recovered_Ni_t_a": 1774.13,
+      "recovered_Co_t_a": 593.80,
+      "recovered_Mn_t_a": 553.54,
+      "recovered_Cu_t_a": 2228.41,
+      "recovered_Al_t_a": 1162.65,
+      "na2co3_commercial_t_a": 2724.26
+    },
+    "NMC811": {
+      "pure_Li2CO3_equiv_t_a": 1634.75,
+      "recovered_Ni_t_a": 2262.39,
+      "recovered_Co_t_a": 283.96,
+      "recovered_Mn_t_a": 264.71,
+      "recovered_Cu_t_a": 2173.05,
+      "recovered_Al_t_a": 1134.97,
+      "na2co3_commercial_t_a": 2605.51
+    },
+    "na2co3_rule": "若单独建立‘碳酸根全部由 Na2CO3 提供’的沉锂模块：m_Na2CO3商品 = m_纯Li2CO3 × 105.988/73.888 × 1.10/0.99；这是新增反应模块采购情景，替换该模块原碳酸钠项，不重复添加，并同步核算新增钠与水",
+    "attribute": "文献迁移 + 技术端点情景",
+    "note": "NMC622 / NMC811 是技术端点情景，不能解释为宜昌实际 622/811 比例；真实本地拆分保持未知",
+    "source": "ANL19 Table 4、Table 12"
+  },
+
+  "energy_water": {
+    "LFP_combined_electricity_kwh_a": 20291411.75,
+    "alpha_share": 0.50,
+    "LFP_steam_t_a": 14148.77,
+    "LFP_ng_nm3_a": 693723.48,
+    "LFP_tap_water_m3_a": 28566.06,
+    "LFP_external_pure_water_m3_a": 4204.65,
+    "LFP_listed_wastewater_m3_a": 6825.04,
+    "NMC_electricity_proxy_kwh_a": 533991.46,
+    "NMC_water_proxy_m3_a": 58215.67,
+    "LFP_split_formula": "E_LFP = 11,232,000 × [ α×(Q电芯/10000) + (1−α)×(Q粉料/10000) ]，α=0.50 分摊假设；α=0/1 对应 13.53/27.06 GWh/a 端点",
+    "steam_note": "蒸汽质量 t，热态及返凝未知，不转 MJ",
+    "water_note": "LFP 已列分线自来水补水不含共享生活/检验用水；外供纯水与自来水分列；已列排口废水小计非全厂完整外排量；三元代理尚未复现 EverBatt 完整设备规模模型；各量不相加后宣称全厂完整能耗/水平衡",
+    "attribute": "文献迁移 + 情景假设（α）"
+  },
+
+  "reuse_test_capacity": {
+    "test_electricity_kwh_a": 767207.02,
+    "deliver_usable_kwh_a": 700495.20,
+    "template_Wh_per_kg": 118.0,
+    "test_electricity_basis": "8500×118×(8.72/11.4)，JRC Table 7/10 原案例 11.4 kWh PHEV 包测试电耗 8.72 kWh/包，仅覆盖测试活动",
+    "deliver_basis": "7420.50×118×0.80；当年交付电池可用容量，非年度供电量",
+    "attribute": "文献迁移 + 情景假设（118 Wh/kg 转用于全部候选来料）"
+  },
+
+  "dmfa_future_2026_2040": {
+    "first_install_growth_rate": 0.05,
+    "base_year_2025_install_t_a": 10501.884741,
+    "future_LFP_share": 0.867249613,
+    "future_NMC_share": 0.132750387,
+    "vehicle_life_k_weibull": 2.07,
+    "vehicle_life_lambda_year": 14.46,
+    "collection_rate_scenario_c": 0.80,
+    "lifetime_params": {
+      "LFP_battery_k": 3.10, "LFP_battery_lambda_year": 5.50,
+      "NMC_battery_k": 2.10, "NMC_battery_lambda_year": 7.30,
+      "source": "Wu 2024 SI p7 Table S1 Developing 行；Zhang 2025 SI p24 Table 2（车辆）；118 Wh/kg 模板沿用既有 A 交接包"
+    },
+    "vehicle_battery_independent_lifetime": true,
+    "broken_battery_immediate_replace": true,
+    "replacement_same_chemistry_same_mass": true,
+    "cross_city_migration_ignored": true,
+    "model_note": "每年先划出随车辆报废退出的电池，再计算存续车辆中的电池失效产生替换；全部换包、条件独立、重复更新均为本研究新增假设，非完整复现文献",
+    "2025_end_conditional_stock_t": {
+      "LFP": 23774.21,
+      "NMC": 5360.48,
+      "total": 29134.69,
+      "note": "以 99,750 辆车情景锚点和固定包重重建，非宜昌实测库存；IDE 应从历史队列滚算年龄结构，不得把汇总存量全视为 2025 新电池"
+    },
+    "annual_inflow_t_pack_a_rows": [
+      {"year": 2026, "LFP_first": 9563.14, "LFP_replace": 1476.60, "NMC_first": 1463.84, "NMC_replace": 370.67},
+      {"year": 2027, "LFP_first": 10041.30, "LFP_replace": 2531.28, "NMC_first": 1537.03, "NMC_replace": 505.49},
+      {"year": 2028, "LFP_first": 10543.37, "LFP_replace": 3916.82, "NMC_first": 1613.88, "NMC_replace": 656.75},
+      {"year": 2029, "LFP_first": 11070.53, "LFP_replace": 5523.18, "NMC_first": 1694.57, "NMC_replace": 818.06},
+      {"year": 2030, "LFP_first": 11624.06, "LFP_replace": 7198.22, "NMC_first": 1779.30, "NMC_replace": 984.05},
+      {"year": 2031, "LFP_first": 12205.26, "LFP_replace": 8815.02, "NMC_first": 1868.27, "NMC_replace": 1150.88},
+      {"year": 2032, "LFP_first": 12815.53, "LFP_replace": 10331.66, "NMC_first": 1961.68, "NMC_replace": 1316.25},
+      {"year": 2033, "LFP_first": 13456.30, "LFP_replace": 11788.81, "NMC_first": 2059.76, "NMC_replace": 1479.18},
+      {"year": 2034, "LFP_first": 14129.12, "LFP_replace": 13244.10, "NMC_first": 2162.75, "NMC_replace": 1639.54},
+      {"year": 2035, "LFP_first": 14835.57, "LFP_replace": 14717.16, "NMC_first": 2270.89, "NMC_replace": 1797.72},
+      {"year": 2036, "LFP_first": 15577.35, "LFP_replace": 16192.84, "NMC_first": 2384.43, "NMC_replace": 1954.36},
+      {"year": 2037, "LFP_first": 16356.22, "LFP_replace": 17652.92, "NMC_first": 2503.66, "NMC_replace": 2110.11},
+      {"year": 2038, "LFP_first": 17174.03, "LFP_replace": 19093.96, "NMC_first": 2628.84, "NMC_replace": 2265.67},
+      {"year": 2039, "LFP_first": 18032.73, "LFP_replace": 20524.85, "NMC_first": 2760.28, "NMC_replace": 2421.74},
+      {"year": 2040, "LFP_first": 18934.37, "LFP_replace": 21957.45, "NMC_first": 2898.29, "NMC_replace": 2579.02}
+    ],
+    "check_rows": [
+      {"year": 2030, "total_battery_exit_t_pack_a": 10322.10, "year_end_total_stock_t_pack": 83898.50},
+      {"year": 2035, "total_battery_exit_t_pack_a": 22219.50, "year_end_total_stock_t_pack": 140768.21},
+      {"year": 2040, "total_battery_exit_t_pack_a": 34550.45, "year_end_total_stock_t_pack": 198691.46}
+    ],
+    "check_identity": "ΔS_c(t) = I_首装,c(t) + I_替换,c(t) − R_c(t)",
+    "collection_results": [
+      {"year": 2030, "collected_t_pack_a": 8257.68, "demand_ratio_vs_68000": 0.1214},
+      {"year": 2040, "collected_t_pack_a": 27640.36, "demand_ratio_vs_68000": 0.4065}
+    ],
+    "collection_note": "退出量含换下电池及随车报废电池，尚未乘收集率、未扣梯次与其他企业分流；c=0.80 且假设全部供给本园区时，供需量比仅为条件比例，不是园区进料"
+  },
+
+  "kept_missing": [
+    "黑粉总产率与捕集效率分别处理，不用 0.50 代替捕集率",
+    "不再次乘 0.85 负荷，不重复扣粉料水分",
+    "不将粗品、纯物质当量与合格商品量混用",
+    "三元 622/811 仍是技术情景，真实本地拆分保持未知",
+    "蒸汽热态、粉料胶黏剂残留、实际产品合格率、完整水及元素流股分配、持证企业数量与真实运输半径继续保持缺失"
+  ]
+}

@@ -1,0 +1,1879 @@
+{
+  "metadata": {
+    "dataset_id": "A_ABC_READONLY_SUPPLEMENT_20261103",
+    "schema_version": "1.0.0",
+    "date": "2026-11-03",
+    "timezone": "Asia/Shanghai",
+    "source_directories_modified": false,
+    "instruction": "新增研究补充，不覆盖旧JSON、CSV、代码或报告；候选/迁移情景不自动转正式输入",
+    "deliverable_status": "data_supplement_and_IDE_prompts_not_final_validated_plant_LCOR"
+  },
+  "conventions": {
+    "missing": "null，不代0",
+    "fraction": "0–1，原百分数另存",
+    "conflict": "并列且不平均",
+    "mass_unit": "t=metric_tonne",
+    "product": "商品量/干纯物质量/元素量各列，不互代",
+    "boundaries": "市域首装队列dMFA与园区年度运行工况分开",
+    "routes": "EV机械、LS、ANL、JIANG、ND互为参考/备选，禁止默认全部拼进同一工厂",
+    "production": "capacity/inputallocation/inventory/recovered_intermediate/saleable_product分别命名"
+  },
+  "operating_case": {
+    "design_received_pack_t_a": 80000.0,
+    "load_factor": 0.85,
+    "actual_received_pack_t_a": 68000.0,
+    "design_reuse_capacity_t_a": 10000.0,
+    "conditional_reuse_allocated_pack_t_a": 8500.0,
+    "design_recycling_capacity_t_a": 70000.0,
+    "actual_recycling_inlet_pack_t_a": 59500.0,
+    "reuse_split_mass_fraction": 0.125,
+    "chemistry_mass_shares": {
+      "LFP": 0.6,
+      "MIXED_NMC_UNSPECIFIED": 0.4
+    },
+    "basis": "整包质量；按现有A组内决策与C工况；同体系12.5%分流是规划假设，不是SOH推导或合格出货率",
+    "source": "A/data_cohort/a_group_decisions.json 与 C/C_final_assumptions.json",
+    "nominal_calendar_candidate_hours_a": 7200,
+    "calendar_source_id": "SRC040",
+    "actual_operating_hours_a": null,
+    "calendar_note": "300天×24小时来自同类项目设计，未将其作为宜昌厂运行记录；负荷已乘在进料，不能重复乘0.85。"
+  },
+  "annual_common_inventory": [
+    {
+      "chemistry": "LFP",
+      "received_pack_t_a": 40800.0,
+      "reuse_allocated_pack_t_a": 5100.0,
+      "recycling_inlet_pack_t_a": 35700.0,
+      "cell_t_a": 23658.39,
+      "blackmass_component_inventory_t_a": 10097.400852,
+      "copper_foil_component_t_a": 3879.9759599999993,
+      "aluminium_foil_component_t_a": 1353.259908,
+      "source_ids": [
+        "SRC039"
+      ],
+      "status": "conditional_group_case_composition_inventory_not_recovered_product",
+      "moisture_basis": "原报告整包/电芯组分质量基准；非指定干粉；水分未另行归一化",
+      "nonadditivity": "电芯展开项是电芯的子项，不与整包电芯再次相加；集流体/铜线等另列，不能未辨材质就全算作铜。"
+    },
+    {
+      "chemistry": "MIXED_NMC_UNSPECIFIED",
+      "received_pack_t_a": 27200.0,
+      "reuse_allocated_pack_t_a": 3400.0,
+      "recycling_inlet_pack_t_a": 23800.0,
+      "cell_t_a": 15104.908,
+      "blackmass_component_inventory_t_a": 6612.9287224,
+      "copper_foil_component_t_a": 2033.1206167999999,
+      "aluminium_foil_component_t_a": 1728.0014752,
+      "source_ids": [
+        "SRC039"
+      ],
+      "status": "conditional_group_case_composition_inventory_not_recovered_product",
+      "moisture_basis": "原报告整包/电芯组分质量基准；非指定干粉；水分未另行归一化",
+      "nonadditivity": "电芯展开项是电芯的子项，不与整包电芯再次相加；集流体/铜线等另列，不能未辨材质就全算作铜。"
+    }
+  ],
+  "mechanical_capture_screening": {
+    "profile_id": "EV_I_M02_TRANSFER_SCREENING",
+    "automatically_adopted": false,
+    "plant_observed_capture_fraction": null,
+    "source_id": "NEW-MECH2026",
+    "reference_capture_fraction": 0.9328,
+    "reference_original_percent": 93.28,
+    "reference_sd_fraction": 0.0405,
+    "reference_sd_original_percentage_points": 4.05,
+    "sample_n": 3,
+    "denominator": "同一来源EV模块经手工拆解测得的可回收黑粉基准质量；非整包质量、非Li质量",
+    "reference_feed_form": "NMC型EV模块；13 kg单批、100 kg/h中试设计；不是本案例8万t/a工业实测",
+    "reference_baseline_BM_mass_fraction_of_module": 0.4733,
+    "reference_recovered_BM_mass_fraction_of_module": 0.4415,
+    "reference_basis": "报告称破碎物干态；包含正负极粉；与JR“含胶黏剂黑粉”的等价性未获证明",
+    "transfer_assumptions": [
+      "将同源模块实验的总黑粉捕集率移用于JR组分库存；忽略装置放大对分选的改变。",
+      "对LFP采用同一数值另属跨体系代理；不宣称LFP实测或法规达标。",
+      "仅计算黑粉总质量，不据此推定Li/Ni/Co/Mn各元素同率分配。"
+    ],
+    "alternative_route": {
+      "profile_id": "EV_II",
+      "capture_fraction": 0.8353,
+      "original_percent": 83.53,
+      "sd_fraction": 0.0363,
+      "selection": "不同机械流程，单独情景，不平均"
+    },
+    "annual_rows": [
+      {
+        "chemistry": "LFP",
+        "inventory_t_a": 10097.400852,
+        "conditionally_captured_blackmass_t_a": 9418.8555147456,
+        "not_in_captured_stream_t_a": 678.5453372544005,
+        "alternative_EV_II_captured_t_a": 8434.3589316756,
+        "plant_measured_blackmass_t_a": null,
+        "label": "文献迁移情景；不是实测黑粉产量",
+        "remaining_destination": "粗粒/箔材附粉/粉尘等分流尚未量化，不能全部记大气排放、危废或消失"
+      },
+      {
+        "chemistry": "MIXED_NMC_UNSPECIFIED",
+        "inventory_t_a": 6612.9287224,
+        "conditionally_captured_blackmass_t_a": 6168.53991225472,
+        "not_in_captured_stream_t_a": 444.3888101452802,
+        "alternative_EV_II_captured_t_a": 5523.779361820721,
+        "plant_measured_blackmass_t_a": null,
+        "label": "文献迁移情景；不是实测黑粉产量",
+        "remaining_destination": "粗粒/箔材附粉/粉尘等分流尚未量化，不能全部记大气排放、危废或消失"
+      }
+    ]
+  },
+  "reference_routes": [
+    {
+      "profile_id": "LS23_LFP_NATIVE_POWDER",
+      "automatically_adopted": false,
+      "source_id": "SRC040",
+      "native_powder_feed_t_a": 10000,
+      "own_powder_feed_t_a": 5000,
+      "purchased_powder_feed_t_a": 5000,
+      "input_form": "LFP粉料，非整包/电芯；原表申报质量",
+      "assay_moisture_fraction": 0.0215,
+      "assay_li_fraction": 0.024155,
+      "assay_mass_sum": 0.772665,
+      "moisture_basis": "H2O在同一表中列2.15%；其他元素干/湿基未明，as-received解释只能作为显式假设",
+      "component_capture_note": "同报告 .989795918 仅为目标正负极粉组分的物料表推导；与EV I .9328分母不同，非冲突值、不平均。",
+      "records": [
+        {
+          "id": "LS23_MOISTURE",
+          "label": "powder assay H2O",
+          "source_id": "SRC040",
+          "source_url": "https://hbj.yueyang.gov.cn/uploadfiles/202312/2023120609494581990.pdf",
+          "value": 0.0215,
+          "unit": "kg_H2O/kg_declared_powder",
+          "denominator": "1 kg report-declared powder",
+          "locator": "印刷p76/PDF88, Table3.5-4",
+          "chemistry": "LFP",
+          "data_type": "public_EIA_design_inventory_not_plant_actual",
+          "original_value": 2.15,
+          "original_unit": "%",
+          "basis_note": "表含H2O，但未明确其余元素干/湿基；采用同表as-received基准须标为建模假设。不得将总和77.2665%归一化。"
+        },
+        {
+          "id": "LS23_ASSAY_LI",
+          "label": "Li",
+          "source_id": "SRC040",
+          "source_url": "https://hbj.yueyang.gov.cn/uploadfiles/202312/2023120609494581990.pdf",
+          "value": 0.024155,
+          "unit": "kg_element/kg_declared_powder",
+          "denominator": "1 kg report-declared powder",
+          "locator": "印刷p76/PDF88, Table3.5-4",
+          "chemistry": "LFP",
+          "data_type": "public_EIA_design_inventory_not_plant_actual",
+          "basis_note": "元素基；干/湿基未明，引用时声明采用as-received假设。"
+        },
+        {
+          "id": "LS23_ASSAY_FE",
+          "label": "Fe",
+          "source_id": "SRC040",
+          "source_url": "https://hbj.yueyang.gov.cn/uploadfiles/202312/2023120609494581990.pdf",
+          "value": 0.151873,
+          "unit": "kg_element/kg_declared_powder",
+          "denominator": "1 kg report-declared powder",
+          "locator": "印刷p76/PDF88, Table3.5-4",
+          "chemistry": "LFP",
+          "data_type": "public_EIA_design_inventory_not_plant_actual",
+          "basis_note": "元素基；干/湿基未明，引用时声明采用as-received假设。"
+        },
+        {
+          "id": "LS23_ASSAY_P",
+          "label": "P",
+          "source_id": "SRC040",
+          "source_url": "https://hbj.yueyang.gov.cn/uploadfiles/202312/2023120609494581990.pdf",
+          "value": 0.085381,
+          "unit": "kg_element/kg_declared_powder",
+          "denominator": "1 kg report-declared powder",
+          "locator": "印刷p76/PDF88, Table3.5-4",
+          "chemistry": "LFP",
+          "data_type": "public_EIA_design_inventory_not_plant_actual",
+          "basis_note": "元素基；干/湿基未明，引用时声明采用as-received假设。"
+        },
+        {
+          "id": "LS23_ASSAY_C",
+          "label": "C",
+          "source_id": "SRC040",
+          "source_url": "https://hbj.yueyang.gov.cn/uploadfiles/202312/2023120609494581990.pdf",
+          "value": 0.45537,
+          "unit": "kg_element/kg_declared_powder",
+          "denominator": "1 kg report-declared powder",
+          "locator": "印刷p76/PDF88, Table3.5-4",
+          "chemistry": "LFP",
+          "data_type": "public_EIA_design_inventory_not_plant_actual",
+          "basis_note": "元素基；干/湿基未明，引用时声明采用as-received假设。"
+        },
+        {
+          "id": "LS23_PRODUCT_CRUDE_LIC",
+          "label": "粗碳酸锂",
+          "source_id": "SRC040",
+          "source_url": "https://hbj.yueyang.gov.cn/uploadfiles/202312/2023120609494581990.pdf",
+          "value": 0.1420609,
+          "unit": "t_report_product/t_declared_powder",
+          "denominator": "10000 t/a total powder (5000 own +5000 purchased)",
+          "locator": "印刷p65/PDF77, Table3.4-1",
+          "chemistry": "LFP",
+          "data_type": "public_EIA_design_inventory_not_plant_actual",
+          "original_value": 1420.609,
+          "original_unit": "t/a",
+          "moisture_fraction": 0.2,
+          "dry_purity_fraction": 0.99,
+          "pure_substance_t_per_t_powder": 0.11251223279999999,
+          "product_role": "内部进入铁锂生产线，不是已达电池级可售品",
+          "saleable_battery_grade_quantity": null
+        },
+        {
+          "id": "LS23_PRODUCT_FEP_SLAG",
+          "label": "磷酸铁渣",
+          "source_id": "SRC040",
+          "source_url": "https://hbj.yueyang.gov.cn/uploadfiles/202312/2023120609494581990.pdf",
+          "value": 0.7495861,
+          "unit": "t_report_product/t_declared_powder",
+          "denominator": "10000 t/a total powder (5000 own +5000 purchased)",
+          "locator": "印刷p65/PDF77, Table3.4-1",
+          "chemistry": "LFP",
+          "data_type": "public_EIA_design_inventory_not_plant_actual",
+          "original_value": 7495.861,
+          "original_unit": "t/a",
+          "moisture_fraction": 0.4,
+          "dry_purity_fraction": 0.99,
+          "pure_substance_t_per_t_powder": 0.44525414339999997,
+          "product_role": "内部进入磷铁生产线；不是8万t/a磷酸铁成品",
+          "saleable_battery_grade_quantity": null
+        },
+        {
+          "id": "LS23_PRODUCT_ALP",
+          "label": "磷酸铝",
+          "source_id": "SRC040",
+          "source_url": "https://hbj.yueyang.gov.cn/uploadfiles/202312/2023120609494581990.pdf",
+          "value": 0.1348885,
+          "unit": "t_report_product/t_declared_powder",
+          "denominator": "10000 t/a total powder (5000 own +5000 purchased)",
+          "locator": "印刷p65/PDF77, Table3.4-1",
+          "chemistry": "LFP",
+          "data_type": "public_EIA_design_inventory_not_plant_actual",
+          "original_value": 1348.885,
+          "original_unit": "t/a",
+          "moisture_fraction": 0.4,
+          "dry_purity_fraction": 0.99,
+          "pure_substance_t_per_t_powder": 0.080123769,
+          "product_role": "外售副产品",
+          "saleable_battery_grade_quantity": null
+        },
+        {
+          "id": "LS23_PRODUCT_SODIUM_SULFATE",
+          "label": "硫酸钠",
+          "source_id": "SRC040",
+          "source_url": "https://hbj.yueyang.gov.cn/uploadfiles/202312/2023120609494581990.pdf",
+          "value": 0.867238,
+          "unit": "t_report_product/t_declared_powder",
+          "denominator": "10000 t/a total powder (5000 own +5000 purchased)",
+          "locator": "印刷p65/PDF77, Table3.4-1",
+          "chemistry": "LFP",
+          "data_type": "public_EIA_design_inventory_not_plant_actual",
+          "original_value": 8672.38,
+          "original_unit": "t/a",
+          "moisture_fraction": null,
+          "dry_purity_fraction": null,
+          "pure_substance_t_per_t_powder": null,
+          "product_role": "外售；未明确水合形态/水分",
+          "saleable_battery_grade_quantity": null,
+          "reported_product_grade_fraction": 0.92,
+          "grade_basis": "reported_total_product_purity_or_metal_content_moisture_unspecified"
+        },
+        {
+          "id": "LS23_PRODUCT_SPONGE_CU",
+          "label": "海绵铜",
+          "source_id": "SRC040",
+          "source_url": "https://hbj.yueyang.gov.cn/uploadfiles/202312/2023120609494581990.pdf",
+          "value": 0.039580000000000004,
+          "unit": "t_report_product/t_declared_powder",
+          "denominator": "10000 t/a total powder (5000 own +5000 purchased)",
+          "locator": "印刷p65/PDF77, Table3.4-1",
+          "chemistry": "LFP",
+          "data_type": "public_EIA_design_inventory_not_plant_actual",
+          "original_value": 395.8,
+          "original_unit": "t/a",
+          "moisture_fraction": null,
+          "dry_purity_fraction": null,
+          "pure_substance_t_per_t_powder": null,
+          "product_role": "外售Cu-40，纯度指Cu质量分数",
+          "saleable_battery_grade_quantity": null,
+          "reported_product_grade_fraction": 0.4,
+          "grade_basis": "reported_total_product_purity_or_metal_content_moisture_unspecified"
+        },
+        {
+          "id": "LS23_CRUDE_LI_CONTENT",
+          "label": "粗碳酸锂所含元素Li",
+          "source_id": "SRC040",
+          "source_url": "https://hbj.yueyang.gov.cn/uploadfiles/202312/2023120609494581990.pdf",
+          "value": 0.0211351,
+          "unit": "t_Li/t_declared_powder",
+          "denominator": "10000 t/a powder",
+          "locator": "印刷p116/PDF128, Table4.2-16",
+          "chemistry": "LFP",
+          "data_type": "public_EIA_design_inventory_not_plant_actual",
+          "original_value": 211.351,
+          "original_unit": "t_Li/a",
+          "note": "由后续铁锂线原料元素表反核；湿产品含Li14.877%(表内四舍五入)"
+        },
+        {
+          "id": "LS23_DERIVED_LI_TO_CRUDE",
+          "label": "Li报告表间隐含进入粗碳酸锂比例",
+          "source_id": "SRC040",
+          "source_url": "https://hbj.yueyang.gov.cn/uploadfiles/202312/2023120609494581990.pdf",
+          "value": 0.8749782653694888,
+          "unit": "t_Li_crude/t_Li_powder",
+          "denominator": "powder Li assuming assay as-received",
+          "locator": "印刷p76/PDF88 Table3.5-4 + p116/PDF128 Table4.2-16",
+          "chemistry": "LFP",
+          "data_type": "cross_table_derivation_conditional_assay_basis",
+          "formula": "211.351/(10000*0.024155)",
+          "note": "约0.874978，非工厂实测；全流程工序表保密，余Li去向未闭合；与跨文献0.90–0.976不可混成区间。"
+        },
+        {
+          "id": "LS23_NATIVE_POWDER_YIELD",
+          "label": "正负极粉总产率",
+          "source_id": "SRC040",
+          "source_url": "https://hbj.yueyang.gov.cn/uploadfiles/202312/2023120609494581990.pdf",
+          "value": 0.5,
+          "unit": "t_report_powder/t_cell",
+          "denominator": "10000 t/a LFP cell input",
+          "locator": "印刷p65/PDF77 Table3.4-1; p96/PDF108 Table4.2-2",
+          "chemistry": "LFP",
+          "data_type": "public_EIA_design_inventory_not_plant_actual",
+          "original_value": 5000,
+          "original_unit": "t/a",
+          "basis_note": "输入为单体电芯，非整包；总粉物流含97%极粉，既不是纯组分占比，也不是元素回收率。"
+        },
+        {
+          "id": "LS23_DERIVED_POWDER_COMPONENT_CAPTURE",
+          "label": "正负极目标组分隐含捕集率",
+          "source_id": "SRC040",
+          "source_url": "https://hbj.yueyang.gov.cn/uploadfiles/202312/2023120609494581990.pdf",
+          "value": 0.9897959183673469,
+          "unit": "t_target_component_in_powder/t_target_component_in_cell",
+          "denominator": "positive+negative active powder =38%+11% cell mass",
+          "locator": "印刷p74/PDF86 Table3.5-2 + p65/PDF77 Table3.4-1",
+          "chemistry": "LFP",
+          "data_type": "EIA_balance_derived_proxy_not_measured",
+          "formula": "5000*0.97/(10000*(0.38+0.11))",
+          "original_powder_product_grade": 0.97,
+          "note": "须假设97%“级粉含量”对应正负极目标组分及同质量基；迁移JR前端需独立相似工艺假设；不能将此系数当Li捕集率或NMC实测。"
+        },
+        {
+          "id": "LS23_FOIL_CU",
+          "label": "铜箔",
+          "source_id": "SRC040",
+          "source_url": "https://hbj.yueyang.gov.cn/uploadfiles/202312/2023120609494581990.pdf",
+          "value": 0.1387118,
+          "unit": "t_foil_product/t_cell",
+          "denominator": "10000 t/a cell input",
+          "locator": "印刷p65/PDF77 Table3.4-1 + p74/PDF86 Table3.5-2",
+          "chemistry": "LFP",
+          "data_type": "public_EIA_design_inventory_not_plant_actual",
+          "original_value": 1387.118,
+          "original_unit": "t/a",
+          "product_metal_fraction": 0.97,
+          "derived_metal_capture": 0.9610746142857141,
+          "basis_note": "销售品位97%的箔产品，不是纯Cu/Al质量；捕集率从同报告质量表推导非实测。"
+        },
+        {
+          "id": "LS23_FOIL_AL",
+          "label": "铝箔",
+          "source_id": "SRC040",
+          "source_url": "https://hbj.yueyang.gov.cn/uploadfiles/202312/2023120609494581990.pdf",
+          "value": 0.059447900000000005,
+          "unit": "t_foil_product/t_cell",
+          "denominator": "10000 t/a cell input",
+          "locator": "印刷p65/PDF77 Table3.4-1 + p74/PDF86 Table3.5-2",
+          "chemistry": "LFP",
+          "data_type": "public_EIA_design_inventory_not_plant_actual",
+          "original_value": 594.479,
+          "original_unit": "t/a",
+          "product_metal_fraction": 0.97,
+          "derived_metal_capture": 0.9610743833333334,
+          "basis_note": "销售品位97%的箔产品，不是纯Cu/Al质量；捕集率从同报告质量表推导非实测。"
+        },
+        {
+          "id": "LS23_PURE_WATER",
+          "label": "PURE_WATER",
+          "source_id": "SRC040",
+          "source_url": "https://hbj.yueyang.gov.cn/uploadfiles/202312/2023120609494581990.pdf",
+          "value": 0.3491132,
+          "unit": "m3/t_powder",
+          "denominator": "10000 t_powder/a",
+          "locator": "印刷p118/PDF130 §4.2.8.1(4)",
+          "chemistry": "LFP",
+          "data_type": "public_EIA_design_inventory_not_plant_actual",
+          "original_value": 3491.132,
+          "original_unit": "m3/a",
+          "note": "外供纯水，另有制水上游；不能与同量原水重复计"
+        },
+        {
+          "id": "LS23_SCRUBBER_MAKEUP",
+          "label": "SCRUBBER_MAKEUP",
+          "source_id": "SRC040",
+          "source_url": "https://hbj.yueyang.gov.cn/uploadfiles/202312/2023120609494581990.pdf",
+          "value": 0.0462186,
+          "unit": "m3/t_powder",
+          "denominator": "10000 t_powder/a",
+          "locator": "印刷p118/PDF130 §4.2.8.1(5)",
+          "chemistry": "LFP",
+          "data_type": "public_EIA_design_inventory_not_plant_actual",
+          "original_value": 462.186,
+          "original_unit": "m3/a",
+          "note": "粉线酸雾喷淋补水"
+        },
+        {
+          "id": "LS23_FLOOR_WATER",
+          "label": "FLOOR_WATER",
+          "source_id": "SRC040",
+          "source_url": "https://hbj.yueyang.gov.cn/uploadfiles/202312/2023120609494581990.pdf",
+          "value": 0.007824,
+          "unit": "m3/t_powder",
+          "denominator": "10000 t_powder/a",
+          "locator": "印刷p118/PDF130 §4.2.8.1(6)",
+          "chemistry": "LFP",
+          "data_type": "public_EIA_design_inventory_not_plant_actual",
+          "original_value": 78.24,
+          "original_unit": "m3/a",
+          "note": "粉线清洗用水"
+        },
+        {
+          "id": "LS23_MVR_CONDENSATE_DISCHARGE",
+          "label": "MVR_CONDENSATE_DISCHARGE",
+          "source_id": "SRC040",
+          "source_url": "https://hbj.yueyang.gov.cn/uploadfiles/202312/2023120609494581990.pdf",
+          "value": 0.5604255,
+          "unit": "m3/t_powder",
+          "denominator": "10000 t_powder/a",
+          "locator": "印刷p118/PDF130 §4.2.8.1(4)",
+          "chemistry": "LFP",
+          "data_type": "public_EIA_design_inventory_not_plant_actual",
+          "original_value": 5604.255,
+          "original_unit": "m3/a",
+          "note": "外排MVR冷凝水，不是零排水"
+        },
+        {
+          "id": "LS23_SCRUBBER_WW",
+          "label": "SCRUBBER_WW",
+          "source_id": "SRC040",
+          "source_url": "https://hbj.yueyang.gov.cn/uploadfiles/202312/2023120609494581990.pdf",
+          "value": 0.00144,
+          "unit": "m3/t_powder",
+          "denominator": "10000 t_powder/a",
+          "locator": "印刷p118/PDF130 §4.2.8.1(5)",
+          "chemistry": "LFP",
+          "data_type": "public_EIA_design_inventory_not_plant_actual",
+          "original_value": 14.4,
+          "original_unit": "m3/a",
+          "note": "单独运往回购厂房处置，不能与冷凝水混为总排放"
+        },
+        {
+          "id": "LS23_FLOOR_WW",
+          "label": "FLOOR_WW",
+          "source_id": "SRC040",
+          "source_url": "https://hbj.yueyang.gov.cn/uploadfiles/202312/2023120609494581990.pdf",
+          "value": 0.0062591999999999995,
+          "unit": "m3/t_powder",
+          "denominator": "10000 t_powder/a",
+          "locator": "印刷p118/PDF130 §4.2.8.1(6)",
+          "chemistry": "LFP",
+          "data_type": "public_EIA_design_inventory_not_plant_actual",
+          "original_value": 62.592,
+          "original_unit": "m3/a",
+          "note": "沉淀+pH调节"
+        },
+        {
+          "id": "LS23_PRE_SCRUBBER_WATER",
+          "label": "PRE_SCRUBBER_WATER",
+          "source_id": "SRC040",
+          "source_url": "https://hbj.yueyang.gov.cn/uploadfiles/202312/2023120609494581990.pdf",
+          "value": 0.5469014,
+          "unit": "m3/t_cell",
+          "denominator": "10000 t_cell/a",
+          "locator": "印刷p118/PDF130 §4.2.8.1(1)",
+          "chemistry": "LFP",
+          "data_type": "public_EIA_design_inventory_not_plant_actual",
+          "original_value": 5469.014,
+          "original_unit": "m3/a",
+          "note": "预处理喷淋补水"
+        },
+        {
+          "id": "LS23_PRE_COOL_WATER",
+          "label": "PRE_COOL_WATER",
+          "source_id": "SRC040",
+          "source_url": "https://hbj.yueyang.gov.cn/uploadfiles/202312/2023120609494581990.pdf",
+          "value": 0.576,
+          "unit": "m3/t_cell",
+          "denominator": "10000 t_cell/a",
+          "locator": "印刷p118/PDF130 §4.2.8.1(2)",
+          "chemistry": "LFP",
+          "data_type": "public_EIA_design_inventory_not_plant_actual",
+          "original_value": 5760,
+          "original_unit": "m3/a",
+          "note": "预处理冷却塔补水"
+        },
+        {
+          "id": "LS23_PRE_QUENCH_WATER",
+          "label": "PRE_QUENCH_WATER",
+          "source_id": "SRC040",
+          "source_url": "https://hbj.yueyang.gov.cn/uploadfiles/202312/2023120609494581990.pdf",
+          "value": 0.036,
+          "unit": "m3/t_cell",
+          "denominator": "10000 t_cell/a",
+          "locator": "印刷p118/PDF130 §4.2.8.1(3)",
+          "chemistry": "LFP",
+          "data_type": "public_EIA_design_inventory_not_plant_actual",
+          "original_value": 360,
+          "original_unit": "m3/a",
+          "note": "急冷补水"
+        },
+        {
+          "id": "LS23_PRE_NG",
+          "label": "PRE_NG",
+          "source_id": "SRC040",
+          "source_url": "https://hbj.yueyang.gov.cn/uploadfiles/202312/2023120609494581990.pdf",
+          "value": 28.8,
+          "unit": "Nm3/t_cell",
+          "denominator": "10000 t_cell/a",
+          "locator": "印刷p71/PDF83 Table3.5-1",
+          "chemistry": "LFP",
+          "data_type": "public_EIA_design_inventory_not_plant_actual",
+          "original_value": 288000,
+          "original_unit": "Nm3/a",
+          "note": "热解尾气燃烧天然气，标准状态体积"
+        },
+        {
+          "id": "LS23_PRE_N2",
+          "label": "PRE_N2",
+          "source_id": "SRC040",
+          "source_url": "https://hbj.yueyang.gov.cn/uploadfiles/202312/2023120609494581990.pdf",
+          "value": 216,
+          "unit": "Nm3/t_cell",
+          "denominator": "10000 t_cell/a",
+          "locator": "印刷p71/PDF83 Table3.5-1",
+          "chemistry": "LFP",
+          "data_type": "public_EIA_design_inventory_not_plant_actual",
+          "original_value": 2160000,
+          "original_unit": "Nm3/a",
+          "note": "厂内制氮，不把PSA电耗再重复加在租赁厂房总电"
+        },
+        {
+          "id": "LS23_STEAM",
+          "label": "STEAM",
+          "source_id": "SRC040",
+          "source_url": "https://hbj.yueyang.gov.cn/uploadfiles/202312/2023120609494581990.pdf",
+          "value": 1.1747755,
+          "unit": "t_steam/t_powder",
+          "denominator": "10000 t_powder/a",
+          "locator": "印刷p72/PDF84 Table3.5-1",
+          "chemistry": "LFP",
+          "data_type": "public_EIA_design_inventory_not_plant_actual",
+          "original_value": 11747.755,
+          "original_unit": "t_steam/a",
+          "note": "蒸汽质量，不是能量；P/T未核实"
+        },
+        {
+          "id": "LS23_CAUSTIC_RESIDUE",
+          "label": "CAUSTIC_RESIDUE",
+          "source_id": "SRC040",
+          "source_url": "https://hbj.yueyang.gov.cn/uploadfiles/202312/2023120609494581990.pdf",
+          "value": 0.01566,
+          "unit": "t/t_powder",
+          "denominator": "10000 t_powder/a",
+          "locator": "印刷p163/PDF175 §4.3.4.2(1); p167/PDF179 Table4.3-23",
+          "chemistry": "LFP",
+          "data_type": "public_EIA_design_inventory_not_plant_actual",
+          "original_value": 156.6,
+          "original_unit": "t/a",
+          "note": "一般固废，氢氧化物；水分未明；非全作危废"
+        },
+        {
+          "id": "LS23_CARBON_RESIDUE",
+          "label": "CARBON_RESIDUE",
+          "source_id": "SRC040",
+          "source_url": "https://hbj.yueyang.gov.cn/uploadfiles/202312/2023120609494581990.pdf",
+          "value": 0.5624991,
+          "unit": "t/t_powder",
+          "denominator": "10000 t_powder/a",
+          "locator": "印刷p164/PDF176 §4.3.4.2(3); p167/PDF179 Table4.3-23",
+          "chemistry": "LFP",
+          "data_type": "public_EIA_design_inventory_not_plant_actual",
+          "original_value": 5624.991,
+          "original_unit": "t/a",
+          "note": "一般固废，外售燃料，不是已达电池级石墨"
+        },
+        {
+          "id": "LS23_WET_SCRUBBER_RESIDUE",
+          "label": "WET_SCRUBBER_RESIDUE",
+          "source_id": "SRC040",
+          "source_url": "https://hbj.yueyang.gov.cn/uploadfiles/202312/2023120609494581990.pdf",
+          "value": 0.0078929,
+          "unit": "t/t_powder",
+          "denominator": "10000 t_powder/a",
+          "locator": "印刷p164/PDF176 §4.3.4.2(2)",
+          "chemistry": "LFP",
+          "data_type": "public_EIA_design_inventory_not_plant_actual",
+          "original_value": 78.929,
+          "original_unit": "t/a",
+          "note": "含水20%，一般固废"
+        },
+        {
+          "id": "LS23_PRE_WET_SCRUBBER_RESIDUE",
+          "label": "PRE_WET_SCRUBBER_RESIDUE",
+          "source_id": "SRC040",
+          "source_url": "https://hbj.yueyang.gov.cn/uploadfiles/202312/2023120609494581990.pdf",
+          "value": 0.0345069,
+          "unit": "t/t_cell",
+          "denominator": "10000 t_cell/a",
+          "locator": "印刷p163/PDF175 §4.3.4.1(1)",
+          "chemistry": "LFP",
+          "data_type": "public_EIA_design_inventory_not_plant_actual",
+          "original_value": 345.069,
+          "original_unit": "t/a",
+          "note": "含水20%，一般固废"
+        },
+        {
+          "id": "LS23_COMBINED_ELECTRICITY",
+          "label": "租赁厂房组合电耗",
+          "source_id": "SRC040",
+          "source_url": "https://hbj.yueyang.gov.cn/uploadfiles/202312/2023120609494581990.pdf",
+          "value": 11232000,
+          "unit": "kWh/a",
+          "denominator": "10000t/a LFP cells +10000t/a powder +sharedaux",
+          "locator": "印刷p72/PDF84 Table3.5-1",
+          "chemistry": "LFP",
+          "data_type": "public_EIA_design_inventory_not_plant_actual",
+          "single_wet_stage_intensity": null,
+          "note": "无分线分配。不允许1123.2kWh/t粉直接与另一全前处理电耗叠加。native组合中一半粉外购，用户case电芯/粉比例不同。"
+        }
+      ],
+      "acid_versions": {
+        "selected_recommendation": "采购/LCI以原辅料总表0.5630527 t98%acid/t_report_powder为条件参考；保留0.4902作独立敏感性。不是断言0.4902错误。",
+        "main": {
+          "value": 0.5630527,
+          "specification_fraction": 0.98,
+          "locator": "印刷p70–72/PDF82–84 Table3.5-1; p63/PDF75依托罐说明也5630.527t/a"
+        },
+        "alternate": {
+          "value": 0.4902,
+          "specification_fraction": 0.98,
+          "locator": "印刷p132/PDF144 §4.3.1.2稀释酸雾源强"
+        },
+        "reason": "两处同称98%浓硫酸同粉回收线，不能浓度折算消除冲突，不平均。"
+      },
+      "redaction": {
+        "locator": "印刷p97/PDF109 §4.2.3",
+        "text": "保密内容。",
+        "impact": "逐工段Li/Fe/P/其他元素分配无可用公开全表；勿编造页码表号"
+      },
+      "interstage_li_split": null,
+      "battery_grade_lce_sale_t_a": null,
+      "battery_grade_fepo4_sale_t_a": null,
+      "single_wet_stage_electricity_kwh_a": null,
+      "steam_energy_MJ_a": null,
+      "caveats": [
+        "保留租赁厂房11232000kWh/a组合电耗，不把它除以粉量充当纯湿法单耗。",
+        "粗碳酸锂和磷酸铁渣为内部中间品；不得按电池级产品价格自动计收入。",
+        "下游8万t/a磷酸铁和1万t/a铁锂线另有大量外购铁/磷/锂原料，不得整体按回收粉量缩放。",
+        "水、药剂、固渣采用同一LS边界；与JR粉料或Jiang中试产品不可自动拼接。"
+      ],
+      "commercial_reagent_intensities": [
+        {
+          "parameter_id": "LS_ACID",
+          "name": "98%硫酸",
+          "value": 0.5630527,
+          "numerator_unit": "t_commercial_material",
+          "denominator_unit": "t_powder_feed",
+          "specification_fraction": 0.98,
+          "source_ids": [
+            "SRC040"
+          ],
+          "locator": "表3.5-1；p71–72",
+          "limitation": "非宜昌实测；粉料Li品位不同于JR；硫酸另有4902t/a口径冲突；蒸汽须核压力/温度。"
+        },
+        {
+          "parameter_id": "LS_FE",
+          "name": "99%铁粉",
+          "value": 0.01314,
+          "numerator_unit": "t_commercial_material",
+          "denominator_unit": "t_powder_feed",
+          "specification_fraction": 0.99,
+          "source_ids": [
+            "SRC040"
+          ],
+          "locator": "表3.5-1；p71–72",
+          "limitation": "非宜昌实测；粉料Li品位不同于JR；硫酸另有4902t/a口径冲突；蒸汽须核压力/温度。"
+        },
+        {
+          "parameter_id": "LS_NAOH",
+          "name": "32%液碱",
+          "value": 1.4639370999999999,
+          "numerator_unit": "t_commercial_material",
+          "denominator_unit": "t_powder_feed",
+          "specification_fraction": 0.32,
+          "source_ids": [
+            "SRC040"
+          ],
+          "locator": "表3.5-1；p71–72",
+          "limitation": "非宜昌实测；粉料Li品位不同于JR；硫酸另有4902t/a口径冲突；蒸汽须核压力/温度。"
+        },
+        {
+          "parameter_id": "LS_CAO",
+          "name": "92%氧化钙",
+          "value": 0.0294,
+          "numerator_unit": "t_commercial_material",
+          "denominator_unit": "t_powder_feed",
+          "specification_fraction": 0.92,
+          "source_ids": [
+            "SRC040"
+          ],
+          "locator": "表3.5-1；p71–72",
+          "limitation": "非宜昌实测；粉料Li品位不同于JR；硫酸另有4902t/a口径冲突；蒸汽须核压力/温度。"
+        },
+        {
+          "parameter_id": "LS_PACID",
+          "name": "85%磷酸",
+          "value": 0.09823899999999999,
+          "numerator_unit": "t_commercial_material",
+          "denominator_unit": "t_powder_feed",
+          "specification_fraction": 0.85,
+          "source_ids": [
+            "SRC040"
+          ],
+          "locator": "表3.5-1；p71–72",
+          "limitation": "非宜昌实测；粉料Li品位不同于JR；硫酸另有4902t/a口径冲突；蒸汽须核压力/温度。"
+        },
+        {
+          "parameter_id": "LS_CO2",
+          "name": "液CO2",
+          "value": 0.111,
+          "numerator_unit": "t_commercial_material",
+          "denominator_unit": "t_powder_feed",
+          "specification_fraction": 0.9990000000000001,
+          "source_ids": [
+            "SRC040"
+          ],
+          "locator": "表3.5-1；p71–72",
+          "limitation": "非宜昌实测；粉料Li品位不同于JR；硫酸另有4902t/a口径冲突；蒸汽须核压力/温度。"
+        },
+        {
+          "parameter_id": "LS_O2",
+          "name": "液氧",
+          "value": 0.012,
+          "numerator_unit": "t_commercial_material",
+          "denominator_unit": "t_powder_feed",
+          "specification_fraction": 0.9990000000000001,
+          "source_ids": [
+            "SRC040"
+          ],
+          "locator": "表3.5-1；p71–72",
+          "limitation": "非宜昌实测；粉料Li品位不同于JR；硫酸另有4902t/a口径冲突；蒸汽须核压力/温度。"
+        }
+      ],
+      "example_scale_only": {
+        "example_id": "LS23_MASS_MATCH_SCREENING",
+        "automatically_adopted": false,
+        "purpose": "把同源LS粉料清单换算到本组LFP产粉量级，便于IDE试接接口；非已确认物料链",
+        "powder_feed_t_a": 9418.8555147456,
+        "transfer": "只借上述数值作投料规模；另假设入湿法粉料经调配达到LS同源组成/含水。该条件未证实，不能据此闭合JR整包Li。",
+        "missing": [
+          "JR产粉→LS进料的实际化验/调配/干燥质量变化",
+          "单线电耗",
+          "精制成电池级的收率、能耗和质量证明"
+        ],
+        "annual_records": [
+          {
+            "record_id": "LS23_PRODUCT_CRUDE_LIC",
+            "label": "粗碳酸锂",
+            "annual_value": 1338.0510913947232,
+            "unit": "t_report_product/a",
+            "basis": "仅LS同源粉料路线的条件规模换算，不是全厂合计",
+            "source_id": "SRC040",
+            "locator": "印刷p65/PDF77, Table3.4-1",
+            "status": "screening_not_selected_for_formal_results",
+            "dry_pure_substance_t_a": 1059.7364643846208
+          },
+          {
+            "record_id": "LS23_PRODUCT_FEP_SLAG",
+            "label": "磷酸铁渣",
+            "annual_value": 7060.243171761647,
+            "unit": "t_report_product/a",
+            "basis": "仅LS同源粉料路线的条件规模换算，不是全厂合计",
+            "source_id": "SRC040",
+            "locator": "印刷p65/PDF77, Table3.4-1",
+            "status": "screening_not_selected_for_formal_results",
+            "dry_pure_substance_t_a": 4193.784444026418
+          },
+          {
+            "record_id": "LS23_PRODUCT_ALP",
+            "label": "磷酸铝",
+            "annual_value": 1270.4952921007618,
+            "unit": "t_report_product/a",
+            "basis": "仅LS同源粉料路线的条件规模换算，不是全厂合计",
+            "source_id": "SRC040",
+            "locator": "印刷p65/PDF77, Table3.4-1",
+            "status": "screening_not_selected_for_formal_results",
+            "dry_pure_substance_t_a": 754.6742035078526
+          },
+          {
+            "record_id": "LS23_PRODUCT_SODIUM_SULFATE",
+            "label": "硫酸钠",
+            "annual_value": 8168.389418896945,
+            "unit": "t_report_product/a",
+            "basis": "仅LS同源粉料路线的条件规模换算，不是全厂合计",
+            "source_id": "SRC040",
+            "locator": "印刷p65/PDF77, Table3.4-1",
+            "status": "screening_not_selected_for_formal_results"
+          },
+          {
+            "record_id": "LS23_PRODUCT_SPONGE_CU",
+            "label": "海绵铜",
+            "annual_value": 372.7983012736309,
+            "unit": "t_report_product/a",
+            "basis": "仅LS同源粉料路线的条件规模换算，不是全厂合计",
+            "source_id": "SRC040",
+            "locator": "印刷p65/PDF77, Table3.4-1",
+            "status": "screening_not_selected_for_formal_results"
+          },
+          {
+            "record_id": "LS23_CRUDE_LI_CONTENT",
+            "label": "粗碳酸锂所含元素Li",
+            "annual_value": 199.06845318969977,
+            "unit": "t_Li/a",
+            "basis": "仅LS同源粉料路线的条件规模换算，不是全厂合计",
+            "source_id": "SRC040",
+            "locator": "印刷p116/PDF128, Table4.2-16",
+            "status": "screening_not_selected_for_formal_results"
+          },
+          {
+            "record_id": "LS23_PURE_WATER",
+            "label": "PURE_WATER",
+            "annual_value": 3288.246789090484,
+            "unit": "m3/a",
+            "basis": "仅LS同源粉料路线的条件规模换算，不是全厂合计",
+            "source_id": "SRC040",
+            "locator": "印刷p118/PDF130 §4.2.8.1(4)",
+            "status": "screening_not_selected_for_formal_results"
+          },
+          {
+            "record_id": "LS23_SCRUBBER_MAKEUP",
+            "label": "SCRUBBER_MAKEUP",
+            "annual_value": 435.326315493821,
+            "unit": "m3/a",
+            "basis": "仅LS同源粉料路线的条件规模换算，不是全厂合计",
+            "source_id": "SRC040",
+            "locator": "印刷p118/PDF130 §4.2.8.1(5)",
+            "status": "screening_not_selected_for_formal_results"
+          },
+          {
+            "record_id": "LS23_FLOOR_WATER",
+            "label": "FLOOR_WATER",
+            "annual_value": 73.69312554736958,
+            "unit": "m3/a",
+            "basis": "仅LS同源粉料路线的条件规模换算，不是全厂合计",
+            "source_id": "SRC040",
+            "locator": "印刷p118/PDF130 §4.2.8.1(6)",
+            "status": "screening_not_selected_for_formal_results"
+          },
+          {
+            "record_id": "LS23_MVR_CONDENSATE_DISCHARGE",
+            "label": "MVR_CONDENSATE_DISCHARGE",
+            "annual_value": 5278.566811279061,
+            "unit": "m3/a",
+            "basis": "仅LS同源粉料路线的条件规模换算，不是全厂合计",
+            "source_id": "SRC040",
+            "locator": "印刷p118/PDF130 §4.2.8.1(4)",
+            "status": "screening_not_selected_for_formal_results"
+          },
+          {
+            "record_id": "LS23_SCRUBBER_WW",
+            "label": "SCRUBBER_WW",
+            "annual_value": 13.563151941233667,
+            "unit": "m3/a",
+            "basis": "仅LS同源粉料路线的条件规模换算，不是全厂合计",
+            "source_id": "SRC040",
+            "locator": "印刷p118/PDF130 §4.2.8.1(5)",
+            "status": "screening_not_selected_for_formal_results"
+          },
+          {
+            "record_id": "LS23_FLOOR_WW",
+            "label": "FLOOR_WW",
+            "annual_value": 58.95450043789566,
+            "unit": "m3/a",
+            "basis": "仅LS同源粉料路线的条件规模换算，不是全厂合计",
+            "source_id": "SRC040",
+            "locator": "印刷p118/PDF130 §4.2.8.1(6)",
+            "status": "screening_not_selected_for_formal_results"
+          },
+          {
+            "record_id": "LS23_STEAM",
+            "label": "STEAM",
+            "annual_value": 11065.04069676302,
+            "unit": "t_steam/a",
+            "basis": "仅LS同源粉料路线的条件规模换算，不是全厂合计",
+            "source_id": "SRC040",
+            "locator": "印刷p72/PDF84 Table3.5-1",
+            "status": "screening_not_selected_for_formal_results"
+          },
+          {
+            "record_id": "LS23_CAUSTIC_RESIDUE",
+            "label": "CAUSTIC_RESIDUE",
+            "annual_value": 147.49927736091612,
+            "unit": "t/a",
+            "basis": "仅LS同源粉料路线的条件规模换算，不是全厂合计",
+            "source_id": "SRC040",
+            "locator": "印刷p163/PDF175 §4.3.4.2(1); p167/PDF179 Table4.3-23",
+            "status": "screening_not_selected_for_formal_results"
+          },
+          {
+            "record_id": "LS23_CARBON_RESIDUE",
+            "label": "CARBON_RESIDUE",
+            "annual_value": 5298.0977500744375,
+            "unit": "t/a",
+            "basis": "仅LS同源粉料路线的条件规模换算，不是全厂合计",
+            "source_id": "SRC040",
+            "locator": "印刷p164/PDF176 §4.3.4.2(3); p167/PDF179 Table4.3-23",
+            "status": "screening_not_selected_for_formal_results"
+          },
+          {
+            "record_id": "LS23_WET_SCRUBBER_RESIDUE",
+            "label": "WET_SCRUBBER_RESIDUE",
+            "annual_value": 74.34208469233555,
+            "unit": "t/a",
+            "basis": "仅LS同源粉料路线的条件规模换算，不是全厂合计",
+            "source_id": "SRC040",
+            "locator": "印刷p164/PDF176 §4.3.4.2(2)",
+            "status": "screening_not_selected_for_formal_results"
+          },
+          {
+            "record_id": "LS_ACID",
+            "label": "98%硫酸",
+            "annual_value": 5303.3120284874,
+            "unit": "t_declared_material/a",
+            "basis": "LS原表商品质量，非纯物质",
+            "source_id": "SRC040",
+            "specification_fraction": 0.98,
+            "status": "screening_not_selected_for_formal_results",
+            "active_equivalent_t_a": 5197.245787917652
+          },
+          {
+            "record_id": "LS_FE",
+            "label": "99%铁粉",
+            "annual_value": 123.7637614637572,
+            "unit": "t_declared_material/a",
+            "basis": "LS原表商品质量，非纯物质",
+            "source_id": "SRC040",
+            "specification_fraction": 0.99,
+            "status": "screening_not_selected_for_formal_results",
+            "active_equivalent_t_a": 122.52612384911963
+          },
+          {
+            "record_id": "LS_NAOH",
+            "label": "32%液碱",
+            "annual_value": 13788.61202757568,
+            "unit": "t_declared_material/a",
+            "basis": "LS原表商品质量，非纯物质",
+            "source_id": "SRC040",
+            "specification_fraction": 0.32,
+            "status": "screening_not_selected_for_formal_results",
+            "active_equivalent_t_a": 4412.355848824218
+          },
+          {
+            "record_id": "LS_CAO",
+            "label": "92%氧化钙",
+            "annual_value": 276.91435213352065,
+            "unit": "t_declared_material/a",
+            "basis": "LS原表商品质量，非纯物质",
+            "source_id": "SRC040",
+            "specification_fraction": 0.92,
+            "status": "screening_not_selected_for_formal_results",
+            "active_equivalent_t_a": 254.761203962839
+          },
+          {
+            "record_id": "LS_PACID",
+            "label": "85%磷酸",
+            "annual_value": 925.298946913093,
+            "unit": "t_declared_material/a",
+            "basis": "LS原表商品质量，非纯物质",
+            "source_id": "SRC040",
+            "specification_fraction": 0.85,
+            "status": "screening_not_selected_for_formal_results",
+            "active_equivalent_t_a": 786.5041048761291
+          },
+          {
+            "record_id": "LS_CO2",
+            "label": "液CO2",
+            "annual_value": 1045.4929621367617,
+            "unit": "t_declared_material/a",
+            "basis": "LS原表商品质量，非纯物质",
+            "source_id": "SRC040",
+            "specification_fraction": 0.9990000000000001,
+            "status": "screening_not_selected_for_formal_results",
+            "active_equivalent_t_a": 1044.447469174625
+          },
+          {
+            "record_id": "LS_O2",
+            "label": "液氧",
+            "annual_value": 113.02626617694722,
+            "unit": "t_declared_material/a",
+            "basis": "LS原表商品质量，非纯物质",
+            "source_id": "SRC040",
+            "specification_fraction": 0.9990000000000001,
+            "status": "screening_not_selected_for_formal_results",
+            "active_equivalent_t_a": 112.91323991077029
+          }
+        ],
+        "acid_alt_98pct_commercial_t_a": 4617.1229733282935
+      }
+    },
+    {
+      "basis": "per1kg spent battery cell; scalingper1tcell; discharge/packdisassembly excluded",
+      "locator": "Table10印刷p26/PDF40; Table12印刷p28/PDF42; cellbasis印刷p5/PDF19",
+      "activity_intensities": [
+        {
+          "id": "H2SO4",
+          "value": 1.08,
+          "unit": "kg_declared_chemical/kg_cell",
+          "commercial_concentration": null
+        },
+        {
+          "id": "H2O2",
+          "value": 0.366,
+          "unit": "kg_declared_chemical/kg_cell",
+          "commercial_concentration": null
+        },
+        {
+          "id": "NaOH",
+          "value": 0.561,
+          "unit": "kg_declared_chemical/kg_cell",
+          "commercial_concentration": null
+        },
+        {
+          "id": "HCl",
+          "value": 0.012,
+          "unit": "kg_declared_chemical/kg_cell",
+          "commercial_concentration": null
+        },
+        {
+          "id": "NH4OH",
+          "value": 0.031,
+          "unit": "kg_declared_chemical/kg_cell",
+          "commercial_concentration": null
+        },
+        {
+          "id": "Na2CO3",
+          "value": 0.02,
+          "unit": "kg_declared_chemical/kg_cell",
+          "commercial_concentration": null
+        },
+        {
+          "id": "electricity",
+          "value": 0.125,
+          "unit": "MJ/kg_cell",
+          "converted_value": 34.72222222222222,
+          "converted_unit": "kWh/t_cell"
+        },
+        {
+          "id": "natural_gas_energy",
+          "value": 2.5,
+          "unit": "MJ/kg_cell",
+          "converted_value": 2500,
+          "converted_unit": "MJ/t_cell"
+        },
+        {
+          "id": "diesel_energy",
+          "value": 0.6,
+          "unit": "MJ/kg_cell",
+          "converted_value": 600,
+          "converted_unit": "MJ/t_cell"
+        },
+        {
+          "id": "water",
+          "value": 1,
+          "unit": "USgal/kg_cell",
+          "converted_value": 3.785411784,
+          "converted_unit": "m3/t_cell",
+          "data_role": "authorsownestimate"
+        }
+      ],
+      "recovery_defaults": {
+        "Li": 0.9,
+        "Ni": 0.98,
+        "Co": 0.98,
+        "Mn": 0.98,
+        "Cu": 0.9,
+        "Al": 0.9,
+        "steel": 0.9,
+        "graphite": 0.9
+      },
+      "recovery_basis": "totalmaterialrecovered/thatmaterialininputcells, not hydrostage only. CannotmultiplyanextraBMlossandkeep callingsameoverall rate.",
+      "activation": "Independent ANL_NMC sensitivityprofile only. If treatingchemicalquantitiesaspureequivalents or choosinggoodspecs, addexplicit assumption. Do notmixLSorLI20doses,do notdoublechargefullpretreatment.",
+      "profile_id": "ANL19_GENERIC_HYD_CELL",
+      "source_id": "SRC043",
+      "automatically_adopted": false,
+      "scope": "通用电芯级再生模型，含模型内机械预处理和湿法；不含整包放电/拆包，不能又叠一套完整电芯前处理",
+      "annual_example_cell_feed_t_a": 15104.908,
+      "annual_example_chemistry": "MIXED_NMC_UNSPECIFIED",
+      "annual_example_status": "同类通用电芯路线迁移示例，非实际工厂；若改用此整套路线，不自动沿用EV I的捕集流或LS湿法",
+      "annual_example_records": [
+        {
+          "item": "H2SO4",
+          "annual_value": 16313.300640000001,
+          "unit": "t_declared_chemical/a",
+          "source_id": "SRC043",
+          "locator": "Table10印刷p26/PDF40; Table12印刷p28/PDF42; cellbasis印刷p5/PDF19",
+          "commercial_concentration": null,
+          "active_equivalent_mass_t_a": null,
+          "status": "independent_model_reference_not_plant_measurement"
+        },
+        {
+          "item": "H2O2",
+          "annual_value": 5528.396328,
+          "unit": "t_declared_chemical/a",
+          "source_id": "SRC043",
+          "locator": "Table10印刷p26/PDF40; Table12印刷p28/PDF42; cellbasis印刷p5/PDF19",
+          "commercial_concentration": null,
+          "active_equivalent_mass_t_a": null,
+          "status": "independent_model_reference_not_plant_measurement"
+        },
+        {
+          "item": "NaOH",
+          "annual_value": 8473.853388000001,
+          "unit": "t_declared_chemical/a",
+          "source_id": "SRC043",
+          "locator": "Table10印刷p26/PDF40; Table12印刷p28/PDF42; cellbasis印刷p5/PDF19",
+          "commercial_concentration": null,
+          "active_equivalent_mass_t_a": null,
+          "status": "independent_model_reference_not_plant_measurement"
+        },
+        {
+          "item": "HCl",
+          "annual_value": 181.258896,
+          "unit": "t_declared_chemical/a",
+          "source_id": "SRC043",
+          "locator": "Table10印刷p26/PDF40; Table12印刷p28/PDF42; cellbasis印刷p5/PDF19",
+          "commercial_concentration": null,
+          "active_equivalent_mass_t_a": null,
+          "status": "independent_model_reference_not_plant_measurement"
+        },
+        {
+          "item": "NH4OH",
+          "annual_value": 468.252148,
+          "unit": "t_declared_chemical/a",
+          "source_id": "SRC043",
+          "locator": "Table10印刷p26/PDF40; Table12印刷p28/PDF42; cellbasis印刷p5/PDF19",
+          "commercial_concentration": null,
+          "active_equivalent_mass_t_a": null,
+          "status": "independent_model_reference_not_plant_measurement"
+        },
+        {
+          "item": "Na2CO3",
+          "annual_value": 302.09816,
+          "unit": "t_declared_chemical/a",
+          "source_id": "SRC043",
+          "locator": "Table10印刷p26/PDF40; Table12印刷p28/PDF42; cellbasis印刷p5/PDF19",
+          "commercial_concentration": null,
+          "active_equivalent_mass_t_a": null,
+          "status": "independent_model_reference_not_plant_measurement"
+        },
+        {
+          "item": "electricity",
+          "annual_value": 524475.9722222222,
+          "unit": "kWh/a",
+          "source_id": "SRC043",
+          "locator": "Table10印刷p26/PDF40; Table12印刷p28/PDF42; cellbasis印刷p5/PDF19",
+          "commercial_concentration": null,
+          "active_equivalent_mass_t_a": null,
+          "status": "independent_model_reference_not_plant_measurement"
+        },
+        {
+          "item": "natural_gas_energy",
+          "annual_value": 37762270.0,
+          "unit": "MJ/a",
+          "source_id": "SRC043",
+          "locator": "Table10印刷p26/PDF40; Table12印刷p28/PDF42; cellbasis印刷p5/PDF19",
+          "commercial_concentration": null,
+          "active_equivalent_mass_t_a": null,
+          "status": "independent_model_reference_not_plant_measurement"
+        },
+        {
+          "item": "diesel_energy",
+          "annual_value": 9062944.799999999,
+          "unit": "MJ/a",
+          "source_id": "SRC043",
+          "locator": "Table10印刷p26/PDF40; Table12印刷p28/PDF42; cellbasis印刷p5/PDF19",
+          "commercial_concentration": null,
+          "active_equivalent_mass_t_a": null,
+          "status": "independent_model_reference_not_plant_measurement"
+        },
+        {
+          "item": "water",
+          "annual_value": 57178.29673943587,
+          "unit": "m3/a",
+          "source_id": "SRC043",
+          "locator": "Table10印刷p26/PDF40; Table12印刷p28/PDF42; cellbasis印刷p5/PDF19",
+          "commercial_concentration": null,
+          "active_equivalent_mass_t_a": null,
+          "status": "independent_model_reference_not_plant_measurement"
+        }
+      ],
+      "saleable_product_masses": null,
+      "water_basis_note": "原模型water consumption按原义保留；不与本厂新水取水/外排水自动等同，未闭合水平衡。1 US gal=0.003785411784m3。",
+      "energy_scaling_note": "Table10为通用默认。EverBatt本体另含设备规模能耗计算（§2.2.3）；此处线性年化只是透明对照，并未运行完整EverBatt或验证工业能耗。"
+    },
+    {
+      "profile_id": "JIANG24_NATIVE_LFP_PILOT",
+      "source_id": "SRC021",
+      "automatically_adopted": false,
+      "native_batch_powder_t": 2.0,
+      "pilot_capacity_t_a": 500,
+      "physical_form": "废旧LFP/C粉料，非整包；原文表7质量口径",
+      "moisture_basis": "原表未明确全部物流干湿基，不能替本园区指定水分",
+      "batch_records": [
+        {
+          "reference_parameter_id": "J-T7-1",
+          "name": "废旧LFP/C粉料",
+          "value": 2.0,
+          "unit": "t",
+          "input_or_product_basis": "单批处理2.0 t废旧LFP/C粉料；input",
+          "locator": "表7",
+          "limitation": "保持原始量；浓度、纯物质折算待核；非宜昌值"
+        },
+        {
+          "reference_parameter_id": "J-T7-2",
+          "name": "硫酸",
+          "value": 2.0,
+          "unit": "t",
+          "input_or_product_basis": "单批处理2.0 t废旧LFP/C粉料；input",
+          "locator": "表7",
+          "limitation": "保持原始量；浓度、纯物质折算待核；非宜昌值"
+        },
+        {
+          "reference_parameter_id": "J-T7-3",
+          "name": "磷酸",
+          "value": 170,
+          "unit": "kg",
+          "input_or_product_basis": "单批处理2.0 t废旧LFP/C粉料；input",
+          "locator": "表7",
+          "limitation": "保持原始量；浓度、纯物质折算待核；非宜昌值"
+        },
+        {
+          "reference_parameter_id": "J-T7-4",
+          "name": "工业铁粉",
+          "value": 110,
+          "unit": "kg",
+          "input_or_product_basis": "单批处理2.0 t废旧LFP/C粉料；input",
+          "locator": "表7",
+          "limitation": "保持原始量；浓度、纯物质折算待核；非宜昌值"
+        },
+        {
+          "reference_parameter_id": "J-T7-5",
+          "name": "自来水",
+          "value": 10,
+          "unit": "m3",
+          "input_or_product_basis": "单批处理2.0 t废旧LFP/C粉料；input",
+          "locator": "表7",
+          "limitation": "保持原始量；浓度、纯物质折算待核；非宜昌值"
+        },
+        {
+          "reference_parameter_id": "J-T7-6",
+          "name": "磷酸二氢钠",
+          "value": 150,
+          "unit": "kg",
+          "input_or_product_basis": "单批处理2.0 t废旧LFP/C粉料；input",
+          "locator": "表7",
+          "limitation": "保持原始量；浓度、纯物质折算待核；非宜昌值"
+        },
+        {
+          "reference_parameter_id": "J-T7-7",
+          "name": "双氧水",
+          "value": 1.2,
+          "unit": "m3",
+          "input_or_product_basis": "单批处理2.0 t废旧LFP/C粉料；input",
+          "locator": "表7",
+          "limitation": "保持原始量；浓度、纯物质折算待核；非宜昌值"
+        },
+        {
+          "reference_parameter_id": "J-T7-8",
+          "name": "氢氧化钠",
+          "value": 3.2,
+          "unit": "t",
+          "input_or_product_basis": "单批处理2.0 t废旧LFP/C粉料；input",
+          "locator": "表7",
+          "limitation": "保持原始量；浓度、纯物质折算待核；非宜昌值"
+        },
+        {
+          "reference_parameter_id": "J-T7-9",
+          "name": "碳酸钠",
+          "value": 750,
+          "unit": "kg",
+          "input_or_product_basis": "单批处理2.0 t废旧LFP/C粉料；input",
+          "locator": "表7",
+          "limitation": "保持原始量；浓度、纯物质折算待核；非宜昌值"
+        },
+        {
+          "reference_parameter_id": "J-T7-10",
+          "name": "副产亚铁",
+          "value": 270,
+          "unit": "kg",
+          "input_or_product_basis": "单批处理2.0 t废旧LFP/C粉料；input",
+          "locator": "表7",
+          "limitation": "保持原始量；浓度、纯物质折算待核；非宜昌值"
+        },
+        {
+          "reference_parameter_id": "J-T7-11",
+          "name": "一般固废处理",
+          "value": 1.0,
+          "unit": "t",
+          "input_or_product_basis": "单批处理2.0 t废旧LFP/C粉料；waste_output",
+          "locator": "表7",
+          "limitation": "保持原始量；浓度、纯物质折算待核；非宜昌值"
+        },
+        {
+          "reference_parameter_id": "J-T7-12",
+          "name": "危废处理",
+          "value": 300,
+          "unit": "kg",
+          "input_or_product_basis": "单批处理2.0 t废旧LFP/C粉料；waste_output",
+          "locator": "表7",
+          "limitation": "保持原始量；浓度、纯物质折算待核；非宜昌值"
+        },
+        {
+          "reference_parameter_id": "J-T7-13",
+          "name": "电池用磷酸铁",
+          "value": 1.2,
+          "unit": "t",
+          "input_or_product_basis": "单批处理2.0 t废旧LFP/C粉料；product_output",
+          "locator": "表7",
+          "limitation": "保持原始量；浓度、纯物质折算待核；非宜昌值"
+        },
+        {
+          "reference_parameter_id": "J-T7-14",
+          "name": "陶瓷用磷酸铁",
+          "value": 840,
+          "unit": "kg",
+          "input_or_product_basis": "单批处理2.0 t废旧LFP/C粉料；product_output",
+          "locator": "表7",
+          "limitation": "保持原始量；浓度、纯物质折算待核；非宜昌值"
+        },
+        {
+          "reference_parameter_id": "J-T7-15",
+          "name": "电池级碳酸锂",
+          "value": 385,
+          "unit": "kg",
+          "input_or_product_basis": "单批处理2.0 t废旧LFP/C粉料；product_output",
+          "locator": "表7",
+          "limitation": "保持原始量；浓度、纯物质折算待核；非宜昌值"
+        },
+        {
+          "reference_parameter_id": "J-T7-16",
+          "name": "磷酸锂",
+          "value": 58,
+          "unit": "kg",
+          "input_or_product_basis": "单批处理2.0 t废旧LFP/C粉料；product_output",
+          "locator": "表7",
+          "limitation": "保持原始量；浓度、纯物质折算待核；非宜昌值"
+        }
+      ],
+      "li_balance_table6": {
+        "input_powder_li_kg": 87.8,
+        "li_in_li2co3_product_kg": 71.8,
+        "li_in_li3po4_product_kg": 10.4,
+        "li_in_fepo4_products_kg": 0.06,
+        "li_in_insoluble_residue_kg": 0.96,
+        "li_in_secondary_leach_residue_kg": 0.43,
+        "li_in_liquor_kg": 0.3,
+        "li_in_recirculating_wash_water_kg": 3.8,
+        "reported_li_closure_fraction": 0.9994,
+        "reported_original_percent": 99.94,
+        "Li_to_Li2CO3_fraction_derived": 0.8177676537585421,
+        "Li_to_Li3PO4_fraction_derived": 0.11845102505694761,
+        "li_leaching_fraction_after_calcination": 0.976,
+        "leaching_original_percent": 97.6,
+        "status": "不同工序/产品去向，不可互相替换；循环洗水是内部流，不在连续稳态外部产品中再记一次",
+        "course_balance_note": "表6公开舍入数合计87.75kg、残差0.05/87.8≈0.0005695，不能据源文99.94%宣称本组严格<0.0005已通过。"
+      },
+      "annual_products_t_a": null,
+      "caution": "已存在A原始JSON中，本轮核实并恢复完整表6口径；不能把表7产品单耗直接乘JR低Li品位粉而仍保持原收率。",
+      "battery_fepo4_table4_element_mass_fractions": {
+        "Fe": 0.3602,
+        "P": 0.2031,
+        "Li": 4e-05,
+        "Al": 0.00011,
+        "Ti": 2e-05,
+        "Mn": 3e-05,
+        "Ni": 2e-05
+      },
+      "battery_fepo4_table4_note": "原文元素含量，原百分数依次36.02/20.31/0.004/0.011/0.002/0.003/0.002；不是对本园区产品的检测。"
+    },
+    {
+      "profile_id": "ND22_WHOLE_CATHODE_PROJECT_REFERENCE",
+      "source_id": "SRC042",
+      "selected_as_plant_energy": false,
+      "nmc_cathode_sheet_feed_t_a": 53000,
+      "lfp_cathode_sheet_feed_t_a": 47000,
+      "whole_project_electricity_kwh_a": 444988200,
+      "steam_streams": [
+        {
+          "mass_t_a": 541360,
+          "pressure_MPa": 1.5,
+          "temperature_C": 200
+        },
+        {
+          "mass_t_a": 50814,
+          "pressure_MPa": 3.5,
+          "temperature_C": 243
+        }
+      ],
+      "lfp_lce_specific_total_energy_kgce_t": 1729.26,
+      "note": "整项目包含多条正极片再生线及多产品；不是整包来料。不能用此综合能耗减去LS蒸汽，假定余量全是电。"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "SRC021",
+      "title": "废旧磷酸铁锂粉料综合回收中试研究",
+      "url": "https://hgxb.cip.com.cn/CN/10.11949/0438-1157.20240004",
+      "document_reference": null,
+      "author": "江洋, 彭长宏, 陈伟等",
+      "publication_date": "2024-06-25",
+      "accessed_on": "2026-11-03",
+      "access_status": "期刊官方HTML全文表2、表3、表6、表7已逐项核查；HTML没有稳定PDF页码，按表号定位",
+      "citation": "江洋, 彭长宏, 陈伟, 等. 废旧磷酸铁锂粉料综合回收中试研究[J]. 化工学报, 2024, 75(6): 2353-2361. DOI:10.11949/0438-1157.20240004.",
+      "usage": "reference_only",
+      "scale_or_boundary": null,
+      "limitation": null,
+      "aliases": [
+        "initial:LIT-JIANG2024"
+      ]
+    },
+    {
+      "source_id": "SRC022",
+      "title": "Pathway decisions for reuse and recycling of retired lithium-ion batteries considering economic and environmental functions",
+      "url": "https://www.nature.com/articles/s41467-024-52030-0",
+      "document_reference": null,
+      "author": "Ruifei Ma, Shengyu Tao, Xin Sun等",
+      "publication_date": null,
+      "accessed_on": "2026-11-03",
+      "access_status": "课程预编译主文PDF第12页直接核查",
+      "citation": "MA R, TAO S, SUN X, et al. Pathway decisions for reuse and recycling of retired lithium-ion batteries considering economic and environmental functions[J]. Nature Communications, 2024, 15: 7641. DOI:10.1038/s41467-024-52030-0.",
+      "usage": "reference_only",
+      "scale_or_boundary": null,
+      "limitation": null,
+      "aliases": [
+        "initial:LIT-MA2024"
+      ]
+    },
+    {
+      "source_id": "SRC039",
+      "title": "湖南金瑞新能源汽车动力电池综合利用项目环境影响报告书（2023原版）",
+      "url": "https://www.huaihua.gov.cn/sthjj/c115426/202309/af09c0720ba94b0f922cb359428c792c/files/fe52ead8bdc04b4c83ff6290c03abc98.pdf",
+      "document_reference": null,
+      "author": null,
+      "publication_date": null,
+      "accessed_on": "2026-11-03",
+      "access_status": "官方PDF索引表3.4-3/4/6/7已核；未下载通读全文",
+      "citation": "湖南金瑞新能源科技有限公司. 新能源汽车动力电池综合利用项目环境影响报告书[R/OL]. 2023[2026-11-03]. https://www.huaihua.gov.cn/sthjj/c115426/202309/af09c0720ba94b0f922cb359428c792c/files/fe52ead8bdc04b4c83ff6290c03abc98.pdf.",
+      "usage": "整包→电芯→黑粉；LFP及混合三元",
+      "scale_or_boundary": "10万t/a电池系统，另有粉料/卤水等系统",
+      "limitation": "作为仿真来料结构代理；非宜昌实测；不得把混合三元强称NMC622/811。",
+      "aliases": [
+        "supplement:JR23"
+      ],
+      "new_verification": "本轮完整313页官方PDF已下载并提取；印刷p74/PDF78产品表、p78/PDF82外购粉料与卤水、p93/PDF97明确物料/元素平衡略。"
+    },
+    {
+      "source_id": "SRC040",
+      "title": "湖南朗赛废旧磷酸铁锂电池绿色高效循环利用项目环境影响报告书",
+      "url": "https://hbj.yueyang.gov.cn/uploadfiles/202312/2023120609494581990.pdf",
+      "document_reference": null,
+      "author": null,
+      "publication_date": null,
+      "accessed_on": "2026-11-03",
+      "access_status": "官方索引表3.5-1/2/4及相关工艺段已核；全文/附件未通读",
+      "citation": "湖南朗赛科技有限公司. 湖南朗赛废旧磷酸铁锂电池绿色高效循环利用项目环境影响报告书[R/OL]. 2023[2026-11-03]. https://hbj.yueyang.gov.cn/uploadfiles/202312/2023120609494581990.pdf.",
+      "usage": "LFP预处理、酸浸、除杂、碳化等",
+      "scale_or_boundary": "1万t/a电芯线＋1万t/a粉料线（含外购粉）＋下游材料线",
+      "limitation": "设计数据；酸耗有报告内部差异；粉料干湿基/混合比例待核，不跨源直接套用。",
+      "aliases": [
+        "supplement:LS23"
+      ],
+      "new_verification": "本轮完整406页官方PDF已下载、逐表核对；参考新records定位。"
+    },
+    {
+      "source_id": "SRC041",
+      "title": "退役电池回收产业现状及经济性分析",
+      "url": "https://hgxb.cip.com.cn/CN/Y2020/V71/IS1/494",
+      "document_reference": null,
+      "author": null,
+      "publication_date": null,
+      "accessed_on": "2026-11-03",
+      "access_status": "期刊官方页面索引表2/3及题录已核；正文完整方法仍待补",
+      "citation": "李敬, 杜刚, 殷娟娟. 退役电池回收产业现状及经济性分析[J]. 化工学报, 2020, 71(S1):494-500. DOI:10.11949/0438-1157.20191585.",
+      "usage": "拆包、预处理、三元湿法及产品经济估算",
+      "scale_or_boundary": "10万t/a退役三元动力电池",
+      "limitation": "经济案例清单；非已核工厂实测，不套到LFP，价格不用于2026现价。",
+      "aliases": [
+        "supplement:LI20"
+      ]
+    },
+    {
+      "source_id": "SRC042",
+      "title": "宁德邦普二期节能报告审查意见",
+      "url": "https://gxt.fujian.gov.cn/zwgk/jsxm/xmhz/202211/t20221129_6065133.htm",
+      "document_reference": null,
+      "author": null,
+      "publication_date": null,
+      "accessed_on": "2026-11-03",
+      "access_status": "官方网页及附件已核",
+      "citation": "福建省工业和信息化厅. 关于宁德邦普资源循环科技有限公司邦普项目二期（废旧锂电池循环再生新材料产业化项目）节能报告的审查意见[EB/OL]. (2022-11-29)[2026-11-03]. https://gxt.fujian.gov.cn/zwgk/jsxm/xmhz/202211/t20221129_6065133.htm.",
+      "usage": "邦普工业路线与产品能效校核",
+      "scale_or_boundary": "5.3万t/a NMC正极片＋4.7万t/a LFP正极片",
+      "limitation": "正极片而非整包；电/蒸汽是全项目，不能无分摊作为两条回收线各自活动量。",
+      "aliases": [
+        "supplement:ND22"
+      ]
+    },
+    {
+      "source_id": "SRC043",
+      "title": "EverBatt: A Closed-loop Battery Recycling Cost and Environmental Impacts Model",
+      "url": "https://publications.anl.gov/anlpubs/2019/07/153050.pdf",
+      "document_reference": null,
+      "author": null,
+      "publication_date": null,
+      "accessed_on": "2026-11-03",
+      "access_status": "正式报告表4/10/12及方法段已读；不是2023版工作簿",
+      "citation": "DAI Q, SPANGENBERGER J, AHMED S, et al. EverBatt: A Closed-loop Battery Recycling Cost and Environmental Impacts Model: ANL-19/16[R/OL]. Argonne National Laboratory, 2019[2026-11-03]. DOI:10.2172/1530874.",
+      "usage": "备用数据和透明假设方法",
+      "scale_or_boundary": "通用模型，可指定规模；不是单一实测厂",
+      "limitation": "默认值混合文献/专利/专家与模型估计；不当成国内工业实测或最优技术。",
+      "aliases": [
+        "supplement:ANL19"
+      ]
+    },
+    {
+      "source_id": "NEW-MECH2026",
+      "title": "Baseline techno-economic and life cycle assessment of black mass production",
+      "url": "https://www.sciencedirect.com/science/article/pii/S258900422603110X",
+      "alternative_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13657251/",
+      "locator": "Table 1; STAR Methods: Baseline black mass composition / Black mass mechanical separation; EV I/EV II discussion",
+      "verification": "原始论文全文搜索索引逐项核对；出版者直接打开403、PMC验证码，未声称下载全文PDF",
+      "publication_date": "2026-10-01",
+      "citation": "YINGNAKORN T, KANSOMKET C, LONGBUTSRI C, et al. Baseline techno-economic and life cycle assessment of black mass production[J]. iScience, 2026, 29(10):117729. DOI:10.1016/j.isci.2026.117729."
+    },
+    {
+      "source_id": "NEW-STD-LCE",
+      "title": "YS/T 582-2023 电池级碳酸锂",
+      "url": "https://std.samr.gov.cn/hb/search/stdHBDetailed?id=1C51E7879EF6D54EE06397BE0A0A1DC6",
+      "locator": "基础信息、标准状态、代替关系",
+      "effective_date": "2024-07-01",
+      "verification": "官方目录状态已核，完整指标表未获取；不以旧版指标冒充新版要求",
+      "citation": "工业和信息化部. 电池级碳酸锂: YS/T 582-2023[S/OL]. 2023[2026-11-03]. https://std.samr.gov.cn/hb/search/stdHBDetailed?id=1C51E7879EF6D54EE06397BE0A0A1DC6."
+    },
+    {
+      "source_id": "NEW-STD-FEP",
+      "title": "HG/T 4701-2021 电池用磷酸铁",
+      "url": "https://std.samr.gov.cn/hb/search/stdHBDetailedCNF?id=D7B6988FD9D1AABEE05397BE0A0A1B36",
+      "locator": "基础信息、标准状态",
+      "effective_date": "2022-04-01",
+      "verification": "官方现行状态已核；产品实测合格率仍未知",
+      "citation": "工业和信息化部. 电池用磷酸铁: HG/T 4701-2021[S/OL]. 2021[2026-11-03]. https://std.samr.gov.cn/hb/search/stdHBDetailedCNF?id=D7B6988FD9D1AABEE05397BE0A0A1B36."
+    },
+    {
+      "source_id": "NEW-POL2026",
+      "title": "关于废止和修订新能源汽车废旧动力电池“梯次利用”相关政策标准以及规范有关行业活动的公告（2026年第20号）",
+      "url": "https://www.miit.gov.cn/jgsj/jns/wjfb/art/2026/art_945f3df30a984763877679740ff296a3.html",
+      "locator": "第一、二条",
+      "publication_date": "2026-07-30",
+      "verification": "工信部原文已核",
+      "citation": "工业和信息化部. 关于废止和修订新能源汽车废旧动力电池“梯次利用”相关政策标准以及规范有关行业活动的公告: 2026年第20号[EB/OL]. (2026-07-30)[2026-11-03]. https://www.miit.gov.cn/jgsj/jns/wjfb/art/2026/art_945f3df30a984763877679740ff296a3.html."
+    },
+    {
+      "source_id": "NEW-CIAAW",
+      "title": "Abridged Standard Atomic Weights 2024",
+      "url": "https://www.ciaaw.org/abridged-atomic-weights.htm",
+      "locator": "H, Li, C, O, Fe, P rows",
+      "citation": "CIAAW. Abridged Standard Atomic Weights 2024[EB/OL]. [2026-11-03]. https://www.ciaaw.org/abridged-atomic-weights.htm."
+    }
+  ],
+  "unresolved_inputs": [
+    {
+      "input_id": "M02_ACTUAL",
+      "value": null,
+      "missing": "园区分体系黑粉捕集率",
+      "what_is_now_available": "已有EV I实验代理/LS原生推导，实际厂测仍缺；核分母和胶黏剂范围"
+    },
+    {
+      "input_id": "M03_COMPAT",
+      "value": null,
+      "missing": "JR产粉与选定湿法入料的同口径化验/含水率",
+      "what_is_now_available": "LS有含水2.15%，不自动证明JR粉含水或元素干/湿基"
+    },
+    {
+      "input_id": "M05_PRODUCTS",
+      "value": null,
+      "missing": "最终电池级Li2CO3/FePO4、Ni/Co/Mn盐的质量/水合形态/纯度/合格率",
+      "what_is_now_available": "LS仅粗品中间物；ANL恢复率是全路线默认；不得把浸出97.6%当总收率"
+    },
+    {
+      "input_id": "M05_LI_PARTITIONS",
+      "value": null,
+      "missing": "各实际出厂/处置流股Li及连续工序分配",
+      "what_is_now_available": "JR平衡略、LS粉线保密，残渣水电解液Li仍未闭合"
+    },
+    {
+      "input_id": "M08_ELECTRIC",
+      "value": null,
+      "missing": "同工艺分线电耗与公辅分摊",
+      "what_is_now_available": "LS组合电耗可保留；未辨设备负荷不能拆成已核湿法电耗"
+    },
+    {
+      "input_id": "M08_STEAM",
+      "value": null,
+      "missing": "蒸汽压力/温度及返凝水或购热结算口径",
+      "what_is_now_available": "LS仅有质量，可先按t计价；禁止无依据填2500MJ/t"
+    },
+    {
+      "input_id": "M08_WATER",
+      "value": null,
+      "missing": "全厂取水/纯水/循环/耗水/外排及处理层级",
+      "what_is_now_available": "分线LS数据已补，但非本厂整套水系统"
+    },
+    {
+      "input_id": "M01_REUSE_SALE",
+      "value": null,
+      "missing": "再使用产品SOH、筛选合格率、重组损失和应用标准证据",
+      "what_is_now_available": "8500t是分配输入；可售kWh=分配t×额定Wh/kg×筛选率×SOH×重组率（如另定义可用窗口再乘，不重复SOH）"
+    },
+    {
+      "input_id": "M10_ALLOCATION",
+      "value": null,
+      "missing": "LCA的多产品分配/系统扩展与经济口径",
+      "what_is_now_available": "物理年耗不因分配方法改变；LCOR须定义总成本/共产品回款/功能产物分母"
+    },
+    {
+      "input_id": "M13_FACTORS",
+      "value": null,
+      "missing": "B各试剂、能源、处置因子的版本与浓度边界",
+      "what_is_now_available": "非全部因子已核；数据补齐不自动得到正式LCA"
+    },
+    {
+      "input_id": "D-PARK-LINK",
+      "value": null,
+      "missing": "市域队列到园区的捕获率、外部来料与跨区域供给",
+      "what_is_now_available": "当前首装队列只是区域需求分析一部分，不等于全市所有未来退役"
+    }
+  ],
+  "code_review": [
+    {
+      "issue_id": "A01",
+      "role": "A",
+      "priority": "high",
+      "file": "C:\\Users\\强\\Downloads\\261022hgh\\LCA_Practice_Coursework-2026fall\\groups\\group-02\\lecture12-20261103-classroom-case3\\code_implementation\\plant_case.py",
+      "line": 304,
+      "problem": "LS与JR不同粉料品位形成的100%理论产量被写作实际上下限",
+      "ide_action": "改为互斥来源情景；捕集、干湿基、分配、成品规格未确定时最终可售量null"
+    },
+    {
+      "issue_id": "A02",
+      "role": "A",
+      "priority": "high",
+      "file": "C:\\Users\\强\\Downloads\\261022hgh\\LCA_Practice_Coursework-2026fall\\groups\\group-02\\lecture12-20261103-classroom-case3\\code_implementation\\plant_case.py",
+      "line": 354,
+      "problem": "二水磷酸铁Fe基与无水磷酸铁PO4基拼成同一范围",
+      "ide_action": "统一化学式，计入外加Fe/P，按限制元素min计算，产品水分/纯度另乘除"
+    },
+    {
+      "issue_id": "A03",
+      "role": "A",
+      "priority": "high",
+      "file": "C:\\Users\\强\\Downloads\\261022hgh\\LCA_Practice_Coursework-2026fall\\groups\\group-02\\lecture12-20261103-classroom-case3\\code_implementation\\plant_case.py",
+      "line": 326,
+      "problem": "再使用分配质量×新电池比能量被当产品容量，缺SOH/质量合格率",
+      "ide_action": "分开分流输入、额定容量参照、测试合格的出货kWh；NMC的容量参数不必依赖622/811元素拆分"
+    },
+    {
+      "issue_id": "A04",
+      "role": "A",
+      "priority": "high",
+      "file": "C:\\Users\\强\\Downloads\\261022hgh\\LCA_Practice_Coursework-2026fall\\groups\\group-02\\lecture12-20261103-classroom-case3\\code_implementation\\plant_case.py",
+      "line": 425,
+      "problem": "异项目ND综合能耗与LS蒸汽拼接后将余量全部作为电",
+      "ide_action": "仅保留诊断；正式电/气/蒸汽各用同源边界，未知电耗null；不要为强配总量反算"
+    },
+    {
+      "issue_id": "A05",
+      "role": "A",
+      "priority": "medium",
+      "file": "C:\\Users\\强\\Downloads\\261022hgh\\LCA_Practice_Coursework-2026fall\\groups\\group-02\\lecture12-20261103-classroom-case3\\code_implementation\\plant_case.py",
+      "line": 591,
+      "problem": "LCA运输排放与TEA到厂价被称为天然重复",
+      "ide_action": "只检查经济模型是否重复计同段运费；环境排放与货币成本可以分别核算一次"
+    },
+    {
+      "issue_id": "A06",
+      "role": "A",
+      "priority": "medium",
+      "file": "C:\\Users\\强\\Downloads\\261022hgh\\LCA_Practice_Coursework-2026fall\\groups\\group-02\\lecture12-20261103-classroom-case3\\code_implementation\\plant_case.py",
+      "line": 697,
+      "problem": "以既有首装队列推断全市未来供料不足",
+      "ide_action": "改为该模型覆盖的队列贡献，保留替换电池、未来新装机、跨区域来源未覆盖"
+    },
+    {
+      "issue_id": "A07",
+      "role": "A",
+      "priority": "high",
+      "file": "C:\\Users\\强\\Downloads\\261022hgh\\LCA_Practice_Coursework-2026fall\\groups\\group-02\\lecture12-20261103-classroom-case3\\code_implementation\\dmfa_yichang.py",
+      "line": 534,
+      "problem": "校验FAIL后仍计算写表，到576行才断言",
+      "ide_action": "先fail-fast并在恒等式核验后写结果；核心dMFA公式与当前数值保留"
+    },
+    {
+      "issue_id": "B01",
+      "role": "B",
+      "priority": "high",
+      "file": "C:\\Users\\强\\Downloads\\lecture12-lib-recycling-B\\lecture12-lib-recycling-B\\code_implementation\\optimization.py",
+      "line": 132,
+      "problem": "交付3267行均为合成LCOR且试填政策PASS，仍可进入可行前沿",
+      "ide_action": "按来源状态排除正式结果，演示输出与正式输出分开；更新图表/README一致"
+    },
+    {
+      "issue_id": "B02",
+      "role": "B",
+      "priority": "high",
+      "file": "C:\\Users\\强\\Downloads\\lecture12-lib-recycling-B\\lecture12-lib-recycling-B\\code_implementation\\c_interface.py",
+      "line": 132,
+      "problem": "经济接口接收活动/绿电/锂价/流程参数却只求固定case",
+      "ide_action": "按case_id与情景重建C年度成本/收入输入，核货币和年份；显式C根路径"
+    },
+    {
+      "issue_id": "B03",
+      "role": "B",
+      "priority": "high",
+      "file": "C:\\Users\\强\\Downloads\\lecture12-lib-recycling-B\\lecture12-lib-recycling-B\\code_implementation\\a_candidate_override.py",
+      "line": 64,
+      "problem": "32%液碱商品量直接作为纯NaOH判异常",
+      "ide_action": "显式存商品吨×浓度=有效吨；约8.924t32%液碱相当2.856tNaOH，不能仅凭商品吨否定工艺"
+    },
+    {
+      "issue_id": "B04",
+      "role": "B",
+      "priority": "high",
+      "file": "C:\\Users\\强\\Downloads\\lecture12-lib-recycling-B\\lecture12-lib-recycling-B\\code_implementation\\lca_model.py",
+      "line": 143,
+      "problem": "缺失活动get(...,0)，额外铁粉/磷酸等活动静默忽略",
+      "ide_action": "null与0分开；报告未映射项；校验物质、浓度、单位、边界覆盖；取水与耗水分开"
+    },
+    {
+      "issue_id": "B05",
+      "role": "B",
+      "priority": "high",
+      "file": "C:\\Users\\强\\Downloads\\lecture12-lib-recycling-B\\lecture12-lib-recycling-B\\code_implementation\\scenario_analysis.py",
+      "line": 52,
+      "problem": "直接再生与湿法使用未证实线性映射及共同碳酸锂产物假设",
+      "ide_action": "先统一产品篮子/共同服务；区分实际Li2CO3与Li当量；外部价格/电网固定后比较前沿"
+    },
+    {
+      "issue_id": "C01",
+      "role": "C",
+      "priority": "high",
+      "file": "C:\\Users\\强\\Downloads\\C最终交付_20261103\\C最终交付_20261103\\reproduce\\lecture12-lib-recycling\\code_implementation\\finalize_member_c.py",
+      "line": 96,
+      "problem": "按q=财务LCE变量乘占位活动生成年度全部物耗",
+      "ide_action": "复用tea_model.evaluate_tea，以A同case年度清单替换生成层，不能追加一遍成本"
+    },
+    {
+      "issue_id": "C02",
+      "role": "C",
+      "priority": "high",
+      "file": "C:\\Users\\强\\Downloads\\C最终交付_20261103\\C最终交付_20261103\\reproduce\\lecture12-lib-recycling\\code_implementation\\finalize_member_c.py",
+      "line": 135,
+      "problem": "多处设计能力/实际流量硬编码，且对B接口文件不全",
+      "ide_action": "中心case读取设计70000/实际59500等不同字段，补打包C_to_B接口及运行配置"
+    }
+  ],
+  "readiness": {
+    "dmfa_current_core_retain": true,
+    "conditional_plant_inlet_inventory": true,
+    "M02_literature_transfer_case_available": true,
+    "source_native_LFP_water_and_products_available": true,
+    "source_native_NMC_model_activities_available": true,
+    "full_plant_saleable_products_ready": false,
+    "whole_plant_annual_utilities_ready": false,
+    "formal_LCOR_ready": false
+  },
+  "input_snapshot": [
+    {
+      "role": "A",
+      "path": "C:\\Users\\强\\Downloads\\261022hgh\\LCA_Practice_Coursework-2026fall\\groups\\group-02\\lecture12-20261103-classroom-case3\\code_implementation\\plant_case.py",
+      "sha256": "ac5fde16395593c9caa29e2cc1ebafcb886c721c6b4a4ab81bf426fc5c573fd8",
+      "bytes": 53315
+    },
+    {
+      "role": "A",
+      "path": "C:\\Users\\强\\Downloads\\261022hgh\\LCA_Practice_Coursework-2026fall\\groups\\group-02\\lecture12-20261103-classroom-case3\\code_implementation\\dmfa_yichang.py",
+      "sha256": "91d08d613a47016e250cffb7a445d3c0abd9da6a78c3d223fbe0e0e7ac57d319",
+      "bytes": 31889
+    },
+    {
+      "role": "A",
+      "path": "C:\\Users\\强\\Downloads\\261022hgh\\LCA_Practice_Coursework-2026fall\\groups\\group-02\\lecture12-20261103-classroom-case3\\data_cohort\\a_group_decisions.json",
+      "sha256": "815a0aa974bba45f1e22ccec1c71e974ae39f67d4c1ae4a65c0d28222c022909",
+      "bytes": 9089
+    },
+    {
+      "role": "A",
+      "path": "C:\\Users\\强\\Downloads\\261022hgh\\LCA_Practice_Coursework-2026fall\\groups\\group-02\\lecture12-20261103-classroom-case3\\A前期数据_IDE交接包_20261103\\a_phase1_ide_handoff.json",
+      "sha256": "720add518d60da9232e269ba6def7a0030c841669710c25d883790ae608a0b2b",
+      "bytes": 339693
+    },
+    {
+      "role": "B",
+      "path": "C:\\Users\\强\\Downloads\\lecture12-lib-recycling-B\\lecture12-lib-recycling-B\\code_implementation\\lca_model.py",
+      "sha256": "458f4054149aacdfbd19c853446bcb5d718aff1dd786327def045a97e7fdb64f",
+      "bytes": 9474
+    },
+    {
+      "role": "B",
+      "path": "C:\\Users\\强\\Downloads\\lecture12-lib-recycling-B\\lecture12-lib-recycling-B\\code_implementation\\c_interface.py",
+      "sha256": "a3c75e471cc107ede76f4672b79897fd1897f7cf01622df749314856d96b6592",
+      "bytes": 6795
+    },
+    {
+      "role": "B",
+      "path": "C:\\Users\\强\\Downloads\\lecture12-lib-recycling-B\\lecture12-lib-recycling-B\\data_cohort\\scenario_results.csv",
+      "sha256": "6990fd5ab1ea6baca438c47892f779091583f23f882dd7f1bc9678ddb200df7b",
+      "bytes": 690222
+    },
+    {
+      "role": "C",
+      "path": "C:\\Users\\强\\Downloads\\C最终交付_20261103\\C最终交付_20261103\\C_final_assumptions.json",
+      "sha256": "ab9d087877a044932af68cbb84d7e2cb4bce6a5283a00f26bd159c60f76d6bcd",
+      "bytes": 3253
+    },
+    {
+      "role": "C",
+      "path": "C:\\Users\\强\\Downloads\\C最终交付_20261103\\C最终交付_20261103\\reproduce\\lecture12-lib-recycling\\code_implementation\\tea_model.py",
+      "sha256": "3cc8954418868d2ed6b719037bd2e8e6a78685951d76060cb3c28bdf4b859376",
+      "bytes": 7090
+    }
+  ],
+  "reuse_energy_interface": {
+    "sale_kwh_a": null,
+    "SOH": null,
+    "screen_pass_mass_fraction": null,
+    "repack_yield": null,
+    "formula": "sum(reuse_allocated_pack_t * original_nameplate_Wh_per_kg * screen_yield * SOH * repack_yield)",
+    "note": "t×Wh/kg数值为kWh；年出货容量不同于每年运行发电量；应用质量证据未取得，政策状态保留UNKNOWN"
+  },
+  "existing_B_result_audit": {
+    "rows": 3267,
+    "synthetic_LCOR_rows": 3267,
+    "pass_policy_rows": 3267,
+    "feasible_true_rows": 3267
+  }
+}

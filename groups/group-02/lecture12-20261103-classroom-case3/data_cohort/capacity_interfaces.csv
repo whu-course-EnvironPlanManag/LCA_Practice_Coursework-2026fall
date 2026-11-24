@@ -1,0 +1,7 @@
+﻿interface_id,target,formula,inputs,status,missing_input_ids,note
+IF-01,回收处理量（t/a）,Q_recycle = Q_received × (1 − f_reuse),Q_received=80000 t/a（已定）；f_reuse=M01（null）,blocked_by_M01,M01,梯次利用分流未定，不得默认全部进入回收
+IF-02,小时处理能力（t/h）,Q_h = Q_recycle / H_annual,H_annual=M09（null）,blocked_by_M09,M09,年运行小时未定，设备台数与节拍不可反算
+IF-03,黑粉产量（t/a）,M_powder = M_cell × f_powder × η_sort,M_cell 由组成核算（已定）；f_powder=0.4268/0.4378（组成）；η_sort=M02（null）,blocked_by_M02,M02,分选收率未定，黑粉产量不可定值
+IF-04,锂产品产量（t/a，以 Li 计）,M_Li_product = M_powder × w_Li × η_leach × η_recovery,w_Li 参考 4.34%/3.425%（不可直接用）；η_leach=M03；η_recovery=M05,blocked_by_M03;M05,M03;M05,粉料 Li 品位基准未确认（湿基/元素基），浸出与回收率均未定
+IF-05,Li 元素守恒核验,|Li_out − Li_in| / Li_in < 5e-4；Li_in = 0 → undefined,Li_in、Li_out 均依赖 M02/M03/M05 的分配系数,blocked_by_M02;M03;M05,M02;M03;M05,接口已实现（mfa_model.li_balance_check），数据未就绪
+IF-06,投资与成本（亿元 / 元·t⁻¹）,CAPEX = Σ 设备与土建清单；OPEX = 药剂 + 能源 + 人工 + 折旧,设备清单（M03/M05/M09 后定）；价格与系数 M12（null，属成员 C）,blocked_by_M12,M12,本脚本不产出任何投资数值

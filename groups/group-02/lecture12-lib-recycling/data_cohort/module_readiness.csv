@@ -1,0 +1,12 @@
+﻿module,ready,blocking_input_ids,depends_on,allowed_work
+json_loading_and_validation,True,,,可开始读取、类型/来源/单位校验。
+received_pack_intake_allocation,True,,json_loading_and_validation,可计算规划来料的体系质量分配；不是处理后或SOH后的通量。
+received_component_inventory,True,,received_pack_intake_allocation,可按整包/电芯组成核算收到来料的组分存量；不是实际产线出料或整厂Li衡算。
+recycling_feed_allocation,False,M01,received_pack_intake_allocation,需先确定各体系再使用分流。
+recycling_flow_mfa,False,M01;M02;M03,recycling_feed_allocation,可编接口/方程，暂不输出完整再生通量结论。
+full_plant_li_mfa,False,M01;M02;M03;M04;M05,recycling_flow_mfa,不可报告Li闭合已通过。
+wet_process_activities,False,M01;M02;M03;M06;M07,recycling_flow_mfa,备选湿法清单不能自动嫁接到推荐前端。
+engineering_equipment_sizing,False,M01;M02;M03;M09,recycling_flow_mfa,可建功能分区和设备清单结构，小时规模暂缺。
+complete_lca_inventory,False,M01;M02;M03;M04;M05;M06;M07;M08;M10;M13,full_plant_li_mfa;wet_process_activities,由B接收已明确活动量后完善。
+lca_tea_results,False,M01;M02;M03;M04;M05;M06;M07;M08;M10;M12;M13;M14,complete_lca_inventory,需要C维护2026价格、CAPEX/OPEX和适用政策，并继承上游数据阻断。
+nmc_grade_specific_model,False,M11,json_loading_and_validation,前端混合三元代理不证明622/811组成。
